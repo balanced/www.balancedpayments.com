@@ -3,7 +3,7 @@ var debug = 0;
 var scrollingOffset = 25;
 var options;
 var $window = $(window);
-var balls = 'sweaty'; // breaking the cloudfront cache which has stored some 0 length content
+
 
 //  private functions
 var initAJAX = function (csrfToken) {

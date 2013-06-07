@@ -21,13 +21,7 @@
 
 
   </head>
-  <body class="
-	       words
-	       ">
-
-
-
-
+  <body class="words">
 
     <div id="pjax-loading">
       <h1>loading</h1>
@@ -36,8 +30,6 @@
     </div>
     <div id="slider">
       <div id="body-content" data-url="/terms">
-
-
 
 	<header>
 	  <ul>
@@ -50,12 +42,9 @@
 	  <hr>
 	</header>
 
-
-
-
 	<section id="h-top">
 	  <div id="logo">
-	    <a href="/"><img src="https://s3.amazonaws.com/justice.web/hp/3/balanced_logo.png" alt="Balanced Homepage Logo"></a>
+	    <a href="/"><img src="/static/icons/hp/3/balanced_logo.png" alt="Balanced Homepage Logo"></a>
 	  </div>
 	</section>
 	<section id="h-words">
@@ -324,29 +313,7 @@
 
     <div id="body-content-queue"></div>
 
-
-    <!--script type="text/javascript" src="https://js.balancedpayments.com/v1/balanced.min.js"></script-->
     <script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
-    <!--script type="text/javascript" src="/static/js/balanced.min.js"></script>
-    <script type="text/javascript">
-      //  kick everything off when jquery is ready
-      $(function () {
-      Balanced.init({
-      pageStartTime: _pageStartTime,
-      marketplaceUri: '',
-      debug: !1,
-      mixpanel: {
-      token: '991598fc644dd5d0894e6cb070154330',
-      distinctId: '',
-      name_tag: '',
-      email_address: ''
-      },
-      help: {
-      url: '/help/search'
-      }
-      });
-      });
-    </script-->
 
     <script type="text/javascript">
       (function () {
