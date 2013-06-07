@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'NimbusSanNov-Reg';
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_0_0.eot');
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_0_0.eot?#iefix') format('embedded-opentype'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_0_0.woff') format('woff'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NimbusSanNov-Bla';
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_1_0.eot');
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_1_0.eot?#iefix') format('embedded-opentype'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_1_0.woff') format('woff'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NimbusSanNov-Med';
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_2_0.eot');
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_2_0.eot?#iefix') format('embedded-opentype'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_2_0.woff') format('woff'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_2_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NimbusSanNov-Bol';
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_3_0.eot');
+  src: url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_3_0.eot?#iefix') format('embedded-opentype'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_3_0.woff') format('woff'), url('https://d3n06lmttbcmxe.cloudfront.net/css/fonts/241122_3_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NimbusSanNovCon-Bol';
+  src: url('/css/fonts/260109_0_0.eot');
+  src: url('/css/fonts/260109_0_0.eot?#iefix') format('embedded-opentype'), url('/css/fonts/260109_0_0.woff') format('woff'), url('/css/fonts/260109_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NimbusSanNovCon-Med';
+  src: url('/css/fonts/260109_1_0.eot');
+  src: url('/css/fonts/260109_1_0.eot?#iefix') format('embedded-opentype'), url('/css/fonts/260109_1_0.woff') format('woff'), url('/css/fonts/260109_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Bitter-Italic'), url(https://themes.googleusercontent.comstatic.1370564667/fonts/bitter/v4/E44LYN4bXPiBT-TMwacNsvesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bitter-Regular'), url(https://themes.googleusercontent.comstatic.1370564667/fonts/bitter/v4/2hig-tnMw8lXZsjwuh-9ow.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Bitter-Bold'), url(https://themes.googleusercontent.comstatic.1370564667/fonts/bitter/v4/evC1haE-MsorTl_A7_uSGaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+@balancedGreen: #78A22F;
+@balancedGreenHover: #a8c179;
+@balancedRed: #EF4135;
+@balancedWarningPink: #FDF7EB;
+
+@pageWidth: 960px;
+@contentWidth: 940px;
+@contentPadding: 15px;
+@contentOffset: 97px;
+@menuWidth: 180px;
+@bossWidth: @pageWidth - @menuWidth;
+
+@bgColor: #E7E7E7;
+@bgColorMain: #fff;
+//@navWidth:          15.416666666666667%;
+//@contentWidth:      81.58333333333333%;
+@textColor: #8c8c8c;
+@highlightColor: #FEF8EE;
+@altRowColor: #f7f7f7;
+@darkLinkColor: #A3A510;
+@footerLinkColor: #808080;
+
+@transactionHeaderTextColor: #fafafa;
+@transactionHeaderBorderColor: #CCCCCC;
+
+@highlightBgColor: #FDF7EB;
+
+@smallFontSize: 11px;
+
+/*   detail table   */
+@detailHeaderBgColor: #666;
+@detailHeaderTextColor: #fff;
+@detailActionsBgColor: #F2F2F2;
+@detailActiveBgColor: @highlightBgColor;
+@detailActiveHeaderBgColor: #999;
+@detailConfirmBgColor: #404040;
+@focusBgColor: #4d4d4d;
+@detailInnerHeight: 97px;
+@detailDetailWidth: 539px;
+@detailActionWidth: 220px;
+@detailBorderWidth: 1px;
+@detailIndent: 40px;
+@detailBorderColor: #ddd;
+
+.popoverShadow() {
+  .box-shadow(0 0 6px 2px rgba(0, 0, 0, 0.4));
+}
+
+@goLiveBackground: #999;
+@bitter: 'Bitter', serif;
+
+.roundedButton() {
+  font-family: @boldFontFamily;
+  font-weight: bold;
+  font-size: 10px;
+  border-radius: 11px;
+  background-color: #6D6E70;
+  .box-shadow(inset 0px 0px 1px 0px rgba(117, 117, 117, 0.3));
+  display: inline-block;
+  padding: 2px 15px;
+  margin: 8px;
+  text-transform: uppercase;
+  height: auto;
+  letter-spacing: 2px;
+  &:hover {
+    color: white;
+    background: #78A22F;
+    box-shadow: none;
+  }
+}
+
+.verticalGradient(@startColor, @startStop, @midColor, @midStop, @endColor, @endStop) {
+  background-image: -webkit-linear-gradient(top, @startColor @startStop, @midColor @midStop, @endColor @endStop);
+  background-image: -moz-linear-gradient(top, @startColor @startStop, @midColor @midStop, @endColor @endStop);
+  background-image: -ms-linear-gradient(@startColor @startStop, @midColor @midStop, @endColor @endStop);
+  background-image: -o-linear-gradient(@startColor @startStop, @midColor @midStop, @endColor @endStop);
+  background-image: linear-gradient(top, @startColor @startStop, @midColor @midStop, @endColor @endStop);
+  background-repeat: no-repeat;
+}
+
+//  for community only
+@marginBottom: 30px;
+
+.headerImage(@url, @width, @height) {
+  display: block;
+  text-indent: -4000px;
+  height: @height;
+  width: @width;
+  background: url(@url) 0 0 no-repeat;
+  padding: 0;
+  border: 0;
+  margin: 0 auto @marginBottom;
+}
+
+.dropBorder(@size: 3px, @color: #D0D2D3) {
+  border-right: @size solid @color;
+  border-bottom: @size solid @color;
+}
+
+@v2FontFamily: NimbusSanNov-Med;
+@v2FontFamilyBold: NimbusSanNov-Bol;
+@v2FontFamilyLight: NimbusSanNov-Reg;
+@v2FontFamilySerif: Bitter;
+@v2FontFamilyCode: Menlo, Monaco, "Courier New", monospace;
+@v2FontSize: 13px;
+@v2Color: #000;
+@v2HeaderBackgroundColor: transparent;
+@v2HeaderAltBackgroundColor: #fdf3e2;
+@v2SubHeaderBackgroundColor: #f7f7f7;
+@v2SubHeaderBorderColor: #e3e3e3;
+@v2BorderColor: #ededed;
+@v2LabelFontFamily: @v2FontFamily;
+@v2LabelColor: #737373;
+@v2LabelFontSize: 12px;
+@v2LabelTextTransform: lowercase;
+@v2Margin: 18px;
+@v2BoxMarginSpacing: 0 0 20px 0;
+@v2LabelWidth: 120px;
+@v2HeaderTopColor: #d9d9d9;
+@v2HeaderBottomColor: #a6a6a6;
+@v2DashboardIcons: '/images/dashboard_icons9.png';
+@v2WebsiteBackground: '/images/background_website4.png';
+@v2DashboardBackground: '/images/background_dashboard2.png';
+@modalBorderRadius: 8px;
+@pagerHeight: 40px;
+
+// used on about page and footer for twitter
+@socialBgOffsetX: 410px;
+@socialBgOffsetY: 4px;
+@socialWidth: 27px;
+@socialHeight: 27px;
+
+.socialIcon(@num) {
+  background-position: -(@socialBgOffsetX + (@num * @socialWidth)) -@socialBgOffsetY;
+  &:hover {
+    background-position: -(@socialBgOffsetX + (@num * @socialWidth)) -(@socialBgOffsetY + @socialHeight);
+  }
+}
+
+.v2SmallButton() {
+  font-family: NimbusSanNov-Med;
+  font-size: 12px;
+  font-weight: normal;
+  color: #737373;
+  background-color: #d9d9d9;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: #000;
+    i.icon-cog {
+      background-position: -217px -34px;
+    }
+  }
+  i.icon-cog {
+    background: url(@v2DashboardIcons) -217px -8px no-repeat;
+  }
+  i {
+    vertical-align: middle;
+  }
+}
+
+.tableHeader() {
+  border-bottom: 1px solid #bbb;
+  padding: 3px 8px 1px;
+  background-color: #d9d9d9;
+  &:first-child {
+    padding-left: @v2Margin;
+  }
+  &:last-child {
+    padding-right: @v2Margin;
+  }
+}
+
+.fillHeight(@height: 600px) {
+  min-height: @height;
+  height: auto !important;
+  height: @height;
+}
+
+.truncateText(@width: auto, @height: 1em) {
+  display: block;
+  height: @height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: @width;
+}
+
+._cc-1() {
+  background-color: #fff;
+  border: 3px solid #d0d2d3;
+  border-top: 0;
+  border-left: 0;
+}
+
+._cc-2() {
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+
+._cc-3() {
+  background-color: #fffaf2;
+  border: 1px solid #e6e1da;
+  border-radius: 5px;
+}
+
+._db-4() {
+  font-size: 15px;
+  font-family: @v2FontFamilyBold;
+  color: #000;
+  padding: 6px;
+  text-transform: lowercase;
+}
+
+._db-5() {
+  font-family: @v2FontFamily;
+  color: #737373;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+._db-6() {
+  font-family: @v2FontFamily;
+  color: #333;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+._db-9() {
+  font-family: @v2FontFamily;
+  color: #737373;
+  font-size: 13px;
+  padding: 12px;
+}
+
+._db-17() {
+  font-family: 'Consola Regular' @v2FontFamilyCode;
+  font-size: 13px;
+  color: #000;
+  line-height: 20px;
+}
+
+.btn-bal, .btn-danger {
+  font-family: @v2FontFamily;
+  font-size: 14px;
+  color: #fff;
+  height: 22px;
+  border-radius: 20px;
+  padding: 3px 15px;
+  line-height: 1em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+  border: 1px solid #78A22F;
+  .buttonBackground(#bac9a3, #78A22F);
+  &:hover {
+    .buttonBackground(#CeDCB4, #90B051);
+  }
+}
+
+.btn-danger {
+  border: 1px solid #EE3124;
+  .buttonBackground(#FAB79D, #ee3124);
+  &:hover {
+    .buttonBackground(#FCCAB5, #F04D30);
+  }
+}

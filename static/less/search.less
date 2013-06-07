@@ -1,0 +1,172 @@
+
+@import "bootstrap-2.0/mixins.less";
+@import "bootstrap-2.0/variables.less";
+@import "variables.less";
+
+
+// query auto-complete
+@qacBackgroundColor: #f7f9f3;
+@qacHeaderHeight: 32px;
+@qacHeaderBackgroundColor: #eaf0e1;
+@qacBorderColor: #c1d29f;
+@qacFooterColor: @qacHeaderBackgroundColor;
+@qacWidth: 324px;
+@qacResultHeight: 90px;
+.qac-rap {
+  background-color: @qacBackgroundColor;
+  border: 1px solid @qacBorderColor;
+  width: @qacWidth;
+  color: #000;
+  header {
+    background-color: @qacHeaderBackgroundColor;
+    height: @qacHeaderHeight;
+    border-bottom: 1px solid @qacBorderColor;
+    padding-top: 5px;
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      padding-top: 8px;
+      float: left;
+    }
+    .counter {
+      border: 1px solid #c1d29f;
+      border-radius: 20px;
+      line-height: 1em;
+      font-family: @v2FontFamilyBold;
+      font-size: 15px;
+      background-color: #e3ebd6;
+      width: 50px;
+      height: 16px;
+      text-align: center;
+      float: right;
+      padding-top: 2px;
+      margin-top: 6px;
+    }
+  }
+  header, footer {
+    padding: 0 @v2Margin;
+  }
+  footer {
+    margin-top: 0;
+    background-color: @qacHeaderBackgroundColor;
+    width: auto;
+    height: @qacHeaderHeight;
+    a {
+      float: right;
+      padding-top: 7px;
+    }
+  }
+  .autocomplete-suggestions {
+    div {
+      padding: @v2Margin / 2 @v2Margin;
+      border-bottom: 1px solid @qacBorderColor;
+    //      height: @qacResultHeight - @v2Margin * 2;
+      &.autocomplete-selected {
+        background-color: #fff;
+      }
+      h4 {
+        font-family: @v2FontFamilyBold;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000;
+        float: left;
+        .truncateText(218px);
+      }
+      .type {
+        font-size: 11px;
+        font-family: @v2FontFamilySerif;
+        font-style: italic;
+        float: right;
+      }
+      .created {
+        font-size: 12px;
+        display: block;
+        clear: both;
+      }
+      .deets {
+        color: #737373;
+        display: block;
+      }
+    }
+  }
+}
+.srp-header {
+  margin: 0;
+  border-bottom: 1px solid #C1D29F;
+  li {
+    margin: 0 0 40px;
+    display: block;
+    float: left;
+    background: #eaf0e1;
+    height: 64px;
+    width: 100% / 8;
+    text-align: center;
+    .c {
+      color: #737373;
+      display: block;
+      font-size: 20px;
+      font-family: @v2FontFamilyBold;
+      padding-top: 15px;
+      border-right: 1px solid black;
+      width: 100px;
+    }
+    .l {
+      display: block;
+      font-family: @v2FontFamilySerif;
+      font-style: italic;
+      font-size: 11px;
+      border-right: 1px solid black;
+      width: 100px;
+    }
+  //    .c, .l {
+  //      &:after {
+  //        content: '';
+  //        position: relative;
+  //        width: 196px;
+  //        height: 50px;
+  //        border-right: 1px solid #C1D29F;
+  //        left: 43px;
+  ////        top: 13px;
+  //      }
+  //    }
+    &[data-href]:hover {
+      cursor: pointer;
+    }
+    &.selected, &[data-href]:hover {
+      #gradient > .vertical(#DCE6CB, #C1D29F);
+      .c {
+        color: #00704a;
+      }
+      .l {
+        color: #000;
+      }
+    }
+    &.none {
+      .c, .l {
+        color: #b3b3b3;
+      }
+    }
+  }
+}
+.srps {
+  td {
+    &:nth-child(2) {
+      color: #000;
+      span {
+        .truncateText(100px, 1.25em);
+      }
+    }
+    &:nth-child(3) {
+      span {
+        .truncateText(432px, 1.25em);
+      }
+    }
+    &:nth-child(4) {
+      color: #000;
+      text-align: right;
+      font-family: @v2FontFamilySerif;
+      font-size: 11px;
+      font-style: italic;
+    }
+  }
+}

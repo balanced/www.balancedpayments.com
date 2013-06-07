@@ -1,0 +1,252 @@
+@import "bootstrap-2.0/variables.less";
+@import "bootstrap-2.0/mixins.less";
+@import "variables.less";
+
+fieldset.expiration {
+    margin-bottom: 0 !important;
+    label {
+        display: inline-block;
+        font-weight: bold;
+        vertical-align: top;
+    }
+    .controls {
+        display: inline-block;
+    }
+    select {
+        width: 74px;
+    }
+}
+
+#card-security_code {
+    width: 120px;
+    margin-right: -12px;
+    float: left;
+}
+
+#bank_account-account_number,
+#bank_account-bank_code {
+    margin-right: -17px;
+    float: left;
+}
+
+.questionmark {
+    font-weight: bold;
+    color: white;
+    background-color: #999;
+    display: block;
+    float: left;
+    padding: 3px 5px;
+    line-height: 1em;
+    left: -10px;
+    top: 5px;
+    .border-radius(10px);
+    font-size: @smallFontSize;
+    position: relative;
+    &:hover {
+        background-color: @balancedGreen;
+    }
+}
+
+.whats-this {
+    background: white;
+    display: none;
+    position: absolute;
+    padding: 10px;
+    border: 1px solid #ddd;
+    .border-radius(2px);
+    .box-shadow(1px 1px 5px 0px rgba(0, 0, 0, 0.06));
+    &.csc {
+        width: 323px;
+        height: 200px;
+    }
+    &.cheque {
+        width: 323px;
+        height: 160px;
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    &:after {
+        content: "\25B8";
+        display: block;
+        font-size: 3em;
+        height: 0;
+        line-height: 0;
+        position: absolute;
+
+        color: #fff;
+        bottom: -4px;
+        left: 145px;
+        text-align: center;
+        text-shadow: 1px 0 2px #ddd;
+        width: 100%;
+        .rotate(90deg);
+    }
+}
+
+@accountDateWidth: 100px;
+@accountNameWidth: 220px;
+@accountEmailWidth: 200px;
+@accountRoleWidth: 114px;
+
+.accounts {
+//  table-layout: fixed;
+  margin-bottom: 0;
+  th {
+    .tableHeader();
+  }
+    tbody a, tbody span, thead a, thead span { display: block; }
+    tbody {
+        a, span {
+            color: @textColor;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .type  {
+            a, span {
+              font-size: 11px;
+              text-transform: lowercase;
+              font-family: @v2FontFamilySerif;
+            }
+        }
+        tr {
+            &:hover {
+                background-color: @highlightColor;
+            }
+        }
+    }
+    .date {
+        a, span {
+            width: @accountDateWidth;
+        }
+    }
+    .name {
+        a, span {
+            width: @accountNameWidth;
+        }
+    }
+    .email {
+      white-space: nowrap;
+      width: @accountEmailWidth;
+      overflow: hidden;
+        a, span {
+            width: @accountEmailWidth;
+        }
+    }
+    .type {
+        a, span {
+            width: @accountRoleWidth;
+            text-align: right;
+        }
+    }
+    .more {
+        a {
+            margin: auto;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: @smallFontSize;
+        }
+    }
+}
+
+
+// Mixin for form field states
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+    // Set the text color
+    > label,
+      .help-block,
+      .help-inline, .help {
+          color: @textColor;
+      }
+    // Style inputs accordingly
+    input,
+    select,
+    textarea {
+    //    color: @textColor;
+        border-color: @borderColor;
+        background-color: @backgroundColor;
+        &:focus {
+            border-color: darken(@borderColor, 10%);
+            .box-shadow(0 0 6px lighten(@borderColor, 20%));
+        }
+    }
+}
+
+#new-account {
+    label {
+        em {
+            font-weight: normal;
+        }
+    }
+    #account-type {
+        background-color: #f2f2f2;
+        background-image: url(/images/stripe-background-clear.png);
+        ul {
+           text-align: center;
+            margin: 0;
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    background-color: white;
+                    padding: 5px 30px;
+                    margin: 20px 10px;
+                    width: 100px;
+                    text-align: center;
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                    text-transform: lowercase;
+                    &:hover {
+                        background-color: @balancedGreen;
+                        color: white;
+                    }
+                }
+                &.selected {
+                    a {
+                        font-weight: normal;
+                        background-color: @balancedGreen;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .dob {
+        input {
+            width: 40px;
+            &.yy {
+                width: 50px;
+            }
+        }
+    }
+    .expiration {
+        select {
+            width: 60px;
+        }
+    }
+    .error {
+        .formFieldState(@balancedRed, @balancedRed, @balancedWarningPink);
+    }
+    #buyer-information, #business-merchant-information, #person-merchant-information, .actions { display: none; }
+    &.buyer {
+        #buyer-information { display: block; }
+        .actions { display :block; }
+    }
+  &.business {
+    #business-merchant-information { display: block; }
+    #person-merchant-information { display: block; }
+    .actions { display :block; }
+  }
+  &.person {
+    #person-merchant-information { display: block; }
+    .actions { display :block; }
+  }
+}

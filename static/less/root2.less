@@ -1,0 +1,450 @@
+
+@import "bootstrap-2.0/mixins.less";
+@import "bootstrap-2.0/variables.less";
+@import "variables.less";
+
+@footerLinkColor:       #8c8c8c;
+@bodyTextColor:         #58595B;
+@baseFontSize:          12px;
+@headerTextSize:        21px;
+@headerTextColor:       #58595B;
+@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headerFontFamily:      'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, sans-serif;
+@boxWidth:              636px;
+
+.popoverShadow() {
+    .box-shadow(0 0 6px 2px rgba(0, 0, 0, 0.4));
+}
+
+body, html {
+    height: 100%;
+    font-size: @baseFontSize;
+    color: @bodyTextColor;
+}
+body {
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: @headerFontFamily;
+    font-size: @headerTextSize;
+    color: @headerTextColor;
+    font-weight: 100;
+    margin-bottom: 0.5em;
+    text-transform: lowercase;
+}
+
+a {
+    text-decoration: underline;
+    &:active {
+        outline: none;
+    }
+}
+
+#logo {
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 45px;
+    img {
+        width: 311px;
+        height: 169px;
+    }
+}
+
+.linky {
+    font-weight: bold;
+    color: @textColor;
+    margin-top: 10px;
+    display: inline-block;
+    padding-top: 3px;
+    font-size: @smallFontSize;
+}
+
+#login-box {
+
+    width: @boxWidth;
+    margin: auto;
+    color: @bodyTextColor;
+    .body {
+        background-color: white;
+        .popoverShadow();
+        height: 246px;
+    }
+    h2 {
+        margin-bottom: 8px;
+    }
+    .control-group {
+        margin: 0;
+    }
+    input {
+        width: 230px;
+        height: 15px;
+        font-size: @smallFontSize;
+        margin-bottom: 7px;
+    }
+    label {
+        text-transform: lowercase;
+        font-weight: bold;
+        font-size: @smallFontSize;
+        margin-bottom: 0;
+    }
+    button {
+        margin-top: 9px;
+        float: right;
+    }
+    p {
+        margin: 24px 0 15px;
+    }
+}
+
+#get-started {
+    .btn-success {
+        margin-top: 9px;
+        float: right;
+        text-decoration: none;
+    }
+}
+.pri {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.with-error-box {
+    .body {
+        position: relative;
+        z-index: 2;
+    }
+    .sub-errors {
+        background-color: @errorBackground;
+        .popoverShadow();
+        color: @errorText;
+        padding: 7px 0 7px 33px;
+        position: relative;
+        z-index: 1;
+        &.hidden {
+            top: -50px;
+        }
+        .error {
+            font-size: @smallFontSize;
+            padding: 1px 0 2px 18px;
+            &:before {
+                display: inline-block;
+                content: ' ';
+                background: url(/images/icons.png) 0 0 no-repeat;
+                width: 14px;
+                height: 14px;
+                vertical-align: middle;
+                position: relative;
+                top: -2px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.span4 {
+    &> div {
+        margin: 5px 0 0 40px;
+        width: 240px;
+    }
+    margin-top: 25px;
+    height: 195px;
+    &:last-child {
+        border-left: 1px solid #ccc;
+    }
+}
+
+footer {
+    font-size: 12px;
+    width: 100%;
+    z-index: 3;
+    clear: both;
+    div {
+        text-align: center;
+        color: @footerLinkColor;
+        padding: 1px;
+        a {
+            margin-left: 20px;
+        }
+    }
+    img {
+        margin: 6px auto 15px;
+    }
+    p { font-size: 12px; }
+}
+
+
+// Set text color
+// -------------------------
+.btn,
+.btn:hover {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  color: @white;
+}
+// Provide *some* extra contrast for those who can get it
+.btn.active {
+  color: rgba(255,255,255,.75);
+}
+
+.messages {
+    margin: auto;
+    width: @boxWidth;
+}
+
+#f-main {
+    #gradient > .vertical(lighten(@black, 20%), lighten(@black, 50%));
+    padding-bottom: 70px;
+}
+
+#f-content {
+    .box-shadow(inset 0 6px 4px -4px rgba(0, 0, 0, 0.9));
+    background-color: white;
+    text-align: center;
+    section {
+        width: 800px;
+        margin: auto;
+        .clear {
+
+            .clearfix();
+        }
+        .half {
+            float: left;
+            width: 400px;
+            &:last-child {
+                float: right;
+                border-left: 1px solid #ddd;
+                width: 399px;
+            }
+        }
+        .extra-mile {
+            padding-bottom: 30px;
+        }
+        .full {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+    }
+    h3 {
+        font-size: 35px;
+        font-weight: 200;
+        text-transform: lowercase;
+        margin-bottom: 40px;
+    }
+    h4 {
+        font-size: 21px;
+        color: #e7a614;
+        text-transform: lowercase;
+        font-weight: 400;
+        margin: 20px auto;
+    }
+    .num {
+        margin: 40px 0 20px;
+        width: 961px;
+        height: 68px;
+        &.line {
+            height: auto;
+            margin-bottom: 10px;
+        }
+        &.last {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    table {
+        display: block;
+        margin: auto;
+        width: 365px;
+        img {
+            width: 15px;
+            height: 15px;
+        }
+        tr {
+            background-color: #e6e6e6;
+            &:nth-child(even) {
+                background-color: #f7f7f7;
+            }
+        }
+        td {
+            font-size: 13px;
+            padding: 5px 15px 5px 20px;
+            width: 300px;
+            text-align: left;
+            vertical-align: middle;
+            img {
+                vertical-align: middle;
+            }
+            &:last-child {
+                text-align: right;
+                width: 25px;
+            }
+        }
+    }
+    .btn {
+        font-size: 15px;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 7px 20px;
+    }
+    form {
+        font-size: 11px;
+        margin: 0 auto;
+    }
+    h3, h4 {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-indent: -4000px;
+        background-repeat: no-repeat;
+    }
+}
+#heading1 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/headline1.png);
+    width: 726px;
+    height: 37px;
+}
+#heading2 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/headline2.png);
+    width: 389px;
+    height: 37px;
+}
+#heading3 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/headline3.png);
+    width: 263px;
+    height: 37px;
+}
+#heading1-1 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead1-1.png);
+    width: 96px;
+    height: 23px;
+}
+#heading1-2 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead1-2.png);
+    width: 66px;
+    height: 23px;
+    &+img {
+        margin-top: 14px;
+    }
+}
+#heading1-3 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead1-3.png);
+    width: 151px;
+    height: 23px;
+}
+#heading2-1 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead2-1.png);
+    width: 126px;
+    height: 23px;
+}
+#heading2-2 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead2-2.png);
+    width: 71px;
+    height: 23px;
+}
+#heading3-1 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead3-1.png);
+    width: 108px;
+    height: 23px;
+}
+#heading3-2 {
+    background-image: url(https://d114huglpdasvl.cloudfront.net/hp/subhead3-2.png);
+    width: 95px;
+    height: 23px;
+}
+
+#pricing {
+    h1 {
+        font-size: 35px;
+        font-weight: 200;
+        text-transform: lowercase;
+        color: #999;
+        span {
+            color: #000;
+        }
+
+        display: block;
+        width: 741px;
+        height: 118px;
+        text-indent: -4000px;
+        background: url(https://d114huglpdasvl.cloudfront.net/hp/pricing_headline.png) 0 0 no-repeat;
+        margin: 0 auto 40px;
+    }
+    hr {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    #f-main {
+        padding-bottom: 15px;
+        #gradient > .vertical(lighten(@black, 20%), #595959);
+    }
+    #f-content {
+        padding-top: 40px;
+        section {
+            width: 960px;
+        }
+    }
+    .pricing-items {
+        margin: 40px auto 0;
+        &> .item {
+            padding: 10px 0;
+            width: 33%;
+            float: left;
+            div {
+                width: 116px;
+                height: 78px;
+                margin: auto;
+                margin-bottom: 18px;
+                background-image: url(https://d114huglpdasvl.cloudfront.net/hp/pricing_icons-01.png);
+            }
+            &:nth-child(odd) {
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+            &:first-child {
+                border-left: 0;
+                margin-left: 163px;
+            }
+            p {
+                font-size: 13px;
+                margin: 0 30px;
+                line-height: 1.2em;
+            }
+        }
+        h4 {
+            font-size: 21px;
+            color: #e7a614;
+            text-transform: lowercase;
+            font-weight: 400;
+            margin: 20px auto;
+            display: block;
+            text-indent: 0;
+            margin: 0 auto 25px;
+        }
+
+    }
+}
+
+#card-logos {
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+@pricing-icon-width:         116px;
+
+.p-authorization div { background-position: 0 0; }
+.p-escrow div { background-position: (@pricing-icon-width * -1) 0; }
+.p-next-day-deposit div { background-position: (@pricing-icon-width * -2) 0; }
+.p-vaulting div { background-position: (@pricing-icon-width * -3) 0; }
+.p-pci-compliance div { background-position: (@pricing-icon-width * -4) 0; }
+.p-international-card-processing div { background-position: (@pricing-icon-width * -5) 0; }
+.p-refunds div { background-position: (@pricing-icon-width * -6) 0; }
+.p-1099-processing div { background-position: (@pricing-icon-width * -7) 0; }
+.p-american-express div { background-position: (@pricing-icon-width * -8) 0; }
+.p-failed-payment-fees div { background-position: (@pricing-icon-width * -9) 0; }
+.p-chargebacks div { background-position: (@pricing-icon-width * -10) 0; }
+.p-setup-fees div { background-position: (@pricing-icon-width * -11) 0; }
+.p-monthly-fees div { background-position: (@pricing-icon-width * -12) 0; }
+.p-termination-fees div { background-position: (@pricing-icon-width * -13) 0; }

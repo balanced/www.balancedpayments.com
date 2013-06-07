@@ -1,0 +1,236 @@
+
+@import "bootstrap-2.0/mixins.less";
+@import "bootstrap-2.0/variables.less";
+
+@import "variables.less";
+
+@rowHeight:     70px;
+
+.public-form {
+  background-color: #fff;
+  .row {
+    .span6 {
+      margin-left: 0;
+      width: 940px / 2;
+    }
+  }
+    .header {
+        padding: 8px 0 8px @v2Margin;
+        h4 {
+            font-size: 15px;
+            color: @detailHeaderTextColor;
+            text-transform: lowercase;
+          letter-spacing: -1px;
+        }
+        background-color: @detailHeaderBgColor;
+        .help {
+        }
+    }
+    .error {
+        .header {
+            background-color: @balancedRed;
+        }
+    }
+    section {
+        display: none;
+    }
+    &.business {
+        #business-area {
+            section {
+                display: block;
+            }
+        }
+        #banking, #terms, .actions, #marketplace, #new-account, #notice {
+            display: block;
+        }
+    }
+    &.person {
+        #banking, #terms, .actions, #personal, #marketplace, #new-account, #notice {
+            display: block;
+        }
+    }
+    .row {
+        margin-left: 0;
+    }
+    .body {
+        .row {
+            padding-left: 20px;
+          border-bottom: 1px solid @detailBorderColor;
+        }
+        label {
+          font-family: @v2FontFamilySerif;
+          font-size: 11px;
+          font-style: italic;
+          text-transform: lowercase;
+          margin: 0;
+        }
+        .input {
+            &> div {
+                height: @rowHeight;
+                vertical-align: middle;
+                display: table-cell;
+              padding-left: @v2Margin * 2;
+            }
+        }
+        .help {
+            background-color: @detailActionsBgColor;
+          color: #000;
+            div {
+                padding: 0 @v2Margin;
+                height: @rowHeight;
+                vertical-align: middle;
+                display: table-cell;
+            }
+        }
+        .error {
+            .help {
+                background-color: @balancedWarningPink;
+                color: @balancedRed;
+            }
+        }
+    }
+    .help {
+    }
+    .dob {
+        input {
+            width: 40px;
+            &.yy {
+                width: 50px;
+            }
+        }
+    }
+    .actions {
+        text-align: right;
+        padding: 10px 20px;
+        a {
+            margin-bottom: 0;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        button {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: -2px;
+        }
+    }
+    #terms {
+        input {
+            display: inline;
+            margin-right: 5px;
+        }
+        label {
+            font-size: 12px;
+        }
+    }
+  &.kyc {
+    font-family: @v2FontFamily;
+    .row {
+      .span6 {
+        width: 445px;
+      }
+    }
+  }
+}
+
+#new-account { display: block; }
+
+#choosers {
+    display: block;
+    .body {
+        margin: 20px 0;
+        .span6 {
+            text-align: center;
+        }
+      .row {
+          border-bottom: 0;
+      }
+    }
+}
+a#choose-business {
+    background: url(/images/promotion-icons.png) -139px -115px;
+    width: 138px;
+    height: 115px;
+    text-indent: -4000px;
+    display: inline-block;
+    &.selected, &:hover {
+        background-position: (-139px * 2) -115px;
+    }
+    &.unselected {
+        background-position: 0 -115px;
+    }
+}
+a#choose-person {
+    background: url(/images/promotion-icons.png) -139px -0;
+    width: 138px;
+    height: 115px;
+    text-indent: -4000px;
+    display: inline-block;
+    &.selected, &:hover {
+        background-position: (-139px * 2) -0px;
+    }
+    &.unselected {
+        background-position: 0 0;
+    }
+}
+.accounts-header {
+    margin-bottom: 1px;
+}
+
+#merchant {
+    padding: 20px;
+    height: 100px;
+    img {
+        float: right;
+        width: 200px;
+        height: 100px;
+    }
+    h2 {
+        padding-top: 20px;
+        font-size: 20px
+    }
+}
+#notice {
+  background-color: #ccc;
+  padding: @v2Margin;
+  p {
+    color: #000;
+    font-family: @v2FontFamilyBold;
+  }
+  ol {
+    color: #666;
+    padding-left: @v2Margin;
+    margin-bottom: 0;
+  }
+}
+a {
+    &.btn-cancel {
+        text-decoration: none;
+    }
+    &:active {
+        outline: none;
+    }
+}
+
+footer {
+    position: inherit;
+    padding-top: 20px;
+    div {
+        color: #D9D9D9;
+        a {
+            color: #D9D9D9;
+        }
+    }
+}
+
+body {
+    padding-bottom: 0;
+}
+
+#postal_code_lookup {
+    font-weight: bold;
+    float: right;
+    display: inline-block;
+    padding: 5px 0 0 5px;
+    font-size: @smallFontSize;
+}
+

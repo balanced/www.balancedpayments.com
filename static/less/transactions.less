@@ -1,0 +1,120 @@
+
+@import "bootstrap-2.0/mixins.less";
+@import "bootstrap-2.0/variables.less";
+@import "variables.less";
+
+// we have 780px to play with
+@transactionDateWidth: 40px;
+@transactionAccountWidth: 150px;
+@transactionDescriptionWidth: 340px;
+@transactionTypeWidth: 30px;
+@transactionAmountWidth: 70px;
+
+table.transactions {
+  margin-bottom: 0;
+  table-layout: fixed;
+  thead {
+    th {
+      .tableHeader();
+    }
+  }
+    tbody {
+        a {
+            color: @textColor;
+            text-decoration: none;
+            display: block;
+        }
+        tr {
+            &.failed, &.rejected {
+                a, td {
+                  color: #9f3124;
+                }
+            }
+        }
+    }
+    .date { white-space: nowrap; width: @transactionDateWidth; }
+    .account { white-space: nowrap; width: @transactionAccountWidth; overflow: hidden;
+        a {
+            width: @transactionAccountWidth;
+        }
+    }
+    .description { white-space: nowrap; overflow: hidden; width: @transactionDescriptionWidth;
+        a {
+            width: @transactionDescriptionWidth;
+        }
+    }
+    .type {
+      text-transform: lowercase;
+      font-size: 11px;
+      font-family: @v2FontFamilySerif;
+      white-space: nowrap;
+      padding-left: 25px;
+      width: @transactionTypeWidth;
+    }
+    .amount {
+        white-space: nowrap; text-align: right;
+        &.negative, &.negative a { color: #EF4135; }
+        width: @transactionAmountWidth;
+    }
+}
+
+///*  transaction detail  */
+.transaction {
+
+}
+
+.marketplace-data {
+}
+#api-secret-form {
+    .btn-bal {
+        float: right;
+        margin-left: 5px;
+    }
+}
+.empty-marketplace {
+  text-align: center;
+  padding-top: 186px;
+  h3 {
+    font-size: 30px;
+    color: #ccc;
+    border-bottom: 1px solid #e6e6e6;
+    text-transform: lowercase;
+    padding-bottom: 10px;
+    margin: 0 auto 20px;
+    width: 500px;
+  }
+  .btn {
+    font-size: 13px;
+    border-radius: 10px;
+    line-height: 1em;
+    padding: 4px 20px;
+    text-shadow: none;
+    font-family: nimbussannov-med;
+  }
+  #populator {
+    height: 150px;
+  }
+  .code {
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 70px;
+    width: 320px;
+    color: #000;
+    padding: 10px 20px;
+    span {
+      color: #737373;
+      font-family: menlo, serif;
+      font-size: 12px;
+    }
+  }
+}
+
+.fixie { display: none; }
+
+.souq {
+  .actions {
+    width: 210px;
+  }
+}

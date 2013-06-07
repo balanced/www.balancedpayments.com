@@ -1,0 +1,263 @@
+// list
+
+@logColor: #8c8c8c;
+
+.log-filter-toggle {
+  .v2SmallButton();
+  line-height: 1em;
+  margin-top: 1px;
+  padding: 1px 5px;
+}
+
+.open {
+  .log-filter-toggle.dropdown-toggle {
+    color: #78a22f;
+    background-color: #e3ebd6;
+    border-color: #c1d29f;
+    i.icon-cog {
+      background-position: -217px -34px;
+    }
+  }
+}
+
+.log-filter {
+  color: #000;
+  border: 0;
+  background-color: transparent;
+  max-width: 300px;
+  padding: 0;
+  left: auto;
+  &>div {
+    background-color: #eef3e7;
+    width: 264px;
+    border: 1px solid #c1d29f;
+    &>label, &>.tf {
+      display: block;
+      border-bottom: 1px solid #c1d29f;
+      padding: 8px 16px;
+      margin: 0;
+    }
+    .tf {
+      background-color: darken(#eef3e7, 2%);
+      padding: 10px 16px;
+      display: none;
+    }
+  }
+  .doit {
+    padding: 16px;
+    background-color: #dce6cb;
+  }
+  label {
+    font-family: Bitter;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    input[type="checkbox"] {
+      display: inline-block;
+    }
+  }
+  select {
+    margin: 0;
+    height: 24px;
+    width: 235px;
+  }
+  input[type="date"], input[type="number"], .dt {
+    width: 64px;
+    padding: 5px;
+  }
+  .dt {
+  }
+  .icon-calendar {
+    background: url(@v2DashboardIcons) -200px -7px no-repeat;
+  }
+  button {
+    border: 0;
+    border-radius: 3px;
+    text-transform: lowercase;
+    padding: 3px 11px;
+    text-shadow: none;
+    font-family: NimbusSanNov-Med;
+  }
+  .input-append, .input-prepend {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    span {
+      background-color: white;
+    }
+  }
+  .input-prepend {
+    width: 102px;
+  }
+  .input-append {
+    span {
+      border-left: 0;
+    }
+  }
+  .singledate .dt {
+    width: 72px;
+  }
+  .double, .single, .singledate {
+    display: none;
+    padding-top: 10px;
+    input {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ui-datepicker {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 6px;
+  font-size: 11px;
+  width: 170px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  display: none;
+  a {
+    text-decoration: none;
+  }
+  .ui-datepicker-title {
+    text-align: center;
+  }
+  .ui-datepicker-calendar {
+    width: 100%;
+  }
+  .ui-datepicker-prev {
+    float: left;
+    span {
+      text-indent: -4000px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: text-top;
+      background-image: url(/images/glyphicons-halflings.png);
+      background-position: 14px 14px;
+      background-repeat: no-repeat;
+      background-position: -432px -72px;
+    }
+  }
+  .ui-datepicker-next {
+    float: right;
+    span {
+      text-indent: -4000px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: text-top;
+      background-image: url(/images/glyphicons-halflings.png);
+      background-position: 14px 14px;
+      background-repeat: no-repeat;
+      background-position: -456px -72px;
+    }
+  }
+}
+
+table.logs {
+  font-family: NimbusSanNov-Med;
+  font-size: 13px;
+  color: @logColor;
+  width: 100%;
+  tr {
+    &:hover {
+      background-color: #F7F7F7;
+      cursor: pointer;
+    }
+  }
+  .no-results {
+    td {
+      border: 0;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    h3 {
+      font-size: 30px;
+      color: #999;
+      text-transform: lowercase;
+      text-align: center;
+      padding: 150px 0;
+      font-weight: normal;
+    }
+  }
+  td {
+    padding: 8px 0 6px 0;
+    border-bottom: 1px solid #ededed;
+    vertical-align: middle;
+    &.code {
+      width: 34px;
+    }
+    &.type {
+      width: 110px;
+      font-style: italic;
+      font-size: 11px;
+      font-family: Bitter;
+    }
+    &.url {
+      width: 435px;
+      max-width: 435px;
+      white-space: nowrap;
+      overflow: hidden;
+      a {
+        text-decoration: none;
+        color: @logColor;
+        display: inline-block;
+        width: 300px;
+        font-family: nimbussannov-med;
+      }
+    }
+    &.ts {
+      width: 210px;
+      text-align: right;
+    }
+    &:first-child {
+      padding-left: 18px;
+    }
+    &:last-child {
+      padding-right: 18px;
+    }
+  }
+  .error {
+    .code, .type {
+      color: #9f3124;
+    }
+  }
+}
+
+//  show
+.log { //  font-family: NimbusSanNov-Med;
+  h3 {
+    padding-top: 32px;
+    background-color: #fff;
+  }
+  table {
+    tr {
+      td:first-child {
+        white-space: nowrap;
+      }
+      td:last-child {
+        font-family: menlo, courier, monospace;
+        font-size: 12px;
+        color: #000;
+        overflow: hidden;
+        max-width: 598px;
+      }
+    }
+  }
+  pre {
+    margin: 0 18px;
+    background-color: #f7f7f7;
+    color: #4d4d4d;
+    border-color: #e6e6e6;
+    font-size: 11px;
+    font-family: menlo, courier, monospace;
+    line-height: 1.4em;
+    overflow: auto;
+    white-space: pre;
+  }
+  .highlight {
+    background-color: transparent;
+  }
+}
