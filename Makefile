@@ -9,7 +9,10 @@ OUTPUT_DIR= output
 PAGES_DIR= pages
 STATIC_DIR= static
 
-BUILD_TIME=$(shell date +%s)
+BUILD_CODE=$(shell git rev-parse --short=15 HEAD)
+#$(shell date +%s)
+
+CDN_HOST=https:\/\/d3n06lmttbcmxe.cloudfront.net
 
 
 .PHONY: all clean make_dir
@@ -17,25 +20,23 @@ BUILD_TIME=$(shell date +%s)
 
 all: codes testing
 
+# sets the time on the static files for use with the cdn
+live: codes
+	find $(OUTPUT_DIR) -type f -exec sed -i 's/\/static\//$(CDN_HOST)\/static.$(BUILD_CODE)\//g' {} \;
+	mv $(OUTPUT_DIR)/static $(OUTPUT_DIR)/static.$(BUILD_CODE)
+
+
 # generates the output dir
 codes: make_dir $(addprefix $(OUTPUT_DIR)/, $(PAGES:=.html)) $(OUTPUT_DIR)/images
-codes: $(addprefix $(OUTPUT_DIR)/js/, $(JAVASCRIPT))
+codes: $(addprefix $(OUTPUT_DIR)/static/js/, $(JAVASCRIPT))
 
-
-testing:
-
-
-live:
-	find ./ -type f -exec sed -i 's/\/static\//\static.$(BUILD_TIME)\//g' {} \;
-	mv $(OUTPUT_DIR)/static $(OUTPUT_DIR)/static.$(BUILD_TIME)
 
 server: all
 	cd $(OUTPUT_DIR) && mongoose
 
 clean:
 	rm -rfv $(OUTPUT_DIR)
-	cd static/js && make clean
-	cd static/css && make clean
+	cd static && make clean
 
 make_dir:
 	mkdir -p $(OUTPUT_DIR)/static/css
@@ -43,11 +44,8 @@ make_dir:
 
 
 
-make_css:
-	cd static/css && make all
-
-make_js:
-	cd static/js && make all
+make_static:
+	cd static && make all
 
 $(OUTPUT_DIR)/%.html: $(PAGES_DIR)/%.html
 	cp $< $@
@@ -55,5 +53,9 @@ $(OUTPUT_DIR)/%.html: $(PAGES_DIR)/%.html
 $(OUTPUT_DIR)/images: $(wildcard static/images/*)
 	cp -rv static/images $(OUTPUT_DIR)/images
 
-$(OUTPUT_DIR)/js/%.js: $(wildcard static/js/src/*) make_js
-	cp -rv static/js/build $(OUTPUT_DIR)/js/
+$(OUTPUT_DIR)/static/js/%.js: $(wildcard static/js/src/*) make_static
+	cp -rv static/js/build $(OUTPUT_DIR)/static/js/
+
+$(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*)
+	make_static
+	cp -rv static/css/ $(OUTPUT_DIR)/static/css/
