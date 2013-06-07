@@ -22,6 +22,7 @@ all: codes
 
 # sets the time on the static files for use with the cdn
 live: codes
+	find $(OUTPUT_DIR) -type f -exec sed -i 's/\/images\//$(CDN_HOST)\/images\//g' {} \;
 	find $(OUTPUT_DIR) -type f -exec sed -i 's/\/static\//$(CDN_HOST)\/static.$(BUILD_CODE)\//g' {} \;
 	mv $(OUTPUT_DIR)/static $(OUTPUT_DIR)/static.$(BUILD_CODE)
 
@@ -32,8 +33,8 @@ codes: $(addprefix $(OUTPUT_DIR)/static/js/, $(JAVASCRIPT))
 codes: $(addprefix $(OUTPUT_DIR)/static/css/, $(CSS))
 
 
-server: all
-	cd $(OUTPUT_DIR) && mongoose
+#server: all
+#	cd $(OUTPUT_DIR) && mongoose need to make this deal with the .html issue on the end
 
 clean:
 	rm -rfv $(OUTPUT_DIR)

@@ -317,20 +317,17 @@
 
     <div id="body-content-queue"></div>
 
-    <!--script type="text/javascript" src="https://js.balancedpayments.com/v1/balanced.min.js"></script> why this here????
-    <script type="text/javascript" src="https://d3n06lmttbcmxe.cloudfront.net/js/build/balanced.lib.min.59f58cb1ce38fe315e8f774c4398f042.js"></script>
-    <script type="text/javascript" src="https://d3n06lmttbcmxe.cloudfront.net/js/build/balanced.min.56bf24e3e6d16b70d55afbc2df80a3f1.js"></script-->
+    <!--script type="text/javascript" src="https://js.balancedpayments.com/v1/balanced.min.js"></script> why this here???? -->
+    <!--script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
+    <script type="text/javascript" src="/static/js/balanced.min.js"></script>
 
-    <script src="/static/js/balanced.lib.js"></script>
-    <script src="/static/js/balanced.js"></script>
 
-    <!--script type="text/javascript">
-      var csrf = '0HkN49kxnl6wmTfJ6ZWOFeJ4GrSNb61IXYgdOjS04';
 
+    <script type="text/javascript">
       //  kick everything off when jquery is ready
       $(function () {
       Balanced.init({
-      csrfToken: csrf,
+
       pageStartTime: _pageStartTime,
       marketplaceUri: '',
       debug: !1,
