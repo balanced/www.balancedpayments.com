@@ -3,7 +3,7 @@ PAGES= index about help terms
 
 
 JAVASCRIPT= balanced.lib.js balanced.js
-CSS=
+CSS=$(wildcard static/css/*.css)
 
 OUTPUT_DIR= output
 PAGES_DIR= pages
@@ -18,7 +18,7 @@ CDN_HOST=https:\/\/d3n06lmttbcmxe.cloudfront.net
 .PHONY: all clean make_dir
 
 
-all: codes testing
+all: codes
 
 # sets the time on the static files for use with the cdn
 live: codes
@@ -29,6 +29,7 @@ live: codes
 # generates the output dir
 codes: make_dir $(addprefix $(OUTPUT_DIR)/, $(PAGES:=.html)) $(OUTPUT_DIR)/images
 codes: $(addprefix $(OUTPUT_DIR)/static/js/, $(JAVASCRIPT))
+codes: $(addprefix $(OUTPUT_DIR)/static/css/, $(CSS))
 
 
 server: all
@@ -52,10 +53,10 @@ $(OUTPUT_DIR)/%.html: $(PAGES_DIR)/%.html
 
 $(OUTPUT_DIR)/images: $(wildcard static/images/*)
 	cp -rv static/images $(OUTPUT_DIR)/images
+	cp -rv static/images $(OUTPUT_DIR)/static/images
 
 $(OUTPUT_DIR)/static/js/%.js: $(wildcard static/js/src/*) make_static
-	cp -rv static/js/build $(OUTPUT_DIR)/static/js/
+	cp -rv static/js/build/* $(OUTPUT_DIR)/static/js/
 
-$(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*)
-	make_static
-	cp -rv static/css/ $(OUTPUT_DIR)/static/css/
+$(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*) make_static
+	cp -rv static/css/* $(OUTPUT_DIR)/static/css/
