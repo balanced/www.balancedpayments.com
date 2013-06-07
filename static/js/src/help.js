@@ -8,7 +8,7 @@ Balanced.Help = (function () {
     return {
         init:function (options) {
             $('[name="search-help"]').autocomplete({
-                serviceUrl: options.help.url,
+                serviceUrl: "/static/js/auto_compete.json",
                 minChars: 3,
                 onSelect: onSelect,
                 width: 660

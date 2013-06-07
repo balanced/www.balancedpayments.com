@@ -444,15 +444,38 @@
 
     <div id="body-content-queue"></div>
 
-
-
+    <script> var Balanced = {}; </script>
     <script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
 
     <script src="https://irc.balancedpayments.com/history.js"></script>
     <script src="https://irc.balancedpayments.com/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/static/js/irc.min.js"></script>
+    <script type="text/javascript" src="/static/js/auto_complete.js"></script>
     <script type="text/javascript">
-      Balanced.IRC.init('https://irc.balancedpayments.com', history || []);
+
+      var lookup_data = [];
+      auto_complete = auto_complete.suggestions;
+      for(var name in auto_complete) {
+        lookup_data.push(auto_complete[name]);
+      }
+
+      $(function () {
+        $('[name="search-help"]').autocomplete({
+          //source: ['something'],
+          //serviceUrl: "/static/js/auto_compete.json"
+          lookup: lookup_data, //auto_complete.suggestions,
+          minChars: 3,
+          onSelect:  function (suggestion) {
+            var loc  = window.location;
+            loc = loc.pathname + loc.search + '#' + suggestion.id;
+            window.location = loc;
+          },
+        width: 660
+        }).prop('autocomplete', 'on');
+      });
+
+
+      Balanced.IRC.init('https://irc.balancedpayments.com', history);
     </script>
 
     <script type="text/javascript">

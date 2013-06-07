@@ -52,7 +52,8 @@ all: node_modules \
     build/docs/docs.min.js \
     build/balanced.lib.min.js \
     build/irc.src.js \
-    build/kyc.src.js
+    build/kyc.src.js \
+    build/auto_complete.js
 
 build:
 	mkdir -p build
@@ -94,6 +95,9 @@ build/_status/status.src.js: $(STATUS_SOURCES)
 	$(COMPILER) $^ > $@
 	$(COMPRESSOR) $@ > build/_status/status.min.js
 
+# TODO: Make the auto complete generated from something else
+build/auto_complete.js: src/auto_complete.js
+	cat $^ >  $@
 clean:
 	rm -rf build
 
