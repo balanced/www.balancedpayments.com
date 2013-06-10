@@ -1,0 +1,278 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/base.css">
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="/static/css/ie9.css">
+    <![endif]-->
+
+<link rel="stylesheet" href="/static/css/root5.css">
+{% endblock %}
+
+{% block body %}
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav pull-right">
+      <li class="docs dropdown	"><a href="#"
+				     class="dropdown-toggle"
+				     data-toggle="dropdown">Docs
+	  <b class="caret"></b></a>
+	<ul class="dropdown-menu nav-list">
+	  <li><a href="/docs/overview">Overview</a></li>
+	  <li><a href="/docs/api">REST API</a></li>
+	</ul>
+      </li>
+      <li class="support ">
+	<a href="/help">Help</a>
+      </li>
+      <li>
+	<a href="/login">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="hur">
+
+  <section id="heading">
+    <a href="/"><img src="/images/homepage_logo-01.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
+  </section>
+
+  <section id="try-it" class="box">
+    <h1>Payment processing, escrow, and payouts in one simple API</h1>
+    <a href="/marketplaces/start" class="btn btn-bal">TRY IT OUT</a>
+  </section>
+
+  <section id="intro">
+    <div>
+      <div>
+	<h1>Charge cards and bank accounts</h1>
+	<p>with <a href="#processing">Balanced Processing</a></p>
+      </div>
+      <div>
+	<h1>Pay out to bank accounts</h1>
+	<p>with <a href="#payouts">Balanced Payouts</a></p>
+      </div>
+      <div>
+	<h1>Escrow funds</h1>
+	<p>use all 3 with <a href="#marketplaces">Balanced for Marketplaces</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="customers">
+
+    <ul>
+      <li class="redditgifts">
+	<a href="http://www.redditgifts.com" target="_blank">RedditGifts</a>
+      </li>
+      <li class="thefancy">
+	<a href="http://www.thefancy.com" target="_blank">TheFancy</a>
+      </li>
+      <li class="groupme">
+	<a href="http://www.groupme.com" target="_blank">Groupme</a>
+      </li>
+      <li class="vungle">
+	<a href="http://www.vungle.com" target="_blank">Vungle</a>
+      </li>
+      <li class="visually">
+	<a href="http://www.visual.ly" target="_blank">Visual.ly</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="processing">
+    <h2>Balanced Processing</h2>
+    <div class="sub">
+      <p>Credit cards (U.S. and international) &nbsp;|&nbsp; Bank accounts via ACH (U.S. only)</p>
+    </div>
+    <div class="main">
+      <div class="title">
+	<h3>Accept credit cards and debit bank accounts for your business.</h3>
+      </div>
+      <div class="bod">
+	<ul class="threep">
+	  <li>
+	    <h4>No PCI requirements</h4>
+	    <p>Balanced is Level 1 PCI certified, so you can pass card data directly to us without worrying about compliance.</p>
+	    <p><a href="/docs/overview?language=bash#tokenizing-sensitive-information">More about security</a></p>
+	  </li>
+	  <li>
+	    <h4>Soft descriptor control</h4>
+	    <p>Specify the credit card statement descriptor on a per-transaction basis.</p>
+	  </li>
+	  <li>
+	    <h4>Completely white-labeled</h4>
+	    <p>Retain your brand and keep customers on your site;
+	      buyers do not need to sign up for a Balanced account.</p>
+	  </li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="payouts">
+    <h2>Balanced Payouts</h2>
+    <div class="sub">
+      <p>Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)</p>
+    </div>
+    <div class="main">
+      <div class="title">
+	<h3>Use with any card processor or as a stand-alone service for same-day bank deposits.</h3>
+      </div>
+      <div class="bod">
+	<ul class="threep">
+	  <li>
+	    <h4>Pay out same day</h4>
+	    <p>Balanced now offers same-day ACH payouts to Wells
+	      Fargo bank account holders. Pay all other merchants
+	      via next-day ACH.</p>
+	    <p><a href="/docs/overview?language=bash#submission-delivery-times">See payout schedule</a></p>
+	  </li>
+	  <li>
+	    <h4>No fees to add funds</h4>
+	    <p>To pay out, simply fund your balance with your bank account.</p>
+	    <p><a href="/docs/overview?language=bash#pre-funding-your-account">More about pre-funding your account</a></p>
+	  </li>
+	  <li>
+	    <h4>Completely white-labeled</h4>
+	    <p>Retain your brand and keep customers on your site;
+	      merchants do not need to sign up for a Balanced account.</p>
+	  </li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="marketplaces">
+    <h2>Balanced for Marketplaces</h2>
+    <div class="main">
+      <div class="title">
+	<h3>Combine card processing and bank payouts with escrow.</h3>
+      </div>
+      <div class="bod">
+	<ul class="fourp steps">
+	  <li class="charge">
+	    <p>Charge cards and bank accounts with <a href="#processing">Balanced Processing</a></p>
+	  </li>
+	  <li class="escrow">
+	    <p>Escrow funds</p>
+	  </li>
+	  <li class="payouts">
+	    <p>Pay out to bank accounts with <a href="#payouts">Balanced Payouts</a></p>
+	  </li>
+	  <li class="fees">
+	    <p>Collect your fees</p>
+	  </li>
+	</ul>
+	<ul class="twop callouts">
+	  <li>
+	    <h4>Decide when to disburse funds</h4>
+	    <p>Once a card is charged, funds are implicitly placed in
+	      escrow for as long as you need. You decide when to
+	      pay your merchants upon fulfillment of an order or
+	      a service.</p>
+	    <p><a href="/docs/overview?language=bash#escrow">More about escrow</a></p>
+	  </li>
+	  <li>
+	    <h4>Define your own fee structure</h4>
+	    <p>Set your own fees by determining how much to collect
+	      from buyers, merchants, or both.</p>
+	    <p><a href="/docs/overview?language=bash#collecting-your-fees">View fee scenarios</a></p>
+	  </li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="integrating">
+    <h2>Integrate in minutes</h2>
+    <div class="main">
+      <div class="title">
+	<h3>Balanced provides client libraries and a RESTful API for you to easily integrate.</h3>
+	<p><a href="/docs/overview">View our docs</a></p>
+      </div>
+      <div class="bod">
+
+	<ul class="twop">
+	  <li>
+	    <h4>Tutorials</h4>
+	    <ul class="tutorials">
+	      <li><a href="/docs/overview?language=bash#balanced-processing">How to charge a card</a></li>
+	      <li><a href="/docs/overview?language=bash#balanced-payouts">How to pay a bank account</a></li>
+	      <li><a href="/docs/overview?language=bash#funds-flow">How to escrow funds</a></li>
+	      <li><a href="/docs/overview?language=bash#collecting-your-fees">How to collect your fee</a></li>
+	    </ul>
+	    <h4>Need help integrating?</h4>
+	    <p>Contact us through one of our many <a href="/help">support channels</a>.</p>
+	  </li>
+	  <li>
+	    <h4>Client libraries</h4>
+	    <ul class="libraries">
+	      <li class="python">
+		<a href="https://github.com/balanced/balanced-python" target="_blank">Python</a>
+	      </li>
+	      <li class="ruby">
+		<a href="https://github.com/balanced/balanced-ruby" target="_blank">Ruby</a>
+	      </li>
+	      <li class="php">
+		<a href="https://github.com/balanced/balanced-php" target="_blank">PHP</a>
+	      </li>
+	      <li class="java">
+		<a href="https://github.com/balanced/balanced-java" target="_blank">Java</a>
+	      </li>
+	      <li class="perl">
+		<a href="https://github.com/Crowdtilt/Business-BalancedPayments" target="_blank">Perl</a>
+	      </li>
+	      <li class="nodejs">
+		<a href="https://github.com/balanced/balanced-node" target="_blank">node.js</a>
+	      </li>
+	      <li class="csharp">
+		<a href="https://github.com/balanced/balanced-csharp" target="_blank">C#</a>
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>All inclusive pricing</h2>
+    <div class="main">
+      <div class="title">
+	<h3>No monthly fees. No setup fees. No recurring fees.</h3>
+	<p><a href="/docs/overview?language=bash#pricing-and-fees">More about pricing</a></p>
+      </div>
+      <div class="bod">
+	<ul class="pricing">
+	  <li>
+	    <h4>Processing: credit card <span>(per txn)</span></h4>
+	    <p class="processing">2.9% + 30c</p>
+	  </li>
+	  <li>
+	    <h4>Processing: bank account <span>(per txn)</span></h4>
+	    <p class="processing ach">25c</p>
+	  </li>
+	  <li>
+	    <h4>Payouts: bank account <span>(per deposit)</span></h4>
+	    <p class="payouts">25c</p>
+	  </li>
+	</ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="go" class="box">
+    <h1>Solve your payments problem today.</h1>
+    <a href="/marketplaces/start" class="btn btn-bal">TRY IT OUT</a>
+  </section>
+
+</div>
+
+
+{% endblock %}

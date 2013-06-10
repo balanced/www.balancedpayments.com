@@ -1,0 +1,5 @@
+{
+    "template": "index.html",
+    "locals": { "body_class": "tetstasdf" },
+    "no_script": true
+}

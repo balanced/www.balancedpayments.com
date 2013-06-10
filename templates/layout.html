@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.name if page.name else name }}</title>
+    <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAStJREFUWIXtlT1SwzAQRp+YHMAeGsrcIGlc4yukpDHODaBLF6dzB5yAkIYyOYJSu/INUtIw9g1MgZhhZJlITogbfZ12Pu2+0c+uaJqGIXU1aHUP4AGAkR4QQlDF0Rh4BWKgBl5CWWQuiRebyROQAgEggXmelAf913WdwFYVRyVYVnGUOhRPgQe1F5Vra/K2AKo4CoCpwXtvC9DhnS42k/FRgD9Un+rNk/JwFCCURc33nel6cwAweXcmY9cJzICVApHALJSFMYFJeVLuVI6f/c/A3OQV+qsUQtjW6SXbX3AxeQAP4AFa09BWH+/XGXCrlvubu8+sT55ejUgVX2rhlQ3EuRqRadq5TMuTAQLL2L8BmAaT9bA6B8AjsP61XquYs1qP8NIavA94AA/wBRJiTbdsTuB4AAAAAElFTkSuQmCC" type="image/x-icon">
+    <script type="text/javascript">
+      var _pageStartTime = (new Date()).getTime();
+      var _gaq = _gaq || [];
+    </script>
+
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="/js/lib/html5shiv.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" href="/static/css/bootstrap-2.0.css">
+
+    {% block head %}{% endblock %}
+
+
+  </head>
+  <body class="{{ page.locals.body_class }}">
+
+    {% block body %}{% endblock %}
+
+    <footer>
+
+      <div>
+	<p>
+	  <strong>Balanced</strong>
+	  <a href="/about">About</a>
+	  <a href="http://blog.balancedpayments.com" target="_new">Blog</a>
+	  <a href="https://status.balancedpayments.com" target="_new">Status</a>
+	  <a href="https://twitter.com/balanced" target="_new" class="twitter">Twitter</a>
+	</p>
+	<p>
+	  <strong>Legal</strong>
+	  <a href="/terms">Terms of use</a>
+	  <a href="/privacy">Privacy policy</a>
+	</p>
+	<p>Copyright &copy; 2013. Balanced.
+	</p>
+	<p id="cards">American Express, VISA, MC, and Discover</p>
+      </div>
+
+    </footer>
+
+    <div id="body-content-queue"></div>
+
+    {% if not page.no_script %}
+    <script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
+    {% endif %}
+    <script type="text/javascript">
+      _gaq.push(['_setAccount', 'UA-30733850-1']);
+      _gaq.push(['_setDomainName', 'balancedpayments.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+
+  <section class="print-header">
+    <!-- TODO: fix the address -->
+    801 High Street, Suite 200<br>
+    Palo Alto, CA 94301<br>
+    (877) 240-0274<br>
+    <br>
+    support@poundpay.com<br>
+    balancedpayments.com
+    <div id="print-logo">
+      <img src="/images/balanced-logo-print.png">
+    </div>
+  </section>
+</body>
+</html>
