@@ -48,6 +48,8 @@ make_dir:
 	mkdir -p $(OUTPUT_DIR)/static/css
 	mkdir -p $(OUTPUT_DIR)/static/js
 	mkdir -p $(OUTPUT_DIR)/static/icons
+	mkdir -p $(OUTPUT_DIR)/css/
+	mkdir -p $(OUTPUT_DIR)/js/build
 
 
 
@@ -63,9 +65,11 @@ $(OUTPUT_DIR)/images: $(wildcard static/images/*)
 
 $(OUTPUT_DIR)/static/js/%.js: $(wildcard static/js/src/*) make_static
 	cp -rv static/js/build/* $(OUTPUT_DIR)/static/js/
+	cp -rv static/js/build/* $(OUTPUT_DIR)/js/build/
 
 $(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*) make_static
 	cp -rv static/css/* $(OUTPUT_DIR)/static/css/
+	cp -rv static/css/* $(OUTPUT_DIR)/css/
 
 $(OUTPUT_DIR)/static/icons/%: $(wildcard static/icons/*)
 	cp -rv static/icons/* $(OUTPUT_DIR)/static/icons/
