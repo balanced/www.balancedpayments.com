@@ -1,5 +1,5 @@
 
-PAGES= index about help terms
+PAGES= index about help terms flow
 
 
 JAVASCRIPT= balanced.lib.js balanced.js
