@@ -12,8 +12,7 @@ STATIC_DIR= static
 
 BUILD_CODE=$(shell git rev-parse --short=15 HEAD)-$(shell date +%s)
 
-CDN_HOST=
-#https:\/\/d3n06lmttbcmxe.cloudfront.net
+CDN_HOST=https:\/\/d3n06lmttbcmxe.cloudfront.net
 
 
 .PHONY: all clean make_dir
