@@ -35,6 +35,7 @@ codes: make_dir $(addprefix $(OUTPUT_DIR)/, $(PAGES:=.html)) $(OUTPUT_DIR)/image
 codes: $(addprefix $(OUTPUT_DIR)/static/js/, $(JAVASCRIPT))
 codes: $(addprefix $(OUTPUT_DIR)/static/css/, $(CSS))
 codes: $(addprefix $(OUTPUT_DIR)/static/icons/, $(ICONS))
+codes: $(OUTPUT_DIR)/favicon.ico
 
 
 #server: all
@@ -73,3 +74,6 @@ $(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*) make_static
 
 $(OUTPUT_DIR)/static/icons/%: $(wildcard static/icons/*)
 	cp -rv static/icons/* $(OUTPUT_DIR)/static/icons/
+
+$(OUTPUT_DIR)/favicon.ico: static/images/favicon.ico
+	cp static/images/favicon.ico $(OUTPUT_DIR)
