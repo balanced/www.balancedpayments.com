@@ -6,8 +6,12 @@ module.exports = function(env, callback) {
 };
 
 
-String.prototype.markdown = function() {
-    var m = marked(this.toString());
+String.prototype.markdown = function(no_p_tag) {
+    var str = this.toString();
+    if(no_p_tag === true) {
+	str = "<div>"+str+"</div>"; // makes markdown not add <p>
+    }
+    var m = marked(str);
     //console.log(this.toString(), m);
     return m;
 };
