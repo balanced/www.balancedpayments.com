@@ -49,7 +49,6 @@
     </div>
     <div class="main">
       <div class="title">
-	<!--h3>{{ section.desc }}</h3-->
 	{{ section.desc.markdown() }}
       </div>
       <div class="bod">
@@ -67,41 +66,25 @@
   {% endfor %}
 
   <section id="marketplaces">
-    <h2>Balanced for Marketplaces</h2>
+    <h2>{{ page.metadata.marketplaces.title }}</h2>
     <div class="main">
       <div class="title">
-	<h3>Combine card processing and bank payouts with escrow.</h3>
+	{{ page.metadata.marketplaces.desc.markdown() }}
       </div>
       <div class="bod">
 	<ul class="fourp steps">
-	  <li class="charge">
-	    <p>Charge cards and bank accounts with <a href="#processing">Balanced Processing</a></p>
+	  {% for item in page.metadata.marketplaces.tops %}
+	  <li class="{{ item.id }}">
+	    {{ item.text.markdown() }}
 	  </li>
-	  <li class="escrow">
-	    <p>Escrow funds</p>
-	  </li>
-	  <li class="payouts">
-	    <p>Pay out to bank accounts with <a href="#payouts">Balanced Payouts</a></p>
-	  </li>
-	  <li class="fees">
-	    <p>Collect your fees</p>
-	  </li>
+	  {% endfor %}
 	</ul>
 	<ul class="twop callouts">
+	  {% for item in page.metadata.marketplaces.bottoms %}
 	  <li>
-	    <h4>Decide when to disburse funds</h4>
-	    <p>Once a card is charged, funds are implicitly placed in
-	      escrow for as long as you need. You decide when to
-	      pay your merchants upon fulfillment of an order or
-	      a service.</p>
-	    <p><a href="/docs/overview?language=bash#escrow">More about escrow</a></p>
+	    {{ item.text.markdown() }}
 	  </li>
-	  <li>
-	    <h4>Define your own fee structure</h4>
-	    <p>Set your own fees by determining how much to collect
-	      from buyers, merchants, or both.</p>
-	    <p><a href="/docs/overview?language=bash#collecting-your-fees">View fee scenarios</a></p>
-	  </li>
+	  {% endfor %}
 	</ul>
       </div>
     </div>
@@ -141,15 +124,14 @@
   </section>
 
   <section id="pricing">
-    <h2>All inclusive pricing</h2>
+    <h2>{{ page.metadata.pricing.title }}</h2>
     <div class="main">
       <div class="title">
-	<h3>No monthly fees. No setup fees. No recurring fees.</h3>
-	<p><a href="/docs/overview?language=bash#pricing-and-fees">More about pricing</a></p>
+	{{ page.metadata.pricing.desc.markdown() }}
       </div>
       <div class="bod">
 	<ul class="pricing">
-	  {% for price in page.metadata.pricing %}
+	  {% for price in page.metadata.pricing.rates %}
 	  <li>
 	    <h4>{{ price.desc }} <span>({{ price.per }})</span></h4>
 	    <p class="{{ price.amount }}">{{ price.amount }}</p>
@@ -158,12 +140,11 @@
 	</ul>
       </div>
     </div>
-
   </section>
 
   <section id="go" class="box">
-    <h1>Solve your payments problem today.</h1>
-    <a href="/marketplaces/start" class="btn btn-bal">TRY IT OUT</a>
+    <h1>{{ page.metadata.bottom.heading }}</h1>
+    <a href="/marketplaces/start" class="btn btn-bal">{{ page.metadata.bottom.link }}</a>
   </section>
 
 </div>

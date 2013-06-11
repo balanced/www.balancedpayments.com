@@ -70,7 +70,38 @@ Sections:
         text: |
           Retain your brand and keep customers on your site; merchants do not need to sign up for a Balanced account.
 
+marketplaces:
+  title: Balanced for Marketplaces
+  desc: |
+    ### Combine card processing and bank payouts with escrow.
+  tops:
+    - id: charge
+      text: |
+        Charge cards and bank accounts with [Balanced Processing](#processing)
+    - id: escrow
+      text: |
+        Escrow funds
+    - id: payouts
+      text: |
+        Pay out to bank accounts with [Balanced Payouts](#payouts)
+    - id: fees
+      text: |
+        Collect your fees
+  bottoms:
+    - text: |
+        #### Decide when to disburse funds
+        Once a card is charged, funds are implicitly placed in
+        escrow for as long as you need. You decide when to
+        pay your merchants upon fulfillment of an order or
+        a service.
 
+        [More about escrow](/docs/overview?language=bash#escrow)
+    - text: |
+        #### Define your own fee structure
+        Set your own fees by determining how much to collect
+        from buyers, merchants, or both.
+
+        [View fee scenarios](/docs/overview?language=bash#collecting-your-fees)
 
 integrate:
   title: Integrate in minutes
@@ -114,15 +145,23 @@ integrate:
 
 # the amount references a css class that is used to loda the images
 pricing:
-  - desc: "Processing: credit card"
-    per: per txn
-    amount: processing
-  - desc: "Processing: bank account"
-    per: per txn
-    amount: processing ach
-  - desc: "Payout: bank account"
-    per: per deposit
-    amount: payouts
+  title: All inclusive pricing
+  desc: |
+    ### No monthly fees. No setup fees. No recurring fees.
+    [More about pricing](/docs/overview?language=bash#pricing-and-fees)
+  rates:
+    - desc: "Processing: credit card"
+      per: per txn
+      amount: processing
+    - desc: "Processing: bank account"
+      per: per txn
+      amount: processing ach
+    - desc: "Payout: bank account"
+      per: per deposit
+      amount: payouts
 
+bottom:
+  heading: Solve your payments problem today.
+  link: TRY IT OUT
 
 ---
