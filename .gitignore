@@ -44,3 +44,6 @@ node_modules/
 env/
 tmp/
 output/
+contents/static
+contents/images
+output_tmp

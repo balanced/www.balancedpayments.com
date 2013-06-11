@@ -3,7 +3,8 @@
     "wintersmith-browserify": "*",
     "wintersmith-less": "*",
     "wintersmith-nunjucks": "*",
-    "browsernizr": "*"
+    "browsernizr": "*",
+    "wintersmith": "*"
   },
   "repository": "none"
 }
