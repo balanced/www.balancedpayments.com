@@ -1,5 +1,6 @@
 
-PAGES= index about help terms flow
+PAGES=
+# index about help terms flow
 
 
 JAVASCRIPT= balanced.lib.js balanced.js
@@ -17,7 +18,7 @@ BUILD_CODE=$(shell git rev-parse --short=15 HEAD)-$(shell date +%s)
 
 CDN_HOST=https:\/\/d3n06lmttbcmxe.cloudfront.net
 
-WINTERSMITH=wintersmith
+WINTERSMITH= ./node_modules/.bin/wintersmith
 V=
 
 .PHONY: all clean make_dir

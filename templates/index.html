@@ -9,11 +9,6 @@
 {% endblock %}
 
 {% block body %}
-
-
-
-
-
 <div class="hur">
 
   <section id="heading">
@@ -21,110 +16,55 @@
   </section>
 
   <section id="try-it" class="box">
-    <h1>Payment processing, escrow, and payouts in one simple API</h1>
-    <a href="/marketplaces/start" class="btn btn-bal">TRY IT OUT</a>
+    <h1>{{ page.metadata.try_out.heading }}</h1>
+    <a href="/marketplaces/start" class="btn btn-bal">{{ page.metadata.try_out.link }}</a>
   </section>
 
   <section id="intro">
     <div>
+      {% for intro in page.metadata.intro %}
       <div>
-	<h1>Charge cards and bank accounts</h1>
-	<p>with <a href="#processing">Balanced Processing</a></p>
+	<h1>{{ intro.heading }}</h1>
+	{{ intro.sub.markdown() }}
       </div>
-      <div>
-	<h1>Pay out to bank accounts</h1>
-	<p>with <a href="#payouts">Balanced Payouts</a></p>
-      </div>
-      <div>
-	<h1>Escrow funds</h1>
-	<p>use all 3 with <a href="#marketplaces">Balanced for Marketplaces</a></p>
-      </div>
+      {% endfor %}
     </div>
   </section>
 
   <section id="customers">
-
     <ul>
-      <li class="redditgifts">
-	<a href="http://www.redditgifts.com" target="_blank">RedditGifts</a>
+      {% for customer in page.metadata.customers %}
+      <li class="{{ customer.class if customer.class else customer.name | lower }}">
+	<a href="{{ customer.url }}" target="_blank">{{ customer.name }}</a>
       </li>
-      <li class="thefancy">
-	<a href="http://www.thefancy.com" target="_blank">TheFancy</a>
-      </li>
-      <li class="groupme">
-	<a href="http://www.groupme.com" target="_blank">Groupme</a>
-      </li>
-      <li class="vungle">
-	<a href="http://www.vungle.com" target="_blank">Vungle</a>
-      </li>
-      <li class="visually">
-	<a href="http://www.visual.ly" target="_blank">Visual.ly</a>
-      </li>
+      {% endfor %}
     </ul>
   </section>
 
-  <section id="processing">
-    <h2>Balanced Processing</h2>
+  {% for section in page.metadata.Sections %}
+  <section id="{{ section.id }}">
+    <h2>{{ section.title }}</h2>
     <div class="sub">
-      <p>Credit cards (U.S. and international) &nbsp;|&nbsp; Bank accounts via ACH (U.S. only)</p>
+      <p>{{ section.subTitle }}</p>
     </div>
     <div class="main">
       <div class="title">
-	<h3>Accept credit cards and debit bank accounts for your business.</h3>
+	<!--h3>{{ section.desc }}</h3-->
+	{{ section.desc.markdown() }}
       </div>
       <div class="bod">
 	<ul class="threep">
+	  {% for sub in section.subs %}
 	  <li>
-	    <h4>No PCI requirements</h4>
-	    <p>Balanced is Level 1 PCI certified, so you can pass card data directly to us without worrying about compliance.</p>
-	    <p><a href="/docs/overview?language=bash#tokenizing-sensitive-information">More about security</a></p>
+	    <h4>{{ sub.title }}</h4>
+	    {{ sub.text.markdown() }}
 	  </li>
-	  <li>
-	    <h4>Soft descriptor control</h4>
-	    <p>Specify the credit card statement descriptor on a per-transaction basis.</p>
-	  </li>
-	  <li>
-	    <h4>Completely white-labeled</h4>
-	    <p>Retain your brand and keep customers on your site;
-	      buyers do not need to sign up for a Balanced account.</p>
-	  </li>
+	  {% endfor %}
 	</ul>
       </div>
     </div>
   </section>
-
-  <section id="payouts">
-    <h2>Balanced Payouts</h2>
-    <div class="sub">
-      <p>Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)</p>
-    </div>
-    <div class="main">
-      <div class="title">
-	<h3>Use with any card processor or as a stand-alone service for same-day bank deposits.</h3>
-      </div>
-      <div class="bod">
-	<ul class="threep">
-	  <li>
-	    <h4>Pay out same day</h4>
-	    <p>Balanced now offers same-day ACH payouts to Wells
-	      Fargo bank account holders. Pay all other merchants
-	      via next-day ACH.</p>
-	    <p><a href="/docs/overview?language=bash#submission-delivery-times">See payout schedule</a></p>
-	  </li>
-	  <li>
-	    <h4>No fees to add funds</h4>
-	    <p>To pay out, simply fund your balance with your bank account.</p>
-	    <p><a href="/docs/overview?language=bash#pre-funding-your-account">More about pre-funding your account</a></p>
-	  </li>
-	  <li>
-	    <h4>Completely white-labeled</h4>
-	    <p>Retain your brand and keep customers on your site;
-	      merchants do not need to sign up for a Balanced account.</p>
-	  </li>
-	</ul>
-      </div>
-    </div>
-  </section>
+  {% endfor %}
 
   <section id="marketplaces">
     <h2>Balanced for Marketplaces</h2>
@@ -168,38 +108,32 @@
   </section>
 
   <section id="integrating">
-    <h2>Integrate in minutes</h2>
+    <h2>{{ page.metadata.integrate.title }}</h2>
     <div class="main">
       <div class="title">
-	<h3>Balanced provides client libraries and a RESTful API for you to easily integrate.</h3>
-	<p><a href="/docs/overview">View our docs</a></p>
+	{{ page.metadata.integrate.desc.markdown() }}
       </div>
       <div class="bod">
-
 	<ul class="twop">
 	  <li>
-	    <h4>Tutorials</h4>
+	    <h4>{{ page.metadata.integrate.tutorials_title }}</h4>
 	    <ul class="tutorials">
-	      {% for tutorial in page.metadata.tutorials %}
+	      {% for tutorial in page.metadata.integrate.tutorials %}
 	      <li><a href="{{ tutorial.url }}">{{ tutorial.name }}</a></li>
 	      {% endfor %}
-	      <!--li><a href="/docs/overview?language=bash#balanced-processing">How to charge a card</a></li>
-	      <li><a href="/docs/overview?language=bash#balanced-payouts">How to pay a bank account</a></li>
-	      <li><a href="/docs/overview?language=bash#funds-flow">How to escrow funds</a></li>
-	      <li><a href="/docs/overview?language=bash#collecting-your-fees">How to collect your fee</a></li-->
 	    </ul>
-	    <h4>Need help integrating?</h4>
-	    <p>Contact us through one of our many <a href="/help">support channels</a>.</p>
+	    {{ page.metadata.integrate.sub_tutorials.markdown() if page.metadata.integrate.sub_tutorials }}
 	  </li>
 	  <li>
-	    <h4>Client libraries</h4>
+	    <h4>{{ page.metadata.integrate.clients_title }}</h4>
 	    <ul class="libraries">
-	      {% for library in page.metadata.clients %}
+	      {% for library in page.metadata.integrate.clients %}
 	      <li class="{{ library.class if library.class else library.name | lower }}">
 		<a href="{{ library.url }}" target="_blank">{{ library.name }}</a>
 	      </li>
 	      {% endfor %}
 	    </ul>
+	    {{ page.metadata.integrate.sub_clients.markdown() if page.metadata.integrate.sub_clients }}
 	  </li>
 	</ul>
       </div>
@@ -215,18 +149,12 @@
       </div>
       <div class="bod">
 	<ul class="pricing">
+	  {% for price in page.metadata.pricing %}
 	  <li>
-	    <h4>Processing: credit card <span>(per txn)</span></h4>
-	    <p class="processing">2.9% + 30c</p>
+	    <h4>{{ price.desc }} <span>({{ price.per }})</span></h4>
+	    <p class="{{ price.amount }}">{{ price.amount }}</p>
 	  </li>
-	  <li>
-	    <h4>Processing: bank account <span>(per txn)</span></h4>
-	    <p class="processing ach">25c</p>
-	  </li>
-	  <li>
-	    <h4>Payouts: bank account <span>(per deposit)</span></h4>
-	    <p class="payouts">25c</p>
-	  </li>
+	  {% endfor %}
 	</ul>
       </div>
     </div>
@@ -239,6 +167,4 @@
   </section>
 
 </div>
-
-
 {% endblock %}
