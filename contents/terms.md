@@ -1,10 +1,11 @@
 ---
 title: Terms of service
 template: text.html
+icon_class: terms-of-use
 ---
 
 
-<div><h4 id="last-updated--4-09-2012">Last Updated: 4/09/2012</h4>
+<div><h4>Last Updated: 4/09/2012</h4>
   <p>PLEASE READ THESE SITE TERMS CAREFULLY. BY ACCESSING OR USING OUR WEBSITE, YOU
     AGREE TO BE BOUND BY THESE SITE TERMS AND ALL TERMS AND GUIDELINES
     INCORPORATED BY REFERENCE. IF YOU DO NOT AGREE TO ALL OF THESE TERMS, DO NOT

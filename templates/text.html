@@ -6,7 +6,17 @@
 {% endblock %}
 
 {% block body %}
-
-{{ page.html }}
-
+<div style="width: 960px; margin: auto">
+<section id="h-top">
+  <div id="logo">
+    <a href="/"><img src="/static/icons/hp/3/balanced_logo.png" alt="Balanced Homepage Logo"></a>
+  </div>
+</section>
+<section id="h-words">
+  <h2 class="{{ page.metadata.icon_class }}">{{ page.title }}</h2>
+  <section class="booger">
+    {{ page.html }}
+  </section>
+</section>
+</div>
 {% endblock %}

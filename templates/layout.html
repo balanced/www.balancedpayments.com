@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.name if page.name else name }}</title>
+    <title>{{ page.metadata.name if page.metadata.name else name }}</title>
     <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAStJREFUWIXtlT1SwzAQRp+YHMAeGsrcIGlc4yukpDHODaBLF6dzB5yAkIYyOYJSu/INUtIw9g1MgZhhZJlITogbfZ12Pu2+0c+uaJqGIXU1aHUP4AGAkR4QQlDF0Rh4BWKgBl5CWWQuiRebyROQAgEggXmelAf913WdwFYVRyVYVnGUOhRPgQe1F5Vra/K2AKo4CoCpwXtvC9DhnS42k/FRgD9Un+rNk/JwFCCURc33nel6cwAweXcmY9cJzICVApHALJSFMYFJeVLuVI6f/c/A3OQV+qsUQtjW6SXbX3AxeQAP4AFa09BWH+/XGXCrlvubu8+sT55ejUgVX2rhlQ3EuRqRadq5TMuTAQLL2L8BmAaT9bA6B8AjsP61XquYs1qP8NIavA94AA/wBRJiTbdsTuB4AAAAAElFTkSuQmCC" type="image/x-icon">
     <script type="text/javascript">
       var _pageStartTime = (new Date()).getTime();
@@ -13,12 +13,34 @@
 	<script type="text/javascript" src="/js/lib/html5shiv.js"></script>
 	<![endif]-->
     <link rel="stylesheet" href="/static/css/bootstrap-2.0.css">
+    <link rel="stylesheet" href="/static/css/base.css">
 
     {% block head %}{% endblock %}
 
-
   </head>
-  <body class="{{ page.locals.body_class }}">
+  <body class="{{ page.metadata.body_class }}"> <!-- fix the class reference thing -->
+
+    <div class="navbar">
+      <div class="navbar-inner">
+	<ul class="nav pull-right">
+	  <li class="docs dropdown	"><a href="#"
+					     class="dropdown-toggle"
+					     data-toggle="dropdown">Docs
+	      <b class="caret"></b></a>
+	    <ul class="dropdown-menu nav-list">
+	      <li><a href="/docs/overview">Overview</a></li>
+	      <li><a href="/docs/api">REST API</a></li>
+	    </ul>
+	  </li>
+	  <li class="support ">
+	    <a href="/help">Help</a>
+	  </li>
+	  <li>
+	    <a href="/login">Login</a>
+	  </li>
+	</ul>
+      </div>
+    </div>
 
     {% block body %}{% endblock %}
 

@@ -1,7 +1,6 @@
 {% extends 'layout.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="/static/css/base.css">
 <!--[if lte IE 9]>
     <link rel="stylesheet" href="/static/css/ie9.css">
     <![endif]-->
@@ -10,27 +9,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="navbar">
-  <div class="navbar-inner">
-    <ul class="nav pull-right">
-      <li class="docs dropdown	"><a href="#"
-				     class="dropdown-toggle"
-				     data-toggle="dropdown">Docs
-	  <b class="caret"></b></a>
-	<ul class="dropdown-menu nav-list">
-	  <li><a href="/docs/overview">Overview</a></li>
-	  <li><a href="/docs/api">REST API</a></li>
-	</ul>
-      </li>
-      <li class="support ">
-	<a href="/help">Help</a>
-      </li>
-      <li>
-	<a href="/login">Login</a>
-      </li>
-    </ul>
-  </div>
-</div>
+
 
 
 
@@ -201,10 +180,13 @@
 	  <li>
 	    <h4>Tutorials</h4>
 	    <ul class="tutorials">
-	      <li><a href="/docs/overview?language=bash#balanced-processing">How to charge a card</a></li>
+	      {% for tutorial in page.metadata.tutorials %}
+	      <li><a href="{{ tutorial.url }}">{{ tutorial.name }}</a></li>
+	      {% endfor %}
+	      <!--li><a href="/docs/overview?language=bash#balanced-processing">How to charge a card</a></li>
 	      <li><a href="/docs/overview?language=bash#balanced-payouts">How to pay a bank account</a></li>
 	      <li><a href="/docs/overview?language=bash#funds-flow">How to escrow funds</a></li>
-	      <li><a href="/docs/overview?language=bash#collecting-your-fees">How to collect your fee</a></li>
+	      <li><a href="/docs/overview?language=bash#collecting-your-fees">How to collect your fee</a></li-->
 	    </ul>
 	    <h4>Need help integrating?</h4>
 	    <p>Contact us through one of our many <a href="/help">support channels</a>.</p>
@@ -212,27 +194,11 @@
 	  <li>
 	    <h4>Client libraries</h4>
 	    <ul class="libraries">
-	      <li class="python">
-		<a href="https://github.com/balanced/balanced-python" target="_blank">Python</a>
+	      {% for library in page.metadata.clients %}
+	      <li class="{{ library.class if library.class else library.name | lower }}">
+		<a href="{{ library.url }}" target="_blank">{{ library.name }}</a>
 	      </li>
-	      <li class="ruby">
-		<a href="https://github.com/balanced/balanced-ruby" target="_blank">Ruby</a>
-	      </li>
-	      <li class="php">
-		<a href="https://github.com/balanced/balanced-php" target="_blank">PHP</a>
-	      </li>
-	      <li class="java">
-		<a href="https://github.com/balanced/balanced-java" target="_blank">Java</a>
-	      </li>
-	      <li class="perl">
-		<a href="https://github.com/Crowdtilt/Business-BalancedPayments" target="_blank">Perl</a>
-	      </li>
-	      <li class="nodejs">
-		<a href="https://github.com/balanced/balanced-node" target="_blank">node.js</a>
-	      </li>
-	      <li class="csharp">
-		<a href="https://github.com/balanced/balanced-csharp" target="_blank">C#</a>
-	      </li>
+	      {% endfor %}
 	    </ul>
 	  </li>
 	</ul>

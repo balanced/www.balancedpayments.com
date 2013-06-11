@@ -48,7 +48,7 @@ codes: $(addprefix $(OUTPUT_DIR)/static/icons/, $(ICONS))
 codes: $(OUTPUT_DIR)/favicon.ico
 
 winter: $(WINTERS)
-	rm -f $(V) *~ **/*~
+	rm -f $(V) *~ **/*~ .\#* **/.\#*
 	$(WINTERSMITH) build
 	cp -r $(V)  build $(FINAL_OUTPUT_DIR)
 
@@ -81,18 +81,21 @@ $(OUTPUT_DIR)/%.html: $(PAGES_DIR)/%.html
 $(OUTPUT_DIR)/images: $(wildcard static/images/*)
 	cp -r $(V) static/images $(OUTPUT_DIR)/images
 	cp -r $(V) static/images $(OUTPUT_DIR)/static/images
-	touch $(OUTPUT_DIR)/images
+	touch $(OUTPUT_DIR)/images/*
 
 $(OUTPUT_DIR)/static/js/%.js: $(wildcard static/js/src/*) make_static
 	cp -r $(V) static/js/build/* $(OUTPUT_DIR)/static/js/
 	cp -r $(V) static/js/build/* $(OUTPUT_DIR)/js/build/
+	touch $(OUTPUT_DIR)/static/js/*
 
 $(OUTPUT_DIR)/static/css/%.css: $(wildcard static/less/*) make_static
 	cp -r $(V) static/css/* $(OUTPUT_DIR)/static/css/
 	cp -r $(V) static/css/* $(OUTPUT_DIR)/css/
+	touch $(OUTPUT_DIR)/static/css/*
 
 $(OUTPUT_DIR)/static/icons/%: $(wildcard static/icons/*)
 	cp -r $(V) static/icons/* $(OUTPUT_DIR)/static/icons/
+	touch $(OUTPUT_DIR)/static/icons/*
 
 $(OUTPUT_DIR)/favicon.ico: static/images/favicon.ico
 	cp static/images/favicon.ico $(OUTPUT_DIR)
