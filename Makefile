@@ -12,7 +12,7 @@ FINAL_OUTPUT_DIR= output
 PAGES_DIR= pages
 STATIC_DIR= static
 
-WINTERS= contents/static contents/images
+WINTERS= contents/static contents/images contents/help
 
 BUILD_CODE=$(shell git rev-parse --short=15 HEAD)-$(shell date +%s)
 
@@ -51,6 +51,7 @@ codes: $(OUTPUT_DIR)/favicon.ico
 winter: $(WINTERS)
 	rm -f $(V) *~ **/*~ .\#* **/.\#*
 	$(WINTERSMITH) build
+	rm build/robots.txt
 	cp -r $(V)  build $(FINAL_OUTPUT_DIR)
 
 
@@ -63,6 +64,7 @@ clean:
 	rm -rf $(V) build
 	rm -rf $(V) contents/images
 	rm -rf $(V) contents/static
+	rm -rf $(V) contents/help
 	cd static && make clean
 
 make_dir:
@@ -112,3 +114,9 @@ contents/images: codes
 	mkdir -p contents/images
 	cp -r $(V) $(OUTPUT_DIR)/images/* contents/images
 	touch contents/images
+
+contents/help:
+	./update_submodules.sh
+	mkdir -p contents/help
+	cp -r $(V) data/balanced-docs/faq/* contents/help
+	touch contents/help

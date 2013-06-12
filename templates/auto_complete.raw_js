@@ -1,0 +1,17 @@
+//console.log("raw js working I guess");
+
+//console.log(env)
+//console.log(env.contents.help);
+
+//var helps = env.contents.help;
+
+
+
+//look_at(helps);
+
+//console.log(Balanced_GenHelpData, env);
+var jj = Balanced_GenHelpData(env.contents.help);
+
+//callback(null, new Buffer("This should end up in the file I guess"));
+
+callback(null, new Buffer(JSON.stringify(jj, null, 1)));
