@@ -1,4 +1,5 @@
 var marked = require('./node_modules/wintersmith/node_modules/marked');
+var nunjuck = require('./node_modules/wintersmith-nunjucks/node_modules/nunjucks');
 // use the version of markdown that wintersmith is using so that we get its configs
 var fs = require('fs');
 
@@ -47,7 +48,19 @@ module.exports = function(env, callback) {
 
     //env.registerContentPlugin("help", "help/**/*.md", );
 
+    var nunjuck_env = new nunjuck.Environment();
+//    console.log(nunjuck, nunjuck_env, nunjuck.filters);
+
+    //nunjuck.filters.toJSONs = JSON.stringify;
+    //nunjuck.filters.testing = function (str) {};
+    nunjuck_env.addFilter('asdfasdf', function(str) {
+	//console.log(str);
+	return str;
+    });
+    //nunjuck.filters.toJSON = JSON.stringify;
+
     // this is a massive hack with globals etc
+    //nunjuck.filters.GenHelpData =
     Balanced_GenHelpData = function (help) {
 //	console.log("helps stuff", env);
 	var faq = [];
@@ -87,6 +100,8 @@ module.exports = function(env, callback) {
 
 	return { faq: faq, topics: topics };
     };
+
+
 
     callback();
 };

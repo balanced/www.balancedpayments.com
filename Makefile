@@ -52,6 +52,8 @@ winter: $(WINTERS)
 	rm -f $(V) *~ **/*~ .\#* **/.\#*
 	$(WINTERSMITH) build
 	rm build/robots.txt
+	echo "var answers_data = " > build/auto_complete.js
+	cat build/auto_complete.html >> build/auto_complete.js
 	cp -r $(V)  build $(FINAL_OUTPUT_DIR)
 
 
@@ -116,7 +118,7 @@ contents/images: codes
 	touch contents/images
 
 contents/help:
-	./update_submodules.sh
+	#./update_submodules.sh
 	mkdir -p contents/help
 	cp -r $(V) data/balanced-docs/faq/* contents/help
 	touch contents/help

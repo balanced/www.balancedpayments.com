@@ -71,6 +71,9 @@
     {% if not page.no_script %}
     <script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
     {% endif %}
+
+    {% block endbody %}{% endblock %}
+
     <script type="text/javascript">
       _gaq.push(['_setAccount', 'UA-30733850-1']);
       _gaq.push(['_setDomainName', 'balancedpayments.com']);
@@ -82,7 +85,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-
   </body>
 
   <section class="print-header">
