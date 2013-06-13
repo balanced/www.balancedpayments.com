@@ -32,9 +32,9 @@ customers:
 Sections:
   - id: processing
     title: Balanced Processing
-    subTitle: Credit cards (U.S. and international) &nbsp;|&nbsp; Bank accounts via ACH (U.S. only)
+    subTitle: Credit cards (U.S. and international)
     desc: |
-      ### Accept credit cards and debit bank accounts for your business.
+      ### Accept credit cards for your business.
     subs:
       - title: No PCI requirements
         text: |
