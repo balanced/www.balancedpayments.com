@@ -1,5 +1,6 @@
 ---
 title: Balanced - Payments processing, escrow, and payouts in one simple API | Privacy policy
+heading: Privacy policy
 template: text.html
 icon_class: privacy-policy
 ---
