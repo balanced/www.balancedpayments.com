@@ -16,7 +16,8 @@ WINTERS= contents/static contents/images contents/help
 
 BUILD_CODE=$(shell git rev-parse --short=15 HEAD)-$(shell date +%s)
 
-CDN_HOST=https:\/\/d3n06lmttbcmxe.cloudfront.net
+CDN_HOST=
+https:\/\/d3n06lmttbcmxe.cloudfront.net
 
 WINTERSMITH= ./node_modules/.bin/wintersmith
 V=
@@ -33,7 +34,8 @@ test: all
 
 # sets the time on the static files for use with the cdn
 # also a little hack to fix the issue with loading the static content from google
-live: codes
+live:	V= -v
+live:	winter
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/https:\/\/themes.googleusercontent.com\/static/-google-static-/g' {} \;
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/\/images\//$(CDN_HOST)\/images\//g' {} \;
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/\/static\//$(CDN_HOST)\/static.$(BUILD_CODE)\//g' {} \;

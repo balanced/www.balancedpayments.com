@@ -87,6 +87,8 @@
 
 
 {% block endbody %}
+<script src="https://irc.balancedpayments.com/history.js"></script>
+<script src="https://irc.balancedpayments.com/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="/static/js/irc.min.js"></script>
 <script>
   $(function () {
@@ -97,12 +99,10 @@
       var id = t.attr('postid');
       list.push({ title: text, value: text, id: id });
     });
-    console.log(list);
     $('[name="search-help"]').autocomplete({
       lookup: list,
       minChars: 3,
       onSelect: function(suggestion) {
-        console.log(suggestion);
         var loc  = window.location;
         loc = loc.pathname + loc.search + '#' + suggestion.id;
         window.location = loc;
