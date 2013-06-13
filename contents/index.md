@@ -8,7 +8,7 @@ try_out:
   link: TRY IT OUT
 
 intro:
-  - heading: Charge cards and bank accounts
+  - heading: Charge cards
     sub: with [Balanced Processing](#processing)
   - heading: Pay out to bank accounts
     sub: with [Balanced Payouts](#payouts)

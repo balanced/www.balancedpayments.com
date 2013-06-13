@@ -2,87 +2,87 @@
 
 {% block head %}
 <!--[if lte IE 9]>
-	<link rel="stylesheet" href="/static/css/ie9.css">
-	<![endif]-->
+    <link rel="stylesheet" href="/static/css/ie9.css">
+    <![endif]-->
 
-    <link rel="stylesheet" href="/static/css/help.css">
+<link rel="stylesheet" href="/static/css/help.css">
+<link rel="stylesheet" href="/static/css/root5.css">
 {% endblock %}
 
 {% block body %}
-    <h1 class="ws1 hcwh">{{ page.metadata.heading }}</h1>
-    <section id="c-irc" class="support-box">
-      <div class="body">
-	<nav>
-	  <h2>{{ page.metadata.ask }}</h2>
-	  <a href="{{ page.metadata.chat_link }}"
-	     target="_blank" class="btn-bal">Chat</a>
-	</nav>
-	<div>
-	  <ul id="irc">
-	    <li><em>Connecting...</em></li>
-	  </ul>
-	</div>
+<h1 class="ws1 hcwh">{{ page.metadata.heading }}</h1>
+<section id="c-irc" class="support-box">
+  <div class="body">
+    <nav>
+      <h2>{{ page.metadata.ask }}</h2>
+      <a href="{{ page.metadata.chat_link }}"
+	 target="_blank" class="btn-bal">Chat</a>
+    </nav>
+    <div>
+      <ul id="irc">
+	<li><em>Connecting...</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<span class="bookmark" id="new-search"></span>
+<section class="support-box" id="c-help">
+  <header>
+    <nav>
+      <h2>{{ page.metadata.search }}</h2>
+    </nav>
+    <div>
+      <input type="search" name="search-help" placeholder="type your question here" autofocus="autofocus">
+    </div>
+  </header>
+  <div class="body">
+    <nav>
+      <span class="ws11">Topics</span>
+      <ul>
+	{% for topic in page.metadata.topics %}
+	<li><a href="#{{ topic.id }}">{{ topic.name | capitalize }}</a></li>
+	{% endfor %}
+      </ul>
+      <div class="email-us">
+	<p>Can't find what you're looking for? Email us.</p>
+	<a href="mailto:support@balancedpayments.com"
+	   target="_blank" class="btn-bal">Email</a>
       </div>
-    </section>
-
-    <span class="bookmark" id="new-search"></span>
-    <section class="support-box" id="c-help">
-      <header>
-	<nav>
-	  <h2>{{ page.metadata.search }}</h2>
-	</nav>
-	<div>
-	  <input type="search" name="search-help" placeholder="type your question here" autofocus="autofocus">
-	</div>
-      </header>
-      <div class="body">
-	<nav>
-	  <span class="ws11">Topics</span>
-	  <ul>
-	    {% for topic in page.metadata.topics %}
-	    <li><a href="#{{ topic.id }}">{{ topic.name | capitalize }}</a></li>
+    </nav>
+    <div>
+      <ul class="top-nav">
+	{% for topic in page.metadata.topics_disp %}
+	<li>
+	  <h3>{{ topic.name | capitalize }}<span class="bookmark" id="{{ topic.id }}">[+]</span></h3>
+	  <ul class="subns">
+	    {% for sub in topic.data %}
+	    <li><a href="#{{ sub.id }}">{{ sub.title }}</a></li>
 	    {% endfor %}
 	  </ul>
-	  <div class="email-us">
-	    <p>Can't find what you're looking for? Email us.</p>
-	    <a href="mailto:support@balancedpayments.com"
-	       target="_blank" class="btn-bal">Email</a>
-	  </div>
-	</nav>
-	<div>
-	  <ul class="top-nav">
-	    {% for topic in page.metadata.topics_disp %}
+	</li>
+
+	{% endfor %}
+      </ul>
+      <ul class="content">
+	{% for answer in page.metadata.answers %}
+	<li>
+	  <ul class="subs">
 	    <li>
-	      <h3>{{ topic.name | capitalize }}<span class="bookmark" id="{{ topic.id }}">[+]</span></h3>
-	      <ul class="subns">
-		{% for sub in topic.data %}
-		<li><a href="#{{ sub.id }}">{{ sub.title }}</a></li>
-		{% endfor %}
-	      </ul>
+	      <span class="auto_name" postid="{{ answer.id }}">{{ answer.title | capitalize }}</span>
+	      <h3>
+		{{ answer.title | capitalize }}
+		<span class="bookmark" id="{{ answer.id }}">[+]</span>
+	      </h3>
+	      {{ answer.html }}
 	    </li>
-
-	    {% endfor %}
 	  </ul>
-	  <ul class="content">
-	    {% for answer in page.metadata.answers %}
-	    <li>
-	      <ul class="subs">
-		<li>
-		  <span class="auto_name" postid="{{ answer.id }}">{{ answer.title | capitalize }}</span>
-		  <h3>
-		    {{ answer.title | capitalize }}
-		    <span class="bookmark" id="{{ answer.id }}">[+]</span>
-		  </h3>
-		  {{ answer.html }}
-		</li>
-	      </ul>
-	    </li>
-	    {% endfor %}
-	  </ul>
-	</div>
-      </div>
-    </section>
-
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 
@@ -92,23 +92,23 @@
 <script type="text/javascript" src="/static/js/irc.min.js"></script>
 <script>
   $(function () {
-    var list = [];
-    $("span.auto_name").each(function () {
-      var t = $(this);
-      var text = t.html();
-      var id = t.attr('postid');
-      list.push({ title: text, value: text, id: id });
-    });
-    $('[name="search-help"]').autocomplete({
-      lookup: list,
-      minChars: 3,
-      onSelect: function(suggestion) {
-        var loc  = window.location;
-        loc = loc.pathname + loc.search + '#' + suggestion.id;
-        window.location = loc;
-      },
-      width: 660
-    }).prop('autocomplete', 'on');
+  var list = [];
+  $("span.auto_name").each(function () {
+  var t = $(this);
+  var text = t.html();
+  var id = t.attr('postid');
+  list.push({ title: text, value: text, id: id });
+  });
+  $('[name="search-help"]').autocomplete({
+  lookup: list,
+  minChars: 3,
+  onSelect: function(suggestion) {
+  var loc  = window.location;
+  loc = loc.pathname + loc.search + '#' + suggestion.id;
+  window.location = loc;
+  },
+  width: 660
+  }).prop('autocomplete', 'on');
   });
 
   Balanced.IRC.init('https://irc.balancedpayments.com', history);
