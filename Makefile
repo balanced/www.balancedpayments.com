@@ -52,7 +52,7 @@ codes: $(OUTPUT_DIR)/favicon.ico
 
 winter: $(WINTERS)
 	cd contents && rm -f $(V) *~ **/*~ .\#* **/.\#*
-	rm contents/help.json
+	rm -f contents/help.json
 	$(WINTERSMITH) build
 	mv build/help_ctr.html contents/help.json
 	$(WINTERSMITH) build
