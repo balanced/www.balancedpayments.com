@@ -49,12 +49,17 @@ codes: $(addprefix $(OUTPUT_DIR)/static/icons/, $(ICONS))
 codes: $(OUTPUT_DIR)/favicon.ico
 
 winter: $(WINTERS)
-	rm -f $(V) *~ **/*~ .\#* **/.\#*
+	cd contents && rm -f $(V) *~ **/*~ .\#* **/.\#*
+	rm contents/help.json
 	$(WINTERSMITH) build
-	rm build/robots.txt
+	mv build/help_ctr.html contents/help.json
+	$(WINTERSMITH) build
+	rm -f build/robots.txt
 	echo "var answers_data = " > build/auto_complete.js
 	cat build/auto_complete.html >> build/auto_complete.js
+	rm build/auto_complete.html
 	cp -r $(V)  build $(FINAL_OUTPUT_DIR)
+	rm $(FINAL_OUTPUT_DIR)/help_ctr.html
 
 
 #server: all

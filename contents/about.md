@@ -1,5 +1,5 @@
 ---
-title: about stuff
+title: Balanced - Payments processing, escrow, and payouts in one simple API | About
 template: about.html
 body_class: community
 

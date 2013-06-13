@@ -12,6 +12,7 @@ module.exports = function(env, callback) {
 	} catch(e) {
 	    console.error("Problem generating function for raw template", env.path);
 	    this.fun = function (env, callback) { callback("bad template"); };
+	    process.exit(1);
 	}
     }
 
@@ -19,6 +20,7 @@ module.exports = function(env, callback) {
 	try {
 	    this.fun(locals, callback, require);
 	}catch(e) {
+	    console.log(e);
 	    callback(e);
 	}
     };

@@ -1,0 +1,65 @@
+//console.log("Generating the mid help document");
+
+//console.log(env.page.metadata);
+
+function make_id(name) {
+    return name.toLowerCase().replace(/[^a-z]/g, '-');
+}
+
+var jj = Balanced_GenHelpData(env.contents.help);
+
+var result = env.page.metadata; // take metadata from the old page
+
+var topics_ctrl = {};
+for(var a=0; a < env.page.metadata.topics.length; a++) {
+    topics_ctrl[env.page.metadata.topics[a].name] = env.page.metadata.topics[a];
+}
+
+result.template = "help.html";
+
+result.topics = [];
+var topics_order = 1000;
+for(var name in jj.topics) {
+    if(topics_ctrl[name]) {
+	if(topics_ctrl[name].show === false) continue;
+	result.topics.push({ name: topics_ctrl[name].show || name, id: make_id(name), order: topics_ctrl.order || topics_order++ });
+    }else{
+	// show topics that are not listed in the control
+	//result.topics.push({ name: name, id: make_id(name), order: topics_order++ });
+    }
+}
+
+// sort the topics
+result.topics.sort(function (a,b) { return a.order - b.order; });
+
+var sections = {};
+for(var a =0; a < jj.faq.length; a++) {
+    var working = jj.faq[a];
+    //console.log(working);
+    if(!working.tags) continue;
+    for(var b=0; b < working.tags.length; b++) {
+	if(!sections[make_id(working.tags[b])]) sections[make_id(working.tags[b])] = [];
+	sections[make_id(working.tags[b])].push(working);
+    }
+}
+
+result.sections = sections;
+result.topics_disp = [];
+for(var a=0; a < result.topics.length; a++) {
+    result.topics_disp.push({
+	name: result.topics[a].name,
+	id: result.topics[a].id,
+	data: sections[result.topics[a].id]
+    });
+
+}
+
+result.answers = [];
+for(var a=0; a < jj.faq.length; a++) {
+    if(jj.faq[a].title && jj.faq[a].html && jj.faq[a].id)
+	result.answers.push(jj.faq[a])
+}
+
+//console.log(jj);
+
+callback(null, new Buffer(JSON.stringify(result, null, 1)));
