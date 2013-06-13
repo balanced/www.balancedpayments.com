@@ -26,7 +26,7 @@ V=
 
 
 
-all: winter
+all: winter codes
 
 test: all
 #	$(WINTERSMITH) preview
@@ -35,7 +35,7 @@ test: all
 # also a little hack to fix the issue with loading the static content from google
 live: V= -v
 live: BUILD_CODE=$(shell git rev-parse --short=15 HEAD)
-live: winter
+live: winter codes
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/https:\/\/themes.googleusercontent.com\/static/-google-static-/g' {} \;
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/\/images\//$(CDN_HOST)\/images\//g' {} \;
 	find $(FINAL_OUTPUT_DIR) -type f -exec sed -i 's/\/static\//$(CDN_HOST)\/static.$(BUILD_CODE)\//g' {} \;
@@ -118,6 +118,10 @@ contents/static: codes
 	mkdir -p contents/static
 	cp -r $(V) $(OUTPUT_DIR)/static/* contents/static
 	touch contents/static
+	mkdir -p contents/css
+	mkdir -p contents/js
+	cp -r $(V) $(OUTPUT_DIR)/css/* contents/css
+	cp -r $(V) $(OUTPUT_DIR)/js/* contents/js
 
 contents/images: codes
 	mkdir -p contents/images
