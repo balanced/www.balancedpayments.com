@@ -16,7 +16,7 @@ topics:
   - name: chargebacks
   - name: data
   - name: end_user
-    show: End User are cool
+    show: End User
   - name: fees
   - name: fraud
   - name: legal
@@ -25,6 +25,7 @@ topics:
   - name: processing
   - name: security
   - name: signup
+    order: 1
 
 
 

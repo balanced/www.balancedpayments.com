@@ -48,34 +48,19 @@ module.exports = function(env, callback) {
 	};
     };
 
-    //env.registerContentPlugin("help", "help/**/*.md", );
-
     var nunjuck_env = new nunjuck.Environment();
-//    console.log(nunjuck, nunjuck_env, nunjuck.filters);
-
-    //nunjuck.filters.toJSONs = JSON.stringify;
-    //nunjuck.filters.testing = function (str) {};
-    nunjuck_env.addFilter('asdfasdf', function(str) {
-	//console.log(str);
-	return str;
-    });
-    //nunjuck.filters.toJSON = JSON.stringify;
 
     // this is a massive hack with globals etc
-    //nunjuck.filters.GenHelpData =
     Balanced_GenHelpData = function (help) {
-//	console.log("helps stuff", env);
 	var faq = [];
 	var topics = {};
 	var category = {};
 	var faq_id = 100;
 
 	function look_at(files) {
-	    //	  console.log(files);
 	    if(!files) return;
-	    if(files.filepath) {// && files.metadata.category) {
+	    if(files.filepath) {
 		var id = faq_id++;
-		//console.log(files.metadata, files.markdown);
 		faq.push({
 		    title: files.metadata.title,
 		    tags: files.metadata.tags,
@@ -124,6 +109,5 @@ String.prototype.markdown = function(no_p_tag) {
 	str = "<div>"+str+"</div>"; // makes markdown not add <p>
     }
     var m = marked(str);
-    //console.log(this.toString(), m);
     return m;
 };
