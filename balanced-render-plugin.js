@@ -67,12 +67,13 @@ module.exports = function(env, callback) {
 //	console.log("helps stuff", env);
 	var faq = [];
 	var topics = {};
+	var category = {};
 	var faq_id = 100;
 
 	function look_at(files) {
 	    //	  console.log(files);
 	    if(!files) return;
-	    if(files.filepath) {
+	    if(files.filepath) {// && files.metadata.category) {
 		var id = faq_id++;
 		//console.log(files.metadata, files.markdown);
 		faq.push({
@@ -80,7 +81,8 @@ module.exports = function(env, callback) {
 		    tags: files.metadata.tags,
 		    id: id,
 		    url: "", // TODO: make the url or something come up here
-		    html: files.markdown.markdown()
+		    html: files.markdown.markdown(),
+		    category: files.metadata.category
 		});
 		if(files.metadata.tags)
 		    for(var a = 0; a < files.metadata.tags.length; a++) {
@@ -91,6 +93,13 @@ module.exports = function(env, callback) {
 			    id: id
 			});
 		    }
+		if(files.metadata.category) {
+		    if(!category[files.metadata.category]) category[files.metadata.category] = [];
+		    category[files.metadata.category].push({
+			title: files.metadata.title,
+			id: id
+		    });
+		}
 	    }
 	    if(!files || files.filepath) return;
 	    if(typeof files == "object")
@@ -100,7 +109,7 @@ module.exports = function(env, callback) {
 
 	look_at(help);
 
-	return { faq: faq, topics: topics };
+	return { faq: faq, topics: topics, category: category };
     };
 
 

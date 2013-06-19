@@ -58,7 +58,7 @@
 	  <h3>{{ topic.name | capitalize }}<span class="bookmark" id="{{ topic.id }}">[+]</span></h3>
 	  <ul class="subns">
 	    {% for sub in topic.data %}
-	    <li><a href="#{{ sub.id }}">{{ sub.title }}</a></li>
+	    <li><a href="#q{{ sub.id }}">{{ sub.title }}</a></li>
 	    {% endfor %}
 	  </ul>
 	</li>
@@ -70,10 +70,10 @@
 	<li>
 	  <ul class="subs">
 	    <li>
-	      <span class="auto_name" postid="{{ answer.id }}">{{ answer.title | capitalize }}</span>
+	      <span class="auto_name" postid="q{{ answer.id }}">{{ answer.title | capitalize }}</span>
 	      <h3>
 		{{ answer.title | capitalize }}
-		<span class="bookmark" id="{{ answer.id }}">[+]</span>
+		<span class="bookmark" id="q{{ answer.id }}">[+]</span>
 	      </h3>
 	      {{ answer.html }}
 	    </li>

@@ -13,19 +13,19 @@ search: search help
 
 # white list of topics to show
 topics:
-  - name: balanced
-    show: false # if it should be show this topic or the name it should show
-    order: 1 # control where this is in the order list, lower number higher
-  - name: developer
-  - name: account
-  - name: international
-  - name: tax_id
-    show: Tax id
-  - name: kyc
-    show: Know Your Customer
-  - name: underwriting
-  - name: marketplaces
+  - name: chargebacks
+  - name: data
+  - name: end_user
+    show: End User are cool
   - name: fees
+  - name: fraud
+  - name: legal
+  - name: marketing
+  - name: payouts
+  - name: processing
+  - name: security
+  - name: signup
+
 
 
 ---

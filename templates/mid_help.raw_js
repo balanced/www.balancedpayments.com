@@ -8,7 +8,7 @@ function make_id(name) {
 
 var jj = Balanced_GenHelpData(env.contents.help);
 
-var result = env.page.metadata; // take metadata from the old page
+var result = env.page.metadata; // take metadata from the control page
 
 var topics_ctrl = {};
 for(var a=0; a < env.page.metadata.topics.length; a++) {
@@ -19,13 +19,15 @@ result.template = "help.html";
 
 result.topics = [];
 var topics_order = 1000;
-for(var name in jj.topics) {
+for(var name in jj.category) {
     if(topics_ctrl[name]) {
 	if(topics_ctrl[name].show === false) continue;
-	result.topics.push({ name: topics_ctrl[name].show || name, id: make_id(name), order: topics_ctrl.order || topics_order++ });
+	result.topics.push({ name: topics_ctrl[name].show || name.replace(/_/g, " "),
+			     id: make_id(name), order: topics_ctrl.order || topics_order++ });
     }else{
 	// show topics that are not listed in the control
-	//result.topics.push({ name: name, id: make_id(name), order: topics_order++ });
+	result.topics.push({ name: name.replace(/_/g, " ")
+			     , id: make_id(name), order: topics_order++ });
     }
 }
 
@@ -36,11 +38,14 @@ var sections = {};
 for(var a =0; a < jj.faq.length; a++) {
     var working = jj.faq[a];
     //console.log(working);
-    if(!working.tags) continue;
+    if(!working.category) continue;
+    if(!sections[make_id(working.category)]) sections[make_id(working.category)] = [];
+    sections[make_id(working.category)].push(working);
+    /*if(!working.tags) continue;
     for(var b=0; b < working.tags.length; b++) {
 	if(!sections[make_id(working.tags[b])]) sections[make_id(working.tags[b])] = [];
 	sections[make_id(working.tags[b])].push(working);
-    }
+    }*/
 }
 
 result.sections = sections;
@@ -51,12 +56,11 @@ for(var a=0; a < result.topics.length; a++) {
 	id: result.topics[a].id,
 	data: sections[result.topics[a].id]
     });
-
 }
 
 result.answers = [];
 for(var a=0; a < jj.faq.length; a++) {
-    if(jj.faq[a].title && jj.faq[a].html && jj.faq[a].id)
+    if(jj.faq[a].title && jj.faq[a].html && jj.faq[a].id && jj.faq[a].category)
 	result.answers.push(jj.faq[a])
 }
 

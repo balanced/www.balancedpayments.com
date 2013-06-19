@@ -3,7 +3,7 @@ Balanced.Analytics = (function () {
     var googleQueue;
     var TRACK_EVENT = '_trackEvent';
     var init = 0;
-    if (window['_gat'] !== undefined) {
+    if (window['_gat'] !== undefined && _gaq && _gaq._getTrackerByName) {
         myTracker = _gat._getTrackerByName();
     } else {
         myTracker = null;
