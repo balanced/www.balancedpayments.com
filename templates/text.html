@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="/static/css/pygments.css">
 <link rel="stylesheet" href="/static/css/root3.css">
 <link rel="stylesheet" href="/static/css/root5.css">
+<style> p { font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif; } </style>
 {% endblock %}
 
 {% block body %}
@@ -14,7 +15,7 @@
   </div>
 </section>
 <section id="h-words">
-  <h2 class="{{ page.metadata.icon_class }}">{{ page.heading }}</h2>
+  <h2 class="{{ page.metadata.icon_class }}" style="color: #E7A614">{{ page.metadata.heading }}</h2>
   <section class="booger">
     {{ page.html }}
   </section>
