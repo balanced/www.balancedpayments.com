@@ -14,19 +14,16 @@ banner:
     text: enable new forms of commerce
 
 intro: |
-  A 14 year-old Matin Tamizi ordered his first webcam on eBay in
-  early 1999. UPS delivered the webcam and collected the money
-  using [cash on delivery](http://en.wikipedia.org/wiki/Collect_on_delivery).
-  It was simple and beautiful. That day started an obsession with
-  payments. A decade later and marketplaces are creating new forms
-  of commerce and trying to solve the transaction
-  problem&mdash;marred with compliance, challenges in paying
-  sellers, and handling taxes. Matin started building a new
-  real-time payments network in March 2010 and realized in
-  December that the same problems from 1999 still existed for
-  marketplaces -- marketplaces that will go on to fundamentally shift
-  commerce and affect the global economy. Balanced aims to empower
-  this movement.
+  We're obsessed with all forms of infrastructure, including communications, transportation,
+  energy, waste management, and payments. Robust infrastructure creates a happier, more
+  productive, and more prosperous society. You know exactly what I mean if you've traveled
+  somewhere where you struggled to find a reliable Internet connect or even usable roads.
+  You also know what I mean when you sit in traffic or struggle with public transportation
+  (or lack thereof) in the US.
+
+  Balanced was created to increase the global economy (increase GDP) by enabling new commerce.
+  Our mechanism or facility to do that is payments. Everything else we do depends on how it
+  fits into the vision for Balanced.
 
 founders:
   heading: founders
