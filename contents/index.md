@@ -1,10 +1,10 @@
 ---
-title: Balanced - Payments processing, escrow, and payouts in one simple API
+title: Balanced - Payments for Marketplaces
 template: index.html
 body_class:
 
 try_out:
-  heading: Payment processing, escrow, and payouts in one simple API
+  heading: Payments for Marketplaces
   link: TRY IT OUT
 
 intro:
