@@ -140,8 +140,9 @@ integrate:
     - name: C#
       url: https://github.com/balanced/balanced-csharp
       class: csharp
-
-
+    - name: iOS
+      url: https://github.com/balanced/balanced-ios
+      class: ios
 
 # the amount references a css class that is used to loda the images
 pricing:
