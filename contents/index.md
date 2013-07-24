@@ -153,9 +153,9 @@ pricing:
     - desc: "Processing: credit card"
       per: per txn
       amount: processing
-#    - desc: "Processing: bank account"
-#      per: per txn
-#      amount: processing ach
+    - desc: "Processing: bank account"
+      per: per txn
+      amount: processing ach
     - desc: "Payout: bank account"
       per: per deposit
       amount: payouts
