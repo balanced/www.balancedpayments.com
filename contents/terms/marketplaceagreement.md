@@ -168,7 +168,7 @@ icon_class: marketplace-agreement
       <p><strong>Card Brand Marks:</strong> Client and end-users are authorized to use Card Brand logos or marks only on Client&#8217;s promotional materials and website to indicate that cards are acceptable methods of payment. </p>
     </li>
     <li>
-      <p><strong>Commercial Entities:</strong> If Client has a merchant who processes over $100,000 in annual sales with Balanced, than Client understands that Card Brand Rules require that said merchant enter into a direct, written processing agreement with our processing partner, Chase Paymentech. This agreement does not affect Balanced&#8217;s obligations to continue processing payments for said merchant pursuant to its own processing agreement. </p>
+      <p><strong>Commercial Entities:</strong> If Client has a merchant who processes over $100,000 in annual sales with Balanced, than Client understands that Card Brand Rules require that said merchant enter into a direct, written processing agreement with our acquirer, Vantiv. This agreement does not affect Balanced&#8217;s obligations to continue processing payments for said merchant pursuant to its own processing agreement. </p>
     </li>
     <li>
       <p><strong>Entire Agreement:</strong> This is the entire agreement between the parties. It replaces and supersedes any and all oral agreements between the parties, as well as any prior writings.</p>
