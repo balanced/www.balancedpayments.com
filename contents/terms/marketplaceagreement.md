@@ -34,11 +34,11 @@ This service contract is between Balanced, a registered DBA of Pound Payments  I
 
 	In order to settle balances, the Client grants Balanced permission to debit or credit the Client’s bank account.
 
-4. Transaction Fees: The Client agrees to pay Balanced according to the pricing listed at <https://www.balancedpayments.com/> 
+4. Transaction Fees: The Client agrees to pay Balanced according to the pricing listed at <https://www.balancedpayments.com/>
 
-	Charges will be billed and collected in US dollars. 
+	Charges will be billed and collected in US dollars.
 
-5. **Funds Held For the Benefit of Client’s Merchants:** Balanced agrees not to use for its own operating expenses any funds it receives specifically for the purposes of compensating Client’s merchants for their services. 
+5. **Funds Held For the Benefit of Client’s Merchants:** Balanced agrees not to use for its own operating expenses any funds it receives specifically for the purposes of compensating Client’s merchants for their services.
 
 6. **Balanced Liability:** To the maximum extent permitted by law, Balanced, its processors, suppliers, and licensors or their respective affiliates, agents, employees, and directors are not liable for any lost profits, data, or any indirect, punitive, incidental, special, consequential or exemplary damages arising out of, in connection with, or relating to this agreement or the services, including, without limitation, the use of, inability to use or unavailability of the service. Under no circumstances will Balanced or it’s aforementioned associates be responsible for any damage, loss or injury resulting from hacking, tampering, or other unauthorized use of the service, your Balanced Account, or the information contained therein.
 
@@ -51,9 +51,9 @@ This service contract is between Balanced, a registered DBA of Pound Payments  I
 9. **Responding to Chargebacks:** Client agrees that, upon Balanced request, to assist in the investigation of any of Client’s End-Users for transactions processed through the services. Client agrees to allow us to share information about a chargeback with the payer and payer’s financial institution and end-user’s financial institution to investigate or otherwise resolve a chargeback.
 
 	At the very least, Client should be prepared to provide:
-	a. the consent form buyers have agreed to (screenshot or web-address). 
+	a. the consent form buyers have agreed to (screenshot or web-address).
 	b. logs indicating buyer confirmation.
-	c. any additional merchant or transaction information. 
+	c. any additional merchant or transaction information.
 
 10. **Agreement Termination:** Either party may terminate this agreement at any time and for any reason, or for no reason, by providing written notification to the other party at least 30 days prior to the date of termination. This 30 day grace period begins upon receipt of written notice.
 
@@ -61,14 +61,14 @@ This service contract is between Balanced, a registered DBA of Pound Payments  I
 
 	a. Fees: No fees will be charged for provision of the Data.
 
-	b. Timeframe: 15-20 business days after Client has provided their public key and the Attestation of Compliance from a qualified provider. 
+	b. Timeframe: 15-20 business days after Client has provided their public key and the Attestation of Compliance from a qualified provider.
 
 12. **Confidentiality:** Client may disclose to Balanced information identified at the time of disclosure as confidential or that a reasonable person knows or reasonably should understand to be confidential (“Confidential Information”), which may include information concerning the Client’s business, finances, technology, or End-Users of Client’s Services. All Confidential Information will remain the property of the client, and Balanced will have no interest or rights in such Confidential Information except as expressly set forth in this agreement. Balanced agrees to maintain all Confidential Information in confidence and to take all reasonable precaution to prevent any unauthorized disclosure of such information. Balanced will only disclose Confidential Information to its employees when doing so is necessary to fulfill Balanced’s obligations under this agreement.
 
-	Confidential information does not include, nor will this obligation apply to, any information: 
+	Confidential information does not include, nor will this obligation apply to, any information:
  	a. rightfully in the possession of or known to Balanced prior to disclosure,
 	b. in the public domain through no act, omission, or fault of Balanced,
-	c. was or is lawfully disclosed to Balanced through a third party with an independent right to disclose such information, and at the time of such disclosure such third party was not known by Balanced to have any obligation of confidence to the Client, 
+	c. was or is lawfully disclosed to Balanced through a third party with an independent right to disclose such information, and at the time of such disclosure such third party was not known by Balanced to have any obligation of confidence to the Client,
 
  	d. or otherwise enters Balanced’s possession without obligation of confidentiality
 
@@ -78,13 +78,13 @@ This service contract is between Balanced, a registered DBA of Pound Payments  I
 
 	After account creation or account reinstatement, the Client’s first payment will be reviewed by Balanced to ensure the transactions being performed by the Client and End-Users are consistent with what was described in the Client’s initial review and reinstatement testaments. If the nature of the transactions are deemed illegal or improper, or if the Client is using the Service for direct money transmission, the Client’s access to the Service will be suspended.
 
-	Additionally, Client further agrees to provide Client’s customer account information to Balanced to the extent necessary for Balanced to provide the Services. 
+	Additionally, Client further agrees to provide Client’s customer account information to Balanced to the extent necessary for Balanced to provide the Services.
 
 	Balanced agrees to safeguard the privacy of Client’s customers as well as not resell or reveal said information unless required by law, if the appropriate legal authorities require said information.
 
-14. **Balanced Interaction With End-Users:** Without prior consent of Client and End-User, Balanced will not use End-User personal information (specifically contact information or identifying information) outside of providing the Service. 
+14. **Balanced Interaction With End-Users:** Without prior consent of Client and End-User, Balanced will not use End-User personal information (specifically contact information or identifying information) outside of providing the Service.
 
-	Balanced will only contact End-users for purposes related to providing the Service. This includes: 
+	Balanced will only contact End-users for purposes related to providing the Service. This includes:
 Responding to End-User support inquiries,
 handling potential chargebacks,
 requesting more identity information to combat fraud or meet identification requirements
@@ -134,29 +134,29 @@ requesting more identity information to combat fraud or meet identification requ
 	* Automated Fuel Dispensers (AFD)
 	* Any business model heavily reliant upon or solely or primarily based on any guaranteed “rebate”, “refund”, or “prize” associated with the sale of products or services
 
-	The Client understands that End-Users are also prohibited from engaging in the aforementioned activities and agrees to take actions that decrease the likelihood that the Service will be used by End-Users for prohibited uses. 
+	The Client understands that End-Users are also prohibited from engaging in the aforementioned activities and agrees to take actions that decrease the likelihood that the Service will be used by End-Users for prohibited uses.
 
 	This list of prohibited uses should be clearly linked on the Client’s website and made available to end-users sellers of the client. If you have any questions about this list please feel free to reach out to us at <support@balancedpayments.com> or on IRC at #balanced on irc.freenode.net
 
-17. **Restriction:** At the discretion of Balanced, a Client with a restricted account may continue to perform transactions, but may be subject to a 30-day rolling reserve on its account. 
+17. **Restriction:** At the discretion of Balanced, a Client with a restricted account may continue to perform transactions, but may be subject to a 30-day rolling reserve on its account.
 
-	An account may be restricted as a result of excessive chargebacks, prohibited transactions, or fraudulent behavior on behalf the marketplace.  An account will not be placed under restriction without prior notification indicating the particular reason for restriction and a request by Balanced for further discussion of client’s procedures and controls. 
+	An account may be restricted as a result of excessive chargebacks, prohibited transactions, or fraudulent behavior on behalf the marketplace.  An account will not be placed under restriction without prior notification indicating the particular reason for restriction and a request by Balanced for further discussion of client’s procedures and controls.
 
-18. **Suspension:** A Client with a suspended account will not be able to perform any new transactions using the Service, but all legitimate escrowed and released payments will be honored and disbursed to End-Users. 
+18. **Suspension:** A Client with a suspended account will not be able to perform any new transactions using the Service, but all legitimate escrowed and released payments will be honored and disbursed to End-Users.
 
-	Suspension is an escalation of restriction. Outside of particularly egregious prohibited transactions, or fraudulent behavior on behalf the marketplace, it will not happen without the client having a restricted account for at least 3 weeks. 
+	Suspension is an escalation of restriction. Outside of particularly egregious prohibited transactions, or fraudulent behavior on behalf the marketplace, it will not happen without the client having a restricted account for at least 3 weeks.
 
 19. **Reinstatement:** To reinstate Service access, a Client must provide Balanced with a written explanation of how they have changed their service to no longer be used for illegal or improper uses. Once reinstated, the Client’s account will again be reviewed and put under transaction limit and/or reserve holding restrictions.
 
 20. **Termination:** Balanced may terminate the Client’s service access if they fail to meet the terms necessary for reinstatement as described above. Balanced must provide notification notice 30 days in advance of the desired date of termination.
 
-	Upon termination, the Client’s outstanding funds (funds owed to merchants or sellers) may be held for a period of 180 days. 
+	Upon termination, the Client’s outstanding funds (funds owed to merchants or sellers) may be held for a period of 180 days.
 
-	a. If the Client is in good standing the funds will be released within 3 days. 
+	a. If the Client is in good standing the funds will be released within 3 days.
 
-	b. End-users in good standing will have their funds released within 3 days. 
+	b. End-users in good standing will have their funds released within 3 days.
 
-	c. However, any end-user whose activity leads to the restriction, suspension, or termination of a Client’s service access will also have their account frozen and no funds will be disbursed to them for up to 180 days. 
+	c. However, any end-user whose activity leads to the restriction, suspension, or termination of a Client’s service access will also have their account frozen and no funds will be disbursed to them for up to 180 days.
 
 21. **Challenging Restricted, Suspended, or Terminated Service Access:** Any Client that feels their service access has been wrongly restricted, suspended, or terminated may submit a challenge to support@balancedpayments.com.
 
@@ -170,19 +170,18 @@ requesting more identity information to combat fraud or meet identification requ
 
 24. **Card Brand Discrimination:** Unless permitted by Card Brand Rules, Client shall not engage in any practice that unfavorably discriminates against or provides unequal treatment of any Card Brand relative to any other Card Brand.
 
-25. **Card Brand Marks:** Client and end-users are authorized to use Card Brand logos or marks only on Client’s promotional materials and website to indicate that cards are acceptable methods of payment. 
+25. **Card Brand Marks:** Client and end-users are authorized to use Card Brand logos or marks only on Client’s promotional materials and website to indicate that cards are acceptable methods of payment.
 
-26. **Commercial Entities:** If Client has a merchant who processes over $100,000 in annual sales with Balanced, than Client understands that Card Brand Rules require that said merchant enter into a direct, written processing agreement with our processing partner, Chase Paymentech. This agreement does not affect Balanced’s obligations to continue processing payments for said merchant pursuant to its own processing agreement. 
- 
+26. **Commercial Entities:** If Client has a merchant who processes over $100,000 in annual sales with Balanced, than Client understands that Card Brand Rules require that said merchant enter into a direct, written processing agreement with our acquirer, Vantiv. This agreement does not affect Balanced’s obligations to continue processing payments for said merchant pursuant to its own processing agreement.
+
 27. **Entire Agreement:** This is the entire agreement between the parties. It replaces and supersedes any and all oral agreements between the parties, as well as any prior writings.
 
 28. **Successors and Assignees:** This contract binds and benefits the heirs, successors, and assignees of the parties.
 
-29. **Governing Law:** This contract will be governed by and construed in accordance with the laws of the state of  California. 
+29. **Governing Law:** This contract will be governed by and construed in accordance with the laws of the state of  California.
 
 30. **Modification:** This contract may be modified only by written agreement signed by all the parties.
 
 31. **Waiver:** If one party waives any term or provision of this contract at any time, that waiver will only be effective for the specific instance and specific purpose for which the waiver was given. If either party fails to exercise or delays exercising any of its rights or remedies under this contract, that party retains the right to enforce that term or provision at a later time.
 
 32. **Severability:** If any court determines that any provision of this contract is invalid or unenforceable, any invalidity or unenforceability will affect only that provision and will not make any other provision of this contract invalid or unenforceable and such provision shall be modified, amended, or limited only to the extent necessary to render it valid and enforceable.
-
