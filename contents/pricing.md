@@ -39,7 +39,7 @@ noAdditionalFees:
 
 volumeDiscounts:
   title: Volume discounts
-  subtitle: Card volume pricing will automatically take effect as your credit card volume scales. There are no <a href="">ACH debit discounts</a> or <a href="">payout discounts</a>.
+  subtitle: Card volume pricing will automatically take effect as your credit card volume scales. There are no <a href="https://github.com/balanced/balanced-api/issues/47">ACH debit discounts</a> or <a href="https://github.com/balanced/balanced-api/issues/57">payout discounts</a>.
   first100k: First $100K / month
   next400k: Next $400K / month
   above500k: Above $500K / month

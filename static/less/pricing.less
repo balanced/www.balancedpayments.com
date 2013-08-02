@@ -1,10 +1,9 @@
+@ratePanelsWidth: 570px;
+@ratePanelsHeight: 153px;
+@ratePanelsDividerWidth: 1px;
+@ratePanelsDividerColor: @gray3;
+
 section {
-  height: 356px;
-
-  &.half-height {
-    height: 203px;
-  }
-
   margin-top: 50px;
   margin-bottom: 50px;
 
@@ -16,8 +15,11 @@ section {
   @sectionTitlePadding: 5px;
 
   .section-title {
-    margin-top: @sectionTitleLineWidth + @sectionTitlePadding;
+    width: 270px;
+    border-top: 1px solid @ratePanelsDividerColor;
+
     .title-wrapper {
+      margin-top: @sectionTitleLineWidth + 1;
       span {
         .header2;
         border-top: @sectionTitleLineWidth solid @black;
@@ -30,63 +32,70 @@ section {
       }
     }
   }
+  .rate-panels {
+    margin-left: 0;
 
-  .rate-panel {
-    .panel-content {
-      margin: 20px 0 0 20px;
+    .rate-panel {
+      .panel-content {
+        margin: 20px 0 0 20px;
 
-      span {
-        .header4;
+        span {
+          .header4;
+        }
+
+        .rate-image {
+          margin-top: 10px;
+        }
       }
+    }
+
+    .main-rate-panel {
+      background-color: @white;
+      width: 2*@ratePanelsWidth/3;
+      height: @ratePanelsHeight;
+      float: left;
 
       .rate-image {
-        margin-top: 10px;
+        width: 300px;
+        height: 80px;
       }
     }
-  }
 
-  @ratePanelsWidth: 570px;
-  @ratePanelsHeight: 153px;
-  @ratePanelsDividerWidth: 1px;
-  @ratePanelsDividerColor: @gray3;
+    .secondary-rate-panel {
+      background-color: @gray2;
 
-  .main-rate-panel {
-    background-color: @white;
-    width: 2*@ratePanelsWidth/3;
-    height: @ratePanelsHeight;
-    float: left;
+      width: @ratePanelsWidth/3;
+      height: @ratePanelsHeight;
+      float: left;
 
-    .rate-image {
-      width: 300px;
-      height: 80px;
+      .rate-image {
+        width: 170px;
+        height: 80px;
+      }
+    }
+
+    .tr-rate-panel {
+      height: @ratePanelsHeight - @ratePanelsDividerWidth;
+      border-bottom: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+    }
+
+    .bot-mid-rate-panel {
+      width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
+      border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+      border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
     }
   }
 
-  .secondary-rate-panel {
-    background-color: @gray2;
-    &.white-rate-panel {
-      background-color: @white;
+  &.half-height {
+    height: 203px;
+
+    .rate-panels {
+      border-top: 1px solid @ratePanelsDividerColor;
+
+      .secondary-rate-panel {
+        background-color: @white;
+      }
     }
-
-    width: @ratePanelsWidth/3;
-    height: @ratePanelsHeight;
-    float: left;
-
-    .rate-image {
-      width: 170px;
-      height: 80px;
-    }
-  }
-
-  .tr-rate-panel {
-    height: @ratePanelsHeight - @ratePanelsDividerWidth;
-    border-bottom: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
-  }
-
-  .bot-mid-rate-panel {
-    width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
-    border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
-    border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
   }
 }
 
@@ -205,17 +214,17 @@ section.payouts {
 section.no-additional-fees {
   .batch {
     background: url(/images/pricing_rates.png) no-repeat;
-    background-position: 0px -160px;
+    background-position: 0px -880px;
   }
 
   .setup {
     background: url(/images/pricing_rates.png) no-repeat;
-    background-position: 0px -160px;
+    background-position: 0px -880px;
   }
 
   .monthly {
     background: url(/images/pricing_rates.png) no-repeat;
-    background-position: 0px -160px;
+    background-position: 0px -880px;
   }
 }
 
@@ -233,5 +242,78 @@ section.volume-discounts {
   .above-500k {
     background: url(/images/pricing_rates.png) no-repeat;
     background-position: 0px -800px;
+  }
+}
+
+.calculator {
+  .calc-title {
+    .header7;
+    text-transform: uppercase;
+  }
+  .bg {
+    background-color: @white;
+    height: 242px;
+  }
+
+  form.form-horizontal {
+    .control-group {
+      padding: 10px;
+      margin: 0;
+      height: 50px;
+
+      .control-label {
+        padding-top: 15px;
+        width: 300px;
+        text-align: left;
+        .body2;
+      }
+
+      .control-label:after {
+        content: ": "
+      }
+
+      .controls {
+        margin-left: 320px;
+        padding-top: 10px;
+      }
+
+      input {
+        float: right;
+        width: 180px;
+        height: 30px;
+        text-align: right;
+        .header5;
+        background-color: @pageBackground;
+        padding-right: 10px;
+      }
+
+      .currency-prepend {
+        .header5;
+        float: right;
+        margin: 5px 10px 0 0;
+      }
+
+      &.effective-rate {
+        label {
+          color: @pineGreen100;
+        }
+
+        .effective-rate-value {
+          float: right;
+          .header5;
+          color: @pineGreen100;
+        }
+      }
+    }
+
+    .control-group:first-child {
+      padding-top: 25px;
+      border-bottom: 1px solid @gray2;
+    }
+
+    .control-group:last-child {
+      padding-bottom: 25px;
+      border-top: 1px solid @gray2;
+    }
   }
 }
