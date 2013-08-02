@@ -11,6 +11,7 @@ clean:
 	rm -f $(OUTPUT_DIR)ie9.css
 	rm -f $(OUTPUT_DIR)root4.css
 	rm -f $(OUTPUT_DIR)root5.css
+	rm -f $(OUTPUT_DIR)root-v3.css
 	rm -f $(OUTPUT_DIR)about.css
 	rm -f $(OUTPUT_DIR)kyc.css
 	rm -f $(OUTPUT_DIR)docs/new.css
@@ -27,6 +28,7 @@ all: node_modules \
 	$(OUTPUT_DIR)root3.css \
 	$(OUTPUT_DIR)root4.css \
 	$(OUTPUT_DIR)root5.css \
+	$(OUTPUT_DIR)root-v3.css \
 	$(OUTPUT_DIR)about.css \
 	$(OUTPUT_DIR)kyc.css \
 	$(OUTPUT_DIR)docs/new.css \
@@ -60,6 +62,9 @@ $(OUTPUT_DIR)ie9.css: ie9.less
 $(OUTPUT_DIR)root5.css: root5.less
 	$(COMPILER) -x $^ > $@
 
+$(OUTPUT_DIR)root-v3.css: root-v3.less
+	$(COMPILER) -x $^ > $@
+
 $(OUTPUT_DIR)root4.css: root4.less
 	$(COMPILER) -x $^ > $@
 
@@ -71,7 +76,7 @@ $(OUTPUT_DIR)about.css: about.less
 
 $(OUTPUT_DIR)kyc.css: kyc.less
 	$(COMPILER) -x $^ > $@
-	
+
 $(OUTPUT_DIR)help.css: help.less
 	$(COMPILER) -x $^ > $@
 
