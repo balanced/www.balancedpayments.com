@@ -32,6 +32,7 @@ JS_SOURCES = $(addprefix src/, \
                    search.js \
                    callbacks.js \
                    layout-v3.js \
+                   pricing.js \
                  )
 
 STATS_SOURCES = $(addprefix src/_stats/, \
@@ -54,7 +55,8 @@ all: node_modules \
     build/balanced.lib.min.js \
     build/irc.src.js \
     build/kyc.src.js \
-    build/auto_complete.js
+    build/auto_complete.js \
+    copy
 
 build:
 	mkdir -p build
@@ -95,6 +97,10 @@ build/_stats/stats.src.js: $(STATS_SOURCES)
 build/_status/status.src.js: $(STATUS_SOURCES)
 	$(COMPILER) $^ > $@
 	$(COMPRESSOR) $@ > build/_status/status.min.js
+
+copy:
+	mkdir -p ../../contents/static/js
+	cp -r build/* ../../contents/static/js
 
 # TODO: Make the auto complete generated from something else
 build/auto_complete.js: src/auto_complete.js
