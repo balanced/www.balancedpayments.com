@@ -1,6 +1,13 @@
 section {
   height: 356px;
 
+  &.half-height {
+    height: 203px;
+  }
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+
   .section-bg > .row {
     margin-top: 50px;
   }
@@ -15,6 +22,11 @@ section {
         .header2;
         border-top: @sectionTitleLineWidth solid @black;
         padding-top: @sectionTitlePadding;
+      }
+
+      p {
+        margin-top: 10px;
+        .body2;
       }
     }
   }
@@ -50,8 +62,12 @@ section {
     }
   }
 
-  .secondard-rate-panel {
+  .secondary-rate-panel {
     background-color: @gray2;
+    &.white-rate-panel {
+      background-color: @white;
+    }
+
     width: @ratePanelsWidth/3;
     height: @ratePanelsHeight;
     float: left;
@@ -110,3 +126,112 @@ section.card-processing {
   }
 }
 
+section.ach-debits {
+  .section-bg {
+    background-color: @curryYellow60;
+  }
+
+  .title-icon {
+    background: url(/images/pricing_icons.png) no-repeat;
+    width: 225px;
+    height: 225px;
+    background-position: 0px -225px;
+  }
+
+  .charging-buyers {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -320px;
+  }
+
+  .verification {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .chargeback {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -240px;
+  }
+
+  .refund {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -400px;
+  }
+
+  .failure {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+}
+
+section.payouts {
+  .section-bg {
+    background-color: @pineGreen60;
+  }
+
+  .title-icon {
+    background: url(/images/pricing_icons.png) no-repeat;
+    width: 225px;
+    height: 225px;
+    background-position: 0px -450px;
+  }
+
+  .paying-sellers {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -480px;
+  }
+
+  .paying-your-account {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .reversal {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .failure {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -560px;
+  }
+
+  .preloading-escrow {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+}
+
+section.no-additional-fees {
+  .batch {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .setup {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .monthly {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+}
+
+section.volume-discounts {
+  .first-100k {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -640px;
+  }
+
+  .next-400k {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -720px;
+  }
+
+  .above-500k {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -800px;
+  }
+}

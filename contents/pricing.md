@@ -14,4 +14,40 @@ cardProcessing:
   chargeback: Chargeback
   refund: Refund
   failure: Failure
+
+achDebits:
+  title: ACH Debits
+  chargingBuyers: Charging your buyers (ACH debit / Debiting a bank account)
+  microDepositVerification: Micro-deposit Verification
+  chargeback: Chargeback
+  refund: Refund
+  failure: Failure
+
+payouts:
+  title: Payouts
+  payingSellers: Paying your sellers (Same-day / Next-day ACH deposit)
+  payingYourAccount: Paying to your bank account
+  reversal: Reversal
+  failure: Failure
+  preloadingEscrow: Preloading your escrow
+
+noAdditionalFees:
+  title: No additional fees
+  batch: Batch fee
+  setup: Setup fee
+  monthly: Monthly fee
+
+volumeDiscounts:
+  title: Volume discounts
+  subtitle: Card volume pricing will automatically take effect as your credit card volume scales. There are no <a href="">ACH debit discounts</a> or <a href="">payout discounts</a>.
+  first100k: First $100K / month
+  next400k: Next $400K / month
+  above500k: Above $500K / month
+
+calculateYourRate:
+  title: Calculate your rate
+  volumeLabel: Estimated monthly card processing volume
+  avgTransactionSizeLabel: Average transaction size
+  effectiveRateLabel: Your effective rate
+
 ---
