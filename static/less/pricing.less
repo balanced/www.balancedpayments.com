@@ -7,8 +7,12 @@ section {
   margin-top: 50px;
   margin-bottom: 50px;
 
-  .section-bg > .row {
-    margin-top: 50px;
+  .section-bg {
+    background: url(/images/v3-diagonal-stripes.png) repeat;
+
+    >.row {
+      margin-top: 50px;
+    }
   }
 
   @sectionTitleLineWidth: 5px;
@@ -88,6 +92,9 @@ section {
 
   &.half-height {
     height: 203px;
+    .section-bg {
+      background: none;
+    }
 
     .rate-panels {
       border-top: 1px solid @ratePanelsDividerColor;
