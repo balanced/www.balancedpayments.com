@@ -1,5 +1,66 @@
 {% extends 'layout-v3.html' %}
 
 {% block body %}
+<header class="row page-title">
+  <div class="span18 offset1">
+    <h1>{{page.metadata.pageTitle}}</h1>
+  </div>
+</header>
+
+<div class="row page-subtitle">
+  <div class="span18 offset1">
+    <span class="">{{ page.metadata.subtitle.heading }}</span>
+  </div>
+</div>
+
+<section class="row card-processing">
+  <div class="span20 section-bg">
+    <div class="row">
+      <div class="span6 offset1 section-title">
+        <div class="title-wrapper">
+          <span>{{page.metadata.cardProcessing.title}}</span>
+          <div class="title-icon"></div>
+        </div>
+      </div>
+
+      <div class="span13">
+        <div class="rate-panels">
+          <div class="rate-panel main-rate-panel">
+            <div class="panel-content">
+              <span>{{page.metadata.cardProcessing.chargingBuyers}}</span>
+              <div class="rate-image charging-buyers"></div>
+            </div>
+          </div>
+          <div class="rate-panel secondard-rate-panel tr-rate-panel">
+            <div class="panel-content">
+              <span>{{page.metadata.cardProcessing.authorizationHold}}</span>
+              <div class="rate-image authorization-hold"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rate-panels">
+          <div class="rate-panel secondard-rate-panel">
+            <div class="panel-content">
+              <span>{{page.metadata.cardProcessing.chargeback}}</span>
+              <div class="rate-image chargeback"></div>
+            </div>
+          </div>
+          <div class="rate-panel secondard-rate-panel bot-mid-rate-panel">
+            <div class="panel-content">
+              <span>{{page.metadata.cardProcessing.refund}}</span>
+              <div class="rate-image refund"></div>
+            </div>
+          </div>
+          <div class="rate-panel secondard-rate-panel">
+            <div class="panel-content">
+              <span>{{page.metadata.cardProcessing.failure}}</span>
+              <div class="rate-image failure"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
 
 {% endblock %}

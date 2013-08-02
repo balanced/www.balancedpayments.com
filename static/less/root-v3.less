@@ -1,25 +1,115 @@
 @import "bootstrap-2.3/bootstrap.less";
 @import "variables.less";
+@import "variables-v3.less";
 
 // our grid is 24 columns - total 1065px
 @gridColumns: 24;
 @gridColumnWidth: 30px;
 @gridGutterWidth: 15px;
 
-@pageBackground: #f0efe9;
+@pageBackground: @gray1;
+
+.standard-font-props {
+  font-weight: normal;
+  text-transform: inherit;
+  letter-spacing: default;
+}
+
+.header1 {
+  .standard-font-props;
+
+  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-size: 30px;
+  color: @gray4;
+}
+
+.header2 {
+  .standard-font-props;
+
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-size: 14px;
+  color: @black;
+}
+
+.header3 {
+  .standard-font-props;
+
+  font-family: nimbussannov-sembol, arial, sans-serif;
+  font-size: 15px;
+  color: @black;
+}
+
+.header4 {
+  .standard-font-props;
+
+  font-family: nimbussannov-med, arial, sans-serif;
+  font-size: 13px;
+  color: @gray5;
+}
+
+.header5 {
+  .standard-font-props;
+
+  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-size: 28px;
+  color: @gray4;
+}
+
+.header6 {
+  .standard-font-props;
+
+  font-family: 'Droid Serif';
+  font-size: 16px;
+  color: @black;
+}
+
+.header7 {
+  .standard-font-props;
+
+  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-size: 12px;
+  color: @black;
+  letter-spacing: 0.1em;
+}
+
+.body1 {
+  .standard-font-props;
+
+  font-family: nimbussannov-sembol, arial, sans-serif;
+  font-size: 44px;
+  color: @gray6;
+}
+
+.body2 {
+  .standard-font-props;
+
+  font-family: nimbussannov-med, arial, sans-serif;
+  font-size: 15px;
+  color: @gray5;
+}
+
+.nav1 {
+  .standard-font-props;
+
+  font-family: NimbusSanNovCon-Med, arial, sans-serif;
+  font-size: 12px;
+  color: @white;
+  letter-spacing: 0.1em;
+}
 
 .nav2 {
+  .standard-font-props;
+
   font-family: nimbussannov-med, arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
   font-size: 13px;
   color: @gray5;
 }
 
 .nav3 {
+  .standard-font-props;
+
   font-family: nimbussannov-sembol, arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
   font-size: 13px;
   color: @black;
 }
@@ -120,7 +210,24 @@ header {
   }
 }
 
+.page-title {
+  h1 {
+    .header1;
+    text-transform:uppercase;
+    margin: 0;
+  }
+}
+
+.page-subtitle {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .body1;
+  line-height: 1em;
+}
+
 .page-content {
   padding-top: 20px;
   border-top: 1px solid @layoutLineRuleBackground;
 }
+
+@import "pricing.less";

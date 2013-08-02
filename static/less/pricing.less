@@ -1,0 +1,112 @@
+section {
+  height: 356px;
+
+  .section-bg > .row {
+    margin-top: 50px;
+  }
+
+  @sectionTitleLineWidth: 5px;
+  @sectionTitlePadding: 5px;
+
+  .section-title {
+    margin-top: @sectionTitleLineWidth + @sectionTitlePadding;
+    .title-wrapper {
+      span {
+        .header2;
+        border-top: @sectionTitleLineWidth solid @black;
+        padding-top: @sectionTitlePadding;
+      }
+    }
+  }
+
+  .rate-panel {
+    .panel-content {
+      margin: 20px 0 0 20px;
+
+      span {
+        .header4;
+      }
+
+      .rate-image {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @ratePanelsWidth: 570px;
+  @ratePanelsHeight: 153px;
+  @ratePanelsDividerWidth: 1px;
+  @ratePanelsDividerColor: @gray3;
+
+  .main-rate-panel {
+    background-color: @white;
+    width: 2*@ratePanelsWidth/3;
+    height: @ratePanelsHeight;
+    float: left;
+
+    .rate-image {
+      width: 300px;
+      height: 80px;
+    }
+  }
+
+  .secondard-rate-panel {
+    background-color: @gray2;
+    width: @ratePanelsWidth/3;
+    height: @ratePanelsHeight;
+    float: left;
+
+    .rate-image {
+      width: 170px;
+      height: 80px;
+    }
+  }
+
+  .tr-rate-panel {
+    height: @ratePanelsHeight - @ratePanelsDividerWidth;
+    border-bottom: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+  }
+
+  .bot-mid-rate-panel {
+    width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
+    border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+    border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+  }
+}
+
+section.card-processing {
+  .section-bg {
+    background-color: @egyptianBlue60;
+  }
+
+  .title-icon {
+    background: url(/images/pricing_icons.png) no-repeat;
+    width: 225px;
+    height: 225px;
+  }
+
+  .charging-buyers {
+    background: url(/images/pricing_rates.png) no-repeat;
+  }
+
+  .authorization-hold {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+
+  .chargeback {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -240px;
+  }
+
+  .refund {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -80px;
+  }
+
+  .failure {
+    background: url(/images/pricing_rates.png) no-repeat;
+    background-position: 0px -160px;
+  }
+}
+
