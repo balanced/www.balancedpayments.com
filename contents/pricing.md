@@ -5,7 +5,7 @@ template: pricing.html
 pageTitle: Pricing
 
 subtitle:
-  heading: Balanced offers a straightforward, all-inclusive pricing structure. No setup costs. No monthly contract. No hidden fees.
+  heading: Balanced offers a straightforward, <br/>all-inclusive pricing structure.<br/> No setup costs. No monthly contract.<br/> No hidden fees.
 
 cardProcessing:
   title: Card Processing

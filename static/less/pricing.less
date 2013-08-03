@@ -20,7 +20,7 @@ section {
 
   .section-title {
     width: 270px;
-    border-top: 1px solid @ratePanelsDividerColor;
+    border-top: 1px solid @gray7;
 
     .title-wrapper {
       margin-top: @sectionTitleLineWidth + 1;
@@ -95,6 +95,10 @@ section {
     height: 203px;
     .section-bg {
       background: none;
+    }
+
+    .section-title {
+      border-top: 1px solid @gray3;
     }
 
     .rate-panels {
@@ -260,17 +264,17 @@ section.volume-discounts {
   }
   .bg {
     background-color: @white;
-    height: 172px;
+    height: 192px;
   }
 
   form.form-horizontal {
     .control-group {
       padding: 10px;
       margin: 0;
-      height: 50px;
+      height: 60px;
 
       .control-label {
-        padding-top: 15px;
+        padding-top: 20px;
         width: 300px;
         text-align: left;
         .body2;
@@ -288,17 +292,20 @@ section.volume-discounts {
       input {
         float: right;
         width: 180px;
-        height: 30px;
+        height: 40px;
         text-align: right;
         .header5;
         background-color: @pageBackground;
         padding-right: 10px;
+
+        -webkit-appearance: none;
+        border-radius: 0;
       }
 
       .currency-prepend {
         .header5;
         float: right;
-        margin: 5px 10px 0 0;
+        margin: 10px 10px 0 0;
       }
 
       &.effective-rate {
@@ -307,6 +314,7 @@ section.volume-discounts {
         }
 
         .effective-rate-value {
+          padding-top: 10px;
           float: right;
           .header5;
           color: @pineGreen100;

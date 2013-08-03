@@ -9,6 +9,13 @@
 
 @pageBackground: @gray1;
 
+a {
+  &:hover {
+    color: @black;
+    text-decoration: none;
+  }
+}
+
 .standard-font-props {
   font-weight: normal;
   text-transform: inherit;
@@ -67,7 +74,7 @@
 .header7 {
   .standard-font-props;
 
-  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-family: NimbusSanNovCon-Med, arial, sans-serif;
   font-size: 12px;
   color: @black;
   letter-spacing: 0.1em;
@@ -121,7 +128,7 @@ body, html {
 header {
   .logo {
     img {
-      margin-top: 50px;
+      margin: 50px 0 0 16px;
     }
   }
 }
@@ -207,14 +214,24 @@ header {
   border-top: 1px solid @layoutLineRuleBackground;
   ul {
     margin-left: 20px;
+    li a {
+      padding-top: 3px;
+      &:hover {
+        color: @black;
+        background-color: transparent;
+      }
+    }
   }
 }
 
 .page-title {
   h1 {
     .header1;
+    letter-spacing: 0.1em;
     text-transform:uppercase;
     margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid @layoutLineRuleBackground;
   }
 }
 
@@ -222,12 +239,8 @@ header {
   margin-top: 40px;
   margin-bottom: 40px;
   .body1;
+  color: @gray7;
   line-height: 1em;
-}
-
-.page-content {
-  padding-top: 20px;
-  border-top: 1px solid @layoutLineRuleBackground;
 }
 
 @import "pricing.less";
