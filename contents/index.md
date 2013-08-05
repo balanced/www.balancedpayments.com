@@ -148,7 +148,7 @@ pricing:
   title: All inclusive pricing
   desc: |
     ### No monthly fees. No setup fees. No recurring fees.
-    [More about pricing](/docs/overview?language=bash#pricing-and-fees)
+    [More about pricing](/pricing)
   rates:
     - desc: "Processing: credit card"
       per: per txn
