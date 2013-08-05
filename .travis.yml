@@ -1,1 +1,1 @@
-script: make clean live
+script: ./travis-build.sh
