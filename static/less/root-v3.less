@@ -9,6 +9,14 @@
 
 @pageBackground: @gray1;
 
+.cssicon(@url, @width, @height, @display: inline-block) {
+  background: @url;
+  width: @width;
+  height: @height;
+  text-indent: -4000px;
+  display: @display;
+}
+
 a {
   &:hover {
     color: @black;
@@ -147,6 +155,54 @@ header {
   }
 }
 
+@media screen {
+  .print-header, .printable {
+    display: none;
+  }
+}
+
+@media print {
+  .ns .main-content-box {
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+  }
+  header, #app-menu, .sub-nav, .sn, .mask, footer {
+    display: none;
+  }
+  .boss {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+  }
+  .printable {
+    display: block;
+  }
+  .print-header {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    text-align: right;
+    font-size: 80%;
+    line-height: 1.2em;
+  }
+  #print-logo {
+    display:block;
+    margin:auto;
+    width:171px;
+    height: 75px;
+    text-indent:-4000px;
+  }
+  .v2-detail {
+    margin-top: 200px;
+  }
+}
+
 #site-nav {
   .nav-menu-wrapper {
     float: right;
@@ -174,48 +230,101 @@ header {
       &:hover {
         background-color: @white;
         color: @black;
+        text-decoration: none;
       }
     }
   }
 }
 
-.navbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  .navbar-inner {
-    padding: 0;
-  }
-  .nav {
-    &> li {
-      background-color: white;
-      height: 60px;
-      a {
-        font-family: 'NimbusSanNovCon-Bol';
-        font-weight: normal;
-        text-shadow: none;
-        font-size: 14px;
-        color: #94969a;
-        border: 0;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 20px;
-        border-left: 1px solid @navLineRuleBackground;
-        letter-spacing: 0.1em;
-        height: 21px;
-      }
-      &:first-child {
-        a {
-          border-left: 0;
-        }
-      }
+.site-footer {
+  padding-bottom: 20px;
+  background-color: @black;
+
+  .flogo {
+    float: left;
+    padding: 20px;
+    .img {
+      .cssicon(
+        @url: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAMAAAC+oj0CAAAAV1BMVEVymix4oi/vQDXjPDJ4oi94oi/vQDXvQDXvQDXvQDV4oi91ni7vQDXqPjN4oi/foRLanRHopxNznC3mPTPopxPopxMAAABwmCzgPDHanRHopxN4oi/vQDXwPhJhAAAAF3RSTlPbICDbYBBQYEAQgLOAs1DH7hDHx6CAAHwvTFAAAABmSURBVHja1cjXDYAwDABR01sCpAEh2X9ObCFkJLMA93cPSpcPtb0a92QLqDLWsdYJA8iUY7aJulkzTzdr4p55Jp1gUM61uOzWjg1sn/2Iw7IEyeHEguCVeBUciaNgT+wFG49qnrsAe+cllBc1FLYAAAAASUVORK5CYII='),
+        @width: 22px,
+        @height: 20px,
+        @display: block
+      );
       &:hover {
-        background-color: black;
-        a {
-          color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .section-title {
+    .nav1;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px 0 10px 0;
+  }
+  .copyright-notice {
+    padding: 20px;
+    border-left: 1px solid @gray7;
+  }
+
+  .footer-items {
+    margin-left: 0px;
+
+    li {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      border-bottom: 1px solid @gray7;
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        .nav2;
+        &:hover {
+          color: @white;
+          text-decoration: none;
         }
       }
+    }
+  }
+
+  .two-cols {
+    .footer-items {
+      width: 45%;
+      &.col1 {
+        float: left;
+      }
+      &.col2 {
+        float: right;
+      }
+    }
+  }
+
+  a.icon {
+    float: right;
+    .cssicon(url(/images/pricing_icons.png) no-repeat, 30px, 30px);
+    // background-color: rgb(134, 134, 134);
+    background-position: -0px -747px;
+    margin: 15px 5px;
+    &.quora {
+      background-position: -30px -747px;
+      &:hover {
+        background-position: -120px -747px;
+      }
+    }
+    &.github {
+      background-position: -0px -747px;
+      &:hover {
+        background-position: -90px -747px;
+      }
+    }
+    &.twitter {
+      background-position: -60px -747px;
+      &:hover {
+        background-position: -150px -747px;
+      }
+      margin-right: 0px;
     }
   }
 }

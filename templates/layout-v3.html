@@ -12,7 +12,6 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/lib/html5shiv.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/root-v3.css">
 
     {% block head %}{% endblock %}
@@ -20,7 +19,7 @@
   </head>
   <body class="{{ page.metadata.body_class }}">
 
-    <header id="header" class="container">
+    <header class="container site-header">
       <div class="row">
         <div class="span4">
           <a href="/" class="logo"><img src="/images/homepage_logo-01.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
@@ -99,26 +98,43 @@
 
     </div>
 
-    <footer>
-
-      <div>
-        <p>
-          <strong>Balanced</strong>
-          <a href="/about">About</a>
-          <a href="http://blog.balancedpayments.com" target="_new">Blog</a>
-          <a href="https://status.balancedpayments.com" target="_new">Status</a>
-          <a href="https://twitter.com/balanced" target="_new" class="twitter">Twitter</a>
-        </p>
-        <p>
-          <strong>Legal</strong>
-          <a href="/terms">Terms of use</a>
-          <a href="/privacy">Privacy policy</a>
-        </p>
-        <p>Copyright &copy; 2013. Balanced.
-        </p>
-        <p id="cards">American Express, VISA, MC, and Discover</p>
+    <footer id="footer" class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="span5">
+            <div class="flogo">
+                <a href="https://www.balancedpayments.com" target="_blank" class="img">Logo</a>
+            </div>
+            <span class="section-title copyright-notice">&copy; 2013 Balanced</span>
+          </div>
+          <div class="span6 offset6">
+            <span class="section-title">Company</span>
+            <div class="two-cols">
+              <ul class="footer-items col1">
+                <li><a href="/about">About</a></li>
+                <li><a href="http://www.fastcolabs.com/3008944/open-company/why-i-made-my-payments-startup-an-open-company" target="_new">Being "Open"</a></li>
+                <li><a href="https://github.com/balanced/balanced-api/issues/94" target="_new">Press &amp; Events</a></li>
+              </ul>
+              <ul class="footer-items col2">
+                <li><a href="http://blog.balancedpayments.com" target="_new">Blog</a></li>
+                <li><a href="mailto:support@balancedpayments.com">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3 offset1">
+            <span class="section-title">Legal</span>
+            <ul class="footer-items">
+              <li><a href="/privacy">Privacy policy</a></li>
+              <li><a href="/terms">Terms of use</a></li>
+            </ul>
+          </div>
+          <div class="span3">
+            <a href="https://twitter.com/balanced" target="_blank" class="icon twitter">Balanced on Twitter</a>
+            <a href="http://quora.com/balanced" target="_blank" class="icon quora">Balanced on Quora</a>
+            <a href="https://github.com/balanced" target="_blank" class="icon github">Balanced on Github</a>
+          </div>
+        </div>
       </div>
-
     </footer>
 
     <div id="body-content-queue"></div>
