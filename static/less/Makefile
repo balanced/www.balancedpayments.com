@@ -9,6 +9,7 @@ clean:
 	rm -f $(OUTPUT_DIR)docs/old.css
 	rm -f $(OUTPUT_DIR)public.css
 	rm -f $(OUTPUT_DIR)ie9.css
+	rm -f $(OUTPUT_DIR)root3.css
 	rm -f $(OUTPUT_DIR)root4.css
 	rm -f $(OUTPUT_DIR)root5.css
 	rm -f $(OUTPUT_DIR)root-v3.css
