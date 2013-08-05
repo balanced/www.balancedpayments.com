@@ -96,6 +96,20 @@ a {
   color: @gray5;
 }
 
+.button-text1 {
+  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-size: 18px;
+  color: @black;
+  letter-spacing: 0.1em;
+}
+
+.button-text2 {
+  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-size: 18px;
+  color: @white;
+  letter-spacing: 0.1em;
+}
+
 .nav1 {
   .standard-font-props;
 
@@ -176,18 +190,19 @@ header {
 
 .try-it {
   .btn {
+    width: 127px;
+
+    .button-text2;
+
     border: 3px solid #000;
-    background: white;
+    background: black;
+    border-color: @black;
     border-radius: 0;
     vertical-align: middle;
-    color: @black;
+    color: @white;
     text-decoration: none;
-    height: auto;
     padding: 8px 16px;
     text-shadow: none;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    font-family: 'NimbusSanNovCon-Bol';
     font-weight: normal;
     &:hover {
       background-image: none;
@@ -198,9 +213,9 @@ header {
       background-image: none;
       background-repeat: no-repeat;
       filter: none;
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
+      color: @black;
+      background-color: @white;
+      border-color: @black;
     }
   }
 }
