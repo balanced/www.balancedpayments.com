@@ -1,6 +1,7 @@
 @ratePanelsWidth: 570px;
 @ratePanelsHeight: 153px;
 @ratePanelsDividerWidth: 1px;
+@colorPanelsTopBorderColor: @gray7;
 @ratePanelsDividerColor: @gray3;
 
 section {
@@ -20,7 +21,7 @@ section {
 
   .section-title {
     width: 270px;
-    border-top: 1px solid @gray7;
+    border-top: 1px solid @colorPanelsTopBorderColor;
 
     .title-wrapper {
       margin-top: @sectionTitleLineWidth + 1;
@@ -39,6 +40,7 @@ section {
   }
   .rate-panels {
     margin-left: 0;
+    border-top: 1px solid @colorPanelsTopBorderColor;
 
     .rate-panel {
       .panel-content {
@@ -98,7 +100,7 @@ section {
     }
 
     .section-title {
-      border-top: 1px solid @gray3;
+      border-top: 1px solid @ratePanelsDividerColor;
     }
 
     .rate-panels {
@@ -269,7 +271,7 @@ section.volume-discounts {
 
   form.form-horizontal {
     .control-group {
-      padding: 10px;
+      padding: 10px 20px 10px 20px;
       margin: 0;
       height: 60px;
 
@@ -291,7 +293,7 @@ section.volume-discounts {
 
       input {
         float: right;
-        width: 180px;
+        width: 160px;
         height: 40px;
         text-align: right;
         .header5;
