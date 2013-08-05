@@ -147,6 +147,38 @@ header {
   }
 }
 
+#site-nav {
+  .nav-menu-wrapper {
+    float: right;
+  }
+
+  [id$="menu"] {
+    float: left;
+
+    .nav1;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: @black;
+    border-right: 1px solid @gray3;
+    &:last-child {
+      border-right: 0;
+    }
+
+    a {
+      color: white;
+      padding: 11px 20px;
+      display: block;
+      border: 5px solid @black;
+
+      &:hover {
+        background-color: @white;
+        color: @black;
+      }
+    }
+  }
+}
+
 .navbar {
   position: absolute;
   top: 0;
