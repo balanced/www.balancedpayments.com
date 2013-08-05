@@ -4,7 +4,7 @@ PAGES=
 
 
 JAVASCRIPT= balanced.lib.js balanced.js
-CSS=$(wildcard static/css/*.css)
+CSS=$(wildcard static/css/*.css) about.css base.css bootstrap-2.0.css help.css ie9.css kyc.css public.css pygments.css root3.css root4.css root5.css docs/new.css root-v3.css
 ICONS=$(wildcard static/icons/*)
 
 OUTPUT_DIR= output_tmp

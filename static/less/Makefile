@@ -9,8 +9,10 @@ clean:
 	rm -f $(OUTPUT_DIR)docs/old.css
 	rm -f $(OUTPUT_DIR)public.css
 	rm -f $(OUTPUT_DIR)ie9.css
+	rm -f $(OUTPUT_DIR)root3.css
 	rm -f $(OUTPUT_DIR)root4.css
 	rm -f $(OUTPUT_DIR)root5.css
+	rm -f $(OUTPUT_DIR)root-v3.css
 	rm -f $(OUTPUT_DIR)about.css
 	rm -f $(OUTPUT_DIR)kyc.css
 	rm -f $(OUTPUT_DIR)docs/new.css
@@ -27,14 +29,20 @@ all: node_modules \
 	$(OUTPUT_DIR)root3.css \
 	$(OUTPUT_DIR)root4.css \
 	$(OUTPUT_DIR)root5.css \
+	$(OUTPUT_DIR)root-v3.css \
 	$(OUTPUT_DIR)about.css \
 	$(OUTPUT_DIR)kyc.css \
 	$(OUTPUT_DIR)docs/new.css \
-	$(OUTPUT_DIR)help.css
+	$(OUTPUT_DIR)help.css \
+	copy
 
 build:
 	mkdir -p $(OUTPUT_DIR)
 	mkdir -p $(OUTPUT_DIR)docs
+
+copy:
+	mkdir -p ../../contents/static/css
+	cp -r $(OUTPUT_DIR)*.css ../../contents/static/css
 
 $(OUTPUT_DIR)bootstrap-2.0.css: bootstrap-2.0/bootstrap-2.0.less
 	pushd bootstrap-2.0 && ../$(COMPILER) -x bootstrap-2.0.less > ../$@
@@ -60,6 +68,9 @@ $(OUTPUT_DIR)ie9.css: ie9.less
 $(OUTPUT_DIR)root5.css: root5.less
 	$(COMPILER) -x $^ > $@
 
+$(OUTPUT_DIR)root-v3.css: root-v3.less pricing.less
+	$(COMPILER) -x root-v3.less > $@
+
 $(OUTPUT_DIR)root4.css: root4.less
 	$(COMPILER) -x $^ > $@
 
@@ -71,7 +82,7 @@ $(OUTPUT_DIR)about.css: about.less
 
 $(OUTPUT_DIR)kyc.css: kyc.less
 	$(COMPILER) -x $^ > $@
-	
+
 $(OUTPUT_DIR)help.css: help.less
 	$(COMPILER) -x $^ > $@
 
