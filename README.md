@@ -15,3 +15,15 @@ Viewing the site
 ----------------
 
     open output/index.html
+
+Live compiling for development
+----------------
+
+    wintersmith preview
+
+In another terminal:
+
+    cd static
+    ./watcher
+
+Navigate to [http://localhost:8080](http://localhost:8080).
