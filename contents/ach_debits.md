@@ -3,11 +3,12 @@ title: Balanced - Payments processing, escrow, and payouts in one simple API | A
 template: ach_debits.html
 
 pageTitle: ACH Debits
+body_class: ach-debits
 
 subtitle:
   heading: Accept ACH debit payments. Balanced<br />allows your customers to pay with their<br />bank accounts.
 
-howitworks:
+howItWorks:
   title: How it works
   body: ACH Debits are submitted to the ACH Network, a processing system that handles bank-to-bank payments. Balanced manages the transaction between the marketplace and their customers.
   step1: Buyer authorizes marketplace to debit his account
@@ -18,12 +19,12 @@ howitworks:
   step6: RDFI transfers funds to ODFI
 
 sliderfeature:
-  step1header: The buyer provides bank account information on your marketplace website and authorizes you to debit his account.
-  step2header: Bank account information is tokenized and the debit request is passed from the marketplace to Balanced’s servers.
-  step3header: Balanced submits debit instructions to the ODFI, the Originating Depository Financial Institution, who is making the debit request.
-  step4header: The ODFI sends debit instructions to the Federal Reserve.
-  step5header: The Federal Reserve notifies the RDFI, the Receiving Depository Financial Institution, of the debit authorization.
-  step6header: The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow. The marketplace may wish to settle funds to the seller using Balanced’s payout service.
+  step1header: "The buyer provides bank account information on your marketplace<br />website and authorizes you to debit his account."
+  step2header: "Bank account information is tokenized and the debit request <br />is passed from the marketplace to Balanced’s servers."
+  step3header: "Balanced submits debit instructions to the ODFI, the Originating<br />Depository Financial Institution, who is making the debit request."
+  step4header: "The ODFI sends debit instructions<br />to the Federal Reserve."
+  step5header: "The Federal Reserve notifies the RDFI, the Receiving<br />Depository Financial Institution, of the debit authorization."
+  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow. The marketplace may wish to settle funds to the seller using Balanced’s payout service."
 
 paymentSchedule:
   title: Payment schedule
@@ -66,7 +67,7 @@ bankStatementDescriptor:
   title: Bank statement descriptor
   body: Modify the soft descriptor on a pre-transaction basis. Balanced allows you to set the description of the purchase on your customer's bank statement.
   learnLink: Learn more about setting the soft descriptor
-  limit: Soft descriptor character length: 22
+  limit: "Soft descriptor character length: 22"
 
 chargebacksDisputes:
   title: Chargebacks & Disputes

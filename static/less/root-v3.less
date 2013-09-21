@@ -92,9 +92,10 @@ a {
 .body1 {
   .standard-font-props;
 
-  font-family: nimbussannov-sembol, arial, sans-serif;
+  font-family: nimbussannov-reg, arial, sans-serif;
   font-size: 44px;
   color: @gray6;
+  line-height: 52px;
 }
 
 .body2 {
@@ -103,6 +104,16 @@ a {
   font-family: nimbussannov-med, arial, sans-serif;
   font-size: 15px;
   color: @gray5;
+}
+
+.body3 {
+  .standard-font-props;
+
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 36px;
+  color: @white;
 }
 
 .button-text1 {
@@ -382,21 +393,20 @@ header {
 
 .page-title {
   h1 {
-    .header1;
-    letter-spacing: 0.1em;
-    text-transform:uppercase;
+    .header2;
     margin: 0;
     padding-top: 20px;
     border-top: 1px solid @layoutLineRuleBackground;
+    padding-top: 50px;
   }
 }
 
 .page-subtitle {
-  margin-top: 40px;
+  margin-top: 15px;
   margin-bottom: 40px;
   .body1;
   color: @gray7;
-  line-height: 1em;
 }
 
+@import "ach_debits.less";
 @import "pricing.less";

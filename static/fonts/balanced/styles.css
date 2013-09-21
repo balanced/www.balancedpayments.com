@@ -1,0 +1,194 @@
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("fonts/untitled-font-1.eot");
+  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg"),
+    url("fonts/untitled-font-1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1";
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.icon-activity:before {
+  content: "a";
+}
+
+.icon-addcustomer:before {
+  content: "b";
+}
+
+.icon-addproductionmp:before {
+  content: "c";
+}
+
+.icon-addtestmp:before {
+  content: "d";
+}
+
+.icon-alert:before {
+  content: "e";
+}
+
+.icon-avatar:before {
+  content: "f";
+}
+
+.icon-balanced-dots:before {
+  content: "g";
+}
+
+.icon-balanced-logo-horizontal:before {
+  content: "h";
+}
+
+.icon-bankaccount:before {
+  content: "i";
+}
+
+.icon-business:before {
+  content: "j";
+}
+
+.icon-carat-right:before {
+  content: "k";
+}
+
+.icon-carat-down:before {
+  content: "l";
+}
+
+.icon-carat-up:before {
+  content: "m";
+}
+
+.icon-menu:before {
+  content: "n";
+}
+
+.icon-logs:before {
+  content: "o";
+}
+
+.icon-loadmore:before {
+  content: "p";
+}
+
+.icon-loading:before {
+  content: "q";
+}
+
+.icon-jsfiddle:before {
+  content: "r";
+}
+
+.icon-twitter:before {
+  content: "s";
+}
+
+.icon-tooltip:before {
+  content: "t";
+}
+
+.icon-invoices:before {
+  content: "u";
+}
+
+.icon-github:before {
+  content: "v";
+}
+
+.icon-testmp:before {
+  content: "w";
+}
+
+.icon-settings:before {
+  content: "x";
+}
+
+.icon-form:before {
+  content: "y";
+}
+
+.icon-edit:before {
+  content: "z";
+}
+
+.icon-search:before {
+  content: "A";
+}
+
+.icon-quora:before {
+  content: "B";
+}
+
+.icon-docs:before {
+  content: "C";
+}
+
+.icon-csvexport:before {
+  content: "D";
+}
+
+.icon-productionmp:before {
+  content: "E";
+}
+
+.icon-person:before {
+  content: "F";
+}
+
+.icon-creditcard:before {
+  content: "G";
+}
+
+.icon-checkmark:before {
+  content: "H";
+}
+
+.icon-order:before {
+  content: "I";
+}
+
+.icon-navigation-arrow:before {
+  content: "J";
+}
+
+.icon-dashboard:before {
+  content: "K";
+}
+

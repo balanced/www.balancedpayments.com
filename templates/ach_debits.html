@@ -1,0 +1,176 @@
+{% extends 'layout-v4.html' %}
+
+{% block body %}
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row">
+                    <header>
+                      <div class="span19 page-title">
+                        <h1>{{page.metadata.pageTitle}}</h1>
+                      </div>
+                    </header>
+                </div>
+
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle">
+                      <div class="span19">
+                        {{ page.metadata.subtitle.heading }}
+                      </div>
+                    </div>
+                </div>
+
+                <section class="how-it-works">
+                    <div class="row">
+                        <div class="span19 bg-gold box-pad">
+                            <div class="offset1 section-title section-title-full">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.howItWorks.title}}</span>
+                                </div>
+                            </div>
+                            <div class="span6 offset1">
+                                <div class="title-icon"></div>
+                            </div>
+                            <div class="body-copy body3 span11">
+                                {{page.metadata.howItWorks.body}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <section class="how-it-works">
+                <div class="span19 step-boxes">
+                    <a>
+                        <div class="box box-active" data-step="1">
+                            <h1 class="header5">1.</h1>
+                            <p>{{page.metadata.howItWorks.step1}}</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="box" data-step="2">
+                            <h1 class="header5">2.</h1>
+                            <p>{{page.metadata.howItWorks.step2}}</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="box" data-step="3">
+                            <h1 class="header5">3.</h1>
+                            <p>{{page.metadata.howItWorks.step3}}</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="box" data-step="4">
+                            <h1 class="header5">4.</h1>
+                            <p>{{page.metadata.howItWorks.step4}}</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="box" data-step="5">
+                            <h1 class="header5">5.</h1>
+                            <p>{{page.metadata.howItWorks.step5}}</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="box box-last" data-step="6">
+                            <h1 class="header5">6.</h1>
+                            <p>{{page.metadata.howItWorks.step6}}</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section>
+                <div class="span19 med-botom-margin">
+                    <div id="how-it-works-carousel" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="item active" data-step="1">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step1header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_1-01.png" alt="Step 1" />
+                            </div>
+                            <div class="item" data-step="2">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step2header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_2-01.png" alt="Step 2" />
+                            </div>
+                            <div class="item" data-step="3">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step3header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_3-01.png" alt="Step 3" />
+                            </div>
+                            <div class="item" data-step="4">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step4header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_4-01.png" alt="Step 4" />
+                            </div>
+                            <div class="item" data-step="5">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step5header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_5-01.png" alt="Step 5" />
+                            </div>
+                            <div class="item" data-step="6">
+                                <div class="carousel-caption">
+                                    <p>{{page.metadata.sliderfeature.step6header}}</p>
+                                </div>
+                                <img src="images/ach_debits/ach_debits_flow_6-01.png" alt="Step 6" />
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#how-it-works-carousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#how-it-works-carousel" data-slide="next">&rsaquo;</a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#how-it-works-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#how-it-works-carousel" data-slide-to="1"></li>
+                            <li data-target="#how-it-works-carousel" data-slide-to="2"></li>
+                            <li data-target="#how-it-works-carousel" data-slide-to="3"></li>
+                            <li data-target="#how-it-works-carousel" data-slide-to="4"></li>
+                            <li data-target="#how-it-works-carousel" data-slide-to="5"></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="payment-schedule">
+                    <div class="row">
+                        <div class="span19 box-pad">
+                            <div class="offset1 section-title section-title-full">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.paymentSchedule.title}}</span>
+                                </div>
+                            </div>
+                            <div class="span6 offset1">
+                                <div class="title-icon"></div>
+                            </div>
+                            <div class="body-copy body3 span11">
+                                {{page.metadata.howItWorks.body}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
