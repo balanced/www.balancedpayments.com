@@ -1,4 +1,8 @@
 body.ach-debits {
+    font-family: nimbussannov-med,arial,sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+
     position: relative;
     background: none;
 
@@ -65,12 +69,8 @@ body.ach-debits {
     section {
         margin: 0px;
 
-        .box-pad {
-            padding: 50px 0px 50px 0px;
-        }
-
-        .bg-gold {
-            background-color: @curryYellow60;
+        .box-pad-top {
+            padding-top: 100px;
         }
 
         .section-title {
@@ -79,6 +79,44 @@ body.ach-debits {
             &.section-title-full {
                 width: auto;
             }
+
+            &.section-title-no-width {
+                width: inherit;
+            }
+        }
+
+        .section-side-body {
+            margin-left: 0px;
+            margin-top: 25px;
+        }
+
+        .section-side-link {
+            margin-top: 25px;
+            font-size: 13px;
+            line-height: 16px;
+            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+        }
+
+        .spacer {
+            margin: 0px;
+            border-top: 1px solid #cccccc;
+            padding-right: 30px;
+        }
+
+        .bg-gold {
+            padding-top: 50px;
+            background-color: @curryYellow60;
+
+            .section-title {
+                border-top: 1px solid @curryYellow100;
+            }
+        }
+
+         .title-icon {
+            background: url(/images/pricing_icons.png) no-repeat;
+            width: 225px;
+            height: 190px;
+            background-position: -25px -225px;
         }
 
         &.how-it-works {
@@ -92,20 +130,26 @@ body.ach-debits {
                 a, a:active {
                     &:hover {
                         .box {
-                            background-color: @black;
+                            background-color: @gray2;
+                        }
 
-                            p {
-                                color: @white;
-                            }
+                        h1 {
+                            color: @black;
+                        }
 
-                            .header5 {
-                                color: @white;
-                            }
+                        p {
+                            color: @black;
                         }
                     }
 
                     color: @black;
                     cursor: pointer;
+
+                    .box {
+                        &.box-active {
+                            background-color: @black;
+                        }
+                    }
                 }
 
                 .box {
@@ -115,10 +159,10 @@ body.ach-debits {
                     float: left;
                     border-right: 1px solid @gray3;
                     padding-top: 15px;
-                    height: 125px;
+                    height: 110px;
 
                     &.box-active {
-                        .header5 {
+                        h1 {
                             color: @white;
                         }
 
@@ -140,19 +184,185 @@ body.ach-debits {
                         font-family: 'Droid Serif', serif;
                         line-height: 18px;
                         font-style: italic;
+                        font-size: 14px;
                     }
 
                     h1 {
+                        font-family: NimbusSanNovConD-Bol, arial, sans-serif;
                         margin: 0px;
+                        color: @gray5;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+
+        &.payment-schedule {
+            .schedule-times {
+                .title {
+                    border-top: 1px solid @gray3;
+                    background-color: @curryYellow60;
+                    padding: 15px;
+                    color: @gray7;
+                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+                    font-size: 18px;
+                    letter-spacing: .1em;
+                }
+
+                h1, h2, h3 {
+                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+                    text-align: center;
+                }
+
+                h1 {
+                    font-size: 44px;
+                    color: @gray7;
+                    font-weight: 200;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    color: @gray3;
+                    line-height: 26px;
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    font-size: 12px;
+                    font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                    line-height: 0px;
+                    margin-top: 10px;
+                    color: @gray3;
+                }
+
+                .box {
+                    margin-left: 0px;
+                    background-color: @white;
+                    width: 113px;
+                    padding-bottom: 20px;
+                    border-right: 1px solid @gray3;
+
+                    &.box-last {
+                        border-right: 0px;
+                        width: 114px;
                     }
                 }
             }
 
-            .title-icon {
-                background: url(/images/pricing_icons.png) no-repeat;
-                width: 225px;
-                height: 190px;
-                background-position: 0px -225px;
+            .holidays {
+                margin-top: 10px;
+                font-size: 13px;
+
+                table {
+                    border: 0px;
+                    margin-bottom: 0px;
+
+                    thead {
+                        tr {
+                            th {
+                                color: @black;
+                                border: 0px;
+                                padding: 10px;
+                                font-size: 12px;
+                                font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                                letter-spacing: 0.1em;
+                                padding-left: 0px;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:first-of-type {
+                                border-top: 1px solid @gray2;
+                            }
+
+                            border-bottom: 1px solid @gray2;
+
+                            td {
+                                &.first {
+                                    width: 37%;
+                                    padding-left: 0px;
+                                }
+
+                                border: 0px;
+                                padding: 10px;
+
+                                &:nth-child(2n) {
+                                    color: @black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.bank-account-verification {
+            .graphic {
+                background: url(/images/ach_debits/ach_debit_verification-01.png) no-repeat;
+                width: 840px;
+                height: 415px;
+                background-position: 120px 0px;
+            }
+        }
+
+        &.payment-status {
+            .graphic {
+                background: url(/images/ach_debits/ach_debits_payment_status-01.png) no-repeat;
+                width: 840px;
+                height: 400px;
+                background-position: 0px 40px;
+            }
+        }
+
+        &.bank-statement-description {
+            .graphic {
+                background: url(/images/ach_debits/ach_debits_statement_descriptor-01.png) no-repeat;
+                width: 570px;
+                height: 250px;
+                background-position: 0px 0px;
+            }
+
+            .footnote {
+                margin-top: 5px;
+                color: @black;
+                font-size: 13px;
+                font-family: NimbusSanNov-Med, arial, sans-serif;
+            }
+        }
+
+        &.chargebacks-disputes {
+            .graphic {
+                background: url(/images/ach_debits/ach_debits_chargebacks-01.png) no-repeat;
+                width: 570px;
+                height: 365px;
+                background-position: 0px 0px;
+            }
+        }
+
+        &.ach-debits {
+            .rate-panels {
+                border-top: 1px solid @curryYellow100;
+             }
+        }
+
+        &.looking-for-ach-credits {
+            margin: 50px 0px 50px 0px;
+
+            .center {
+                text-align: center;
+            }
+
+            p {
+                color: @black;
+                font-family: 'Droid Serif', serif;
+                font-style: italic;
+                font-size: 16px;
+            }
+
+            .btn {
+                margin-top: 15px;
             }
         }
     }
@@ -164,8 +374,16 @@ body.ach-debits {
         margin-top: 0px;
         .border-radius(0px);
         background: @white;
-        border: 1px solid @turquoise60;
-        color: @turquoise60;
+        border: 2px solid @skyBlue;
+        color: @skyBlue;
+        .opacity(100);
+        font-family: helvetica;
+
+        &:hover {
+            background-color: @black;
+            color: @white;
+            border: 2px solid @black;
+        }
     }
 
     .carousel-inner {
@@ -179,7 +397,7 @@ body.ach-debits {
                 left: inherit;
                 right: inherit;
                 bottom: inherit;
-                margin: 40px auto 0px auto;
+                margin: 55px auto 0px auto;
                 width: 712px;
                 padding: 0px;
 
@@ -224,6 +442,10 @@ body.ach-debits {
     margin-bottom: 75px;
 }
 
+.xlarge-bottom-margin {
+    margin-bottom: 100px;
+}
+
 .med-botom-margin {
     margin-bottom: 35px;
 }
@@ -235,3 +457,61 @@ body.ach-debits {
 .bg-default {
     background-color: @gray1;
 }
+
+.clear {
+    clear: both;
+}
+
+.teeth {
+    &:after {
+        content: " ";
+        display: block;
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+        height: 18px;
+        background: linear-gradient(@white 0%, transparent 0%), linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
+        background: -webkit-linear-gradient(@white 0%, transparent 0%), -webkit-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -webkit-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
+        background: -o-linear-gradient(@white 0%, transparent 0%), -o-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -o-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
+        background: -moz-linear-gradient(@white 0%, transparent 0%), -moz-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -moz-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
+        background-repeat: repeat-x;
+        background-size: 0px 100%, 13px 13px, 13px 13px;
+        z-index: 9999;
+    }
+}
+
+.border-top {
+    border-top: 1px solid @gray2
+}
+
+.btn {
+    .button-text2;
+    .box-shadow(None);
+
+    border: 5px solid @black;
+    background: @white;
+    border-color: @black;
+    border-radius: 0;
+    vertical-align: middle;
+    color: @black;
+    text-decoration: none;
+    padding: 11px 19px;
+    text-shadow: none;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 24px;
+
+    &:hover {
+      background-image: none;
+      background-image: none;
+      background-image: none;
+      background-image: none;
+      background-image: none;
+      background-image: none;
+      background-repeat: no-repeat;
+      filter: none;
+      background-color: @black;
+      border-color: @black;
+      color: @white;
+    }
+  }

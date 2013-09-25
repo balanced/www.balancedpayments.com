@@ -6,7 +6,7 @@ pageTitle: ACH Debits
 body_class: ach-debits
 
 subtitle:
-  heading: Accept ACH debit payments. Balanced<br />allows your customers to pay with their<br />bank accounts.
+  heading: Accept ACH debit payments today.<br />Balanced allows your customers to <br />pay with their bank accounts.
 
 howItWorks:
   title: How it works
@@ -24,35 +24,50 @@ sliderfeature:
   step3header: "Balanced submits debit instructions to the ODFI, the Originating<br />Depository Financial Institution, who is making the debit request."
   step4header: "The ODFI sends debit instructions<br />to the Federal Reserve."
   step5header: "The Federal Reserve notifies the RDFI, the Receiving<br />Depository Financial Institution, of the debit authorization."
-  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow. The marketplace may wish to settle funds to the seller using Balanced’s payout service."
+  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow.<br />The marketplace may wish to settle funds to the seller using Balanced’s payout service."
 
 paymentSchedule:
   title: Payment schedule
   body: Balanced will batch ACH debits for submission each weekday. The ACH network operates only on banking days, so submission will not occur on bank holidays.
 
+submissionTimes:
+  title: ACH DEBIT SUBMISSION TIMES
+  time: "3:30"
+  timezone: PM PACIFIC
+
 bankHolidays:
   title: BANK HOLIDAYS (2013)
   list:
-    - label: New Year's Day
-      date: Jan 1
-    - label: Martin Luther King, Jr's Birthday
-      date: Jan 21
-    - label: Washington's Birthday
-      date: Feb 18
-    - label: Memorial Day
-      date: May 27
-    - label: Independence Day
-      date: Jul 4
-    - label: Labor Day
-      date: Sep 2
-    - label: Columbus Day
-      date: Oct 14
-    - label: Veterans Day
-      date: Nov 11
-    - label: Thanksgiving Day
-      date: Nov 28
-    - label: Christmas Day
-      date: Dec 25
+    - label: row0
+      row:
+        - label: New Year's Day
+          date: Jan 1
+        - label: Labor Day
+          date: Sep 2
+    - label: row1
+      row:
+        - label: Martin Luther King, Jr's Birthday
+          date: Jan 21
+        - label: Columbus Day
+          date: Oct 14
+    - label: row2
+      row:
+        - label: Washington's Birthday
+          date: Feb 18
+        - label: Veterans Day
+          date: Nov 11
+    - label: row3
+      row:
+        - label: Memorial Day
+          date: May 27
+        - label: Thanksgiving Day
+          date: Nov 28
+    - label: row4
+      row:
+        - label: Independence Day
+          date: Jul 4
+        - label: Christmas Day
+          date: Dec 25
 
 bankAccountVerification:
   title: Bank account verification
@@ -66,13 +81,13 @@ paymentStatus:
 bankStatementDescriptor:
   title: Bank statement descriptor
   body: Modify the soft descriptor on a pre-transaction basis. Balanced allows you to set the description of the purchase on your customer's bank statement.
-  learnLink: Learn more about setting the soft descriptor
-  limit: "Soft descriptor character length: 22"
+  learnLink: "Learn more about setting<br />the soft descriptor"
+  limit: "Bank statement soft descriptor max. character length: 14"
 
 chargebacksDisputes:
   title: Chargebacks & Disputes
   body: In the event of a chargeback, Balanced will notify you to help gather the documents necessary to fight the chargeback.
-  learnLink: Learn more about the chargeback process
+  learnLink: "Learn more about the<br />chargeback process"
 
 achDebitsPricing:
   title: ACH Debits Pricing
