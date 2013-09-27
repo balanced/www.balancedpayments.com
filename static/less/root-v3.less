@@ -1,6 +1,7 @@
 @import "bootstrap-2.3/bootstrap.less";
 @import "variables.less";
 @import "variables-v3.less";
+@import "balanced-icons.less";
 
 // our grid is 24 columns - total 1065px
 @gridColumns: 24;
@@ -249,8 +250,7 @@ header {
 }
 
 .site-footer {
-  padding-bottom: 20px;
-  background-color: @black;
+  background-color: @gray8;
 
   .flogo {
     float: left;
@@ -273,9 +273,21 @@ header {
     display: inline-block;
     padding: 20px 0 10px 0;
   }
+  .footer-link {
+    .nav2;
+    display: inline-block;
+    padding: 20px 13px 0px 0px;
+
+    a {
+        color: @gray4;
+
+        &:hover {
+            color: @white;
+        }
+    }
+  }
   .copyright-notice {
-    padding: 20px;
-    border-left: 1px solid @gray7;
+    padding: 20px 5px 20px 5px;
   }
 
   .footer-items {
@@ -315,29 +327,13 @@ header {
 
   a.icon {
     float: right;
-    .cssicon(url(/images/pricing_icons.png) no-repeat, 30px, 30px);
-    // background-color: rgb(134, 134, 134);
-    background-position: -0px -747px;
     margin: 15px 5px;
-    &.quora {
-      background-position: -30px -747px;
-      &:hover {
-        background-position: -120px -747px;
-      }
-    }
-    &.github {
-      background-position: -0px -747px;
-      &:hover {
-        background-position: -90px -747px;
-      }
-    }
-    &.twitter {
-      background-position: -60px -747px;
-      &:hover {
-        background-position: -150px -747px;
-      }
-      margin-right: 0px;
-    }
+    border: 1px solid @gray4;
+    font-size: 22px;
+    color: @white;
+    padding-left: 6px;
+    width: 20px;
+    height: 20px;
   }
 }
 

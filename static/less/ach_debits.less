@@ -6,30 +6,80 @@ body.ach-debits {
     position: relative;
     background: none;
 
-    .global-wrapper {
-
+    .page-wrapper {
+        padding-left: 90px;
     }
 
     .container {
         width: 840px;
     }
 
+    .global-wrapper {
+        &.expanded {
+            -webkit-transform: translateX(200px);
+            -moz-transform: translateX(200px);
+            -o-transform: translateX(200px);
+            transform: translateX(200px);
+
+            .sidebar-menu-left {
+                position: fixed;
+
+                .close-child-menu-left {
+                    a {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
     .sidebar-menu-left {
-        position: absolute;
+        position: fixed;
         left: 0px;
         top: 0px;
         background-color: black;
         height: 100%;
-        width: 70px;
-        padding: 60px 10px 0px 10px;
+        width: 90px;
+
+        .close-child-menu-left {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+
+            a {
+                font-size: 50px;
+                color: @gray5;
+                display: none;
+                margin: auto;
+                margin-top: 3px;
+                height: 60px;
+                cursor: pointer;
+                width: 100%;
+
+                i {
+                    width: 60px;
+                }
+
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
 
         ul {
             list-style-type: none;
             margin: 0px;
 
             li {
+                border-bottom: 1px solid @gray6;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                letter-spacing: 0.1em;
+                font-size: 14px;
+
                 &:first-of-type {
-                    border-top: 1px solid #444444;
+                    border-top: 1px solid @gray5;
                 }
 
                 &.try-dashboard {
@@ -38,17 +88,100 @@ body.ach-debits {
                     position: absolute;
                     left: 0px;
                     width: 100%;
-                    height: 60px;
-                }
+                    height: 85px;
+                    line-height: 15px;
+                    .opacity(85);
+                    border-bottom: 0px;
 
-                border-bottom: 1px solid #444444;
-                padding: 14px 0px 14px 0px;
-                text-align: center;
-                font-size: 11px;
-                text-transform:uppercase;
+                    a {
+                        padding: 3px;
+
+                        .icon-dashboard {
+                            color: @white;
+                            font-size: 42px;
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 25px;
+                        }
+
+                        &:hover {
+                            color: @white;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: @turquoise60;
+                        .opacity(100);
+                        color: @white;
+                    }
+                }
 
                 a {
                     color: @white;
+                    display: block;
+                    cursor: pointer;
+                    padding: 18px 0px 18px 0px;
+                }
+
+                &.active {
+                    background-color: @white;
+                    color: @black;
+                }
+
+                &:hover {
+                    background-color: @white;
+
+                    a {
+                        color: @black;
+                    }
+                }
+
+                .expand-arrow {
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 8px 8px 0 0;
+                    border-color: #ffffff transparent transparent transparent;
+                    float: left;
+                }
+            }
+        }
+    }
+
+    .sidebar-child-menu-left {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        width: 200px;
+        padding: 0px;
+        background-color: @gray8;
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+
+        ul {
+            margin-top: 70px;
+            padding: 0px;
+            margin-left: 25px;
+            list-style-type: none;
+
+            li {
+                font-family: NimbusSanNov-reg, arial, sans-serif;
+                font-size: 15px;
+                padding: 0px;
+
+                a {
+                    color: @gray3;
+                    cursor: pointer;
+                    padding: 10px 0px 10px 0px;
+                    display: block;
+
+                    &:hover {
+                        color: @white;
+                    }
                 }
             }
         }
@@ -74,7 +207,7 @@ body.ach-debits {
         }
 
         .section-title {
-            border-top: 1px solid #CDCBC7;
+            border-top: 1px solid @gray3;
 
             &.section-title-full {
                 width: auto;
@@ -99,7 +232,7 @@ body.ach-debits {
 
         .spacer {
             margin: 0px;
-            border-top: 1px solid #cccccc;
+            border-top: 1px solid @gray3;
             padding-right: 30px;
         }
 
@@ -127,7 +260,7 @@ body.ach-debits {
             .step-boxes {
                 border-top: 5px solid @black;
 
-                a, a:active {
+                a {
                     &:hover {
                         .box {
                             background-color: @gray2;
@@ -158,7 +291,7 @@ body.ach-debits {
                     background-color: @gray1;
                     float: left;
                     border-right: 1px solid @gray3;
-                    padding-top: 15px;
+                    padding-top: 5px;
                     height: 110px;
 
                     &.box-active {
@@ -416,7 +549,6 @@ body.ach-debits {
     }
 
     .carousel-indicators {
-        position: relative;
         top: inherit;
         right: inherit;
         left: 375px;
@@ -448,6 +580,10 @@ body.ach-debits {
 
 .med-botom-margin {
     margin-bottom: 35px;
+}
+
+.med-bottom-padding {
+    padding-bottom: 50px;
 }
 
 .bg-white {

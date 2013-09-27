@@ -1,20 +1,14 @@
-
-@charset "UTF-8";
-
 @font-face {
-  font-family: "untitled-font-1";
-  src:url("fonts/untitled-font-1.eot");
-  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
-    url("fonts/untitled-font-1.ttf") format("truetype"),
-    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg"),
-    url("fonts/untitled-font-1.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-
+  font-family: 'Balanced';
+  src: url('/static/css/fonts/balanced.eot');
+  src: url('/static/css/fonts/balanced.eot?#iefix') format('embedded-opentype'),
+       url('/static/css/fonts/balanced.woff') format('woff'),
+       url('/static/css/fonts/balanced.svg#Balanced') format('svg'),
+       url('/static/css/fonts/balanced.ttf') format('truetype');
 }
 
 [data-icon]:before {
-  font-family: "untitled-font-1";
+  font-family: "Balanced";
   content: attr(data-icon);
   font-style: normal;
   font-weight: normal;
@@ -30,7 +24,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "untitled-font-1";
+  font-family: "Balanced";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -184,11 +178,22 @@
   content: "I";
 }
 
-.icon-navigation-arrow:before {
-  content: "J";
-}
-
 .icon-dashboard:before {
   content: "K";
 }
 
+.icon-notification:before {
+  content: "L";
+}
+
+.icon-navigation-close:before {
+  content: "J";
+}
+
+.icon-navigation-arrow-forward:before {
+  content: "M";
+}
+
+.icon-navigation-arrow-back:before {
+  content: "N";
+}
