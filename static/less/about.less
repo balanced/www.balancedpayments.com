@@ -4,7 +4,12 @@
 
 body {
   width: 100%;
-  background: url(@v2WebsiteBackground);
+
+  &.community {
+    .hur {
+        width: inherit;
+    }
+  }
 }
 
 .content, .container {
@@ -179,6 +184,7 @@ body {
 .about-founders-bio {
   font-family: @v2FontFamily;
   font-size: 14px;
+  line-height: 18px;
   color: #737373;
   min-height: 325px;
 }
