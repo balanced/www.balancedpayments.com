@@ -56,7 +56,6 @@ winter: $(WINTERS)
 	$(WINTERSMITH) build
 	mv build/help_ctr.html contents/help.json
 	$(WINTERSMITH) build
-	rm -f build/robots.txt
 	echo "var answers_data = " > build/auto_complete.js
 	cat build/auto_complete.html >> build/auto_complete.js
 	rm build/auto_complete.html
