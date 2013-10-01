@@ -2,7 +2,7 @@
 @import "bootstrap-2.0/variables.less";
 @import "variables.less";
 
-@bodyFont: 'Droid Serif', serif;
+@bodyFont: 'nimbussannov-med', arial, sans-serif;
 @pageWidth: 1008px;
 
 @listMargin: 16px;
@@ -38,7 +38,7 @@
     background: white;
     border-radius: 0;
     vertical-align: middle;
-    color: @balancedGreen;
+    color: @black;
     text-decoration: none;
     height: auto;
     padding: 8px 16px;
@@ -57,12 +57,18 @@
 
 body, html {
   background: @pageBackground;
+  font-family: @bodyFont;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 a {
-  color: @balancedGreen;
+  color: #0096af;
+  text-decoration: none;
+
   &:hover {
     color: #000;
+    text-decoration: none;
   }
 }
 
@@ -99,10 +105,14 @@ h4 {
 
 p {
   font-family: @bodyFont;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 22px;
 
-  color: #4d4d4d;
+  a {
+    font-size: 13px;
+    line-height: 16px;
+    font-family: NimbusSanNov-SemBol;
+  }
 }
 
 // gun -> head *bang*
@@ -120,7 +130,7 @@ footer {
   margin: 0;
   position: absolute;
   right: 0;
-  top: 0;
+
   .navbar-inner {
     padding: 0;
   }
@@ -182,6 +192,8 @@ footer {
 .hur {
   width: @pageWidth;
   margin: auto;
+  position: relative;
+
   &> section {
     margin: 0 auto 80px;
     float: left;
@@ -247,6 +259,8 @@ footer {
   }
   .sub {
     p {
+      font-family: 'Droid Serif', serif;
+      font-size: 14px;
       font-style: italic;
       margin: .5em 0 1.5em;
     }
@@ -255,6 +269,10 @@ footer {
 
 #heading {
   margin: 20px 0;
+
+  img {
+    width: 130px;
+  }
 }
 
 #try-it {
@@ -286,13 +304,14 @@ footer {
   }
   p {
     color: #000;
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
     font-style: italic;
     margin-top: 190px;
+    text-decoration: underline;
+
     a {
       color: #000;
-      &:hover {
-        color: lighten(#000, 30%);
-      }
     }
   }
 }
@@ -538,7 +557,8 @@ footer {
     }
   }
   .processing {
-    background: url(/images/homepage_pricing-02.png) 0 0 no-repeat;
+    background: url(/images/homepage_pricing-02-2x.png) 0 0 no-repeat;
+    background-size: 246px;
     width: 246px;
     height: 50px;
     text-indent: -4000px;
@@ -549,7 +569,8 @@ footer {
     }
   }
   .payouts {
-    background: url(/images/homepage_pricing-02.png) 0 -50px * 2 no-repeat;
+    background: url(/images/homepage_pricing-02-2x.png) 0 -50px * 2 no-repeat;
+    background-size: 246px;
     width: 246px;
     height: 50px;
     text-indent: -4000px;

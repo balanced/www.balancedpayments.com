@@ -1,6 +1,7 @@
 @import "bootstrap-2.3/bootstrap.less";
 @import "variables.less";
 @import "variables-v3.less";
+@import "balanced-icons.less";
 
 // our grid is 24 columns - total 1065px
 @gridColumns: 24;
@@ -72,6 +73,14 @@ a {
   color: @gray4;
 }
 
+.header5d {
+  .standard-font-props;
+
+  font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+  font-size: 28px;
+  color: @gray4;
+}
+
 .header6 {
   .standard-font-props;
 
@@ -92,9 +101,10 @@ a {
 .body1 {
   .standard-font-props;
 
-  font-family: nimbussannov-sembol, arial, sans-serif;
+  font-family: nimbussannov-reg, arial, sans-serif;
   font-size: 44px;
   color: @gray6;
+  line-height: 52px;
 }
 
 .body2 {
@@ -105,6 +115,16 @@ a {
   color: @gray5;
 }
 
+.body3 {
+  .standard-font-props;
+
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 36px;
+  color: @white;
+}
+
 .button-text1 {
   font-family: NimbusSanNovCon-Bol, arial, sans-serif;
   font-size: 18px;
@@ -113,7 +133,7 @@ a {
 }
 
 .button-text2 {
-  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
+  font-family: NimbusSanNovConD-Bol, arial, sans-serif;
   font-size: 18px;
   color: @white;
   letter-spacing: 0.1em;
@@ -152,6 +172,7 @@ header {
   .logo {
     img {
       margin: 50px 0 0 16px;
+      width: 130px;
     }
   }
 }
@@ -238,8 +259,7 @@ header {
 }
 
 .site-footer {
-  padding-bottom: 20px;
-  background-color: @black;
+  background-color: @gray8;
 
   .flogo {
     float: left;
@@ -262,9 +282,21 @@ header {
     display: inline-block;
     padding: 20px 0 10px 0;
   }
+  .footer-link {
+    .nav2;
+    display: inline-block;
+    padding: 20px 21px 0px 0px;
+
+    a {
+        color: @gray4;
+
+        &:hover {
+            color: @white;
+        }
+    }
+  }
   .copyright-notice {
-    padding: 20px;
-    border-left: 1px solid @gray7;
+    padding: 20px 5px 20px 5px;
   }
 
   .footer-items {
@@ -304,28 +336,12 @@ header {
 
   a.icon {
     float: right;
-    .cssicon(url(/images/pricing_icons.png) no-repeat, 30px, 30px);
-    // background-color: rgb(134, 134, 134);
-    background-position: -0px -747px;
-    margin: 15px 5px;
-    &.quora {
-      background-position: -30px -747px;
-      &:hover {
-        background-position: -120px -747px;
-      }
-    }
-    &.github {
-      background-position: -0px -747px;
-      &:hover {
-        background-position: -90px -747px;
-      }
-    }
-    &.twitter {
-      background-position: -60px -747px;
-      &:hover {
-        background-position: -150px -747px;
-      }
-      margin-right: 0px;
+    margin: 17px 11px;
+    font-size: 23px;
+    color: @gray4;
+
+    &:hover {
+        color: @white;
     }
   }
 }
@@ -382,21 +398,20 @@ header {
 
 .page-title {
   h1 {
-    .header1;
-    letter-spacing: 0.1em;
-    text-transform:uppercase;
+    .header2;
     margin: 0;
     padding-top: 20px;
     border-top: 1px solid @layoutLineRuleBackground;
+    padding-top: 50px;
   }
 }
 
 .page-subtitle {
-  margin-top: 40px;
+  margin-top: 15px;
   margin-bottom: 40px;
   .body1;
   color: @gray7;
-  line-height: 1em;
 }
 
+@import "ach_debits.less";
 @import "pricing.less";
