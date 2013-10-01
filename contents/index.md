@@ -5,7 +5,7 @@ body_class:
 
 try_out:
   heading: Payments for Marketplaces
-  link: TRY IT OUT
+  link: TRY THE DASHBOARD
 
 intro:
   - heading: Charge cards
@@ -17,39 +17,42 @@ intro:
 
 customers:
   - name: RedditGifts
-    url: http://www.redditgifts.com
+    url: http://redditgifts.com
   - name: TheFancy
-    url: http://www.thefancy.com
+    url: http://fancy.com
   - name: Groupme
-    url: http://www.groupme.com
+    url: https://groupme.com
   - name: Vungle
     url: http://www.vungle.com
   - name: Visual.ly
-    url: http://www.visual.ly
+    url: http://visual.ly/
     class: visually
 
 # These are the 3 column section that are reasonable generic with their format
 Sections:
   - id: processing
-    title: Balanced Processing
-    subTitle: Credit cards (U.S. and international)
+    title: Processing
+    subTitle: Credit cards (U.S. and int'l) | Bank accounts via ACH (U.S. only)
     desc: |
-      ### Accept credit cards for your business.
+      ### Accept credit cards and ACH debit payments from your customers.
+      [Learn more about ACH Debits](/ach_debits)
     subs:
       - title: No PCI requirements
         text: |
           Balanced is Level 1 PCI certified, so you can pass card data directly to us without worrying about compliance.
 
-          [More about security](/docs/overview?language=bash#tokenizing-sensitive-information)
+          [Learn more about security](https://support.balancedpayments.com/hc/en-us/categories/200005004-Security)
       - title: Soft descriptor control
         text: |
-          Specify the credit card statement descriptor on a per-transaction basis.
+          Specify the credit card or bank statement descriptor on a per-transaction basis.
+
+          [Learn more about setting the soft descriptor](https://docs.balancedpayments.com/current/#soft-descriptors)
       - title: Completely white-labeled
         text: |
           Retain your brand and keep customers on your site; buyers do not need to sign up for a Balanced account.
 
   - id: payouts
-    title: Balanced Payouts
+    title: Payouts
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
       ### Use with any card processor or as a stand-alone service for same-day bank deposits.
@@ -60,12 +63,12 @@ Sections:
           Fargo bank account holders. Pay all other merchants
           via next-day ACH.
 
-          [See payout schedule](/docs/overview?language=bash#submission-delivery-times)
+          [See payout schedule](https://docs.balancedpayments.com/current/#submission-delivery-times)
       - title: No fees to add funds
         text: |
           To pay out, simply fund your balance with your bank account.
 
-          [More about pre-funding your account](/docs/overview?language=bash#pre-funding-your-account)
+          [Learn more about pre-funding your account](https://docs.balancedpayments.com/current/overview.html?language=bash#pre-funding-your-account)
       - title: Completely white-labeled
         text: |
           Retain your brand and keep customers on your site; merchants do not need to sign up for a Balanced account.
@@ -95,32 +98,32 @@ marketplaces:
         pay your merchants upon fulfillment of an order or
         a service.
 
-        [More about escrow](/docs/overview?language=bash#escrow)
+        [Learn more about escrow](https://docs.balancedpayments.com/current/overview.html?language=bash#funds-flow)
     - text: |
         #### Define your own fee structure
         Set your own fees by determining how much to collect
         from buyers, merchants, or both.
 
-        [View fee scenarios](/docs/overview?language=bash#collecting-your-fees)
+        [View fee scenarios](https://docs.balancedpayments.com/current/overview?language=bash#collecting-your-fees)
 
 integrate:
   title: Integrate in minutes
   desc: |
     ### Balanced provides client libraries and a RESTful API for you to easily integrate.
-    [View our docs](/docs/overview)
+    [View our docs](https://docs.balancedpayments.com)
   tutorials_title: Tutorials
   tutorials:
     - name: How to charge a card
-      url: /docs/overview?language=bash#balanced-processing
+      url: https://docs.balancedpayments.com/current/#processing
     - name: How to pay a bank account
-      url: /docs/overview?language=bash#balanced-payouts
+      url: https://docs.balancedpayments.com/current/#balanced-payouts
     - name: How to escrow funds
-      url: /docs/overview?language=bash#funds-flow
+      url: https://docs.balancedpayments.com/current/#funds-flow
     - name: How to collect your fee
-      url: /docs/overview?language=bash#collecting-your-fees
+      url: https://docs.balancedpayments.com/current/#collecting-your-fees
   sub_tutorials: |
     #### Need help integrating?
-    Contact us through one of our many [support channels](/help).
+    Contact us through one of our many [support channels](https://docs.balancedpayments.com/current/#support).
   clients_title: Client libraries
   # class in the case that the name of the language is different from the css class for the image
   clients:
@@ -148,7 +151,7 @@ pricing:
   title: All inclusive pricing
   desc: |
     ### No monthly fees. No setup fees. No recurring fees.
-    [More about pricing](/pricing)
+    [Learn more about pricing](/pricing)
   rates:
     - desc: "Processing: credit card"
       per: per txn
@@ -162,6 +165,6 @@ pricing:
 
 bottom:
   heading: Solve your payments problem today.
-  link: TRY IT OUT
+  link: TRY THE DASHBOARD
 
 ---

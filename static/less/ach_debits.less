@@ -1,10 +1,11 @@
-body.ach-debits {
-    font-family: nimbussannov-med,arial,sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-
+body.ach-debits, body.pricing {
     position: relative;
     background: none;
+
+    a:visited, a:focus {
+        text-decoration: none;
+        outline: none;
+    }
 
     .page-wrapper {
         padding-left: 90px;
@@ -15,14 +16,18 @@ body.ach-debits {
     }
 
     .global-wrapper {
+        position: relative;
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -o-transition: 300ms;
+
         &.expanded {
-            -webkit-transform: translateX(200px);
-            -moz-transform: translateX(200px);
-            -o-transform: translateX(200px);
-            transform: translateX(200px);
+            left: 200px;
 
             .sidebar-menu-left {
                 position: fixed;
+                left: 200px;
 
                 .close-child-menu-left {
                     a {
@@ -34,12 +39,17 @@ body.ach-debits {
     }
 
     .sidebar-menu-left {
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -o-transition: 300ms;
         position: fixed;
         left: 0px;
         top: 0px;
         background-color: black;
         height: 100%;
         width: 90px;
+        z-index: 9999;
 
         .close-child-menu-left {
             width: 100%;
@@ -72,7 +82,7 @@ body.ach-debits {
 
             li {
                 border-bottom: 1px solid @gray6;
-                text-align: center;
+                text-align: right;
                 text-transform: uppercase;
                 font-family: NimbusSanNovCon-Med, arial, sans-serif;
                 letter-spacing: 0.1em;
@@ -92,9 +102,12 @@ body.ach-debits {
                     line-height: 15px;
                     .opacity(85);
                     border-bottom: 0px;
+                    text-align: center;
 
                     a {
                         padding: 3px;
+                        height: 79px;
+                        cursor: pointer;
 
                         .icon-dashboard {
                             color: @white;
@@ -104,7 +117,7 @@ body.ach-debits {
                             margin-bottom: 25px;
                         }
 
-                        &:hover {
+                        i {
                             color: @white;
                         }
                     }
@@ -113,6 +126,10 @@ body.ach-debits {
                         background-color: @turquoise60;
                         .opacity(100);
                         color: @white;
+
+                        a {
+                            color: @white;
+                        }
                     }
                 }
 
@@ -120,12 +137,16 @@ body.ach-debits {
                     color: @white;
                     display: block;
                     cursor: pointer;
-                    padding: 18px 0px 18px 0px;
+                    padding: 18px 13px 18px 0px;
                 }
 
                 &.active {
                     background-color: @white;
                     color: @black;
+
+                    a {
+                        color: @black;
+                    }
                 }
 
                 &:hover {
@@ -136,13 +157,14 @@ body.ach-debits {
                     }
                 }
 
-                .expand-arrow {
+                .arrow {
                     width: 0px;
                     height: 0px;
                     border-style: solid;
-                    border-width: 8px 8px 0 0;
-                    border-color: #ffffff transparent transparent transparent;
-                    float: left;
+                    border-width: 5px 8px 5px 0;
+                    border-color: transparent @turquoise60 transparent transparent;
+                    display: inline-block;
+                    margin-right: 3px;
                 }
             }
         }
@@ -224,7 +246,7 @@ body.ach-debits {
         }
 
         .section-side-link {
-            margin-top: 25px;
+            margin-top: 15px;
             font-size: 13px;
             line-height: 16px;
             font-family: NimbusSanNov-SemBol, arial, sans-serif;
@@ -236,8 +258,13 @@ body.ach-debits {
             padding-right: 30px;
         }
 
-        .bg-gold {
+        .content {
+            margin-left: 0px;
+            margin-bottom: 100px;
             padding-top: 50px;
+        }
+
+        .content-gold {
             background-color: @curryYellow60;
 
             .section-title {
@@ -246,10 +273,11 @@ body.ach-debits {
         }
 
          .title-icon {
-            background: url(/images/pricing_icons.png) no-repeat;
+            background: url(/images/pricing_icons-2x.png) no-repeat;
             width: 225px;
             height: 190px;
             background-position: -25px -225px;
+            background-size: 225px;
         }
 
         &.how-it-works {
@@ -433,28 +461,31 @@ body.ach-debits {
 
         &.bank-account-verification {
             .graphic {
-                background: url(/images/ach_debits/ach_debit_verification-01.png) no-repeat;
+                background: url(/images/ach_debits/ach_debit_verification-01-2x.png) no-repeat;
                 width: 840px;
-                height: 415px;
-                background-position: 120px 0px;
+                height: 440px;
+                background-position: 120px 32px;
+                background-size: 700px;
             }
         }
 
         &.payment-status {
             .graphic {
-                background: url(/images/ach_debits/ach_debits_payment_status-01.png) no-repeat;
+                background: url(/images/ach_debits/ach_debits_payment_status-01-2x.png) no-repeat;
                 width: 840px;
                 height: 400px;
                 background-position: 0px 40px;
+                background-size: 840px;
             }
         }
 
         &.bank-statement-description {
             .graphic {
-                background: url(/images/ach_debits/ach_debits_statement_descriptor-01.png) no-repeat;
+                background: url(/images/ach_debits/ach_debits_statement_descriptor-01-2x.png) no-repeat;
                 width: 570px;
                 height: 250px;
                 background-position: 0px 0px;
+                background-size: 570px;
             }
 
             .footnote {
@@ -467,10 +498,11 @@ body.ach-debits {
 
         &.chargebacks-disputes {
             .graphic {
-                background: url(/images/ach_debits/ach_debits_chargebacks-01.png) no-repeat;
+                background: url(/images/ach_debits/ach_debits_chargebacks-01-2x.png) no-repeat;
                 width: 570px;
                 height: 365px;
                 background-position: 0px 0px;
+                background-size: 570px;
             }
         }
 
@@ -480,7 +512,7 @@ body.ach-debits {
              }
         }
 
-        &.looking-for-ach-credits {
+        &.try-the-dashboard {
             margin: 50px 0px 50px 0px;
 
             .center {
@@ -491,7 +523,7 @@ body.ach-debits {
                 color: @black;
                 font-family: 'Droid Serif', serif;
                 font-style: italic;
-                font-size: 16px;
+                font-size: 17px;
             }
 
             .btn {
@@ -507,15 +539,31 @@ body.ach-debits {
         margin-top: 0px;
         .border-radius(0px);
         background: @white;
-        border: 2px solid @skyBlue;
+        border: 1px solid @skyBlue;
         color: @skyBlue;
         .opacity(100);
         font-family: helvetica;
+        width: 48px;
+        height: 48px;
+
+        &.right {
+            right: 0px;
+        }
+
+        &.left {
+            left: 0px;
+        }
 
         &:hover {
             background-color: @black;
             color: @white;
             border: 2px solid @black;
+        }
+
+        i {
+            font-size: 46px;
+            width: inherit;
+            font-weight: bold;
         }
     }
 
@@ -544,6 +592,7 @@ body.ach-debits {
 
             img {
                 margin: auto;
+                width: 660px;
             }
         }
     }
@@ -584,6 +633,10 @@ body.ach-debits {
 
 .med-bottom-padding {
     padding-bottom: 50px;
+}
+
+.med-top-padding {
+    padding-top: 50px;
 }
 
 .bg-white {

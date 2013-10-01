@@ -3,6 +3,7 @@ title: Balanced - Payments processing, escrow, and payouts in one simple API | P
 template: pricing.html
 
 pageTitle: Pricing
+body_class: pricing
 
 subtitle:
   heading: Balanced offers a straightforward, <br/>all-inclusive pricing structure.<br/> No setup costs. No monthly contract.<br/> No hidden fees.
@@ -39,7 +40,7 @@ noAdditionalFees:
 
 volumeDiscounts:
   title: Volume discounts
-  subtitle: Card volume pricing will automatically take effect as your credit card volume scales. There are no <a href="https://github.com/balanced/balanced-api/issues/47">ACH debit discounts</a> or <a href="https://github.com/balanced/balanced-api/issues/57">payout discounts</a>.
+  subtitle: Waterfall pricing will automatically<br />take effect as your credit card volume scales. There are no <a href="https://github.com/balanced/balanced-api/issues/47">ACH debit discounts</a> or <a href="https://github.com/balanced/balanced-api/issues/57">payout discounts</a>.
   first100k: First $100K / month
   next400k: Next $400K / month
   above500k: Above $500K / month

@@ -24,7 +24,7 @@ sliderfeature:
   step3header: "Balanced submits debit instructions to the ODFI, the Originating<br />Depository Financial Institution, who is making the debit request."
   step4header: "The ODFI sends debit instructions<br />to the Federal Reserve."
   step5header: "The Federal Reserve notifies the RDFI, the Receiving<br />Depository Financial Institution, of the debit authorization."
-  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow.<br />The marketplace may wish to settle funds to the seller using Balanced’s payout service."
+  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow.<br />The marketplace may wish to settle funds to the seller using <a href=\"https://docs.balancedpayments.com/current/overview#credits\">Balanced’s payout service</a>."
 
 paymentSchedule:
   title: Payment schedule
@@ -71,16 +71,16 @@ bankHolidays:
 
 bankAccountVerification:
   title: Bank account verification
-  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website.
-
+  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website. To minimize ACH debit failures, follow our best practices guide and  example forms for collecting payment information.
+  learnLink: View best practices for ACH Debits
 
 paymentStatus:
   title: Payment status
-  body: Track the status of the ACH debit throughout its life-cycle.
+  body: Track the status of the ACH debit throughout its life cycle.
 
 bankStatementDescriptor:
   title: Bank statement descriptor
-  body: Modify the soft descriptor on a pre-transaction basis. Balanced allows you to set the description of the purchase on your customer's bank statement.
+  body: Modify the bank statement soft descriptor on a per-transaction basis.
   learnLink: "Learn more about setting<br />the soft descriptor"
   limit: "Bank statement soft descriptor max. character length: 14"
 
@@ -97,7 +97,7 @@ achDebitsPricing:
   refund: Refund
   failure: Failure
 
-lookingForPayouts:
-  body: Looking for payouts as well? Learn more about ACH credits.
+tryTheDashboard:
+  body: Start accepting ACH debit payments today.
 
 ---
