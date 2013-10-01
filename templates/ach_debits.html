@@ -409,8 +409,6 @@
         $(".carousel").on("slid", function(e) {
             var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"));
 
-            console.log(step);
-
             if(step) {
                 $(".how-it-works .step-boxes .box").removeClass("box-active");
                 $(".how-it-works .step-boxes [data-step=" + step + "]").addClass("box-active");
