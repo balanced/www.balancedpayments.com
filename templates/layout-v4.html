@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.metadata.title if page.metadata.title else name }}</title>
     <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAStJREFUWIXtlT1SwzAQRp+YHMAeGsrcIGlc4yukpDHODaBLF6dzB5yAkIYyOYJSu/INUtIw9g1MgZhhZJlITogbfZ12Pu2+0c+uaJqGIXU1aHUP4AGAkR4QQlDF0Rh4BWKgBl5CWWQuiRebyROQAgEggXmelAf913WdwFYVRyVYVnGUOhRPgQe1F5Vra/K2AKo4CoCpwXtvC9DhnS42k/FRgD9Un+rNk/JwFCCURc33nel6cwAweXcmY9cJzICVApHALJSFMYFJeVLuVI6f/c/A3OQV+qsUQtjW6SXbX3AxeQAP4AFa09BWH+/XGXCrlvubu8+sT55ejUgVX2rhlQ3EuRqRadq5TMuTAQLL2L8BmAaT9bA6B8AjsP61XquYs1qP8NIavA94AA/wBRJiTbdsTuB4AAAAAElFTkSuQmCC" type="image/x-icon">
+
     <script type="text/javascript">
       var _pageStartTime = (new Date()).getTime();
       var _gaq = _gaq || [];
@@ -12,10 +13,14 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/js/lib/html5shiv.js"></script>
     <![endif]-->
+
     <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/static/css/root-v3.css">
 
     {% block head %}{% endblock %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 
   </head>
   <body class="{{ page.metadata.body_class }}">
@@ -148,54 +153,20 @@
 
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-
-    {% if not page.no_script %}
-    <script> var Balanced = {}; </script>
-    <!--
-    <script type="text/javascript" src="/static/js/balanced.lib.min.js"></script>
-    <script type="text/javascript" src="/static/js/balanced.min.js"></script>
-    -->
-    {% endif %}
-
     <script type="text/javascript">
-      _gaq.push(['_setAccount', 'UA-30733850-1']);
-      _gaq.push(['_setDomainName', 'balancedpayments.com']);
-      _gaq.push(['_trackPageview']);
+        _gaq.push(['_setAccount', 'UA-30733850-1']);
+        _gaq.push(['_setDomainName', 'balancedpayments.com']);
+        _gaq.push(['_trackPageview']);
 
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
 
     <script type="text/javascript">
         $(document).ready(function() {
-            if($(".carousel").length > 0) {
-                $(".carousel").carousel({
-                    interval: false
-                });
-
-                $(".how-it-works .step-boxes a").click(function(e) {
-                    var step = parseInt($(e.currentTarget.childNodes[1]).attr("data-step"));
-
-                    if(step) {
-                        $(".carousel").carousel(step - 1);
-                    }
-                });
-
-                $(".carousel").on("slid", function(e) {
-                    var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"));
-
-                    if(step) {
-                        $(".how-it-works .step-boxes .box").removeClass("box-active");
-                        $(".how-it-works .step-boxes [data-step=" + step + "]").addClass("box-active");
-                    }
-                });
-            }
-
             $(".toggle-child-menu").click(function(e) {
                 e.preventDefault();
                 $(this).parent("li").addClass("active");

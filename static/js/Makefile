@@ -32,7 +32,6 @@ JS_SOURCES = $(addprefix src/, \
                    search.js \
                    callbacks.js \
                    layout-v3.js \
-                   pricing.js \
                  )
 
 STATS_SOURCES = $(addprefix src/_stats/, \
