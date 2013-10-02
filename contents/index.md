@@ -35,7 +35,7 @@ Sections:
     subTitle: Credit cards (U.S. and int'l) | Bank accounts via ACH (U.S. only)
     desc: |
       ### Accept credit cards and ACH debit payments from your customers.
-      [Learn more about ACH Debits](/ach_debits)
+      [Learn more about ACH Debits](/ach-debits)
     subs:
       - title: No PCI requirements
         text: |
