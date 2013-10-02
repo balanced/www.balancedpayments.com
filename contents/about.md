@@ -94,6 +94,11 @@ team:
       desc: fights for the customer
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
+    - name: patrick cieplak
+      job: engineer
+      desc: understanding all the data
+      link: https://github.com/cieplak
+      site: github
     - name: catherine chang
       job: finance operations
       desc: Corporate Controller of Evite, Ebates, Facebook, and Twitter
