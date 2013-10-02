@@ -100,7 +100,7 @@ team:
       link: http://www.linkedin.com/in/catherinechang
       site: linkedin
     - name: andrew nossiter
-      job: support operations
+      job: operations
       desc: writer that fell in love with payments
       link: http://www.linkedin.com/pub/andrew-nossiter/23/559/11b
       site: linkedin
