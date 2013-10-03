@@ -1,24 +1,22 @@
-{% extends 'layout.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="/static/css/pygments.css">
-<link rel="stylesheet" href="/static/css/root3.css">
-<link rel="stylesheet" href="/static/css/root5.css">
-<style> p { font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif; } </style>
-{% endblock %}
+{% extends 'layout-v4.html' %}
 
 {% block body %}
-<div style="width: 960px; margin: auto">
-<section id="h-top">
-  <div id="logo">
-    <a href="/"><img src="/static/icons/hp/3/balanced_logo.png" alt="Balanced Homepage Logo"></a>
-  </div>
-</section>
-<section id="h-words">
-  <h2 class="{{ page.metadata.icon_class }}" style="color: #E7A614">{{ page.metadata.heading }}</h2>
-  <section class="booger">
-    {{ page.html }}
-  </section>
-</section>
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19 page-title">
+                <h1>{{page.metadata.heading}}</h1>
+             </div>
+        </div>
+        <div class="row">
+            <div class="span19">
+                <section class="xlarge-bottom-margin">
+                    {{ page.html }}
+                </section>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
