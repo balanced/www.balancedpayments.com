@@ -1,0 +1,99 @@
+body.open-company {
+    section {
+        position: relative;
+        width: 100%;
+        padding: 25% 0px 25% 0px;
+        margin: 0px;
+        border: 0px;
+        height: 205px;
+
+        &.open {
+            background: url(/images/open-company/open_company_bg_1.png) no-repeat center center fixed;
+            background-size: cover;
+            margin-top: -90px;
+            z-index: -1;
+       }
+
+        &.innovation {
+            background: url(/images/open-company/open_company_bg_2.png) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        &.passion {
+            background: url(/images/open-company/open_company_bg_3.png) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        &.commitment {
+            background: url(/images/open-company/open_company_bg_4.png) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 75px;
+            line-height: 75px;
+            letter-spacing: 0.1em;
+            color: @white;
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            padding: 10px 0px 10px 0px;
+        }
+
+        p {
+            font-family: 'Droid Serif', serif;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 18px;
+            color: @white;
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+            width: 30%;
+            margin: auto;
+
+            &:first-of-type {
+                border-bottom: 1px solid @white;
+
+                .diamond {
+                    top: 33px;
+                }
+            }
+
+            &:last-of-type {
+                border-top: 1px solid @white;
+
+                .diamond {
+                    top: -12px;
+                }
+            }
+
+            .diamond {
+                width: 6px;
+                height: 6px;
+                background: @white;
+                margin: 0px;
+                display: block;
+                position: relative;
+                margin: auto;
+
+                /* Rotate */
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+
+                /* Rotate Origin */
+                -webkit-transform-origin: 0 100%;
+                -moz-transform-origin: 0 100%;
+                -ms-transform-origin: 0 100%;
+                -o-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+            }
+        }
+    }
+}
