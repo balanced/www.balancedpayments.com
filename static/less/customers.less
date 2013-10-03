@@ -1,0 +1,169 @@
+@marketplace: @curryYellow60;
+@crowdfunding: @turquoise60;
+@ecommerce: @byzantiumPurple60;
+@ad-networks: @pineGreen60;
+@case-studies: @imperialRed100;
+
+.customers {
+  .video-testimonial-image {
+    width: 100%;
+    min-width: 660px;
+    margin-top: -90px;
+    background: url(/images/customers/750_background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    padding: 25% 0 25% 0;
+    height: 600px;
+  }
+
+  .banner {
+    margin: 0 auto 160px;
+    width: 660px;
+    text-align: center;
+  }
+
+  .banner-video-thumbnail {
+    float: left;
+    width: 200px;
+    height: 200px;
+
+    background-image: url(/images/customers/750_video_thumbnail.png);
+  }
+
+  .banner-content {
+    float: right;
+    width: 400px;
+    padding: 20px;
+
+    > div {
+      margin: 10px auto;
+    }
+
+    .banner-content-text {
+
+    }
+  }
+
+  .thumb-container {
+    text-align: center;
+
+    > div {
+      display: inline-block;
+    }
+
+    .thumb {
+      float: left;
+      margin-left: 30px;
+
+      &:hover {
+        .thumb-image {
+          border: 3px solid #FFF;
+        }
+      }
+
+      .thumb-image {
+        .border-radius(25px);
+        height: 50px;
+        width: 50px;
+        border: 3px solid transparent;
+        text-indent: -4000px;
+      }
+
+      .thumb-label {
+        color: #FFF;
+      }
+    }
+  }
+
+
+  .customer-wall-header {
+    height: 50px;
+    background: black;
+
+    a {
+      font-family: NimbusSanConD-Bol;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      line-height: 16px;
+    }
+
+    .circle {
+      a:before {
+        content: ' \25CF';
+        font-size: 30px;
+        margin-right: 10px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    .square {
+      a:before {
+        content: ' \25CF';
+        font-size: 30px;
+        margin-right: 10px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    .marketplace {
+      a:before {
+        color: @curryYellow60;
+      }
+    }
+
+    .crowdfunding {
+      a:before {
+        color: @curryYellow60;
+      }
+    }
+
+    .ecommerce {
+      a:before {
+        color: @curryYellow60;
+      }
+    }
+
+    .ad-networks {
+      a:before {
+        color: @curryYellow60;
+      }
+    }
+
+    .case-studies {
+      a:before {
+        color: @curryYellow60;
+      }
+    }
+  }
+
+  .customer-wall {
+    .card {
+      width: 160px;
+      height: 160px;
+      margin: 10px 10px 0 0;
+    }
+
+    .marketplace {
+      background-color: @curryYellow60;
+    }
+
+    .crowdfunding {
+      background-color: @turquoise60;
+    }
+
+    .ecommerce {
+      background-color: @byzantiumPurple60;
+    }
+
+    .ad-networks {
+      background-color: @pineGreen60;
+    }
+
+    .case-studies {
+      background-color: @imperialRed100;
+    }
+  }
+}

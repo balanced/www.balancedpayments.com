@@ -1,0 +1,137 @@
+{% extends 'layout-v4.html' %}
+
+{% block body %}
+<div class="bg-default">
+    <div class="video-testimonial-image">
+        <div class="container">
+            <div class="row">
+                <div class="banner bg-white">
+                    <div class="row">
+                        <div class="banner-video-thumbnail">&nbsp;</div>
+                        <div class="banner-content">
+                            <div class="banner-logo">&nbsp;</div>
+                            <div class="row banner-content-text">
+                                <span>sdafasdfasdfasfa asdfasdf sdf asf asdf asdf asdfa sdfasd asdfasdfasd</span> <a href="#" class="watch-now">Watch how &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row thumb-container">
+                <div>
+                    {% for testimonial in page.metadata.video_testimonials.list %}
+                    <div class="thumb" id="{{testimonial.id}}">
+                        <img class="thumb-image" src="/images/customers/{{testimonial.id}}_small_thumbnail.png"/>
+                        <div class="thumb-label">{{testimonial.label}}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle">
+                        <div class="span19">
+                            <span class="">{{ page.metadata.subtitle.heading }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="customer-wall-header">
+                        <div class="span19 navbar">
+                            <ul class="nav">
+                                <li class="selected all"><a href="#">All</a></li>
+                                <li class="circle marketplace"><a href="#">Marketplaces</a></li>
+                                <li class="circle crowdfunding"><a href="#">Crowdfunding</a></li>
+                                <li class="circle ecommerce"><a href="#">E-Commerce Platforms</a></li>
+                                <li class="circle ad-networks"><a href="#">Ad Networks</a></li>
+                                <li class="square case-studies"><a href="#">Case Studies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="customer-wall">
+                        <div class="span19">
+                            <div class="card marketplace">
+
+                            </div>
+                            <div class="card marketplace">
+
+                            </div>
+                            <div class="card marketplace">
+
+                            </div>
+                            <div class="card marketplace">
+
+                            </div>
+                            <div class="card crowdfunding">
+
+                            </div>
+                            <div class="card crowdfunding">
+
+                            </div>
+                            <div class="card crowdfunding">
+
+                            </div>
+                            <div class="card crowdfunding">
+
+                            </div>
+                            <div class="card ecommerce">
+
+                            </div>
+                            <div class="card ecommerce">
+
+                            </div>
+                            <div class="card ecommerce">
+
+                            </div>
+                            <div class="card ecommerce">
+
+                            </div>
+                            <div class="card ecommerce">
+
+                            </div>
+                            <div class="card ad-networks">
+
+                            </div>
+                            <div class="card ad-networks">
+
+                            </div>
+                            <div class="card ad-networks">
+
+                            </div>
+                            <div class="card ad-networks">
+
+                            </div>
+                            <div class="card case-studies">
+
+                            </div>
+                            <div class="card case-studies">
+
+                            </div>
+                            <div class="card case-studies">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+    });
+</script>
+
+{% endblock %}
