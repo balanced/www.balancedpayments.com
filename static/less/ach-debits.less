@@ -1,4 +1,4 @@
-body.ach-debits, body.pricing , body.open-company {
+body.layout-v4 {
     position: relative;
     background: none;
 
@@ -172,16 +172,19 @@ body.ach-debits, body.pricing , body.open-company {
 
     .sidebar-child-menu-left {
         position: fixed;
-        left: 0px;
+        left: -200px;
         top: 0px;
         height: 100%;
         width: 200px;
         padding: 0px;
         background-color: @gray8;
-        display: none;
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
+        -o-transition: 300ms;
 
         &.expanded {
-            display: block;
+            left: 0px;
         }
 
         ul {
@@ -616,27 +619,27 @@ body.ach-debits, body.pricing , body.open-company {
 }
 
 .no-margin-left {
-    margin-left: 0px;
+    margin-left: 0px !important;
 }
 
 .large-bottom-margin {
-    margin-bottom: 75px;
+    margin-bottom: 75px !important;
 }
 
 .xlarge-bottom-margin {
-    margin-bottom: 100px;
+    margin-bottom: 100px !important;
 }
 
 .med-botom-margin {
-    margin-bottom: 35px;
+    margin-bottom: 35px !important;
 }
 
 .med-bottom-padding {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
 }
 
 .med-top-padding {
-    padding-top: 50px;
+    padding-top: 50px !important;
 }
 
 .bg-white {
@@ -644,7 +647,7 @@ body.ach-debits, body.pricing , body.open-company {
 }
 
 .bg-default {
-    background-color: @gray1;
+    background-color: transparent;
 }
 
 .clear {

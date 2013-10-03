@@ -23,7 +23,7 @@
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 
   </head>
-  <body class="{{ page.metadata.body_class }}">
+  <body class="layout-v4 {{ page.metadata.body_class }}">
 
      <div class="sidebar-child-menu-left">
         <ul>
@@ -180,11 +180,7 @@
 
                 $("body").css("overflow-x", "visible");
                 $(".sidebar-menu-left ul li a").parent("li").removeClass("active");
-                $(".global-wrapper").removeClass("expanded");
-
-                setTimeout(function() {
-                     $(".sidebar-child-menu-left").removeClass("expanded");
-                }, 400);
+                $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
             });
         });
     </script>
