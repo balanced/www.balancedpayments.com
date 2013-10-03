@@ -169,6 +169,8 @@
         $(document).ready(function() {
             $(".toggle-child-menu").click(function(e) {
                 e.preventDefault();
+
+                $("body").css("overflow-x", "hidden");
                 $(this).parent("li").addClass("active");
                 $(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
             });
@@ -176,6 +178,7 @@
             $(".close-child-menu-left a").click(function(e) {
                 e.preventDefault();
 
+                $("body").css("overflow-x", "visible");
                 $(".sidebar-menu-left ul li a").parent("li").removeClass("active");
                 $(".global-wrapper").removeClass("expanded");
 
