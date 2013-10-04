@@ -49,7 +49,7 @@ Sample language for incorporation is below:
 
 + [Marketplace] uses Balanced as its third party service provider for payment services (e.g. card acceptance, merchant settlement, and related services).  By buying or selling on [Marketplace] you agree to be bound by Balanced’s Privacy Policy: [https://www.balancedpayments.com/privacy](https://www.balancedpayments.com/privacy) and hereby consent and authorize [Marketplace] and Balanced to share any information and payments instructions you provide with Third Party Service Provider(s) to the minimum extent required to complete your transactions.
 
-By listing or selling items on [Marketplace] you also agree to be bound by Balanced’s Seller Terms: https://www.balancedpayments.com/terms/seller
+By listing or selling items on [Marketplace] you also agree to be bound by Balanced’s Seller Terms: [https://www.balancedpayments.com/terms/selleragreement](https://www.balancedpayments.com/terms/selleragreement)
 
 **Balanced Interaction With Marketplace Customers:** Without prior consent of Marketplace, Balanced will not use or disclose buyer or seller personal information (including without limitation contact information or identifying information) outside of providing the Service.
 
