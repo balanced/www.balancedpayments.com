@@ -7,6 +7,7 @@ www.balancedpayments.com Static pages
 Building locally
 ----------------
 
+    cd www.balancedpayments.com
     npm install
     git submodule update --init
     make
@@ -21,7 +22,7 @@ Live compiling for development
 
     wintersmith preview
 
-In another terminal:
+Then in another terminal:
 
     cd static
     ./watcher
