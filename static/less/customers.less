@@ -62,7 +62,7 @@
       }
 
       .thumb-image {
-        .border-radius(25px);
+        .border-radius(50%);
         height: 50px;
         width: 50px;
         border: 3px solid transparent;
@@ -80,61 +80,82 @@
     height: 50px;
     background: black;
 
-    a {
-      font-family: NimbusSanConD-Bol;
-      font-weight: normal;
-      font-style: normal;
-      text-transform: uppercase;
-      font-size: 14px;
+    .nav {
+      > li {
+        > a {
+          font-family: NimbusSanConD-Bol;
+          font-weight: normal;
+          font-style: normal;
+          text-transform: uppercase;
+          font-size: 13px;
 
-      line-height: 16px;
+          line-height: 16px;
+          color: @gray;
+          text-shadow: none;
+
+          padding: 10px 4px 10px;
+          margin: 0 6px 0;
+        }
+
+        &:hover, &.selected {
+          > a {
+            color: @white;
+          }
+        }
+
+        &.selected {
+          > a {
+            border-bottom: 3px solid @white;
+          }
+        }
+      }
     }
 
     .circle {
       a:before {
         content: ' \25CF';
         font-size: 30px;
-        margin-right: 10px;
+        margin-right: 5px;
         vertical-align: text-bottom;
       }
     }
 
     .square {
       a:before {
-        content: ' \25CF';
-        font-size: 30px;
-        margin-right: 10px;
+        content: ' ';
+        height: 10px;
+        width: 10px;
         vertical-align: text-bottom;
       }
     }
 
     .marketplace {
       a:before {
-        color: @curryYellow60;
+        color: @marketplace;
       }
     }
 
     .crowdfunding {
       a:before {
-        color: @curryYellow60;
+        color: @crowdfunding;
       }
     }
 
     .ecommerce {
       a:before {
-        color: @curryYellow60;
+        color: @ecommerce;
       }
     }
 
     .ad-networks {
       a:before {
-        color: @curryYellow60;
+        color: @ad-networks;
       }
     }
 
     .case-studies {
       a:before {
-        color: @curryYellow60;
+        background-color: @case-studies;
       }
     }
   }
@@ -144,6 +165,60 @@
       width: 160px;
       height: 160px;
       margin: 10px 10px 0 0;
+
+      perspective: 1000px;
+
+      /* flip the pane when hovered */
+      &:hover, &.hover {
+        .flipper {
+          transform: translateX(-100%) rotateY(-180deg);
+          -webkit-transform: translateX(-100%) rotateY(-180deg);
+          -ms-transform: translateX(-100%) rotateY(-180deg);
+        }
+      }
+
+      /* flip speed goes here */
+      .flipper {
+        -webkit-transition: 0.6s;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transform-origin: right center;
+        -moz-transition: 0.6s;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        transform-origin: right center;
+
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+
+      /* hide back of pane during swap */
+      .front, .back {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      /* front pane, placed above back */
+      .front {
+        z-index: 2;
+      }
+
+      /* back, initially hidden pane */
+      .back {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        background-color: @white;
+      }
     }
 
     .marketplace {
@@ -164,6 +239,10 @@
 
     .case-studies {
       background-color: @imperialRed100;
+    }
+
+    .back {
+
     }
   }
 }

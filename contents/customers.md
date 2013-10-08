@@ -3,7 +3,7 @@ title: Balanced - Payments processing, escrow, and payouts in one simple API | C
 template: customers.html
 
 pageTitle: Customers
-body_class: layout-v4 pricing customers
+body_class: customers
 
 subtitle:
   heading: Balanced powers hunderds of businesses, big and small. See how some of the fastest growing companies are using Balanced to deliever an amazing payments experience.
