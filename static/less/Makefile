@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-COMPILER = lessc
+COMPILER = ./node_modules/.bin/lessc
 OUTPUT_DIR = ../css/
 
 clean:
