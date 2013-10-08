@@ -2,17 +2,19 @@
 
 {% block body %}
 <div class="bg-default">
-    <section class="video-testimonial-image large-bottom-margin">
+    <section class="video-testimonial-image xlarge-bottom-margin">
         <div class="container">
             <div class="row">
                 <div class="span19">
                 <div class="banner bg-white">
                     <div class="row">
-                        <div class="banner-video-thumbnail span5">&nbsp;</div>
+                        <div class="banner-video-thumbnail span5">
+                          <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.png" />
+                        </div>
                         <div class="banner-content span10">
-                            <div class="banner-logo">&nbsp;</div>
-                            <div class="banner-content-text clearfix">
-                                <span>sdafasdfasdfasfa asdfasdf sdf asf asdf asdf asdfa sdfasd asdfasdfasd</span> <a href="#" class="watch-now">Watch how &raquo;</a>
+                            <div class="banner-logo"><img src="/images/customers/logo_{{page.metadata.video_testimonials.list[0].id}}_video.png" /></div>
+                            <div class="banner-content-text">
+                                <span>{{page.metadata.video_testimonials.list[0].description}}</span> <a href="#" class="watch-how">Watch how &raquo;</a>
                             </div>
                         </div>
                     </div>
@@ -23,7 +25,7 @@
             <div class="row thumb-container">
                 <div>
                     {% for testimonial in page.metadata.video_testimonials.list %}
-                    <div class="thumb" id="{{testimonial.id}}">
+                    <div class="thumb{% if loop.first %} selected{% endif %}" id="{{testimonial.id}}">
                         <img class="thumb-image" src="/images/customers/{{testimonial.id}}_small_thumbnail.png"/>
                         <div class="thumb-label">{{testimonial.label}}</div>
                     </div>
@@ -49,29 +51,40 @@
                         <div class="navbar">
                             <ul class="nav">
                                 <li class="selected all"><a href="#">All</a></li>
-                                <li class="circle marketplace"><a href="#">Marketplaces</a></li>
-                                <li class="circle crowdfunding"><a href="#">Crowdfunding</a></li>
-                                <li class="circle ecommerce"><a href="#">E-Commerce Platforms</a></li>
-                                <li class="circle ad-networks"><a href="#">Ad Networks</a></li>
-                                <li class="square case-studies"><a href="#">Case Studies</a></li>
+                                <li class="circle marketplace" data-filter="marketplace"><a href="#">Marketplaces</a></li>
+                                <li class="circle crowdfunding" data-filter="crowdfunding"><a href="#">Crowdfunding</a></li>
+                                <li class="circle ecommerce" data-filter="ecommerce"><a href="#">E-Commerce Platforms</a></li>
+                                <li class="circle ad-network" data-filter="ad-network"><a href="#">Ad Networks</a></li>
+                                <li class="square case-study" data-filter="case-study"><a href="#">Case Studies</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row large-bottom-margin">
                     <div class="customer-wall">
                         <div class="span19">
-                            <div class="card marketplace">
+                          {% for customer in page.metadata.customer_wall.list %}
+                            <div class="card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
                                 <div class="flipper">
                                     <div class="front">
+                                      <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}_black.png"/></div>
 
+                                      {% if customer.caseStudy %}
+                                      <div class="case-study-bar">Case Study</div>
+                                      {% endif %}
                                     </div>
                                     <div class="back">
+                                      <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}_color.png"/></div>
 
+                                      {% if customer.caseStudy %}
+                                      <div class="case-study-content">{{customer.caseStudy}}</div>
+                                      <div class="case-study-bar">View Case Study <span class="icon-navigation-arrow-forward"></span></div>
+                                      {% endif %}
                                     </div>
                                 </div>
                             </div>
+                          {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -80,9 +93,73 @@
     </div>
 </div>
 
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="try-the-dashboard">
+                    <div class="center">
+                        <p>{{page.metadata.tryTheDashboard.body}}</p>
+                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-pal">TRY THE DASHBOARD</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+      $('.customer-wall .span19').isotope({
+        itemSelector: '.card',
+        sortBy: 'random'
+      });
 
+      $('.customer-wall-header .nav li').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $this = $(this);
+        var filter = $this.attr('data-filter');
+
+        if (filter) {
+          $('.customer-wall .span19').isotope({
+            filter: '.' + filter
+          });
+        } else {
+          $('.customer-wall .span19').isotope({
+            filter: '*'
+          });
+        }
+
+        $this.addClass('selected').siblings().removeClass('selected');
+      });
+
+      var testimonails = {};
+      {%- for testimonial in page.metadata.video_testimonials.list -%}
+      testimonails["{{testimonial.id}}"]="{{testimonial.description}}";
+      {%- endfor -%}
+
+      $('.video-testimonial-image .thumb-container .thumb').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $this = $(this);
+        if ($this.hasClass('selected')) {
+          return;
+        }
+
+        var id = $this.attr('id');
+
+        var $videoTestimonial = $('.video-testimonial-image');
+        $videoTestimonial.css('background-image', 'url(/images/customers/' + id + '_background.png)');
+
+        var $banner = $videoTestimonial.find('.banner');
+        $banner.find('.banner-content-text span').text(testimonails[id]);
+        $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
+        $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.png');
+
+        $this.addClass('selected').siblings().removeClass('selected');
+      });
     });
 </script>
 

@@ -1,8 +1,8 @@
 @marketplace: @curryYellow60;
 @crowdfunding: @turquoise60;
 @ecommerce: @byzantiumPurple60;
-@ad-networks: @pineGreen60;
-@case-studies: @imperialRed100;
+@ad-network: @pineGreen60;
+@case-study: @imperialRed100;
 
 .customers {
   .video-testimonial-image {
@@ -12,8 +12,9 @@
     background: url(/images/customers/750_background.jpg) no-repeat center center fixed;
     background-size: cover;
     z-index: -1;
-    padding: 25% 0 25% 0;
-    height: 600px;
+    padding: 15% 0 5% 0;
+    height: 440px;
+
   }
 
   .banner {
@@ -24,23 +25,41 @@
 
   .banner-video-thumbnail {
     float: left;
-    width: 200px;
-    height: 200px;
 
-    background-image: url(/images/customers/750_video_thumbnail.png);
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .banner-content {
-    float: right;
-    width: 400px;
-    padding: 20px;
+    padding-top: 10px;
 
-    > div {
+    img {
+      height: 60px;
       margin: 10px auto;
     }
 
-    .banner-content-text {
+    > div {
+      margin: 20px 25px 10px 10px;
+    }
 
+    .banner-content-text {
+      span {
+        font-family: 'Droid Serif';
+        font-style: italic;
+        font-size: 14px;
+        line-height: 20px;
+        color: @black;
+      }
+
+      a.watch-how {
+        font-family: 'NimbusSanNovSemBol';
+        font-style: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: @skyBlue;
+      }
     }
   }
 
@@ -53,9 +72,10 @@
 
     .thumb {
       float: left;
-      margin-left: 30px;
+      cursor: pointer;
+      width: 120px;
 
-      &:hover {
+      &:hover, &.selected {
         .thumb-image {
           border: 3px solid #FFF;
         }
@@ -70,7 +90,12 @@
       }
 
       .thumb-label {
-        color: #FFF;
+        margin-top: 14px;
+        color: @white;
+        line-height: 14px;
+        font-size: 12px;
+        font-style: italic;
+        font-family: "Droid Serif";
       }
     }
   }
@@ -81,20 +106,27 @@
     background: black;
 
     .nav {
+      margin-right: 0;
+
       > li {
         > a {
           font-family: NimbusSanConD-Bol;
           font-weight: normal;
           font-style: normal;
           text-transform: uppercase;
-          font-size: 13px;
+          font-size: 14px;
 
           line-height: 16px;
           color: @gray;
           text-shadow: none;
 
-          padding: 10px 4px 10px;
+          padding: 18px 4px 13px;
           margin: 0 6px 0;
+
+          &:before {
+            margin-right: 2px;
+            vertical-align: text-top;
+          }
         }
 
         &:hover, &.selected {
@@ -114,18 +146,14 @@
     .circle {
       a:before {
         content: ' \25CF';
-        font-size: 30px;
-        margin-right: 5px;
-        vertical-align: text-bottom;
+        font-size: 24px;
       }
     }
 
     .square {
       a:before {
-        content: ' ';
-        height: 10px;
-        width: 10px;
-        vertical-align: text-bottom;
+        content: ' \25A0';
+        font-size: 26px;
       }
     }
 
@@ -147,24 +175,29 @@
       }
     }
 
-    .ad-networks {
+    .ad-network {
       a:before {
-        color: @ad-networks;
+        color: @ad-network;
       }
     }
 
-    .case-studies {
+    .case-study {
       a:before {
-        background-color: @case-studies;
+        color: @case-study;
       }
     }
   }
 
   .customer-wall {
+    .span19 {
+      width: 850px;
+    }
+
     .card {
       width: 160px;
       height: 160px;
       margin: 10px 10px 0 0;
+      float: left;
 
       perspective: 1000px;
 
@@ -207,9 +240,28 @@
         width: 100%;
       }
 
+      .card-content {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        height: 120px;
+        width: 120px;
+        padding: 20px;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+
+
       /* front pane, placed above back */
       .front {
         z-index: 2;
+
+        > .card-content  {
+          .opacity(60);
+        }
       }
 
       /* back, initially hidden pane */
@@ -222,27 +274,106 @@
     }
 
     .marketplace {
-      background-color: @curryYellow60;
+      .front {
+        background-color: @marketplace;
+      }
     }
 
     .crowdfunding {
-      background-color: @turquoise60;
+      .front {
+        background-color: @crowdfunding;
+      }
     }
 
     .ecommerce {
-      background-color: @byzantiumPurple60;
+      .front {
+        background-color: @ecommerce;
+      }
     }
 
-    .ad-networks {
-      background-color: @pineGreen60;
+    .ad-network {
+      .front {
+        background-color: @ad-network;
+      }
     }
 
-    .case-studies {
-      background-color: @imperialRed100;
-    }
+    .case-study {
+      .case-study-bar {
+        background-color: @case-study;
+        height: 30px;
+        position: relative;
+        color: @white;
+        margin-top: -30px;
+        width: 100%;
 
-    .back {
+        font-family: NimbusSanConD-Bol;
+        font-weight: normal;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 12px;
 
+        line-height: 30px;
+        text-indent: 10px;
+      }
+
+      .case-study-content {
+        .opacity(90);
+        background-color: @black;
+        color: @white;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        padding: 10px;
+      }
     }
   }
 }
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+

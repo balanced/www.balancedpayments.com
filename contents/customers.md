@@ -13,14 +13,83 @@ video_testimonials:
     - label: 750 Commerce
       id: 750
       description: 750 Commerce leverages Balanced's payments API to deliver a great processing experience for wineries
+      classes: selected
     - label: Crowdtilt
       id: crowdtilt
-      description: da
+      description: Crowdtitle sdafasdfasdfasfa asdfasdf sdf asf asdf asdf asdfa sdfasd asdfasdfasd
     - label: Kitchit
       id: kitchit
-      description: d
+      description: Kitchit sdafasdfasdfasfa asdfasdf sdf asf asdf asdf asdfa sdfasd asdfasdfasd
     - label: Zaarly
       id: zaarly
-      description: e
+      description: Zaarly sdafasdfasdfasfa asdfasdf sdf asf asdf asdf asdfa sdfasd asdfasdfasd
+
+customer_wall:
+  list:
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+      caseStudy: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+    - id: kitchit
+      classes: ad-network
+    - id: zaarly
+      classes: ecommerce
+    - id: 750
+      classes: marketplace
+    - id: crowdtilt
+      classes: crowdfunding
+
+
+tryTheDashboard:
+  body: Ready to get started?
 
 ---
