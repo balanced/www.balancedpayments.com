@@ -287,6 +287,10 @@ header {
     display: inline-block;
     padding: 20px 0px 0px 20px;
 
+    &:first-of-type {
+        padding-left: 0px;
+    }
+
     a {
         color: @gray4;
 
@@ -411,6 +415,47 @@ header {
   margin-bottom: 40px;
   .body1;
   color: @gray7;
+}
+
+.legal {
+    font-size: @baseFontSize;
+    font-family: 'nimbussannov-med', arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+
+    .page-title {
+        h1 {
+            font-weight: normal;
+            letter-spacing: normal;
+            font-family: nimbussannov-reg,arial,sans-serif;
+            font-size: 44px;
+            font-style: normal;
+            color: @gray8;
+        }
+    }
+
+    strong, b {
+        color: @black;
+        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+        font-weight: normal;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    li {
+        line-height: 22px;
+    }
+
+    h3 {
+        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+        font-weight: normal;
+        font-size: 24px;
+        color: @black;
+        line-height: 28px;
+        margin-top: 50px;
+    }
 }
 
 @import "ach-debits.less";
