@@ -22,7 +22,6 @@
   left: 50%;
   margin-top: -14px;
   margin-left: -4px;
-  .transition(all .35s ease-in-out);
 }
 
 .customers {
@@ -85,6 +84,7 @@
       height: 60px;
       .border-radius(50%);
       background-color: @imperialRed100;
+      .opacity(85);
       .transition(all .35s ease-in-out);
     }
 
@@ -106,15 +106,8 @@
       }
 
       .play-button {
-        transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-
-        .arrow-right {
-          transform: scale(1.2);
-          -ms-transform: scale(1.2);
-          -webkit-transform: scale(1.2);
-        }
+        background-color: @imperialRed80;
+        .opacity(100);
       }
     }
   }
