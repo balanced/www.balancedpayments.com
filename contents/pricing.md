@@ -40,7 +40,7 @@ noAdditionalFees:
 
 volumeDiscounts:
   title: Volume discounts
-  subtitle: Waterfall pricing will automatically<br />take effect as your credit card volume scales. There are no <a href="https://github.com/balanced/balanced-api/issues/47">ACH debit discounts</a> or <a href="https://github.com/balanced/balanced-api/issues/57">payout discounts</a>.
+  subtitle: Waterfall pricing will automatically<br />take effect as your credit card volume scales. There are no [ACH debit discounts](https://github.com/balanced/balanced-api/issues/47) or [payout discounts](https://github.com/balanced/balanced-api/issues/57).
   first100k: First $100K / month
   next400k: Next $400K / month
   above500k: Above $500K / month

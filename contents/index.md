@@ -135,15 +135,12 @@ integrate:
       url: https://github.com/balanced/balanced-php
     - name: Java
       url: https://github.com/balanced/balanced-java
-    - name: Perl
-      url: https://github.com/Crowdtilt/Business-BalancedPayments
-    - name: Node.js
-      url: https://github.com/balanced/balanced-node
-      class: nodejs
-    - name: C#
-      url: https://github.com/balanced/balanced-csharp
-      class: csharp
-
+    - name: iOS
+      url: https://github.com/balanced/balanced-ios
+      class: ios
+    - name: Android
+      url: https://github.com/balanced/balanced-android
+      class: android
 
 
 # the amount references a css class that is used to loda the images
