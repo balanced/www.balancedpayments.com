@@ -1,6 +1,6 @@
 ---
 title: Balanced - Payments processing, escrow, and payouts in one simple API | ACH Debits
-template: open-company.html
+template: open.html
 
 pageTitle: Open Company
 body_class: open-company

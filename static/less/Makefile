@@ -68,7 +68,7 @@ $(OUTPUT_DIR)ie9.css: ie9.less
 $(OUTPUT_DIR)root5.css: root5.less
 	$(COMPILER) -x $^ > $@
 
-$(OUTPUT_DIR)root-v3.css: root-v3.less pricing.less ach-debits.less open-company.less balanced-icons.less
+$(OUTPUT_DIR)root-v3.css: root-v3.less pricing.less ach-debits.less open.less balanced-icons.less
 	$(COMPILER) -x root-v3.less > $@
 
 $(OUTPUT_DIR)root4.css: root4.less
