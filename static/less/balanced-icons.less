@@ -5,36 +5,35 @@
        url('/static/css/fonts/balanced.woff') format('woff'),
        url('/static/css/fonts/balanced.svg#Balanced') format('svg'),
        url('/static/css/fonts/balanced.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
 }
 
 [data-icon]:before {
-  font-family: "Balanced";
+  font-family: "balanced" !important;
   content: attr(data-icon);
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
   text-transform: none !important;
   speak: none;
-  display: inline-block;
-  text-decoration: none;
-  width: 1em;
-  line-height: 1em;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "Balanced";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
+  font-family: "balanced" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
   text-transform: none !important;
   speak: none;
-  display: inline-block;
-  text-decoration: none;
-  width: 1em;
-  line-height: 1em;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -122,10 +121,6 @@
   content: "u";
 }
 
-.icon-github:before {
-  content: "v";
-}
-
 .icon-testmp:before {
   content: "w";
 }
@@ -196,4 +191,40 @@
 
 .icon-navigation-arrow-back:before {
   content: "N";
+}
+
+.icon-github:before {
+  content: "v";
+}
+
+.icon-arrow-backward-dashboard:before {
+  content: "O";
+}
+
+.icon-arrow-forward-dashboard:before {
+  content: "P";
+}
+
+.icon-close-x-dashboard:before {
+  content: "Q";
+}
+
+.icon-irc-chat:before {
+  content: "R";
+}
+
+.icon-arrow-triangle-forward:before {
+  content: "S";
+}
+
+.icon-plus-sign:before {
+  content: "T";
+}
+
+.icon-watchers:before {
+  content: "U";
+}
+
+.icon-github-star:before {
+  content: "V";
 }
