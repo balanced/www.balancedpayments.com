@@ -1,34 +1,121 @@
-@marketplace: @curryYellow60;
-@crowdfunding: @turquoise60;
-@ecommerce: @byzantiumPurple60;
-@ad-network: @pineGreen60;
+@lightenBy: 10%;
+
+@marketplace: lighten(@curryYellow60, @lightenBy);
+@crowdfunding: lighten(@turquoise60, @lightenBy);
+@ecommerce: lighten(@byzantiumPurple60, @lightenBy);
+@ad-network: lighten(@forestGreen60, @lightenBy);
 @case-study: @imperialRed100;
+
+.arrow-right {
+  line-height: 0;
+  position: absolute;
+  vertical-align: middle;
+  display: -moz-inline-box;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid @white;
+
+  top: 50%;
+  left: 50%;
+  margin-top: -14px;
+  margin-left: -4px;
+  .transition(all .35s ease-in-out);
+}
 
 .customers {
   .video-testimonial-image {
     width: 100%;
     min-width: 660px;
-    margin-top: -90px;
-    background: url(/images/customers/750_background.png) no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-    padding: 15% 0 5% 0;
-    height: 440px;
+    margin-top: -91px;
+    padding: 10% 0 5% 0;
+    height: 540px;
+    position: relative;
 
+    .background-image {
+      background: url(/images/customers/750_background.png) no-repeat center center fixed;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      &.second {
+        display: none;
+      }
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+  }
+
+  .site-header {
+    .span19 {
+      border-bottom: 1px solid #BFBEB9;
+    }
   }
 
   .banner {
-    margin: 0 auto 160px;
+    margin: 0 auto 140px;
     width: 660px;
     text-align: center;
   }
 
   .banner-video-thumbnail {
+    cursor: pointer;
+    position: relative;
     float: left;
 
     img {
       height: 100%;
       width: 100%;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -30px 0 0 -30px;
+      width: 60px;
+      height: 60px;
+      .border-radius(50%);
+      background-color: @imperialRed100;
+      .transition(all .35s ease-in-out);
+    }
+
+    .window {
+      background-color: @black;
+      .opacity(40);
+      .transition(opacity .35s ease-in-out);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      .window {
+        .opacity(0);
+      }
+
+      .play-button {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+
+        .arrow-right {
+          transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+        }
+      }
     }
   }
 
@@ -54,7 +141,7 @@
       }
 
       a.watch-how {
-        font-family: 'NimbusSanNovSemBol';
+        font-family: NimbusSanNov-SemBol;
         font-style: normal;
         font-size: 13px;
         line-height: 15px;
@@ -83,8 +170,8 @@
 
       .thumb-image {
         .border-radius(50%);
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        width: 60px;
         border: 3px solid transparent;
         text-indent: -4000px;
       }
@@ -103,41 +190,37 @@
 
   .customer-wall-header {
     height: 50px;
-    background: black;
+    background: @white;
 
     .nav {
-      margin-right: 0;
+      margin: 0 16px;
 
       > li {
         > a {
-          font-family: NimbusSanConD-Bol;
+          font-family: NimbusSanNovCon-Med;
           font-weight: normal;
           font-style: normal;
           text-transform: uppercase;
           font-size: 14px;
 
           line-height: 16px;
-          color: @gray;
+          color: @gray3;
           text-shadow: none;
 
-          padding: 18px 4px 13px;
-          margin: 0 6px 0;
+          padding: 18px 8px 9px;
+          margin: 0 7px 0;
+          letter-spacing: 0.1em;
 
           &:before {
             margin-right: 2px;
-            vertical-align: text-top;
+            vertical-align: bottom;
           }
         }
 
         &:hover, &.selected {
           > a {
-            color: @white;
-          }
-        }
-
-        &.selected {
-          > a {
-            border-bottom: 3px solid @white;
+            color: @black;
+            border-bottom: 7px solid @black;
           }
         }
       }
@@ -153,7 +236,8 @@
     .square {
       a:before {
         content: ' \25A0';
-        font-size: 26px;
+        font-size: 14px;
+        margin-right: 1px;
       }
     }
 
@@ -204,9 +288,10 @@
       /* flip the pane when hovered */
       &:hover, &.hover {
         .flipper {
-          transform: translateX(-100%) rotateY(-180deg);
-          -webkit-transform: translateX(-100%) rotateY(-180deg);
-          -ms-transform: translateX(-100%) rotateY(-180deg);
+          -webkit-transform: rotateY(-180deg);
+          -moz-transform: rotateY(-180deg);
+          -ms-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
         }
       }
 
@@ -214,13 +299,12 @@
       .flipper {
         -webkit-transition: 0.6s;
         -webkit-transform-style: preserve-3d;
-        -webkit-transform-origin: right center;
         -moz-transition: 0.6s;
         -moz-transform-style: preserve-3d;
+        -ms-transition: 0.6s;
         -ms-transform-style: preserve-3d;
         transition: 0.6s;
         transform-style: preserve-3d;
-        transform-origin: right center;
 
         position: relative;
         height: 100%;
@@ -241,26 +325,42 @@
       }
 
       .card-content {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        height: 120px;
-        width: 120px;
-        padding: 20px;
+        height: 100%;
+        width: 100%;
 
         img {
-          vertical-align: middle;
+          height: 100%;
+          width: 100%;
+        }
+
+        .background {
+          height: 100%;
+          width: 100%;
+
+          position: absolute;
+          top: 0;
+          left: 0;
         }
       }
 
-
-
       /* front pane, placed above back */
       .front {
+        background-color: @white;
         z-index: 2;
 
         > .card-content  {
-          .opacity(60);
+          img {
+            filter: grayscale(100%); /* Current draft standard */
+            -webkit-filter: grayscale(100%); /* New WebKit */
+            -moz-filter: grayscale(100%);
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+            filter: gray; /* IE */
+            -webkit-filter: grayscale(1); /* Old WebKit */
+          }
+
+          .background {
+            .opacity(70);
+          }
         }
       }
 
@@ -274,25 +374,25 @@
     }
 
     .marketplace {
-      .front {
+      .background {
         background-color: @marketplace;
       }
     }
 
     .crowdfunding {
-      .front {
+      .background {
         background-color: @crowdfunding;
       }
     }
 
     .ecommerce {
-      .front {
+      .background {
         background-color: @ecommerce;
       }
     }
 
     .ad-network {
-      .front {
+      .background {
         background-color: @ad-network;
       }
     }
@@ -306,21 +406,29 @@
         margin-top: -30px;
         width: 100%;
 
-        font-family: NimbusSanConD-Bol;
+        font-family: NimbusSanNovCon-Med;
         font-weight: normal;
         font-style: normal;
         text-transform: uppercase;
         font-size: 12px;
+        letter-spacing: 0.1em;
 
         line-height: 30px;
         text-indent: 10px;
+
+        .icon-navigation-arrow-forward {
+          font-size: 30px;
+          position: absolute;
+          top: 50%;
+          margin-top: -15px;
+        }
       }
 
       .case-study-content {
         .opacity(90);
         background-color: @black;
         color: @white;
-        font-size: 12px;
+        font-size: 13px;
         position: absolute;
         top: 0;
         left: 0;
@@ -328,6 +436,8 @@
         right: 0;
 
         padding: 10px;
+        font-family: NimbusSanNov-Med;
+        line-height: 18px;
       }
     }
   }
