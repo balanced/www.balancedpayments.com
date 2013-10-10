@@ -26,7 +26,7 @@
   <body class="layout-v4 {{ page.metadata.body_class }}">
 
      <div class="sidebar-child-menu-left">
-        <ul>
+        <ul id="sidebar-child-menu-left-product">
             <li>
                 <a href="https://www.balancedpayments.com/help#processing">Card Processsing</a>
             </li>
@@ -58,6 +58,17 @@
                 <a href="https://docs.balancedpayments.com/current/overview.html#funds-flow">Payments Flow</a>
             </li>
         </ul>
+        <ul id="sidebar-child-menu-left-about">
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/open-company">Open Company</a>
+            </li>
+            <li>
+                <a href="http://blog.balancedpayments.com">Blog</a>
+            </li>
+        </ul>
     </div>
 
     <div class="global-wrapper">
@@ -69,18 +80,19 @@
                 </a>
             </div>
             <ul>
-                <li>
-                    <a class="toggle-child-menu" href="/products"><span class="arrow"></span> PRODUCT</a>
+                <li data-show="sidebar-child-menu-left-product">
+                    <a class="toggle-child-menu"><span class="arrow"></span> PRODUCT</a>
                 </li>
-                <!-- <li>
+                <!--
+                <li>
                     <a href="/customers">CUSTOMERS</a>
-                </li> -->
+                </li>
+                !-->
                 <li>
                     <a href="/pricing">PRICING</a>
                 </li>
-                <li>
-
-                    <a href="/about"><span class="arrow"></span> ABOUT</a>
+                <li data-show="sidebar-child-menu-left-about">
+                    <a class="toggle-child-menu"><span class="arrow"></span> ABOUT</a>
                 </li>
                 <li class="try-dashboard">
                     <a href="https://dashboard.balancedpayments.com/#/start">
@@ -167,14 +179,20 @@
                 e.preventDefault();
 
                 $(document.body).css("overflow-x", "hidden");
+                $(".sidebar-menu-left ul li").removeClass("active");
                 $(this).parent("li").addClass("active");
+
+                var target = $(this).parent("li").attr("data-show");
+
+                $(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
+                $("#" + target).css("display", "block");
                 $(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
             });
 
             $(".close-child-menu-left a").click(function(e) {
                 e.preventDefault();
 
-                $(".sidebar-menu-left ul li a").parent("li").removeClass("active");
+                $(".sidebar-menu-left ul li").removeClass("active");
                 $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
 
                 setTimeout(function () {
