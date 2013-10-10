@@ -1,98 +1,487 @@
 body.open-company {
+    font-family: NimbusSanNov-Med, arial, sans-serif;
+
+    header {
+        &.site-header {
+            .logo {
+                display: none;
+            }
+        }
+    }
+
+    .community, .support, .octotales-video {
+        .spacer {
+            border-top: 0px;
+        }
+    }
+
     section {
-        position: relative;
-        width: 100%;
-        padding: 25% 0px 25% 0px;
-        margin: 0px;
-        border: 0px;
-        height: 205px;
-
-        &.open {
-            background: url(/images/open-company/open_company_bg_1.png) no-repeat center center fixed;
-            background-size: cover;
-            margin-top: -90px;
-            z-index: -1;
-       }
-
-        &.innovation {
-            background: url(/images/open-company/open_company_bg_2.png) no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        &.passion {
-            background: url(/images/open-company/open_company_bg_3.png) no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        &.commitment {
-            background: url(/images/open-company/open_company_bg_4.png) no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        h1 {
-            font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 75px;
-            line-height: 75px;
-            letter-spacing: 0.1em;
-            color: @white;
-            text-align: center;
+        &.feature-image {
+            position: relative;
             width: 100%;
-            text-transform: uppercase;
-            padding: 10px 0px 10px 0px;
-        }
+            padding: 25% 0px 25% 0px;
+            margin: 0px;
+            border: 0px;
+            height: 219px;
 
-        p {
-            font-family: 'Droid Serif', serif;
-            font-weight: normal;
-            font-style: italic;
-            font-size: 16px;
-            line-height: 18px;
-            color: @white;
-            text-align: center;
-            padding: 10px 0px 10px 0px;
-            width: 30%;
-            margin: auto;
+            &.open {
+                background: url(/images/open-company/open_company_bg_1.png) no-repeat 0 0px fixed;
+                //background: url(/images/open-company/open_company_bg_1.png) no-repeat center center scroll;
+                background-size: cover;
+                margin-top: -90px;
+                z-index: -1;
+                height: 359px;
+                padding: 18% 0px 18% 0px;
 
-            &:first-of-type {
-                border-bottom: 1px solid @white;
-
-                .diamond {
-                    top: 33px;
+                img {
+                    width: 132px;
+                    margin: 10px auto 0px auto;
+                    display: block;
                 }
+           }
+
+            &.innovation {
+                background: url(/images/open-company/open_company_bg_2.png) no-repeat right 0 fixed;
+                //background: url(/images/open-company/open_company_bg_2.png) no-repeat center center scroll;
+                background-size: cover;
             }
 
-            &:last-of-type {
-                border-top: 1px solid @white;
-
-                .diamond {
-                    top: -12px;
-                }
+            &.passion {
+                background: url(/images/open-company/open_company_bg_3.png) no-repeat 60px 0 fixed;
+                //background: url(/images/open-company/open_company_bg_3.png) no-repeat center center scroll;
+                background-size: cover;
             }
 
-            .diamond {
-                width: 6px;
-                height: 6px;
-                background: @white;
-                margin: 0px;
-                display: block;
-                position: relative;
+            &.commitment {
+                background: url(/images/open-company/open_company_bg_4.png) no-repeat 0 0 fixed;
+                //background: url(/images/open-company/open_company_bg_4.png) no-repeat center center scroll;
+                background-size: cover;
+            }
+
+            h1 {
+                font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+                font-weight: normal;
+                font-style: normal;
+                font-size: 75px;
+                line-height: 75px;
+                letter-spacing: 0.1em;
+                color: @white;
+                text-align: center;
+                width: 100%;
+                text-transform: uppercase;
+                padding: 15px 0px 15px 0px;
+            }
+
+            p {
+                font-family: 'Droid Serif', serif;
+                font-weight: normal;
+                font-style: italic;
+                font-size: 18px;
+                line-height: 20px;
+                color: @white;
+                text-align: center;
+                padding: 10px 0px 10px 0px;
+                width: 25%;
                 margin: auto;
 
-                /* Rotate */
-                -webkit-transform: rotate(-45deg);
-                -moz-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                -o-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+                &:first-of-type {
+                    border-bottom: 1px solid @white;
 
-                /* Rotate Origin */
-                -webkit-transform-origin: 0 100%;
-                -moz-transform-origin: 0 100%;
-                -ms-transform-origin: 0 100%;
-                -o-transform-origin: 0 100%;
-                transform-origin: 0 100%;
+                    .diamond {
+                        top: 33px;
+                    }
+                }
+
+                &:last-of-type {
+                    border-top: 1px solid @white;
+
+                    .diamond {
+                        top: -12px;
+                    }
+                }
+
+                .diamond {
+                    width: 6px;
+                    height: 6px;
+                    background: @white;
+                    margin: 0px;
+                    display: block;
+                    position: relative;
+                    margin: auto;
+
+                    /* Rotate */
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+
+                    /* Rotate Origin */
+                    -webkit-transform-origin: 0 100%;
+                    -moz-transform-origin: 0 100%;
+                    -ms-transform-origin: 0 100%;
+                    -o-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
+                }
+            }
+        }
+
+        .text-box {
+            background-color: @white;
+            padding: 43px;
+
+            .body3 {
+                color: @black;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            ul {
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+
+        &.the-rewards {
+            .callout {
+                position: relative;
+                top: 145px;
+            }
+        }
+
+        &.community {
+            .callout {
+                position: relative;
+                top: 50px;
+            }
+        }
+
+        &.support {
+            .callout {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+        &.github {
+            .counts {
+                padding: 25px 0px 25px 0px;
+
+                h1, h3 {
+                    color: @gray7;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
+                }
+
+                h1 {
+                    font-size: 86px;
+                    line-height: 60px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 20px;
+                    letter-spacing: 0.1em;
+                    margin-top: 0px;
+                }
+            }
+
+            .contributors {
+                .contributors-container {
+                    .contributor {
+                        float: left;
+                        width: 85px;
+                        margin-bottom: 20px;
+                        text-align: center;
+
+                        &.contributor-template {
+                            display: none;
+                        }
+
+                        a {
+                            img.avatar {
+                                width: 40px;
+                                height: 40px;
+                                margin-bottom: 8px;
+                                filter: grayscale(100%);
+                                -webkit-filter: grayscale(100%);
+                                -moz-filter: grayscale(100%);
+                                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                            }
+
+                            p {
+                                font-family: 'Droid Serif', serif;
+                                font-style: italic;
+                                font-weight: normal;
+                                font-size: 11px;
+                                color: @gray6;
+                                margin-bottom: 0px;
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                img {
+                                    filter: grayscale(0%);
+                                    -webkit-filter: grayscale(0%);
+                                    -moz-filter: grayscale(0%);
+                                    filter: none;
+                                }
+
+                                p {
+                                    color: @black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .repos {
+                padding: 0px 45px 0px 45px;
+
+                .head, .foot {
+                    p {
+                        margin-bottom: 5px;
+
+                        &.project {
+                            font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                            font-size: 12px;
+                            letter-spacing: 0.1em;
+                            color: @black;
+                        }
+
+                        &.view-all {
+                            color: @black;
+                            font-weight: normal;
+                            font-size: 12px;
+                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                        }
+                    }
+                }
+
+                .foot {
+                    p {
+                        margin-bottom: 0px;
+                        margin-top: 5px;
+                    }
+                }
+
+                .repo {
+                    padding: 20px 0px 20px 0px;
+                    border-bottom: 1px solid @gray3;
+
+
+                    &.first {
+                        border-top: 1px solid @gray3;
+                    }
+
+                    &.repo-template {
+                        display: none;
+                    }
+
+                    p {
+                        margin-bottom: 0px;
+
+                        &.name {
+                            font-size: 15px;
+                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                            margin-bottom: 5px;
+                        }
+
+                        &.description {
+                            font-size: 13px;
+                            line-height: 16px;
+                        }
+
+                        &.lang {
+                            color: @black;
+                            font-weight: normal;
+                            font-size: 12px;
+                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                        }
+
+                        &.stars {
+                            line-height: 14px;
+                            color: @curryYellow60;
+
+                            i {
+                                vertical-align: inherit !important;
+                            }
+
+                            span {
+                                padding-left: 3px;
+                                vertical-align: baseline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.octotales-video {
+            .icons-callout {
+                position: relative;
+                top: 100px;
+
+                .body3 {
+                    color: @black;
+                }
+
+                .icons {
+                    margin-bottom: 25px;
+
+                    i {
+                        color: @gray4;
+                        font-size: 14px;
+                        margin: 0px 10px 0px 10px;
+                        line-height: 23px;
+
+                        &.icon-github {
+                            font-size: 32px;
+                            color: @black;
+                            vertical-align: top;
+                            width: 32px;
+                            margin: 0px;
+                        }
+                    }
+
+                    img {
+                        width: 32px;
+                    }
+                }
+            }
+
+            .gray-bar {
+                background-color: @gray7;
+                padding: 15px 0px 15px 0px;
+                font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                letter-spacing: 0.1em;
+
+
+                p {
+                    font-size: 12px;
+                    display: inline-block;
+                    margin-bottom: 0px;
+                    color: @white;
+                    margin-left: 13px;
+                }
+
+                .icon {
+                    font-size: 20px;
+                    color: @gray3;
+                    margin: 0px 13px 0px 20px;
+                    float: right;
+
+                    span {
+                        font-size: 12px;
+                        margin-left: 10px;
+                    }
+
+                    &:hover {
+                        color: @white;
+                    }
+                }
+            }
+        }
+
+        &.open-source-contributions {
+            .border-top {
+                border-top: 1px solid @curryYellow100;
+            }
+
+            .spacer {
+                border-top: 1px solid @curryYellow100;
+            }
+
+            .section-title {
+                border-top: 1px solid @curryYellow100;
+            }
+
+            .text-box {
+                background-color: @curryYellow60;
+
+                .body3 {
+                    color: @white;
+                }
+            }
+        }
+
+        .callout {
+            img {
+                width: 50px;
+                border: 3px solid @black;
+            }
+
+            .gray-box {
+                padding: 15px;
+                background-color: @gray3;
+                color: @black;
+                position: relative;
+                margin-top: 20px;
+                cursor: pointer;
+
+                &:before {
+                    content: ' ';
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent @gray3 transparent;
+                    position: absolute;
+                    top: -10px;
+                }
+
+                &:hover {
+                    background-color: @gray2;
+
+                    &:before {
+                        border-color: transparent transparent @gray2 transparent;
+                    }
+                }
+
+                p {
+                    margin-bottom: 0px;
+                }
+
+                .top-copy {
+                    padding-bottom: 10px;
+
+
+                    p {
+                        font-size: 12px;
+
+                        &:first-of-type {
+                            font-family: 'Droid Serif', serif;
+                            font-style: italic;
+                            font-size: 14px;
+                        }
+                    }
+
+                    i {
+                        float: right;
+                        color: @white;
+                        font-size: 20px;
+                        width: inherit;
+                    }
+                }
+
+                .bottom-copy {
+                    padding-top: 10px;
+                    border-top: 1px solid @gray4;
+
+                    p {
+                        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
             }
         }
     }

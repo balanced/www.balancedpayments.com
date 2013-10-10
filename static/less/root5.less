@@ -468,7 +468,7 @@ footer {
         display: inline-block;
         width: @clientWidth;
         height: 36px;
-        background: url(/images/homepage_client_library_logos-02.png) -@clientWidth * 7 0 no-repeat;
+        background: url(/images/homepage_client_library_logos-03.png) -@clientWidth * 9 0 no-repeat;
         vertical-align: middle;
         margin-right: @v2Margin / 2; //        opacity: 0.55;
       }
@@ -512,6 +512,16 @@ footer {
       a:before {
         background-position: -@clientWidth * 6 0;
       }
+    }
+    &.ios {
+        a:before {
+            background-position: -@clientWidth * 7 0;
+        }
+    }
+    &.android {
+        a:before {
+            background-position: -@clientWidth * 8 0;
+        }
     }
   }
   .tutorials {

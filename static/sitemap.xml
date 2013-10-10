@@ -8,62 +8,67 @@
 
 <url>
   <loc>https://www.balancedpayments.com/</loc>
-  <lastmod>2013-10-03T20:37:01+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.balancedpayments.com/open-company</loc>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/ach-debits</loc>
-  <lastmod>2013-10-03T20:37:04+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/pricing</loc>
-  <lastmod>2013-10-03T20:37:01+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/about</loc>
-  <lastmod>2013-10-03T20:37:04+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/terms</loc>
-  <lastmod>2013-10-03T20:37:01+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/privacy</loc>
-  <lastmod>2013-10-03T20:37:04+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/help</loc>
-  <lastmod>2013-10-03T20:37:04+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.balancedpayments.com/terms/service</loc>
-  <lastmod>2013-10-03T20:37:05+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/terms/acceptable_use</loc>
-  <lastmod>2013-10-03T20:37:02+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/terms/marketplaceagreement</loc>
-  <lastmod>2013-10-03T20:37:02+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/terms/selleragreement</loc>
-  <lastmod>2013-10-03T20:37:02+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://www.balancedpayments.com/terms/privacy</loc>
-  <lastmod>2013-10-03T20:37:05+00:00</lastmod>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.balancedpayments.com/terms/service</loc>
+  <lastmod>2013-10-10T20:57:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
