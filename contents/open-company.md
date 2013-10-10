@@ -80,6 +80,9 @@ support:
   calloutSubtitle: Software Engineer, Artsy
   calloutTitle: Why we use Balanced<br />for payments
 
+balancedUsesGithub:
+  body: Hear how Balanced is using GitHub to promote openness and transparency.
+
 openSourceContributions:
   title: Open source contributions
   bodyHeader: Balanced has open sourced many of<br />its development projects with amazing contributions from the community.<br />Want to help? Click on a project below<br />to contribute.

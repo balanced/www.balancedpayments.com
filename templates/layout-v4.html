@@ -80,13 +80,13 @@
                 </a>
             </div>
             <ul>
-                <li data-toggle="sidebar-child-menu-left-product">
+                <li data-show="sidebar-child-menu-left-product">
                     <a class="toggle-child-menu"><span class="arrow"></span> PRODUCT</a>
                 </li>
                 <li>
                     <a href="/pricing">PRICING</a>
                 </li>
-                <li data-toggle="sidebar-child-menu-left-about">
+                <li data-show="sidebar-child-menu-left-about">
                     <a class="toggle-child-menu"><span class="arrow"></span> ABOUT</a>
                 </li>
                 <li class="try-dashboard">
@@ -178,7 +178,7 @@
                 $(".sidebar-menu-left ul li").removeClass("active");
                 $(this).parent("li").addClass("active");
 
-                var target = $(this).parent("li").attr("data-toggle");
+                var target = $(this).parent("li").attr("data-show");
 
                 $(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
                 $("#" + target).css("display", "block");

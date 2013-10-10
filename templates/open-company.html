@@ -132,18 +132,20 @@
                             </div>
 
                             <div class="callout">
-                                <a href="https://github.com/balanced/balanced-dashboard/issues">
                                     <img src="https://0.gravatar.com/avatar/31794e668233b230d25e13687925045c?d=https%3A%2F%2Fidenticons.github.com%2Fed1d2637b0856e369c5712ae7f6e5bb5.png" class="img-circle" alt="mjallday" />
-                                    <div class="gray-box">
-                                        <div class="top-copy">
-                                            <i class="icon-github"></i>
-                                            <p>{{page.metadata.theRewards.calloutUser}}</p>
-                                            <p>{{page.metadata.theRewards.calloutSubtitle}}</p>
+
+                                    <a href="https://github.com/balanced/balanced-dashboard/issues">
+                                        <div class="gray-box">
+                                            <div class="top-copy">
+                                                <i class="icon-github"></i>
+                                                <p>{{page.metadata.theRewards.calloutUser}}</p>
+                                                <p>{{page.metadata.theRewards.calloutSubtitle}}</p>
+                                            </div>
+                                            <div class="bottom-copy">
+                                                <p>{{page.metadata.theRewards.calloutTitle}}</p>
+                                            </div>
                                         </div>
-                                        <div class="bottom-copy">
-                                            <p>{{page.metadata.theRewards.calloutTitle}}</p>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </a>
                             </div>
                         </div>
@@ -164,18 +166,20 @@
                 <section class="community">
                     <div class="span5 no-margin-left">
                         <div class="callout">
-                            <a href="https://github.com/balanced/balanced-dashboard/issues">
                                 <img src="https://0.gravatar.com/avatar/f914ba0563584642b9dfaaf56c628688?d=https%3A%2F%2Fidenticons.github.com%2F0507cd147bbb0783419092b35214be0a.png" class="img-circle" alt="dmdj03" />
-                                <div class="gray-box">
-                                    <div class="top-copy">
-                                        <i class="icon-github"></i>
-                                        <p>{{page.metadata.community.calloutUser}}</p>
-                                        <p>{{page.metadata.community.calloutSubtitle}}</p>
+
+                                <a href="https://github.com/balanced/balanced-dashboard/issues">
+                                    <div class="gray-box">
+                                        <div class="top-copy">
+                                            <i class="icon-github"></i>
+                                            <p>{{page.metadata.community.calloutUser}}</p>
+                                            <p>{{page.metadata.community.calloutSubtitle}}</p>
+                                        </div>
+                                        <div class="bottom-copy">
+                                            <p>{{page.metadata.community.calloutTitle}}</p>
+                                        </div>
                                     </div>
-                                    <div class="bottom-copy">
-                                        <p>{{page.metadata.community.calloutTitle}}</p>
-                                    </div>
-                                </div>
+                                </a>
                             </a>
                         </div>
                     </div>
@@ -195,18 +199,20 @@
                 <section class="support">
                     <div class="span5 no-margin-left">
                         <div class="callout">
-                            <a href="http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments">
                                 <img src="https://2.gravatar.com/avatar/d949c1200c1b511e09d622a142070027?d=https%3A%2F%2Fidenticons.github.com%2F9951eeb199b196abb1e7f91ba1a690bc.png" class="img-circle" alt="joeyAghion" />
-                                <div class="gray-box">
-                                    <div class="top-copy">
-                                        <i class="icon-quora"></i>
-                                        <p>{{page.metadata.support.calloutUser}}</p>
-                                        <p>{{page.metadata.support.calloutSubtitle}}</p>
+
+                                <a href="http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments">
+                                    <div class="gray-box">
+                                        <div class="top-copy">
+                                            <i class="icon-quora"></i>
+                                            <p>{{page.metadata.support.calloutUser}}</p>
+                                            <p>{{page.metadata.support.calloutSubtitle}}</p>
+                                        </div>
+                                        <div class="bottom-copy">
+                                            <p>{{page.metadata.support.calloutTitle}}</p>
+                                        </div>
                                     </div>
-                                    <div class="bottom-copy">
-                                        <p>{{page.metadata.support.calloutTitle}}</p>
-                                    </div>
-                                </div>
+                                </a>
                             </a>
                         </div>
                     </div>
@@ -224,7 +230,14 @@
         <div class="row">
             <div class="span19">
                 <section class="octotales-video">
-                    <div class="span5 no-margin-left"></div>
+                    <div class="span5 no-margin-left">
+                        <div class="icons-callout">
+                            <div class="icons">
+                                <i class="icon-github"></i> <i class="icon-pl-sign"></i> <img src="images/balanced_logo_3dots.png" alt="Balanced" /><i class="icon-arrow-triangle-forward"></i>
+                            </div>
+                            <div class="body3">{{page.metadata.balancedUsesGithub.body}}</div>
+                        </div>
+                    </div>
                     <div class="span1 spacer"></div>
                     <div class="span13 no-margin-left box-pad-bottom">
                         <div class="gray-bar">
@@ -363,6 +376,9 @@
         var onCompleteRepos = function(response) {
             if(response.status === 200) {
                 var repos = response.responseJSON;
+                repos = repos.sort(function(a, b) {
+                    return b.watchers_count - a.watchers_count;
+                });
 
                 for(var i = 0; i < repos.length; i++) {
                     // Don't include forks
