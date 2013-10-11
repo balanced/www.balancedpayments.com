@@ -84,8 +84,8 @@ team:
     - name: damon chin
       job: designer
       desc: designed this website
-      link: http://dribbble.com/damonc
-      site: dribbble
+      link: https://github.com/dmdj03
+      site: github
     - name: manisha ramchandani
       job: account manager
       desc: fights for the customer
