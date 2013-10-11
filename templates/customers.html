@@ -77,7 +77,7 @@
                         <div class="span19">
                           {% for customer in page.metadata.customer_wall.list %}
                             <div class="card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
-                                <div class="flipper">
+                                <a class="flipper" href="{{customer.link}}" rel="nofollow">
                                     <div class="front">
                                       <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}_color.png"/><div class="background">&nbsp;</div></div>
 
@@ -88,12 +88,15 @@
                                     <div class="back">
                                       <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}_color.png"/></div>
 
+                                      {% if customer.description %}
+                                      <div class="case-study-content">{{customer.description}} <div class="study-bar"><span class="icon-arrow-forward-dashboard"></span></div></div>
+                                      {% endif %}
+
                                       {% if customer.caseStudy %}
-                                      <div class="case-study-content">{{customer.caseStudy}}</div>
                                       <div class="case-study-bar">View Case Study <span class="icon-arrow-forward-dashboard"></span></div>
                                       {% endif %}
                                     </div>
-                                </div>
+                                </a>
                             </div>
                           {% endfor %}
                         </div>

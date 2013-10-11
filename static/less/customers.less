@@ -1,11 +1,10 @@
 @lightenBy: 20%;
 
-@marketplace: @curryYellow40; // lighten(@curryYellow60, @lightenBy);
-@crowdfunding: @turquoise40; // lighten(@turquoise60, @lightenBy);
-@ecommerce: @byzantiumPurple40; // lighten(@byzantiumPurple60, @lightenBy);
-@ad-network: @forestGreen40; // lighten(@forestGreen60, @lightenBy);
+@marketplace: @curryYellow60; // lighten(@curryYellow60, @lightenBy);
+@crowdfunding: @turquoise60; // lighten(@turquoise60, @lightenBy);
+@ecommerce: @byzantiumPurple60; // lighten(@byzantiumPurple60, @lightenBy);
+@ad-network: @forestGreen60; // lighten(@forestGreen60, @lightenBy);
 @case-study: @imperialRed100;
-
 
 .arrow-right {
   line-height: 0;
@@ -290,13 +289,13 @@
 
   .customer-wall {
     .span19 {
-      width: 850px;
+      width: 856px;
     }
 
     .card {
-      width: 160px;
-      height: 160px;
-      margin: 10px 10px 0 0;
+      width: 200px;
+      height: 200px;
+      margin: 14px 14px 0 0;
       float: left;
 
       perspective: 1000px;
@@ -325,6 +324,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        display: block;
       }
 
       /* hide back of pane during swap */
@@ -375,7 +375,7 @@
           }
 
           .background {
-            .opacity(70);
+            .opacity(40);
           }
         }
       }
@@ -413,6 +413,42 @@
       }
     }
 
+    .icon-arrow-forward-dashboard {
+      font-size: 12px;
+      position: absolute;
+    }
+
+    .case-study-content {
+      .opacity(90);
+      background-color: @black;
+      color: @white;
+      font-size: 18px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      font-family: 'Droid Serif';
+      line-height: 24px;
+      font-style: italic;
+
+      .study-bar {
+        position: absolute;
+        background-color: @case-study;
+        height: 30px;
+        width: 30px;
+        right: 0;
+        bottom: 0;
+      }
+
+      .icon-arrow-forward-dashboard {
+        margin: -6px 0 0 -6px;
+        top: 50%;
+        left: 50%;
+      }
+    }
+
     .case-study {
       .case-study-bar {
         background-color: @case-study;
@@ -426,35 +462,17 @@
         font-weight: normal;
         font-style: normal;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1em;
 
         line-height: 30px;
         text-indent: 10px;
 
         .icon-arrow-forward-dashboard {
-          font-size: 12px;
-          position: absolute;
           top: 50%;
           margin-top: -6px;
           right: 16px;
         }
-      }
-
-      .case-study-content {
-        .opacity(90);
-        background-color: @black;
-        color: @white;
-        font-size: 13px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-
-        padding: 10px;
-        font-family: NimbusSanNov-Med;
-        line-height: 18px;
       }
     }
   }

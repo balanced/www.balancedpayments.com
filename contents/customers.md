@@ -32,13 +32,55 @@ customer_wall:
   list:
     - id: 750
       classes: marketplace
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
     - id: crowdtilt
       classes: crowdfunding
+      link: http://crowdtilt.com/
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
     - id: kitchit
       classes: ad-network
+      link: http://kitchit.com/
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
     - id: zaarly
       classes: ecommerce
-      caseStudy: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      caseStudy: true
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      link: http://zaarly.com/
+    - id: 750
+      classes: marketplace
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: crowdtilt
+      classes: crowdfunding
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: kitchit
+      classes: ad-network
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: zaarly
+      classes: ecommerce
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: 750
+      classes: marketplace
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: crowdtilt
+      classes: crowdfunding
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: kitchit
+      classes: ad-network
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: zaarly
+      classes: ecommerce
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: 750
+      classes: marketplace
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: crowdtilt
+      classes: crowdfunding
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: kitchit
+      classes: ad-network
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+    - id: zaarly
+      classes: ecommerce
     - id: 750
       classes: marketplace
     - id: crowdtilt
@@ -49,32 +91,10 @@ customer_wall:
       classes: ecommerce
     - id: 750
       classes: marketplace
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
     - id: crowdtilt
       classes: crowdfunding
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
-      classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
-      classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
-      classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
+      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
     - id: kitchit
       classes: ad-network
     - id: zaarly
