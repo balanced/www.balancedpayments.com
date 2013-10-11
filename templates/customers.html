@@ -11,7 +11,7 @@
                 <div class="banner bg-white">
                     <div class="row">
                         <div class="banner-video-thumbnail span5">
-                          <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.png" />
+                          <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.jpg" />
                           <div class="window">&nbsp;</div>
                           <div class="play-button"><span class="arrow-right"></span></div>
                         </div>
@@ -148,13 +148,13 @@
 
       $.each(testimonails, function (k, v) {
         var i = new Image();
-        i.src = '/images/customers/' + k + '_background.png';
+        i.src = '/images/customers/' + k + '_background.jpg';
 
         var g = new Image();
         g.src = '/images/customers/logo_' + k + '_video.png';
 
         var t = new Image();
-        t.src = '/images/customers/' + k + '_video_thumbnail.png';
+        t.src = '/images/customers/' + k + '_video_thumbnail.jpg';
       });
 
       $('.video-testimonial-image .thumb-container .thumb').on('click', function(evt) {
@@ -172,7 +172,7 @@
         // $videoTestimonial.find('.background-image:visible').css
         $videoTestimonial.find('.background-image:hidden')
           .css({
-            'background-image': 'url(/images/customers/' + id + '_background.png)',
+            'background-image': 'url(/images/customers/' + id + '_background.jpg)',
             'z-index': '-1'
           })
           .fadeIn('slow', function () {
@@ -183,7 +183,7 @@
         var $banner = $videoTestimonial.find('.banner');
         $banner.find('.banner-content-text span').text(testimonails[id]);
         $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
-        $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.png');
+        $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.jpg');
 
         $this.addClass('selected').siblings().removeClass('selected');
       });
