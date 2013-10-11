@@ -12,7 +12,7 @@ video_testimonials:
   list:
     - label: 750 Commerce
       id: 750
-      description: 750 Commerce leverages Balanced’s payments API to deliver a great processing experience for wineries.
+      description: 750 Commerce Group leverages Balanced’s payments API to deliver a great processing experience for wineries.
       classes: selected
       ytVideoId: _7HkG6OSo3E
     - label: Crowdtilt
@@ -33,6 +33,7 @@ customer_wall:
     - id: 750
       classes: marketplace
       description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      link: http://crowdtilt.com/
     - id: crowdtilt
       classes: crowdfunding
       link: http://crowdtilt.com/
