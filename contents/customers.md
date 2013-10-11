@@ -14,15 +14,19 @@ video_testimonials:
       id: 750
       description: 750 Commerce leverages Balanced’s payments API to deliver a great processing experience for wineries.
       classes: selected
+      ytVideoId: _7HkG6OSo3E
     - label: Crowdtilt
       id: crowdtilt
       description: Crowdtilt relies on Balanced’s payments framework to scale their crowdfunding platform.
+      ytVideoId: _7HkG6OSo3E
     - label: Kitchit
       id: kitchit
       description: Kitchit runs on top of Balanced’s ACH payouts to connect chefs to consumers.
+      ytVideoId: _7HkG6OSo3E
     - label: Zaarly
       id: zaarly
       description: Zaarly champions Balanced’s customer support as key to running a marketplace for service providers.
+      ytVideoId: _7HkG6OSo3E
 
 customer_wall:
   list:

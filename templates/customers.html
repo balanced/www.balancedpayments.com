@@ -1,16 +1,21 @@
 {% extends 'layout-v4.html' %}
 
 {% block body %}
+<div class="modal hide video-modal">
+<iframe width="560" height="360" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <div class="bg-default">
     <section class="video-testimonial-image xlarge-bottom-margin">
         <div class="background-image first"></div>
         <div class="background-image second"></div>
+        <!-- <div class="window"></div> -->
         <div class="container">
             <div class="row">
                 <div class="span19">
                 <div class="banner bg-white">
                     <div class="row">
-                        <div class="banner-video-thumbnail span5">
+                        <div class="banner-video-thumbnail span5 watch-video">
                           <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.jpg" />
                           <div class="window">&nbsp;</div>
                           <div class="play-button"><span class="arrow-right"></span></div>
@@ -20,7 +25,7 @@
                               <img src="/images/customers/logo_{{page.metadata.video_testimonials.list[0].id}}_video.png" />
                             </div>
                             <div class="banner-content-text">
-                                <span>{{page.metadata.video_testimonials.list[0].description}}</span> <a href="#" class="watch-how">Watch how &raquo;</a>
+                                <span>{{page.metadata.video_testimonials.list[0].description}}</span> <a href="#" class="watch-how watch-video">Watch how &raquo;</a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +148,7 @@
 
       var testimonails = {};
       {%- for testimonial in page.metadata.video_testimonials.list -%}
-      testimonails["{{testimonial.id}}"]="{{testimonial.description}}";
+      testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}" };
       {%- endfor -%}
 
       $.each(testimonails, function (k, v) {
@@ -157,6 +162,22 @@
         t.src = '/images/customers/' + k + '_video_thumbnail.jpg';
       });
 
+      $('.video-testimonial-image .watch-video').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $videoTestimonial = $('.video-testimonial-image');
+        $videoTestimonial.addClass('video-playing');
+
+        var $selected = $videoTestimonial.find('.thumb-container .thumb.selected');
+        var id = $selected.attr('id');
+
+        var $iframe = $('.video-modal iframe').attr('src', '//www.youtube.com/embed/' + testimonails[id].ytVideoId + '?rel=0');
+        $('.video-modal').modal('show').off('hide.balanced').on('hide.balanced', function() {
+          $videoTestimonial.removeClass('video-playing');
+          $iframe.attr('src', '');
+        });
+      });
+
       $('.video-testimonial-image .thumb-container .thumb').on('click', function(evt) {
         evt.preventDefault();
 
@@ -167,9 +188,11 @@
 
         var id = $this.attr('id');
 
+        if (!testimonails[id]) {
+          return;
+        }
+
         var $videoTestimonial = $('.video-testimonial-image');
-        // $videoTestimonial.css('background-image', 'url(/images/customers/' + id + '_background.png)');
-        // $videoTestimonial.find('.background-image:visible').css
         $videoTestimonial.find('.background-image:hidden')
           .css({
             'background-image': 'url(/images/customers/' + id + '_background.jpg)',
@@ -181,7 +204,7 @@
           });
 
         var $banner = $videoTestimonial.find('.banner');
-        $banner.find('.banner-content-text span').text(testimonails[id]);
+        $banner.find('.banner-content-text span').text(testimonails[id].description);
         $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
         $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.jpg');
 

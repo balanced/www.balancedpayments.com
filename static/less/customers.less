@@ -1,10 +1,11 @@
-@lightenBy: 10%;
+@lightenBy: 20%;
 
 @marketplace: lighten(@curryYellow60, @lightenBy);
 @crowdfunding: lighten(@turquoise60, @lightenBy);
 @ecommerce: lighten(@byzantiumPurple60, @lightenBy);
 @ad-network: lighten(@forestGreen60, @lightenBy);
 @case-study: @imperialRed100;
+
 
 .arrow-right {
   line-height: 0;
@@ -24,7 +25,23 @@
   margin-left: -4px;
 }
 
+.window {
+  background-color: @black;
+  .transition(opacity .35s ease-in-out);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .customers {
+  .video-modal {
+    .border-radius(0);
+    background-color: @black;
+  }
+
   .video-testimonial-image {
     width: 100%;
     min-width: 660px;
@@ -50,7 +67,21 @@
 
     .container {
       margin-top: 100px;
+      z-index: 2;
     }
+/*
+    .window {
+      .opacity(0);
+      z-index: 1;
+    }*/
+
+/*    &.video-playing {
+      .window {
+        pointer-events: none;
+        .opacity(40);
+        z-index: 500;
+      }
+    }*/
   }
 
   .site-header {
@@ -89,15 +120,7 @@
     }
 
     .window {
-      background-color: @black;
       .opacity(40);
-      .transition(opacity .35s ease-in-out);
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
     }
 
     &:hover {
@@ -352,7 +375,7 @@
           }
 
           .background {
-            .opacity(70);
+            .opacity(50);
           }
         }
       }
