@@ -398,7 +398,7 @@
                         $template.addClass("first");
                     }
 
-                    $template.find("p.name a").attr("href", repos[i].url).html(repos[i].name);
+                    $template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
                     $template.find("p.description").html(repos[i].description);
                     $template.find("p.lang").html(repos[i].language);
                     $template.find("p.stars span").html(repos[i].watchers_count);
