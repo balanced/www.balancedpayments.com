@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 10 payment aficionados and growing
+    text: 15 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -66,9 +66,14 @@ team:
       desc: 10<sup>th</sup> engineer at Hulu
       link: https://github.com/bninja
       site: github
+    - name: timothy nguyen
+      job: legal and compliance
+      desc: Stanford / UVA law / California bar association
+      link: http://www.linkedin.com/pub/tim-nguyen/15/984/683
+      site: linkedin
     - name: marshall jones
       job: engineer
-      desc: worked for two of the largest marketplaces in asia pacific
+      desc: built payments back-end for largest commerce site in New Zealand
       link: https://github.com/mjallday
       site: github
     - name: marc sherry
@@ -86,16 +91,43 @@ team:
       desc: fights for the customer
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
-    - name: timothy nguyen
-      job: general counsel
-      desc: Stanford / UVA law / California bar association
-      link: http://www.linkedin.com/pub/tim-nguyen/15/984/683
+    - name: patrick cieplak
+      job: engineer
+      desc: understanding all the data
+      link: https://github.com/cieplak
+      site: github
+    - name: catherine chang
+      job: finance operations
+      desc: Corporate Controller of Evite, Ebates, Facebook, and Twitter
+      link: http://www.linkedin.com/in/catherinechang
       site: linkedin
-# TODO: add new ppl / interns
+    - name: andrew nossiter
+      job: operations
+      desc: writer that fell in love with payments
+      link: http://www.linkedin.com/pub/andrew-nossiter/23/559/11b
+      site: linkedin
+    - name: dalyte kodzis
+      job: executive assistant
+      desc: keeps everything in order
+      link: http://www.linkedin.com/pub/dalyte-kodzis/62/193/688
+      site: linkedin
+    - name: ben mills
+      job: engineer
+      desc: contributed to open source Balanced projects for a year prior to working at Balanced
+      link: https://github.com/remear
+      site: github
+    - name: matthew francis-landau
+      job: engineer
+      desc: the only intern that survived Summer 2013
+      link: https://github.com/matthewfl
+      site: github
+
 
 backers:
   heading: backers
   list:
+    - name: andreessen horowitz
+      desc: backed Github, Airbnb, Lyft
     - name: y combinator
       desc: backed Dropbox, Airbnb, Heroku
     - name: sv angel
