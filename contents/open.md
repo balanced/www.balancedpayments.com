@@ -74,7 +74,9 @@ community:
 support:
   bodyHeader: Use highly public customer support.
   body: |
-      We’ve seen how openness fosters enthusiasm and support. Balanced maintains an active [IRC support channel](http://webchat.freenode.net/?channels=balanced) with [chat logs](https://botbot.me/freenode/balanced) available to the world. There are about 50 people on IRC—only five of whom are Balanced employees. Customers like [ajsharp](https://github.com/ajsharp), [joonas](https://github.com/joonas), and [secforus](https://github.com/SecurityForUs) have become some of Balanced’s most vocal advocates. They help answer questions and provide code snippets to othe users. Some customers have even publicly explained, on Quora, [why they use Balanced](http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments).
+      We’ve seen how openness fosters enthusiasm and support. Balanced maintains an active [IRC support channel](http://webchat.freenode.net/?channels=balanced) with [chat logs](https://botbot.me/freenode/balanced) available to the world. There are about 50 people on IRC—only five of whom are Balanced employees. Customers like [ajsharp](https://github.com/ajsharp), [joonas](https://github.com/joonas), and [secforus](https://github.com/SecurityForUs) have become some of Balanced’s most vocal advocates. They help answer questions and provide code snippets to other users. Some customers have even publicly explained, on Quora, [why they use Balanced](http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments).
+
+      Check out Matin Tamizi’s article on “Why I Made My Payments Startup An Open Company.” [View article](http://www.fastcolabs.com/3008944/open-company/why-i-made-my-payments-startup-an-open-company).
 
   calloutUser: Joey Aghion
   calloutSubtitle: Software Engineer, Artsy
