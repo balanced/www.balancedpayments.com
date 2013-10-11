@@ -8,7 +8,7 @@ body_class: open-company
 openCompany:
   topText: embracing an
   mainText: OPEN COMPANY
-  bottomText: philosophy at
+  bottomText: philosophy at Balanced
 
 innovation:
   topText: drives
