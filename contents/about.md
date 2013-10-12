@@ -93,7 +93,7 @@ team:
       site: linkedin
     - name: jacob rus
       job: support
-      desc: completed all of Harvard undergraduate math in Freshman year
+      desc: completed all of Harvard undergraduate math in freshman year
       link: https://github.com/jrus
       site: github
     - name: patrick cieplak
