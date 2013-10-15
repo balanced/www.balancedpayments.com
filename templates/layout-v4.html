@@ -87,6 +87,9 @@
                     <a class="toggle-child-menu"><span class="arrow"></span> PRODUCT</a>
                 </li>
                 <li>
+                    <a href="/customers">CUSTOMERS</a>
+                </li>
+                <li>
                     <a href="/pricing">PRICING</a>
                 </li>
                 <li data-show="sidebar-child-menu-left-about">
@@ -180,8 +183,7 @@
             $(".toggle-child-menu").click(function(e) {
                 e.preventDefault();
 
-                $("body").css("overflow-x", "hidden");
-
+                $(document.body).css("overflow-x", "hidden");
                 $(".sidebar-menu-left ul li").removeClass("active");
                 $(this).parent("li").addClass("active");
 
@@ -195,9 +197,12 @@
             $(".close-child-menu-left a").click(function(e) {
                 e.preventDefault();
 
-                $("body").css("overflow-x", "visible");
                 $(".sidebar-menu-left ul li").removeClass("active");
                 $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
+
+                setTimeout(function () {
+                  $(document.body).css("overflow-x", "visible");
+                }, 500);
             });
         });
     </script>
