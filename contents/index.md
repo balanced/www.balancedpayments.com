@@ -45,8 +45,6 @@ Sections:
       - title: Soft descriptor control
         text: |
           Specify the credit card or bank statement descriptor on a per-transaction basis.
-
-          [Learn more about setting the soft descriptor](https://docs.balancedpayments.com/current/#soft-descriptors)
       - title: Completely white-labeled
         text: |
           Retain your brand and keep customers on your site; buyers do not need to sign up for a Balanced account.
@@ -56,19 +54,16 @@ Sections:
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
       ### Use with any card processor or as a stand-alone service for same-day bank deposits.
+      [Learn more about payouts](/payouts)
     subs:
       - title: Pay out same day
         text: |
           Balanced now offers same-day ACH payouts to Wells
           Fargo bank account holders. Pay all other merchants
           via next-day ACH.
-
-          [See payout schedule](https://docs.balancedpayments.com/current/#submission-delivery-times)
       - title: No fees to add funds
         text: |
           To pay out, simply fund your balance with your bank account.
-
-          [Learn more about pre-funding your account](https://docs.balancedpayments.com/current/overview.html?language=bash#pre-funding-your-account)
       - title: Completely white-labeled
         text: |
           Retain your brand and keep customers on your site; merchants do not need to sign up for a Balanced account.
@@ -86,7 +81,7 @@ marketplaces:
         Escrow funds
     - id: payouts
       text: |
-        Pay out to bank accounts with [Balanced Payouts](#payouts)
+        Pay out to bank accounts with [Balanced Payouts](/payouts)
     - id: fees
       text: |
         Collect your fees

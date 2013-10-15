@@ -14,16 +14,16 @@ howItWorks:
 
 withProcessing:
   title: THE FULL MARKETPLACE SOLUTION
-  body: With Balanced's card processing and ACH debits, money from your buyers are placed into an order specific escrow on behalf of the seller until you're ready to pay out.
-  process1: Debit the buyer's credit card or bank account
+  body: With Balanced's card processing and ACH debits,<br />money from your buyers are placed into an order-specific <br />escrow on behalf of the seller until you're ready to pay out.
+  process1: Debit the <br />buyer's credit card<br />or bank account
   process2: Funds are grouped into order-specific escrows, linking the buyer and seller together
-  process3: Pay out your seller(s) and collect your marketplace fee
+  process3: Pay out your<br />seller(s) and collect<br />your marketplace fee
 
 payoutsOnly:
   title: PAYOUTS ONLY
   body: Simply fund your escrow (held by Balanced)<br />with your marketplace's bank account to pay<br />your sellers.
   process1: Preload your escrow balance by debiting the marketplace's bank account
-  process2: Funds are placed in the general escrow balance in 4 business days
+  process2: Funds are deposited<br />in the general<br />escrow balance in <br />4 business days
   process3: Pay out your sellers from your general escrow balance
 
 viewAPaymentsScenario:
@@ -75,11 +75,11 @@ bankHolidays:
 collectingBankInfo:
   title: Collecting bank account info
   body: To issue a payout, collect the bank account holder's name, routing number, account number, and account type.
+  learnLink: Demo our bank accounts form
 
 payoutStatus:
   title: Payout status
-  body: The status of a payout is updated throughout its lifecycle.<br />Follow our best practices guide<br />minimize payout failures.
-  learnLink: View payouts best practices
+  body: The status of a payout is updated<br />throughout its lifecycle. Follow our best<br />practices guide minimize payout failures.
 
 reversingAPayout:
   title: Reversing a payout
@@ -87,7 +87,7 @@ reversingAPayout:
 
 bankStatementDescriptor:
   title: Bank statement descriptor
-  body: Modify the bank statement soft descriptor on a per-transaction basis.
+  body: Modify the bank statement<br />soft descriptor on a<br />per-transaction basis.
   learnLink: "Learn more about setting<br />the soft descriptor"
   limit: "Bank statement soft descriptor max. character length: 14"
 

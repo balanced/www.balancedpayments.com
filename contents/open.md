@@ -96,7 +96,7 @@ github:
   viewAll: View all projects on Github
 
 tryTheDashboard:
-  body: Ready to get started?
+  body: Get started today.
   button: TRY THE DASHBOARD
 
 ---
