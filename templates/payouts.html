@@ -1,0 +1,325 @@
+{% extends 'layout-v4.html' %}
+
+{% block body %}
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row">
+                    <header>
+                      <div class="span19 page-title">
+                        <h1>{{page.metadata.pageTitle}}</h1>
+                      </div>
+                    </header>
+                </div>
+
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle">
+                      <div class="span19">
+                        {{ page.metadata.subtitle.heading }}
+                      </div>
+                    </div>
+                </div>
+
+                <section class="how-it-works">
+                    <div class="row">
+                        <div class="span19 content-green med-top-padding med-bottom-padding">
+                            <div class="offset1 section-title section-title-full">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.howItWorks.title}}</span>
+                                </div>
+                            </div>
+                            <div class="span6 offset1">
+                                <div class="title-icon"></div>
+                            </div>
+                            <div class="body-copy body3 span11">
+                                {{page.metadata.howItWorks.body}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <section class="integration-flow">
+                <div class="span19 split-container">
+                    <div class="row">
+                        <div class="span9 left">
+                            <h3>{{page.metadata.withProcessing.title}}</h3>
+                            <p>{{page.metadata.withProcessing.body}}</p>
+                            <div class="process">
+                                <div class="graphic"></div>
+                                <p>{{page.metadata.withProcessing.process1}}</p>
+                                <p>{{page.metadata.withProcessing.process2}}</p>
+                                <p>{{page.metadata.withProcessing.process3}}</p>
+                            </div>
+                        </div>
+                        <div class="span9 right">
+                            <h3>{{page.metadata.payoutsOnly.title}}</h3>
+                            <p>{{page.metadata.payoutsOnly.body}}</p>
+                            <div class="process">
+                                <div class="graphic"></div>
+                                <p>{{page.metadata.payoutsOnly.process1}}</p>
+                                <p>{{page.metadata.payoutsOnly.process2}}</p>
+                                <p>{{page.metadata.payoutsOnly.process3}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span19 center">
+                            <a href="https://docs.balancedpayments.com/current/#funds-flow" class="btn btn-pal">{{page.metadata.viewAPaymentsScenario.button}}</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="payment-schedule">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.paymentSchedule.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.paymentSchedule.body}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="schedule-times teeth">
+                                <div class="title">{{page.metadata.submissionTimes.title}}</div>
+                                <div class="span3 box">
+                                    <h2>MON</h2>
+                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
+                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
+                                </div>
+                                <div class="span3 box">
+                                    <h2>TUE</h2>
+                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
+                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
+                                </div>
+                                <div class="span3 box">
+                                    <h2>WED</h2>
+                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
+                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
+                                </div>
+                                <div class="span3 box">
+                                    <h2>THU</h2>
+                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
+                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
+                                </div>
+                                <div class="span3 box box-last">
+                                    <h2>FRI</h2>
+                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
+                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="holidays">
+                                <table border="1" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">{{page.metadata.bankHolidays.title}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for list in page.metadata.bankHolidays.list %}
+                                            <tr>
+                                            {% for row in list.row %}
+                                                <td class="first">{{row.label}}</td>
+                                                <td>{{row.date}}</td>
+                                            {% endfor %}
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span19">
+                <section class="collecting-bank-account-info">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.collectingBankInfo.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.collectingBankInfo.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="http://jsfiddle.net/balanced/ZwhrA/">{{page.metadata.collectingBankInfo.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span19">
+                <section class="payout-status">
+                    <div class="box-pad-top">
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.payoutStatus.title}}</span>
+                            </div>
+                        </div>
+                        <div class="span19 no-margin-left">
+                            <div class="section-side-body">
+                                {{page.metadata.payoutStatus.body}}
+                            </div>
+                        </div>
+                        <div class="graphic"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span19">
+                <section class="reversing-a-payout">
+                    <div class="box-pad-top">
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.reversingAPayout.title}}</span>
+                            </div>
+                        </div>
+                        <div class="span5 no-margin-left">
+                            <div class="section-side-body">
+                                {{page.metadata.reversingAPayout.body}}
+                            </div>
+                        </div>
+                        <div class="graphic"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span19">
+                <section class="bank-statement-descriptor">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.bankStatementDescriptor.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.bankStatementDescriptor.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                            <p class="footnote">{{page.metadata.bankStatementDescriptor.limit}}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="span19">
+                <section class="row payouts">
+                    <div class="box-pad-top">
+                      <div class="section-bg content">
+                        <div class="row">
+                          <div class="span5 offset1 section-title section-title-no-width">
+                            <div class="title-wrapper">
+                              <span>{{page.metadata.payoutsPricing.title}}</span>
+                              <div class="title-icon"></div>
+                            </div>
+                          </div>
+
+                          <div class="span13 rate-panels">
+                            <div class="rate-panel main-rate-panel">
+                              <div class="panel-content">
+                                <span>{{page.metadata.payoutsPricing.payingYourSellers}}</span>
+                                <div class="rate-image paying-sellers"></div>
+                              </div>
+                            </div>
+                            <div class="rate-panel secondary-rate-panel tr-rate-panel">
+                              <div class="panel-content">
+                                <span>{{page.metadata.payoutsPricing.payingToYourBank}}</span>
+                                <div class="rate-image paying-your-account"></div>
+                              </div>
+                            </div>
+
+                            <div class="rate-panel secondary-rate-panel">
+                              <div class="panel-content">
+                                <span>{{page.metadata.payoutsPricing.reversal}}</span>
+                                <div class="rate-image reversal"></div>
+                              </div>
+                            </div>
+                            <div class="rate-panel secondary-rate-panel bot-mid-rate-panel">
+                              <div class="panel-content">
+                                <span>{{page.metadata.payoutsPricing.failure}}</span>
+                                <div class="rate-image failure"></div>
+                              </div>
+                            </div>
+                            <div class="rate-panel secondary-rate-panel">
+                              <div class="panel-content">
+                                <span>{{page.metadata.payoutsPricing.preloading}}</span>
+                                <div class="rate-image preloading-escrow"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="try-the-dashboard">
+                    <div class="center">
+                        <p>{{page.metadata.tryTheDashboard.body}}</p>
+                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-pal">{{page.metadata.tryTheDashboard.button}}</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

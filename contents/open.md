@@ -1,5 +1,5 @@
 ---
-title: Balanced - Payments processing, escrow, and payouts in one simple API | ACH Debits
+title: Balanced - Payments processing, escrow, and payouts in one simple API | Open Company
 template: open.html
 
 pageTitle: Open Company
@@ -96,7 +96,7 @@ github:
   viewAll: View all projects on Github
 
 tryTheDashboard:
-  body: Ready to get started?
+  body: Get started today.
   button: TRY THE DASHBOARD
 
 ---
