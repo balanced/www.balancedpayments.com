@@ -75,7 +75,7 @@ bankHolidays:
 collectingBankInfo:
   title: Collecting bank account info
   body: To issue a payout, collect the bank account holder's name, routing number, account number, and account type.
-  learnLink: Demo our bank accounts form
+  learnLink: Demo our bank account form
 
 payoutStatus:
   title: Payout status
