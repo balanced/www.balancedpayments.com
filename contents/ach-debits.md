@@ -80,7 +80,7 @@ paymentStatus:
 
 bankStatementDescriptor:
   title: Bank statement descriptor
-  body: Modify the bank statement soft descriptor on a per-transaction basis.
+  body: Modify the bank statement<br />soft descriptor on a<br />per-transaction basis.
   learnLink: "Learn more about setting<br />the soft descriptor"
   limit: "Bank statement soft descriptor max. character length: 14"
 
@@ -98,7 +98,7 @@ achDebitsPricing:
   failure: Failure
 
 tryTheDashboard:
-  body: Start accepting ACH debit payments today.
+  body: Get started today.
   button: TRY THE DASHBOARD
 
 ---
