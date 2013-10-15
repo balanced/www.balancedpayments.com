@@ -6,7 +6,7 @@ pageTitle: Payouts
 body_class: payouts
 
 subtitle:
-  heading: Pay your sellers with ACH direct deposit. Funds are deposited the next business day for U.S. bank accounts and same business day for Wells Fargo accounts.
+  heading: Pay your sellers with ACH direct deposit. Funds are deposited the next business day for U.S. bank accounts and the same business day for Wells Fargo accounts.
 
 howItWorks:
   title: How it works
