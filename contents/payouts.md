@@ -14,7 +14,7 @@ howItWorks:
 
 withProcessing:
   title: THE FULL MARKETPLACE SOLUTION
-  body: With Balanced's card processing and ACH debits,<br />money from your buyers are placed into an order-specific <br />escrow on behalf of the seller until you're ready to pay out.
+  body: With Balanced's card processing and ACH debits,<br />money from your buyers is placed into an order-specific <br />escrow on behalf of the seller until you're ready to pay out.
   process1: Debit the <br />buyer's credit card<br />or bank account
   process2: Funds are grouped into order-specific escrows, linking the buyer and seller together
   process3: Pay out your<br />seller(s) and collect<br />your marketplace fee
