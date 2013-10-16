@@ -145,6 +145,38 @@ customer_wall:
       classes: marketplace
       description: Connects sellers to content creators that can help them gain exposure for their products
       link: https://www.consignd.com/home
+    - id: topcoat
+      classes: marketplace
+      description: The best way to browse and book nail art
+      link: https://www.topcoat.me/
+    - id: anyroad
+      classes: marketplace
+      description: The global platform for unique tours from the world's best professional tour guides
+      link: http://www.anyroad.com/
+    - id: anyroad
+      classes: marketplace
+      description: Discover original art inspired by you and the colors in your space
+      link: http://www.arttwo50.com/
+    - id: stylend
+      classes: marketplace
+      description: A localized peer-to-peer marketplace where fashionable women have access to the infinite dream closet
+      link: http://stylend.co/
+    - id: sellsimple
+      classes: marketplace
+      description: Sell everywhere in under a minute
+      link: http://sellsimple.com/
+    - id: tastemaker
+      classes: marketplace
+      description: Making interior decorating affordable and accessible to everyone
+      link: https://www.tastemaker.com/
+    - id: rumgr
+      classes: marketplace
+      description: An online garage scale that's good for the community, the environment, and your wallet
+      link: http://www.rumgr.com/
+    - id: lasso
+      classes: marketplace
+      description: Wine, cheese, and more delivered
+      link: http://lassoit.com/
 
 tryTheDashboard:
   body: Ready to get started?
