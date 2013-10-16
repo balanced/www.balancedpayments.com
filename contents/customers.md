@@ -31,88 +31,120 @@ video_testimonials:
 customer_wall:
   list:
     - id: 750
+      pinned: true
       classes: marketplace
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-      link: http://crowdtilt.com/
-    - id: crowdtilt
-      classes: crowdfunding
-      link: http://crowdtilt.com/
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: kitchit
-      classes: ad-network
-      link: http://kitchit.com/
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: zaarly
+      description: Designs and develops distinguished websites and eCommerce software for the wine industry
+      link: http://www.750group.com/
+    - id: apixchange
+      pinned: false
+      classes: marketplace
+      description: The freelance marketplace for custom API projects
+      link: https://apixchange.com/
+    - id: artsy
+      pinned: true
+      classes: marketplace
+      description: An online platform for discovering and collecting art
+      link: http://artsy.net/
+    - id: boatbound
+      pinned: false
+      classes: marketplace
+      description: The first fully insured "pier-to-pier" boat rental marketplace
+      link: https://boatbound.co/
+    - id: cover
+      pinned: false
       classes: ecommerce
-      caseStudy: true
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-      link: http://zaarly.com/
-    - id: 750
-      classes: marketplace
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      description: Cover's dining out app aims to eliminate time spent waiting for your check
+      link: http://www.paywithcover.com/
     - id: crowdtilt
+      pinned: true
       classes: crowdfunding
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      description: The fastest and easiest way to pool funds with family and friends
+      link: https://www.crowdtilt.com/
+    - id: groupme
+      pinned: true
+      classes: crowdfunding
+      description: The best way to chat with everyone you know
+      link: https://groupme.com/
+    - id: grouptalent
+      pinned: true
+      classes: marketplace
+      description: A platform that makes it easy for developers to find companies they'll love and try them out
+      link: https://grouptalent.com/welcome/
+    - id: grubwithus
+      pinned: false
+      classes: marketplace
+      description: Social meals that allow you to meet new people while dining at some of your city's best restaurants
+      link: https://www.grubwithus.com/
     - id: kitchit
-      classes: ad-network
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: zaarly
-      classes: ecommerce
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: 750
+      pinned: true
       classes: marketplace
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: crowdtilt
-      classes: crowdfunding
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: kitchit
-      classes: ad-network
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: zaarly
+      description: Bring unforgettable dinning experiences home by connecting with world-class chefs
+      link: http://www.kitchit.com/start
+    - id: launchtrack
+      pinned: true
       classes: ecommerce
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: 750
+      description: Create an online presence for your events and activities
+      link: http://launchtrack.com/index.php
+    - id: pijonbox
+      pinned: false
       classes: marketplace
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: crowdtilt
-      classes: crowdfunding
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: kitchit
-      classes: ad-network
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
+      description: Curated monthly care packages college students love
+      link: https://www.pijonbox.com/
+    - id: redditgifts
+      pinned: true
+      classes: marketplace
+      description: The online gifts exchange program for the reddit.com community
+      link: http://redditgifts.com/
+    - id: sourcery
+      pinned: false
+      classes: marketplace
+      description: Source fresh produce from local distributors
+      link: http://sourcery.us/
+    - id: tapag
+      pinned: false
+      classes: marketplace
+      description: A marketplace for DVDs, video games, footwear, clothing, accessories, and unique collections of personal effects from major brands
+      link: http://www.tapag.com/
+    - id: tradesy
+      pinned: true
+      classes: marketplace
+      description: Turn your closet into cash. Buy and sell designer fashion quickly, easily, and safely.
+      link: http://www.tradesy.com/
+    - id: visually
+      pinned: false
+      classes: marketplace
+      description: A one-stop shop for the creation of data visualizations and infographics
+      link: http://visual.ly/
     - id: zaarly
-      classes: ecommerce
-    - id: 750
+      pinned: true
       classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
+      description: Discover and hire the best local service experts
+      link: https://www.zaarly.com/signup
+    - id: popexpert
+      pinned: false
       classes: marketplace
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: crowdtilt
-      classes: crowdfunding
-      description: Zaarly increases merchant signup by 36% with Balanced's instant settlement
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
+      description: Meet experts face-to-face from your computer
+      link: https://www.popexpert.com
+    - id: aglocal
+      pinned: false
       classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
-    - id: kitchit
-      classes: ad-network
-    - id: zaarly
-      classes: ecommerce
-    - id: 750
+      description: Buy and sell responsibly-raised meat
+      link: https://www.aglocal.com/
+    - id: aptdeco
+      pinned: false
       classes: marketplace
-    - id: crowdtilt
-      classes: crowdfunding
-
+      description: An online marketplace dedicated to buying and seller quality, pre-owned furniture
+      link: https://www.aptdeco.com/
+    - id: brandid
+      pinned: false
+      classes: marketplace
+      description: Connecting men who hate shopping with people who love to shop
+      link: https://www.getbrandid.com/#/
+    - id: consignd
+      pinned: false
+      classes: marketplace
+      description: Connects sellers to content creators that can help them gain exposure for their products
+      link: https://www.consignd.com/home
 
 tryTheDashboard:
   body: Ready to get started?
