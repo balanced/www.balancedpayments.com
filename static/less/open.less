@@ -1,17 +1,17 @@
 body.open-company {
     font-family: NimbusSanNov-Med, arial, sans-serif;
 
-    header {
-        &.site-header {
-            .logo {
-                display: none;
-            }
-        }
-    }
-
     .community, .support, .octotales-video {
         .spacer {
             border-top: 0px;
+        }
+    }
+
+    header {
+        .page-title {
+            h1 {
+                border-top: 1px solid #ffffff;
+            }
         }
     }
 
@@ -19,19 +19,16 @@ body.open-company {
         &.feature-image {
             position: relative;
             width: 100%;
-            padding: 25% 0px 25% 0px;
+            padding: 22% 0px 22% 0px;
             margin: 0px;
             border: 0px;
             height: 219px;
 
             &.open {
                 background: url(/images/open-company/open_company_bg_1.jpg) no-repeat 0 0px fixed;
-                //background: url(/images/open-company/open_company_bg_1.png) no-repeat center center scroll;
                 background-size: cover;
-                margin-top: -90px;
+                margin-top: -141px;
                 z-index: -1;
-                height: 359px;
-                padding: 18% 0px 18% 0px;
 
                 img {
                     width: 132px;
@@ -85,7 +82,7 @@ body.open-company {
                     border-bottom: 1px solid @white;
 
                     .diamond {
-                        top: 33px;
+                        top: 35px;
                     }
                 }
 

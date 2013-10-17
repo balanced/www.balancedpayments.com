@@ -56,10 +56,17 @@
 }
 
 body, html {
-  background: @pageBackground;
-  font-family: @bodyFont;
-  font-size: 15px;
-  line-height: 22px;
+    background: @pageBackground;
+    font-family: @bodyFont;
+    font-size: 15px;
+    line-height: 22px;
+
+    .container {
+        &.container-chunky {
+            width: 1008px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 a {
@@ -595,6 +602,7 @@ footer {
 #go {
   background-color: @diagramBackgroundTwo;
   .letThemKnow();
+  margin-bottom: 25px;
 }
 
 #marketplaces, #processing, #payouts {

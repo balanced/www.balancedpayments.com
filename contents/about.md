@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 15 payment aficionados and growing
+    text: 16 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -84,13 +84,18 @@ team:
     - name: damon chin
       job: designer
       desc: designed this website
-      link: http://dribbble.com/damonc
-      site: dribbble
+      link: https://github.com/dmdj03
+      site: github
     - name: manisha ramchandani
       job: account manager
       desc: fights for the customer
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
+    - name: jacob rus
+      job: support
+      desc: completed all of Harvard undergraduate math in freshman year
+      link: https://github.com/jrus
+      site: github
     - name: patrick cieplak
       job: engineer
       desc: understanding all the data
