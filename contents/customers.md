@@ -100,11 +100,6 @@ customer_wall:
     classes: marketplace
     description: Source fresh produce from local distributors
     link: http://sourcery.us
-  - id: tapag
-    pinned: false
-    classes: marketplace
-    description: A marketplace for DVDs, video games, footwear, clothing, accessories, and unique collections of personal effects from major brands
-    link: http://www.tapag.com
   - id: tradesy
     pinned: true
     classes: marketplace
@@ -250,7 +245,7 @@ customer_wall:
     classes: marketplace
     description: The easiest way to book household services
     link: http://www.handybook.com/
-  - id: favordelivery
+  - id: favor
     classes: marketplace
     description: Your on-demand personalized delivery assistant
     link: http://www.askfavor.com/
