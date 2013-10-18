@@ -1,2 +1,0 @@
-#!/bin/bash
-python watcher.py --dir js/ less/ --action "make all"
