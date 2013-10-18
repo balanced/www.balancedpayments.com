@@ -3,7 +3,7 @@
 @marketplace: @curryYellow60; // lighten(@curryYellow60, @lightenBy);
 @crowdfunding: @turquoise60; // lighten(@turquoise60, @lightenBy);
 @ecommerce: @byzantiumPurple60; // lighten(@byzantiumPurple60, @lightenBy);
-@ad-network: @forestGreen60; // lighten(@forestGreen60, @lightenBy);
+@donation: @forestGreen60; // lighten(@forestGreen60, @lightenBy);
 @case-study: @imperialRed100;
 
 .arrow-right {
@@ -208,9 +208,20 @@
     background: @white;
 
     .nav {
-      margin: 0 16px;
+      margin: 0 37px;
 
       > li {
+
+        &.ecommerce {
+            width: 231px;
+        }
+
+        &:first-of-type {
+            a {
+                margin-left: 0px;
+            }
+        }
+
         > a {
           font-family: NimbusSanNovCon-Med;
           font-weight: normal;
@@ -222,8 +233,8 @@
           color: @gray3;
           text-shadow: none;
 
-          padding: 18px 8px 9px;
-          margin: 0 7px 0;
+          padding: 17px 10px 13px 10px;
+          margin: 0px 0px 0px 43px;
           letter-spacing: 0.1em;
 
           &:before {
@@ -274,9 +285,9 @@
       }
     }
 
-    .ad-network {
+    .donation {
       a:before {
-        color: @ad-network;
+        color: @donation;
       }
     }
 
@@ -407,9 +418,9 @@
       }
     }
 
-    .ad-network {
+    .donation {
       .background {
-        background-color: @ad-network;
+        background-color: @donation;
       }
     }
 
