@@ -104,7 +104,8 @@ module.exports = function(grunt) {
 		less: {
 			development: {
 				options: {
-					'paths': ['static/less']
+					paths: ['static/less'],
+					yuicompress: true
 				},
 				files: {
 					'contents/static/css/bootstrap-2.0.css': 'static/less/bootstrap-2.0/bootstrap-2.0.less',
