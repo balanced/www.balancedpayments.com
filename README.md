@@ -9,22 +9,16 @@ Building locally
 
     cd www.balancedpayments.com
     npm install
-    git submodule update --init
-    make
+    grunt build
 
 Viewing the site
 ----------------
 
-    open output/index.html
+    open build/index.html
 
 Live compiling for development
 ----------------
 
-    wintersmith preview
-
-Then in another terminal:
-
-    cd static
-    ./watcher
+    grunt dev
 
 Navigate to [http://localhost:8080](http://localhost:8080).
