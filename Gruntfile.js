@@ -25,19 +25,9 @@ module.exports = function(grunt) {
 					yuicompress: true
 				},
 				files: {
-					'contents/static/css/bootstrap-2.0.css': 'static/less/bootstrap-2.0/bootstrap-2.0.less',
-					'contents/static/css/base.css': 'static/less/base.less',
-					'contents/static/css/pygments.css': 'static/less/pygments.less',
-					'contents/static/css/docs/old.css': 'static/less/docs/old.less',
-					'contents/static/css/docs/new.css': 'static/less/docs/new.less',
-					'contents/static/css/public.css': 'static/less/public.less',
-					'contents/static/css/ie9.css': 'static/less/ie9.less',
 					'contents/static/css/root5.css': 'static/less/root5.less',
 					'contents/static/css/root-v3.css': 'static/less/root-v3.less',
-					'contents/static/css/root4.css': 'static/less/root4.less',
-					'contents/static/css/root3.css': 'static/less/root3.less',
-					'contents/static/css/about.css': 'static/less/about.less',
-					'contents/static/css/kyc.css': 'static/less/kyc.less'
+					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			}
 		},
