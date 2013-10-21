@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="modal hide video-modal">
-<iframe width="560" height="360" src="" frameborder="0" allowfullscreen></iframe>
+<iframe width="720" height="460" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="bg-default">
@@ -206,7 +206,7 @@
           });
 
         var $banner = $videoTestimonial.find('.banner');
-        $banner.find('.banner-content-text span').text(testimonails[id].description);
+        $banner.find('.banner-content-text span').html(testimonails[id].description);
         $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
         $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.jpg');
 
