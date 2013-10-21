@@ -9,94 +9,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		concat: {
-			options: {
-				separator: ';\n'
-			},
-			js_libraries: {
-				src: [
-					'static/js/lib/jquery-1.8.2.min.js',
-					'static/js/lib/jquery-ui-1.9.1.custom.min.js',
-					'static/js/lib/jquery.ui.autocomplete.html.js',
-					'static/js/lib/bootstrap-dropdown-2.0.2.js',
-					'static/js/lib/bootstrap-2.2.1.js',
-					'static/js/lib/jquery-autosave.js',
-					'static/js/lib/jquery-hotkeys.js',
-					'static/js/lib/strftime.js',
-					'static/js/lib/mustache-0.7.2.js'
-				],
-				dest: 'contents/static/js/build/balanced.lib.js'
-			},
-
-			js_sources: {
-				src: [
-					'static/js/src/utils.js',
-					'static/js/src/loading.js',
-					'static/js/src/core.js',
-					'static/js/src/marketplaces.js',
-					'static/js/src/payouts.js',
-					'static/js/src/api_keys.js',
-					'static/js/src/transactions.js',
-					'static/js/src/root.js',
-					'static/js/src/help.js',
-					'static/js/src/accounts.js',
-					'static/js/src/users.js',
-					'static/js/src/docs.js',
-					'static/js/src/logs.js',
-					'static/js/src/analytics.js',
-					'static/js/src/search.js',
-					'static/js/src/callbacks.js',
-					'static/js/src/layout-v3.js'
-				],
-				dest: 'contents/static/js/build/balanced.src.js'
-			},
-
-			docs: {
-				src: [
-					'static/js/src/docs/docs.js'
-				],
-				dest: 'contents/static/js/build/docs/docs.src.js'
-			},
-
-			stats: {
-				src: [
-					'static/js/src/_stats/utils.js',
-					'static/js/src/_stats/core.js'
-				],
-				dest: 'contents/static/js/build/_stats/stats.src.js'
-			},
-
-			status: {
-				src: [
-					'static/js/src/_status/core.js'
-				],
-				dest: 'contents/static/js/build/_status/core.src.js'
-			}
-		},
-
 		wintersmith: {
 			build: {},
 			preview: {
 				options: {
 					action: 'preview'
-				}
-			}
-		},
-
-		uglify: {
-			all: {
-				options: {
-
-				},
-				files: {
-					'contents/static/js/build/_status/core.min.js': 'contents/static/js/build/_status/core.src.js',
-					'contents/static/js/build/_stats/stats.min.js': 'contents/static/js/build/_stats/stats.src.js',
-					'contents/static/js/build/docs/docs.min.js': 'contents/static/js/build/docs/docs.src.js',
-					'contents/static/js/build/balanced.min.js': 'contents/static/js/build/balanced.src.js',
-					'contents/static/js/build/balanced.lib.min.js': 'contents/static/js/build/balanced.lib.js',
-					'contents/static/js/build/kyc.min.js': 'static/js/src/kyc.js',
-					'contents/static/js/build/irc.min.js': 'static/js/src/irc.js',
-					'contents/static/js/build/auto_complete.min.js': 'static/js/src/auto_complete.js'
 				}
 			}
 		},
@@ -178,7 +95,7 @@ module.exports = function(grunt) {
 		});
 	});
 
-	grunt.registerTask('_build', ['clean', 'concat', 'uglify', 'less', 'copy']);
+	grunt.registerTask('_build', ['clean', 'less', 'copy']);
 	grunt.registerTask('build', ['_build', 'wintersmith:build']);
 	grunt.registerTask('dev', ['_build', 'open', 'wintersmith:preview']);
 };
