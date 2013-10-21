@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=1200, height=device-height, user-scalable=1">
     <title>{{ page.metadata.title if page.metadata.title else name }}</title>
     <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAStJREFUWIXtlT1SwzAQRp+YHMAeGsrcIGlc4yukpDHODaBLF6dzB5yAkIYyOYJSu/INUtIw9g1MgZhhZJlITogbfZ12Pu2+0c+uaJqGIXU1aHUP4AGAkR4QQlDF0Rh4BWKgBl5CWWQuiRebyROQAgEggXmelAf913WdwFYVRyVYVnGUOhRPgQe1F5Vra/K2AKo4CoCpwXtvC9DhnS42k/FRgD9Un+rNk/JwFCCURc33nel6cwAweXcmY9cJzICVApHALJSFMYFJeVLuVI6f/c/A3OQV+qsUQtjW6SXbX3AxeQAP4AFa09BWH+/XGXCrlvubu8+sT55ejUgVX2rhlQ3EuRqRadq5TMuTAQLL2L8BmAaT9bA6B8AjsP61XquYs1qP8NIavA94AA/wBRJiTbdsTuB4AAAAAElFTkSuQmCC" type="image/x-icon">
 
@@ -176,32 +177,30 @@
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $(".toggle-child-menu").click(function(e) {
-                e.preventDefault();
+    $(document).ready(function() {
+        $(".toggle-child-menu").click(function(e) {
+            e.preventDefault();
 
-                $(document.body).css("overflow-x", "hidden");
-                $(".sidebar-menu-left ul li").removeClass("active");
-                $(this).parent("li").addClass("active");
+            $("body, html").css("overflow-x", "hidden");
 
-                var target = $(this).parent("li").attr("data-show");
+            $(".sidebar-menu-left ul li").removeClass("active");
+            $(this).parent("li").addClass("active");
 
-                $(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
-                $("#" + target).css("display", "block");
-                $(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
-            });
+            var target = $(this).parent("li").attr("data-show");
 
-            $(".close-child-menu-left a").click(function(e) {
-                e.preventDefault();
-
-                $(".sidebar-menu-left ul li").removeClass("active");
-                $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
-
-                setTimeout(function () {
-                  $(document.body).css("overflow-x", "visible");
-                }, 500);
-            });
+            $(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
+            $("#" + target).css("display", "block");
+            $(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
         });
+
+        $(".close-child-menu-left a").click(function(e) {
+            e.preventDefault();
+
+            $("body, html").css("overflow-x", "visible");
+            $(".sidebar-menu-left ul li").removeClass("active");
+            $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
+        });
+    });
     </script>
 </body>
 </html>
