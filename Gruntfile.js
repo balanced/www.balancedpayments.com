@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
 			files: {
-				src: ['build/', 'dist/', 'report/', 'contants/', 'output/', 'output_tmp/']
+				src: ['build/', 'dist/', 'report/', 'contants/']
 			}
 		},
 
@@ -21,12 +21,23 @@ module.exports = function(grunt) {
 		less: {
 			development: {
 				options: {
+					paths: ['static/less']
+				},
+				files: {
+					'contents/static/css/index.css': 'static/less/index.less',
+					'contents/static/css/root.css': 'static/less/root.less',
+					'contents/static/css/about.css': 'static/less/about.less'
+				}
+			},
+
+			production: {
+				options: {
 					paths: ['static/less'],
 					yuicompress: true
 				},
 				files: {
-					'contents/static/css/root5.css': 'static/less/root5.less',
-					'contents/static/css/root-v3.css': 'static/less/root-v3.less',
+					'contents/static/css/index.css': 'static/less/index.less',
+					'contents/static/css/root.css': 'static/less/root.less',
 					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			}
@@ -64,10 +75,68 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+
+		watch: {
+			fonts: {
+				files: [
+					'static/fonts/*'
+				],
+				tasks: ['copy:fonts'],
+				options: {
+					livereload: true
+				}
+			},
+			images: {
+				files: [
+					'static/images/*'
+				],
+				tasks: ['copy:images'],
+				options: {
+					livereload: true
+				}
+			},
+			icons: {
+				files: [
+					'static/icons/*'
+				],
+				tasks: ['copy:icons'],
+				options: {
+					livereload: true
+				}
+			},
+			css: {
+				files: [
+					'static/less/*'
+				],
+				tasks: ['less:development'],
+				options: {
+					livereload: true
+				}
+			},
+			md: {
+				files: [
+					'contents/*.md'
+				],
+				tasks: ['wintersmith:build'],
+				options: {
+					livereload: true
+				}
+			}
+		},
+
 		open: {
 			dev: {
 				path: 'http://localhost:8080/'
 			},
+		},
+
+		connect: {
+			server: {
+				options: {
+					port: 8080,
+					base: './build/'
+				}
+			}
 		}
 	});
 
@@ -85,7 +154,14 @@ module.exports = function(grunt) {
 		});
 	});
 
-	grunt.registerTask('_build', ['clean', 'less', 'copy']);
-	grunt.registerTask('build', ['_build', 'wintersmith:build']);
-	grunt.registerTask('dev', ['_build', 'open', 'wintersmith:preview']);
+	// Subtasks
+	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
+
+
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build']);
+	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
+
+	// The Default task
+	grunt.registerTask('default', ['dev']);
 };

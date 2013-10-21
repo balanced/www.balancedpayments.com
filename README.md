@@ -19,6 +19,6 @@ Viewing the site
 Live compiling for development
 ----------------
 
-    grunt dev
+    grunt
 
 Navigate to [http://localhost:8080](http://localhost:8080).
