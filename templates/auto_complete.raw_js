@@ -1,5 +1,0 @@
-var jj = Balanced_GenHelpData(env.contents.help);
-
-//callback(null, new Buffer("This should end up in the file I guess"));
-
-callback(null, new Buffer(JSON.stringify(jj, null, 1)));
