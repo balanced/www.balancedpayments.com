@@ -1,8 +1,8 @@
 var fs = require('fs');
 
 // use the version of markdown that wintersmith is using so that we get its configs
-var marked = require('./node_modules/wintersmith/node_modules/marked');
-var nunjuck = require('./node_modules/wintersmith-nunjucks/node_modules/nunjucks');
+var marked = require('../node_modules/wintersmith/node_modules/marked');
+var nunjuck = require('../node_modules/wintersmith-nunjucks/node_modules/nunjucks');
 
 module.exports = function (env, callback) {
 	function RawTemplate(template) {
