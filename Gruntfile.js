@@ -161,6 +161,34 @@ module.exports = function(grunt) {
 			dev: {
 				path: 'http://localhost:8080/'
 			},
+		},
+
+		hashres: {
+			options: {
+				fileNameFormat: '${name}-${hash}.${ext}'
+			},
+			css: {
+				src: ['build/static/css/*.css'],
+				dest: ['build/**/*.html']
+			},
+			js: {
+				src: ['build/static/js/*.js'],
+				dest: ['build/**/*.html']
+			},
+			images: {
+				src: ['build/images/**/*.png', 'build/static/images/**/*.png'],
+				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			},
+			fonts: {
+				src: ['build/static/fonts/**/*'],
+				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			}
+		},
+
+		img: {
+			crush_them: {
+				src: ['build/images/**/*.png', 'build/static/images/**/*.png']
+			}
 		}
 	});
 
@@ -179,6 +207,6 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('_build', ['clean', 'concat', 'uglify', 'less', 'copy']);
-	grunt.registerTask('build', ['_build', 'wintersmith:build']);
+	grunt.registerTask('build', ['_build', 'wintersmith:build', 'hashres']);
 	grunt.registerTask('dev', ['_build', 'open', 'wintersmith:preview']);
 };
