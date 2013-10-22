@@ -166,6 +166,71 @@ module.exports = function(grunt) {
 			crush_them: {
 				src: ['build/images/**/*.png', 'build/static/images/**/*.png']
 			}
+		},
+
+		s3: {
+			options: {
+				access: 'public-read',
+				region: 'us-west-1',
+				gzip: true,
+				headers: {
+					'X-Employment': 'aXdhbnR0b21ha2VhZGlmZmVyZW5jZStobkBiYWxhbmNlZHBheW1lbnRzLmNvbQ=='
+				}
+			},
+			previewCached: {
+				options: {
+					bucket: 'balanced-www-preview',
+				},
+				headers: {
+					'Cache-Control': 'public, max-age=86400'
+				},
+				upload: [{
+					src: 'build/images/**/*',
+					dest: 'images/'
+				}, {
+					src: 'build/static/**/*',
+					dest: 'static/'
+				}]
+			},
+			previewUncached: {
+				options: {
+					bucket: 'balanced-www-preview',
+				},
+				headers: {
+					'Cache-Control': 'max-age=60'
+				},
+				upload: [{
+					src: 'build/*',
+					dest: ''
+				}]
+			},
+			productionCached: {
+				options: {
+					bucket: 'balanced-www',
+				},
+				headers: {
+					'Cache-Control': 'public, max-age=86400'
+				},
+				upload: [{
+					src: 'build/images/**/*',
+					dest: 'images/'
+				}, {
+					src: 'build/static/**/*',
+					dest: 'static/'
+				}]
+			},
+			productionUncached: {
+				options: {
+					bucket: 'balanced-www',
+				},
+				headers: {
+					'Cache-Control': 'max-age=60'
+				},
+				upload: [{
+					src: 'build/*',
+					dest: ''
+				}]
+			},
 		}
 	});
 
@@ -187,9 +252,17 @@ module.exports = function(grunt) {
 	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
 	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
 
+	// Uploads to s3. Requires environment variables to be set if the bucket
+	// you're uploading to doesn't have public write access.
+	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
+	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
 
+	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
+
+	// Register a test task
+	grunt.registerTask('test', ['build']);
 
 	// The Default task
 	grunt.registerTask('default', ['dev']);
