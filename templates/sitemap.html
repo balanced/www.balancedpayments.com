@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% set elements = env.helpers.getSitemapElements(contents) %}
-  {% for element in elements %}
+  {%- for element in elements -%}
     {% set permaLink = url + element.baseUrl %}
   <url>
       <loc>{{ permaLink }}</loc>
       <lastmod>{{ moment(element.lastModifiedTime).format('YYYY-MM-DD') }}</lastmod>
-      {% if element.changefreq %}
+      {%- if element.changefreq -%}
       <changefreq>{{ element.changefreq }}</changefreq>
-      {% else %}
+      {%- else -%}
       <changefreq>weekly</changefreq>
-      {% endif %}
-      {% if element.priority %}
+      {%- endif -%}
+      {%- if element.priority -%}
       <priority>{{ element.priority }}</priority>
-      {% endif %}
+      {%- endif -%}
    </url>
-  {% endfor %}
+  {%- endfor -%}
 </urlset>
