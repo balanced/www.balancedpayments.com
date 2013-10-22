@@ -34,9 +34,7 @@
     "grunt-jsbeautifier": "~0.2.2",
     "grunt-wintersmith": "~0.0.2",
     "matchdep": "~0.3.0",
-    "grunt-contrib-connect": "~0.5.0"
-  },
-  "optionalDependencies": {
+    "grunt-contrib-connect": "~0.5.0",
     "grunt-img": "~0.1.7"
   }
 }

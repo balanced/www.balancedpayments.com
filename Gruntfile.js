@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
 			files: {
-				src: ['build/', 'dist/', 'report/', 'contants/']
+				src: ['build/', 'dist/', 'report/', 'contants/', 'contents/images/', 'contents/static/']
 			}
 		},
 
@@ -157,7 +157,7 @@ module.exports = function(grunt) {
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
 			},
 			fonts: {
-				src: ['build/static/fonts/**/*'],
+				src: ['build/static/css/fonts/**/*'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
 			}
 		},
@@ -231,6 +231,56 @@ module.exports = function(grunt) {
 					dest: ''
 				}]
 			},
+		},
+
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'static/js/**/*.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			test: {
+				files: {
+					src: [
+						'test/**/*.js',
+						'!test/support/lib/*.*',
+						'!test/support/*.js'
+					],
+				},
+				options: {
+					jshintrc: 'test/.jshintrc'
+				}
+			}
+		},
+
+		jsbeautifier: {
+			options: {
+				config: '.jsbeautifyrc'
+			},
+			verify: {
+				options: {
+					mode: 'VERIFY_ONLY'
+				},
+				src: [
+					'Gruntfile.js',
+					'static/js/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			},
+			update: {
+				options: {
+					mode: 'VERIFY_AND_WRITE'
+				},
+				src: [
+					'Gruntfile.js',
+					'static/js/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			}
 		}
 	});
 
