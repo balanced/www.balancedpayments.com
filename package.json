@@ -6,9 +6,6 @@
     "browsernizr": "~1.0.0",
     "wintersmith": "~2.0.7"
   },
-  "peerDependencies": {
-    "less": "~1.3.3"
-  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-open": "~0.2.2",
