@@ -138,6 +138,34 @@ module.exports = function(grunt) {
 					base: './build/'
 				}
 			}
+		},
+
+		hashres: {
+			options: {
+				fileNameFormat: '${name}-${hash}.${ext}'
+			},
+			css: {
+				src: ['build/static/css/*.css'],
+				dest: ['build/**/*.html']
+			},
+			js: {
+				src: ['build/static/js/*.js'],
+				dest: ['build/**/*.html']
+			},
+			images: {
+				src: ['build/images/**/*.png', 'build/static/images/**/*.png'],
+				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			},
+			fonts: {
+				src: ['build/static/fonts/**/*'],
+				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			}
+		},
+
+		img: {
+			crush_them: {
+				src: ['build/images/**/*.png', 'build/static/images/**/*.png']
+			}
 		}
 	});
 
@@ -160,7 +188,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
 
 
-	grunt.registerTask('build', ['_buildprod', 'wintersmith:build']);
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
 
 	// The Default task
