@@ -281,6 +281,37 @@ module.exports = function(grunt) {
 					'!test/support/lib/*.js'
 				],
 			}
+		},
+
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true,
+					removeCommentsFromCDATA: true,
+					removeCDATASectionsFromCDATA: true,
+					collapseBooleanAttributes: true,
+					removeRedundantAttributes: true,
+					removeEmptyAttributes: true
+				},
+				files: {
+					'build/about.html': 'build/about.html',
+					'build/ach-debits.html': 'build/ach-debits.html',
+					'build/customers.html': 'build/customers.html',
+					'build/help.html': 'build/help.html',
+					'build/index.html': 'build/index.html',
+					'build/open.html': 'build/open.html',
+					'build/payouts.html': 'build/payouts.html',
+					'build/pricing.html': 'build/pricing.html',
+					'build/privacy.html': 'build/privacy.html',
+					'build/terms/acceptable_use.html': 'build/terms/acceptable_use.html',
+					'build/terms/marketplaceagreement.html': 'build/terms/marketplaceagreement.html',
+					'build/terms/privacy.html': 'build/terms/privacy.html',
+					'build/terms/selleragreement.html': 'build/terms/selleragreement.html',
+					'build/terms/use.html': 'build/terms/use.html',
+					'build/terms.html': 'build/terms.html'
+				}
+			}
 		}
 	});
 
@@ -308,7 +339,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
 
 	// Register the main build/dev tasks
-	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres']);
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
 
 	// Register a test task
