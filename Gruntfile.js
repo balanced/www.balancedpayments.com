@@ -175,7 +175,9 @@ module.exports = function(grunt) {
 				gzip: true,
 				headers: {
 					'X-Employment': 'aXdhbnR0b21ha2VhZGlmZmVyZW5jZStobkBiYWxhbmNlZHBheW1lbnRzLmNvbQ=='
-				}
+				},
+				maxOperations: 20,
+				gzipExclude: ['.jpg', '.jpeg', '.png', '.ico', '.gif']
 			},
 			previewCached: {
 				options: {
@@ -186,10 +188,13 @@ module.exports = function(grunt) {
 				},
 				upload: [{
 					src: 'build/images/**/*',
-					dest: 'images/'
+					dest: 'images/',
+					rel: 'build/images'
 				}, {
 					src: 'build/static/**/*',
-					dest: 'static/'
+					dest: 'static/',
+					rel: 'build/static'
+
 				}]
 			},
 			previewUncached: {
@@ -201,7 +206,12 @@ module.exports = function(grunt) {
 				},
 				upload: [{
 					src: 'build/*',
-					dest: ''
+					dest: '',
+					rel: 'build'
+				}, {
+					src: 'build/terms/*',
+					dest: 'terms/',
+					rel: 'build/terms'
 				}]
 			},
 			productionCached: {
@@ -213,10 +223,13 @@ module.exports = function(grunt) {
 				},
 				upload: [{
 					src: 'build/images/**/*',
-					dest: 'images/'
+					dest: 'images/',
+					rel: 'build/images'
 				}, {
 					src: 'build/static/**/*',
-					dest: 'static/'
+					dest: 'static/',
+					rel: 'build/static'
+
 				}]
 			},
 			productionUncached: {
@@ -228,7 +241,12 @@ module.exports = function(grunt) {
 				},
 				upload: [{
 					src: 'build/*',
-					dest: ''
+					dest: '',
+					rel: 'build'
+				}, {
+					src: 'build/terms/*',
+					dest: 'terms/',
+					rel: 'build/terms'
 				}]
 			},
 		},
