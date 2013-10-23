@@ -132,7 +132,7 @@ backers:
   heading: backers
   list:
     - name: andreessen horowitz
-      desc: backed Github, Airbnb, Lyft
+      desc: backed Github, Airbnb, Lyft, Pinterest
     - name: y combinator
       desc: backed Dropbox, Airbnb, Heroku
     - name: sv angel
