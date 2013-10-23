@@ -175,7 +175,10 @@ module.exports = function(grunt) {
 					src: 'build/static/**/*',
 					dest: 'static/',
 					rel: 'build/static'
-
+				}, {
+					src: 'build/*.{xml,txt,ico}',
+					dest: '',
+					rel: 'build'
 				}]
 			},
 			previewUncached: {
@@ -183,7 +186,8 @@ module.exports = function(grunt) {
 					bucket: 'balanced-www-preview',
 				},
 				headers: {
-					'Cache-Control': 'max-age=60'
+					'Cache-Control': 'max-age=60',
+					'Content-Type': 'text/html'
 				},
 				upload: [{
 					src: 'build/*',
@@ -210,7 +214,10 @@ module.exports = function(grunt) {
 					src: 'build/static/**/*',
 					dest: 'static/',
 					rel: 'build/static'
-
+				}, {
+					src: 'build/*.{xml,txt,ico}',
+					dest: '',
+					rel: 'build'
 				}]
 			},
 			productionUncached: {
@@ -218,7 +225,8 @@ module.exports = function(grunt) {
 					bucket: 'balanced-www',
 				},
 				headers: {
-					'Cache-Control': 'max-age=60'
+					'Cache-Control': 'max-age=60',
+					'Content-Type': 'text/html'
 				},
 				upload: [{
 					src: 'build/*',
@@ -229,7 +237,7 @@ module.exports = function(grunt) {
 					dest: 'terms/',
 					rel: 'build/terms'
 				}]
-			},
+			}
 		},
 
 		jshint: {
@@ -334,8 +342,8 @@ module.exports = function(grunt) {
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
-	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
-	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
+	grunt.registerTask('deploy', ['build', 's3:productionUncached', 's3:productionCached']);
+	grunt.registerTask('deployPreview', ['build', 's3:previewUncached', 's3:previewCached']);
 
 	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
