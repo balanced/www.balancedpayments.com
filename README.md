@@ -7,7 +7,7 @@ Balanced Static Site
 
 ## What
 
-Welcome to the Balanced Dashboard.
+Welcome to the Balanced Static Site.
 
 As an open company we want to put as much of our company in the public view as
 possible. We're creating our [homepage](https://www.balancedpayments.com/) as a static site that
