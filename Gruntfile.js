@@ -63,16 +63,6 @@ module.exports = function(grunt) {
 						dest: 'contents/images'
 					}
 				]
-			},
-			icons: {
-				files: [
-					{
-						cwd: 'static/icons/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/static/icons'
-					}
-				]
 			}
 		},
 
@@ -91,15 +81,6 @@ module.exports = function(grunt) {
 					'static/images/*'
 				],
 				tasks: ['copy:images'],
-				options: {
-					livereload: true
-				}
-			},
-			icons: {
-				files: [
-					'static/icons/*'
-				],
-				tasks: ['copy:icons'],
 				options: {
 					livereload: true
 				}
@@ -313,21 +294,21 @@ module.exports = function(grunt) {
 					removeEmptyAttributes: true
 				},
 				files: {
-					'build/about.html': 'build/about.html',
-					'build/ach-debits.html': 'build/ach-debits.html',
-					'build/customers.html': 'build/customers.html',
-					'build/help.html': 'build/help.html',
-					'build/index.html': 'build/index.html',
-					'build/open.html': 'build/open.html',
-					'build/payouts.html': 'build/payouts.html',
-					'build/pricing.html': 'build/pricing.html',
-					'build/privacy.html': 'build/privacy.html',
-					'build/terms/acceptable_use.html': 'build/terms/acceptable_use.html',
-					'build/terms/marketplaceagreement.html': 'build/terms/marketplaceagreement.html',
-					'build/terms/privacy.html': 'build/terms/privacy.html',
-					'build/terms/selleragreement.html': 'build/terms/selleragreement.html',
-					'build/terms/use.html': 'build/terms/use.html',
-					'build/terms.html': 'build/terms.html'
+					'build/about': 'build/about.html',
+					'build/ach-debits': 'build/ach-debits.html',
+					'build/customers': 'build/customers.html',
+					'build/help': 'build/help.html',
+					'build/index': 'build/index.html',
+					'build/open': 'build/open.html',
+					'build/payouts': 'build/payouts.html',
+					'build/pricing': 'build/pricing.html',
+					'build/privacy': 'build/privacy.html',
+					'build/terms/acceptable_use': 'build/terms/acceptable_use.html',
+					'build/terms/marketplaceagreement': 'build/terms/marketplaceagreement.html',
+					'build/terms/privacy': 'build/terms/privacy.html',
+					'build/terms/selleragreement': 'build/terms/selleragreement.html',
+					'build/terms/use': 'build/terms/use.html',
+					'build/terms/index': 'build/terms.html'
 				}
 			}
 		}
