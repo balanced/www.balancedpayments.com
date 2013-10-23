@@ -5,10 +5,20 @@
     "description": "Balanced - Payments processing, escrow, and payouts in one simple API",
     "keywords": "Balanced, Payments, processing, escrow, payouts, api, simple"
   },
+  "templates": "./templates",
+  "contents": "./contents",
+  "output": "./build",
+  "require": {
+    "moment": "moment"
+  },
   "plugins": [
     "wintersmith-browserify",
     "wintersmith-less",
     "wintersmith-nunjucks",
-    "./balanced-render-plugin"
+    "./plugins/balanced-content-helpers.js",
+    "./plugins/balanced-render-plugin.js"
+  ],
+  "ignore": [
+    "**/.DS_Store"
   ]
 }

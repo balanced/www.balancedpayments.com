@@ -1,0 +1,218 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="modal hide video-modal">
+<iframe width="720" height="460" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="bg-default">
+    <section class="video-testimonial-image xlarge-bottom-margin">
+        <div class="background-image first"></div>
+        <div class="background-image second"></div>
+        <!-- <div class="window"></div> -->
+        <div class="container">
+            <div class="row">
+                <div class="span19">
+                <div class="banner bg-white">
+                    <div class="row">
+                        <div class="banner-video-thumbnail span5 watch-video">
+                          <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.jpg" />
+                          <div class="window">&nbsp;</div>
+                          <div class="play-button"><span class="arrow-right"></span></div>
+                        </div>
+                        <div class="banner-content span10">
+                            <div class="banner-logo">
+                              <img src="/images/customers/logo_{{page.metadata.video_testimonials.list[0].id}}_video.png" />
+                            </div>
+                            <div class="banner-content-text">
+                                <span>{{page.metadata.video_testimonials.list[0].description}}</span> <a href="#" class="watch-how watch-video">Watch how &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="row thumb-container">
+                <div>
+                    {% for testimonial in page.metadata.video_testimonials.list %}
+                    <div class="thumb{% if loop.first %} selected{% endif %}" id="{{testimonial.id}}">
+                        <img class="thumb-image" src="/images/customers/{{testimonial.id}}_small_thumbnail.png"/>
+                        <div class="thumb-label">{{testimonial.label}}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle">
+                        <div class="span19">
+                            <span class="">{{ page.metadata.subtitle.heading }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="customer-wall-header span19">
+                        <div class="navbar">
+                            <ul class="nav">
+                                <li class="selected all"><a href="#">All</a></li>
+                                <li class="circle marketplace" data-filter="marketplace"><a href="#">Marketplace</a></li>
+                                <li class="circle crowdfunding" data-filter="crowdfunding"><a href="#">Crowdfunding</a></li>
+                                <li class="circle ecommerce" data-filter="ecommerce"><a href="#">E-Commerce Provider</a></li>
+                                <li class="circle donation" data-filter="donation"><a href="#">Donation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row large-bottom-margin">
+                    <div class="customer-wall">
+                        <div class="span19">
+                          {% for customer in page.metadata.customer_wall.list %}
+                            <div class="card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
+                                <a class="flipper" href="{{customer.link}}" rel="nofollow">
+                                    <div class="front">
+                                      <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}.png"/><div class="background">&nbsp;</div></div>
+
+                                      {% if customer.caseStudy %}
+                                      <div class="case-study-bar">Case Study</div>
+                                      {% endif %}
+                                    </div>
+                                    <div class="back">
+                                      <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}.png"/></div>
+
+                                      {% if customer.description %}
+                                      <div class="case-study-content">{{customer.description}} <div class="study-bar"><span class="icon-arrow-forward-dashboard"></span></div></div>
+                                      {% endif %}
+
+                                      {% if customer.caseStudy %}
+                                      <div class="case-study-bar">View Case Study <span class="icon-arrow-forward-dashboard"></span></div>
+                                      {% endif %}
+                                    </div>
+                                </a>
+                            </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="try-the-dashboard">
+                    <div class="center">
+                        <p>{{page.metadata.tryTheDashboard.body}}</p>
+                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-pal">TRY THE DASHBOARD</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.customer-wall .span19').isotope({
+        itemSelector: '.card',
+        sortBy: 'random'
+      });
+
+      $('.customer-wall-header .nav li').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $this = $(this);
+        var filter = $this.attr('data-filter');
+
+        if (filter) {
+          $('.customer-wall .span19').isotope({
+            filter: '.' + filter
+          });
+        } else {
+          $('.customer-wall .span19').isotope({
+            filter: '*'
+          });
+        }
+
+        $this.addClass('selected').siblings().removeClass('selected');
+      });
+
+      var testimonails = {};
+      {%- for testimonial in page.metadata.video_testimonials.list -%}
+      testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}" };
+      {%- endfor -%}
+
+      $.each(testimonails, function (k, v) {
+        var i = new Image();
+        i.src = '/images/customers/' + k + '_background.jpg';
+
+        var g = new Image();
+        g.src = '/images/customers/logo_' + k + '_video.png';
+
+        var t = new Image();
+        t.src = '/images/customers/' + k + '_video_thumbnail.jpg';
+      });
+
+      $('.video-testimonial-image .watch-video').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $videoTestimonial = $('.video-testimonial-image');
+        $videoTestimonial.addClass('video-playing');
+
+        var $selected = $videoTestimonial.find('.thumb-container .thumb.selected');
+        var id = $selected.attr('id');
+
+        var $iframe = $('.video-modal iframe').attr('src', '//www.youtube.com/embed/' + testimonails[id].ytVideoId + '?rel=0');
+        $('.video-modal').modal('show').off('hide.balanced').on('hide.balanced', function() {
+          $videoTestimonial.removeClass('video-playing');
+          $iframe.attr('src', '');
+        });
+      });
+
+      $('.video-testimonial-image .thumb-container .thumb').on('click', function(evt) {
+        evt.preventDefault();
+
+        var $this = $(this);
+        if ($this.hasClass('selected')) {
+          return;
+        }
+
+        var id = $this.attr('id');
+
+        if (!testimonails[id]) {
+          return;
+        }
+
+        var $videoTestimonial = $('.video-testimonial-image');
+        $videoTestimonial.find('.background-image:hidden')
+          .css({
+            'background-image': 'url(/images/customers/' + id + '_background.jpg)',
+            'z-index': '-1'
+          })
+          .fadeIn('slow', function () {
+            $(this).siblings('.background-image').hide();
+            $(this).css('z-index', '-2');
+          });
+
+        var $banner = $videoTestimonial.find('.banner');
+        $banner.find('.banner-content-text span').html(testimonails[id].description);
+        $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
+        $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.jpg');
+
+        $this.addClass('selected').siblings().removeClass('selected');
+      });
+    });
+</script>
+
+{% endblock %}
