@@ -174,7 +174,24 @@
                         <div class="span1 spacer"></div>
                         <div class="span13 no-margin-left">
                             <div class="teeth border-top">
-                                <div class="graphic"></div>
+                                <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
+                                {% for item in page.metadata.bankAcctInfo.list %}
+                                <div class="bank-info-section {{item.classes}}">
+                                  <div class="input-field">
+                                    <h5>{{item.title}}</h5>
+                                    <input type="text" placeholder="{{item.placeholder}}"/>
+                                  </div>
+                                  <div class="description">
+                                    <span>{{item.description}}</span>
+                                  </div>
+                                </div>
+                                {% endfor %}
+                                <div class="bank-info-bottom">
+                                  <div class="bottom">
+                                    <span>{{page.metadata.bankAcctInfo.bottom}}</span>
+                                  </div>
+                                  <div class="check-graphic"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

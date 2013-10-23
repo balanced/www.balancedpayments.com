@@ -97,7 +97,8 @@ module.exports = function(grunt) {
 			md: {
 				files: [
 					'contents/*.md',
-					'plugins/*.js'
+					'plugins/*.js',
+					'templates/*'
 				],
 				tasks: ['wintersmith:build'],
 				options: {
