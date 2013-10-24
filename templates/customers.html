@@ -73,7 +73,7 @@
 
                 <div class="row large-bottom-margin">
                     <div class="customer-wall">
-                        <div class="span19">
+                        <div class="masonry">
                           {% for customer in page.metadata.customer_wall.list %}
                             <div class="card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
                                 <a class="flipper" href="{{customer.link}}" rel="nofollow">
@@ -124,7 +124,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-      $('.customer-wall .span19').isotope({
+      $('.customer-wall .masonry').isotope({
         itemSelector: '.card',
         sortBy: 'random'
       });
@@ -136,11 +136,11 @@
         var filter = $this.attr('data-filter');
 
         if (filter) {
-          $('.customer-wall .span19').isotope({
+          $('.customer-wall .masonry').isotope({
             filter: '.' + filter
           });
         } else {
-          $('.customer-wall .span19').isotope({
+          $('.customer-wall .masonry').isotope({
             filter: '*'
           });
         }
@@ -150,18 +150,18 @@
 
       var testimonails = {};
       {%- for testimonial in page.metadata.video_testimonials.list -%}
-      testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}" };
+      testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}", background: "/images/customers/{{testimonial.id}}_background.jpg", logo: "/images/customers/logo_{{testimonial.id}}_video.png", thumb: "/images/customers/{{testimonial.id}}_video_thumbnail.jpg" };
       {%- endfor -%}
 
-      $.each(testimonails, function (k, v) {
+      $.each(testimonails, function (k, testimonial) {
         var i = new Image();
-        i.src = '/images/customers/' + k + '_background.jpg';
+        i.src = testimonial.background;
 
         var g = new Image();
-        g.src = '/images/customers/logo_' + k + '_video.png';
+        g.src = testimonial.thumb;
 
         var t = new Image();
-        t.src = '/images/customers/' + k + '_video_thumbnail.jpg';
+        t.src = testimonial.logo;
       });
 
       $('.video-testimonial-image .watch-video').on('click', function(evt) {
@@ -194,10 +194,12 @@
           return;
         }
 
+        var testimonial = testimonails[id];
+
         var $videoTestimonial = $('.video-testimonial-image');
         $videoTestimonial.find('.background-image:hidden')
           .css({
-            'background-image': 'url(/images/customers/' + id + '_background.jpg)',
+            'background-image': 'url(' + testimonial.background + ')',
             'z-index': '-1'
           })
           .fadeIn('slow', function () {
@@ -206,9 +208,9 @@
           });
 
         var $banner = $videoTestimonial.find('.banner');
-        $banner.find('.banner-content-text span').html(testimonails[id].description);
-        $banner.find('.banner-logo img').attr('src', '/images/customers/logo_' + id + '_video.png');
-        $banner.find('.banner-video-thumbnail img').attr('src', '/images/customers/' + id + '_video_thumbnail.jpg');
+        $banner.find('.banner-content-text span').html(testimonial.description);
+        $banner.find('.banner-logo img').attr('src', testimonial.logo);
+        $banner.find('.banner-video-thumbnail img').attr('src', testimonial.thumb);
 
         $this.addClass('selected').siblings().removeClass('selected');
       });

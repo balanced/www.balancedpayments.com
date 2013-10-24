@@ -116,7 +116,8 @@ module.exports = function(grunt) {
 			md: {
 				files: [
 					'contents/*.md',
-					'plugins/*.js'
+					'plugins/*.js',
+					'templates/*'
 				],
 				tasks: ['wintersmith:build'],
 				options: {
@@ -153,7 +154,7 @@ module.exports = function(grunt) {
 				dest: ['build/**/*.html']
 			},
 			images: {
-				src: ['build/images/**/*.png', 'build/static/images/**/*.png'],
+				src: ['build/images/**/*.png', 'build/images/**/*.jpg', 'build/images/**/*.jpeg', 'build/static/images/**/*.png'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
 			},
 			fonts: {
