@@ -146,7 +146,12 @@ body.payouts {
 
         &.collecting-bank-account-info {
             .bank-account-info {
-                background: @white;
+                .teeth {
+                    > div {
+                        background: @white;
+                        padding-bottom: 10px;
+                    }
+                }
             }
 
             .graphic {
@@ -161,27 +166,59 @@ body.payouts {
                 font-family: NimbusSanNovConD-Bol,arial,sans-serif;
                 font-size: 18px;
                 letter-spacing: .1em;
-                padding: 15px 25px;
-                color: @pineGreen60;
+                padding: 25px 25px 5px 25px;
+                color: @gray5;
                 text-transform: uppercase;
             }
 
             .bank-info-section {
-                padding: 25px 5px 25px 5px;
-                margin: 0 15px;
+                padding: 25px 0 25px 0;
+                margin: 0 25px;
                 border-bottom: 1px solid @gray3;
 
-                &:last-child,&:last-of-type,&.last {
+                &:last-child, &:last-of-type, &.last {
                     border-bottom: 0;
+                }
+
+                &.success {
+                    .success-icon {
+                        display: inline-block;
+                    }
+
+                    .description {
+                        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+
+                        > span {
+                            color: @black;
+                        }
+                    }
+                }
+
+                &.error {
+                    input {
+                        background: @imperialRed20;
+                    }
+                }
+
+                .success-icon {
+                    display: none;
+                    position: relative;
+                    font-size: 20px;
+                    left: -30px;
+                    color: @forestGreen60;
                 }
 
                 h6 {
                     color: @black;
                     margin: 0 15px;
+                    font-family: NimbusSanNov-Med, arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: normal;
                 }
 
                 input {
-                    background: @pineGreen20;
+                    background: @gray2;
                     color: @black;
                     margin: 0;
                     border: none;
@@ -190,45 +227,48 @@ body.payouts {
                     line-height: 30px;
                     font-size: 18px;
                     height: 30px;
-                    font-family: NimbusSanNovConD-Bol,arial,sans-serif;
+                    font-family: NimbusSanNov-Med,arial,sans-serif;
                     width: 50%;
+                    padding: 4px 10px;
                 }
 
                 &.large {
                     input {
-                        width: 100%;
+                        width: auto;
                     }
                 }
 
                 .description {
-                    font-family: NimbusSanNovCon-Bol,arial,sans-serif;
+                    font-family: NimbusSanNov-Med, arial, sans-serif;
                     font-size: 13px;
-                    line-height: 18px;
+                    line-height: 16px;
                     color: #000;
                     display: table;
                     overflow: hidden;
                     float: right;
                     height: 100%;
-                    min-height: 40px;
+                    min-height: 36px;
+                    margin-left: 0;
 
                     > span {
                         display: table-cell;
                         vertical-align: middle;
-                        color: @pineGreen40;
+                        color: @gray5;
                     }
                 }
             }
 
             .bank-info-bottom {
-                background: @gray2;
+                background: @pineGreen20;
                 height: 150px;
-                margin: 0 0 30px 0;
+                margin: 0;
 
                 .bottom {
                     margin: 15px 0;
-                    padding: 10px 25px;
-                    border-right: 2px solid @gray5;
-                    height: 95px;
+                    padding: 30px 25px;
+                    border-right: 1px solid @gray3;
+                    height: 55px;
+                    color: @black;
                 }
 
                 span {
@@ -236,6 +276,14 @@ body.payouts {
                     line-height: 18px;
                     font-style: italic;
                     font-size: 14px;
+                }
+
+                .check-graphic {
+                    background: url(/images/check_image.png) no-repeat center center;
+                    height: 110px;
+                    width: 280px;
+                    background-size: 280px;
+                    margin-top: 25px;
                 }
             }
         }

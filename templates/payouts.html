@@ -174,27 +174,32 @@
                         <div class="span1 spacer"></div>
                         <div class="span13 no-margin-left bank-account-info">
                             <div class="teeth border-top">
-                                <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
-                                {% for item in page.metadata.bankAcctInfo.list %}
-                                <div class="bank-info-section {{item.classes}}">
-                                  <div class="row">
-                                    <h6>{{item.title}}</h6>
-                                  </div>
-                                  <div class="row">
-                                    <div class="input-field span6">
-                                      <input type="text" value="{{item.placeholder}}"/>
+                                <div>
+                                  <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
+                                  {% for item in page.metadata.bankAcctInfo.list %}
+                                  <div class="bank-info-section {{item.classes}}">
+                                    <div class="row">
+                                      <h6>{{item.title}}</h6>
                                     </div>
-                                    <div class="description span6">
-                                      <span>{{item.description}}</span>
+                                    <div class="row">
+                                      <div class="input-field span6">
+                                        <input type="text" value="{{item.placeholder}}" {{item.attr}}/>
+                                        <span class="success-icon"><i class="icon-checkmark"></i></span>
+                                      </div>
+                                      <div class="description span6">
+                                        <span>{{item.description}}</span>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                {% endfor %}
-                                <div class="bank-info-bottom row">
-                                  <div class="bottom span4">
-                                    <span>{{page.metadata.bankAcctInfo.bottom}}</span>
+                                  {% endfor %}
+                                  <div class="bank-info-bottom row">
+                                    <div class="bottom span4">
+                                      <span>{{page.metadata.bankAcctInfo.bottom}}</span>
+                                    </div>
+                                    <div class="span7">
+                                      <div class="check-graphic"></div>
+                                    </div>
                                   </div>
-                                  <div class="check-graphic"></div>
                                 </div>
                             </div>
                         </div>
@@ -343,4 +348,30 @@
     </div>
 </div>
 
+<script type="text/javascript">
+$(function() {
+  var $routingNumber = $('.routing-number'),
+    $routingNumberInput = $routingNumber.find('input');
+
+  function validateRoutingNumber(routingNumber, cb) {
+    return cb(routingNumber && routingNumber.length && routingNumber.length >= 9);
+  };
+
+  $routingNumberInput.on('blur', function(event) {
+    var val = $routingNumberInput.val();
+
+    validateRoutingNumber(val, function (bankInfo) {
+
+    });
+  });
+
+  $routingNumberInput.on('keyup', function(event) {
+    var val = $routingNumberInput.val();
+
+    validateRoutingNumber(val, function (bankInfo) {
+
+    });
+  });
+});
+</script>
 {% endblock %}

@@ -114,7 +114,8 @@ bankAcctInfo:
     - title: Routing Number
       description: Enter your 9-digit routing number.
       classes: routing-number
-      placeholder: 013654389
+      placeholder: 121042882
+      attr: maxlength=9
     - title: Account Number
       description: Enter your account number.
       classes: account-number
