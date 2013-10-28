@@ -172,22 +172,26 @@
                             </div>
                         </div>
                         <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
+                        <div class="span13 no-margin-left bank-account-info">
                             <div class="teeth border-top">
                                 <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
                                 {% for item in page.metadata.bankAcctInfo.list %}
                                 <div class="bank-info-section {{item.classes}}">
-                                  <div class="input-field">
-                                    <h5>{{item.title}}</h5>
-                                    <input type="text" placeholder="{{item.placeholder}}"/>
+                                  <div class="row">
+                                    <h6>{{item.title}}</h6>
                                   </div>
-                                  <div class="description">
-                                    <span>{{item.description}}</span>
+                                  <div class="row">
+                                    <div class="input-field span6">
+                                      <input type="text" value="{{item.placeholder}}"/>
+                                    </div>
+                                    <div class="description span6">
+                                      <span>{{item.description}}</span>
+                                    </div>
                                   </div>
                                 </div>
                                 {% endfor %}
-                                <div class="bank-info-bottom">
-                                  <div class="bottom">
+                                <div class="bank-info-bottom row">
+                                  <div class="bottom span4">
                                     <span>{{page.metadata.bankAcctInfo.bottom}}</span>
                                   </div>
                                   <div class="check-graphic"></div>

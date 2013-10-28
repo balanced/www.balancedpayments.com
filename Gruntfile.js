@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/fonts/*'
 				],
-				tasks: ['copy:fonts'],
+				tasks: ['copy:fonts', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/images/*'
 				],
-				tasks: ['copy:images'],
+				tasks: ['copy:images', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/less/*'
 				],
-				tasks: ['less:development'],
+				tasks: ['less:development', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}

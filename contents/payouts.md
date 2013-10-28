@@ -103,4 +103,25 @@ tryTheDashboard:
   body: Get started today.
   button: TRY THE DASHBOARD
 
+bankAcctInfo:
+  title: Bank Account Information
+  bottom: Funds will appear in the bank account in 1 business day.
+  list:
+    - title: Account Holder's Name
+      description: Please make sure this matches exactly to the name on your bank account. Otherwise, payouts may experience delays.
+      classes: large name
+      placeholder: Henry Cavendish
+    - title: Routing Number
+      description: Enter your 9-digit routing number.
+      classes: routing-number
+      placeholder: 013654389
+    - title: Account Number
+      description: Enter your account number.
+      classes: account-number
+      placeholder: 5124780660
+    - title: Confirm Account Number
+      description: Re-enter your account number.
+      classes: confirm-account-number last
+      placeholder: 5124780660
+
 ---
