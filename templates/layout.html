@@ -1,29 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=1200, height=device-height, user-scalable=1">
-    <title>{{ page.metadata.title if page.metadata.title else name }}</title>
-    <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAStJREFUWIXtlT1SwzAQRp+YHMAeGsrcIGlc4yukpDHODaBLF6dzB5yAkIYyOYJSu/INUtIw9g1MgZhhZJlITogbfZ12Pu2+0c+uaJqGIXU1aHUP4AGAkR4QQlDF0Rh4BWKgBl5CWWQuiRebyROQAgEggXmelAf913WdwFYVRyVYVnGUOhRPgQe1F5Vra/K2AKo4CoCpwXtvC9DhnS42k/FRgD9Un+rNk/JwFCCURc33nel6cwAweXcmY9cJzICVApHALJSFMYFJeVLuVI6f/c/A3OQV+qsUQtjW6SXbX3AxeQAP4AFa09BWH+/XGXCrlvubu8+sT55ejUgVX2rhlQ3EuRqRadq5TMuTAQLL2L8BmAaT9bA6B8AjsP61XquYs1qP8NIavA94AA/wBRJiTbdsTuB4AAAAAElFTkSuQmCC" type="image/x-icon">
-
-    <script type="text/javascript">
-      var _pageStartTime = (new Date()).getTime();
-      var _gaq = _gaq || [];
-    </script>
-
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-    <![endif]-->
-
-    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/static/css/root.css">
-
-    {% block head %}{% endblock %}
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-
-  </head>
+  {%- include 'header.html' -%}
   <body class="layout-v4 {{ page.metadata.body_class }}">
 
      <div class="sidebar-child-menu-left">
@@ -103,11 +80,7 @@
         </div>
 
         <div class="page-wrapper">
-
             <div class="bg-default">
-                {% if hasHeaderNavigation %}
-                    {% block headerNavigation %}{% endblock %}
-                {% else %}
                 <div class="container">
                     <div class="row">
                         <header class="site-header">
@@ -132,49 +105,12 @@
                         </header>
                     </div>
                 </div>
-                {% endif %}
             </div>
 
             {% block body %}{% endblock %}
-
-            <footer id="footer" class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="span5">
-                            <div class="flogo">
-                                <a href="/" target="_blank" class="img">Logo</a>
-                            </div>
-                            <span class="section-title copyright-notice">&copy; 2013 Balanced</span>
-                        </div>
-                        <div class="span11">
-                            <span class="footer-link"><a href="/privacy">Privacy Policy</a></span>
-                            <span class="footer-link"><a href="/terms">Terms of Use</a></span>
-                            <span class="footer-link"><a href="/terms/marketplaceagreement">Marketplace Agreement</a></span>
-                            <span class="footer-link"><a href="/terms/selleragreement">Seller Agreement</a></span>
-                        </div>
-                        <div class="span3">
-                            <a href="https://twitter.com/balanced" target="_blank" class="icon"><i class="icon-twitter"></i></a>
-                            <a href="http://quora.com/balanced" target="_blank" class="icon"><i class="icon-quora"></i></a>
-                            <a href="https://github.com/balanced" target="_blank" class="icon"><i class="icon-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
+            {%- include 'footer.html' -%}
         </div>
     </div>
-
-    <script type="text/javascript">
-        _gaq.push(['_setAccount', 'UA-30733850-1']);
-        _gaq.push(['_setDomainName', 'balancedpayments.com']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
 
     <script type="text/javascript">
     $(document).ready(function() {

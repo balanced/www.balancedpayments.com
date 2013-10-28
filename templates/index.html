@@ -1,38 +1,8 @@
 {% extends 'layout.html' %}
 
-{% block head %}
-<link rel="stylesheet" href="/static/css/index.css">
-{% endblock %}
-
-
-{% set hasHeaderNavigation = true %}
-{% block headerNavigation %}
-<div class="container container-chunky">
-    <div class="row">
-        <header class="site-header">
-            <div class="span6">
-                <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
-            </div>
-            <div id="site-nav" class="span12">
-                <div class="nav-menu-wrapper">
-                    <div id="docs-menu">
-                        <a href="https://docs.balancedpayments.com">Docs</a>
-                    </div>
-                    <div id="help-menu">
-                    <a href="https://support.balancedpayments.com">Help</a>
-                    </div>
-                    <div id="login-menu">
-                        <a href="https://dashboard.balancedpayments.com">Sign in</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-</div>
-{% endblock %}
+{% set stylesheets = ['/static/css/index.css'] %}
 
 {% block body %}
-
 <div class="bg-default">
     <div class="hur">
 

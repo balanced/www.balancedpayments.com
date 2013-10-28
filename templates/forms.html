@@ -1,0 +1,17 @@
+{% macro controlGroupField(type, id, placeholder, label, recommendedField, value, error) %}
+{{input(type, id, placeholder, value, error)}}
+<label class="control-label" for="{{id}}">{{label}} {{#if recommendedField}}<span class="recommended-field">Recommended field</span>{{/if}}</label>
+{% endmacro %}
+
+{% macro controlGroupTextField(id, placeholder, label, recommendedField, value, error) %}
+{{input("text", type, id, placeholder, value, error)}}
+<label class="control-label" for="{{id}}">{{label}} {{#if recommendedField}}<span class="recommended-field">Recommended field</span>{{/if}}</label>
+{% endmacro %}
+
+{% macro input(type, id, placeholder, value, error) %}
+  <input type="{{type}}" name="{{id}}" id="{{id}}"{% if value %} value="{{value}}"{% endif %}{% if placeholder %} placeholder="{{placeholder}}"{% endif %}{% if error %} class="error"{% endif %}>
+{% endmacro %}
+
+{% macro checkbox(id, checked) %}
+  <input type="checkbox" name="{{id}}" id="{{id}}"{% if checked %} checked{% endif %}>
+{% endmacro %}
