@@ -1,114 +1,113 @@
 <!DOCTYPE HTML>
 <html lang="en">
   {% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
-  {%- include 'header.html' -%}
-  {% import 'forms.html' as forms %}
+  {%- include 'partials/header.html' -%}
+  {% import 'partials/forms.html' as forms %}
   <body class="layout-v4 kyc">
-    <div>
-        <div class="bg-default">
-            <div class="container">
-                <div class="row">
-                    <header class="site-header">
-                        <div class="span20">
-                            <div class="span6 no-margin-left">
-                                <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
-                            </div>
-                        </div>
-                    </header>
-                </div>
+    <div class="bg-default">
+      <div class="container">
+        <div class="row">
+          <header class="site-header">
+            <div class="span20">
+              <div class="span6 no-margin-left">
+                <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
+              </div>
             </div>
+          </header>
         </div>
-
-        <div class="bg-default">
-            <div class="container">
-                <div class="row">
-                    <div class="span20">
-                        <div class="row">
-                            <header>
-                              <div class="span20 page-title">
-                                <h1>{{page.metadata.pageTitle}}</h1>
-                              </div>
-                            </header>
-                        </div>
-                    </div>
-
-                    <form class="full-page-form span20">
-                      <fieldset class="application-type">
-                          <legend>Who are you?</legend>
-                          <div class="control-group">
-                              <a href="#" class="person"><span class="icon"></span>Person</a>
-                              <div class="or"><hr><span>OR</span><hr></div>
-                              <a href="#" class="business"><span class="icon"></span>Business</a>
-                          </div>
-                      </fieldset>
-
-                      <fieldset class="business-info hide">
-                          <legend>Business info</legend>
-                          {{forms.controlGroupTextField("business_name", "Business name", "Enter your business name")}}
-                          {{forms.controlGroupTextField("ein", "EIN", "Enter your 9-digit employer identification number")}}
-                      </fieldset>
-
-                      <fieldset class="personal-info hide">
-                          <legend>Your personal info</legend>
-
-                          {{forms.controlGroupTextField("name", "Name", "Enter your full legal name")}}
-                          <div class="control-group">
-                              <input type="text" name="dob_month" class="span2" placeholder="MM"/>
-                              <input type="text" name="dob_day" class="span2" placeholder="DD"/>
-                              <input type="text" name="dob_year" class="span2" placeholder="YYYY"/>
-                              <label>Enter your date of birth</label>
-                          </div>
-                          {{forms.controlGroupTextField("street_address", "Street address", "Enter your billing address including apartment, suite, or unit number")}}
-                          {{forms.controlGroupTextField("postal_code", "Postal code", "Enter your zip code")}}
-                          {{forms.controlGroupTextField("ssn_last4", "Last 4 of SSN", "A verifiable social security number is needed to underwrite your application. No credit checks will be performed")}}
-                          {{forms.controlGroupTextField("phone_number", "Phone number", "Enter your phone number")}}
-
-                      </fieldset>
-
-                      <fieldset class="banking-info hide">
-                          <legend>Banking info</legend>
-
-                          {{forms.controlGroupTextField("account_name", "Account holder's name", "Enter the name on your bank account")}}
-                          {{forms.controlGroupTextField("account_number", "Account number", "Enter your bank account number", "<a class=\"icon-tooltip\" data-toggle=\"popover\" data-placement=\"top\" data-title=\"Account &amp; Routing Number\">&nbsp;</a>")}}
-                          {{forms.controlGroupTextField("routing_number", "Routing number", "Enter your 9 digit routing number", "<a class=\"icon-tooltip\" data-toggle=\"popover\" data-placement=\"top\" data-title=\"Account &amp; Routing Number\">&nbsp;</a>")}}
-
-                          <div class="control-group">
-                              <select id="account_type" name="account_type">
-                                <option value="checking">checking</option>
-                                <option value="savings">savings</option>
-                              </select>
-                              <label>Specify your account type</label>
-                          </div>
-                      </fieldset>
-
-                      <fieldset class="terms hide">
-                          <legend>Terms &amp; Conditions + Privacy Policy</legend>
-                          <div class="control-group">
-                              <label for="terms-and-conditions">
-                                  {{forms.checkbox("terms-and-conditions")}}
-                                  <strong>I accept the
-                                  <a href="https://www.balancedpayments.com/terms/" target="_blank">Terms &amp; Conditions</a>, and
-                                  <a href="https://www.balancedpayments.com/privacy" target="_blank">Privacy Policy</a>.
-                              </strong></label>
-                              <p class="nested">
-                                  We respect your privacy. Your information is
-                                  stored securely and used only for transaction
-                                  processing, customer support, and fraud
-                                  prevention.
-                              </p>
-                          </div>
-                          <div class="actions">
-                            <button class="btn submit">Submit</button>
-                          </div>
-                      </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    {%- include 'footer.html' -%}
+
+    <div class="bg-default">
+      <div class="container">
+        <div class="row">
+          <div class="span20">
+            <div class="row">
+              <header>
+                <div class="span20 page-title">
+                  <h1>{{page.metadata.pageTitle}}</h1>
+                </div>
+              </header>
+            </div>
+          </div>
+
+          <form class="full-page-form span20">
+            <fieldset class="application-type">
+              <legend>Who are you?</legend>
+              <div class="control-group">
+                <a href="#" class="person"><span class="icon"></span>Person</a>
+                <div class="or"><hr><span>OR</span><hr></div>
+                <a href="#" class="business"><span class="icon"></span>Business</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="business-info hide">
+              <legend>Business info</legend>
+              {{forms.controlGroupTextField("business_name", "Business name", "Enter your business name")}}
+              {{forms.controlGroupTextField("ein", "EIN", "Enter your 9-digit employer identification number")}}
+            </fieldset>
+
+            <fieldset class="personal-info hide">
+              <legend>Your personal info</legend>
+
+              {{forms.controlGroupTextField("name", "Name", "Enter your full legal name")}}
+              <div class="control-group">
+                <input type="text" name="dob_month" class="span2" placeholder="MM"/>
+                <input type="text" name="dob_day" class="span2" placeholder="DD"/>
+                <input type="text" name="dob_year" class="span2" placeholder="YYYY"/>
+                <label>Enter your date of birth</label>
+              </div>
+              {{forms.controlGroupTextField("street_address", "Street address", "Enter your billing address including apartment, suite, or unit number")}}
+              {{forms.controlGroupTextField("postal_code", "Postal code", "Enter your zip code")}}
+              {{forms.controlGroupTextField("ssn_last4", "Last 4 of SSN", "A verifiable social security number is needed to underwrite your application. No credit checks will be performed")}}
+              {{forms.controlGroupTextField("phone_number", "Phone number", "Enter your phone number")}}
+
+            </fieldset>
+
+            <fieldset class="banking-info hide">
+              <legend>Banking info</legend>
+
+              {{forms.controlGroupTextField("account_name", "Account holder's name", "Enter the name on your bank account")}}
+              {{forms.controlGroupTextField("account_number", "Account number", "Enter your bank account number", "<a class=\"icon-tooltip\" data-toggle=\"popover\" data-placement=\"top\" data-title=\"Account &amp; Routing Number\">&nbsp;</a>")}}
+              {{forms.controlGroupTextField("routing_number", "Routing number", "Enter your 9 digit routing number", "<a class=\"icon-tooltip\" data-toggle=\"popover\" data-placement=\"top\" data-title=\"Account &amp; Routing Number\">&nbsp;</a>")}}
+
+              <div class="control-group">
+                <select id="account_type" name="account_type">
+                  <option value="checking">checking</option>
+                  <option value="savings">savings</option>
+                </select>
+                <label>Specify your account type</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="terms hide">
+              <legend>Terms &amp; Conditions + Privacy Policy</legend>
+              <div class="control-group">
+                <label for="terms-and-conditions">
+                  {{forms.checkbox("terms-and-conditions")}}
+                  <strong>I accept the
+                    <a href="https://www.balancedpayments.com/terms/" target="_blank">Terms &amp; Conditions</a>, and
+                    <a href="https://www.balancedpayments.com/privacy" target="_blank">Privacy Policy</a>.
+                  </strong></label>
+                  <p class="nested">
+                    We respect your privacy. Your information is
+                    stored securely and used only for transaction
+                    processing, customer support, and fraud
+                    prevention.
+                  </p>
+                </div>
+                <div class="actions">
+                  <button class="btn submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%- include 'partials/footer.html' -%}
     <script type="text/javascript">
-    $(function () {
+    $(document).ready(function () {
       var $form = $('form.full-page-form');
 
       $('.application-type a').on('click', function (evt) {
