@@ -17,6 +17,16 @@ module.exports = function(env, callback) {
 		return contents[contentFolder][contentName].index;
 	};
 
+	env.helpers.dobYears = function() {
+		var start = new Date().getFullYear() - 17;
+		var years = [];
+		for (var i = 0; i < 80; i++) {
+			years.push(start - i);
+		}
+
+		return years;
+	};
+
 	env.helpers.sequenceFromString = function (initialString) {
 		var output;
 		var separator = ",";
