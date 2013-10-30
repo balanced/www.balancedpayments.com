@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  {% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
+  {% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js', 'https://js.balancedpayments.com/v1/balanced.js', '/static/js/kyc.js'] %}
   {%- include 'partials/header.html' -%}
   {% import 'partials/forms.html' as forms %}
   <body class="layout-v4 kyc">
@@ -25,7 +25,7 @@
             <div class="row">
               <header>
                 <div class="span20 page-title">
-                  <h1>{{page.metadata.pageTitle}}</h1>
+                  <h1>Merchant Account Signup</h1>
                 </div>
               </header>
             </div>
@@ -51,10 +51,11 @@
               <legend>Your personal info</legend>
 
               {{forms.controlGroupTextField("name", "Name", "Enter your full legal name")}}
-              <div class="control-group">
-                <input type="text" name="dob_month" class="span2" placeholder="MM"/>
-                <input type="text" name="dob_day" class="span2" placeholder="DD"/>
-                <input type="text" name="dob_year" class="span2" placeholder="YYYY"/>
+              {{forms.controlGroupTextField("email_address", "Email Address", "Enter your email address")}}
+              <div class="control-group dob">
+                <input type="text" name="dob_month" id="dob_month" maxlength="2" class="span2" placeholder="MM"/>
+                <input type="text" name="dob_day" id="dob_day" maxlength="2" class="span2" placeholder="DD"/>
+                <input type="text" name="dob_year" id="dob_year" maxlength="4" class="span2" placeholder="YYYY"/>
                 <label>Enter your date of birth</label>
               </div>
               {{forms.controlGroupTextField("street_address", "Street address", "Enter your billing address including apartment, suite, or unit number")}}
@@ -95,6 +96,9 @@
                     processing, customer support, and fraud
                     prevention.
                   </p>
+                  <p class="terms-error">
+                    You must accept the Terms & Conditions and Privacy Policy.
+                  </p>
                 </div>
                 <div class="actions">
                   <button class="btn submit">Submit</button>
@@ -106,46 +110,5 @@
       </div>
     </div>
     {%- include 'partials/footer.html' -%}
-    <script type="text/javascript">
-    $(document).ready(function () {
-      var $form = $('form.full-page-form');
-
-      $('.application-type a').on('click', function (evt) {
-        evt.preventDefault();
-
-        var $toUnHide = $form.find('fieldset.hide');
-        var $self = $(this);
-        $('.application-type a').removeClass('selected');
-        $self.addClass('selected');
-
-        if (!$self.hasClass('business')) {
-          $form.find('fieldset.business-info').addClass('hide');
-          $toUnHide = $toUnHide.not('.business-info');
-        }
-
-        $toUnHide.removeClass('hide');
-        return false;
-      });
-
-      $form.on('submit', function (evt) {
-        evt.preventDefault();
-
-        return false;
-      });
-
-      $form.find('[data-toggle="popover"]').popover({
-        html: true,
-        content: '<img class="check_image_tool_tip" src="/images/check_image_tool_tip.png"/>'
-      });
-
-      $(document.body).on('click', function (evt) {
-        var $target = $(evt.target);
-
-        if (!$target.is('.popover') && !$target.parents('.popover').length && !$target.is('[data-toggle="popover"]')) {
-          $form.find('[data-toggle="popover"]').popover('hide');
-        }
-      });
-    });
-    </script>
   </body>
 </html>

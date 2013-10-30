@@ -21,6 +21,7 @@
 
     .popover {
         background-color: @black;
+        max-width: 360px;
         .border-radius(0);
 
         .popover-title {
@@ -32,7 +33,7 @@
         }
 
         .popover-content {
-            padding: 20px;
+            padding: 30px 40px 20px;
             color: @white;
             font-family: NimbusSanNov-Med;
             font-size: 13px;
@@ -238,6 +239,8 @@ form {
         float: right;
         padding-top: 10px;
         width: 400px;
+        cursor: default;
+
         &:after {
             content: '.';
         }
@@ -376,6 +379,22 @@ form {
         }
         &:after {
             display: none;
+        }
+    }
+
+    .terms {
+        .terms-error {
+            display: none;
+            color: red;
+            margin-left: 1em;
+            width: 400px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+        .error {
+            & .terms-error {
+                display: block;
+            }
         }
     }
 }

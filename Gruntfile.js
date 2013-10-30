@@ -9,6 +9,86 @@ module.exports = function(grunt) {
 			}
 		},
 
+		concat: {
+			options: {
+				separator: ';\n'
+			},
+			kyc: {
+				src: [
+					'static/js/jquery.parseParams.js',
+					'static/js/jquery.serializeObject.js',
+					'static/js/kyc.js'
+				],
+				dest: 'contents/static/js/kyc.js'
+			}
+		},
+
+		uglify: {
+			kyc: {
+				files: {
+					'contents/static/js/kyc.min.js': [
+						'contents/static/js/kyc.js'
+					]
+				}
+			}
+		},
+
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'static/js/**/*.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			test: {
+				files: {
+					src: [
+						'test/**/*.js',
+						'!test/support/lib/*.*',
+						'!test/support/*.js'
+					],
+				},
+				options: {
+					jshintrc: 'test/.jshintrc'
+				}
+			}
+		},
+
+		karma: {
+			unit: {
+				configFile: 'karma.conf.js'
+			}
+		},
+
+		jsbeautifier: {
+			options: {
+				config: '.jsbeautifyrc'
+			},
+			verify: {
+				options: {
+					mode: 'VERIFY_ONLY'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			},
+			update: {
+				options: {
+					mode: 'VERIFY_AND_WRITE'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			}
+		},
+
 		wintersmith: {
 			build: {},
 			preview: {
@@ -77,11 +157,20 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			js: {
+				files: [
+					'static/js/*'
+				],
+				tasks: ['concat', 'wintersmith:build'],
+				options: {
+					livereload: true
+				}
+			},
 			fonts: {
 				files: [
 					'static/fonts/*'
 				],
-				tasks: ['copy:fonts'],
+				tasks: ['copy:fonts', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -90,7 +179,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/images/*'
 				],
-				tasks: ['copy:images'],
+				tasks: ['copy:images', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -99,7 +188,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/icons/*'
 				],
-				tasks: ['copy:icons'],
+				tasks: ['copy:icons', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -108,7 +197,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/less/*'
 				],
-				tasks: ['less:development'],
+				tasks: ['less:development', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -185,9 +274,11 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean', 'concat', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
 
+    grunt.registerTask('format', ['jsbeautifier:update']);
+    grunt.registerTask('verify', ['jshint', 'jsbeautifier:verify']);
 
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
