@@ -75,7 +75,7 @@ bankHolidays:
 collectingBankInfo:
   title: Collecting bank account info
   body: To issue a payout, collect the bank account holder's name, routing number, account number, and account type.
-  learnLink: Demo our bank account form
+  learnLink: View payouts best practices
 
 payoutStatus:
   title: Payout status
@@ -104,7 +104,8 @@ tryTheDashboard:
   button: TRY THE DASHBOARD
 
 bankAcctInfo:
-  title: Bank Account Information
+  title: Test Bank Account Form
+  subtitle: Balanced validates routing numbers in real time.
   bottom: Funds will appear in the bank account in 1 business day.
   list:
     - title: Account Holder's Name
@@ -115,7 +116,7 @@ bankAcctInfo:
       description: Enter your 9-digit routing number.
       classes: routing-number
       placeholder: 121042882
-      attr: maxlength=9
+      attr: maxlength="9"
     - title: Account Number
       description: Enter your account number.
       classes: account-number
