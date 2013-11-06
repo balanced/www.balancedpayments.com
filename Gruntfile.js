@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
 			files: {
-				src: ['build/', 'dist/', 'report/', 'contants/']
+				src: ['build/', 'dist/', 'report/', 'contants/', 'contents/images/', 'contents/static/']
 			}
 		},
 
@@ -63,16 +63,6 @@ module.exports = function(grunt) {
 						dest: 'contents/images'
 					}
 				]
-			},
-			icons: {
-				files: [
-					{
-						cwd: 'static/icons/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/static/icons'
-					}
-				]
 			}
 		},
 
@@ -91,15 +81,6 @@ module.exports = function(grunt) {
 					'static/images/*'
 				],
 				tasks: ['copy:images'],
-				options: {
-					livereload: true
-				}
-			},
-			icons: {
-				files: [
-					'static/icons/*'
-				],
-				tasks: ['copy:icons'],
 				options: {
 					livereload: true
 				}
@@ -158,7 +139,7 @@ module.exports = function(grunt) {
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
 			},
 			fonts: {
-				src: ['build/static/fonts/**/*'],
+				src: ['build/static/css/fonts/**/*'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
 			}
 		},
@@ -166,6 +147,178 @@ module.exports = function(grunt) {
 		img: {
 			crush_them: {
 				src: ['build/images/**/*.png', 'build/static/images/**/*.png']
+			}
+		},
+
+		s3: {
+			options: {
+				access: 'public-read',
+				region: 'us-west-1',
+				gzip: true,
+				headers: {
+					'X-Employment': 'aXdhbnR0b21ha2VhZGlmZmVyZW5jZStobkBiYWxhbmNlZHBheW1lbnRzLmNvbQ=='
+				},
+				maxOperations: 20,
+				gzipExclude: ['.jpg', '.jpeg', '.png', '.ico', '.gif']
+			},
+			previewCached: {
+				options: {
+					bucket: 'balanced-www-preview',
+				},
+				headers: {
+					'Cache-Control': 'public, max-age=86400'
+				},
+				upload: [{
+					src: 'build/images/**/*',
+					dest: 'images/',
+					rel: 'build/images'
+				}, {
+					src: 'build/static/**/*',
+					dest: 'static/',
+					rel: 'build/static'
+				}, {
+					src: 'build/*.{xml,txt,ico}',
+					dest: '',
+					rel: 'build'
+				}]
+			},
+			previewUncached: {
+				options: {
+					bucket: 'balanced-www-preview',
+				},
+				headers: {
+					'Cache-Control': 'max-age=60',
+					'Content-Type': 'text/html'
+				},
+				upload: [{
+					src: 'build/*',
+					dest: '',
+					rel: 'build'
+				}, {
+					src: 'build/terms/*',
+					dest: 'terms/',
+					rel: 'build/terms'
+				}]
+			},
+			productionCached: {
+				options: {
+					bucket: 'balanced-www',
+				},
+				headers: {
+					'Cache-Control': 'public, max-age=86400'
+				},
+				upload: [{
+					src: 'build/images/**/*',
+					dest: 'images/',
+					rel: 'build/images'
+				}, {
+					src: 'build/static/**/*',
+					dest: 'static/',
+					rel: 'build/static'
+				}, {
+					src: 'build/*.{xml,txt,ico}',
+					dest: '',
+					rel: 'build'
+				}]
+			},
+			productionUncached: {
+				options: {
+					bucket: 'balanced-www',
+				},
+				headers: {
+					'Cache-Control': 'max-age=60',
+					'Content-Type': 'text/html'
+				},
+				upload: [{
+					src: 'build/*',
+					dest: '',
+					rel: 'build'
+				}, {
+					src: 'build/terms/*',
+					dest: 'terms/',
+					rel: 'build/terms'
+				}]
+			}
+		},
+
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'static/js/**/*.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			test: {
+				files: {
+					src: [
+						'test/**/*.js',
+						'!test/support/lib/*.*',
+						'!test/support/*.js'
+					],
+				},
+				options: {
+					jshintrc: 'test/.jshintrc'
+				}
+			}
+		},
+
+		jsbeautifier: {
+			options: {
+				config: '.jsbeautifyrc'
+			},
+			verify: {
+				options: {
+					mode: 'VERIFY_ONLY'
+				},
+				src: [
+					'Gruntfile.js',
+					'static/js/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			},
+			update: {
+				options: {
+					mode: 'VERIFY_AND_WRITE'
+				},
+				src: [
+					'Gruntfile.js',
+					'static/js/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			}
+		},
+
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true,
+					removeCommentsFromCDATA: true,
+					removeCDATASectionsFromCDATA: true,
+					collapseBooleanAttributes: true,
+					removeRedundantAttributes: true,
+					removeEmptyAttributes: true
+				},
+				files: {
+					'build/about': 'build/about.html',
+					'build/ach-debits': 'build/ach-debits.html',
+					'build/customers': 'build/customers.html',
+					'build/help': 'build/help.html',
+					'build/index': 'build/index.html',
+					'build/open': 'build/open.html',
+					'build/payouts': 'build/payouts.html',
+					'build/pricing': 'build/pricing.html',
+					'build/privacy': 'build/privacy.html',
+					'build/terms/acceptable_use': 'build/terms/acceptable_use.html',
+					'build/terms/marketplaceagreement': 'build/terms/marketplaceagreement.html',
+					'build/terms/privacy': 'build/terms/privacy.html',
+					'build/terms/selleragreement': 'build/terms/selleragreement.html',
+					'build/terms/use': 'build/terms/use.html',
+					'build/terms/index': 'build/terms.html'
+				}
 			}
 		}
 	});
@@ -188,9 +341,17 @@ module.exports = function(grunt) {
 	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
 	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
 
+	// Uploads to s3. Requires environment variables to be set if the bucket
+	// you're uploading to doesn't have public write access.
+	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
+	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
 
-	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres']);
+	// Register the main build/dev tasks
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
+
+	// Register a test task
+	grunt.registerTask('test', ['build']);
 
 	// The Default task
 	grunt.registerTask('default', ['dev']);
