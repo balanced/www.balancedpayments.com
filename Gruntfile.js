@@ -9,6 +9,86 @@ module.exports = function(grunt) {
 			}
 		},
 
+		concat: {
+			options: {
+				separator: ';\n'
+			},
+			kyc: {
+				src: [
+					'static/js/jquery.parseParams.js',
+					'static/js/jquery.serializeObject.js',
+					'static/js/kyc.js'
+				],
+				dest: 'contents/static/js/kyc.js'
+			}
+		},
+
+		uglify: {
+			kyc: {
+				files: {
+					'contents/static/js/kyc.min.js': [
+						'contents/static/js/kyc.js'
+					]
+				}
+			}
+		},
+
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'static/js/**/*.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			test: {
+				files: {
+					src: [
+						'test/**/*.js',
+						'!test/support/lib/*.*',
+						'!test/support/*.js'
+					],
+				},
+				options: {
+					jshintrc: 'test/.jshintrc'
+				}
+			}
+		},
+
+		karma: {
+			unit: {
+				configFile: 'karma.conf.js'
+			}
+		},
+
+		jsbeautifier: {
+			options: {
+				config: '.jsbeautifyrc'
+			},
+			verify: {
+				options: {
+					mode: 'VERIFY_ONLY'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			},
+			update: {
+				options: {
+					mode: 'VERIFY_AND_WRITE'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			}
+		},
+
 		wintersmith: {
 			build: {},
 			preview: {
@@ -67,6 +147,15 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			js: {
+				files: [
+					'static/js/*'
+				],
+				tasks: ['concat', 'wintersmith:build'],
+				options: {
+					livereload: true
+				}
+			},
 			fonts: {
 				files: [
 					'static/fonts/*'
@@ -338,13 +427,16 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean', 'concat', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
-	grunt.registerTask('deploy', ['build', 's3:productionUncached', 's3:productionCached']);
-	grunt.registerTask('deployPreview', ['build', 's3:previewUncached', 's3:previewCached']);
+	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
+	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
+
+	grunt.registerTask('format', ['jsbeautifier:update']);
+	grunt.registerTask('verify', ['jshint', 'jsbeautifier:verify']);
 
 	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
