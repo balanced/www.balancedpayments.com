@@ -12,26 +12,10 @@ module.exports = function(grunt) {
 		concat: {
 			options: {
 				separator: ';\n'
-			},
-			kyc: {
-				src: [
-					'static/js/jquery.parseParams.js',
-					'static/js/jquery.serializeObject.js',
-					'static/js/kyc.js'
-				],
-				dest: 'contents/static/js/kyc.js'
 			}
 		},
 
-		uglify: {
-			kyc: {
-				files: {
-					'contents/static/js/kyc.min.js': [
-						'contents/static/js/kyc.js'
-					]
-				}
-			}
-		},
+		uglify: {},
 
 		jshint: {
 			all: [
@@ -40,18 +24,6 @@ module.exports = function(grunt) {
 			],
 			options: {
 				jshintrc: '.jshintrc'
-			},
-			test: {
-				files: {
-					src: [
-						'test/**/*.js',
-						'!test/support/lib/*.*',
-						'!test/support/*.js'
-					],
-				},
-				options: {
-					jshintrc: 'test/.jshintrc'
-				}
 			}
 		},
 
@@ -125,24 +97,20 @@ module.exports = function(grunt) {
 
 		copy: {
 			fonts: {
-				files: [
-					{
-						cwd: 'static/fonts/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/static/css/fonts'
-					}
-				]
+				files: [{
+					cwd: 'static/fonts/',
+					expand: true,
+					src: ['**'],
+					dest: 'contents/static/css/fonts'
+				}]
 			},
 			images: {
-				files: [
-					{
-						cwd: 'static/images/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/images'
-					}
-				]
+				files: [{
+					cwd: 'static/images/',
+					expand: true,
+					src: ['**'],
+					dest: 'contents/images'
+				}]
 			}
 		},
 
@@ -330,56 +298,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		jshint: {
-			all: [
-				'Gruntfile.js',
-				'static/js/**/*.js'
-			],
-			options: {
-				jshintrc: '.jshintrc'
-			},
-			test: {
-				files: {
-					src: [
-						'test/**/*.js',
-						'!test/support/lib/*.*',
-						'!test/support/*.js'
-					],
-				},
-				options: {
-					jshintrc: 'test/.jshintrc'
-				}
-			}
-		},
-
-		jsbeautifier: {
-			options: {
-				config: '.jsbeautifyrc'
-			},
-			verify: {
-				options: {
-					mode: 'VERIFY_ONLY'
-				},
-				src: [
-					'Gruntfile.js',
-					'static/js/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
-				],
-			},
-			update: {
-				options: {
-					mode: 'VERIFY_AND_WRITE'
-				},
-				src: [
-					'Gruntfile.js',
-					'static/js/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
-				],
-			}
-		},
-
 		htmlmin: {
 			dist: {
 				options: {
@@ -428,7 +346,7 @@ module.exports = function(grunt) {
 
 	// Subtasks
 	grunt.registerTask('_builddev', ['clean', 'concat', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
