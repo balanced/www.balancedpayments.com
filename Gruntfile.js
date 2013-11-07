@@ -343,8 +343,8 @@ module.exports = function(grunt) {
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
-	grunt.registerTask('deploy', ['build', 's3:productionUncached', 's3:productionCached']);
-	grunt.registerTask('deployPreview', ['build', 's3:previewUncached', 's3:previewCached']);
+	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
+	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
 
 	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
