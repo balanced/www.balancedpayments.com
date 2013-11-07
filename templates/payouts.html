@@ -190,6 +190,9 @@
                                       <div class="description span6">
                                         <span>{{item.description}}</span>
                                       </div>
+                                      {% if item.bank %}
+                                      <div class="bank-name span6"><span>{{item.bank}}</span></div>
+                                      {% endif %}
                                     </div>
                                   </div>
                                   {% endfor %}
@@ -373,10 +376,11 @@ $(function() {
   };
 
   function routingNumberValidationSuccess(bankInfo) {
-    $routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
+    $routingNumber.addClass('success').removeClass('error').find('.bank-name span').html('Bank: ' + bankInfo.customer_name);
   };
   function routingNumberValidationError() {
-    $routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
+    $routingNumber.find('.bank-name span').html('');
+    $routingNumber.addClass('error').removeClass('success').find('.description span:first').html('<span>Invalid Routing Number:</span> Please enter a valid 9-digit routing number.');
   };
 
   $routingNumberInput.on('blur', function(event) {
@@ -398,7 +402,8 @@ $(function() {
       if (bankInfo) {
         routingNumberValidationSuccess(bankInfo);
       } else {
-        $routingNumber.removeClass('success').find('.description span').html('Enter your 9-digit routing number.');
+        $routingNumber.find('.bank-name span').html('');
+        $routingNumber.removeClass('success').find('.description span:first').html('Enter your 9-digit routing number.');
       }
     });
   });

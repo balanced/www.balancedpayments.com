@@ -176,6 +176,7 @@ body.payouts {
                 font-size: 13px;
                 color: @black;
                 padding: 5px 25px 35px 25px;
+                line-height: 16px;
             }
 
             .bank-info-section {
@@ -192,23 +193,29 @@ body.payouts {
                         display: inline-block;
                     }
 
-                    .description {
-                        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                    input {
+                        background-color: @pineGreen60;
+                    }
 
-                        > span {
-                            color: @black;
-                        }
+                    .bank-name {
+                         font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                         float: right;
+                         position: relative;
                     }
                 }
 
                 &.error {
                     input {
-                        background: @imperialRed20;
+                        background: @imperialRed60;
                     }
 
                     .description {
                         > span {
-                          color: @imperialRed60;
+                          color: @imperialRed100;
+
+                          span {
+                            font-family: NimbusSanNov-Bol, arial, sans-serif;
+                          }
                         }
                     }
                 }
@@ -218,13 +225,13 @@ body.payouts {
                     position: relative;
                     font-size: 20px;
                     left: -30px;
-                    color: @forestGreen60;
+                    color: @white;
                 }
 
                 h6 {
                     color: @black;
                     margin: 0 15px;
-                    font-family: NimbusSanNov-Med, arial, sans-serif;
+                    font-family: NimbusSanNov-SemBol, arial, sans-serif;
                     font-size: 13px;
                     line-height: 18px;
                     font-weight: normal;
@@ -251,11 +258,18 @@ body.payouts {
                     }
                 }
 
-                .description {
+                .description,.bank-name {
                     font-family: NimbusSanNov-Med, arial, sans-serif;
                     font-size: 13px;
-                    line-height: 16px;
                     color: #000;
+                }
+
+                .bank-name {
+                    line-height: 0;
+                }
+
+                .description {
+                    line-height: 16px;
                     display: table;
                     overflow: hidden;
                     float: right;
@@ -266,7 +280,6 @@ body.payouts {
                     > span {
                         display: table-cell;
                         vertical-align: middle;
-                        color: @gray5;
                     }
                 }
             }
