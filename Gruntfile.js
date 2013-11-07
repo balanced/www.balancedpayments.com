@@ -1,7 +1,6 @@
 /*jshint camelcase: false */
 /*global module:false */
 module.exports = function(grunt) {
-
 	grunt.initConfig({
 		clean: {
 			files: {
