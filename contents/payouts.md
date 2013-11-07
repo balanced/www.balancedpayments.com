@@ -112,6 +112,7 @@ bankAcctInfo:
       description: Please make sure this matches exactly to the name on your bank account. Otherwise, payouts may experience delays.
       classes: large name
       placeholder: Henry Cavendish
+      attr: readonly="readonly"
     - title: Routing Number
       description: Enter your 9-digit routing number.
       classes: routing-number
@@ -121,9 +122,11 @@ bankAcctInfo:
       description: Enter your account number.
       classes: account-number
       placeholder: 5124780660
+      attr: readonly="readonly"
     - title: Confirm Account Number
       description: Re-enter your account number.
       classes: confirm-account-number last
       placeholder: 5124780660
+      attr: readonly="readonly"
 
 ---

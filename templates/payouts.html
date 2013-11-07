@@ -356,19 +356,27 @@ $(function() {
 
   function validateRoutingNumber(routingNumber, cb) {
     if (!routingNumber || !routingNumber.length || routingNumber.length !== 9) {
-      return cb(false);
+      return cb();
     }
 
-    $.getJSON('https://js.balancedpayments.com/v1/bank_accounts/routing_numbers/' + routingNumber, function(data) {
-      return cb(data);
+
+    $.ajax({
+      url: 'https://js.balancedpayments.com/v1/bank_accounts/routing_numbers/' + routingNumber,
+      dataType: 'json',
+      success: function(data) {
+        return cb(data);
+      },
+      error: function() {
+        return cb();
+      }
     });
   };
 
   function routingNumberValidationSuccess(bankInfo) {
-    $routingNumber.addClass('success').removeClass('error').find('.description span').text('Bank: ' + bankInfo.customer_name);
+    $routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
   };
   function routingNumberValidationError() {
-    $routingNumber.addClass('error').removeClass('success').find('.description span').text('Please enter a 9-digit routing number.');
+    $routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
   };
 
   $routingNumberInput.on('blur', function(event) {
@@ -376,7 +384,7 @@ $(function() {
 
     validateRoutingNumber(val, function (bankInfo) {
       if (bankInfo) {
-        routingNumberValidationSuccess();
+        routingNumberValidationSuccess(bankInfo);
       } else {
         routingNumberValidationError();
       }
@@ -388,9 +396,9 @@ $(function() {
 
     validateRoutingNumber(val, function (bankInfo) {
       if (bankInfo) {
-        routingNumberValidationSuccess();
+        routingNumberValidationSuccess(bankInfo);
       } else {
-        $routingNumber.removeClass('success').find('.description span').text('Enter your 9-digit routing number.');
+        $routingNumber.removeClass('success').find('.description span').html('Enter your 9-digit routing number.');
       }
     });
   });
