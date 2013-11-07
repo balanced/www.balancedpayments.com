@@ -172,9 +172,36 @@
                             </div>
                         </div>
                         <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
+                        <div class="span13 no-margin-left bank-account-info">
                             <div class="teeth border-top">
-                                <div class="graphic"></div>
+                                <div>
+                                  <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
+                                  <div class="subtitle">{{page.metadata.bankAcctInfo.subtitle}}</div>
+                                  {% for item in page.metadata.bankAcctInfo.list %}
+                                  <div class="bank-info-section {{item.classes}}">
+                                    <div class="row">
+                                      <h6>{{item.title}}</h6>
+                                    </div>
+                                    <div class="row">
+                                      <div class="input-field span6">
+                                        <input type="text" value="{{item.placeholder}}" {{item.attr}}/>
+                                        <span class="success-icon"><i class="icon-checkmark"></i></span>
+                                      </div>
+                                      <div class="description span6">
+                                        <span>{{item.description}}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {% endfor %}
+                                  <div class="bank-info-bottom row">
+                                    <div class="bottom span4">
+                                      <span>{{page.metadata.bankAcctInfo.bottom}}</span>
+                                    </div>
+                                    <div class="span7">
+                                      <div class="check-graphic"></div>
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -322,4 +349,59 @@
     </div>
 </div>
 
+<script type="text/javascript">
+$(function() {
+  var $routingNumber = $('.routing-number'),
+    $routingNumberInput = $routingNumber.find('input');
+
+  function validateRoutingNumber(routingNumber, cb) {
+    if (!routingNumber || !routingNumber.length || routingNumber.length !== 9) {
+      return cb();
+    }
+
+
+    $.ajax({
+      url: 'https://js.balancedpayments.com/v1/bank_accounts/routing_numbers/' + routingNumber,
+      dataType: 'json',
+      success: function(data) {
+        return cb(data);
+      },
+      error: function() {
+        return cb();
+      }
+    });
+  };
+
+  function routingNumberValidationSuccess(bankInfo) {
+    $routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
+  };
+  function routingNumberValidationError() {
+    $routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
+  };
+
+  $routingNumberInput.on('blur', function(event) {
+    var val = $routingNumberInput.val();
+
+    validateRoutingNumber(val, function (bankInfo) {
+      if (bankInfo) {
+        routingNumberValidationSuccess(bankInfo);
+      } else {
+        routingNumberValidationError();
+      }
+    });
+  });
+
+  $routingNumberInput.on('keyup', function(event) {
+    var val = $routingNumberInput.val();
+
+    validateRoutingNumber(val, function (bankInfo) {
+      if (bankInfo) {
+        routingNumberValidationSuccess(bankInfo);
+      } else {
+        $routingNumber.removeClass('success').find('.description span').html('Enter your 9-digit routing number.');
+      }
+    });
+  });
+});
+</script>
 {% endblock %}

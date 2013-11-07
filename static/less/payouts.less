@@ -145,12 +145,159 @@ body.payouts {
         }
 
         &.collecting-bank-account-info {
+            .bank-account-info {
+                .teeth {
+                    > div {
+                        background: @white;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
             .graphic {
                 background: url(/images/payouts/collecting_bank_account_info-2x.png) no-repeat;
                 width: 570px;
                 height: 600px;
                 background-position: 0px 0px;
                 background-size: 570px;
+            }
+
+            .title {
+                font-family: NimbusSanNovConD-Bol,arial,sans-serif;
+                font-size: 18px;
+                letter-spacing: .1em;
+                padding: 25px 25px 5px 25px;
+                color: @gray5;
+                text-transform: uppercase;
+            }
+
+            .subtitle {
+                font-family: NimbusSanNov-SemBol,arial,sans-serif;
+                font-size: 13px;
+                color: @black;
+                padding: 5px 25px 35px 25px;
+            }
+
+            .bank-info-section {
+                padding: 25px 0 25px 0;
+                margin: 0 25px;
+                border-top: 1px solid @gray3;
+
+/*                &:last-child, &:last-of-type, &.last {
+                    border-bottom: 0;
+                }*/
+
+                &.success {
+                    .success-icon {
+                        display: inline-block;
+                    }
+
+                    .description {
+                        font-family: NimbusSanNov-SemBol, arial, sans-serif;
+
+                        > span {
+                            color: @black;
+                        }
+                    }
+                }
+
+                &.error {
+                    input {
+                        background: @imperialRed20;
+                    }
+
+                    .description {
+                        > span {
+                          color: @imperialRed60;
+                        }
+                    }
+                }
+
+                .success-icon {
+                    display: none;
+                    position: relative;
+                    font-size: 20px;
+                    left: -30px;
+                    color: @forestGreen60;
+                }
+
+                h6 {
+                    color: @black;
+                    margin: 0 15px;
+                    font-family: NimbusSanNov-Med, arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: normal;
+                }
+
+                input {
+                    background: @gray2;
+                    color: @black;
+                    margin: 0;
+                    border: none;
+                    outline: none;
+                    .border-radius(0);
+                    line-height: 30px;
+                    font-size: 18px;
+                    height: 30px;
+                    font-family: NimbusSanNov-Med,arial,sans-serif;
+                    width: 50%;
+                    padding: 4px 10px;
+                }
+
+                &.large {
+                    input {
+                        width: auto;
+                    }
+                }
+
+                .description {
+                    font-family: NimbusSanNov-Med, arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #000;
+                    display: table;
+                    overflow: hidden;
+                    float: right;
+                    height: 100%;
+                    min-height: 36px;
+                    margin-left: 0;
+
+                    > span {
+                        display: table-cell;
+                        vertical-align: middle;
+                        color: @gray5;
+                    }
+                }
+            }
+
+            .bank-info-bottom {
+                background: @pineGreen20;
+                height: 150px;
+                margin: 0;
+
+                .bottom {
+                    margin: 15px 0;
+                    padding: 30px 25px;
+                    border-right: 1px solid @gray3;
+                    height: 55px;
+                    color: @black;
+                }
+
+                span {
+                    font-family: 'Droid Serif', serif;
+                    line-height: 18px;
+                    font-style: italic;
+                    font-size: 14px;
+                }
+
+                .check-graphic {
+                    background: url(/images/check_image.png) no-repeat center center;
+                    height: 110px;
+                    width: 280px;
+                    background-size: 280px;
+                    margin-top: 25px;
+                }
             }
         }
 
