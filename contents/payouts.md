@@ -105,7 +105,7 @@ tryTheDashboard:
 
 bankAcctInfo:
   title: Test Bank Account Form
-  subtitle: Balanced validates routing numbers in real time.
+  subtitle: Balanced validates routing numbers in real time.<br/>Enter in a routing number below to test this out.
   bottom: Funds will appear in the bank account in 1 business day.
   list:
     - title: Account Holder's Name
@@ -115,9 +115,10 @@ bankAcctInfo:
       attr: readonly="readonly"
     - title: Routing Number
       description: Enter your 9-digit routing number.
-      classes: routing-number
+      classes: routing-number success
       placeholder: 121042882
       attr: maxlength="9"
+      bank: "Bank: WELLS FARGO BANK NA"
     - title: Account Number
       description: Enter your account number.
       classes: account-number
