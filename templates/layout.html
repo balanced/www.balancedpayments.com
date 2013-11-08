@@ -2,67 +2,18 @@
 <html lang="en">
 {%- include 'partials/header.html' -%}
 <body class="layout-v4 {{ page.metadata.body_class }}">
-  {%- include 'partials/sidebar.html' -%}
+  {%- include 'partials/sidebar-hidden.html' -%}
   <div class="global-wrapper">
-    <div class="sidebar-menu-left">
-      <div class="close-child-menu-left">
-        <a>
-          <i class="icon-navigation-close"></i>
-        </a>
-      </div>
-      <ul>
-        <li data-show="sidebar-child-menu-left-product">
-          <a class="toggle-child-menu"><span class="arrow"></span> PRODUCT</a>
-        </li>
-        <li>
-          <a href="/pricing">PRICING</a>
-        </li>
-        <li data-show="sidebar-child-menu-left-about">
-          <a class="toggle-child-menu"><span class="arrow"></span> ABOUT</a>
-        </li>
-        <li class="try-dashboard">
-          <a href="https://dashboard.balancedpayments.com/#/start">
-            <i class="icon-dashboard"></i>
-            TRY THE<br />DASHBOARD
-          </a>
-        </li>
-      </ul>
-    </div>
+    {%- include 'partials/sidebar.html' -%}
     <div class="page-wrapper">
-      <div class="bg-default">
-        <div class="container">
-          <div class="row">
-            <header class="site-header">
-              <div class="span19">
-                <div class="span6 no-margin-left">
-                  <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
-                </div>
-                <div id="site-nav" class="span12">
-                  <div class="nav-menu-wrapper">
-                    <div id="docs-menu">
-                      <a href="https://docs.balancedpayments.com">Docs</a>
-                    </div>
-                    <div id="help-menu">
-                      <a href="https://support.balancedpayments.com">Help</a>
-                    </div>
-                    <div id="login-menu">
-                      <a href="https://dashboard.balancedpayments.com">Sign in</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </header>
-          </div>
-        </div>
-      </div>
-
+      {%- include 'partials/page-header.html' -%}
       {% block body %}{% endblock %}
       {%- include 'partials/footer.html' -%}
     </div>
   </div>
 
     <script type="text/javascript">
-    $(document).ready(function() {
+    $(function() {
         $(".toggle-child-menu").click(function(e) {
             e.preventDefault();
 
