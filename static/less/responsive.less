@@ -1,7 +1,7 @@
 .hidden-responsive { display: inherit !important; }
 .visible-responsive { display: none !important; }
 
-
+@mobileMenuHoverBg: rgba(174, 92,16, 0.9);
 
 .responsive-nav-menu-wrapper {
     float: right;
@@ -63,16 +63,15 @@
                     a {
                         padding: 15px 15px 15px 10px;
                         height: auto;
-                        background-color: #f4f4f4;
+                        background-color: @gray1;
                         .transition(background-color 0.2s ease-out);
                         text-transform: none;
                         font-family: NimbusSanNov-reg, arial, sans-serif;
-                        letter-spacing:0;
+                        letter-spacing: 0;
 
                         &:hover {
-                            background-color: #AE5C10;
-                            background-color: rgba(174, 92,16, 0.9);
-                            color: #fff;
+                            background-color: @mobileMenuHoverBg;
+                            color: @white;
                         }
                     }
                 }
@@ -138,7 +137,7 @@
             }
 
             > ul {
-                border-top: 1px solid #808080;
+                border-top: 1px solid @footerLinkColor;
             }
 
             li, > ul > li {
@@ -146,16 +145,16 @@
             }
 
             li a {
-                color: #ffffff;
+                color: @white;
                 display: block;
                 padding: 30px 0.8em;
-                border-bottom: 1px solid #808080;
+                border-bottom: 1px solid @footerLinkColor;
                 position: relative;
             }
 
             li.has-submenu {
                 > a:after {
-                    content: '+';
+                    content: "+";
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -173,9 +172,9 @@
                 display: inherit;
                 position: relative;
                 left: auto;
-                top:auto;
+                top: auto;
                 .box-shadow(none);
-                border:none;
+                border: none;
 
                 > li a {
                     background-color: @gray8;
