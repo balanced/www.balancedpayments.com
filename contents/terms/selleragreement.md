@@ -8,17 +8,17 @@ icon_class: seller-agreement
 **Last Updated October 3rd, 2013**
 
 
-**Statement of Services:** [Marketplace name] (“Marketplace”) uses Balanced, Inc. (“Balanced”) to facilitate the payments for sale of goods or services on Marketplace. Balanced assumes no responsibility for good or services purchased through Marketplace. On Marketplace, Balanced allows you to accept credit cards and receive payment directly to your bank account.
+**Statement of Services:** (“Marketplace”) uses Balanced, Inc. (“Balanced”) to facilitate the payments for sale of goods or services on Marketplace. Balanced assumes no responsibility for good or services purchased through Marketplace. On Marketplace, Balanced allows you to accept credit cards and receive payment directly to your bank account.
 
 By using Marketplace to sell your goods or services, you consent to this entire agreement between you and Balanced.
 
 **Definitions:**
 
-+ **Buyer: **Person or business paying for a good or service on Marketplace
-+ **Seller:** Person or business listing or selling a good or service on Marketplace.
++ **Buyer: **Person or business paying for a good or service via Marketplace
++ **Seller:** Person or business listing or selling a good or service supported through Marketplace.
 + **Transaction:** Any part of the sale of a good or service. Including:
 
-    + **Purchase:** A Buyer paying for the good or service listed on marketplace,
+    + **Purchase:** A Buyer paying for the good or service listed via marketplace,
     + **Fulfillment:** The Seller delivers said good or service according to Marketplace requirements.
     + **Settlement/Merchant Settlement:** Following Marketplace confirmation and instructions. Seller receives funds for the sale.
 
