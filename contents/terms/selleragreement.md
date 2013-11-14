@@ -14,7 +14,7 @@ By using Marketplace to sell your goods or services, you consent to this entire 
 
 **Definitions:**
 
-+ **Buyer: **Person or business paying for a good or service via Marketplace
++ **Buyer: ** Person or business paying for a good or service via Marketplace
 + **Seller:** Person or business listing or selling a good or service supported through Marketplace.
 + **Transaction:** Any part of the sale of a good or service. Including:
 
