@@ -23,6 +23,10 @@ trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
 
+[*.html]
+indent_style = space
+indent_size = 2
+
 [*.less]
 indent_style = space
 indent_size = 4

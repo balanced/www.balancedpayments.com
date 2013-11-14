@@ -1,0 +1,186 @@
+.hidden-responsive { display: inherit !important; }
+.visible-responsive { display: none !important; }
+
+@mobileMenuHoverBg: rgba(174, 92,16, 0.9);
+
+.responsive-nav-menu-wrapper {
+    float: right;
+
+    #mobile-menu {
+        font-size: 25px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a {
+            padding: 35px 25px;
+        }
+    }
+
+    .menu {
+        .transition(all 0.3s ease-out);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 90px;
+        z-index: 50;
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            position: relative;
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+
+            li {
+                padding: 0px;
+
+                a {
+                    text-decoration: none;
+                    text-align: left;
+                    text-transform: uppercase;
+                    font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                    letter-spacing: 0.1em;
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+
+            ul {
+                > li {
+                    position: relative;
+
+                    a {
+                        padding: 15px 15px 15px 10px;
+                        height: auto;
+                        background-color: @gray1;
+                        .transition(background-color 0.2s ease-out);
+                        text-transform: none;
+                        font-family: NimbusSanNov-reg, arial, sans-serif;
+                        letter-spacing: 0;
+
+                        &:hover {
+                            background-color: @mobileMenuHoverBg;
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hidden-responsive { display: none !important; }
+    .visible-responsive { display: inherit !important; }
+
+    body.layout-v4 {
+        min-width: 900px;
+
+        &.larger {
+            min-width: 1008px;
+        }
+
+        &.community {
+            min-width: 1151px;
+        }
+
+        .logo {
+            padding-left: 30px;
+        }
+
+        .container {
+            width: 840px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .responsive-nav-menu-wrapper {
+            display: inline-block;
+        }
+        .sidebar-menu-left {
+            left: -90px;
+        }
+        .page-wrapper {
+            padding-left: 0px;
+        }
+        .nav-menu-wrapper {
+            display: none;
+        }
+        .menu {
+            clear: both;
+            min-width: inherit;
+            float: none;
+
+            &, > ul ul {
+                overflow: hidden;
+                max-height: 0;
+                background-color: @black;
+
+                &.active {
+                    max-height: 155em;
+                }
+            }
+
+            ul {
+                display: inline;
+            }
+
+            > ul {
+                border-top: 1px solid @footerLinkColor;
+            }
+
+            li, > ul > li {
+                display: block;
+            }
+
+            li a {
+                color: @white;
+                display: block;
+                padding: 30px 0.8em;
+                border-bottom: 1px solid @footerLinkColor;
+                position: relative;
+            }
+
+            li.has-submenu {
+                > a:after {
+                    content: "+";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    font-size: 40px;
+                    padding: 30px 0.5em;
+                }
+
+                > a.active:after {
+                    content: "-";
+                }
+            }
+
+            ul ul {
+                display: inherit;
+                position: relative;
+                left: auto;
+                top: auto;
+                .box-shadow(none);
+                border: none;
+
+                > li a {
+                    background-color: @gray8;
+                    padding: 29px 18px 29px 30px;
+                }
+            }
+        }
+    }
+}

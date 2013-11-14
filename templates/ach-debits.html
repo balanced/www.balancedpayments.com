@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <section class="how-it-works">
+                <section class="how-it-works" id="how-it-works">
                     <div class="row">
                         <div class="span19 content-gold med-top-padding med-bottom-padding">
                             <div class="offset1 section-title section-title-full">
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<div class="bg-white">
+<div class="bg-white" id="how-it-works-diagram">
     <div class="container">
         <div class="row">
             <section class="how-it-works">
@@ -147,7 +147,7 @@
     </div>
 </div>
 
-<div class="bg-default">
+<div class="bg-default" id="payment-schedule">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -219,7 +219,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="bank-account-verification">
             <div class="span19">
                 <section class="bank-account-verification">
                     <div class="box-pad-top">
@@ -242,7 +242,7 @@
             </div>
         </div>
 
-         <div class="row">
+         <div class="row" id="payment-status">
             <div class="span19">
                 <section class="payment-status">
                     <div class="box-pad-top">
@@ -262,7 +262,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="bank-statement-description">
             <div class="span19">
                 <section class="bank-statement-description">
                     <div class="box-pad-top">
@@ -291,7 +291,7 @@
             </div>
         </div>
 
-         <div class="row">
+         <div class="row" id="chargebacks-disputes">
             <div class="span19">
                 <section class="chargebacks-disputes">
                     <div class="box-pad-top">
@@ -319,7 +319,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="ach-debits">
             <div class="span19">
                 <section class="ach-debits">
                     <div class="box-pad-top">
@@ -398,23 +398,22 @@
             interval: false
         });
 
-        $(".how-it-works .step-boxes a").click(function(e) {
-            var step = parseInt($(e.currentTarget.childNodes[1]).attr("data-step"));
+        $(".how-it-works .step-boxes a").on('click', function(e) {
+            var step = parseInt($(e.currentTarget).find(".box").attr("data-step"), 10);
 
-            if(step) {
+            if (step) {
                 $(".carousel").carousel(step - 1);
             }
         });
 
         $(".carousel").on("slid", function(e) {
-            var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"));
+            var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"), 10);
 
-            if(step) {
+            if (step) {
                 $(".how-it-works .step-boxes .box").removeClass("box-active");
                 $(".how-it-works .step-boxes [data-step=" + step + "]").addClass("box-active");
             }
         });
     });
 </script>
-
 {% endblock %}

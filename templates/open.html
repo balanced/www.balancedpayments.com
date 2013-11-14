@@ -1,17 +1,15 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-
-
 <div class="bg-default">
     <div class="container">
         <div class="row">
             <div class="span19">
                 <div class="row">
                     <header>
-                      <div class="span19 page-title">
-                          <h1></h1>
-                      </div>
+                        <div class="span19 page-title">
+                            <h1></h1>
+                        </div>
                     </header>
                 </div>
             </div>
@@ -26,7 +24,6 @@
                 <p>
                     <span class="diamond"></span>
                     {{ page.metadata.openCompany.topText }}
-
                 </p>
                 <h1>{{ page.metadata.openCompany.mainText }}</h1>
                 <p>
@@ -266,7 +263,6 @@
                 </section>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -476,5 +472,4 @@
         jQuery.ajax("https://api.github.com/orgs/balanced/repos", ajaxOptions);
     });
 </script>
-
 {% endblock %}

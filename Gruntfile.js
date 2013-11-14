@@ -1,11 +1,62 @@
 /*jshint camelcase: false */
 /*global module:false */
 module.exports = function(grunt) {
-
 	grunt.initConfig({
 		clean: {
 			files: {
 				src: ['build/', 'dist/', 'report/', 'contants/', 'contents/images/', 'contents/static/']
+			}
+		},
+
+		concat: {
+			options: {
+				separator: ';\n'
+			}
+		},
+
+		uglify: {},
+
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'static/js/**/*.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			}
+		},
+
+		karma: {
+			unit: {
+				configFile: 'karma.conf.js'
+			}
+		},
+
+		jsbeautifier: {
+			options: {
+				config: '.jsbeautifyrc'
+			},
+			verify: {
+				options: {
+					mode: 'VERIFY_ONLY'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
+			},
+			update: {
+				options: {
+					mode: 'VERIFY_AND_WRITE'
+				},
+				src: [
+					'Gruntfile.js',
+					'app/**/*.js',
+					'test/**/*.js',
+					'!test/support/lib/*.js'
+				],
 			}
 		},
 
@@ -45,28 +96,33 @@ module.exports = function(grunt) {
 
 		copy: {
 			fonts: {
-				files: [
-					{
-						cwd: 'static/fonts/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/static/css/fonts'
-					}
-				]
+				files: [{
+					cwd: 'static/fonts/',
+					expand: true,
+					src: ['**'],
+					dest: 'contents/static/css/fonts'
+				}]
 			},
 			images: {
-				files: [
-					{
-						cwd: 'static/images/',
-						expand: true,
-						src: ['**'],
-						dest: 'contents/images'
-					}
-				]
+				files: [{
+					cwd: 'static/images/',
+					expand: true,
+					src: ['**'],
+					dest: 'contents/images'
+				}]
 			}
 		},
 
 		watch: {
+			js: {
+				files: [
+					'static/js/*'
+				],
+				tasks: ['concat', 'wintersmith:build'],
+				options: {
+					livereload: true
+				}
+			},
 			fonts: {
 				files: [
 					'static/fonts/*'
@@ -98,7 +154,7 @@ module.exports = function(grunt) {
 				files: [
 					'contents/*.md',
 					'plugins/*.js',
-					'templates/*'
+					'templates/**/*'
 				],
 				tasks: ['wintersmith:build'],
 				options: {
@@ -241,56 +297,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		jshint: {
-			all: [
-				'Gruntfile.js',
-				'static/js/**/*.js'
-			],
-			options: {
-				jshintrc: '.jshintrc'
-			},
-			test: {
-				files: {
-					src: [
-						'test/**/*.js',
-						'!test/support/lib/*.*',
-						'!test/support/*.js'
-					],
-				},
-				options: {
-					jshintrc: 'test/.jshintrc'
-				}
-			}
-		},
-
-		jsbeautifier: {
-			options: {
-				config: '.jsbeautifyrc'
-			},
-			verify: {
-				options: {
-					mode: 'VERIFY_ONLY'
-				},
-				src: [
-					'Gruntfile.js',
-					'static/js/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
-				],
-			},
-			update: {
-				options: {
-					mode: 'VERIFY_AND_WRITE'
-				},
-				src: [
-					'Gruntfile.js',
-					'static/js/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
-				],
-			}
-		},
-
 		htmlmin: {
 			dist: {
 				options: {
@@ -338,13 +344,16 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean', 'concat', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
 	grunt.registerTask('deploy', ['build', 's3:productionCached', 's3:productionUncached']);
 	grunt.registerTask('deployPreview', ['build', 's3:previewCached', 's3:previewUncached']);
+
+	grunt.registerTask('format', ['jsbeautifier:update']);
+	grunt.registerTask('verify', ['jshint', 'jsbeautifier:verify']);
 
 	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);

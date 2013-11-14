@@ -133,10 +133,11 @@
   text-transform: uppercase;
   height: auto;
   letter-spacing: 2px;
+
   &:hover {
     color: white;
     background: #78A22F;
-    box-shadow: none;
+    .box-shadow(none);
   }
 }
 
@@ -200,6 +201,10 @@
 @socialBgOffsetY: 4px;
 @socialWidth: 27px;
 @socialHeight: 27px;
+
+@iconsFile: url('/images/dashboard-icons.png');
+@iconsFileWidth: 250px;
+@iconsFileHeight: 1000px;
 
 .socialIcon(@num) {
   background-position: -(@socialBgOffsetX + (@num * @socialWidth)) -@socialBgOffsetY;

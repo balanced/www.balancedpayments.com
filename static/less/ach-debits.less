@@ -14,7 +14,8 @@ body.layout-v4 {
     }
 
     .container {
-        width: 840px;
+        width: 930px;
+        padding-left: 90px;
     }
 
     .global-wrapper {
@@ -537,7 +538,7 @@ body.layout-v4 {
     .carousel-control {
         top: 55%;
         margin-top: 0px;
-        .border-radius(0px);
+        .border-radius(0);
         background: @white;
         border: 1px solid @skyBlue;
         color: @skyBlue;
@@ -658,32 +659,13 @@ body.layout-v4 {
     text-align: center;
 }
 
-.teeth {
-    &:after {
-        content: " ";
-        display: block;
-        position: relative;
-        bottom: 0px;
-        width: 100%;
-        height: 18px;
-        background: linear-gradient(@white 0%, transparent 0%), linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
-        background: -webkit-linear-gradient(@white 0%, transparent 0%), -webkit-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -webkit-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
-        background: -o-linear-gradient(@white 0%, transparent 0%), -o-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -o-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
-        background: -moz-linear-gradient(@white 0%, transparent 0%), -moz-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -moz-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
-        background: -ms-linear-gradient(@white 0%, transparent 0%), -ms-linear-gradient(135deg, @gray1 33.33%, transparent 33.33%) 0 0%, transparent -ms-linear-gradient(45deg, @gray1 33.33%, @white 33.33%) 0 0%;
-        background-repeat: repeat-x;
-        background-size: 0px 100%, 13px 13px, 13px 13px;
-        z-index: 9999;
-    }
-}
-
 .border-top {
     border-top: 1px solid @gray3;
 }
 
 .btn {
     .button-text2;
-    .box-shadow(None);
+    .box-shadow(none);
 
     border: 5px solid @black;
     background: @white;
