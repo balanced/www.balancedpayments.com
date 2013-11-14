@@ -36,6 +36,34 @@
             $(".sidebar-menu-left ul li").removeClass("active");
             $(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
         });
+
+        var $menu = $('#menu'),
+        $menulink = $('#mobile-menu'),
+        $menuTrigger = $('.has-submenu > a');
+
+        $menulink.click(function(e) {
+            e.preventDefault();
+
+            $menulink.toggleClass('active');
+            $menu.toggleClass('active');
+        });
+
+        $(document.body).on('click touchstart touchmove', function(e) {
+            var $self = $(e.target);
+            if ($self.is('.site-nav') || $self.parents().filter('.site-nav').length > 0) {
+                return;
+            }
+
+            $menulink.removeClass('active');
+            $menu.removeClass('active');
+        });
+
+        $menuTrigger.click(function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            $this.toggleClass('active').next('ul').toggleClass('active');
+        });
     });
     </script>
 </body>

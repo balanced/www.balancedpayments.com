@@ -5,105 +5,89 @@
 {% block body %}
 <div class="bg-default">
     <div class="hur">
+        <div class="content">
+            <div class="img-team"></div>
+            <div class="img-about"></div>
+            <div class="about-banner">
+                {% for item in page.metadata.banner %}
+                <div class="about-banner-node">
+                    <div class="about-banner-label">{{ item.heading }}</div>
+                    <div class="about-banner-desc">{{ item.text }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="about-bg img-about-bg">
+                <div class="about-body">
+                    <div class="about-body-intro">
+                        {{ page.metadata.intro.markdown(true) }}
+                    </div>
+                    <div class="about-founders-middle">
+                        <div class="about-founders-header">
+                            <div class="about-founders-subhead">{{ page.metadata.founders.heading }}</div>
+                            <div class="about-founders-sidenote">{{ page.metadata.founders.subHeading }}</div>
+                        </div>
+                        <div class="about-founders-body">
+                            {% for founder in page.metadata.founders.list %}
+                            <div class="about-founders-body-node">
+                                <div class="about-founders-name">{{ founder.name }}</div>
+                                <div class="about-founders-title">{{ founder.title }}</div>
+                                <div class="about-founders-line"></div>
+                                <div class="about-founders-bio">
+                                    {{ founder.desc.markdown(true) }}
+                                </div>
 
-<div class="content">
-  <div class="img-team"></div>
-  <div class="img-about"></div>
+                                <div class="about-social-icons-container">
+                                    <div class="about-social-icons">
+                                        {% for social in founder.links %}
+                                        <div class="img-social-container">
+                                            <a href="{{ social.link }}" target="_blank"><span class="img-social img-social-{{ social.site }}">{{ social.site }}</span></a>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if founder != page.metadata.founders.list[page.metadata.founders.list.length-1] %}
+                            <div class="about-founders-body-line"></div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="about-list-container">
+                        <div class="about-list-header">
+                            <div class="about-list-head">{{ page.metadata.team.heading }}</div>
+                        </div>
+                        {% for member in page.metadata.team.list %}
+                        <div class="about-list-row">
+                            <div class="about-list-name">{{ member.name }}</div>
+                            <div class="about-list-bracket">{</div>
+                                <div class="about-list-title">{{ member.job }}</div>
+                                <div class="about-list-bracket">}</div>
+                                <div class="about-list-desc">{{ member.desc }}</div>
+                                <div class="networks">
+                                    <a href="{{ member.link }}" target="_blank"><span class="about-list-social img-social img-social-{{ member.site }}">{{ member.site }}</span></a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="about-spacing"></div>
+                        <div class="about-list-container">
+                            <div class="about-list-header">
+                                <div class="about-list-head">{{ page.metadata.backers.heading }}</div>
+                            </div>
+                            {% for backer in page.metadata.backers.list %}
+                            <div class="about-list-row">
+                                <div class="about-list-name">{{ backer.name }}</div>
+                                <div class="about-list-desc">{{ backer.desc }}</div>
+                            </div>
+                            {% endfor %}
+                            <div class="about-button">
+                                <a href="http://angel.co/balanced" class="about-button-text" target="_blank">view more</a>
+                            </div>
 
-  <div class="about-banner">
-    {% for item in page.metadata.banner %}
-    <div class="about-banner-node">
-      <div class="about-banner-label">{{ item.heading }}</div>
-      <div class="about-banner-desc">{{ item.text }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    {% endfor %}
-  </div>
-
-  <div class="about-bg img-about-bg">
-    <div class="about-body">
-      <div class="about-body-intro">
-	{{ page.metadata.intro.markdown(true) }}
-      </div>
-      <div class="about-founders-middle">
-	<div class="about-founders-header">
-	  <div class="about-founders-subhead">{{ page.metadata.founders.heading }}</div>
-	  <div class="about-founders-sidenote">{{ page.metadata.founders.subHeading }}</div>
-	</div>
-
-	<div class="about-founders-body">
-
-	  {% for founder in page.metadata.founders.list %}
-	  <div class="about-founders-body-node">
-	    <div class="about-founders-name">{{ founder.name }}</div>
-	    <div class="about-founders-title">{{ founder.title }}</div>
-	    <div class="about-founders-line"></div>
-	    <div class="about-founders-bio">
-	      {{ founder.desc.markdown(true) }}
-	    </div>
-
-	    <div class="about-social-icons-container">
-	      <div class="about-social-icons">
-		{% for social in founder.links %}
-		<div class="img-social-container">
-		  <a href="{{ social.link }}" target="_blank"><span class="img-social img-social-{{ social.site }}">{{ social.site }}</span></a>
-		</div>
-		{% endfor %}
-	      </div>
-	    </div>
-	  </div>
-	  {% if founder != page.metadata.founders.list[page.metadata.founders.list.length-1] %}
-	  <div class="about-founders-body-line"></div>
-	  {% endif %}
-	  {% endfor %}
-
-	</div>
-      </div>
-
-      <div class="about-list-container">
-	<div class="about-list-header">
-	  <div class="about-list-head">{{ page.metadata.team.heading }}</div>
-	</div>
-	{% for member in page.metadata.team.list %}
-	<div class="about-list-row">
-	  <div class="about-list-name">{{ member.name }}</div>
-	  <div class="about-list-bracket">{</div>
-	  <div class="about-list-title">{{ member.job }}</div>
-	  <div class="about-list-bracket">}</div>
-	  <div class="about-list-desc">{{ member.desc }}</div>
-	  <div class="networks">
-	    <a href="{{ member.link }}" target="_blank"><span class="about-list-social img-social img-social-{{ member.site }}">{{ member.site }}</span></a>
-	  </div>
-	</div>
-	{% endfor %}
-      </div>
-
-      <div class="about-spacing"></div>
-
-      <div class="about-list-container">
-	<div class="about-list-header">
-	  <div class="about-list-head">{{ page.metadata.backers.heading }}</div>
-	</div>
-
-	{% for backer in page.metadata.backers.list %}
-	<div class="about-list-row">
-	  <div class="about-list-name">{{ backer.name }}</div>
-	  <div class="about-list-desc">{{ backer.desc }}</div>
-	</div>
-
-	{% endfor %}
-	<div class="about-button">
-	  <a href="http://angel.co/balanced" class="about-button-text" target="_blank">view more</a>
-	</div>
-
-      </div>
-
-
-    </div>
-  </div>
-
-</div>
-
-</div>
-</div>
-
 {% endblock %}

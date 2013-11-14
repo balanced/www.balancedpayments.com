@@ -1,7 +1,7 @@
 ---
 title: Balanced - Payments for Marketplaces
 template: index.html
-body_class:
+body_class: larger
 
 try_out:
   heading: Payments for Marketplaces
