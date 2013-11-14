@@ -23,7 +23,7 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 
 + **Buyer:** The person paying for the goods or services on the Marketplace
 
-**Seller:** The entity (person or business) receiving money for selling goods or services  on Marketplace
++ **Seller:** The entity (person or business) receiving money for selling goods or services  on Marketplace
 
 + **Card:** a debit or credit card. Card transactions are payments made through Card Networks (e.g. Visa, MasterCard, American Express, Discover).
 
