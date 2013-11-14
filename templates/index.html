@@ -6,139 +6,138 @@
 <div class="bg-default">
     <div class="hur">
 
-  <section id="try-it" class="box">
-    <h1>{{ page.metadata.try_out.heading }}</h1>
-    <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.try_out.link }}</a>
-  </section>
+        <section id="try-it" class="box">
+            <h1>{{ page.metadata.try_out.heading }}</h1>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.try_out.link }}</a>
+        </section>
 
-  <section id="intro">
-    <div>
-      {% for intro in page.metadata.intro %}
-      <div>
-	<h1>{{ intro.heading }}</h1>
-	{{ intro.sub.markdown() }}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
+        <section id="intro">
+            <div>
+                {% for intro in page.metadata.intro %}
+                <div>
+                    <h1>{{ intro.heading }}</h1>
+                    {{ intro.sub.markdown() }}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
 
-  <section id="customers">
-    <ul>
-      {% for customer in page.metadata.customers %}
-      <li class="{{ customer.class if customer.class else customer.name | lower }}">
-	<a href="{{ customer.url }}" target="_blank">{{ customer.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+        <section id="customers">
+            <ul>
+                {% for customer in page.metadata.customers %}
+                <li class="{{ customer.class if customer.class else customer.name | lower }}">
+                    <a href="{{ customer.url }}" target="_blank">{{ customer.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
 
-  {% for section in page.metadata.Sections %}
-  <section id="{{ section.id }}">
-    <h2>{{ section.title }}</h2>
-    <div class="sub">
-      <p>{{ section.subTitle }}</p>
-    </div>
-    <div class="main">
-      <div class="title">
-	{{ section.desc.markdown() }}
-      </div>
-      <div class="bod">
-	<ul class="threep">
-	  {% for sub in section.subs %}
-	  <li>
-	    <h4>{{ sub.title }}</h4>
-	    {{ sub.text.markdown() }}
-	  </li>
-	  {% endfor %}
-	</ul>
-      </div>
-    </div>
-  </section>
-  {% endfor %}
+        {% for section in page.metadata.Sections %}
+        <section id="{{ section.id }}">
+            <h2>{{ section.title }}</h2>
+            <div class="sub">
+                <p>{{ section.subTitle }}</p>
+            </div>
+            <div class="main">
+                <div class="title">
+                    {{ section.desc.markdown() }}
+                </div>
+                <div class="bod">
+                    <ul class="threep">
+                        {% for sub in section.subs %}
+                        <li>
+                            <h4>{{ sub.title }}</h4>
+                            {{ sub.text.markdown() }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
 
-  <section id="marketplaces">
-    <h2>{{ page.metadata.marketplaces.title }}</h2>
-    <div class="main">
-      <div class="title">
-	{{ page.metadata.marketplaces.desc.markdown() }}
-      </div>
-      <div class="bod">
-	<ul class="fourp steps">
-	  {% for item in page.metadata.marketplaces.tops %}
-	  <li class="{{ item.id }}">
-	    {{ item.text.markdown() }}
-	  </li>
-	  {% endfor %}
-	</ul>
-	<ul class="twop callouts">
-	  {% for item in page.metadata.marketplaces.bottoms %}
-	  <li>
-	    {{ item.text.markdown() }}
-	  </li>
-	  {% endfor %}
-	</ul>
-      </div>
-    </div>
-  </section>
+        <section id="marketplaces">
+            <h2>{{ page.metadata.marketplaces.title }}</h2>
+            <div class="main">
+                <div class="title">
+                    {{ page.metadata.marketplaces.desc.markdown() }}
+                </div>
+                <div class="bod">
+                    <ul class="fourp steps">
+                        {% for item in page.metadata.marketplaces.tops %}
+                        <li class="{{ item.id }}">
+                            {{ item.text.markdown() }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <ul class="twop callouts">
+                        {% for item in page.metadata.marketplaces.bottoms %}
+                        <li>
+                            {{ item.text.markdown() }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section id="integrating">
-    <h2>{{ page.metadata.integrate.title }}</h2>
-    <div class="main">
-      <div class="title">
-	{{ page.metadata.integrate.desc.markdown() }}
-      </div>
-      <div class="bod">
-	<ul class="twop">
-	  <li>
-	    <h4>{{ page.metadata.integrate.tutorials_title }}</h4>
-	    <ul class="tutorials">
-	      {% for tutorial in page.metadata.integrate.tutorials %}
-	      <li><a href="{{ tutorial.url }}">{{ tutorial.name }}</a></li>
-	      {% endfor %}
-	    </ul>
-	    {{ page.metadata.integrate.sub_tutorials.markdown() if page.metadata.integrate.sub_tutorials }}
-	  </li>
-	  <li>
-	    <h4>{{ page.metadata.integrate.clients_title }}</h4>
-	    <ul class="libraries">
-	      {% for library in page.metadata.integrate.clients %}
-	      <li class="{{ library.class if library.class else library.name | lower }}">
-		<a href="{{ library.url }}" target="_blank">{{ library.name }}</a>
-	      </li>
-	      {% endfor %}
-	    </ul>
-	    {{ page.metadata.integrate.sub_clients.markdown() if page.metadata.integrate.sub_clients }}
-	  </li>
-	</ul>
-      </div>
-    </div>
-  </section>
+        <section id="integrating">
+            <h2>{{ page.metadata.integrate.title }}</h2>
+            <div class="main">
+                <div class="title">
+                    {{ page.metadata.integrate.desc.markdown() }}
+                </div>
+                <div class="bod">
+                    <ul class="twop">
+                        <li>
+                            <h4>{{ page.metadata.integrate.tutorials_title }}</h4>
+                            <ul class="tutorials">
+                                {% for tutorial in page.metadata.integrate.tutorials %}
+                                <li><a href="{{ tutorial.url }}">{{ tutorial.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {{ page.metadata.integrate.sub_tutorials.markdown() if page.metadata.integrate.sub_tutorials }}
+                        </li>
+                        <li>
+                            <h4>{{ page.metadata.integrate.clients_title }}</h4>
+                            <ul class="libraries">
+                                {% for library in page.metadata.integrate.clients %}
+                                <li class="{{ library.class if library.class else library.name | lower }}">
+                                    <a href="{{ library.url }}" target="_blank">{{ library.name }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {{ page.metadata.integrate.sub_clients.markdown() if page.metadata.integrate.sub_clients }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section id="pricing">
-    <h2>{{ page.metadata.pricing.title }}</h2>
-    <div class="main">
-      <div class="title">
-	{{ page.metadata.pricing.desc.markdown() }}
-      </div>
-      <div class="bod">
-	<ul class="pricing">
-	  {% for price in page.metadata.pricing.rates %}
-	  <li>
-	    <h4>{{ price.desc }} <span>({{ price.per }})</span></h4>
-	    <p class="{{ price.amount }}">{{ price.amount }}</p>
-	  </li>
-	  {% endfor %}
-	</ul>
-      </div>
-    </div>
-  </section>
+        <section id="pricing">
+            <h2>{{ page.metadata.pricing.title }}</h2>
+            <div class="main">
+                <div class="title">
+                    {{ page.metadata.pricing.desc.markdown() }}
+                </div>
+                <div class="bod">
+                    <ul class="pricing">
+                        {% for price in page.metadata.pricing.rates %}
+                        <li>
+                            <h4>{{ price.desc }} <span>({{ price.per }})</span></h4>
+                            <p class="{{ price.amount }}">{{ price.amount }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section id="go" class="box">
-    <h1>{{ page.metadata.bottom.heading }}</h1>
-    <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.bottom.link }}</a>
-  </section>
+        <section id="go" class="box">
+            <h1>{{ page.metadata.bottom.heading }}</h1>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.bottom.link }}</a>
+        </section>
 
     </div>
 </div>
-
 {% endblock %}

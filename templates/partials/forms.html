@@ -1,27 +1,27 @@
 {% macro controlGroupField(type, id, placeholder, label, addl, recommendedField, value, error) %}
-  <div class="control-group {{id}}">
+<div class="control-group {{id}}">
     {{input(type, id, placeholder, value, error)}}
     <label class="control-label" for="{{id}}">{{label}}{% if recommendedField %} <span class="recommended-field">Recommended field</span>{% endif %}</label>
     {{addl}}
-  </div>
+</div>
 {% endmacro %}
 
 {% macro controlGroupTextField(id, placeholder, label, addl, recommendedField, value, error) %}
-  {{controlGroupField("text", id, placeholder, label, addl, recommendedField, value, error)}}
+{{controlGroupField("text", id, placeholder, label, addl, recommendedField, value, error)}}
 {% endmacro %}
 
 {% macro input(type, id, placeholder, value, error) %}
-  <input type="{{type}}" name="{{id}}" id="{{id}}"{% if value %} value="{{value}}"{% endif %}{% if placeholder %} placeholder="{{placeholder}}"{% endif %}{% if error %} class="error"{% endif %}>
+<input type="{{type}}" name="{{id}}" id="{{id}}"{% if value %} value="{{value}}"{% endif %}{% if placeholder %} placeholder="{{placeholder}}"{% endif %}{% if error %} class="error"{% endif %}>
 {% endmacro %}
 
 {% macro checkbox(id, checked) %}
-  <input type="checkbox" name="{{id}}" id="{{id}}"{% if checked %} checked{% endif %}>
+<input type="checkbox" name="{{id}}" id="{{id}}"{% if checked %} checked{% endif %}>
 {% endmacro %}
 
 {% macro select(id, values, attrs) %}
-  <select name="{{id}}" id="{{id}}"{% if attrs %} {{attrs}}{% endif %}>
+<select name="{{id}}" id="{{id}}"{% if attrs %} {{attrs}}{% endif %}>
     {% for value in values %}
-      <option value="{% if value.id %}{{value.id}}{% else %}{{value}}{% endif %}"{% if value.attrs %} value.attrs{% endif %}>{% if value.text %}{{value.text}}{% else %}{{value}}{% endif %}</option>
+    <option value="{% if value.id %}{{value.id}}{% else %}{{value}}{% endif %}"{% if value.attrs %} value.attrs{% endif %}>{% if value.text %}{{value.text}}{% else %}{{value}}{% endif %}</option>
     {% endfor %}
-  </select>
+</select>
 {% endmacro %}

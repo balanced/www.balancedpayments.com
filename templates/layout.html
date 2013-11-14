@@ -2,15 +2,15 @@
 <html lang="en">
 {%- include 'partials/header.html' -%}
 <body class="layout-v4 {{ page.metadata.body_class }}">
-  {%- include 'partials/sidebar-hidden.html' -%}
-  <div class="global-wrapper">
-    {%- include 'partials/sidebar.html' -%}
-    <div class="page-wrapper">
-      {%- include 'partials/page-header.html' -%}
-      {% block body %}{% endblock %}
-      {%- include 'partials/footer.html' -%}
+    {%- include 'partials/sidebar-hidden.html' -%}
+    <div class="global-wrapper">
+        {%- include 'partials/sidebar.html' -%}
+        <div class="page-wrapper">
+            {%- include 'partials/page-header.html' -%}
+            {% block body %}{% endblock %}
+            {%- include 'partials/footer.html' -%}
+        </div>
     </div>
-  </div>
 
     <script type="text/javascript">
     $(function() {

@@ -1,25 +1,25 @@
 {%- block header -%}
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=768, user-scalable=1">
-  <title>{{ page.metadata.title if page.metadata.title else name }}</title>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <script type="text/javascript">var _pageStartTime=(new Date()).getTime()</script>
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=768, user-scalable=1">
+    <title>{{ page.metadata.title if page.metadata.title else name }}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">var _pageStartTime=(new Date()).getTime()</script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
 
-  <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/static/css/root.css" type="text/css">
-  {%- for stylesheet in stylesheets -%}
+    <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/css/root.css" type="text/css">
+    {%- for stylesheet in stylesheets -%}
     <link rel="stylesheet" href="{{stylesheet}}" type="text/css">
-  {%- endfor -%}
+    {%- endfor -%}
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-  {%- for script in scripts -%}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    {%- for script in scripts -%}
     <script src="{{script}}"></script>
-  {%- endfor -%}
+    {%- endfor -%}
 </head>
 {%- endblock -%}
