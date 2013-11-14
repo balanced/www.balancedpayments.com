@@ -64,10 +64,7 @@ body {
   position: relative;
   text-align: center;
   z-index: 10;
-
-  -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
+  .box-shadow(0 3px 3px -2px rgba(0, 0, 0, 0.2));
 }
 
 .about-banner-node {
@@ -138,10 +135,7 @@ body {
 
 .about-founders-body {
   display: inline-block;
-
-  -moz-box-shadow: 2px 2px 2px #d0d2d3;
-  -webkit-box-shadow: 2px 2px 2px #d0d2d3;
-  box-shadow: 2px 2px 2px #d0d2d3;
+  .box-shadow(2px 2px 2px #d0d2d3);
 }
 
 .about-founders-body-node {
@@ -254,16 +248,12 @@ body {
   width: 90px;
   #gradient > .vertical(#a8c179, #78a22f);
   margin-top: 20px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  .border-radius(3px);
 }
 
 .about-button-hover {
   #gradient > .vertical(#97b85a, #6c912a);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  .border-radius(3px);
 }
 
 .about-button-text {
