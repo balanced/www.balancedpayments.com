@@ -1,3 +1,5 @@
+/*global testimonails:true */
+
 (function (ctx) {
 	ctx.balanced = {
 		menu: function() {
@@ -280,15 +282,15 @@
 							return cb();
 						}
 					});
-				};
+				}
 
 				function routingNumberValidationSuccess(bankInfo) {
 					$routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
-				};
+				}
 
 				function routingNumberValidationError() {
 					$routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
-				};
+				}
 
 				$routingNumberInput.on('blur', function(event) {
 					var val = $routingNumberInput.val();
@@ -320,7 +322,7 @@
 				var calculateEstimatedRates = function() {
 					var volume = $(".calculator form input[name='estimatedVolume']").val();
 
-					volume = parseInt(volume.replace(/[^\d\.]/g,''));
+					volume = parseInt(volume.replace(/[^\d\.]/g,''), 10);
 
 					if(isNaN(volume)) {
 						$(".effective-rate-value").text("");
@@ -334,7 +336,7 @@
 					var rateText = "2.9% + 30¢";
 
 					if(volume > 100000) {
-						rate = (vol100k + vol400k + vol500kplus)/volume;
+						var rate = (vol100k + vol400k + vol500kplus)/volume;
 						rateText = (rate * 100).toFixed(2) + "% + 30¢";
 					}
 
@@ -342,14 +344,14 @@
 					return rateText;
 				};
 
-				calculateEstimatedRates()
+				calculateEstimatedRates();
 
 				$(".calculator form input").on('input', function() {
 					calculateEstimatedRates();
 				});
 			});
 		}
-	}
+	};
 
-	ctx.balanced.menu()
+	ctx.balanced.menu();
 }(window));
