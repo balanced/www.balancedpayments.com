@@ -1,7 +1,8 @@
 {% extends 'layout.html' %}
 
-{% block body %}
+{% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
 
+{% block body %}
 <div class="bg-default">
     <div class="container">
         <div class="row">
@@ -391,29 +392,5 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".carousel").carousel({
-            interval: false
-        });
-
-        $(".how-it-works .step-boxes a").on('click', function(e) {
-            var step = parseInt($(e.currentTarget).find(".box").attr("data-step"), 10);
-
-            if (step) {
-                $(".carousel").carousel(step - 1);
-            }
-        });
-
-        $(".carousel").on("slid", function(e) {
-            var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"), 10);
-
-            if (step) {
-                $(".how-it-works .step-boxes .box").removeClass("box-active");
-                $(".how-it-works .step-boxes [data-step=" + step + "]").addClass("box-active");
-            }
-        });
-    });
-</script>
+<script type="text/javascript">balanced.achDebits()</script>
 {% endblock %}
