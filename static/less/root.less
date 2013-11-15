@@ -457,6 +457,20 @@ header {
     }
 }
 
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 20px;
+  .transition(width 1s);
+}
+
+.pace-inactive {
+  display: none;
+}
+
 @import "ach-debits.less";
 @import "pricing.less";
 @import "customers.less";

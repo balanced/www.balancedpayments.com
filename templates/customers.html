@@ -127,6 +127,6 @@
 var testimonails={};
 {%- for testimonial in page.metadata.video_testimonials.list -%}
 testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}", background: "/images/customers/{{testimonial.id}}_background.jpg", logo: "/images/customers/logo_{{testimonial.id}}_video.png", thumb: "/images/customers/{{testimonial.id}}_video_thumbnail.jpg" };
-{%- endfor -%}balanced.customers()
+{%- endfor -%}$(balanced.customers)
 </script>
 {% endblock %}

@@ -2,6 +2,7 @@ var _ = require('lodash/dist/lodash.underscore');
 var fs = require('fs');
 var path = require('path');
 var config = require('../config.json');
+config.debug = config.debug || config.locals.debug;
 
 var basedir = path.join(process.cwd(), config.contents);
 
@@ -25,6 +26,14 @@ module.exports = function(env, callback) {
 		}
 
 		return years;
+	};
+
+	env.helpers.link = function(str) {
+		if (config.debug) {
+			return str + '.html';
+		}
+
+		return str;
 	};
 
 	env.helpers.sequenceFromString = function (initialString) {
