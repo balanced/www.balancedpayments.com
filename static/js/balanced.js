@@ -66,7 +66,7 @@
 				$(".sidebar-menu-left ul li").removeClass("active");
 				$(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
 
-				window._gaq && window._gaq.push(['_trackPageview', options.url]);
+				var dummy = window._gaq && window._gaq.push(['_trackPageview', options.url]);
 			});
 			$.pjax.defaults.timeout = 2000;
 		},
