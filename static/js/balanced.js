@@ -54,7 +54,21 @@
 				$this.toggleClass('active').next('ul').toggleClass('active');
 			});
 
-			// $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+			var EXTRACT_BODY_CLASS = /<body[^>]*class="([^>]*)"[^>]*>[\s\S.]*<\/body>/i;
+			$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container', { fragment: '#pjax-container', container: '#pjax-container' });
+			$(document).on('pjax:success', function(e, data, status, xhr, options) {
+				var classes = data.match(EXTRACT_BODY_CLASS);
+				$(document.body).attr('class', (classes && classes.length && classes[1]) || '');
+
+				$menulink.removeClass('active');
+				$menu.removeClass('active');
+				$("body, html").css("overflow-x", "visible");
+				$(".sidebar-menu-left ul li").removeClass("active");
+				$(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
+
+				window._gaq && window._gaq.push(['_trackPageview', options.url]);
+			});
+			$.pjax.defaults.timeout = 2000;
 		},
 		achDebits: function() {
 			$(".carousel").carousel({
