@@ -44,9 +44,7 @@ module.exports = function(grunt) {
 				},
 				src: [
 					'Gruntfile.js',
-					'app/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
+					'static/js/**/*.js'
 				],
 			},
 			update: {
@@ -55,9 +53,7 @@ module.exports = function(grunt) {
 				},
 				src: [
 					'Gruntfile.js',
-					'app/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
+					'static/js/**/*.js'
 				],
 			}
 		},
