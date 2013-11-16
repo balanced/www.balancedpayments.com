@@ -67,7 +67,9 @@
 				$(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
 
 				var dummy = window._gaq && window._gaq.push(['_trackPageview', options.url]);
-			});
+			})
+				.on('pjax:send', function() { NProgress.start(); })
+				.on('pjax:complete', function() { NProgress.done(); });
 			$.pjax.defaults.timeout = 2000;
 		},
 		achDebits: function() {
