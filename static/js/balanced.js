@@ -1,6 +1,6 @@
 /*global testimonails:true */
 
-(function (ctx) {
+(function(ctx) {
 	var balanced = ctx.balanced = {
 		menu: function() {
 			$(".toggle-child-menu").click(function(e) {
@@ -27,8 +27,8 @@
 			});
 
 			var $menu = $('#menu'),
-			$menulink = $('#mobile-menu'),
-			$menuTrigger = $('.has-submenu > a');
+				$menulink = $('#mobile-menu'),
+				$menuTrigger = $('.has-submenu > a');
 
 			$menulink.click(function(e) {
 				e.preventDefault();
@@ -119,7 +119,7 @@
 				$this.addClass('selected').siblings().removeClass('selected');
 			});
 
-			$.each(testimonails, function (k, testimonial) {
+			$.each(testimonails, function(k, testimonial) {
 				var i = new Image();
 				i.src = testimonial.background;
 
@@ -164,14 +164,14 @@
 
 				var $videoTestimonial = $('.video-testimonial-image');
 				$videoTestimonial.find('.background-image:hidden')
-				.css({
-					'background-image': 'url(' + testimonial.background + ')',
-					'z-index': '-1'
-				})
-				.fadeIn('slow', function () {
-					$(this).siblings('.background-image').hide();
-					$(this).css('z-index', '-2');
-				});
+					.css({
+						'background-image': 'url(' + testimonial.background + ')',
+						'z-index': '-1'
+					})
+					.fadeIn('slow', function() {
+						$(this).siblings('.background-image').hide();
+						$(this).css('z-index', '-2');
+					});
 
 				var $banner = $videoTestimonial.find('.banner');
 				$banner.find('.banner-content-text span').html(testimonial.description);
@@ -186,15 +186,15 @@
 			var completedContributorRequests = 0;
 
 			var onCompleteRepos = function(response) {
-				if(response.status === 200) {
+				if (response.status === 200) {
 					var repos = response.responseJSON;
 					repos = repos.sort(function(a, b) {
 						return b.watchers_count - a.watchers_count;
 					});
 
-					for(var i = 0, l = repos.length; i < l; i++) {
+					for (var i = 0, l = repos.length; i < l; i++) {
 						// Don't include forks
-						if(repos[i].fork) {
+						if (repos[i].fork) {
 							continue;
 						}
 
@@ -206,7 +206,7 @@
 
 						var $template = $("section.github .repos .repos-container .repo-template").clone().removeClass("repo-template");
 
-						if(i === 0) {
+						if (i === 0) {
 							$template.addClass("first");
 						}
 
@@ -226,12 +226,12 @@
 			var onCompleteContributors = function(response) {
 				completedContributorRequests++;
 
-				if(response.status === 200) {
+				if (response.status === 200) {
 					var contributors = response.responseJSON;
 
-					for(var i = 0; i < contributors.length; i++) {
+					for (var i = 0; i < contributors.length; i++) {
 						// Don't add the same user more than once
-						if($("section.github .contributors .contributors-container #" + contributors[i].id).length === 0) {
+						if ($("section.github .contributors .contributors-container #" + contributors[i].id).length === 0) {
 							var userId = contributors[i].id;
 							var login = contributors[i].login;
 							var url = contributors[i].html_url;
@@ -249,7 +249,7 @@
 					}
 				}
 
-				if(completedContributorRequests === totalRepos) {
+				if (completedContributorRequests === totalRepos) {
 					var totalContributors = $("section.github .contributors .contributors-container .contributor").not(".contributor-template").length;
 					$("section.github .contributors .loading").css("display", "none");
 					$("section.github .contributors .counts h1").html(totalContributors);
@@ -274,7 +274,7 @@
 		},
 		payouts: function() {
 			var $routingNumber = $('.routing-number'),
-					$routingNumberInput = $routingNumber.find('input');
+				$routingNumberInput = $routingNumber.find('input');
 
 			function validateRoutingNumber(routingNumber, cb) {
 				if (!routingNumber || !routingNumber.length || routingNumber.length !== 9) {
@@ -304,7 +304,7 @@
 			$routingNumberInput.on('blur', function(event) {
 				var val = $routingNumberInput.val();
 
-				validateRoutingNumber(val, function (bankInfo) {
+				validateRoutingNumber(val, function(bankInfo) {
 					if (bankInfo) {
 						routingNumberValidationSuccess(bankInfo);
 					} else {
@@ -316,7 +316,7 @@
 			$routingNumberInput.on('keyup', function(event) {
 				var val = $routingNumberInput.val();
 
-				validateRoutingNumber(val, function (bankInfo) {
+				validateRoutingNumber(val, function(bankInfo) {
 					if (bankInfo) {
 						routingNumberValidationSuccess(bankInfo);
 					} else {
@@ -329,21 +329,21 @@
 			var calculateEstimatedRates = function() {
 				var volume = $(".calculator form input[name='estimatedVolume']").val();
 
-				volume = parseInt(volume.replace(/[^\d\.]/g,''), 10);
+				volume = parseInt(volume.replace(/[^\d\.]/g, ''), 10);
 
-				if(isNaN(volume)) {
+				if (isNaN(volume)) {
 					$(".effective-rate-value").text("");
 					return "";
 				}
 
 				var vol100k = 0.029 * Math.min(volume, 100000);
-				var vol400k = 0.027 * (volume > 100000 ? Math.min(volume-100000, 400000) : 0);
-				var vol500kplus = 0.024 * (volume > 500000 ? (volume-500000) : 0);
+				var vol400k = 0.027 * (volume > 100000 ? Math.min(volume - 100000, 400000) : 0);
+				var vol500kplus = 0.024 * (volume > 500000 ? (volume - 500000) : 0);
 
 				var rateText = "2.9% + 30¢";
 
-				if(volume > 100000) {
-					var rate = (vol100k + vol400k + vol500kplus)/volume;
+				if (volume > 100000) {
+					var rate = (vol100k + vol400k + vol500kplus) / volume;
 					rateText = (rate * 100).toFixed(2) + "% + 30¢";
 				}
 
