@@ -11,6 +11,14 @@ module.exports = function(grunt) {
 		concat: {
 			options: {
 				separator: ';\n'
+			},
+			bootstrapModal: {
+				src: ['contents/static/js/lib/bootstrap/js/bootstrap-transition.js', 'contents/static/js/lib/bootstrap/js/bootstrap-modal.js', 'contents/static/js/lib/isotope/jquery.isotope.min.js'],
+				dest: 'contents/static/js/customer-lib.js'
+			},
+			staticLib: {
+				src: ['contents/static/js/lib/jquery-pjax/jquery.pjax.js', 'contents/static/js/lib/nprogress/nprogress.js'],
+				dest: 'contents/static/js/static-lib.js'
 			}
 		},
 
@@ -19,7 +27,24 @@ module.exports = function(grunt) {
 				files: {
 					'contents/static/js/balanced.min.js': [
 						'static/js/balanced.js'
+					],
+					'contents/static/js/customer-lib.min.js': [
+						'contents/static/js/customer-lib.js'
+					],
+					'contents/static/js/static-lib.min.js': [
+						'contents/static/js/static-lib.js'
+					],
+					'contents/static/js/carousel.min.js': [
+						'contents/static/js/lib/bootstrap/js/bootstrap-carousel.js'
 					]
+				}
+			}
+		},
+
+		bower: {
+			install: {
+				options: {
+					copy: false
 				}
 			}
 		},
@@ -346,8 +371,8 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'concat', 'uglify', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
