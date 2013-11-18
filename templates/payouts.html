@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <section class="how-it-works">
+                <section class="how-it-works" id="how-it-works">
                     <div class="row">
                         <div class="span19 content-green med-top-padding med-bottom-padding">
                             <div class="offset1 section-title section-title-full">
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<div class="bg-white">
+<div class="bg-white" id="process">
     <div class="container">
         <div class="row">
             <section class="integration-flow">
@@ -60,7 +60,7 @@
                                 <p>{{page.metadata.withProcessing.process3}}</p>
                             </div>
                         </div>
-                        <div class="span9 right">
+                        <div class="span9 right" id="payouts-only">
                             <h3>{{page.metadata.payoutsOnly.title}}</h3>
                             <p>{{page.metadata.payoutsOnly.body}}</p>
                             <div class="process">
@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<div class="bg-default">
+<div class="bg-default" id="payment-schedule">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="collecting-bank-account-info">
             <div class="span19">
                 <section class="collecting-bank-account-info">
                     <div class="box-pad-top">
@@ -212,7 +212,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="payout-status">
             <div class="span19">
                 <section class="payout-status">
                     <div class="box-pad-top">
@@ -232,7 +232,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="reversing-a-payout">
             <div class="span19">
                 <section class="reversing-a-payout">
                     <div class="box-pad-top">
@@ -252,7 +252,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="bank-statement-descriptor">
             <div class="span19">
                 <section class="bank-statement-descriptor">
                     <div class="box-pad-top">
@@ -282,7 +282,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row" id="payouts-pricing">
             <div class="span19">
                 <section class="row payouts">
                     <div class="box-pad-top">
@@ -351,62 +351,5 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-$(function() {
-  var $routingNumber = $('.routing-number'),
-    $routingNumberInput = $routingNumber.find('input');
-
-  function validateRoutingNumber(routingNumber, cb) {
-    if (!routingNumber || !routingNumber.length || routingNumber.length !== 9) {
-      return cb();
-    }
-
-
-    $.ajax({
-      url: 'https://js.balancedpayments.com/v1/bank_accounts/routing_numbers/' + routingNumber,
-      dataType: 'json',
-      success: function(data) {
-        return cb(data);
-      },
-      error: function() {
-        return cb();
-      }
-    });
-  };
-
-  function routingNumberValidationSuccess(bankInfo) {
-    $routingNumber.addClass('success').removeClass('error').find('.bank-name span').html('Bank: ' + bankInfo.customer_name);
-  };
-  function routingNumberValidationError() {
-    $routingNumber.find('.bank-name span').html('');
-    $routingNumber.addClass('error').removeClass('success').find('.description span:first').html('<span>Invalid Routing Number:</span> Please enter a valid 9-digit routing number.');
-  };
-
-  $routingNumberInput.on('blur', function(event) {
-    var val = $routingNumberInput.val();
-
-    validateRoutingNumber(val, function (bankInfo) {
-      if (bankInfo) {
-        routingNumberValidationSuccess(bankInfo);
-      } else {
-        routingNumberValidationError();
-      }
-    });
-  });
-
-  $routingNumberInput.on('keyup', function(event) {
-    var val = $routingNumberInput.val();
-
-    validateRoutingNumber(val, function (bankInfo) {
-      if (bankInfo) {
-        routingNumberValidationSuccess(bankInfo);
-      } else {
-        $routingNumber.find('.bank-name span').html('');
-        $routingNumber.removeClass('success').find('.description span:first').html('Enter your 9-digit routing number.');
-      }
-    });
-  });
-});
-</script>
+<script type="text/javascript">$(balanced.payouts)</script>
 {% endblock %}

@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<section class="open feature-image">
+<section class="open feature-image" id="open-company">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -34,7 +34,7 @@
         </div>
     </div>
 </section>
-<section class="innovation feature-image">
+<section class="innovation feature-image" id="innovation">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -51,7 +51,7 @@
         </div>
     </div>
 </section>
-<section class="passion feature-image">
+<section class="passion feature-image" id="passion">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -68,7 +68,7 @@
         </div>
     </div>
 </section>
-<section class="commitment feature-image">
+<section class="commitment feature-image" id="commitment">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -86,10 +86,8 @@
     </div>
 </section>
 
-<div class="bg-default">
+<div class="bg-default" id="why-open">
     <div class="container">
-
-
         <div class="row">
             <div class="span19">
                 <section class="why-be-an-open-company">
@@ -113,7 +111,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="challenges">
             <div class="span19">
                 <section class="the-challenges">
                     <div class="span5 no-margin-left">
@@ -134,7 +132,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="rewards">
             <div class="span19">
                 <section class="the-rewards">
                     <div class="span5 no-margin-left">
@@ -173,7 +171,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="community">
             <div class="span19">
                 <section class="community">
                     <div class="span5 no-margin-left">
@@ -206,7 +204,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="support">
             <div class="span19">
                 <section class="support">
                     <div class="span5 no-margin-left">
@@ -266,7 +264,7 @@
     </div>
 </div>
 
-<div class="bg-curry-yellow">
+<div class="bg-curry-yellow" id="open-source">
     <div class="container">
         <div class="row">
             <div class="span19">
@@ -292,7 +290,7 @@
     </div>
 </div>
 
-<div class="bg-default">
+<div class="bg-default" id="github">
     <div class="container">
         <div class="row">
             <section class="github">
@@ -379,97 +377,5 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    var totalRepos = 0;
-    var completedContributorRequests = 0;
-
-    $(document).ready(function() {
-        var onCompleteRepos = function(response) {
-            if(response.status === 200) {
-                var repos = response.responseJSON;
-                repos = repos.sort(function(a, b) {
-                    return b.watchers_count - a.watchers_count;
-                });
-
-                for(var i = 0; i < repos.length; i++) {
-                    // Don't include forks
-                    if(repos[i].fork) {
-                        continue;
-                    }
-
-                    totalRepos++;
-
-                    // Fire off ajax request to get contributors
-                    ajaxOptions.complete = onCompleteContributors;
-                    jQuery.ajax(repos[i].contributors_url, ajaxOptions);
-
-                    var $template = $("section.github .repos .repos-container .repo-template").clone().removeClass("repo-template");
-
-                    if(i === 0) {
-                        $template.addClass("first");
-                    }
-
-                    $template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
-                    $template.find("p.description").html(repos[i].description);
-                    $template.find("p.lang").html(repos[i].language);
-                    $template.find("p.stars span").html(repos[i].watchers_count);
-
-                    $("section.github .repos .repos-container").append($template);
-                }
-
-                $("section.github .repos .loading").css("display", "none");
-                $("section.github .repos .counts h1").html(totalRepos);
-            }
-        }
-
-        var onCompleteContributors = function(response) {
-            completedContributorRequests++;
-
-            if(response.status === 200) {
-                var contributors = response.responseJSON;
-
-                for(var i = 0; i < contributors.length; i++) {
-                    // Don't add the same user more than once
-                    if($("section.github .contributors .contributors-container #" + contributors[i].id).length === 0) {
-                        var userId = contributors[i].id;
-                        var login = contributors[i].login;
-                        var url = contributors[i].html_url;
-                        var avatarUrl = contributors[i].avatar_url;
-
-                        var $template = $("section.github .contributors .contributors-container .contributor-template").clone().removeClass("contributor-template");
-
-                        $template.attr("id", userId);
-                        $template.find("a").attr("href", url);
-                        $template.find("img.avatar").attr("src", avatarUrl).attr("alt", login);
-                        $template.find("p.user").html(login);
-
-                        $("section.github .contributors .contributors-container").append($template);
-                    }
-                }
-            }
-
-            if(completedContributorRequests === totalRepos) {
-                 var totalContributors = $("section.github .contributors .contributors-container .contributor").not(".contributor-template").length;
-                 $("section.github .contributors .loading").css("display", "none");
-                 $("section.github .contributors .counts h1").html(totalContributors);
-            }
-        }
-
-        var ajaxOptions = {
-            crossDomain: true,
-            dataType: 'json',
-            timeout: 5000,
-            cache: false,
-            data: {
-                per_page: 100
-            },
-            headers: {
-                'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
-            }
-        };
-
-        ajaxOptions.complete = onCompleteRepos;
-        jQuery.ajax("https://api.github.com/orgs/balanced/repos", ajaxOptions);
-    });
-</script>
+<script type="text/javascript">$(balanced.openCompany)</script>
 {% endblock %}

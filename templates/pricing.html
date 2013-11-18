@@ -15,12 +15,12 @@
                 <div class="row large-bottom-margin">
                     <div class="page-subtitle">
                         <div class="span19">
-                            <span class="">{{ page.metadata.subtitle.heading }}</span>
+                            <span class="">{{page.metadata.subtitle.heading}}</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="card-processing">
                     <div class="span19">
                         <section class="card-processing">
                             <div class="section-bg content">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="ach-debits">
                     <div class="span19">
                         <section class="row ach-debits">
                             <div class="section-bg content">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="payouts">
                     <div class="span19">
                         <section class="row payouts">
                             <div class="section-bg content">
@@ -173,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="no-additional-fees">
                     <div class="span19">
                         <section class="row no-additional-fees half-height">
                             <div class="section-bg xlarge-bottom-margin">
@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="volume-discounts">
                     <div class="span19">
                         <section class="row volume-discounts half-height">
                             <div class="section-bg med-bottom-margin">
@@ -249,7 +249,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="calculate-your-rate">
                     <div class="span13 offset6 xlarge-bottom-margin">
                         <section class="row calculator">
                             <span class="calc-title">{{page.metadata.calculateYourRate.title}}</span>
@@ -278,38 +278,5 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        var calculateEstimatedRates = function() {
-            var volume = $(".calculator form input[name='estimatedVolume']").val();
-
-            volume = parseInt(volume.replace(/[^\d\.]/g,''));
-
-            if(isNaN(volume)) {
-                $(".effective-rate-value").text("");
-                return "";
-            }
-
-            var vol100k = 0.029 * Math.min(volume, 100000);
-            var vol400k = 0.027 * (volume > 100000 ? Math.min(volume-100000, 400000) : 0);
-            var vol500kplus = 0.024 * (volume > 500000 ? (volume-500000) : 0);
-
-            var rateText = "2.9% + 30¢";
-
-            if(volume > 100000) {
-                rate = (vol100k + vol400k + vol500kplus)/volume;
-                rateText = (rate * 100).toFixed(2) + "% + 30¢";
-            }
-
-            $(".effective-rate-value").text(rateText);
-            return rateText;
-        };
-
-        calculateEstimatedRates()
-
-        $(".calculator form input").on('input', function() {
-            calculateEstimatedRates();
-        });
-    });
-</script>
+<script type="text/javascript">$(balanced.pricing)</script>
 {% endblock %}

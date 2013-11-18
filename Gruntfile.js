@@ -14,7 +14,15 @@ module.exports = function(grunt) {
 			}
 		},
 
-		uglify: {},
+		uglify: {
+			all: {
+				files: {
+					'contents/static/js/balanced.min.js': [
+						'static/js/balanced.js'
+					]
+				}
+			}
+		},
 
 		jshint: {
 			all: [
@@ -23,12 +31,6 @@ module.exports = function(grunt) {
 			],
 			options: {
 				jshintrc: '.jshintrc'
-			}
-		},
-
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js'
 			}
 		},
 
@@ -42,9 +44,7 @@ module.exports = function(grunt) {
 				},
 				src: [
 					'Gruntfile.js',
-					'app/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
+					'static/js/**/*.js'
 				],
 			},
 			update: {
@@ -53,9 +53,7 @@ module.exports = function(grunt) {
 				},
 				src: [
 					'Gruntfile.js',
-					'app/**/*.js',
-					'test/**/*.js',
-					'!test/support/lib/*.js'
+					'static/js/**/*.js'
 				],
 			}
 		},
@@ -118,7 +116,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/js/*'
 				],
-				tasks: ['concat', 'wintersmith:build'],
+				tasks: ['concat', 'uglify', 'wintersmith:build'],
 				options: {
 					livereload: true
 				}
@@ -344,8 +342,8 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'concat', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean', 'concat', 'uglify', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
