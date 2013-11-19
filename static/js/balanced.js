@@ -1,4 +1,4 @@
-/*global testimonails:true */
+/*global testimonails:true NProgress:true */
 
 (function(ctx) {
 	var balanced = ctx.balanced = {
@@ -59,7 +59,10 @@
 			}
 
 			var EXTRACT_BODY_CLASS = /<body[^>]*class="([^>]*)"[^>]*>[\s\S.]*<\/body>/i;
-			$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container', { fragment: '#pjax-container', container: '#pjax-container' });
+			$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container', {
+				fragment: '#pjax-container',
+				container: '#pjax-container'
+			});
 			$(document).on('pjax:success', function(e, data, status, xhr, options) {
 				var classes = data.match(EXTRACT_BODY_CLASS);
 				$(document.body).attr('class', (classes && classes.length && classes[1]) || '');
@@ -72,12 +75,16 @@
 
 				var dummy = window._gaq && window._gaq.push(['_trackPageview', options.url]);
 			})
-				.on('pjax:send', function() { NProgress.start(); })
-				.on('pjax:complete', function() { NProgress.done(); });
+				.on('pjax:send', function() {
+					NProgress.start();
+				})
+				.on('pjax:complete', function() {
+					NProgress.done();
+				});
 			$.pjax.defaults.timeout = 2000;
 		},
 		achDebits: function() {
-			$.fn.carousel && $(".carousel").carousel({
+			var carousel = $.fn.carousel && $(".carousel").carousel({
 				interval: false
 			});
 
