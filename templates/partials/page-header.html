@@ -38,47 +38,53 @@
                     <ul>
                         <li class="has-submenu"><a href="#">PRODUCT</a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200136200">Card Processing</a>
-                                </li>
-                                <li>
-                                    <a href="/ach-debits">ACH Debits</a>
-                                </li>
-                                <li>
-                                    <a href="/payouts">Payouts</a>
-                                </li>
-                                <li>
-                                    <a href="https://docs.balancedpayments.com/current/overview#funds-flow">Escrow</a>
-                                </li>
-                                <li>
-                                    <a href="https://docs.balancedpayments.com/current/overview#holds">Authorization Holds</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200135940">International</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910">Chargebacks</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/categories/200005004">Security</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200173030">Compliance</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/categories/200004530">Signup Process</a>
-                                </li>
-                                <li>
-                                    <a href="https://docs.balancedpayments.com/current/overview.html#funds-flow">Payments Flow</a>
-                                </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/articles/200136200">Card Processing</a>
+                              </li>
+                              <li>
+                                  <a href="{{env.helpers.link('/ach-debits')}}" data-pjax>ACH Debits</a>
+                              </li>
+                              <li>
+                                  <a href="{{env.helpers.link('/payouts')}}" data-pjax>Payouts</a>
+                              </li>
+                              <li>
+                                  <a href="https://docs.balancedpayments.com/current/overview#funds-flow">Escrow</a>
+                              </li>
+                              <li>
+                                  <a href="https://docs.balancedpayments.com/current/overview#holds">Authorization Holds</a>
+                              </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/articles/200135940">International</a>
+                              </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910">Chargebacks</a>
+                              </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/categories/200005004">Security</a>
+                              </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/articles/200173030">Compliance</a>
+                              </li>
+                              <li>
+                                  <a href="https://support.balancedpayments.com/hc/en-us/categories/200004530">Signup Process</a>
+                              </li>
+                              <li>
+                                  <a href="https://docs.balancedpayments.com/current/overview.html#funds-flow">Payments Flow</a>
+                              </li>
                             </ul>
                         </li>
                         <li><a href="/pricing">PRICING</a></li>
                         <li class="has-submenu"><a href="#">ABOUT</a>
                             <ul class="sub-menu">
-                                <li><a href="/about">About</a></li>
-                                <li><a href="/open">Open Company</a></li>
-                                <li><a href="http://blog.balancedpayments.com">Blog</a></li>
+                              <li>
+                                  <a href="{{env.helpers.link('/about')}}">About</a>
+                              </li>
+                              <li>
+                                  <a href="{{env.helpers.link('/open')}}" data-pjax>Open Company</a>
+                              </li>
+                              <li>
+                                  <a href="http://blog.balancedpayments.com">Blog</a>
+                              </li>
                             </ul>
                         </li>
                         <li><a href="https://support.balancedpayments.com">Help</a></li>

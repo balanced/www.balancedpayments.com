@@ -88,12 +88,18 @@ module.exports = function(env, callback) {
 	var isFile = function(currentItem) {
 		if (!currentItem) {
 			console.log("IS FILE - NULL VALUE");
+			return;
 		}
 
 		return currentItem.hasOwnProperty('__filename');
 	};
 
 	var isDirectory = function(currentItem) {
+		if (!currentItem) {
+			console.log("IS FILE - NULL VALUE");
+			return;
+		}
+
 		return !currentItem.hasOwnProperty('__filename');
 	};
 

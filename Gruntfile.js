@@ -3,8 +3,10 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		clean: {
-			files: {
-				src: ['build/', 'dist/', 'report/', 'contants/', 'contents/images/', 'contents/static/']
+			all: {
+				files: {
+					src: ['build/', 'dist/', 'report/', 'contants/', 'contents/images/', 'contents/static/']
+				}
 			}
 		},
 
@@ -13,11 +15,11 @@ module.exports = function(grunt) {
 				separator: ';\n'
 			},
 			bootstrapModal: {
-				src: ['contents/static/js/lib/bootstrap/js/bootstrap-transition.js', 'contents/static/js/lib/bootstrap/js/bootstrap-modal.js', 'contents/static/js/lib/isotope/jquery.isotope.min.js'],
+				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			},
 			staticLib: {
-				src: ['contents/static/js/lib/jquery-pjax/jquery.pjax.js', 'contents/static/js/lib/nprogress/nprogress.js'],
+				src: ['bower/jquery-pjax/jquery.pjax.js', 'bower/nprogress/nprogress.js'],
 				dest: 'contents/static/js/static-lib.js'
 			}
 		},
@@ -35,7 +37,7 @@ module.exports = function(grunt) {
 						'contents/static/js/static-lib.js'
 					],
 					'contents/static/js/carousel.min.js': [
-						'contents/static/js/lib/bootstrap/js/bootstrap-carousel.js'
+						'bower/bootstrap/js/bootstrap-carousel.js'
 					]
 				}
 			}
@@ -367,8 +369,8 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
+	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.

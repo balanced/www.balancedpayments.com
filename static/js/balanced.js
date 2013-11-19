@@ -54,6 +54,10 @@
 				$this.toggleClass('active').next('ul').toggleClass('active');
 			});
 
+			if ($(document.body).hasClass('community')) {
+				return;
+			}
+
 			var EXTRACT_BODY_CLASS = /<body[^>]*class="([^>]*)"[^>]*>[\s\S.]*<\/body>/i;
 			$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container', { fragment: '#pjax-container', container: '#pjax-container' });
 			$(document).on('pjax:success', function(e, data, status, xhr, options) {
@@ -73,7 +77,7 @@
 			$.pjax.defaults.timeout = 2000;
 		},
 		achDebits: function() {
-			$(".carousel").carousel({
+			$.fn.carousel && $(".carousel").carousel({
 				interval: false
 			});
 
