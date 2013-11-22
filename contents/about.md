@@ -126,7 +126,11 @@ team:
       desc: the only intern that survived Summer 2013
       link: https://github.com/matthewfl
       site: github
-
+    - name: steve klabnik
+      job: philosopher in residence
+      desc: ideas, standards, collaboration, and advocacy
+      link: https://github.com/steveklabnik
+      site: github
 
 backers:
   heading: backers
