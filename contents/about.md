@@ -127,8 +127,8 @@ team:
       link: https://github.com/matthewfl
       site: github
     - name: steve klabnik
-      job: engineer
-      desc: ideas, standards, and advocacy
+      job: philosopher in residence
+      desc: ideas, standards, collaboration, and advocacy
       link: https://github.com/steveklabnik
       site: github
 
