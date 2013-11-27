@@ -5,7 +5,7 @@ template: text.html
 icon_class: marketplace-agreement
 ---
 
-**Last Updated Nov. 26t, 2013**
+**Last Updated Nov. 26th, 2013**
 
 This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) and \[Marketplace\] (“Marketplace”). By using the Balanced Services, you agree to be bound by and comply with this Agreement. If there are any questions regarding this or any other agreement please contact Balanced at [legal@balancedpayments.com](mailto:legal@balancedpayments.com).
 
