@@ -13,27 +13,23 @@ icon_class: seller-agreement
      By using Marketplace to sell your goods or services, you consent to this entire agreement between you and Balanced.
 
 2. **Definitions:**
-
     + **Buyer: ** Person or business paying for a good or service via Marketplace
     + **Seller:** Person or business listing or selling a good or service supported through Marketplace.
     + **Transaction:** Any part of the sale of a good or service. Including:
        + **Purchase:** A Buyer paying for the good or service listed via marketplace,
        + **Fulfillment:** The Seller delivers said good or service according to Marketplace requirements.
        + **Settlement/Merchant Settlement:** Following Marketplace confirmation and instructions. Seller receives funds for the sale.
-
     + **Card Network/Card Brand:** Networks that power credit card transactions. These include Visa, MasterCard, American Express and Discover.
     + **Cardholder:** buyer purchasing an item using a credit card or debit card.
     + **Third Party Service Provider:** A separate business working with Balanced and Marketplace to facilitate you receiving money as well as preventing fraud and non-compliance.
 
 2. **Required Information:** For you to sell and receive payments on Marketplace, Balanced is required to validate your identity with Third Party Service Providers. No hard credit check (any credit check that might impact your credit score negatively) is run, however you will, at minimum, be asked for the following information:
-
     + Full legal name
     + Email Address
     + Current address
     + Month and year of birth
 
     If you are operating a registered business (LLC, S Corp, C Corp, LLP, LP, etc.) you will also need to provide your
-
     + Full business name
     + Business address
     + Business EIN
@@ -68,7 +64,6 @@ icon_class: seller-agreement
 7. **Taxes:** If in one year you have over 200 sales and $20,000 in sales volume, the Internal Revenue Service (IRS) requires that we report the total amount of payments you receive for that year.
 
    These sales will be reported on a 1099-k and will include your business':
-
    + Full legal name
    + EIN or your SSN (if you are a sole proprietor)
    + Total dollar amount for your sales that reporting year
@@ -84,7 +79,6 @@ icon_class: seller-agreement
 10. **Taxes:** Balanced is not responsible for determining, collecting, and remitting any taxes related to payments processed through the Service.
 
     However, Balanced has tax reporting requirements for sellers with over 200 sales and $20,000 in sales volume. If you are one of these sellers, Balanced is required report on a 1099-K to the IRS the following information.
-
     + Full legal name
     + EIN or SSN
     + Total dollar amount received for sales that year

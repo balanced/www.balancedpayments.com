@@ -40,7 +40,7 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 
 4. **Seller Agreement:** Marketplace agrees to be bound by the Balanced Seller Agreement (as attached hereto) in as far as those provisions expressly apply to it, and it is incorporated by reference as if set forth at length herein.
  
-5.	** Incorporation of Balanced agreements in Marketplace Terms:** Marketplace must incorporate the following Balanced Agreements by reference into its own terms:
+5. **Incorporation of Balanced agreements in Marketplace Terms:** Marketplace must incorporate the following Balanced Agreements by reference into its own terms:
    + Balanced Seller Agreement
    + Balanced Privacy Policy [https://www.balancedpayments.com/privacy](https://www.balancedpayments.com/privacy)
 
