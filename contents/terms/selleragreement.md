@@ -5,7 +5,7 @@ template: text.html
 icon_class: seller-agreement
 ---
 
-**Last Updated November 26th, 2013**
+**Last Updated December 4th, 2013**
 
 
 1. **Statement of Services:** (“Marketplace”) uses Balanced, Inc. (“Balanced”) to facilitate the payments for sale of goods or services on Marketplace. Balanced assumes no responsibility for good or services purchased through Marketplace. On Marketplace, Balanced allows you to accept credit cards and receive payment directly to your bank account.
@@ -13,27 +13,23 @@ icon_class: seller-agreement
      By using Marketplace to sell your goods or services, you consent to this entire agreement between you and Balanced.
 
 2. **Definitions:**
-
-    + **Buyer: ** Person or business paying for a good or service via Marketplace
+    + **Buyer:** Person or business paying for a good or service via Marketplace
     + **Seller:** Person or business listing or selling a good or service supported through Marketplace.
     + **Transaction:** Any part of the sale of a good or service. Including:
        + **Purchase:** A Buyer paying for the good or service listed via marketplace,
        + **Fulfillment:** The Seller delivers said good or service according to Marketplace requirements.
        + **Settlement/Merchant Settlement:** Following Marketplace confirmation and instructions. Seller receives funds for the sale.
-
     + **Card Network/Card Brand:** Networks that power credit card transactions. These include Visa, MasterCard, American Express and Discover.
     + **Cardholder:** buyer purchasing an item using a credit card or debit card.
     + **Third Party Service Provider:** A separate business working with Balanced and Marketplace to facilitate you receiving money as well as preventing fraud and non-compliance.
 
 2. **Required Information:** For you to sell and receive payments on Marketplace, Balanced is required to validate your identity with Third Party Service Providers. No hard credit check (any credit check that might impact your credit score negatively) is run, however you will, at minimum, be asked for the following information:
-
     + Full legal name
     + Email Address
     + Current address
     + Month and year of birth
 
     If you are operating a registered business (LLC, S Corp, C Corp, LLP, LP, etc.) you will also need to provide your
-
     + Full business name
     + Business address
     + Business EIN
@@ -68,7 +64,6 @@ icon_class: seller-agreement
 7. **Taxes:** If in one year you have over 200 sales and $20,000 in sales volume, the Internal Revenue Service (IRS) requires that we report the total amount of payments you receive for that year.
 
    These sales will be reported on a 1099-k and will include your business':
-
    + Full legal name
    + EIN or your SSN (if you are a sole proprietor)
    + Total dollar amount for your sales that reporting year
@@ -84,7 +79,6 @@ icon_class: seller-agreement
 10. **Taxes:** Balanced is not responsible for determining, collecting, and remitting any taxes related to payments processed through the Service.
 
     However, Balanced has tax reporting requirements for sellers with over 200 sales and $20,000 in sales volume. If you are one of these sellers, Balanced is required report on a 1099-K to the IRS the following information.
-
     + Full legal name
     + EIN or SSN
     + Total dollar amount received for sales that year
@@ -125,9 +119,9 @@ The arbitration shall be administered by the American Arbitration Association or
 18. **Dispute Time Limit:** The timeline for disputes, unless otherwise required by applicable law, must be commenced within one year after the cause of action accrues.
 
 + **Headings:** The headings in this agreement or merely for convenience. They shall not be considered as binding in interpreting this agreement.
-+ **Amendments: ** Balanced reserves the right to amend this agreement at any time with notice that we deem reasonable according to the extent of the amendment. Notice may include notice on our website or [Marketplace's] website. Any use of our Services after publication of notice shall constitute acceptance of the modified agreement.
-+ **Liability: ** To the maximum extent permitted by law, Balanced, Marketplace their processors, suppliers, and licensors or their respective affiliates, agents, employees, and directors are not liable to you for any lost profits, data, or any indirect, punitive, incidental, special, consequential or exemplary damages arising out of, in connection with, or relating to this agreement or the services, including, without limitation, the use of, inability to use or unavailability of the service. Under no circumstances will Balanced, Marketplace or their aforementioned associates be responsible to you for any damage, loss or injury resulting from hacking, tampering, or other unauthorized use of the service, your Balanced Account, or the information contained therein.
-+ **No Warranties: ** This service is provided "as is" and "as available". To the maximum extent permitted by applicable law, no warranty is provided and you use this service at your own risk. No advice or information provided by Balanced shall constitute any warranty to use of this service.
++ **Amendments:** Balanced reserves the right to amend this agreement at any time with notice that we deem reasonable according to the extent of the amendment. Notice may include notice on our website or [Marketplace's] website. Any use of our Services after publication of notice shall constitute acceptance of the modified agreement.
++ **Liability:** To the maximum extent permitted by law, Balanced, Marketplace their processors, suppliers, and licensors or their respective affiliates, agents, employees, and directors are not liable to you for any lost profits, data, or any indirect, punitive, incidental, special, consequential or exemplary damages arising out of, in connection with, or relating to this agreement or the services, including, without limitation, the use of, inability to use or unavailability of the service. Under no circumstances will Balanced, Marketplace or their aforementioned associates be responsible to you for any damage, loss or injury resulting from hacking, tampering, or other unauthorized use of the service, your Balanced Account, or the information contained therein.
++ **No Warranties:** This service is provided "as is" and "as available". To the maximum extent permitted by applicable law, no warranty is provided and you use this service at your own risk. No advice or information provided by Balanced shall constitute any warranty to use of this service.
 
    Balanced does not guarantee or assume any responsibility for any goods or services advertised or offered by any third party service relating to either Balanced or Marketplace.
 
