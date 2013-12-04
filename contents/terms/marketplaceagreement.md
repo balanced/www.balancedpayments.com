@@ -30,11 +30,10 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
    **ACH:** Short for Automated Clearing House. ACH transactions are payments sent from or received by bank account through the ACH networks.
 
    **Transaction:** Any part of the sale of a good or service. Including:
-
-   + **Purchase:** a buyer paying for the good or service listed on marketplace,
-   + **Fulfillment:** the seller delivers said good or service according to Marketplace requirements. Following Marketplace confirmation and instructions
-   + **Settlement/Merchant Settlement:** Seller receives funds for the sale
-   + **Marketplace Commission:** Marketplace receives fees for services it provides to buyers and sellers on the Marketplace.
+   * **Purchase:** a buyer paying for the good or service listed on marketplace,
+   * **Fulfillment:** the seller delivers said good or service according to Marketplace requirements. Following Marketplace confirmation and instructions
+   * **Settlement/Merchant Settlement:** Seller receives funds for the sale
+   * **Marketplace Commission:** Marketplace receives fees for services it provides to buyers and sellers on the Marketplace.
    
 
 3. **Confidential Information:** Information identified at the time of disclosure as confidential or that a reasonable person knows or reasonably should understand to be confidential, which may include information concerning the Marketplace’s business, finances, technology, or customers of Marketplace. All Confidential Information will remain the property of the Marketplace.
@@ -42,7 +41,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 4. **Seller Agreement:** Marketplace agrees to be bound by the Balanced Seller Agreement (as attached hereto) in as far as those provisions expressly apply to it, and it is incorporated by reference as if set forth at length herein.
 
    ** Incorporation Balanced agreements in Marketplace Terms:** Marketplace must incorporate the following Balanced Agreements by reference into its own terms:
-
    + Balanced Seller Agreement
    + Balanced Privacy Policy [https://www.balancedpayments.com/privacy](https://www.balancedpayments.com/privacy)
 
@@ -59,7 +57,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
    This clause shall not prevent Balanced from providing Services to the End-User should the End-User interact with Balanced through the use of marketplaces other than the Marketplace’s.
 
 6. **Marketplace Contact Information** Marketplace agrees to provide the following contact information:
-
    + To be displayed on cardholder statements:
    + Marketplace's customer support number
    + For internal operations issues
@@ -72,27 +69,21 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 7. **Transaction Fees:** The Marketplace agrees to pay Balanced according to the following fee schedule posted at [https://www.balancedpayments.com/pricing](https://www.balancedpayments.com/pricing)
 
 8. **Billing Arrangements:** In order to settle Balanced’s fees, the Marketplace grants Balanced permission to debit or credit the Marketplace’s bank account as needed. These fees will be settled between the Marketplace and Balanced’s bank accounts at the end of each business day (weekdays not including bank holidays). They are not taken from funds paid by buyers and collected in the FBO(s) described in Section 6. “Funds Held for the Benefit of Seller” of the Balanced Seller Agreement and Section 11. “Funds held for Benefit of the Marketplace and Marketplace Sellers” of this Agreement.
-
    + For each settlement, invoices will be available from the Balanced dashboard. Each invoice will enumerate the transactions, the associated fees being invoiced, the period of the invoice, as well as the settlement date.
-
    + Since invoices are settled through the ACH network, these settlements should usually appear on Marketplace’s bank statements by the next business day.
 
 9. **Underwriting/Verifying Sellers:** Marketplace agrees to assist Balanced with its customer due diligence requirements by ensuring that its sellers provide the information requested in Section 3. “Required Information” of the Balanced Seller Agreement. Balanced is required to use this information to verify the identity of persons for compliance as well as to reduce fraud and prevent terrorist financing/money laundering, as well as ensure that the seller is not on:
-
    + Card Brand Merchant fraud databases (e.g. MATCH/TMF) and the
    + US Office of Foreign Asset Control (OFAC/SDN) lists.                  
 
    Balanced agrees to reasonably safeguard this and other sensitive Marketplace and Marketplace Buyer and Seller information as well as not resell or reveal said information unless required by law.
 
 10. **Transaction Information:** To help fight chargebacks and prevent sale of prohibited items (as listed in Section 9. “Prohibited Transactions” of the Balanced Seller Agreement) each transaction should also include:
-
       + Item description or URL of the listing upon creation of a card debit or card authorization.
       + Shipping/Tracking information including carrier and tracking number to be provided prior to disbursement of funds to the seller.      
       
 11. **Payment Information:** Marketplace is responsible for submitting accurate payment information and instruction to Balanced. Should Marketplace become aware of any mistakes or errors in either payment information or instruction, Marketplace agrees to notify Balanced so that Balanced may attempt to correct the error.
-
       + Marketplace authorizes us to debit or credit Marketplace's bank account to correct any errors or discrepancies.
-
       + Failure to notify Balanced of errors within 60 days of when the errors appear in Marketplace's transaction history shall waive any of Marketplace's rights to any money owed in connection with aforementioned errors.
 
 12. **Funds Held For the Benefit of Marketplace and Marketplace Sellers:** Funds allocated as Marketplace commission are held in the same manner and with the same conditions as Seller funds, as outlined in Section 6. “Funds Held for the Benefit of Seller” of the Balanced Seller Agreement.
@@ -110,7 +101,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 17. **501(c)3/Charitable Donations Liability:** If Marketplace or its sellers operate a 501(c)(3) organization, Marketplace may offer service receipts to donors as a convenience, however Marketplace acknowledges that not all such payments may be eligible for classification as tax deductible and Marketplace agrees to assume full liability for classification of transactions.
 
 18. **Chargebacks:** Chargebacks are claims that cardholders may file directly with their card issuing bank to dispute a card payment.
-
 * Chargeback Liability: If a transaction is disputed or reversed by Card Networks, our processor, or a payer’s financial institution, or the transaction was otherwise not authorized, unlawful, suspicious, or in violation of the Section 9. “Prohibited Transactions” of the Balanced Seller Agreement, Marketplace agrees to pay $15 per chargeback dispute. The seller associated with the chargeback is fully liable for the chargeback amount. If Balanced is unable to debit the amount of the chargeback from the seller, then Marketplace agrees to assume liability for the chargeback amount.
 
    For any transaction resulting in a chargeback, Balanced may also withhold the chargeback in a reserve or deduct the amount and any associated fees or fines assessed by our processor or the Card Associations from Marketplace's Balanced Account or other funding source registered with Balanced.
@@ -124,12 +114,9 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 22. **Agreement Termination:** Marketplace may terminate this agreement at any time and for any reason, or for no reason, by providing written notification to Balanced at least 30 days prior to the date of termination. This 30 day notice period begins upon receipt of written notice. This provision does not preclude Balanced from managing sellers and transactions pursuant to its rights under Section 13. “Transactions” and Section 18. “Termination” of the Balanced Seller Agreement.
 
 23. **Effect of termination:** upon termination of this agreement, Balanced will immediately shutdown access to payment processing. Marketplace shall also remove any Balanced trademarks, logos or any other references to Balanced from their website, user flows, and sales or advertising media.
-
       * Termination will immediately:
-
           * Prevent the creation of new accounts
           * Prevent new card charges
-
 	* Termination will not:
     	* Cancel pending transactions. Pending transactions will be allowed to finish and Marketplace remains responsible for fulfilling/completing these transactions.
     	* Block legitimate merchant payouts for non-prohibited goods or services purchased prior to termination.
@@ -140,7 +127,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
     All terms and conditions that by their context should survive termination of this Agreement will survive such termination, including Sections 13 and 20.
 
 24. **Data Portability Terms and Conditions:** In the event that Marketplace decides to vault its customer card information elsewhere, Balanced will migrate Marketplace’s customer card information (“Sensitive Data”) in accordance with Credit Card Data Portability Standards available at [http://www.portabilitystandard.org/](http://www.portabilitystandard.org/).
-
        + The process shall be accomplished as follows:       
         + Marketplace provides Balanced with notice.
         + Marketplace provides Balanced with an Attestation of Compliance for the new vault provider, so that Balanced may verify PCI compliance.
@@ -154,7 +140,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 27. **Confidentiality:** Marketplace may disclose to Balanced Confidential Information. Balanced will have no interest or rights in such Confidential Information except as expressly set forth in this agreement. Balanced agrees to maintain all Confidential Information in confidence and to take all reasonable precaution to prevent any unauthorized disclosure of such information. Balanced will only disclose Confidential Information to its employees when doing so is necessary to fulfill Balanced’s obligations under this agreement, and will only use Confidential Information as necessary to provide the Service.
 
     Confidential information does not include, nor will this obligation apply to, any information:
-
     + Rightfully in the possession of or known to Balanced prior to disclosure without any obligation of confidentiality,
     + In the public domain through no act, omission, or fault of Balanced,
     + Was or is lawfully disclosed to Balanced through a third party with an independent right to disclose such information, and at the time of such disclosure such third party was not known by Balanced to have any obligation of confidence to the Marketplace, or
@@ -180,7 +165,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
     Additionally, from time to time, Balanced may be required to provide more transaction or customer information to Balanced’s bank partners. Marketplace agrees to promptly assist with any information request relevant to these acquirer inquiries.
 
 29. **Notifications of Changes in Marketplace Business:** Marketplace must notify Balanced of any significant changes as enumerated below:
-
     + Change in the nature of goods or services being sold by Marketplace within 15 days
     + Large expected increase in volume of transactions  (e.g. sales)
     + Change in ownership within 30 days
@@ -198,7 +182,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 32. **Dispute Time Limit** Unless otherwise mandated by law, any action relating to a dispute must be made within 1 year from time of
 
 33. **Card Acceptance Rules:** In order to accept card payments, Marketplace also agrees to follow applicable card brand operating rules. Substantial portions of Payments Network/Card Brand Operating Rules agreements are available their respective websites:
-
     + Visa: [http://usa.visa.com/download/merchants/visa-international-operating-regulations-main.pdf](http://usa.visa.com/download/merchants/visa-international-operating-regulations-main.pdf)
     + MasterCard: [http://www.mastercard.com/us/merchant/pdf/BM-Entire_Manual_public.pdf](http://www.mastercard.com/us/merchant/pdf/BM-Entire_Manual_public.pdf)
     + American Express: [https://www209.americanexpress.com/merchant/singlevoice/USEng/FrontServlet?request_type=navigate&page=merchantPolicy](https://www209.americanexpress.com/merchant/singlevoice/USEng/FrontServlet?request_type=navigate&page=merchantPolicy)
@@ -226,7 +209,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 38. **Data Security:** Each party is responsible for data security on their website and for all data acquired during the course of business. Each party agrees to comply with all applicable law regarding buyer and seller’s personal and financial data.
 
     In particular, Balanced agrees to comply with Payment Card Industry Data Security Standards (PCI-DSS) requirements available at [https://www.pcisecuritystandards.org/](https://www.pcisecuritystandards.org/). Specifically, Marketplace agrees to
-    
     + Not store CVV or CVV2
     + Use Balanced.js or otherwise securely transmit payment information to Balanced
     + Provide Balanced with Marketplace card data security implementation details upon request
