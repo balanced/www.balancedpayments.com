@@ -13,7 +13,7 @@ icon_class: seller-agreement
      By using Marketplace to sell your goods or services, you consent to this entire agreement between you and Balanced.
 
 2. **Definitions:**
-    + **Buyer: ** Person or business paying for a good or service via Marketplace
+    + **Buyer:** Person or business paying for a good or service via Marketplace
     + **Seller:** Person or business listing or selling a good or service supported through Marketplace.
     + **Transaction:** Any part of the sale of a good or service. Including:
        + **Purchase:** A Buyer paying for the good or service listed via marketplace,
@@ -119,9 +119,9 @@ The arbitration shall be administered by the American Arbitration Association or
 18. **Dispute Time Limit:** The timeline for disputes, unless otherwise required by applicable law, must be commenced within one year after the cause of action accrues.
 
 + **Headings:** The headings in this agreement or merely for convenience. They shall not be considered as binding in interpreting this agreement.
-+ **Amendments: ** Balanced reserves the right to amend this agreement at any time with notice that we deem reasonable according to the extent of the amendment. Notice may include notice on our website or [Marketplace's] website. Any use of our Services after publication of notice shall constitute acceptance of the modified agreement.
-+ **Liability: ** To the maximum extent permitted by law, Balanced, Marketplace their processors, suppliers, and licensors or their respective affiliates, agents, employees, and directors are not liable to you for any lost profits, data, or any indirect, punitive, incidental, special, consequential or exemplary damages arising out of, in connection with, or relating to this agreement or the services, including, without limitation, the use of, inability to use or unavailability of the service. Under no circumstances will Balanced, Marketplace or their aforementioned associates be responsible to you for any damage, loss or injury resulting from hacking, tampering, or other unauthorized use of the service, your Balanced Account, or the information contained therein.
-+ **No Warranties: ** This service is provided "as is" and "as available". To the maximum extent permitted by applicable law, no warranty is provided and you use this service at your own risk. No advice or information provided by Balanced shall constitute any warranty to use of this service.
++ **Amendments:** Balanced reserves the right to amend this agreement at any time with notice that we deem reasonable according to the extent of the amendment. Notice may include notice on our website or [Marketplace's] website. Any use of our Services after publication of notice shall constitute acceptance of the modified agreement.
++ **Liability:** To the maximum extent permitted by law, Balanced, Marketplace their processors, suppliers, and licensors or their respective affiliates, agents, employees, and directors are not liable to you for any lost profits, data, or any indirect, punitive, incidental, special, consequential or exemplary damages arising out of, in connection with, or relating to this agreement or the services, including, without limitation, the use of, inability to use or unavailability of the service. Under no circumstances will Balanced, Marketplace or their aforementioned associates be responsible to you for any damage, loss or injury resulting from hacking, tampering, or other unauthorized use of the service, your Balanced Account, or the information contained therein.
++ **No Warranties:** This service is provided "as is" and "as available". To the maximum extent permitted by applicable law, no warranty is provided and you use this service at your own risk. No advice or information provided by Balanced shall constitute any warranty to use of this service.
 
    Balanced does not guarantee or assume any responsibility for any goods or services advertised or offered by any third party service relating to either Balanced or Marketplace.
 
