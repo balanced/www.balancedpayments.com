@@ -45,7 +45,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
    + Balanced Privacy Policy [https://www.balancedpayments.com/privacy](https://www.balancedpayments.com/privacy)
 
    Sample language for incorporation is below:
-
    + [Marketplace] uses Balanced as its third party service provider for payment services (e.g. card acceptance, merchant settlement, and related services).  By buying or selling on [Marketplace] you agree to be bound by Balanced’s Privacy Policy: [https://www.balancedpayments.com/privacy](https://www.balancedpayments.com/privacy) and hereby consent and authorize [Marketplace] and Balanced to share any information and payments instructions you provide with Third Party Service Provider(s) to the minimum extent required to complete your transactions.
 
     By listing or selling items on [Marketplace] you also agree to be bound by Balanced’s Seller Terms: [https://www.balancedpayments.com/terms/selleragreement](https://www.balancedpayments.com/terms/selleragreement)
