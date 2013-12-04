@@ -5,7 +5,7 @@ template: text.html
 icon_class: seller-agreement
 ---
 
-**Last Updated November 26th, 2013**
+**Last Updated December 4th, 2013**
 
 
 1. **Statement of Services:** (“Marketplace”) uses Balanced, Inc. (“Balanced”) to facilitate the payments for sale of goods or services on Marketplace. Balanced assumes no responsibility for good or services purchased through Marketplace. On Marketplace, Balanced allows you to accept credit cards and receive payment directly to your bank account.
