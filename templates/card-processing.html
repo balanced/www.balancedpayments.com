@@ -45,102 +45,18 @@
     </div>
 </div>
 
-<div class="bg-white" id="how-it-works-diagram">
+<div class="bg-white" id="card-process">
     <div class="container">
         <div class="row">
-            <section class="how-it-works">
-                <div class="span19 step-boxes">
-                    <a>
-                        <div class="box box-active" data-step="1">
-                            <h1>1.</h1>
-                            <p>{{page.metadata.howItWorks.step1}}</p>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="box" data-step="2">
-                            <h1>2.</h1>
-                            <p>{{page.metadata.howItWorks.step2}}</p>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="box" data-step="3">
-                            <h1>3.</h1>
-                            <p>{{page.metadata.howItWorks.step3}}</p>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="box" data-step="4">
-                            <h1>4.</h1>
-                            <p>{{page.metadata.howItWorks.step4}}</p>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="box" data-step="5">
-                            <h1>5.</h1>
-                            <p>{{page.metadata.howItWorks.step5}}</p>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="box box-last" data-step="6">
-                            <h1>6.</h1>
-                            <p>{{page.metadata.howItWorks.step6}}</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </div>
-        <div class="row">
-            <section>
-                <div class="span19 med-bottom-margin">
-                    <div id="how-it-works-carousel" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="item active" data-step="1">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step1header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_1-01-2x.png" alt="Step 1" />
-                            </div>
-                            <div class="item" data-step="2">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step2header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_2-01-2x.png" alt="Step 2" />
-                            </div>
-                            <div class="item" data-step="3">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step3header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_3-01-2x.png" alt="Step 3" />
-                            </div>
-                            <div class="item" data-step="4">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step4header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_4-01-2x.png" alt="Step 4" />
-                            </div>
-                            <div class="item" data-step="5">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step5header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_5-01-2x.png" alt="Step 5" />
-                            </div>
-                            <div class="item" data-step="6">
-                                <div class="carousel-caption">
-                                    <p>{{page.metadata.sliderfeature.step6header.markdown()}}</p>
-                                </div>
-                                <img src="/images/ach-debits/ach_debits_flow_6-01-2x.png" alt="Step 6" />
-                            </div>
-                        </div>
-                        <a class="carousel-control left" href="#how-it-works-carousel" data-slide="prev"><i class="icon-navigation-arrow-back"></i></a>
-                        <a class="carousel-control right" href="#how-it-works-carousel" data-slide="next"><i class="icon-navigation-arrow-forward"></i></a>
-                        <ol class="carousel-indicators">
-                            <li data-target="#how-it-works-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#how-it-works-carousel" data-slide-to="1"></li>
-                            <li data-target="#how-it-works-carousel" data-slide-to="2"></li>
-                            <li data-target="#how-it-works-carousel" data-slide-to="3"></li>
-                            <li data-target="#how-it-works-carousel" data-slide-to="4"></li>
-                            <li data-target="#how-it-works-carousel" data-slide-to="5"></li>
-                        </ol>
+            <section class="card-process">
+                <div class="span19">
+                    <h3>{{page.metadata.howItWorksDiagram.header.markdown()}}</h3>
+                    <div class="process">
+                        <div class="graphic"></div>
+                        <p id="card_process-1">{{page.metadata.howItWorksDiagram.step1}}</p>
+                        <p id="card_process-2">{{page.metadata.howItWorksDiagram.step2}}</p>
+                        <p id="card_process-3-1">{{page.metadata.howItWorksDiagram.step31}}</p>
+                        <p id="card_process-3-2">{{page.metadata.howItWorksDiagram.step32}}</p>
                     </div>
                 </div>
             </section>
@@ -148,135 +64,22 @@
     </div>
 </div>
 
-<div class="bg-default" id="payment-schedule">
+<div class="bg-default" id="collecting-card-info">
     <div class="container">
         <div class="row">
             <div class="span19">
-                <section class="payment-schedule">
+                <section class="collecting-card-info">
                     <div class="box-pad-top">
                         <div class="span5 no-margin-left">
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper">
-                                    <span>{{page.metadata.paymentSchedule.title}}</span>
+                                    <span>{{page.metadata.collectingCardInfo.title}}</span>
                                 </div>
                                 <div class="section-side-body">
-                                    {{page.metadata.paymentSchedule.body}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="schedule-times teeth">
-                                <div class="title">{{page.metadata.submissionTimes.title}}</div>
-                                <div class="span3 box">
-                                    <h2>MON</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>TUE</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>WED</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>THU</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box box-last">
-                                    <h2>FRI</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="holidays">
-                                <table border="1" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="4">{{page.metadata.bankHolidays.title}}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for list in page.metadata.bankHolidays.list %}
-                                            <tr>
-                                            {% for row in list.row %}
-                                                <td class="first">{{row.label}}</td>
-                                                <td>{{row.date}}</td>
-                                            {% endfor %}
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="bank-account-verification">
-            <div class="span19">
-                <section class="bank-account-verification">
-                    <div class="box-pad-top">
-                        <div class="section-title section-title-full">
-                            <div class="title-wrapper">
-                                <span>{{page.metadata.bankAccountVerification.title}}</span>
-                            </div>
-                        </div>
-                        <div class="span5 no-margin-left">
-                            <div class="section-side-body">
-                                {{page.metadata.bankAccountVerification.body}}
-                            </div>
-                            <div class="section-side-link">
-                                <a href="https://balancedpayments.zendesk.com/entries/22773060-ACH-Debits-Best-Practices">{{page.metadata.bankAccountVerification.learnLink}}</a>
-                            </div>
-                        </div>
-                        <div class="graphic"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-         <div class="row" id="payment-status">
-            <div class="span19">
-                <section class="payment-status">
-                    <div class="box-pad-top">
-                        <div class="section-title section-title-full">
-                            <div class="title-wrapper">
-                                <span>{{page.metadata.paymentStatus.title}}</span>
-                            </div>
-                        </div>
-                        <div class="span5 no-margin-left">
-                            <div class="section-side-body">
-                                {{page.metadata.paymentStatus.body}}
-                            </div>
-                        </div>
-                        <div class="graphic"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="bank-statement-description">
-            <div class="span19">
-                <section class="bank-statement-description">
-                    <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.bankStatementDescriptor.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.bankStatementDescriptor.body}}
+                                    {{page.metadata.collectingCardInfo.body}}
                                 </div>
                                 <div class="section-side-link">
-                                    <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
+                                    <a href="#">{{page.metadata.collectingCardInfo.learnLink}}</a>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +88,86 @@
                             <div class="teeth border-top">
                                 <div class="graphic"></div>
                             </div>
-                            <p class="footnote">{{page.metadata.bankStatementDescriptor.limit}}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="recurring-billing">
+            <div class="span19">
+                <section class="recurring-billing">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.recurringBilling.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.recurringBilling.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="#">{{page.metadata.recurringBilling.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="card-authorizations">
+            <div class="span19">
+                <section class="card-authorizations">
+                    <div class="box-pad-top">
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.cardAuthorizations.title}}</span>
+                            </div>
+                        </div>
+                        <div class="span5 no-margin-left">
+                            <div class="section-side-body">
+                                {{page.metadata.cardAuthorizations.body}}
+                            </div>
+                            <div class="section-side-link">
+                                <a href="https://balancedpayments.zendesk.com/entries/22773060-ACH-Debits-Best-Practices">{{page.metadata.cardAuthorizations.learnLink}}</a>
+                            </div>
+                        </div>
+                        <div class="graphic"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="card-statement-descriptor">
+            <div class="span19">
+                <section class="card-statement-descriptor">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.cardStatementDescriptor.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.cardStatementDescriptor.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="#">{{page.metadata.cardStatementDescriptor.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                            <p class="footnote">{{page.metadata.cardStatementDescriptor.limit}}</p>
                         </div>
                     </div>
                 </section>
@@ -324,11 +206,11 @@
             <div class="span19">
                 <section class="card-processing">
                     <div class="box-pad-top">
-                        <div class="span19 content content-gold">
+                        <div class="span19 content content-blue">
                             <div class="row">
                                 <div class="span5 offset1 section-title section-title-no-width">
                                     <div class="title-wrapper">
-                                        <span>{{page.metadata.achDebitsPricing.title}}</span>
+                                        <span>{{page.metadata.cardProcessingPricing.title}}</span>
                                         <div class="title-icon"></div>
                                     </div>
                                 </div>
@@ -336,35 +218,35 @@
                                 <div class="span13 rate-panels">
                                     <div class="rate-panel main-rate-panel">
                                         <div class="panel-content">
-                                            <span>{{page.metadata.achDebitsPricing.debit}}</span>
+                                            <span>{{page.metadata.cardProcessingPricing.debit}}</span>
                                             <div class="rate-image charging-buyers"></div>
                                         </div>
                                     </div>
 
                                     <div class="rate-panel secondary-rate-panel tr-rate-panel">
                                         <div class="panel-content">
-                                            <span>{{page.metadata.achDebitsPricing.microDepositVerification}}</span>
-                                            <div class="rate-image verification"></div>
+                                            <span>{{page.metadata.cardProcessingPricing.authorizationHold}}</span>
+                                            <div class="rate-image authorization-hold"></div>
                                         </div>
                                     </div>
 
                                     <div class="rate-panel secondary-rate-panel">
                                         <div class="panel-content">
-                                            <span>{{page.metadata.achDebitsPricing.chargeback}}</span>
+                                            <span>{{page.metadata.cardProcessingPricing.chargeback}}</span>
                                             <div class="rate-image chargeback"></div>
                                         </div>
                                     </div>
 
                                     <div class="rate-panel secondary-rate-panel bot-mid-rate-panel">
                                         <div class="panel-content">
-                                            <span>{{page.metadata.achDebitsPricing.refund}}</span>
+                                            <span>{{page.metadata.cardProcessingPricing.refund}}</span>
                                             <div class="rate-image refund"></div>
                                         </div>
                                     </div>
 
                                     <div class="rate-panel secondary-rate-panel">
                                         <div class="panel-content">
-                                            <span>{{page.metadata.achDebitsPricing.failure}}</span>
+                                            <span>{{page.metadata.cardProcessingPricing.failure}}</span>
                                             <div class="rate-image failure"></div>
                                         </div>
                                     </div>
@@ -392,5 +274,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">$(balanced.achDebits)</script>
 {% endblock %}
