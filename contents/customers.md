@@ -211,10 +211,6 @@ customer_wall:
     classes: marketplace
     description: The easiest way to ship your stuff
     link: http://www.shyp.com/
-  - id: handybook
-    classes: marketplace
-    description: The easiest way to book household services
-    link: http://www.handybook.com/
   - id: favor
     classes: marketplace
     description: Your on-demand personalized delivery assistant
