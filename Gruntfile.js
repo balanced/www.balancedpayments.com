@@ -164,7 +164,7 @@ module.exports = function(grunt) {
 		open: {
 			dev: {
 				path: 'http://localhost:8080/'
-			},
+			}
 		},
 
 		connect: {
@@ -174,17 +174,14 @@ module.exports = function(grunt) {
 					base: './build/'
 				}
 			},
-
-            vagrant: {
-                options: {
-                    port: 8080,
-                    hostname: '10.0.0.2',
-                    base: './build/'
-                }
-            }
+			vagrant: {
+				options: {
+					port: 8080,
+					hostname: '10.0.0.2',
+					base: './build/'
+				}
+			}
 		},
-
-
 
 		hashres: {
 			options: {
@@ -367,8 +364,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
 	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect:server', 'open', 'watch']);
 
-    // Register a task in vagrant
-    grunt.registerTask('vagrant', ['_builddev', 'wintersmith:build', 'connect:vagrant', 'watch']);
+	// Register a task in vagrant
+	grunt.registerTask('vagrant', ['_builddev', 'wintersmith:build', 'connect:vagrant', 'watch']);
 
 	// Register a test task
 	grunt.registerTask('test', ['build']);
