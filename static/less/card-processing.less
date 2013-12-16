@@ -1,0 +1,132 @@
+body.card-processing {
+	.content-blue {
+		background-color: @egyptianBlue60;
+
+		.section-title {
+			border-top: 1px solid @egyptianBlue100;
+		}
+	}
+    section {
+		.title-icon {
+			background-position: -25px 8px;
+		}
+		em {
+			font-style: normal;
+			color: @egyptianBlue100;
+		}
+
+        &.card-process {
+            > div {
+                border-top: 5px solid @black;
+                margin-bottom: 50px;
+
+                h3 {
+		    font-family: NimbusSanNov-Med, arial, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: @black;
+                    display: block;
+					width: 200px;
+                    padding-top: 50px;
+                    margin-bottom: 20px;
+					float: left;
+                }
+				
+				.process {
+					width: 220px;
+					height: 480px;
+					margin: 50px auto 20px;
+					position: relative;
+					.graphic {
+						background: url(/images/card-processing/card_processing_process.png) no-repeat;
+						width: 220px;
+						height: 480px;
+						background-position: 0px 0px;
+						background-size: 220px;
+					}
+					p {
+						width: 190px;
+						font-family: NimbusSanNov-SemBol, arial, sans-serif;
+						font-size: 13px;
+						line-height: 18px;
+						color: @black;
+						position: absolute;
+						right: -200px;
+						&#card_process-1 {
+							top: 65px;
+						}
+						&#card_process-2 {
+							top: 250px;
+						}
+						&#card_process-3-1,
+						&#card_process-3-2 {
+							top: 405px;
+						}
+						&#card_process-3-1 {
+							text-align: right;
+							right: auto;
+							left: -200px;
+						}
+					}
+				}
+			}
+		}
+		
+		&.collecting-card-info {
+			.graphic {
+                background: url(/images/card-processing/collecting_credit_card_info.png) no-repeat;
+                width: 570px;
+                height: 500px;
+                background-position: 0px 0px;
+                background-size: 570px;
+			}
+		}
+		&.recurring-billing {
+			.graphic {
+                background: url(/images/card-processing/recurring_billing.png) no-repeat;
+                width: 570px;
+                height: 210px;
+                background-position: 0px 0px;
+                background-size: 570px;
+			}
+		}
+		&.card-authorizations {
+			.graphic {
+                background: url(/images/card-processing/card_authorizations.png) no-repeat;
+                width: 840px;
+                height: 380px;
+                background-position: 135px 20px;
+                background-size: 680px;
+			}
+		}
+
+		&.card-statement-descriptor {
+			.graphic {
+                background: url(/images/card-processing/credit_card_statement_descriptor.png) no-repeat;
+                width: 570px;
+                height: 260px;
+                background-position: 0px 0px;
+                background-size: 570px;
+			}
+
+            .footnote {
+                margin-top: 5px;
+                color: @black;
+                font-size: 13px;
+                font-family: NimbusSanNov-Med, arial, sans-serif;
+            }
+		}
+		&.chargebacks-disputes {
+			.graphic {
+                background: url(/images/card-processing/chargeback_timeframe.png) no-repeat;
+                width: 570px;
+                height: 230px;
+                background-position: 0px 0px;
+                background-size: 570px;
+			}
+		}
+
+   }
+}

@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 16 payment aficionados and growing
+    text: 17 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -126,7 +126,16 @@ team:
       desc: the only intern that survived Summer 2013
       link: https://github.com/matthewfl
       site: github
-
+    - name: noah kantrowitz
+      job: master chef
+      desc: devops
+      link: https://github.com/coderanger
+      site: github
+    - name: steve klabnik
+      job: philosopher in residence
+      desc: ideas, standards, collaboration, and advocacy
+      link: https://github.com/steveklabnik
+      site: github
 
 backers:
   heading: backers

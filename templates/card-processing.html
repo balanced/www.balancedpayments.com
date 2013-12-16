@@ -1,0 +1,277 @@
+{% extends 'layout.html' %}
+
+{% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
+
+{% block body %}
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row">
+                    <header>
+                      <div class="span19 page-title">
+                        <h1>{{page.metadata.pageTitle}}</h1>
+                      </div>
+                    </header>
+                </div>
+
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle">
+                      <div class="span19">
+                        {{ page.metadata.subtitle.heading }}
+                      </div>
+                    </div>
+                </div>
+
+                <section class="how-it-works" id="how-it-works">
+                    <div class="row">
+                        <div class="span19 content-blue med-top-padding med-bottom-padding">
+                            <div class="offset1 section-title section-title-full">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.howItWorks.title}}</span>
+                                </div>
+                            </div>
+                            <div class="span6 offset1">
+                                <div class="title-icon"></div>
+                            </div>
+                            <div class="body-copy body3 span11">
+                                {{page.metadata.howItWorks.body}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white" id="card-process">
+    <div class="container">
+        <div class="row">
+            <section class="card-process">
+                <div class="span19">
+                    <h3>{{page.metadata.howItWorksDiagram.header.markdown()}}</h3>
+                    <div class="process">
+                        <div class="graphic"></div>
+                        <p id="card_process-1">{{page.metadata.howItWorksDiagram.step1}}</p>
+                        <p id="card_process-2">{{page.metadata.howItWorksDiagram.step2}}</p>
+                        <p id="card_process-3-1">{{page.metadata.howItWorksDiagram.step31}}</p>
+                        <p id="card_process-3-2">{{page.metadata.howItWorksDiagram.step32}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="bg-default" id="collecting-card-info">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="collecting-card-info">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.collectingCardInfo.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.collectingCardInfo.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="#">{{page.metadata.collectingCardInfo.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="recurring-billing">
+            <div class="span19">
+                <section class="recurring-billing">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.recurringBilling.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.recurringBilling.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="#">{{page.metadata.recurringBilling.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="card-authorizations">
+            <div class="span19">
+                <section class="card-authorizations">
+                    <div class="box-pad-top">
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.cardAuthorizations.title}}</span>
+                            </div>
+                        </div>
+                        <div class="span5 no-margin-left">
+                            <div class="section-side-body">
+                                {{page.metadata.cardAuthorizations.body}}
+                            </div>
+                            <div class="section-side-link">
+                                <a href="https://balancedpayments.zendesk.com/entries/22773060-ACH-Debits-Best-Practices">{{page.metadata.cardAuthorizations.learnLink}}</a>
+                            </div>
+                        </div>
+                        <div class="graphic"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="card-statement-descriptor">
+            <div class="span19">
+                <section class="card-statement-descriptor">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.cardStatementDescriptor.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.cardStatementDescriptor.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="#">{{page.metadata.cardStatementDescriptor.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="teeth border-top">
+                                <div class="graphic"></div>
+                            </div>
+                            <p class="footnote">{{page.metadata.cardStatementDescriptor.limit}}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+         <div class="row" id="chargebacks-disputes">
+            <div class="span19">
+                <section class="chargebacks-disputes">
+                    <div class="box-pad-top">
+                        <div class="span5 no-margin-left">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper">
+                                    <span>{{page.metadata.chargebacksDisputes.title}}</span>
+                                </div>
+                                <div class="section-side-body">
+                                    {{page.metadata.chargebacksDisputes.body}}
+                                </div>
+                                <div class="section-side-link">
+                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910-How-are-credit-card-chargebacks-and-disputes-handled-">{{page.metadata.chargebacksDisputes.learnLink}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 spacer"></div>
+                        <div class="span13 no-margin-left">
+                            <div class="border-top">
+                                <div class="graphic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="card-processing">
+            <div class="span19">
+                <section class="card-processing">
+                    <div class="box-pad-top">
+                        <div class="span19 content content-blue">
+                            <div class="row">
+                                <div class="span5 offset1 section-title section-title-no-width">
+                                    <div class="title-wrapper">
+                                        <span>{{page.metadata.cardProcessingPricing.title}}</span>
+                                        <div class="title-icon"></div>
+                                    </div>
+                                </div>
+
+                                <div class="span13 rate-panels">
+                                    <div class="rate-panel main-rate-panel">
+                                        <div class="panel-content">
+                                            <span>{{page.metadata.cardProcessingPricing.debit}}</span>
+                                            <div class="rate-image charging-buyers"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rate-panel secondary-rate-panel tr-rate-panel">
+                                        <div class="panel-content">
+                                            <span>{{page.metadata.cardProcessingPricing.authorizationHold}}</span>
+                                            <div class="rate-image authorization-hold"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rate-panel secondary-rate-panel">
+                                        <div class="panel-content">
+                                            <span>{{page.metadata.cardProcessingPricing.chargeback}}</span>
+                                            <div class="rate-image chargeback"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rate-panel secondary-rate-panel bot-mid-rate-panel">
+                                        <div class="panel-content">
+                                            <span>{{page.metadata.cardProcessingPricing.refund}}</span>
+                                            <div class="rate-image refund"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rate-panel secondary-rate-panel">
+                                        <div class="panel-content">
+                                            <span>{{page.metadata.cardProcessingPricing.failure}}</span>
+                                            <div class="rate-image failure"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <section class="try-the-dashboard">
+                    <div class="center">
+                        <p>{{page.metadata.tryTheDashboard.body}}</p>
+                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-pal">{{page.metadata.tryTheDashboard.button}}</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
