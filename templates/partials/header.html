@@ -11,12 +11,13 @@
     <![endif]-->
 
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/static/css/root.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css">
     {%- for stylesheet in stylesheets -%}
     <link rel="stylesheet" href="{{stylesheet}}" type="text/css">
     {%- endfor -%}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/static/js/static-lib.min.js"></script>
     <script src="/static/js/balanced.min.js"></script>
     {%- for script in scripts -%}
     <script src="{{script}}"></script>
