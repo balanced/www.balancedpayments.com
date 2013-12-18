@@ -101,7 +101,7 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 
 1. **Chargebacks:** Chargebacks are claims that cardholders may file directly with their card issuing bank to dispute a card payment.
 
-1. *Chargeback Liability:** If a transaction is disputed or reversed by Card Networks, our processor, or a payer’s financial institution, or the transaction was otherwise not authorized, unlawful, suspicious, or in violation of the Section 9. “Prohibited Transactions” of the Balanced Seller Agreement, Marketplace agrees to pay $15 per chargeback dispute. The seller associated with the chargeback is fully liable for the chargeback amount. If Balanced is unable to debit the amount of the chargeback from the seller, then Marketplace agrees to assume liability for the chargeback amount.
+1. **Chargeback Liability:** If a transaction is disputed or reversed by Card Networks, our processor, or a payer’s financial institution, or the transaction was otherwise not authorized, unlawful, suspicious, or in violation of the Section 9. “Prohibited Transactions” of the Balanced Seller Agreement, Marketplace agrees to pay $15 per chargeback dispute. The seller associated with the chargeback is fully liable for the chargeback amount. If Balanced is unable to debit the amount of the chargeback from the seller, then Marketplace agrees to assume liability for the chargeback amount.
 
    For any transaction resulting in a chargeback, Balanced may also withhold the chargeback in a reserve or deduct the amount and any associated fees or fines assessed by our processor or the Card Associations from Marketplace's Balanced Account or other funding source registered with Balanced.
 
