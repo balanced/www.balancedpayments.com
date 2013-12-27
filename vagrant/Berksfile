@@ -1,3 +1,3 @@
 site :opscode
 
-metadata
+cookbook 'www.balancedpayments.com', path: './cookbooks/www.balancedpayments.com'
