@@ -39,11 +39,13 @@ noAdditionalFees:
   monthly: Monthly fee
 
 volumeDiscounts:
-  title: Volume discounts
-  subtitle: Waterfall pricing will automatically<br />take effect as your credit card volume scales. There are no [ACH debit discounts](https://github.com/balanced/balanced-api/issues/47) or [payout discounts](https://github.com/balanced/balanced-api/issues/57).
-  first100k: First $100K / month
-  next400k: Next $400K / month
-  above500k: Above $500K / month
+  title: Volume discount
+  subtitle: At the end of each quarter, Balanced will evaluate your card processing volume from the past three months, take the average, and assign a new tier based on that. The review dates are Jan 1, Apr 1, Jul 1, and Oct 1. The new pricing tier will be in place until the next review date.
+  first100k: $0 - 100,000 / month
+  next400k: $100,001 - 500,000 / month
+  next500k: $500,001 - 1,000,000 / month
+  next4m: $1,000,001 - 5,000,000 / month
+  above5m: $5,000,001+ / month
 
 calculateYourRate:
   title: Calculate your rate

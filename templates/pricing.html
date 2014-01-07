@@ -224,51 +224,30 @@
                                     </div>
 
                                     <div class="span13 rate-panels">
-                                        <div class="rate-panel secondary-rate-panel">
-                                            <div class="panel-content">
+                                        <ul>
+                                            <li>
                                                 <span>{{page.metadata.volumeDiscounts.first100k}}</span>
-                                                <div class="rate-image first-100k"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rate-panel secondary-rate-panel bot-mid-rate-panel">
-                                            <div class="panel-content">
+                                                <div class="rate">2.9% + 30&cent;</div>
+                                            </li>
+                                            <li>
                                                 <span>{{page.metadata.volumeDiscounts.next400k}}</span>
-                                                <div class="rate-image next-400k"></div>
-                                            </div>
-                                        </div>
-                                        <div class="rate-panel secondary-rate-panel">
-                                            <div class="panel-content">
-                                                <span>{{page.metadata.volumeDiscounts.above500k}}</span>
-                                                <div class="rate-image above-500k"></div>
-                                            </div>
-                                        </div>
+                                                <div class="rate">2.7% + 30&cent;</div>
+                                            </li>
+                                            <li>
+                                                <span>{{page.metadata.volumeDiscounts.next500k}}</span>
+                                                <div class="rate">2.4% + 30&cent;</div>
+                                            </li>
+                                            <li>
+                                                <span>{{page.metadata.volumeDiscounts.next4m}}</span>
+                                                <div class="rate">2.2% + 30&cent;</div>
+                                            </li>
+                                            <li>
+                                                <span>{{page.metadata.volumeDiscounts.above5m}}</span>
+                                                <div class="rate">1.9% + 30&cent;</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <div class="row" id="calculate-your-rate">
-                    <div class="span13 offset6 xlarge-bottom-margin">
-                        <section class="row calculator">
-                            <span class="calc-title">{{page.metadata.calculateYourRate.title}}</span>
-                            <div class="bg">
-                                <form class="form-horizontal">
-                                    <div class="control-group">
-                                        <label for="estimatedVolume" class="control-label">{{page.metadata.calculateYourRate.volumeLabel}}</label>
-                                        <div class="controls">
-                                            <input name="estimatedVolume" id="estimatedVolume" value="800,000" />
-                                            <span class="currency-prepend">$</span>
-                                        </div>
-                                    </div>
-                                    <div class="control-group effective-rate">
-                                        <label class="control-label">{{page.metadata.calculateYourRate.effectiveRateLabel}}</label>
-                                        <div class="controls">
-                                            <span class="effective-rate-value">2.61% + 30$</span>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </section>
                     </div>
