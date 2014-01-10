@@ -357,10 +357,6 @@ customer_wall:
     classes: crowdfunding
     description: Follow and fund scientific research
     link: https://www.microryza.com/
-  - id: fundersclub
-    classes: crowdfunding
-    description: Where private investors gain access to the world's most promising startups
-    link: https://fundersclub.com/
   - id: dragoninnovation
     classes: crowdfunding
     description: Helping makers bring tomorrow's products to life
