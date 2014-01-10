@@ -15,11 +15,8 @@ banner:
 
 intro: |
   We're obsessed with all forms of infrastructure, including communications, transportation, energy, waste management, and payments. Robust infrastructure creates a happier, more productive, and more prosperous society. You know exactly what I mean if you've traveled somewhere where you struggled to find a reliable Internet connect or even usable roads. You also know what I mean when you sit in traffic or struggle with public transportation (or lack thereof) in the US.
-
-
+  <br><br>
   Balanced was created to increase the global economy (increase GDP) by enabling new commerce. Our mechanism or facility to do that is payments. Everything else we do depends on how it fits into the vision for Balanced.
-  
-  Is this line added?
 
 founders:
   heading: founders
