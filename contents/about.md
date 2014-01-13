@@ -120,14 +120,19 @@ team:
       link: https://github.com/matthewfl
       site: github
     - name: noah kantrowitz
-      job: master chef
-      desc: devops
+      job: devops
+      desc: master chef
       link: https://github.com/coderanger
       site: github
     - name: steve klabnik
       job: philosopher in residence
       desc: ideas, standards, collaboration, and advocacy
       link: https://github.com/steveklabnik
+      site: github
+    - name: kyungmin kim
+      job: engineer
+      desc: designer turned into engineering
+      link: https://github.com/kyungmin
       site: github
 
 backers:
