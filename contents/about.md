@@ -129,6 +129,11 @@ team:
       desc: designer turned into engineer
       link: https://github.com/kyungmin
       site: github
+    - name: victor lin
+      job: engineer
+      desc: a code monkey
+      link: https://github.com/victorlin
+      site: github
 
 backers:
   heading: backers
