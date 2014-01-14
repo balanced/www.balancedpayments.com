@@ -131,7 +131,7 @@ team:
       site: github
     - name: victor lin
       job: engineer
-      desc: a code monkey
+      desc: recurring billing connoisseur
       link: https://github.com/victorlin
       site: github
 
