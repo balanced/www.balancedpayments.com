@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 18 payment aficionados and growing
+    text: 19 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -123,6 +123,11 @@ team:
       job: philosopher in residence
       desc: ideas, standards, collaboration, and advocacy
       link: https://github.com/steveklabnik
+      site: github
+    - name: victor lin
+      job: engineer
+      desc: recurring billing connoisseur
+      link: https://github.com/victorlin
       site: github
     - name: kyungmin kim
       job: engineer
