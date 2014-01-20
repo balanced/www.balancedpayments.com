@@ -179,7 +179,7 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
 
     The arbitration shall be administered by the American Arbitration Association or JAMS  according to this provision and the applicable arbitration rules of the forum. Arbitration hearings under this agreement will occur in San Francisco, CA or another mutually agreed upon location. Arbitrator award shall be binding on parties and may be entered as judgment in any court of competent jurisdiction. The cost of arbitration, including lawyers' fees, will be allocated by the arbitrator.
 
-1. **Dispute Time Limit** Unless otherwise mandated by law, any action relating to a dispute must be made within 1 year from time of
+1. **Dispute Time Limit** Unless otherwise mandated by law, any action relating to a dispute must be made within 1 year from the date on which the direct loss or damage leading to the dispute occurred. 
 
 1. **Card Acceptance Rules:** In order to accept card payments, Marketplace also agrees to follow applicable card brand operating rules. Substantial portions of Payments Network/Card Brand Operating Rules agreements are available their respective websites:
     + Visa: [http://usa.visa.com/download/merchants/visa-international-operating-regulations-main.pdf](http://usa.visa.com/download/merchants/visa-international-operating-regulations-main.pdf)
