@@ -6,22 +6,22 @@ pageTitle: Card Processing
 body_class: card-processing
 
 subtitle:
-  heading: Accept credit and debit card payments.<br />Balanced allows your customers to pay<br />with any U.S. or international card.
+  heading: Accept credit and debit card payments.<br />Process any U.S. or international card without a separate merchant account and gateway.
 
 howItWorks:
   title: How it works
-  body: Process major card brands from Visa and MasterCard to Discover and American Express. Funds are captured in U.S. currency and available for immediate access in your escrow balance.
+  body: Balanced supports all major card brands from Visa and MasterCard to Discover and American Express. Funds are captured in U.S. currency and available for immediate access in your escrow balance.
 
 howItWorksDiagram:
-  header: "Once a card is charged, funds are placed in your <em>escrow account</em> (held by Balanced). You may then pay out to your own bank account or use Balanced’s <em>Payouts solution</em> to pay sellers."
+  header: "Once a card is charged, funds are placed in your <em>escrow account</em> (held by Balanced). You may then pay out to your own bank account or use Balanced’s <em>Payouts solution</em> to pay your U.S. sellers."
   step1: "Charge your customer’s debit or credit card"
   step2: "Funds are available immediately in your escrow balance"
   step31: "Collect your funds by paying out to your bank account"
-  step32: "Pay your sellers using Balanced’s Payouts solution"
+  step32: "Pay your sellers using Balanced’s <em>Payouts solution</em>"
 
 collectingCardInfo:
   title: Collecting card info
-  body: Charge a card by collectin<br />the card number and expiration<br />month/year and securely<br />passing it through <em>balanced.js</em>.<br />We also recommend collecting<br />additinoal fields such as the<br />card holder’s name, security<br />code and billing zip code.
+  body: Charge a card by collecting the card number and expiration date. Information is securely passed through <em>balanced.js</em>, bypassing your servers and removing your need to become <em>PCI compliant</em>.
   learnLink: View card processing best practices
 
 recurringBilling:
