@@ -382,19 +382,7 @@ customer_wall:
     description: Purchase your favorite bands' concert tickets before they go on sale to the public
     link: http://www.soundrink.com/
   - id: chirpify
-    classes: advertising
-    description: A social conversion platform for marketing & commerce
-    link: https://chirpify.com/
-  - id: broadstreet ads
-    classes: advertising
-    description: A social conversion platform for marketing & commerce
-    link: https://chirpify.com/
-  - id: localon
-    classes: advertising
-    description: A social conversion platform for marketing & commerce
-    link: https://chirpify.com/
-  - id: vungle
-    classes: advertising
+    classes: ecommerce
     description: A social conversion platform for marketing & commerce
     link: https://chirpify.com/
 
