@@ -344,4 +344,4 @@
 	};
 }(window));
 
-$(balanced.menu)
+$(balanced.menu);

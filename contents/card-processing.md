@@ -27,7 +27,7 @@ collectingCardInfo:
 
 recurringBilling:
   title: Recurring billing
-  body: Balanced’s open-source, recurring payments system, <a href='https://docs.balancedpayments.com/current/#implementation-patterns'>Billy</a>, allows you to schedule charges at specific times.
+  body: Balanced’s open-source, recurring payments system, <a href='https://docs.balancedpayments.com/current/#recurring-billing'>Billy</a>, allows you to schedule charges at specific times.
   learnLink: Learn more about Billy
   learnLinkHref: https://docs.balancedpayments.com/current/#implementation-patterns
 
