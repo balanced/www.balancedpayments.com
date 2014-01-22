@@ -11,23 +11,24 @@
     <section class="video-testimonial-image xlarge-bottom-margin">
         <div class="background-image first"></div>
         <div class="background-image second"></div>
+        <div class="texture"></div>
         <!-- <div class="window"></div> -->
         <div class="container">
             <div class="row">
                 <div class="span19">
-                <div class="banner bg-white">
+                <div class="banner">
                     <div class="row">
-                        <div class="banner-video-thumbnail span5 watch-video">
-                          <img src="/images/customers/{{page.metadata.video_testimonials.list[0].id}}_video_thumbnail.jpg" />
-                          <div class="window">&nbsp;</div>
-                          <div class="play-button"><span class="arrow-right"></span></div>
-                        </div>
-                        <div class="banner-content span10">
+                        <div class="banner-content span14">
                             <div class="banner-logo">
                               <img src="/images/customers/logo_{{page.metadata.video_testimonials.list[0].id}}_video.png" />
                             </div>
                             <div class="banner-content-text">
-                                <span>{{page.metadata.video_testimonials.list[0].description}}</span> <a href="#" class="watch-how watch-video">Watch how &raquo;</a>
+                                {{page.metadata.video_testimonials.list[0].description}}
+                            </div>
+                            <div class="play-button watch-video">
+                                <div class="circle"></div>
+                                <div class="triangle"></div>
+                                Play video
                             </div>
                         </div>
                     </div>
@@ -39,6 +40,7 @@
                 <div>
                     {% for testimonial in page.metadata.video_testimonials.list %}
                     <div class="thumb{% if loop.first %} selected{% endif %}" id="{{testimonial.id}}">
+                        <div class="overlay"></div>
                         <img class="thumb-image" src="/images/customers/{{testimonial.id}}_small_thumbnail.png"/>
                         <div class="thumb-label">{{testimonial.label}}</div>
                     </div>
@@ -66,8 +68,9 @@
                                 <li class="selected all"><a href="#">All</a></li>
                                 <li class="circle marketplace" data-filter="marketplace"><a href="#">Marketplace</a></li>
                                 <li class="circle crowdfunding" data-filter="crowdfunding"><a href="#">Crowdfunding</a></li>
-                                <li class="circle ecommerce" data-filter="ecommerce"><a href="#">E-Commerce Provider</a></li>
+                                <li class="circle ecommerce" data-filter="ecommerce"><a href="#">E-Commerce provider</a></li>
                                 <li class="circle donation" data-filter="donation"><a href="#">Donation</a></li>
+                                <li class="circle advertising" data-filter="advertising"><a href="#">Advertising</a></li>
                             </ul>
                         </div>
                     </div>

@@ -1,10 +1,9 @@
-@lightenBy: 20%;
-
-@marketplace: @curryYellow60; // lighten(@curryYellow60, @lightenBy);
-@crowdfunding: @turquoise60; // lighten(@turquoise60, @lightenBy);
-@ecommerce: @byzantiumPurple60; // lighten(@byzantiumPurple60, @lightenBy);
-@donation: @forestGreen60; // lighten(@forestGreen60, @lightenBy);
-@case-study: @imperialRed100;
+@marketplace: @curryYellow100;
+@crowdfunding: @persianBlue100;
+@ecommerce: @lavenderPurple100;
+@donation: @pineGreen100;
+@advertising: @turquoise100;
+@case-study: @gray7;
 
 .arrow-right {
   line-height: 0;
@@ -51,6 +50,16 @@
     height: 540px;
     position: relative;
 
+    .texture {
+      z-index: -1;
+      background: url(/images/customers/diagonal_line_texture.png) repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
     .background-image {
       background: url(/images/customers/750_background.jpg) no-repeat center center fixed;
       background-size: cover;
@@ -67,7 +76,7 @@
     }
 
     .container {
-      margin-top: 100px;
+      margin-top: 0px;
       z-index: 2;
     }
 /*
@@ -92,52 +101,14 @@
   }
 
   .banner {
-    margin: 0 auto 140px;
+    margin: 0 auto 30px;
     width: 660px;
-    text-align: center;
-  }
-
-  .banner-video-thumbnail {
-    cursor: pointer;
-    position: relative;
-    float: left;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -30px 0 0 -30px;
-      width: 60px;
-      height: 60px;
-      .border-radius(50%);
-      background-color: @imperialRed100;
-      .opacity(85);
-      .transition(all .35s ease-in-out);
-    }
-
-    .window {
-      .opacity(40);
-    }
-
-    &:hover {
-      .window {
-        .opacity(0);
-      }
-
-      .play-button {
-        background-color: @imperialRed80;
-        .opacity(100);
-      }
-    }
+    margin-left: 180px;
   }
 
   .banner-content {
     padding-top: 10px;
+    text-align: right;
 
     img {
       height: 60px;
@@ -145,26 +116,62 @@
     }
 
     > div {
-      margin: 20px 25px 10px 10px;
+      margin: 10px 0px 10px 10px;
     }
 
     .banner-content-text {
-      span {
-        font-family: 'Droid Serif';
-        font-style: italic;
-        font-size: 14px;
-        line-height: 20px;
-        color: @black;
+      font-family: NimbusSanNov-Reg, arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 44px;
+      line-height: 52px;
+      color: @white;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      margin-bottom: 10px;
+    }
+
+    .play-button {
+      border: 1px solid #fff;
+      background: @gray6;
+      font-family: NimbusSanNov-SemBol, arial, sans-serif;
+      color: @white;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 26px;
+      padding: 15px 26px 15px 60px;
+      z-index: 2;
+      display: inline-block;
+
+      .triangle {
+        width: 0px;
+        height: 0px;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #fff;
+        position: absolute;
+        margin-left: -30px;
+        margin-top: 4px;
       }
 
-      a.watch-how {
-        font-family: NimbusSanNov-SemBol;
-        font-style: normal;
-        font-size: 13px;
-        line-height: 15px;
-        color: @skyBlue;
+      .circle {
+        width: 26px;
+        height: 26px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        border: 1px solid @white;
+        position: absolute;
+        margin-left: -41px;
+        margin-top: 2px;
+      }
+
+      &:hover {
+        background: #000;
+        cursor: pointer;
       }
     }
+
   }
 
   .thumb-container {
@@ -183,6 +190,19 @@
         .thumb-image {
           border: 3px solid #FFF;
         }
+        .overlay {
+          opacity: 0;
+        }
+      }
+
+      .overlay {
+        .border-radius(50%);
+        height: 60px;
+        width: 60px;
+        background: @black;
+        opacity: 0.4;
+        position: absolute;
+        margin: 3px 0 0 30px;
       }
 
       .thumb-image {
@@ -198,8 +218,7 @@
         color: @white;
         line-height: 14px;
         font-size: 12px;
-        font-style: italic;
-        font-family: "Droid Serif";
+        font-family: NimbusSanNov-Reg, arial, sans-serif;
       }
     }
   }
@@ -207,17 +226,12 @@
 
   .customer-wall-header {
     height: 50px;
-    background: @white;
 
     .nav {
       margin: 0 37px;
       zoom: 1;
 
       > li {
-
-        &.ecommerce {
-            width: 231px;
-        }
 
         &:first-of-type {
             a {
@@ -226,19 +240,17 @@
         }
 
         > a {
-          font-family: NimbusSanNovCon-Med;
+          font-family: NimbusSanNov-SemBol;
           font-weight: normal;
           font-style: normal;
-          text-transform: uppercase;
-          font-size: 14px;
+          font-size: 15px;
 
           line-height: 16px;
-          color: @gray3;
+          color: @gray4;
           text-shadow: none;
 
           padding: 17px 10px 13px 10px;
-          margin: 0px 0px 0px 43px;
-          letter-spacing: 0.1em;
+          margin: 0px 0px 0px 18px;
 
           &:before {
             margin-right: 2px;
@@ -291,6 +303,12 @@
     .donation {
       a:before {
         color: @donation;
+      }
+    }
+
+    .advertising {
+      a:before {
+        color: @advertising;
       }
     }
 
@@ -370,7 +388,6 @@
           width: 100%;
 
           position: absolute;
-          top: 0;
           left: 0;
         }
       }
@@ -391,7 +408,8 @@
           }
 
           .background {
-            .opacity(40);
+            height: 7px;
+            bottom: 0;
           }
         }
       }
@@ -429,25 +447,27 @@
       }
     }
 
+    .advertising {
+      .background {
+        background-color: @advertising;
+      }
+    }
+
     .icon-arrow-forward-dashboard {
       font-size: 12px;
       position: absolute;
     }
 
     .case-study-content {
-      .opacity(90);
-      background-color: @black;
+      background-color: @gray5;
       color: @white;
-      font-size: 18px;
+      font-size: 15px;
       position: absolute;
       top: 0;
       left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 10px;
-      font-family: 'Droid Serif';
-      line-height: 24px;
-      font-style: italic;
+      padding: 15px;
+      font-family: NimbusSanNov-Med;
+      line-height: 22px;
 
       .study-bar {
         position: absolute;

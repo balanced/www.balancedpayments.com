@@ -12,7 +12,7 @@ video_testimonials:
   list:
     - label: 750 Commerce
       id: 750
-      description: 750 Group leverages Balanced’s payments API to deliver<br/>a great processing experience for wineries.
+      description: 750 Commerce leverages Balanced’s payments API to deliver a great processing experience for wineries.
       classes: selected
       ytVideoId: ZMg-gQrh6X0
     - label: Crowdtilt
@@ -382,10 +382,21 @@ customer_wall:
     description: Purchase your favorite bands' concert tickets before they go on sale to the public
     link: http://www.soundrink.com/
   - id: chirpify
-    classes: ecommerce
+    classes: advertising
     description: A social conversion platform for marketing & commerce
     link: https://chirpify.com/
-
+  - id: broadstreet_ads
+    classes: advertising
+    description: An ad platform for indie news publishers
+    link: http://broadstreetads.com/
+  - id: localon
+    classes: advertising
+    description: A website and web marketing platform for small businesses
+    link: https://www.localon.com/
+  - id: vungle
+    classes: advertising
+    description: A mobile video ad-network, powering some of the world's largest apps and games
+    link: http://www.vungle.com/
 
 tryTheDashboard:
   body: Ready to get started?

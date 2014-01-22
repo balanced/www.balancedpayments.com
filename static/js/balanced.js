@@ -342,6 +342,6 @@
 			});
 		}
 	};
-
-	$(balanced.menu);
 }(window));
+
+$(balanced.menu);
