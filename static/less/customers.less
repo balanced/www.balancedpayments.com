@@ -155,15 +155,13 @@
       }
 
       .circle {
-        width: 26px;
-        height: 26px;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
+        width: 27px;
+        height: 27px;
+        .border-radius(50%);
         border: 1px solid @white;
         position: absolute;
-        margin-left: -41px;
-        margin-top: 2px;
+        margin-left: -42px;
+        margin-top: -2px;
       }
 
       &:hover {
@@ -468,6 +466,8 @@
       padding: 15px;
       font-family: NimbusSanNov-Med;
       line-height: 22px;
+      height: 100%;
+      box-sizing: border-box;
 
       .study-bar {
         position: absolute;
