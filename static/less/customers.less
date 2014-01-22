@@ -1,9 +1,8 @@
-@lightenBy: 20%;
-
-@marketplace: @curryYellow60; // lighten(@curryYellow60, @lightenBy);
-@crowdfunding: @turquoise60; // lighten(@turquoise60, @lightenBy);
-@ecommerce: @byzantiumPurple60; // lighten(@byzantiumPurple60, @lightenBy);
-@donation: @forestGreen60; // lighten(@forestGreen60, @lightenBy);
+@marketplace: @curryYellow100;
+@crowdfunding: @persianBlue100;
+@ecommerce: @lavenderPurple100;
+@donation: @pineGreen100;
+@advertising: @turquoise100;
 @case-study: @imperialRed100;
 
 .arrow-right {
@@ -207,17 +206,12 @@
 
   .customer-wall-header {
     height: 50px;
-    background: @white;
 
     .nav {
       margin: 0 37px;
       zoom: 1;
 
       > li {
-
-        &.ecommerce {
-            width: 231px;
-        }
 
         &:first-of-type {
             a {
@@ -226,19 +220,17 @@
         }
 
         > a {
-          font-family: NimbusSanNovCon-Med;
+          font-family: NimbusSanNov-SemBol;
           font-weight: normal;
           font-style: normal;
-          text-transform: uppercase;
-          font-size: 14px;
+          font-size: 15px;
 
           line-height: 16px;
-          color: @gray3;
+          color: @gray4;
           text-shadow: none;
 
           padding: 17px 10px 13px 10px;
-          margin: 0px 0px 0px 43px;
-          letter-spacing: 0.1em;
+          margin: 0px 0px 0px 18px;
 
           &:before {
             margin-right: 2px;
@@ -291,6 +283,12 @@
     .donation {
       a:before {
         color: @donation;
+      }
+    }
+
+    .advertising {
+      a:before {
+        color: @advertising;
       }
     }
 
@@ -370,7 +368,6 @@
           width: 100%;
 
           position: absolute;
-          top: 0;
           left: 0;
         }
       }
@@ -391,7 +388,8 @@
           }
 
           .background {
-            .opacity(40);
+            height: 7px;
+            bottom: 0;
           }
         }
       }
@@ -426,6 +424,12 @@
     .donation {
       .background {
         background-color: @donation;
+      }
+    }
+
+    .advertising {
+      .background {
+        background-color: @advertising;
       }
     }
 
