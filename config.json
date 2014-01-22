@@ -12,7 +12,6 @@
     "moment": "moment"
   },
   "plugins": [
-    "wintersmith-browserify",
     "wintersmith-less",
     "wintersmith-nunjucks",
     "./plugins/balanced-content-helpers.js",
