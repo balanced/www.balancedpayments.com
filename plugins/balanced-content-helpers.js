@@ -29,7 +29,7 @@ module.exports = function(env, callback) {
 	};
 
 	env.helpers.link = function(str) {
-		if (config.debug) {
+		if (env.locals.debug) {
 			return str + '.html';
 		}
 
