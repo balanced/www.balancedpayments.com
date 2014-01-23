@@ -17,11 +17,11 @@ video_testimonials:
       ytVideoId: ZMg-gQrh6X0
     - label: Crowdtilt
       id: crowdtilt
-      description: Crowdtilt relies on Balanced’s payments framework to scale their crowdfunding platform.
+      description: Crowdtilt relies on<br/>Balanced’s payments<br/>framework to scale their<br/>crowdfunding platform.
       ytVideoId: TdVSGj_NX2c
     - label: Kitchit
       id: kitchit
-      description: Kitchit runs on top of Balanced’s ACH payouts to connect chefs to consumers.
+      description: Kitchit runs on top<br/>of Balanced’s ACH<br/>payouts to connect<br/>chefs to consumers.
       ytVideoId: Mb-oBHsvd80
     - label: Zaarly
       id: zaarly
