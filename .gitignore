@@ -36,3 +36,4 @@ contents/static
 contents/images
 static/css
 bower/
+config-dev.json

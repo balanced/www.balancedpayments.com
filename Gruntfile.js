@@ -84,6 +84,11 @@ module.exports = function(grunt) {
 				options: {
 					action: 'preview'
 				}
+			},
+			dev: {
+				options: {
+					config: './config-dev.json'
+				}
 			}
 		},
 
@@ -361,6 +366,17 @@ module.exports = function(grunt) {
 		});
 	});
 
+	grunt.task.registerTask('wintersmithDevConfig', 'A task that makes a dev config if one is missing.', function() {
+		if (grunt.file.exists('./config-dev.json')) {
+			return;
+		}
+
+		var wintersmithConfig = grunt.file.readJSON('./config.json');
+		wintersmithConfig.locals = wintersmithConfig.locals || {};
+		wintersmithConfig.locals.debug = true;
+		grunt.file.write('./config-dev.json', JSON.stringify(wintersmithConfig, null, 4));
+	});
+
 	// Subtasks
 	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
 	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
@@ -375,7 +391,7 @@ module.exports = function(grunt) {
 
 	// Register the main build/dev tasks
 	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
-	grunt.registerTask('dev', ['_builddev', 'wintersmith:build', 'connect', 'open', 'watch']);
+	grunt.registerTask('dev', ['_builddev', 'wintersmithDevConfig', 'wintersmith:dev', 'connect', 'open', 'watch']);
 
 	// Register a test task
 	grunt.registerTask('test', ['build']);
