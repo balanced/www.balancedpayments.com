@@ -58,6 +58,7 @@
       position: absolute;
       top: 0;
       left: 0;
+      opacity: 0.4;
     }
 
     .background-image {
@@ -78,6 +79,7 @@
     .container {
       margin-top: 0px;
       z-index: 2;
+      padding-left: 0px;
     }
 /*
     .window {
@@ -109,14 +111,32 @@
   .banner-content {
     padding-top: 10px;
     text-align: right;
-
-    img {
-      height: 60px;
-      margin: 10px auto;
-    }
+    float: right;
 
     > div {
       margin: 10px 0px 10px 10px;
+    }
+
+    .banner-logo {
+      background: @white;
+      opacity: 0.65;
+      padding: 0 15px;
+      display: inline-block;
+      height: 130px;
+      width: 204px;
+    }
+
+    img {
+      margin: 0 auto;
+      vertical-align: middle;
+      max-height: 130px;
+      max-width: 200px;
+    }
+
+    .vertical-center {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
     }
 
     .banner-content-text {
@@ -134,12 +154,12 @@
     .play-button {
       border: 1px solid #fff;
       background: @gray6;
-      font-family: NimbusSanNov-SemBol, arial, sans-serif;
+      font-family: NimbusSanNovConD-Bol, arial, sans-serif;
       color: @white;
       text-transform: uppercase;
       font-size: 24px;
       line-height: 26px;
-      padding: 15px 26px 15px 60px;
+      padding: 10px 19px 10px 58px;
       z-index: 2;
       display: inline-block;
 
@@ -148,20 +168,21 @@
         height: 0px;
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
-        border-left: 8px solid #fff;
+        border-left: 8px solid @gray6;
         position: absolute;
         margin-left: -30px;
         margin-top: 4px;
       }
 
       .circle {
-        width: 27px;
-        height: 27px;
+        width: 25px;
+        height: 25px;
         .border-radius(50%);
         border: 1px solid @white;
+        background: @white;
         position: absolute;
-        margin-left: -42px;
-        margin-top: -2px;
+        margin-left: -41px;
+        margin-top: -1px;
       }
 
       &:hover {
@@ -215,14 +236,15 @@
         margin-top: 14px;
         color: @white;
         line-height: 14px;
-        font-size: 12px;
+        font-size: 14px;
         font-family: NimbusSanNov-Reg, arial, sans-serif;
       }
     }
   }
 
-
   .customer-wall-header {
+    border-bottom: 1px solid @gray3;
+    margin-bottom: 30px;
     height: 50px;
 
     .nav {
@@ -252,7 +274,7 @@
 
           &:before {
             margin-right: 2px;
-            vertical-align: bottom;
+            vertical-align: text-bottom;
           }
         }
 
@@ -260,6 +282,7 @@
           > a {
             color: @black;
             border-bottom: 7px solid @black;
+            padding-bottom: 11px;
           }
         }
       }
@@ -327,7 +350,7 @@
     .card {
       width: 200px;
       height: 200px;
-      margin: 14px 0 0 14px;
+      margin: 14px 14px 0 0;
       float: left;
 
       perspective: 1000px;
