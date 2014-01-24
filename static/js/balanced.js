@@ -1,4 +1,4 @@
-/*global testimonails:true */
+/*global testimonials:true */
 
 (function(ctx) {
 	var balanced = ctx.balanced = {
@@ -57,7 +57,7 @@
 			// $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 		},
 		achDebits: function() {
-			$(".carousel").carousel({
+			var carousel = $.fn.carousel && $(".carousel").carousel({
 				interval: false
 			});
 
@@ -103,7 +103,7 @@
 				$this.addClass('selected').siblings().removeClass('selected');
 			});
 
-			$.each(testimonails, function(k, testimonial) {
+			$.each(testimonials, function(k, testimonial) {
 				var i = new Image();
 				i.src = testimonial.background;
 
@@ -123,7 +123,7 @@
 				var $selected = $videoTestimonial.find('.thumb-container .thumb.selected');
 				var id = $selected.attr('id');
 
-				var $iframe = $('.video-modal iframe').attr('src', '//www.youtube.com/embed/' + testimonails[id].ytVideoId + '?rel=0');
+				var $iframe = $('.video-modal iframe').attr('src', '//www.youtube.com/embed/' + testimonials[id].ytVideoId + '?rel=0');
 				$('.video-modal').modal('show').off('hide.balanced').on('hide.balanced', function() {
 					$videoTestimonial.removeClass('video-playing');
 					$iframe.attr('src', '');
@@ -140,11 +140,11 @@
 
 				var id = $this.attr('id');
 
-				if (!testimonails[id]) {
+				if (!testimonials[id]) {
 					return;
 				}
 
-				var testimonial = testimonails[id];
+				var testimonial = testimonials[id];
 
 				var $videoTestimonial = $('.video-testimonial-image');
 				$videoTestimonial.find('.background-image:hidden')

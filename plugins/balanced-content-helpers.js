@@ -29,7 +29,7 @@ module.exports = function(env, callback) {
 	};
 
 	env.helpers.link = function(str) {
-		if (config.debug) {
+		if (env.locals.debug) {
 			return str + '.html';
 		}
 
@@ -88,12 +88,18 @@ module.exports = function(env, callback) {
 	var isFile = function(currentItem) {
 		if (!currentItem) {
 			console.log("IS FILE - NULL VALUE");
+			return;
 		}
 
 		return currentItem.hasOwnProperty('__filename');
 	};
 
 	var isDirectory = function(currentItem) {
+		if (!currentItem) {
+			console.log("IS FILE - NULL VALUE");
+			return;
+		}
+
 		return !currentItem.hasOwnProperty('__filename');
 	};
 
