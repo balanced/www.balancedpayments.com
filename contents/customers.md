@@ -145,7 +145,7 @@ customer_wall:
     classes: marketplace
     description: The global platform for unique tours from the world's best professional tour guides
     link: http://www.anyroad.com
-  - id: anyroad
+  - id: arttwo50
     pinned: false
     classes: marketplace
     description: Discover original art inspired by you and the colors in your space
