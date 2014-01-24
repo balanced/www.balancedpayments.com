@@ -158,7 +158,7 @@
 					});
 
 				var $banner = $videoTestimonial.find('.banner');
-				$banner.find('.banner-content-text span').html(testimonial.description);
+				$banner.find('.banner-content-text').html(testimonial.description);
 				$banner.find('.banner-logo img').attr('src', testimonial.logo);
 				$banner.find('.banner-video-thumbnail img').attr('src', testimonial.thumb);
 
