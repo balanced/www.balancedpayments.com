@@ -143,7 +143,7 @@ module.exports = function(grunt) {
 				],
 				tasks: ['concat', 'uglify', 'wintersmith:build'],
 				options: {
-					livereload: true
+					livereload: 35730
 				}
 			},
 			fonts: {
@@ -152,7 +152,7 @@ module.exports = function(grunt) {
 				],
 				tasks: ['copy:fonts', 'wintersmith:build'],
 				options: {
-					livereload: true
+					livereload: 35730
 				}
 			},
 			images: {
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
 				],
 				tasks: ['copy:images', 'wintersmith:build'],
 				options: {
-					livereload: true
+					livereload: 35730
 				}
 			},
 			css: {
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
 				],
 				tasks: ['less:development', 'wintersmith:build'],
 				options: {
-					livereload: true
+					livereload: 35730
 				}
 			},
 			md: {
@@ -181,21 +181,21 @@ module.exports = function(grunt) {
 				],
 				tasks: ['wintersmith:build'],
 				options: {
-					livereload: true
+					livereload: 35730
 				}
 			}
 		},
 
 		open: {
 			dev: {
-				path: 'http://localhost:8080/'
+				path: 'http://localhost:8765/'
 			},
 		},
 
 		connect: {
 			server: {
 				options: {
-					port: 8080,
+					port: 8765,
 					base: './build/'
 				}
 			}
