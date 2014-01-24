@@ -104,8 +104,6 @@
 
   .banner {
     margin: 0 auto 30px;
-    width: 660px;
-    margin-left: 180px;
   }
 
   .banner-content {
@@ -120,24 +118,26 @@
       padding: 0;
       margin: 0;
       display: inline-block;
-      height: 130px;
-      width: 174px;
+      height: 138px;
+      width: 138px;
+      position: relative;
     }
 
     img {
       margin: 0 auto;
       vertical-align: middle;
-      max-height: 130px;
-      max-width: 150px;
-      padding: 10px;
-      background: @white;
-      opacity: 0.6;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    .vertical-center {
-      display: inline-block;
+    .bg-white {
+      background: @white;
+      opacity: 0.6;
       height: 100%;
-      vertical-align: middle;
+      width: 100%;
     }
 
     .banner-content-text {
@@ -149,8 +149,7 @@
       color: @white;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
-      margin-bottom: 10px;
-      margin-top: 0;
+      margin: 10px 0;
     }
 
     .play-button {
@@ -159,31 +158,30 @@
       font-family: NimbusSanNovConD-Bol, arial, sans-serif;
       color: @white;
       text-transform: uppercase;
-      font-size: 24px;
-      line-height: 26px;
-      padding: 10px 19px 10px 58px;
+      font-size: 22px;
+      line-height: 24px;
+      padding: 10px 15px 10px 47px;
       z-index: 2;
       display: inline-block;
 
       .triangle {
         width: 0px;
         height: 0px;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-left: 8px solid @gray6;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid @gray6;
         position: absolute;
-        margin-left: -30px;
-        margin-top: 4px;
+        margin-left: -25px;
+        margin-top: 5px;
       }
 
       .circle {
-        width: 25px;
-        height: 25px;
+        width: 24px;
+        height: 24px;
         .border-radius(50%);
-        border: 1px solid @white;
         background: @white;
         position: absolute;
-        margin-left: -41px;
+        margin-left: -35px;
         margin-top: -1px;
       }
 
@@ -352,7 +350,7 @@
     .card {
       width: 200px;
       height: 200px;
-      margin: 14px 14px 0 0;
+      margin: 14px 0 14px 14px;
       float: left;
 
       perspective: 1000px;
