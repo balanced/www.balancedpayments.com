@@ -80,8 +80,8 @@ team:
       link: https://github.com/dmdj03
       site: github
     - name: manisha ramchandani
-      job: account manager
-      desc: fights for the customer
+      job: marketplace consultant
+      desc: how can I help you be successful?
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
     - name: patrick cieplak
