@@ -1,4 +1,4 @@
-# www.balancedpayments.com_vagrant cookbook
+# balanced-www cookbook
 
 # Requirements
 
@@ -11,3 +11,4 @@
 # Author
 
 Author:: YOUR_NAME (<YOUR_EMAIL>)
+

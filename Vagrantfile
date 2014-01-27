@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "www-balancedpayments-com-VM-berkshelf"
+  config.vm.hostname = "balanced-www"
 
  # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "opscode-ubuntu-12.04"
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
 
    chef.run_list = [
-        'recipe[www.balancedpayments.com]',
+        'recipe[balanced-www]',
     ]
 
   end
