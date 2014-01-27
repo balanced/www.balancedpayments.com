@@ -1,0 +1,8 @@
+{
+	"name": "Balanced Static Site",
+	"version": "0.0.1",
+	"dependencies": {
+		"bootstrap": "2.3.2",
+		"isotope": "1.5.25"
+	}
+}

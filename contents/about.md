@@ -80,8 +80,8 @@ team:
       link: https://github.com/dmdj03
       site: github
     - name: manisha ramchandani
-      job: account manager
-      desc: fights for the customer
+      job: marketplace consultant
+      desc: how can I help you be successful?
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
     - name: patrick cieplak
@@ -134,6 +134,11 @@ team:
       desc: designer turned into engineer
       link: https://github.com/kyungmin
       site: github
+    - name: kimling lam
+      job: marketing
+      desc: storyteller and shiba inu owner
+      link: http://www.linkedin.com/in/kimling
+      site: linkedin
 
 backers:
   heading: backers

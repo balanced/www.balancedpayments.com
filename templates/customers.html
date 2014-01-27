@@ -1,7 +1,5 @@
 {% extends 'layout.html' %}
 
-{% set scripts = ['//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js', '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
-
 {% block body %}
 <div class="modal hide video-modal">
 <iframe width="720" height="460" src="" frameborder="0" allowfullscreen></iframe>
@@ -127,10 +125,11 @@
     </div>
 </div>
 
+<script src="/static/js/customer-lib.min.js"></script>
 <script type="text/javascript">
-var testimonails={};
+var testimonials={};
 {%- for testimonial in page.metadata.video_testimonials.list -%}
-testimonails["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}", background: "/images/customers/{{testimonial.id}}_background.jpg", logo: "/images/customers/logo_{{testimonial.id}}_video.png", thumb: "/images/customers/{{testimonial.id}}_video_thumbnail.jpg" };
+testimonials["{{testimonial.id}}"]={ description: "{{testimonial.description}}", ytVideoId: "{{testimonial.ytVideoId}}", background: "/images/customers/{{testimonial.id}}_background.jpg", logo: "/images/customers/logo_{{testimonial.id}}_video.png", thumb: "/images/customers/{{testimonial.id}}_video_thumbnail.jpg" };
 {%- endfor -%}$(balanced.customers)
 </script>
 {% endblock %}

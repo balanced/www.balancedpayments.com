@@ -1,12 +1,10 @@
 var _ = require('lodash/dist/lodash.underscore');
 var fs = require('fs');
 var path = require('path');
-var config = require('../config.json');
-config.debug = config.debug || config.locals.debug;
-
-var basedir = path.join(process.cwd(), config.contents);
 
 module.exports = function(env, callback) {
+	var basedir = env.contentsPath;
+
 	env.helpers.getSortedContentFolder = function (folder, contents) {
 		return _.chain(contents[folder]._.directories)
 			.map(function(item){ return item.index })
@@ -29,7 +27,7 @@ module.exports = function(env, callback) {
 	};
 
 	env.helpers.link = function(str) {
-		if (config.debug) {
+		if (env.locals.debug) {
 			return str + '.html';
 		}
 
@@ -88,12 +86,18 @@ module.exports = function(env, callback) {
 	var isFile = function(currentItem) {
 		if (!currentItem) {
 			console.log("IS FILE - NULL VALUE");
+			return;
 		}
 
 		return currentItem.hasOwnProperty('__filename');
 	};
 
 	var isDirectory = function(currentItem) {
+		if (!currentItem) {
+			console.log("IS FILE - NULL VALUE");
+			return;
+		}
+
 		return !currentItem.hasOwnProperty('__filename');
 	};
 

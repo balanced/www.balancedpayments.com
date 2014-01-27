@@ -6,7 +6,7 @@ pageTitle: Customers
 body_class: customers
 
 subtitle:
-  heading: Balanced powers hunderds of businesses, big and small. See how some of the fastest growing companies are using Balanced to deliever an amazing payments experience.
+  heading: Balanced powers hundreds of businesses, big and small. See how some of the fastest-growing companies are using Balanced to deliver an amazing payments experience.
 
 video_testimonials:
   list:
@@ -128,7 +128,7 @@ customer_wall:
   - id: aptdeco
     pinned: false
     classes: marketplace
-    description: An online marketplace dedicated to buying and seller quality, pre-owned furniture
+    description: An online marketplace dedicated to buying and selling quality, pre-owned furniture
     link: https://www.aptdeco.com
   - id: brandid
     pinned: false
