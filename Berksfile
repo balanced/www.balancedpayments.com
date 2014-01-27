@@ -1,3 +1,3 @@
 site :opscode
 
-cookbook 'balanced-www', path: 'balanced-www/cookbooks/balanced-www'
+cookbook 'balanced-www', path: 'balanced-www'
