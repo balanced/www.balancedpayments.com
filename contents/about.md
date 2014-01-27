@@ -134,6 +134,11 @@ team:
       desc: designer turned into engineer
       link: https://github.com/kyungmin
       site: github
+    - name: kimling lam
+      job: marketing
+      desc: storyteller and shiba inu owner
+      link: http://www.linkedin.com/in/kimling
+      site: linkedin
 
 backers:
   heading: backers
