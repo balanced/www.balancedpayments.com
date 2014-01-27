@@ -83,20 +83,17 @@ and required dependencies.
 Install Berkshelf
 ```
 $ gem install berkshelf --no-ri --no-rdoc
-
 ```
 
 Install the vagrant-berkshelf Plugin
 
 ```
 $ vagrant plugin install vagrant-berkshelf
-
 ```
 
 Install the vagrant-omnibus plugin
 ```
 $ vagrant plugin install vagrant-omnibus
-
 ```
 
 
@@ -106,7 +103,6 @@ $ vagrant up
 $ vagrant provision # Not necessary on first run, updates jekyll on subsequent
 $ vagrant ssh
 $ cd /srv/app
-
 ```
 
 Open your web browser and point it to http://10.0.0.2:8080/ and

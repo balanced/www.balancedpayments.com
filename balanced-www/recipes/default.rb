@@ -3,9 +3,8 @@
 
 # Recipe:: default
 #
-# Copyright (C) 2013 YOUR_NAME
+# Copyright (C) 2013 Balanced
 #
-# All rights reserved - Do Not Redistribute
 #
 include_recipe "nodejs"
 include_recipe "nodejs::npm"
