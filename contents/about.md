@@ -9,21 +9,14 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 17 payment aficionados and growing
+    text: 19 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
 intro: |
-  We're obsessed with all forms of infrastructure, including communications, transportation,
-  energy, waste management, and payments. Robust infrastructure creates a happier, more
-  productive, and more prosperous society. You know exactly what I mean if you've traveled
-  somewhere where you struggled to find a reliable Internet connect or even usable roads.
-  You also know what I mean when you sit in traffic or struggle with public transportation
-  (or lack thereof) in the US.
-
-  Balanced was created to increase the global economy (increase GDP) by enabling new commerce.
-  Our mechanism or facility to do that is payments. Everything else we do depends on how it
-  fits into the vision for Balanced.
+  We're obsessed with all forms of infrastructure, including communications, transportation, energy, waste management, and payments. Robust infrastructure creates a happier, more productive, and more prosperous society. You know exactly what I mean if you've traveled somewhere where you struggled to find a reliable Internet connect or even usable roads. You also know what I mean when you sit in traffic or struggle with public transportation (or lack thereof) in the US.
+  <br><br>
+  Balanced was created to increase the global economy (increase GDP) by enabling new commerce. Our mechanism or facility to do that is payments. Everything else we do depends on how it fits into the vision for Balanced.
 
 founders:
   heading: founders
@@ -87,15 +80,10 @@ team:
       link: https://github.com/dmdj03
       site: github
     - name: manisha ramchandani
-      job: account manager
-      desc: fights for the customer
+      job: marketplace consultant
+      desc: how can I help you be successful?
       link: http://www.linkedin.com/pub/manisha-ramchandani/21/128/288
       site: linkedin
-    - name: jacob rus
-      job: support
-      desc: completed all of Harvard undergraduate math in freshman year
-      link: https://github.com/jrus
-      site: github
     - name: patrick cieplak
       job: engineer
       desc: understanding all the data
@@ -127,8 +115,8 @@ team:
       link: https://github.com/matthewfl
       site: github
     - name: noah kantrowitz
-      job: master chef
-      desc: devops
+      job: devops
+      desc: master chef
       link: https://github.com/coderanger
       site: github
     - name: steve klabnik
@@ -136,6 +124,21 @@ team:
       desc: ideas, standards, collaboration, and advocacy
       link: https://github.com/steveklabnik
       site: github
+    - name: victor lin
+      job: engineer
+      desc: recurring billing connoisseur
+      link: https://github.com/victorlin
+      site: github
+    - name: kyungmin kim
+      job: engineer
+      desc: designer turned into engineer
+      link: https://github.com/kyungmin
+      site: github
+    - name: kimling lam
+      job: marketing
+      desc: storyteller and shiba inu owner
+      link: http://www.linkedin.com/in/kimling
+      site: linkedin
 
 backers:
   heading: backers

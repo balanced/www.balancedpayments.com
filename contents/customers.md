@@ -6,22 +6,22 @@ pageTitle: Customers
 body_class: customers
 
 subtitle:
-  heading: Balanced powers hunderds of businesses, big and small. See how some of the fastest growing companies are using Balanced to deliever an amazing payments experience.
+  heading: Balanced powers hundreds of businesses, big and small. See how some of the fastest-growing companies are using Balanced to deliver an amazing payments experience.
 
 video_testimonials:
   list:
     - label: 750 Commerce
       id: 750
-      description: 750 Group leverages Balanced’s payments API to deliver<br/>a great processing experience for wineries.
+      description: 750 Commerce leverages Balanced’s payments API to deliver a great processing experience for wineries.
       classes: selected
       ytVideoId: ZMg-gQrh6X0
     - label: Crowdtilt
       id: crowdtilt
-      description: Crowdtilt relies on Balanced’s payments framework<br/>to scale their crowdfunding platform.
+      description: Crowdtilt relies on<br/>Balanced’s payments<br/>framework to scale their<br/>crowdfunding platform.
       ytVideoId: TdVSGj_NX2c
     - label: Kitchit
       id: kitchit
-      description: Kitchit runs on top of Balanced’s ACH payouts<br/>to connect chefs to consumers.
+      description: Kitchit runs on top<br/>of Balanced’s ACH<br/>payouts to connect<br/>chefs to consumers.
       ytVideoId: Mb-oBHsvd80
     - label: Zaarly
       id: zaarly
@@ -128,18 +128,13 @@ customer_wall:
   - id: aptdeco
     pinned: false
     classes: marketplace
-    description: An online marketplace dedicated to buying and seller quality, pre-owned furniture
+    description: An online marketplace dedicated to buying and selling quality, pre-owned furniture
     link: https://www.aptdeco.com
   - id: brandid
     pinned: false
     classes: marketplace
     description: Connecting men who hate shopping with people who love to shop
     link: https://www.getbrandid.com/#/
-  - id: consignd
-    pinned: false
-    classes: marketplace
-    description: Connects sellers to content creators that can help them gain exposure for their products
-    link: https://www.consignd.com/home
   - id: topcoat
     pinned: false
     classes: marketplace
@@ -150,7 +145,7 @@ customer_wall:
     classes: marketplace
     description: The global platform for unique tours from the world's best professional tour guides
     link: http://www.anyroad.com
-  - id: anyroad
+  - id: arttwo50
     pinned: false
     classes: marketplace
     description: Discover original art inspired by you and the colors in your space
@@ -165,11 +160,6 @@ customer_wall:
     classes: marketplace
     description: Sell everywhere in under a minute
     link: http://sellsimple.com
-  - id: tastemaker
-    pinned: false
-    classes: marketplace
-    description: Making interior decorating affordable and accessible to everyone
-    link: https://www.tastemaker.com
   - id: rumgr
     pinned: false
     classes: marketplace
@@ -195,16 +185,6 @@ customer_wall:
     classes: marketplace
     description: Shop fashion closets of socialites, stylists, models, and more
     link: https://www.vaunte.com
-  - id: sold
-    pinned: false
-    classes: marketplace
-    description: Sold makes selling easy
-    link: http://usesold.com
-  - id: sidetour
-    pinned: false
-    classes: marketplace
-    description: Find unique things to do, amazing tours, and unforgettable experiences to help you explore your city in a new way
-    link: https://www.sidetour.com
   - id: pivotdesk
     classes: marketplace
     description: An office-sharing marketplace that transforms the way we think about the office space
@@ -241,10 +221,6 @@ customer_wall:
     classes: marketplace
     description: The easiest way to ship your stuff
     link: http://www.shyp.com/
-  - id: handybook
-    classes: marketplace
-    description: The easiest way to book household services
-    link: http://www.handybook.com/
   - id: favor
     classes: marketplace
     description: Your on-demand personalized delivery assistant
@@ -337,18 +313,10 @@ customer_wall:
     classes: crowdfunding
     description: Invest as little as $10 in high-impact solar projects in off-grid communities and help achieve sustainable energy access for all
     link: http://www.sunfunder.com/
-  - id: adblock
-    classes: crowdfunding
-    description: Empowering all people to choose an online world with as little advertising as they want
-    link: https://campaign.getadblock.com/adblock-it-s-time-to-spread-the-word
   - id: wefunder
     classes: crowdfunding
     description: Invest as little as $1,000 in some of the hottest startups in the country
     link: https://wefunder.com/
-  - id: wanderable
-    classes: crowdfunding
-    description: Helping engaged couples fund their honeymoons by offering beautiful, free honeymoon registries
-    link: https://wanderable.com/
   - id: paybygroup
     classes: crowdfunding
     description: Organize and collect money from friends and family for anything you dream of doing
@@ -357,10 +325,6 @@ customer_wall:
     classes: crowdfunding
     description: Follow and fund scientific research
     link: https://www.microryza.com/
-  - id: fundersclub
-    classes: crowdfunding
-    description: Where private investors gain access to the world's most promising startups
-    link: https://fundersclub.com/
   - id: dragoninnovation
     classes: crowdfunding
     description: Helping makers bring tomorrow's products to life
@@ -373,10 +337,6 @@ customer_wall:
     classes: crowdfunding
     description: An affordable nutrition drink with all the essential ingredients the healthy body needs
     link: https://campaign.soylent.me/soylent-free-your-body
-  - id: microsoft
-    classes: crowdfunding
-    description: Crowdsource contributions from friends and family toward the purchase of a new Windows PC or tablet
-    link: https://www.windowschipin.com/
   - id: gittip
     classes: donation
     description: Give small weekly cash gifts to people you love and are inspired by
@@ -405,10 +365,6 @@ customer_wall:
     classes: ecommerce
     description: The facility management solution that saves building owners money and time
     link: https://www.ravti.com/
-  - id: bitbookings
-    classes: ecommerce
-    description: A booking system for hotels, hostels, and apartments for rent
-    link: https://www.bitbookings.com/
   - id: nightpro
     classes: ecommerce
     description: A one stop management solution for nightlife venues
@@ -425,7 +381,22 @@ customer_wall:
     classes: ecommerce
     description: Purchase your favorite bands' concert tickets before they go on sale to the public
     link: http://www.soundrink.com/
-
+  - id: chirpify
+    classes: advertising
+    description: A social conversion platform for marketing & commerce
+    link: https://chirpify.com/
+  - id: broadstreet_ads
+    classes: advertising
+    description: An ad platform for indie news publishers
+    link: http://broadstreetads.com/
+  - id: localon
+    classes: advertising
+    description: A website and web marketing platform for small businesses
+    link: https://www.localon.com/
+  - id: vungle
+    classes: advertising
+    description: A mobile video ad-network, powering some of the world's largest apps and games
+    link: http://www.vungle.com/
 
 tryTheDashboard:
   body: Ready to get started?

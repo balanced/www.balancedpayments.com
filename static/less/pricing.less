@@ -5,367 +5,380 @@
 @ratePanelsDividerColor: @gray3;
 
 body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-processing {
-    section {
-      @sectionTitleLineWidth: 5px;
-      @sectionTitlePadding: 8px;
+  section {
+    @sectionTitleLineWidth: 5px;
+    @sectionTitlePadding: 8px;
+
+    .section-title {
+      width: 270px;
+
+      .title-wrapper {
+        margin-top: @sectionTitleLineWidth + 5;
+        span {
+          .header2;
+          border-top: @sectionTitleLineWidth solid @black;
+          padding-top: @sectionTitlePadding;
+        }
+
+        p {
+          margin-top: 20px;
+          margin-right: 20px;
+          .body2;
+        }
+      }
+    }
+    .rate-panels {
+      margin-left: 0;
+
+      .rate-panel {
+        .panel-content {
+          margin: 20px 0 0 20px;
+
+          span {
+            .header4;
+          }
+
+          .rate-image {
+            margin-top: 6px;
+          }
+        }
+      }
+
+      .main-rate-panel {
+        background-color: @white;
+        width: 2*@ratePanelsWidth/3;
+        height: @ratePanelsHeight;
+        float: left;
+
+        .rate-image {
+          width: 300px;
+          height: 80px;
+        }
+      }
+
+      .secondary-rate-panel {
+        background-color: @gray2;
+
+        width: @ratePanelsWidth/3;
+        height: @ratePanelsHeight;
+        float: left;
+
+        .rate-image {
+          width: 170px;
+          height: 80px;
+        }
+      }
+
+      .tr-rate-panel {
+        height: @ratePanelsHeight - @ratePanelsDividerWidth;
+        border-bottom: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+      }
+
+      .bot-mid-rate-panel {
+        width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
+        border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+        border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+      }
+    }
+
+    &.half-height {
+
+      .section-bg {
+        background: none;
+      }
 
       .section-title {
-        width: 270px;
-
-        .title-wrapper {
-          margin-top: @sectionTitleLineWidth + 5;
-          span {
-            .header2;
-            border-top: @sectionTitleLineWidth solid @black;
-            padding-top: @sectionTitlePadding;
-          }
-
-          p {
-            margin-top: 20px;
-            margin-right: 20px;
-            .body2;
-          }
-        }
+        border-top: 1px solid @ratePanelsDividerColor;
       }
+
       .rate-panels {
-        margin-left: 0;
-
-        .rate-panel {
-          .panel-content {
-            margin: 20px 0 0 20px;
-
-            span {
-              .header4;
-            }
-
-            .rate-image {
-              margin-top: 6px;
-            }
-          }
-        }
-
-        .main-rate-panel {
-          background-color: @white;
-          width: 2*@ratePanelsWidth/3;
-          height: @ratePanelsHeight;
-          float: left;
-
-          .rate-image {
-            width: 300px;
-            height: 80px;
-          }
-        }
+        border-top: 1px solid @ratePanelsDividerColor;
 
         .secondary-rate-panel {
-          background-color: @gray2;
-
-          width: @ratePanelsWidth/3;
-          height: @ratePanelsHeight;
-          float: left;
-
-          .rate-image {
-            width: 170px;
-            height: 80px;
-          }
-        }
-
-        .tr-rate-panel {
-          height: @ratePanelsHeight - @ratePanelsDividerWidth;
-          border-bottom: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
-        }
-
-        .bot-mid-rate-panel {
-          width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
-          border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
-          border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
-        }
-      }
-
-      &.half-height {
-
-        .section-bg {
-          background: none;
-        }
-
-        .section-title {
-          border-top: 1px solid @ratePanelsDividerColor;
-        }
-
-        .rate-panels {
-          border-top: 1px solid @ratePanelsDividerColor;
-
-          .secondary-rate-panel {
-            background-color: @white;
-          }
+          background-color: @white;
         }
       }
     }
+  }
 
-    section.card-processing {
-      .section-bg {
-        background-color: @egyptianBlue60;
+  section.card-processing {
+    .section-bg {
+      background-color: @egyptianBlue60;
 
-        .section-title {
-            border-top: 1px solid @egyptianBlue100;
-        }
-
-        .rate-panels {
-            border-top: 1px solid @egyptianBlue100 !important;
-        }
-
-        .title-icon {
-            background: url(/images/pricing_icons-2x.png) no-repeat;
-            width: 225px;
-            height: 225px;
-            background-size: 225px;
-            background-position: -25px 8px;
-          }
+      .section-title {
+        border-top: 1px solid @egyptianBlue100;
       }
 
-      .charging-buyers {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-size: 300px;
+      .rate-panels {
+        border-top: 1px solid @egyptianBlue100 !important;
       }
 
-      .authorization-hold {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
-      }
-
-      .chargeback {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -240px;
-        background-size: 300px;
-      }
-
-      .refund {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -80px;
-        background-size: 300px;
-      }
-
-      .failure {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
+      .title-icon {
+        background: url(/images/pricing_icons-2x.png) no-repeat;
+        width: 225px;
+        height: 225px;
+        background-size: 225px;
+        background-position: -25px 8px;
       }
     }
 
-    section.ach-debits {
-      .section-bg {
-        background-color: @curryYellow60;
+    .charging-buyers {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-size: 300px;
+    }
 
-        .section-title {
-            border-top: 1px solid @curryYellow100;
-        }
+    .authorization-hold {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
 
-        .rate-panels {
-            border-top: 1px solid @curryYellow100 !important;
-        }
+    .chargeback {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -240px;
+      background-size: 300px;
+    }
 
-        .title-icon {
-            background: url(/images/pricing_icons-2x.png) no-repeat;
-            width: 225px;
-            height: 225px;
-            background-size: 225px;
-            background-position: -25px -217px;
-          }
+    .refund {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -80px;
+      background-size: 300px;
+    }
+
+    .failure {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
+  }
+
+  section.ach-debits {
+    .section-bg {
+      background-color: @curryYellow60;
+
+      .section-title {
+        border-top: 1px solid @curryYellow100;
       }
 
-      .charging-buyers {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -320px;
-        background-size: 300px;
+      .rate-panels {
+        border-top: 1px solid @curryYellow100 !important;
       }
 
-      .verification {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
-      }
-
-      .chargeback {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -240px;
-        background-size: 300px;
-      }
-
-      .refund {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -400px;
-        background-size: 300px;
-      }
-
-      .failure {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
+      .title-icon {
+        background: url(/images/pricing_icons-2x.png) no-repeat;
+        width: 225px;
+        height: 225px;
+        background-size: 225px;
+        background-position: -25px -217px;
       }
     }
 
-    section.payouts {
-      .section-bg {
-        background-color: @pineGreen60;
+    .charging-buyers {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -320px;
+      background-size: 300px;
+    }
 
-        .section-title {
-            border-top: 1px solid @pineGreen100;
-        }
+    .verification {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
 
-        .rate-panels {
-            border-top: 1px solid @pineGreen100 !important;
-        }
+    .chargeback {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -240px;
+      background-size: 300px;
+    }
 
-        .title-icon {
-            background: url(/images/pricing_icons-2x.png) no-repeat;
-            width: 225px;
-            height: 225px;
-            background-size: 225px;
-            background-position: -25px -442px;
-          }
+    .refund {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -400px;
+      background-size: 300px;
+    }
+
+    .failure {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
+  }
+
+  section.payouts {
+    .section-bg {
+      background-color: @pineGreen60;
+
+      .section-title {
+        border-top: 1px solid @pineGreen100;
       }
 
-      .paying-sellers {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -480px;
-        background-size: 300px;
+      .rate-panels {
+        border-top: 1px solid @pineGreen100 !important;
       }
 
-      .paying-your-account {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
-      }
-
-      .reversal {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
-      }
-
-      .failure {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -560px;
-        background-size: 300px;
-      }
-
-      .preloading-escrow {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -160px;
-        background-size: 300px;
+      .title-icon {
+        background: url(/images/pricing_icons-2x.png) no-repeat;
+        width: 225px;
+        height: 225px;
+        background-size: 225px;
+        background-position: -25px -442px;
       }
     }
 
-    section.no-additional-fees {
-      .batch {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -880px;
-        background-size: 300px;
-      }
-
-      .setup {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -880px;
-        background-size: 300px;
-      }
-
-      .monthly {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -880px;
-        background-size: 300px;
-      }
+    .paying-sellers {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -480px;
+      background-size: 300px;
     }
 
-    section.volume-discounts {
-      .first-100k {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -640px;
-        background-size: 300px;
-      }
-
-      .next-400k {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -720px;
-        background-size: 300px;
-      }
-
-      .above-500k {
-        background: url(/images/pricing_rates-2x.png) no-repeat;
-        background-position: 0px -800px;
-        background-size: 300px;
-      }
+    .paying-your-account {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
     }
 
-    .calculator {
-      .calc-title {
-        .header7;
-        text-transform: uppercase;
-      }
-      .bg {
+    .reversal {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
+
+    .failure {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -560px;
+      background-size: 300px;
+    }
+
+    .preloading-escrow {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -160px;
+      background-size: 300px;
+    }
+  }
+
+  section.no-additional-fees {
+    .batch {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -880px;
+      background-size: 300px;
+    }
+
+    .setup {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -880px;
+      background-size: 300px;
+    }
+
+    .monthly {
+      background: url(/images/pricing_rates-2x.png) no-repeat;
+      background-position: 0px -880px;
+      background-size: 300px;
+    }
+  }
+
+  section.volume-discounts {
+    .rate-panels {
+      ul {
+        padding: 5px 0;
+        margin: 0;
+        list-style: none;
         background-color: @white;
-      }
-
-      form.form-horizontal {
-        margin-bottom: 0px;
-
-        .control-group {
-          padding: 10px 20px 10px 20px;
-          margin: 0;
-          height: 60px;
-
-          .control-label {
-            padding-top: 20px;
-            width: 300px;
-            text-align: left;
-            .body2;
+        li {
+          background-color: @white;
+          padding: 7px 15px;
+          clear: both;
+          float: left;
+          width: 540px;
+          border-top: 1px solid @ratePanelsDividerColor;
+          &:first-child {
+            border-top: 0;
           }
-
-          .control-label:after {
-            content: ": "
+          span {
+            float: left;
+            color: @black;
+            font-size: 0.85em;
           }
-
-          .controls {
-            margin-left: 320px;
-            padding-top: 10px;
-          }
-
-          input {
+          div {
             float: right;
-            width: 160px;
-            height: 40px;
-            text-align: right;
-            .header5d;
-            background-color: @pageBackground;
-            padding-right: 10px;
-            border: none;
-
-            -webkit-appearance: none;
-            border-radius: 0;
+            color: @black;
+            font-size: 1.4em;
+            font-family: NimbusSanNovConD-Bol;
           }
-
-          .currency-prepend {
-            .header5d;
-            float: right;
-            margin: 10px 10px 0 0;
-          }
-
-          &.effective-rate {
-            label {
-              color: @pineGreen100;
-            }
-
-            .effective-rate-value {
-              padding-top: 10px;
-              float: right;
-              .header5d;
-              color: @pineGreen100;
-            }
-          }
-        }
-
-        .control-group:first-child {
-          border-bottom: 1px solid @gray2;
         }
       }
     }
+  }
+
+  .calculator {
+    .calc-title {
+      .header7;
+      text-transform: uppercase;
+    }
+    .bg {
+      background-color: @white;
+    }
+
+    form.form-horizontal {
+      margin-bottom: 0px;
+
+      .control-group {
+        padding: 10px 20px 10px 20px;
+        margin: 0;
+        height: 60px;
+
+        .control-label {
+          padding-top: 20px;
+          width: 300px;
+          text-align: left;
+          .body2;
+        }
+
+        .control-label:after {
+          content: ": "
+        }
+
+        .controls {
+          margin-left: 320px;
+          padding-top: 10px;
+        }
+
+        input {
+          float: right;
+          width: 160px;
+          height: 40px;
+          text-align: right;
+          .header5d;
+          background-color: @pageBackground;
+          padding-right: 10px;
+          border: none;
+
+          -webkit-appearance: none;
+          border-radius: 0;
+        }
+
+        .currency-prepend {
+          .header5d;
+          float: right;
+          margin: 10px 10px 0 0;
+        }
+
+        &.effective-rate {
+          label {
+            color: @pineGreen100;
+          }
+
+          .effective-rate-value {
+            padding-top: 10px;
+            float: right;
+            .header5d;
+            color: @pineGreen100;
+          }
+        }
+      }
+
+      .control-group:first-child {
+        border-bottom: 1px solid @gray2;
+      }
+    }
+  }
 }

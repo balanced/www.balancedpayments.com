@@ -19,8 +19,9 @@ body.layout-v4 {
     }
 
     .global-wrapper {
+        .transition(left .3s ease-in-out);
         position: relative;
-        .transition(.3s);
+        left: 0;
 
         &.expanded {
             left: 200px;
@@ -39,10 +40,10 @@ body.layout-v4 {
     }
 
     .sidebar-menu-left {
-        .transition(.3s);
+        .transition(left .3s ease-in-out);
         position: fixed;
         left: 0px;
-        top: 0px;
+        top: 0;
         background-color: black;
         height: 100%;
         width: 90px;
@@ -134,7 +135,7 @@ body.layout-v4 {
                     color: @white;
                     display: block;
                     cursor: pointer;
-                    padding: 18px 13px 18px 0px;
+                    padding: 18px 8px 18px 0px;
                 }
 
                 &.active {
@@ -170,19 +171,16 @@ body.layout-v4 {
     .sidebar-child-menu-left {
         position: fixed;
         left: -200px;
-        top: 0px;
+        top: 0;
         height: 100%;
         width: 200px;
         padding: 0px;
         z-index: 9999;
-        background-color: @gray8;
-        transition: 300ms;
-        -webkit-transition: 300ms;
-        -moz-transition: 300ms;
-        -o-transition: 300ms;
+        background-color: @gray6;
+        .transition(left .3s ease-in-out);
 
         &.expanded {
-            left: 0px;
+            left: 0;
         }
 
         ul {
