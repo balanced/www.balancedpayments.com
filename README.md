@@ -97,12 +97,17 @@ $ vagrant plugin install vagrant-omnibus
 ```
 
 
-Fire up the virtual machine
+Fire up the virtual machine first time
 ```
 $ vagrant up
-$ vagrant provision # Not necessary on first run, updates jekyll on subsequent
+```
+
+Fire up the virtual machine subsequent attempts
+```
+$ vagrant provision
 $ vagrant ssh
 $ cd /srv/app
+$ grunt vagrant
 ```
 
 Open your web browser and point it to http://10.0.0.2:8080/ and
