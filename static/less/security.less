@@ -1,0 +1,75 @@
+body.security {
+
+  #security-reporting, #security-disclosure {
+    margin-left: 0;
+  }
+
+  #security-reporting {
+    .content {
+      margin-top: 0px;
+      padding-top: 0px;
+      margin-bottom: 20px; 
+    }
+  }
+
+  .title-wrapper {
+    margin-left: 0;
+  }
+
+  .box {
+    
+    a {
+      font-size: 12px;
+      font-family: Consolas, Monao, Menlo, "Courier New", monospace;
+      font-weight: bold;
+
+      &:hover {
+        color: @black;
+      }
+    }
+
+    .title {
+      font-size: 15px;
+      padding: 10px 15px;
+    }
+
+    .body {
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+
+    .code {
+      font-size: 12px;
+      font-family: Consolas, Monao, Menlo, "Courier New", monospace;
+      font-weight: bold;
+      color: @black;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    &.red {
+      margin-top: 54px;
+      margin-bottom: 20px;
+
+      .title {
+        background-color: @imperialRed100;
+        color: @white;
+      }
+      .body {
+        background-color: @imperialRed20;
+        color: @black;
+      }
+    }
+
+    &.gray {
+      .title {
+        background-color: @gray4;
+        color: @black;
+      }
+      .body {
+        background-color: @white;
+        color: @black;
+      }
+    }
+  }
+}
