@@ -426,7 +426,13 @@
             filter: grayscale(100%); /* Current draft standard */
             -webkit-filter: grayscale(100%); /* New WebKit */
             -moz-filter: grayscale(100%);
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="grayscale"><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/></filter></svg>#grayscale');
+            /*
+              Notice: I know this %20 here is ugly, but it is a workaround for
+              CSS minifier bug:
+
+              https://github.com/balanced/www.balancedpayments.com/issues/160
+            */
+            filter: url('data:image/svg+xml;utf8,<svg%20xmlns="http://www.w3.org/2000/svg"><filter%20id="grayscale"><feColorMatrix%20type="matrix"%20values="0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200"/></filter></svg>#grayscale');
             filter: gray; /* IE */
             -webkit-filter: grayscale(1); /* Old WebKit */
           }
