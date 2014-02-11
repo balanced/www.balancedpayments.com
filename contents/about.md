@@ -142,7 +142,7 @@ team:
     - name: david macquart
       job: account management and partnerships
       desc: whatever it takes
-      link: www.linkedin.com/pub/david-macquart/0/101/959
+      link: http://www.linkedin.com/pub/david-macquart/0/101/959
       site: linkedin
 
 backers:
