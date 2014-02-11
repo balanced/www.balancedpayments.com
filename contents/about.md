@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 20 payment aficionados and growing
+    text: 21 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -138,6 +138,11 @@ team:
       job: marketing
       desc: storyteller and shiba inu owner
       link: http://www.linkedin.com/in/kimling
+      site: linkedin
+    - name: david macquart
+      job: account management and partnerships
+      desc: whatever it takes
+      link: www.linkedin.com/pub/david-macquart/0/101/959
       site: linkedin
 
 backers:
