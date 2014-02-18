@@ -144,6 +144,11 @@ team:
       desc: whatever it takes
       link: http://www.linkedin.com/pub/david-macquart/0/101/959
       site: linkedin
+    - name: carlos rodriguez
+      job: engineer
+      desc: señor js developer
+      link: https://github.com/cohitre
+      site github
 
 backers:
   heading: backers
