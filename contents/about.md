@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 21 payment aficionados and growing
+    text: 22 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
