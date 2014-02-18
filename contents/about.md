@@ -148,7 +148,7 @@ team:
       job: engineer
       desc: señor js developer
       link: https://github.com/cohitre
-      site github
+      site: github
 
 backers:
   heading: backers
