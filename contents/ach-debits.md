@@ -24,7 +24,7 @@ sliderfeature:
   step3header: "Balanced submits debit instructions to the ODFI, the Originating<br />Depository Financial Institution, who is making the debit request."
   step4header: "The ODFI sends debit instructions<br />to the Federal Reserve."
   step5header: "The Federal Reserve notifies the RDFI, the Receiving<br />Depository Financial Institution, of the debit authorization."
-  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow.<br />The marketplace may wish to settle funds to the seller using [Balanced’s payout service](https://docs.balancedpayments.com/current/overview#credits)."
+  step6header: "The RDFI moves funds to the ODFI’s bank account. Funds are now available in escrow.<br />The marketplace may wish to settle funds to the seller using [Balanced’s payout service](https://docs.balancedpayments.com/1.1/guides/credits/)."
 
 paymentSchedule:
   title: Payment schedule

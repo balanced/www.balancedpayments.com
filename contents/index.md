@@ -93,13 +93,13 @@ marketplaces:
         pay your merchants upon fulfillment of an order or
         a service.
 
-        [Learn more about escrow](https://docs.balancedpayments.com/current/overview.html?language=bash#funds-flow)
+        [Learn more about escrow](https://docs.balancedpayments.com/1.1/guides/escrow/)
     - text: |
         #### Define your own fee structure
         Set your own fees by determining how much to collect
         from buyers, merchants, or both.
 
-        [View fee scenarios](https://docs.balancedpayments.com/current/overview?language=bash#collecting-your-fees)
+        [View fee scenarios](https://docs.balancedpayments.com/1.1/guides/collecting-fees/)
 
 integrate:
   title: Integrate in minutes
@@ -109,16 +109,16 @@ integrate:
   tutorials_title: Tutorials
   tutorials:
     - name: How to charge a card
-      url: https://docs.balancedpayments.com/current/#processing
+      url: https://docs.balancedpayments.com/1.1/guides/debits/
     - name: How to pay a bank account
-      url: https://docs.balancedpayments.com/current/#balanced-payouts
+      url: https://docs.balancedpayments.com/1.1/guides/credits/
     - name: How to escrow funds
-      url: https://docs.balancedpayments.com/current/#funds-flow
+      url: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
     - name: How to collect your fee
-      url: https://docs.balancedpayments.com/current/#collecting-your-fees
+      url: https://docs.balancedpayments.com/1.1/guides/collecting-fees/#inclusive-fees
   sub_tutorials: |
     #### Need help integrating?
-    Contact us through one of our many [support channels](https://docs.balancedpayments.com/current/#support).
+    Contact us through one of our many [support channels](https://docs.balancedpayments.com/1.1/overview/#support).
   clients_title: Client libraries
   # class in the case that the name of the language is different from the css class for the image
   clients:
