@@ -1,7 +1,3 @@
-@import "bootstrap-2.3/mixins.less";
-@import "bootstrap-2.3/variables.less";
-@import "variables.less";
-
 body {
   width: 100%;
 
@@ -33,7 +29,7 @@ body {
 }
 
 .img-social {
-  background: url(@v2DashboardIcons) no-repeat;
+  background: url(/images/dashboard_icons9.png) no-repeat;
   width: 25px;
   height: 25px;
   display: block;
@@ -74,13 +70,13 @@ body {
 }
 
 .about-banner-label {
-  font-family: @v2FontFamily;
+  font-family: @baseFontFamily;
   font-size: 26px;
   color: #000;
 }
 
 .about-banner-desc {
-  font-family: @v2FontFamilySerif;
+  font-family: @bitter;
   font-style: italic;
   font-size: 12px;
   color: #737373;
@@ -94,7 +90,7 @@ body {
 }
 
 .about-body-intro {
-  font-family: @v2FontFamilyLight;
+  font-family: @baseFontFamily;
   font-size: 21px;
   color: #737373;
   line-height: 1.3em;
@@ -121,7 +117,7 @@ body {
 }
 
 .about-founders-subhead, .about-list-head {
-  font-family: @v2FontFamilyBold;
+  font-family: @baseFontFamilyBold;
   font-size: 30px;
   color: #000;
 }
@@ -147,19 +143,19 @@ body {
 
 .about-founders-body-line {
   float: left;
-  border-left: 1px solid #b3b3b3;
+  border-left: 1px solid @gray3;
   height: 522px;
 }
 
 .about-founders-name {
-  font-family: @v2FontFamilySerif;
+  font-family: @bitter;
   font-size: 18px;
   color: #c88a12;
   text-align: center;
 }
 
 .about-founders-title {
-  font-family: @v2FontFamilyBold;
+  font-family: @baseFontFamilyBold;
   font-size: 11px;
   color: #000;
   letter-spacing: 1px;
@@ -176,7 +172,7 @@ body {
 }
 
 .about-founders-bio {
-  font-family: @v2FontFamily;
+  font-family: @baseFontFamily;
   font-size: 14px;
   line-height: 18px;
   color: #737373;
@@ -205,7 +201,7 @@ body {
 }
 
 .about-list-name {
-  font-family: @v2FontFamilySerif;
+  font-family: @bitter;
   font-size: 18px;
   color: #58595B;
   margin-right: 5px;
@@ -213,7 +209,7 @@ body {
 }
 
 .about-list-bracket {
-  font-family: @v2FontFamilySerif;
+  font-family: @bitter;
   font-size: 15px;
   color: #000;
   margin: 1px 2px 0;
@@ -221,7 +217,7 @@ body {
 }
 
 .about-list-title {
-  font-family: @v2FontFamilyBold;
+  font-family: @baseFontFamilyBold;
   font-size: 11px;
   color: #000;
   letter-spacing: 1px;
@@ -241,32 +237,4 @@ body {
 
 .about-list-social {
   float: right;
-}
-
-.about-button {
-  height: 28px;
-  width: 90px;
-  #gradient > .vertical(#a8c179, #78a22f);
-  margin-top: 20px;
-  .border-radius(3px);
-}
-
-.about-button-hover {
-  #gradient > .vertical(#97b85a, #6c912a);
-  .border-radius(3px);
-}
-
-.about-button-text {
-  display: block;
-  font-family: @v2FontFamily;
-  text-decoration: none;
-  font-size: 15px;
-  color: #fff;
-  text-align: center;
-  padding-top: 4px;
-}
-
-.about-button-text:hover {
-  color: white;
-  text-decoration: underline;
 }

@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"bootstrap": "2.3.2",
-		"isotope": "1.5.25"
+		"isotope": "1.5.25",
+		"strapped": "kyungmin/strapped"
 	}
 }

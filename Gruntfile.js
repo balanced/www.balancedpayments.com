@@ -98,9 +98,7 @@ module.exports = function(grunt) {
 					paths: ['static/less']
 				},
 				files: {
-					'contents/static/css/index.css': 'static/less/index.less',
 					'contents/static/css/root.css': 'static/less/root.less',
-					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			},
 
@@ -110,20 +108,24 @@ module.exports = function(grunt) {
 					yuicompress: true
 				},
 				files: {
-					'contents/static/css/index.css': 'static/less/index.less',
 					'contents/static/css/root.css': 'static/less/root.less',
-					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			}
 		},
 
 		copy: {
-			fonts: {
+			strapped: {
 				files: [{
-					cwd: 'static/fonts/',
+					cwd: 'bower/strapped/static/fonts',
 					expand: true,
 					src: ['**'],
 					dest: 'contents/static/css/fonts'
+				},
+				{
+					cwd: 'bower/strapped/static/less',
+					expand: true,
+					src: ['**'],
+					dest: 'static/less/strapped'
 				}]
 			},
 			images: {
