@@ -13,7 +13,7 @@ howItWorks:
   body: Balanced supports all major card brands from Visa and MasterCard to Discover and American Express. Funds are captured in U.S. currency and available for immediate access in your escrow balance.
 
 howItWorksDiagram:
-  header: Once a card is charged, funds are placed in your <a href='https://docs.balancedpayments.com/current/overview#funds-flow'>escrow account</a> (held by Balanced). You may then pay out to your own bank account or use Balanced’s <a href='/payouts'>Payouts solution</a> to pay your U.S. sellers.
+  header: Once a card is charged, funds are placed in your <a href='https://docs.balancedpayments.com/1.1/guides/escrow/'>escrow account</a> (held by Balanced). You may then pay out to your own bank account or use Balanced’s <a href='/payouts'>Payouts solution</a> to pay your U.S. sellers.
   step1: Charge your customer’s debit or credit card
   step2: Funds are available immediately in your escrow balance
   step31: Collect your funds by paying out to your bank account
@@ -21,27 +21,27 @@ howItWorksDiagram:
 
 collectingCardInfo:
   title: Collecting card info
-  body: Charge a card by collecting the card number and expiration date. Information is securely passed through <a href='https://docs.balancedpayments.com/current/#balanced-js'>balanced.js</a>, bypassing your servers and removing your need to become <a href='https://balancedpayments.zendesk.com/hc/en-us/articles/200173030-Do-I-need-to-be-PCI-compliant-'>PCI compliant</a>.
+  body: Charge a card by collecting the card number and expiration date. Information is securely passed through <a href='https://docs.balancedpayments.com/1.1/guides/balanced-js/'>balanced.js</a>, bypassing your servers and removing your need to become <a href='http://support.balancedpayments.com/hc/en-us/articles/200173030-Do-I-need-to-be-PCI-compliant-'>PCI compliant</a>.
   learnLink: View card processing best practices
-  learnLinkHref: https://balancedpayments.zendesk.com/entries/22779335-Verifications-Authorizations-and-Captures-Best-practices
+  learnLinkHref: https://support.balancedpayments.com/hc/en-us/articles/201035880-Verifications-Authorizations-and-Captures-Best-practices
 
 recurringBilling:
   title: Recurring billing
-  body: Balanced’s open-source, recurring payments system, <a href='https://docs.balancedpayments.com/current/#recurring-billing'>Billy</a>, allows you to schedule charges at specific times.
+  body: Balanced’s open-source, recurring payments system, <a href='https://github.com/balanced/billy'>Billy</a>, allows you to schedule charges at specific times.
   learnLink: Learn more about Billy
-  learnLinkHref: https://docs.balancedpayments.com/current/#implementation-patterns
+  learnLinkHref: http://balancedbilly.readthedocs.org/en/latest/index.html
 
 cardAuthorizations:
   title: Card authorizations
   body: Reserve funds on a credit card for up to seven days by issuing a card authorization.
   learnLink: Learn more about authorization use cases such as crowdfunding
-  learnLinkHref: https://docs.balancedpayments.com/current/#holds
+  learnLinkHref: https://docs.balancedpayments.com/1.1/guides/cardholds/
 
 cardStatementDescriptor:
   title: Card statement descriptor
   body: Modify the card statement soft descriptor on a per-transaction basis. Each descriptor begins with BAL* followed by your 18-character-long description.
   learnLink: Learn more about setting the soft descriptor
-  learnLinkHref: https://docs.balancedpayments.com/current/#soft-descriptors
+  learnLinkHref: https://docs.balancedpayments.com/1.1/guides/credits/#bank-statement-descriptor
   limit: "Card statement soft descriptor max. character length: 18"
 
 chargebacksDisputes:
