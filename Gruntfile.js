@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 					cwd: 'bower/strapped/static/fonts',
 					expand: true,
 					src: ['**'],
-					dest: 'contents/static/css/fonts'
+					dest: 'build/static/fonts'
 				},
 				{
 					cwd: 'bower/strapped/static/less',
@@ -387,8 +387,8 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'copy', 'concat', 'uglify', 'less:development']);
+	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'copy', 'verify', 'concat', 'uglify', 'less:production']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.
