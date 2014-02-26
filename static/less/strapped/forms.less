@@ -17,21 +17,28 @@
   line-height: 1em;
   vertical-align: middle;
   box-sizing: initial;
+  border-radius: 0;
+  background: @white;
+
   &:visited {
     color: @black;
+    &:hover {
+      color: @white;
+    }
   }
+
   &:hover {
     background-color: @black;
     color: @white;
     text-decoration: none;
   }
+
   &.danger {
     border-color: @imperialRed100;
     color: @imperialRed100;
     &:hover {
       background-color: @imperialRed100;
       border-color: @imperialRed100;
-      color: @white;
     }
   }
 }

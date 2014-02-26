@@ -44,7 +44,7 @@ body, html {
     background: @contentBackground;
     font-family: @baseFontFamily;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
 
     .container {
         &.container-chunky {
@@ -82,7 +82,7 @@ h3 {
 }
 
 h4 {
-  font-family: @baseFontFamilyBold;
+  font-family: @baseFontFamilySemiBold;
   font-size: 15px;
   font-weight: normal;
   color: #000;
@@ -113,147 +113,6 @@ p {
 
 footer {
   clear: both;
-}
-
-.navbar {
-  margin: 0;
-  position: absolute;
-  right: 0;
-
-  .navbar-inner {
-    padding: 0;
-  }
-  .nav {
-    &.pull-right {
-      .dropdown-menu {
-        padding: 0;
-        a:hover {
-          color: white;
-        }
-      }
-    }
-    &> li {
-      background-color: white;
-      height: 60px;
-      a {
-        font-family: @baseFontFamilyCondensedBold;
-        font-weight: normal;
-        text-shadow: none;
-        font-size: 14px;
-        color: #94969a;
-        border: 0;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 20px;
-        border-left: 1px solid @lineRuleBackground;
-        letter-spacing: 0.1em;
-        height: 21px;
-        &.dropdown-toggle {
-          .caret {
-            border-top-color: #94969a;
-            opacity: 1;
-            margin-left: 0;
-          }
-        }
-      }
-      &:first-child {
-        a {
-          border-left: 0;
-        }
-      }
-      &:hover, &.open {
-        background-color: black;
-        a {
-          color: white;
-        }
-      }
-      &.open {
-        li {
-          a {
-            color: #94969a;
-          }
-        }
-      }
-    }
-  }
-}
-
-.hur {
-  width: @pageWidth;
-  margin: auto;
-  position: relative;
-
-  &> section {
-    margin: 0 auto 80px;
-    float: left;
-    width: @pageWidth;
-    .main {
-      margin-top: 2em;
-      .title {
-        float: left;
-        width: 402px;
-        padding-right: 58px;
-      }
-      .bod {
-        float: left;
-        width: 172px * 3 + @listMargin * 2; // 548px
-        margin-top: 0.75em;
-      }
-    }
-  }
-  ul.threep {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 172px;
-      margin-right: @listMargin;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  ul.fourp {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 125px;
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  ul.twop {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 266px;
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  .sub {
-    p {
-      font-family: 'Droid Serif', serif;
-      font-size: 14px;
-      font-style: italic;
-      margin: .5em 0 1.5em;
-    }
-  }
 }
 
 #heading {
