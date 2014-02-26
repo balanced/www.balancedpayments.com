@@ -114,18 +114,12 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			strapped: {
+			fonts: {
 				files: [{
 					cwd: 'bower/strapped/static/fonts',
 					expand: true,
 					src: ['**'],
 					dest: 'build/static/fonts'
-				},
-				{
-					cwd: 'bower/strapped/static/less',
-					expand: true,
-					src: ['**'],
-					dest: 'static/less/strapped'
 				}]
 			},
 			images: {
