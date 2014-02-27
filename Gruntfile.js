@@ -98,9 +98,7 @@ module.exports = function(grunt) {
 					paths: ['static/less']
 				},
 				files: {
-					'contents/static/css/index.css': 'static/less/index.less',
 					'contents/static/css/root.css': 'static/less/root.less',
-					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			},
 
@@ -110,9 +108,7 @@ module.exports = function(grunt) {
 					yuicompress: true
 				},
 				files: {
-					'contents/static/css/index.css': 'static/less/index.less',
 					'contents/static/css/root.css': 'static/less/root.less',
-					'contents/static/css/about.css': 'static/less/about.less'
 				}
 			}
 		},
@@ -120,10 +116,10 @@ module.exports = function(grunt) {
 		copy: {
 			fonts: {
 				files: [{
-					cwd: 'static/fonts/',
+					cwd: 'bower/strapped/static/fonts',
 					expand: true,
 					src: ['**'],
-					dest: 'contents/static/css/fonts'
+					dest: 'build/static/fonts'
 				}]
 			},
 			images: {
@@ -385,8 +381,8 @@ module.exports = function(grunt) {
 	});
 
 	// Subtasks
-	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'concat', 'uglify', 'less:development', 'copy']);
-	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'verify', 'concat', 'uglify', 'less:production', 'copy']);
+	grunt.registerTask('_builddev', ['clean:all', 'bower:install', 'copy', 'concat', 'uglify', 'less:development']);
+	grunt.registerTask('_buildprod', ['clean:all', 'bower:install', 'copy', 'verify', 'concat', 'uglify', 'less:production']);
 
 	// Uploads to s3. Requires environment variables to be set if the bucket
 	// you're uploading to doesn't have public write access.

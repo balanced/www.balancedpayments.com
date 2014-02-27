@@ -1,20 +1,5 @@
-@import "bootstrap-2.3/mixins.less";
-@import "bootstrap-2.3/variables.less";
-@import "variables.less";
-
-@bodyFont: 'nimbussannov-med', arial, sans-serif;
 @pageWidth: 1008px;
-
 @listMargin: 16px;
-
-// colors
-@pageBackground: #f0efe9;
-@lineRuleBackground: #c2c0b8;
-@diagramBackgroundOne: #c2c0b8;
-@diagramBackgroundTwo: #f0c781;
-@numberBackground: rgba(0, 0, 0, 0.8);
-@balancedGreen: #46692C;
-@balancedGreenHover: #568136;
 
 .underline(@weight: 4px, @lineHeight: 1.3em) {
   border-bottom: @weight solid @lineRuleBackground;
@@ -25,7 +10,7 @@
   text-align: center;
   padding: 20px 0;
   h1 {
-    font-family: @v2FontFamilyBold;
+    font-family: @baseFontFamilySemiBold;
     font-weight: normal;
     font-size: 20px;
     color: #000;
@@ -56,10 +41,10 @@
 }
 
 body, html {
-    background: @pageBackground;
-    font-family: @bodyFont;
+    background: @contentBackground;
+    font-family: @baseFontFamily;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
 
     .container {
         &.container-chunky {
@@ -79,12 +64,8 @@ a {
   }
 }
 
-h1 {
-
-}
-
 h2 {
-  font-family: @v2FontFamilyBold;
+  font-family: @baseFontFamilySemiBold;
   font-size: 20px;
   font-weight: normal;
   color: #000;
@@ -92,16 +73,16 @@ h2 {
 }
 
 h3 {
-  font-family: @v2FontFamilyLight;
+  font-family: @baseFontFamilyReg;
   font-weight: normal;
   font-size: 32px;
   line-height: 38/32;
   color: #4d4d4d;
-  padding-bottom: @v2Margin / 2;
+  padding-bottom: @mainMargin / 2;
 }
 
 h4 {
-  font-family: @v2FontFamilyBold;
+  font-family: @baseFontFamilySemiBold;
   font-size: 15px;
   font-weight: normal;
   color: #000;
@@ -111,14 +92,14 @@ h4 {
 }
 
 p {
-  font-family: @bodyFont;
+  font-family: @baseFontFamily;
   font-size: 15px;
   line-height: 22px;
 
   a {
     font-size: 13px;
     line-height: 15px;
-    font-family: NimbusSanNov-SemBol;
+    font-family: @baseFontFamilySemiBold;
     display: inline-block;
   }
 }
@@ -134,147 +115,6 @@ footer {
   clear: both;
 }
 
-.navbar {
-  margin: 0;
-  position: absolute;
-  right: 0;
-
-  .navbar-inner {
-    padding: 0;
-  }
-  .nav {
-    &.pull-right {
-      .dropdown-menu {
-        padding: 0;
-        a:hover {
-          color: white;
-        }
-      }
-    }
-    &> li {
-      background-color: white;
-      height: 60px;
-      a {
-        font-family: 'NimbusSanNovCon-Bol';
-        font-weight: normal;
-        text-shadow: none;
-        font-size: 14px;
-        color: #94969a;
-        border: 0;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 20px;
-        border-left: 1px solid @lineRuleBackground;
-        letter-spacing: 0.1em;
-        height: 21px;
-        &.dropdown-toggle {
-          .caret {
-            border-top-color: #94969a;
-            opacity: 1;
-            margin-left: 0;
-          }
-        }
-      }
-      &:first-child {
-        a {
-          border-left: 0;
-        }
-      }
-      &:hover, &.open {
-        background-color: black;
-        a {
-          color: white;
-        }
-      }
-      &.open {
-        li {
-          a {
-            color: #94969a;
-          }
-        }
-      }
-    }
-  }
-}
-
-.hur {
-  width: @pageWidth;
-  margin: auto;
-  position: relative;
-
-  &> section {
-    margin: 0 auto 80px;
-    float: left;
-    width: @pageWidth;
-    .main {
-      margin-top: 2em;
-      .title {
-        float: left;
-        width: 402px;
-        padding-right: 58px;
-      }
-      .bod {
-        float: left;
-        width: 172px * 3 + @listMargin * 2; // 548px
-        margin-top: 0.75em;
-      }
-    }
-  }
-  ul.threep {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 172px;
-      margin-right: @listMargin;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  ul.fourp {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 125px;
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  ul.twop {
-    list-style: none;
-    margin: 0;
-    float: left;
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      width: 266px;
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  .sub {
-    p {
-      font-family: 'Droid Serif', serif;
-      font-size: 14px;
-      font-style: italic;
-      margin: .5em 0 1.5em;
-    }
-  }
-}
-
 #heading {
   margin: 20px 0;
 
@@ -285,25 +125,25 @@ footer {
 
 #try-it {
   background-color: white;
-  margin-bottom: @v2Margin;
+  margin-bottom: @mainMargin;
   .letThemKnow();
 }
 
 #intro {
   background-color: white;
-  margin-bottom: @v2Margin;
+  margin-bottom: @mainMargin;
   h1 {
     display: none;
   }
   &>div {
     background: url(/images/homepage_whats_up_now-03.png) 51px 50px no-repeat;
-    background-color: @diagramBackgroundTwo;
+    background-color: @curryYellow40;
     width: 100%;
     min-height: 200px;
     margin: auto;
     padding: 70px 0;
     &>div {
-      padding: @v2Margin;
+      padding: @mainMargin;
       float: left;
       width: 300px;
       text-align: center;
@@ -330,7 +170,7 @@ footer {
 
 #customers {
   background: #fff;
-  padding: @v2Margin 0;
+  padding: @mainMargin 0;
   ul {
     margin: 0;
     padding: 0 0 0 60px;
@@ -467,7 +307,7 @@ footer {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
     a {
-      font-family: @v2FontFamilyBold;
+      font-family: @baseFontFamilyBold;
       font-weight: normal;
       font-size: 20px;
       &:before {
@@ -477,7 +317,7 @@ footer {
         height: 36px;
         background: url(/images/homepage_client_library_logos-03.png) -@clientWidth * 9 0 no-repeat;
         vertical-align: middle;
-        margin-right: @v2Margin / 2; //        opacity: 0.55;
+        margin-right: @mainMargin / 2; //        opacity: 0.55;
       }
       &:hover {
         &:before {
@@ -534,13 +374,13 @@ footer {
   .tutorials {
     li {
       a {
-        font-family: @bodyFont;
+        font-family: @baseFontFamily;
         font-size: 14px;
       }
     }
     &+h4 {
       border-bottom: 0;
-      margin: @v2Margin 0;
+      margin: @mainMargin 0;
       float: left;
       width: 100%;
       padding: 0;
@@ -551,10 +391,10 @@ footer {
 
 #pricing {
   h4 {
-    padding: @v2Margin 0 0;
+    padding: @mainMargin 0 0;
     margin: 0;
     span {
-      font-family: @v2FontFamily;
+      font-family: @baseFontFamily;
       font-size: 13px;
     }
   }
@@ -600,7 +440,7 @@ footer {
 }
 
 #go {
-  background-color: @diagramBackgroundTwo;
+  background-color: @curryYellow40;
   .letThemKnow();
   margin-bottom: 25px;
 }

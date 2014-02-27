@@ -1,14 +1,12 @@
 {% extends 'layout.html' %}
 
-{% set stylesheets = ['/static/css/index.css'] %}
-
 {% block body %}
 <div class="bg-default">
     <div class="hur">
 
         <section id="try-it" class="box">
             <h1>{{ page.metadata.try_out.heading }}</h1>
-            <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.try_out.link }}</a>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn">{{ page.metadata.try_out.link }}</a>
         </section>
 
         <section id="intro">
@@ -135,7 +133,7 @@
 
         <section id="go" class="box">
             <h1>{{ page.metadata.bottom.heading }}</h1>
-            <a href="https://dashboard.balancedpayments.com/#/start" class="btn btn-bal">{{ page.metadata.bottom.link }}</a>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn">{{ page.metadata.bottom.link }}</a>
         </section>
 
     </div>

@@ -1,29 +1,13 @@
 @import "bootstrap-2.3/bootstrap.less";
-@import "variables.less";
-@import "variables-v3.less";
-@import "balanced-icons.less";
+@import "bower/strapped/static/less/strapped.less";
+
+@footerLinkColor: @gray3;
+
+body {
+  width: 100%;
+}
 
 // our grid is 24 columns - total 1065px
-@gridColumns: 24;
-@gridColumnWidth: 30px;
-@gridGutterWidth: 15px;
-
-.cssicon(@url, @width, @height, @display: inline-block) {
-  background: @url;
-  width: @width;
-  height: @height;
-  text-indent: -4000px;
-  display: @display;
-}
-
-a {
-  color: @linkBlue;
-  &:hover {
-    color: @black;
-    text-decoration: none;
-  }
-}
-
 .standard-font-props {
   font-weight: normal;
   text-transform: inherit;
@@ -163,7 +147,7 @@ a {
 }
 
 body, html {
-  background: @pageBackground;
+  background: @contentBackground;
 }
 
 header {
@@ -290,7 +274,7 @@ header {
     }
 
     a {
-        color: @gray4;
+        color: @gray3;
 
         &:hover {
             color: @white;
@@ -385,7 +369,7 @@ header {
 
 .sidebar-menu {
   padding-top: 20px;
-  border-top: 1px solid @layoutLineRuleBackground;
+  border-top: 1px solid @gray3;
   ul {
     margin-left: 20px;
     li a {
@@ -402,7 +386,7 @@ header {
   h1 {
     .header2;
     margin: 0;
-    border-top: 1px solid @layoutLineRuleBackground;
+    border-top: 1px solid @gray3;
     padding-top: 50px;
   }
 }
@@ -469,6 +453,8 @@ header {
   display: none;
 }
 
+@import "index.less";
+@import "about.less";
 @import "ach-debits.less";
 @import "pricing.less";
 @import "customers.less";

@@ -79,15 +79,16 @@ body.layout-v4 {
             margin: 0px;
 
             li {
-                border-bottom: 1px solid @gray6;
+                border-bottom: 1px solid @gray8;
                 text-align: right;
                 text-transform: uppercase;
                 font-family: NimbusSanNovCon-Med, arial, sans-serif;
                 letter-spacing: 0.1em;
                 font-size: 14px;
+                line-height: 20px;
 
                 &:first-of-type {
-                    border-top: 1px solid @gray5;
+                    border-top: 1px solid @gray7;
                 }
 
                 &.try-dashboard {
@@ -538,8 +539,8 @@ body.layout-v4 {
         margin-top: 0px;
         .border-radius(0);
         background: @white;
-        border: 1px solid @skyBlue;
-        color: @skyBlue;
+        border: 1px solid @persianBlue100;
+        color: @persianBlue100;
         .opacity(100);
         width: 48px;
         height: 48px;
@@ -660,35 +661,3 @@ body.layout-v4 {
 .border-top {
     border-top: 1px solid @gray3;
 }
-
-.btn {
-    .button-text2;
-    .box-shadow(none);
-
-    border: 5px solid @black;
-    background: @white;
-    border-color: @black;
-    border-radius: 0;
-    vertical-align: middle;
-    color: @black;
-    text-decoration: none;
-    padding: 11px 19px;
-    text-shadow: none;
-    font-weight: normal;
-    letter-spacing: 0.1em;
-    font-size: 24px;
-
-    &:hover {
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-repeat: no-repeat;
-      filter: none;
-      background-color: @black;
-      border-color: @black;
-      color: @white;
-    }
-  }
