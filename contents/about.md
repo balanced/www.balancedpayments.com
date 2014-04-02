@@ -149,6 +149,11 @@ team:
       desc: señor js developer
       link: https://github.com/cohitre
       site: github
+    - name: richie serna
+      job: engineer
+      desc: former biz dev who went full dev 
+      link: https://github.com/rserna2010
+      site: github
 
 backers:
   heading: backers
