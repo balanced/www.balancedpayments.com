@@ -166,51 +166,58 @@ footer {
   }
 }
 
-@customerWidth: 136px;
+@customerWidth: 150px;
 
 #customers {
   background: #fff;
   padding: @mainMargin 0;
   ul {
     margin: 0;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 40px;
     display: inline-block;
     li {
       margin: 0;
-      padding: 0 50px 0 0;
+      padding: 0;
       display: inline-block;
       a {
-        background: url(/images/homepage_customer_logos-04.png);
+        background: url(/images/homepage_customer_logos.png);
+        background-size: cover;
         display: inline-block;
         width: @customerWidth;
         height: 38px;
         text-indent: -4000px;
         vertical-align: middle;
         opacity: 0.6;
+
         &:hover {
           opacity: 1.0;
         }
       }
       &.redditgifts {
       }
-      &.thefancy {
+      &.tradesy {
         a {
           background-position: -@customerWidth * 1 0;
         }
       }
-      &.groupme {
+      &.crowdtilt {
         a {
           background-position: -@customerWidth * 2 0;
         }
       }
-      &.vungle {
+      &.kindrid {
         a {
           background-position: -@customerWidth * 3 0;
         }
       }
-      &.visually {
+      &.relayrides {
         a {
           background-position: -@customerWidth * 4 0;
+        }
+      }
+      &.artsy {
+        a {
+          background-position: -@customerWidth * 5 0;
         }
       }
       &:last-child {
