@@ -18,15 +18,16 @@ intro:
 customers:
   - name: RedditGifts
     url: http://redditgifts.com
-  - name: TheFancy
-    url: http://fancy.com
-  - name: Groupme
-    url: https://groupme.com
-  - name: Vungle
-    url: http://www.vungle.com
-  - name: Visual.ly
-    url: http://visual.ly/
-    class: visually
+  - name: Tradesy
+    url: http://tradesy.com
+  - name: Crowdtilt
+    url: https://www.crowdtilt.com
+  - name: Kindrid
+    url: https://kindrid.com
+  - name: Relayrides
+    url: https://relayrides.com
+  - name: Artsy
+    url: https://artsy.net
 
 # These are the 3 column section that are reasonable generic with their format
 Sections:
