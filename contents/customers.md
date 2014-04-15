@@ -321,10 +321,10 @@ customer_wall:
     classes: crowdfunding
     description: Organize and collect money from friends and family for anything you dream of doing
     link: http://paybygroup.com/
-  - id: microryza
+  - id: experiment
     classes: crowdfunding
     description: Follow and fund scientific research
-    link: https://www.microryza.com/
+    link: https://www.experiment.com/
   - id: dragoninnovation
     classes: crowdfunding
     description: Helping makers bring tomorrow's products to life
