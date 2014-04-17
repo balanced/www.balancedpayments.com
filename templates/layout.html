@@ -4,7 +4,6 @@
 <body class="layout-v4 {{ page.metadata.body_class }}">
     {%- include 'partials/sidebar-hidden.html' -%}
     <div class="global-wrapper">
-        {%- include 'partials/sidebar.html' -%}
         <div class="page-wrapper">
             {%- include 'partials/page-header.html' -%}
             <div class="pjax-container">{% block body %}{% endblock %}</div>

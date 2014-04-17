@@ -7,23 +7,9 @@
 				e.preventDefault();
 
 				$("body, html").css("overflow-x", "hidden");
-
-				$(".sidebar-menu-left ul li").removeClass("active");
-				$(this).parent("li").addClass("active");
-
-				var target = $(this).parent("li").attr("data-show");
-
-				$(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
-				$("#" + target).css("display", "block");
-				$(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
-			});
-
-			$(".close-child-menu-left a").click(function(e) {
-				e.preventDefault();
-
-				$("body, html").css("overflow-x", "visible");
-				$(".sidebar-menu-left ul li").removeClass("active");
-				$(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
+				$(".sidebar-child-menu-left ul").not("#sidebar-child-menu-left-product").css("display", "none");
+				$("#sidebar-child-menu-left-product").css("display", "block");
+				$(".global-wrapper, .sidebar-child-menu-left").toggleClass("expanded");
 			});
 
 			var $menu = $('#menu'),
@@ -340,6 +326,23 @@
 			$(".calculator form input").on('input', function() {
 				calculateEstimatedRates();
 			});
+		},
+		international: function() {
+			resizeImage();
+
+			$(window).resize(function() {
+				resizeImage();
+			});
+
+			function resizeImage() {
+				$windowWidth = $(window).width();
+				if ($windowWidth > 960) {
+					$(".background-image").css("background-size", $windowWidth);
+				} else {
+					$(".background-image").css("background-size", "auto 510px");
+				}
+				
+			}
 		}
 	};
 }(window));

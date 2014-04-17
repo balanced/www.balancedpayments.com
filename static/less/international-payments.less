@@ -1,0 +1,110 @@
+.international-payments {
+  .page-header {
+		width: 100%;
+		min-width: 660px;
+		margin-top: -90px;
+		padding: 8% 0;
+		height: 510px;
+		position: relative;
+		
+		.title-image {
+			background: url(/images/international/header_international.png);
+			background-size: contain;
+			width: 330px;
+			height: 330px;
+			margin: 0 auto;
+		}
+
+		.background-image {
+			min-width: 100%;
+			min-height: 100%;
+			background: url(/images/international/forex_bg.png) no-repeat top center fixed;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	.tag {
+		.sl-sm-sb;
+		float: left;
+		color: @white;
+		background-image: url(/images/international/launch_tag.png);
+		background-size: contain;
+		width: 75px;
+		height: 143px;
+		text-align: center;
+
+		div {
+			padding: 10px;
+
+			&:first-of-type {
+				border-bottom: 1px solid @white;	
+			}
+		}
+
+		.title {
+			text-transform: uppercase;
+		}
+
+		.day {
+			.sl-44-sb;
+			line-height: initial;
+			color: @white;
+		}
+	}
+
+	.forex-map {
+		background: url(/images/international/forex_map.jpg);
+		background-size: contain;
+		width: 840px;
+		height: 560px;
+		position: relative;
+
+		.pin {
+			width: 86px;
+			height: 133px;
+			background-size: contain;
+			position: absolute;
+		}
+
+		.animate-brl {
+			background-image: url(/images/international/animate_brl.png);
+			top: 285px;
+			left: 150px;
+		}
+
+		.animate-cad {
+			background-image: url(/images/international/animate_cad.png);
+			top: 45px;
+			left: 60px;
+		}
+
+		.animate-eur {
+			background-image: url(/images/international/animate_eur.png);
+			top: 45px;
+			left: 325px;
+		}
+
+		.forex-map-sidebar {
+			position: absolute;
+			right: 0;
+			width: 300px;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.6);
+			padding: 44px;
+
+			.currency-conversion {
+				background: url(/images/international/currency_conversion.png);
+				background-size: contain;
+				width: 210px;
+				height: 220px;
+				margin: 44px auto 0;
+			}
+		}
+	}
+}

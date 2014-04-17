@@ -1,21 +1,11 @@
 body.layout-v4 {
+    .sl;
     position: relative;
     background: none;
-    font-family: NimbusSanNov-Med, arial, sans-serif;
-    font-size: 15px;
 
     a:visited, a:focus {
         text-decoration: none;
         outline: none;
-    }
-
-    .page-wrapper {
-        padding-left: 90px;
-    }
-
-    .container {
-        width: 930px;
-        padding-left: 90px;
     }
 
     .global-wrapper {
@@ -79,13 +69,11 @@ body.layout-v4 {
             margin: 0px;
 
             li {
+                .sl-sb;
                 border-bottom: 1px solid @gray8;
                 text-align: right;
                 text-transform: uppercase;
-                font-family: NimbusSanNovCon-Med, arial, sans-serif;
                 letter-spacing: 0.1em;
-                font-size: 14px;
-                line-height: 20px;
 
                 &:first-of-type {
                     border-top: 1px solid @gray7;
@@ -169,59 +157,7 @@ body.layout-v4 {
         }
     }
 
-    .sidebar-child-menu-left {
-        position: fixed;
-        left: -200px;
-        top: 0;
-        height: 100%;
-        width: 200px;
-        padding: 0px;
-        z-index: 9999;
-        background-color: @gray6;
-        .transition(left .3s ease-in-out);
-
-        &.expanded {
-            left: 0;
-        }
-
-        ul {
-            margin-top: 70px;
-            padding: 0px;
-            margin-left: 25px;
-            list-style-type: none;
-
-            li {
-                font-family: NimbusSanNov-reg, arial, sans-serif;
-                font-size: 15px;
-                padding: 0px;
-
-                a {
-                    color: @gray3;
-                    cursor: pointer;
-                    padding: 10px 0px 10px 0px;
-                    display: block;
-
-                    &:hover {
-                        color: @white;
-                    }
-                }
-            }
-        }
-    }
-
-    header {
-        .logo {
-            img {
-                margin: 17px 0px 15px 0px;
-            }
-        }
-
-        #site-nav {
-            float: right;
-        }
-    }
-
-    section {
+   section {
         margin: 0px;
 
         .box-pad-top {
@@ -250,10 +186,8 @@ body.layout-v4 {
         }
 
         .section-side-link {
+            .sl-sb;
             margin-top: 15px;
-            font-size: 13px;
-            line-height: 16px;
-            font-family: NimbusSanNov-SemBol, arial, sans-serif;
         }
 
         .spacer {
@@ -265,7 +199,6 @@ body.layout-v4 {
         .content {
             margin-left: 0px;
             margin-bottom: 100px;
-            padding-top: 50px;
         }
 
         .content-gold {
@@ -353,10 +286,9 @@ body.layout-v4 {
                     }
 
                     h1 {
-                        font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-                        margin: 0px;
+                        .sl-lg-b;
                         color: @gray5;
-                        font-size: 28px;
+                        margin: 0px;
                     }
                 }
             }

@@ -81,19 +81,14 @@ body {
 }
 
 .body1 {
+  .sl-44;
   .standard-font-props;
-
-  font-family: nimbussannov-reg, arial, sans-serif;
-  font-size: 44px;
   color: @gray6;
-  line-height: 52px;
 }
 
 .body2 {
+  .sl-md;
   .standard-font-props;
-
-  font-family: nimbussannov-med, arial, sans-serif;
-  font-size: 15px;
   color: @gray5;
 }
 
@@ -146,17 +141,54 @@ body {
   color: @black;
 }
 
-body, html {
-  background: @contentBackground;
+header {
+    .logo {
+        img {
+            width: 130px;
+        }
+    }
+
+    #site-nav {
+        float: right;
+    }
 }
 
-header {
-  .logo {
-    img {
-      margin: 50px 0 0 16px;
-      width: 130px;
+.sidebar-child-menu-left {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    padding: 0px;
+    z-index: 9999;
+    background-color: @gray9;
+    .transition(left .3s ease-in-out);
+
+    &.expanded {
+        left: 0;
     }
-  }
+
+    ul {
+        padding: 0px;
+        margin: 25px;
+        list-style-type: none;
+
+        li {
+            .sl;
+            padding: 0px;
+
+            a {
+                color: @gray3;
+                cursor: pointer;
+                padding: 10px 0px 10px 0px;
+                display: block;
+
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
+    }
 }
 
 @media screen {
@@ -382,6 +414,35 @@ header {
   }
 }
 
+
+.page-header {
+  width: 100%;
+  min-width: 660px;
+  margin-top: -90px;
+  padding: 8% 0;
+  height: 335px;
+  position: relative;
+  
+  .title-image {
+    background-size: contain;
+    width: 330px;
+    height: 330px;
+    margin: 0 auto;
+  }
+
+  .background-image {
+    min-width: 100%;
+    min-height: 100%;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
 .page-title {
   h1 {
     .header2;
@@ -392,10 +453,14 @@ header {
 }
 
 .page-subtitle {
+  .sl-44-lt;
   margin-top: 15px;
   margin-bottom: 40px;
-  .body1;
-  color: @gray6;
+}
+
+.page-summary {
+  .sl-20-i;
+  color: @gray6;  
 }
 
 .legal {
@@ -458,6 +523,7 @@ header {
 @import "ach-debits.less";
 @import "pricing.less";
 @import "customers.less";
+@import "international-payments.less";
 @import "open.less";
 @import "payouts.less";
 @import "card-processing.less";

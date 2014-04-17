@@ -19,19 +19,16 @@
     padding-right: 20px;
   }
   .btn {
+    .sl-20-b;
     border: 3px solid #000;
     background: white;
     border-radius: 0;
     vertical-align: middle;
-    color: @black;
     text-decoration: none;
     height: auto;
     padding: 8px 16px;
     text-shadow: none;
-    font-size: 20px;
     letter-spacing: 0.1em;
-    font-family: 'NimbusSanNovCon-Bol';
-    font-weight: normal;
     &:hover {
       color: #fff;
       background-color: #000;
@@ -41,27 +38,12 @@
 }
 
 body, html {
-    background: @contentBackground;
-    font-family: @baseFontFamily;
-    font-size: 15px;
-    line-height: 20px;
-
     .container {
         &.container-chunky {
             width: 1008px;
             margin-bottom: 10px;
         }
     }
-}
-
-a {
-  color: #0096af;
-  text-decoration: none;
-
-  &:hover {
-    color: #000;
-    text-decoration: none;
-  }
 }
 
 h2 {
@@ -458,17 +440,39 @@ footer {
   }
 }
 
-body.layout-v4.larger {
+body.layout-v4 {
   .container {
     width: 1008px;
     padding-left: 0;
   }
+
   .site-header {
-    > .span19 {
-      width: 1008px;
+    z-index: 1;
+    height: 90px;
+
+    .header-menu {
+      z-index: 2;
+      position: absolute;
+      left: 100px;
+      top: 30px;
+
+      a {
+        color: @white;
+        margin-right: 20px;
+
+        &.toggle-child-menu {
+          cursor: pointer;
+        }
+        
+        .icon-menu {
+          margin: 0 10px;
+        }
+      }
     }
-  }
-  .site-nav {
-    float: right;
+
+    .logo {
+      position: absolute;
+      left: 50%;
+    }    
   }
 }

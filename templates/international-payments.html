@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="bg-default">
+    <section class="page-header xlarge-bottom-margin">
+        <div class="background-image"></div>
+        <div class="title-image"></div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <div class="row large-bottom-margin">
+                    <div class="page-subtitle clearfix">
+                        <div class="span17">
+                            <span>{{ page.metadata.subtitle.heading }}</span>
+                        </div>
+                    </div>
+                    <div class="span19">
+                        <div class="tag">
+                            <div>
+                                <span class="title">{{page.metadata.launch.title}}</span>
+                            </div>
+                            <div>
+                                <span class="month">{{page.metadata.launch.month}}</span>
+                                <span class="day">{{page.metadata.launch.day}}</span>
+                            </div>
+                        </div>
+                        <div class="span17 pull-right">
+                            <p class="page-summary">
+                                {{ page.metadata.what.bodyText }}
+                            </p>
+                            <p>
+                                <a href="{{ page.metadata.what.linkUrl }}">{{ page.metadata.what.linkText }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row span19">
+                    <div class="row large-bottom-margin">
+                        <div class="forex-map">
+                            <div class="pin animate-brl"></div>
+                            <div class="pin animate-cad"></div>
+                            <div class="pin animate-eur"></div>
+
+                            <div class="forex-map-sidebar">
+                                {{page.metadata.forexMapText}}
+                                <div class="currency-conversion"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section>
+                        <div class="section-bg content clearfix">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper span12">
+                                    <span>{{page.metadata.benefitOne.title}}</span>
+                                    <p>{{page.metadata.benefitOne.body}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-bg content clearfix">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper span12">
+                                    <span>{{page.metadata.benefitTwo.title}}</span>
+                                    <p>{{page.metadata.benefitTwo.body}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-bg content clearfix">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper span12">
+                                    <span>{{page.metadata.benefitThree.title}}</span>
+                                    <p>{{page.metadata.benefitThree.body}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-bg content clearfix">
+                            <div class="section-title section-title-no-width">
+                                <div class="title-wrapper span12">
+                                    <span>{{page.metadata.pricing.title}}</span>
+                                    <p>{{page.metadata.pricing.body}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/customer-lib.min.js"></script>
+<script type="text/javascript">$(balanced.international)</script>
+{% endblock %}

@@ -1,27 +1,12 @@
 <div class="bg-default hidden-responsive">
     <div class="container">
-        <div class="row">
-            <header class="site-header">
-                <div class="span19">
-                    <div class="span6 no-margin-left">
-                        <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
-                    </div>
-                    <div class="site-nav span13">
-                        <div class="nav-menu-wrapper">
-                            <div id="docs-menu">
-                                <a href="https://docs.balancedpayments.com">Docs</a>
-                            </div>
-                            <div id="help-menu">
-                                <a href="https://support.balancedpayments.com">Help</a>
-                            </div>
-                            <div id="login-menu">
-                                <a href="https://dashboard.balancedpayments.com">Sign in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </div>
+        <nav class="site-header" role="navigation">
+            <div class="header-menu">
+                <a class="toggle-child-menu" data-show="sidebar-child-menu-left-product"><i class="icon icon-menu"></i>Menu</a>
+                <a href="https://dashboard.balancedpayments.com/">Login</a>
+            </div>
+            <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
+        </nav>
     </div>
 </div>
 
@@ -54,7 +39,7 @@
                                     <a href="https://docs.balancedpayments.com/current/overview#holds">Authorization Holds</a>
                                 </li>
                                 <li>
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200135940">International</a>
+                                    <a href="{{env.helpers.link('/international-payments')}}">International Payments</a>
                                 </li>
                                 <li>
                                     <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910">Chargebacks</a>
