@@ -1,28 +1,14 @@
 body.open-company {
-    font-family: NimbusSanNov-Med, arial, sans-serif;
-
     .community, .support, .octotales-video {
         .spacer {
             border-top: 0px;
         }
     }
-
-    header {
-        .page-title {
-            h1 {
-                border-top: 1px solid #ffffff;
-            }
-        }
-    }
-
     section {
         &.feature-image {
             position: relative;
             width: 100%;
-            padding: 22% 0px 22% 0px;
-            margin: 0px;
-            border: 0px;
-            height: 219px;
+            padding: 22% 0;
 
             &.open {
                 background: url(/images/open-company/open_company_bg_1.jpg) no-repeat 0 0px fixed;
@@ -43,7 +29,7 @@ body.open-company {
             }
 
             &.passion {
-                background: url(/images/open-company/open_company_bg_3.jpg) no-repeat 60px 0 fixed;
+                background: url(/images/open-company/open_company_bg_3.jpg) no-repeat 0 0 fixed;
                 background-size: cover;
             }
 
@@ -53,11 +39,7 @@ body.open-company {
             }
 
             h1 {
-                font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-                font-weight: normal;
-                font-style: normal;
-                font-size: 75px;
-                line-height: 75px;
+                .sl-44-b;
                 letter-spacing: 0.1em;
                 color: @white;
                 text-align: center;
@@ -67,11 +49,7 @@ body.open-company {
             }
 
             p {
-                font-family: 'Droid Serif', serif;
-                font-weight: normal;
-                font-style: italic;
-                font-size: 18px;
-                line-height: 20px;
+                .sl-24-i;
                 color: @white;
                 text-align: center;
                 padding: 10px 0px 10px 0px;
@@ -82,7 +60,7 @@ body.open-company {
                     border-bottom: 1px solid @white;
 
                     .diamond {
-                        top: 35px;
+                        top: 47px;
                     }
                 }
 
@@ -166,11 +144,9 @@ body.open-company {
 
                 h1, h3 {
                     color: @gray7;
-                    text-transform: uppercase;
                     text-align: center;
                     font-weight: normal;
                     font-style: normal;
-                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
                 }
 
                 h1 {
@@ -181,7 +157,6 @@ body.open-company {
                 h3 {
                     font-size: 18px;
                     line-height: 20px;
-                    letter-spacing: 0.1em;
                     margin-top: 0px;
                 }
             }
@@ -210,10 +185,7 @@ body.open-company {
                             }
 
                             p {
-                                font-family: 'Droid Serif', serif;
-                                font-style: italic;
-                                font-weight: normal;
-                                font-size: 11px;
+                                .sl-sm;
                                 color: @gray6;
                                 margin-bottom: 0px;
                             }
@@ -238,24 +210,14 @@ body.open-company {
             }
 
             .repos {
-                padding: 0px 45px 0px 45px;
+                background: @gray1;
 
                 .head, .foot {
                     p {
                         margin-bottom: 5px;
 
-                        &.project {
-                            font-family: NimbusSanNovCon-Med, arial, sans-serif;
-                            font-size: 12px;
-                            letter-spacing: 0.1em;
-                            color: @black;
-                        }
-
-                        &.view-all {
-                            color: @black;
-                            font-weight: normal;
-                            font-size: 12px;
-                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                        &.project, &.view-all {
+                            .sl-sm-sb;
                         }
                     }
                 }
@@ -284,8 +246,7 @@ body.open-company {
                         margin-bottom: 0px;
 
                         &.name {
-                            font-size: 15px;
-                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                            .sl-md-sb;
                             margin-bottom: 5px;
                         }
 
@@ -295,15 +256,13 @@ body.open-company {
                         }
 
                         &.lang {
-                            color: @black;
-                            font-weight: normal;
-                            font-size: 12px;
-                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                            .sl-sm-sb;
+                            color: @gray7;
                         }
 
                         &.stars {
-                            line-height: 14px;
-                            color: @curryYellow60;
+                            .sl-lg-sb;
+                            color: @curryYellow100;
 
                             i {
                                 vertical-align: inherit !important;
@@ -355,9 +314,6 @@ body.open-company {
             .gray-bar {
                 background-color: @gray7;
                 padding: 15px 0px 15px 0px;
-                font-family: NimbusSanNovCon-Med, arial, sans-serif;
-                letter-spacing: 0.1em;
-
 
                 p {
                     font-size: 12px;
@@ -415,7 +371,7 @@ body.open-company {
 
             .gray-box {
                 padding: 15px;
-                background-color: @gray3;
+                background-color: @gray2;
                 color: @black;
                 position: relative;
                 margin-top: 20px;
@@ -427,16 +383,16 @@ body.open-company {
                     height: 0px;
                     border-style: solid;
                     border-width: 0 10px 10px 10px;
-                    border-color: transparent transparent @gray3 transparent;
+                    border-color: transparent transparent @gray2 transparent;
                     position: absolute;
                     top: -10px;
                 }
 
                 &:hover {
-                    background-color: @gray2;
+                    background-color: @gray1;
 
                     &:before {
-                        border-color: transparent transparent @gray2 transparent;
+                        border-color: transparent transparent @gray1 transparent;
                     }
                 }
 
@@ -471,9 +427,7 @@ body.open-company {
                     border-top: 1px solid @gray4;
 
                     p {
-                        font-family: NimbusSanNov-SemBol, arial, sans-serif;
-                        font-size: 15px;
-                        line-height: 18px;
+                        .sl-sb;
                     }
                 }
             }

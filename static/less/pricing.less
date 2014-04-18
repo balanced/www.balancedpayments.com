@@ -9,26 +9,8 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
     @sectionTitleLineWidth: 5px;
     @sectionTitlePadding: 8px;
 
-    .section-title {
-      width: 270px;
-
-      .title-wrapper {
-        margin-top: @sectionTitleLineWidth + 5;
-        margin-left: 0;
-        span {
-          .header2;
-          border-top: @sectionTitleLineWidth solid @black;
-          padding-top: @sectionTitlePadding;
-        }
-
-        p {
-          margin-top: 20px;
-          margin-right: 20px;
-          .body2;
-        }
-      }
-    }
     .rate-panels {
+      box-sizing: content-box;
       margin-left: 0;
 
       .rate-panel {
@@ -36,7 +18,8 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
           margin: 20px 0 0 20px;
 
           span {
-            .header4;
+            .sl;
+            color: @gray5;
           }
 
           .rate-image {
@@ -77,7 +60,7 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
 
       .bot-mid-rate-panel {
         width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
-        border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+        border-top: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
         border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
       }
     }
@@ -312,8 +295,7 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
 
   .calculator {
     .calc-title {
-      .header7;
-      text-transform: uppercase;
+      .sl-sm-sb;
     }
     .bg {
       background-color: @white;
@@ -328,10 +310,10 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
         height: 60px;
 
         .control-label {
+          .sl;
           padding-top: 20px;
           width: 300px;
           text-align: left;
-          .body2;
         }
 
         .control-label:after {
@@ -344,11 +326,12 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
         }
 
         input {
+          .sl-32-b;
+          color: @gray4;
           float: right;
           width: 160px;
           height: 40px;
           text-align: right;
-          .header5d;
           background-color: @gray1;
           padding-right: 10px;
           border: none;
@@ -358,7 +341,8 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
         }
 
         .currency-prepend {
-          .header5d;
+          .sl-32-b;
+          color: @gray4;
           float: right;
           margin: 10px 10px 0 0;
         }
@@ -371,7 +355,7 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
           .effective-rate-value {
             padding-top: 10px;
             float: right;
-            .header5d;
+            .sl-32-b;
             color: @pineGreen100;
           }
         }

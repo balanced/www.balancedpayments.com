@@ -7,22 +7,22 @@ body_class: open-company
 
 openCompany:
   topText: embracing an
-  mainText: OPEN COMPANY
+  mainText: Open Company
   bottomText: philosophy at Balanced
 
 innovation:
   topText: drives
-  mainText: INNOVATION
+  mainText: Innovation
   bottomText: and purpose
 
 passion:
   topText: builds
-  mainText: PASSION
+  mainText: Passion
   bottomText: in the community
 
 commitment:
   topText: and strengthens our
-  mainText: COMMITMENT
+  mainText: Commitment
   bottomText: to drive global commerce
 
 whyBeAnOpenCompany:
@@ -90,13 +90,13 @@ openSourceContributions:
   bodyHeader: Balanced has open sourced many of<br />its development projects with amazing contributions from the community.<br />Want to help? Click on a project below<br />to contribute.
 
 github:
-  contributors: CONTRIBUTORS
-  publicRepos: PUBLIC REPOS
-  project: PROJECT
+  contributors: contributors
+  publicRepos: public repos
+  project: Product
   viewAll: View all projects on Github
 
 tryTheDashboard:
   body: Get started today.
-  button: TRY THE DASHBOARD
+  button: Try the dashboard
 
 ---

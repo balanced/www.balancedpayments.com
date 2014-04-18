@@ -3,14 +3,18 @@
 {% block body %}
 <div class="bg-default">
     <div class="hur">
-
-        <section id="try-it" class="box">
-            <h1>{{ page.metadata.try_out.heading }}</h1>
-            <a href="https://dashboard.balancedpayments.com/#/start" class="btn">{{ page.metadata.try_out.link }}</a>
-        </section>
+        <div class="row">
+            <div class="center">
+                <img class="homepage-logo" src="images/homepage_logo-01-2x.png" width="145px">
+            </div>
+            <div id="try-it" class="box">
+                <h1>{{ page.metadata.try_out.heading }}</h1>
+                <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{ page.metadata.try_out.link }}</a>
+            </div>
+        </div>
 
         <section id="intro">
-            <div>
+            <div class="clearfix">
                 {% for intro in page.metadata.intro %}
                 <div>
                     <h1>{{ intro.heading }}</h1>
@@ -133,7 +137,7 @@
 
         <section id="go" class="box">
             <h1>{{ page.metadata.bottom.heading }}</h1>
-            <a href="https://dashboard.balancedpayments.com/#/start" class="btn">{{ page.metadata.bottom.link }}</a>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{ page.metadata.bottom.link }}</a>
         </section>
 
     </div>

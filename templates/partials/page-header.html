@@ -2,10 +2,11 @@
     <div class="container">
         <nav class="site-header" role="navigation">
             <div class="header-menu">
-                <a class="toggle-child-menu" data-show="sidebar-child-menu-left-product"><i class="icon icon-menu"></i>Menu</a>
+                <a class="toggle-child-menu hamburger" data-show="sidebar-child-menu-left-product"><i class="icon icon-menu"></i></a>
+                <a class="toggle-child-menu" data-show="sidebar-child-menu-left-product">Menu</a>
                 <a href="https://dashboard.balancedpayments.com/">Login</a>
             </div>
-            <a href="/" class="logo"><img src="/images/homepage_logo-01-2x.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
+            <a href="/" class="logo"><img src="/images/logo_3dots.png" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
         </nav>
     </div>
 </div>
@@ -21,7 +22,7 @@
 
                 <nav id="menu" class="menu">
                     <ul>
-                        <li class="has-submenu"><a href="#">PRODUCT</a>
+                        <li class="has-submenu"><a href="#">Product</a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="{{env.helpers.link('/card-processing')}}">Card Processing</a>
@@ -58,9 +59,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="{{env.helpers.link('/pricing')}}">PRICING</a></li>
-                        <li><a href="{{env.helpers.link('/customers')}}">CUSTOMERS</a></li>
-                        <li class="has-submenu"><a href="#">ABOUT</a>
+                        <li><a href="{{env.helpers.link('/pricing')}}">Pricing</a></li>
+                        <li><a href="{{env.helpers.link('/customers')}}">Customers</a></li>
+                        <li class="has-submenu"><a href="#">About</a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="{{env.helpers.link('/about')}}">About</a>

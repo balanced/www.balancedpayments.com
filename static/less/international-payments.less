@@ -1,8 +1,13 @@
 .international-payments {
-  .page-header {
+	.site-header {
+		a {
+			color: @white !important;
+		}
+	}
+	.page-header {
 		width: 100%;
 		min-width: 660px;
-		margin-top: -90px;
+		margin-top: -55px;
 		padding: 8% 0;
 		height: 510px;
 		position: relative;
@@ -29,6 +34,36 @@
 		}
 	}
 
+	.timeline {
+		> div {
+			border-left: 1px solid @gray2;
+			border-bottom: 1px solid @gray2;
+			padding: 10px;
+			margin: 0;
+		}
+
+		.step {
+			.sl-44-sb;
+			line-height: 44px;
+			margin-left: 3px;
+			margin-right: 13px;
+			float: left;
+		}
+
+		.title {
+			.sl-md-sb;
+
+			&.current {
+				color: @pineGreen80;
+			}
+		}
+
+		.phase {
+			.sl;
+			color: @gray5;
+		}
+	}
+
 	.tag {
 		.sl-sm-sb;
 		float: left;
@@ -43,12 +78,14 @@
 			padding: 10px;
 
 			&:first-of-type {
+				padding: 5px 10px;
 				border-bottom: 1px solid @white;	
 			}
 		}
 
 		.title {
 			text-transform: uppercase;
+			line-height: 14px;
 		}
 
 		.day {
@@ -56,6 +93,9 @@
 			line-height: initial;
 			color: @white;
 		}
+	}
+	.page-summary {
+		margin-left: 20px;
 	}
 
 	.forex-map {
@@ -104,6 +144,185 @@
 				width: 210px;
 				height: 220px;
 				margin: 44px auto 0;
+			}
+		}
+	}
+
+	.folded-box {
+		position: relative;
+		padding: 30px 50px 30px 30px;
+		margin-top: 54px;
+		background: @gray1;
+		border-bottom: 2px solid @gray2;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			border-width: 0 50px 50px 0;
+			border-style: solid;
+			border-color: @gray2 @white;
+		}
+
+		.handbag {
+			background: url(/images/international/handbag.png) no-repeat;
+			background-color: @pineGreen60;
+			background-size: 82px 109px;
+			background-position: center;
+			width: 170px;
+			height: 170px;
+		}
+
+		.title {
+			.sl-sb;
+		}
+
+		.top-padding {
+			padding-top: 20px;
+		}
+
+		.local-currency {
+			.sl-44-sb;
+			color: @pineGreen60;
+			padding-top: 7px;
+		}
+
+		.icon-card {
+			font-size: 44px;
+			margin: -2px 10px 0 0;
+			padding-top: 10px;
+			color: @gray7;
+		}
+
+		.card-info {
+			.sl;
+			padding: 10px 0 20px;
+		}
+
+		.amount {
+			.sl-sb;
+			line-height: 20px;
+			color: @pineGreen80;
+			text-align: right;
+		}
+		.amount-header {
+			color: @white;
+			text-align: right;
+		}
+	}
+
+	.code-sample {
+		padding-top: 56px;
+
+		&:nth-of-type(3) {
+			padding-top: 30px;			
+		}
+
+		.title {
+			background-color: @gray7;
+			.sl-sm-sb;
+			color: @white;
+			padding: 4px 15px;
+		}
+
+		pre {
+			padding: 10px 15px;
+			border-radius: 0;
+			border: 0;
+			background-color: @gray1;
+		}
+
+		.note {
+			.sl-sm;
+		}
+	}
+
+	.fee {
+		padding-top: 56px;
+		text-align: center;
+
+		.title {
+			.sl-sb;
+			padding-bottom: 20px;	
+		}
+
+		.forex-image {
+			background: url(/images/international/forex_pricing.png) no-repeat;
+			background-size: contain;
+			width: 240px;
+			height: 84px;
+			margin: 0 auto;
+		}		
+	}
+
+	.feedback {
+		.sl-sb;
+		background-color: @gray8;
+		padding: 30px;
+		color: @white;
+
+		.title {
+			.sl-16-sb;
+			line-height: 20px;
+			color: @white;
+		}
+
+		.send-email {
+			margin: 0;
+		}
+
+		input {
+			width: 250px !important;
+		}
+
+		> div:first-of-type {
+			border-right: 1px solid @gray5;
+		}
+	}
+
+	.faq {
+		background-color: @gray1;
+		padding: 30px;
+
+		> div {
+			margin: 0;
+		}
+
+		.title {
+			.sl-16-sb;
+			padding-bottom: 20px;
+		}
+
+		.q {
+			padding-bottom: 10px;
+		}
+		.a {
+			padding-bottom: 20px;
+			color: @gray6;
+		}
+	}
+
+	.table-condensed {
+		margin-bottom: 0;
+
+		thead {
+			tr > th {
+				background-color: @gray7;
+				.sl-sm-sb;
+				color: @white;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+		tbody {
+			.sl-sm;
+
+			tr > td {
+				padding-left: 15px;
+				padding-right: 15px;
+				background-color: @white;
+				border-top: 1px solid @gray1;
 			}
 		}
 	}

@@ -343,6 +343,26 @@
 				}
 				
 			}
+
+			$('#notify-form').submit(function(e) {
+				e.preventDefault();
+				
+				var email = e.target.find('input').val();
+				var div = '<div class="confirm-msg">We\'ll send an email to ' + email + ' when this feature is released</div>';
+				
+				$.ajax({
+					type: 'POST',
+					url: '',
+					dataType: 'jsonp',
+					async: false,
+					success: function (data) {
+						// $('#submit-confirm').show();
+					},
+					error: function (data) {
+
+					}
+				});
+			});
 		}
 	};
 }(window));
