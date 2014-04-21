@@ -328,10 +328,10 @@
 			});
 		},
 		international: function() {
-			function animateInView(elemInView, elemToAnimate, animation) {
-				$(elemInView).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			function animateInView(elem, animation) {
+				$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 					if (isInView) {
-						$(elemToAnimate).addClass(animation);
+						$(elem).addClass(animation);
 					}
 				});
 			}
@@ -353,9 +353,23 @@
 			});
 
 			// animate icons 
-			animateInView(".animate-brl", ".animate-brl, .animate-cad, .animate-eur", "bounce-down");
 			animateInView(".benefit1", ".benefit1", "slide-up");
 			animateInView(".benefit2", ".benefit2", "slide-up");
+
+			$('.animate-cad').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+				if (isInView) {
+					$('.animate-cad').addClass('bounce-down');
+
+					setTimeout(function() {
+						$('.animate-eur').addClass('bounce-down');
+
+						setTimeout(function() {
+							$('.animate-brl').addClass('bounce-down');
+						}, 200);
+					}, 200);
+				}
+			});
+
 
 			// toggle currency list
 			$(".forex .view-all, .forex .close").click(function(e) {
