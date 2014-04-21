@@ -3,8 +3,7 @@
 		"name": "Balanced - Payments for Marketplaces",
 		"url": "https://www.balancedpayments.com",
 		"description": "Balanced - Payments processing, escrow, and payouts in one simple API",
-		"keywords": "Balanced, Payments, processing, escrow, payouts, api, simple",
-		"debug": "true"
+		"keywords": "Balanced, Payments, processing, escrow, payouts, api, simple"
 	},
 	"templates": "./templates",
 	"contents": "./contents",

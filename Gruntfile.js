@@ -23,6 +23,9 @@ module.exports = function(grunt) {
 		uglify: {
 			all: {
 				files: {
+					'contents/static/js/mailchimp.min.js': [
+						'static/js/mailchimp.js'
+					],
 					'contents/static/js/balanced.min.js': [
 						'static/js/balanced.js'
 					],

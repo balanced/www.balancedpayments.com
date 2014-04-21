@@ -1,5 +1,5 @@
 ---
-title: Balanced - Payments processing, escrow, and payouts in one simple API | Customers
+title: Balanced - Payments processing, escrow, and payouts in one simple API | International Payments
 template: international-payments.html
 
 pageTitle: International Payments
