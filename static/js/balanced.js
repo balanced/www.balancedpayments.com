@@ -330,7 +330,7 @@
 		international: function() {
 			// pull right every other faq item
 			$('.faq').each(function(index, elem) {
-				if(index % 2 === 1) {
+				if (index % 2 === 1) {
 					$(elem).addClass("pull-right");
 				}
 			});
@@ -356,9 +356,9 @@
 
 			function animateInView(elemInView, elemToAnimate, animation) {
 				$(elemInView).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
-				  if (isInView) {
-				    $(elemToAnimate).addClass(animation);
-				  }
+					if (isInView) {
+						$(elemToAnimate).addClass(animation);
+					}
 				});
 			}
 
