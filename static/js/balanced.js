@@ -328,6 +328,23 @@
 			});
 		},
 		international: function() {
+			function animateInView(elemInView, elemToAnimate, animation) {
+				$(elemInView).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+					if (isInView) {
+						$(elemToAnimate).addClass(animation);
+					}
+				});
+			}
+
+			function resizeCover() {
+				$windowWidth = $(window).width();
+				if ($windowWidth > 960) {
+					$(".background-image").css("background-size", $windowWidth);
+				} else {
+					$(".background-image").css("background-size", "auto 510px");
+				}
+			}
+
 			// pull right every other faq item
 			$('.faq').each(function(index, elem) {
 				if (index % 2 === 1) {
@@ -353,23 +370,6 @@
 			$(window).resize(function() {
 				resizeCover();
 			});
-
-			function animateInView(elemInView, elemToAnimate, animation) {
-				$(elemInView).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
-					if (isInView) {
-						$(elemToAnimate).addClass(animation);
-					}
-				});
-			}
-
-			function resizeCover() {
-				$windowWidth = $(window).width();
-				if ($windowWidth > 960) {
-					$(".background-image").css("background-size", $windowWidth);
-				} else {
-					$(".background-image").css("background-size", "auto 510px");
-				}
-			}
 		}
 	};
 }(window));
