@@ -7,6 +7,7 @@
     float: right;
 
     #mobile-menu {
+        z-index: 100;
         font-size: 25px;
         position: absolute;
         right: 0;
@@ -66,7 +67,7 @@
 
                         &:hover {
                             background-color: @mobileMenuHoverBg;
-                            color: @white;
+                            color: @black;
                         }
                     }
                 }
@@ -83,7 +84,7 @@
         min-width: 900px;
 
         &.larger {
-            min-width: 1008px;
+            min-width: @largePageWidth;
         }
 
         &.community {

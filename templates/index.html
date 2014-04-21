@@ -3,14 +3,12 @@
 {% block body %}
 <div class="bg-default">
     <div class="hur">
-        <div class="row">
-            <div class="center">
-                <img class="homepage-logo" src="images/homepage_logo-01-2x.png" width="145px">
-            </div>
-            <div id="try-it" class="box">
-                <h1>{{ page.metadata.try_out.heading }}</h1>
-                <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{ page.metadata.try_out.link }}</a>
-            </div>
+        <div class="center">
+            <a href="/"><img class="homepage-logo" src="images/homepage_logo-01-2x.png" width="145" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
+        </div>
+        <div id="try-it" class="box">
+            <h1>{{ page.metadata.try_out.heading }}</h1>
+            <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{ page.metadata.try_out.link }}</a>
         </div>
 
         <section id="intro">

@@ -1,6 +1,9 @@
 @import "bootstrap-2.3/bootstrap.less";
 @import "bower/strapped/static/less/strapped.less";
 
+@pageWidth: 840px;
+@largePageWidth: 1008px;
+
 .layout-v4 {
 
   &.larger {
@@ -10,11 +13,11 @@
   }
 
   .container {
-    width: 1008px;
+    width: @pageWidth;
     padding-left: 0;
 
     &.container-chunky {
-        width: 1008px;
+        width: @pageWidth;
         margin-bottom: 10px;
     }
   }
@@ -47,9 +50,8 @@
         }
 
         &:not(.hamburger):hover {
-          border-bottom: 1px solid @white;
+          border-bottom: 1px solid @black;
         }
-
       }
     }
 
@@ -147,7 +149,7 @@ section {
 }
 
 .sidebar-child-menu-left {
-    position: fixed;
+    position: absolute;
     left: -200px;
     top: 0;
     height: 100%;
@@ -156,6 +158,26 @@ section {
     z-index: 9999;
     background-color: @gray7;
     .transition(left .3s ease-in-out);
+
+    .icon-x {
+      color: @gray3;
+      position: absolute;
+      right: 15px;
+      top: 25px;
+
+      &:hover {
+        color: @white;
+        cursor: pointer;
+      }
+    }
+
+    .divider {
+      padding: 20px 0;
+    }
+
+    a.sm {
+      padding: 5px 0;
+    }
 
     &.expanded {
         left: 0;
@@ -173,7 +195,7 @@ section {
             a {
                 color: @gray3;
                 cursor: pointer;
-                padding: 10px 0px 10px 0px;
+                padding: 8px 0;
                 display: block;
 
                 &:hover {
@@ -243,12 +265,13 @@ section {
     text-align: center;
     background-color: @black;
     border-right: 1px solid @gray3;
+
     &:last-child {
       border-right: 0;
     }
 
     a {
-      color: white;
+      color: @white;
       padding: 20px 25px;
       display: block;
       border: none;
@@ -275,7 +298,7 @@ section {
 
   .footer-link {
     display: inline-block;
-    padding: 20px 0px 0px 20px;
+    padding: 18px 10px;
 
     &:first-of-type {
         padding-left: 0px;

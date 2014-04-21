@@ -10,10 +10,11 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
     @sectionTitlePadding: 8px;
 
     .rate-panels {
-      box-sizing: content-box;
       margin-left: 0;
 
       .rate-panel {
+        box-sizing: content-box !important;
+
         .panel-content {
           margin: 20px 0 0 20px;
 
@@ -60,7 +61,7 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
 
       .bot-mid-rate-panel {
         width: @ratePanelsWidth/3 - 2*@ratePanelsDividerWidth;
-        border-top: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
+        border-left: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
         border-right: @ratePanelsDividerWidth solid @ratePanelsDividerColor;
       }
     }
@@ -267,6 +268,8 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
         margin: 0;
         list-style: none;
         background-color: @white;
+        float: right;
+
         li {
           background-color: @white;
           padding: 7px 15px;
@@ -283,10 +286,8 @@ body.pricing, body.ach-debits, body.open-company, body.payouts, body.card-proces
             font-size: 0.85em;
           }
           div {
+            .sl-md-sb;
             float: right;
-            color: @black;
-            font-size: 1.4em;
-            font-family: NimbusSanNovConD-Bol;
           }
         }
       }

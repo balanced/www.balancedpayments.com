@@ -71,7 +71,7 @@ team:
       site: github
     - name: marc sherry
       job: engineer
-      desc: coding since age 5
+      desc: coding since age 5.
       link: https://github.com/msherry
       site: github
     - name: damon chin

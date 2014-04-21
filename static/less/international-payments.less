@@ -1,7 +1,11 @@
 .international-payments {
-	.site-header {
+	.header-menu {
 		a {
 			color: @white !important;
+
+	        &:not(.hamburger):hover {
+	          border-bottom: 1px solid @white !important;
+	        }
 		}
 	}
 	.page-header {
@@ -46,7 +50,7 @@
 			.sl-44-sb;
 			line-height: 44px;
 			margin-left: 3px;
-			margin-right: 13px;
+			margin-right: 10px;
 			float: left;
 		}
 
@@ -61,6 +65,7 @@
 		.phase {
 			.sl;
 			color: @gray5;
+			line-height: 15px;
 		}
 	}
 
@@ -110,6 +115,7 @@
 			height: 133px;
 			background-size: contain;
 			position: absolute;
+			opacity: 0;
 		}
 
 		.animate-brl {
@@ -145,6 +151,63 @@
 				height: 220px;
 				margin: 44px auto 0;
 			}
+
+			.view-all {
+				.sl-sb;
+				color: @white;
+				background-color: @curryYellow80;
+				width: 100%;
+				padding: 10px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				.transition("background-color");
+				.transition-duration(200ms);
+
+				&:hover, &.open {
+					cursor: pointer;
+					background-color: @curryYellow100;
+				}
+
+				.icon-carat-down {
+					.sl;
+					color: @white;
+					margin-top: 3px;
+					margin-right: 5px;
+					float: right;
+				}
+			}
+		}
+	}
+
+	.currency-list {
+		display: none;
+		position: relative;
+		background-color: @gray1;
+		padding: 30px 40px;
+
+		.symbol {
+			.sl-20-sb;
+			text-transform: uppercase;
+		}
+		.name {
+			.sl-sm;
+			color: @gray7;
+			margin-bottom: 20px;
+		}
+
+		.close {
+			.sl;
+			color: @gray5;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			opacity: 1;
+			text-shadow: none;
+
+			&:hover {
+				color: @black;
+			}
 		}
 	}
 
@@ -154,6 +217,10 @@
 		margin-top: 54px;
 		background: @gray1;
 		border-bottom: 2px solid @gray2;
+
+		&.benefit1, &.benefit2 {
+			opacity: 0;
+		}
 
 		&:before {
 			content: "";
@@ -271,17 +338,44 @@
 		.send-email {
 			margin: 0;
 		}
-
-		input {
-			width: 250px !important;
+		.notify-me {
 		}
 
-		> div:first-of-type {
-			border-right: 1px solid @gray5;
+		#mce-success-response {
+			.sl-16-sb;
+			color: @white;
+		}
+
+		#mc_embed_signup {
+			input {
+				&[type="email"] {
+					width: 206px;
+					padding-left: 10px;
+				}
+
+				&, &:focus {
+					border-color: transparent;
+					-webkit-box-shadow: none !important;
+					-moz-box-shadow: none !important;
+					box-shadow: none !important;				
+				}
+
+				&:focus:invalid {
+					color: @black;
+				}
+				&.mce_inline_error {
+					color: @imperialRed100;
+				}
+			}
+
+			div.mce_inline_error {
+				display: none !important;
+			}
+
 		}
 	}
 
-	.faq {
+	.faqs {
 		background-color: @gray1;
 		padding: 30px;
 
@@ -294,9 +388,6 @@
 			padding-bottom: 20px;
 		}
 
-		.q {
-			padding-bottom: 10px;
-		}
 		.a {
 			padding-bottom: 20px;
 			color: @gray6;

@@ -3,7 +3,7 @@
 (function(ctx) {
 	var balanced = ctx.balanced = {
 		menu: function() {
-			$(".toggle-child-menu").click(function(e) {
+			$(".toggle-child-menu, .sidebar-child-menu-left .icon-x").click(function(e) {
 				e.preventDefault();
 
 				$("body, html").css("overflow-x", "hidden");
@@ -328,41 +328,48 @@
 			});
 		},
 		international: function() {
-			resizeImage();
-
-			$(window).resize(function() {
-				resizeImage();
+			// pull right every other faq item
+			$('.faq').each(function(index, elem) {
+				if(index % 2 === 1) {
+					$(elem).addClass("pull-right");
+				}
 			});
 
-			function resizeImage() {
+			// animate icons 
+			animateInView(".animate-brl", ".animate-brl, .animate-cad, .animate-eur", "bounce-down");
+			animateInView(".benefit1", ".benefit1", "slide-up");
+			animateInView(".benefit2", ".benefit2", "slide-up");
+
+			// toggle currency list
+			$(".forex .view-all, .forex .close").click(function(e) {
+				e.preventDefault();
+				$(".currency-list").slideToggle(200);
+				$(".view-all").toggleClass("open");
+			});
+
+			// resize cover image. TODO: make it generally avaible to other pages.
+			resizeCover();
+
+			$(window).resize(function() {
+				resizeCover();
+			});
+
+			function animateInView(elemInView, elemToAnimate, animation) {
+				$(elemInView).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+				  if (isInView) {
+				    $(elemToAnimate).addClass(animation);
+				  }
+				});
+			}
+
+			function resizeCover() {
 				$windowWidth = $(window).width();
 				if ($windowWidth > 960) {
 					$(".background-image").css("background-size", $windowWidth);
 				} else {
 					$(".background-image").css("background-size", "auto 510px");
 				}
-				
 			}
-
-			$('#notify-form').submit(function(e) {
-				e.preventDefault();
-				
-				var email = e.target.find('input').val();
-				var div = '<div class="confirm-msg">We\'ll send an email to ' + email + ' when this feature is released</div>';
-				
-				$.ajax({
-					type: 'POST',
-					url: '',
-					dataType: 'jsonp',
-					async: false,
-					success: function (data) {
-						// $('#submit-confirm').show();
-					},
-					error: function (data) {
-
-					}
-				});
-			});
 		}
 	};
 }(window));

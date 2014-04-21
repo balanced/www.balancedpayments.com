@@ -6,7 +6,7 @@ pageTitle: International Payments
 body_class: international-payments
 
 subtitle:
-  heading: Let's take Balanced worldwide.<br>We'll start with accepting payments in 120+ local currencies.
+  heading: Let&#8217s take Balanced worldwide.<br>We&#8217ll start with accepting payments in 120+ local currencies.
 
 timeline:
   title1: Charge in local currency
@@ -26,7 +26,22 @@ what:
   linkText: Follow the rest of the discussion on Github
   linkUrl: https://github.com/balanced/balanced-api/issues/100
 
-forexMapText: Charge your customers' credit
+forexMapText: Charge your customers&#8217 credit
+
+currencies:
+  list:
+    - symbol: AED
+      name: United Arab Emirites Dirham
+    - symbol: AFN
+      name: Afgan Afghani
+    - symbol: AED
+      name: United Arab Emirites Dirham
+    - symbol: AFN
+      name: Afgan Afghani
+    - symbol: AED
+      name: United Arab Emirites Dirham
+    - symbol: AFN
+      name: Afgan Afghani
 
 benefit1:
   title: Provide a better experience
@@ -56,10 +71,13 @@ feedback:
   email: forex@balancedpayments.com
   notifyMe: "Notify me when this feature is released:"
 
-faq:
+faqs:
   title: Frequently asked questions
-  q1: This is just for paying in. What about payouts?
-  a1: no idea
-  q2: This is just for paying in. What about payouts?
-  a2: no idea
+  list:
+    - q: Will you support international payouts?
+      a: We're doing international support in pieces. Payouts to non-US bank accounts will come next.
+    - q: When will international payouts be available?
+      a: We're not willing to commit to a date for that yet. One step at a time.
+    - q: What happens in the case of a refund?
+      a: Your customer will get the full amount back in their original currency.
 ---

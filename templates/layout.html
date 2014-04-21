@@ -2,7 +2,9 @@
 <html lang="en">
 {%- include 'partials/header.html' -%}
 <body class="layout-v4 {{ page.metadata.body_class }}">
-    {%- include 'partials/sidebar-hidden.html' -%}
+	<div class="sidebar-child-menu-left">
+	    {%- include 'partials/sidebar-menu.html' -%}
+	</div>
     <div class="global-wrapper">
         <div class="page-wrapper">
             {%- include 'partials/page-header.html' -%}
