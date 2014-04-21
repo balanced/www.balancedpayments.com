@@ -337,7 +337,7 @@
 			}
 
 			function resizeCover() {
-				$windowWidth = $(window).width();
+				var $windowWidth = $(window).width();
 				if ($windowWidth > 960) {
 					$(".background-image").css("background-size", $windowWidth);
 				} else {
