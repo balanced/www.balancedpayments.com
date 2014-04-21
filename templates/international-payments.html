@@ -18,6 +18,7 @@
 					</div>
 
 					<div class="timeline span19 large-bottom-margin">
+						<h3>Implementation roadmap</h3>
 						<div class="span6">
 							<span class="step">1</span>
 							<span class="title current">{{page.metadata.timeline.title1}}</span>
@@ -56,31 +57,29 @@
 					</div>
 				</div>
 
-				<div class="row span19">
-					<div class="forex large-bottom-margin">
-						<div class="forex-map">
-							<div class="pin animate-brl"></div>
-							<div class="pin animate-cad"></div>
-							<div class="pin animate-eur"></div>
+				<div class="forex large-bottom-margin">
+					<div class="forex-map">
+						<div class="pin animate-brl"></div>
+						<div class="pin animate-cad"></div>
+						<div class="pin animate-eur"></div>
 
-							<div class="forex-map-sidebar">
-								{{page.metadata.forexMapText}}
-								<div class="currency-conversion"></div>
-								<div class="view-all">
-									<span>View supported currencies</span>
-									<i class="icon-carat-down"></i>
-								</div>
+						<div class="forex-map-sidebar">
+							{{page.metadata.forexMapText}}
+							<div class="currency-conversion"></div>
+							<div class="view-all">
+								<span>View supported currencies</span>
+								<i class="icon-carat-down"></i>
 							</div>
 						</div>
-						<div class="currency-list clearfix">
-							{% for currency in page.metadata.currencies.list %}
-								<div class="span4">
-									<div class="symbol">{{currency.symbol}}</div>
-									<div class="name">{{currency.name}}</div>
-								</div>
-							{% endfor %}
-							<div class="close">Close</div>
-						</div>
+					</div>
+					<div class="currency-list clearfix">
+						{% for currency in page.metadata.currencies.list %}
+							<div class="span4">
+								<div class="symbol">{{currency.symbol}}</div>
+								<div class="name">{{currency.name}}</div>
+							</div>
+						{% endfor %}
+						<div class="close">Close</div>
 					</div>
 				</div>
 
@@ -135,7 +134,7 @@
 									</tr>
 									<tr>
 										<td>Oct 17</td>
-										<td>BAL*ZUPPA 741003 JHall</td>
+										<td>BAL*ZUPPA 74103 JHall</td>
 										<td class="amount">£ 78.00</td>
 									</tr>
 									<tr>

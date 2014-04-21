@@ -6,12 +6,12 @@ pageTitle: International Payments
 body_class: international-payments
 
 subtitle:
-  heading: Let&#8217s take Balanced worldwide.<br>We&#8217ll start with accepting payments in 120+ local currencies.
+  heading: Let&#8217s take Balanced worldwide.<br>We&#8217ll start with accepting payments in 150+ local currencies.
 
 timeline:
   title1: Charge in local currency
   phase1: in development
-  title2: Pay out to non-US bank accounts
+  title2: Pay out to non-U.S. bank accounts
   phase2: next step
   title3: Escrow in local currency
   phase3: in roadmap
@@ -22,7 +22,7 @@ launch:
   day: 22
 
 what:
-  bodyText: The idea of supporting foreign exchange began as a series of discussions on our balanced-api Github page. Based on community and customer responses, we’re excited to begin development on this project. Here’s how we envision the feature would work. As always, we appreciate your feedback.
+  bodyText: The idea of supporting foreign exchange began as a series of discussions on our balanced-api Github page. Based on community and customer responses, we’re excited to begin development on this project. Here’s how we envision the feature would work.
   linkText: Follow the rest of the discussion on Github
   linkUrl: https://github.com/balanced/balanced-api/issues/100
 
@@ -165,7 +165,7 @@ currencies:
     - symbol: JOD
       name: Jordanian Dinar
     - symbol: JPY
-      name: Yen
+      name: Japanese Yen
     - symbol: KES
       name: Kenyan Shilling
     - symbol: KGS
@@ -177,7 +177,7 @@ currencies:
     - symbol: KPW
       name: North Korean Won
     - symbol: KRW
-      name: Won
+      name: South Korean Won
     - symbol: KWD
       name: Kuwaiti Dinar
     - symbol: KYD
@@ -185,7 +185,7 @@ currencies:
     - symbol: KZT
       name: Tenge
     - symbol: LAK
-      name: Kip
+      name: Laotian Kip
     - symbol: LBP
       name: Lebanese Pound
     - symbol: LKR
@@ -207,7 +207,7 @@ currencies:
     - symbol: MGA
       name: Malagasy Ariary
     - symbol: MKD
-      name: Denar
+      name: Macedonian Denar
     - symbol: MMK
       name: Kyat
     - symbol: MNT
@@ -349,7 +349,7 @@ currencies:
 
 benefit1:
   title: Provide a better experience
-  body: Sellers can lists their items in local currency, and buyers can confidently charge their international cards without getting hit with a foreign transaction fee.
+  body: Sellers can list their items in local currency, and buyers can confidently charge their international cards without getting hit with a foreign transaction fee.
 
 benefit2:
   title: Reduce chargebacks
@@ -357,7 +357,7 @@ benefit2:
 
 benefit3:
   title: Fetch rates in real time
-  body: Need to dynamically change your prices? balanced.js will be able to let your know how many Euro to charge, moment to moment.
+  body: Need to dynamically change your prices? balanced.js will be able to let your know how many Euros to charge, moment to moment.
 
 api:
   title: Sample API call
@@ -365,7 +365,7 @@ api:
 
 pricing:
   title: Pricing
-  body: Accept payments in 120+ currencies. Each foreign currency transaction will incur a 2% fee of the transaction amount, on top of Balanced&#8217s standard card processing rate.
+  body: Accept payments in 150+ currencies. Each foreign currency transaction will incur a 2% fee of the transaction amount, on top of Balanced&#8217s card processing rate.
   linkText: View complete pricing
   linkUrl: https://www.balancedpayments.com/pricing
 
@@ -379,9 +379,11 @@ faqs:
   title: Frequently asked questions
   list:
     - q: Will you support international payouts?
-      a: We're doing international support in pieces. Payouts to non-US bank accounts will come next.
+      a: We&#8217re doing international support in pieces. Payouts to non-U.S. bank accounts will come next.
     - q: When will international payouts be available?
-      a: We're not willing to commit to a date for that yet. One step at a time.
+      a: We&#8217re not willing to commit to a date for that yet. One step at a time.
     - q: What happens in the case of a refund?
       a: Your customer will get the full amount back in their original currency.
+    - q: Can I use Balanced if I&#8217m not based in the U.S.?
+      a: Unfortunately Balanced is only available to marketplaces with U.S. bank accounts and a valid U.S. tax ID number.
 ---

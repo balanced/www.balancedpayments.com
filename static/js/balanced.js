@@ -353,10 +353,10 @@
 			});
 
 			// animate icons 
-			animateInView(".benefit1", ".benefit1", "slide-up");
-			animateInView(".benefit2", ".benefit2", "slide-up");
+			animateInView(".benefit1", "slide-up");
+			animateInView(".benefit2", "slide-up");
 
-			$('.animate-cad').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			$('.forex-map').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView) {
 					$('.animate-cad').addClass('bounce-down');
 
