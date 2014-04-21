@@ -26,7 +26,7 @@ what:
   linkText: Follow the rest of the discussion on Github
   linkUrl: https://github.com/balanced/balanced-api/issues/100
 
-forexMapText: Charge your customers&#8217 credit
+forexMapText: Charge your customers&#8217 credit or debit card in their local currency. Balanced instantly converts the charge to USD and deposits the funds in your escrow balance for immediate access.
 
 currencies:
   list:
@@ -45,28 +45,28 @@ currencies:
 
 benefit1:
   title: Provide a better experience
-  body: Sellters can list their items
+  body: Sellers can lists their items in local currency, and buyers can confidently charge their international cards without getting hit with a foreign transaction fee.
 
 benefit2:
   title: Reduce chargebacks
-  body: Sellters can list their items
+  body: The purchase will appear on your buyers&#8217 card statement in the amount and currency it was charged. This reduces the likelihood of chargebacks from unrecognized transactions because of a USD conversion.
 
 benefit3:
   title: Fetch rates in real time
-  body: Sellters can list their items
+  body: Need to dynamically change your prices? balanced.js will be able to let your know how many Euro to charge, moment to moment.
 
 api:
   title: Sample API call
-  body: Using another currency
+  body: "Using another currency is super simple: just specify which currency you&#8217d like to use when you make a call to charge a card."
 
 pricing:
   title: Pricing
-  body: Sellters can list their items
+  body: Accept payments in 120+ currencies. Each foreign currency transaction will incur a 2% fee of the transaction amount, on top of Balanced&#8217s standard card processing rate.
   linkText: View complete pricing
   linkUrl: https://www.balancedpayments.com/pricing
 
 feedback:
-  title: We'd love to hear your feedback.
+  title: We&#8217d love to hear your feedback.
   body: "Send your comments to:"
   email: forex@balancedpayments.com
   notifyMe: "Notify me when this feature is released:"
