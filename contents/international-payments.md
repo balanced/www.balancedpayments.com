@@ -31,17 +31,321 @@ forexMapText: Charge your customers&#8217 credit or debit card in their local cu
 currencies:
   list:
     - symbol: AED
-      name: United Arab Emirites Dirham
+      name: UAE Dirham
     - symbol: AFN
-      name: Afgan Afghani
-    - symbol: AED
-      name: United Arab Emirites Dirham
-    - symbol: AFN
-      name: Afgan Afghani
-    - symbol: AED
-      name: United Arab Emirites Dirham
-    - symbol: AFN
-      name: Afgan Afghani
+      name: Afghani
+    - symbol: ALL
+      name: Lek
+    - symbol: AMD
+      name: Armenian Dram
+    - symbol: ANG
+      name: Netherlands Antillian Guilder
+    - symbol: AOA
+      name: Kwanza
+    - symbol: ARS
+      name: Argentine Peso
+    - symbol: AUD
+      name: Australian Dollar
+    - symbol: AWG
+      name: Aruban Guilder
+    - symbol: AZN
+      name: Azerbaijanian Manat
+    - symbol: BAM
+      name: Convertible Marks
+    - symbol: BBD
+      name: Barbados Dollar
+    - symbol: BDT
+      name: Taka
+    - symbol: BGN
+      name: Bulgarian Lev
+    - symbol: BHD
+      name: Bahraini Dinar
+    - symbol: BIF
+      name: Burundi Franc
+    - symbol: BMD
+      name: Bermudian Dollar
+    - symbol: BND
+      name: Brunei Dollar
+    - symbol: BOB
+      name: Boliviano
+    - symbol: BRL
+      name: Brazilian Real
+    - symbol: BSD
+      name: Bahamian Dollar
+    - symbol: BWP
+      name: Pula
+    - symbol: BYR
+      name: Belarussian Ruble
+    - symbol: BZD
+      name: Belize Dollar
+    - symbol: CAD
+      name: Canadian Dollar
+    - symbol: CDF
+      name: Franc Congolais
+    - symbol: CHF
+      name: Swiss Franc
+    - symbol: CLP
+      name: Chilean Peso
+    - symbol: CNY
+      name: Yuan Renminbi
+    - symbol: COP
+      name: Colombian Peso
+    - symbol: CRC
+      name: Costa Rican Colon
+    - symbol: CUC
+      name: Cuban Convertable Peso
+    - symbol: CVE
+      name: Cape Verde Escudo
+    - symbol: CZK
+      name: Czech Koruna
+    - symbol: DJF
+      name: Djibouti Franc
+    - symbol: DKK
+      name: Danish Krone
+    - symbol: DOP
+      name: Dominican Peso
+    - symbol: DZD
+      name: Algerian Dinar
+    - symbol: EEK
+      name: Kroon
+    - symbol: EGP
+      name: Egyptian Pound
+    - symbol: ERN
+      name: Nakfa
+    - symbol: ETB
+      name: Ethiopian Birr
+    - symbol: EUR
+      name: Euro
+    - symbol: FJD
+      name: Fiji Dollar
+    - symbol: FKP
+      name: Falkland Islands Pound
+    - symbol: GBP
+      name: Pound Sterling
+    - symbol: GEL
+      name: Lari
+    - symbol: GHS
+      name: Ghana Cedi
+    - symbol: GIP
+      name: Gibraltar Pound
+    - symbol: GMD
+      name: Dalasi
+    - symbol: GNF
+      name: Guinea Franc
+    - symbol: GQE
+      name: CFA Franc
+    - symbol: GTQ
+      name: Quetzal
+    - symbol: GYD
+      name: Guyana Dollar
+    - symbol: HKD
+      name: Hong Kong Dollar
+    - symbol: HNL
+      name: Lempira
+    - symbol: HRK
+      name: Croatian Kuna
+    - symbol: HTG
+      name: Gourde
+    - symbol: HUF
+      name: Forint
+    - symbol: IDR
+      name: Rupiah
+    - symbol: ILS
+      name: New Israeli Sheqel
+    - symbol: INR
+      name: Indian Rupee Ngultrum
+    - symbol: IQD
+      name: Iraqi Dinar
+    - symbol: IRR
+      name: Iranian Rial
+    - symbol: ISK
+      name: Iceland Krona
+    - symbol: JMD
+      name: Jamaican Dollar
+    - symbol: JOD
+      name: Jordanian Dinar
+    - symbol: JPY
+      name: Yen
+    - symbol: KES
+      name: Kenyan Shilling
+    - symbol: KGS
+      name: Som
+    - symbol: KHR
+      name: Riel
+    - symbol: KMF
+      name: Comoro Franc
+    - symbol: KPW
+      name: North Korean Won
+    - symbol: KRW
+      name: Won
+    - symbol: KWD
+      name: Kuwaiti Dinar
+    - symbol: KYD
+      name: Cayman Islands Dollar
+    - symbol: KZT
+      name: Tenge
+    - symbol: LAK
+      name: Kip
+    - symbol: LBP
+      name: Lebanese Pound
+    - symbol: LKR
+      name: Sri Lanka Rupee
+    - symbol: LRD
+      name: Liberian Dollar
+    - symbol: LSL
+      name: Loti
+    - symbol: LTL
+      name: Lithuanian Litas
+    - symbol: LVL
+      name: Latvian Lats
+    - symbol: LYD
+      name: Libyan Dinar
+    - symbol: MAD
+      name: Moroccan Dirham
+    - symbol: MDL
+      name: Moldovan Leu
+    - symbol: MGA
+      name: Malagasy Ariary
+    - symbol: MKD
+      name: Denar
+    - symbol: MMK
+      name: Kyat
+    - symbol: MNT
+      name: Tugrik
+    - symbol: MOP
+      name: Pataca
+    - symbol: MRO
+      name: Ouguiya
+    - symbol: MUR
+      name: Mauritius Rupee
+    - symbol: MVR
+      name: Rufiyaa
+    - symbol: MWK
+      name: Kwacha
+    - symbol: MXN
+      name: Mexican Peso
+    - symbol: MYR
+      name: Malaysian Ringgit
+    - symbol: MZM
+      name: Mozambican Meticalis
+    - symbol: NAD
+      name: Namibia Dollar
+    - symbol: NGN
+      name: Naira
+    - symbol: NIO
+      name: Cordoba Oro
+    - symbol: NOK
+      name: Norwegian Krone
+    - symbol: NPR
+      name: Nepalese Rupee
+    - symbol: NZD
+      name: New Zealand Dollar
+    - symbol: OMR
+      name: Rial Omani
+    - symbol: PAB
+      name: Balboa
+    - symbol: PEN
+      name: Nuevo Sol
+    - symbol: PGK
+      name: Kina
+    - symbol: PHP
+      name: Philippine Peso
+    - symbol: PKR
+      name: Pakistan Rupee
+    - symbol: PLN
+      name: Zloty
+    - symbol: PYG
+      name: Guarani
+    - symbol: QAR
+      name: Qatari Rial
+    - symbol: RON
+      name: New Leu
+    - symbol: RSD
+      name: Serbian Dinar
+    - symbol: RUB
+      name: Russian Ruble
+    - symbol: RWF
+      name: Rwanda Franc
+    - symbol: SAR
+      name: Saudi Riyal
+    - symbol: SBD
+      name: Solomon Islands Dollar
+    - symbol: SCR
+      name: Seychelles Rupee
+    - symbol: SDG
+      name: Sudanese Pound
+    - symbol: SEK
+      name: Swedish Krona
+    - symbol: SGD
+      name: Singapore Dollar
+    - symbol: SHP
+      name: Saint Helena Pound
+    - symbol: SLL
+      name: Leone
+    - symbol: SOS
+      name: Somali Shilling
+    - symbol: SRD
+      name: Surinam Dollar
+    - symbol: STD
+      name: Dobra
+    - symbol: SYP
+      name: Syrian Pound
+    - symbol: SZL
+      name: Lilangeni
+    - symbol: THB
+      name: Baht
+    - symbol: TJS
+      name: Somoni
+    - symbol: TMM
+      name: Manat
+    - symbol: TMT
+      name: Turkmenistan Manat
+    - symbol: TND
+      name: Tunisian Dinar
+    - symbol: TOP
+      name: Pa'anga
+    - symbol: TRY
+      name: New Turkish Lira
+    - symbol: TTD
+      name: Trinidad and Tobago Dollar
+    - symbol: TWD
+      name: New Taiwan Dollar
+    - symbol: TZS
+      name: Tanzanian Shilling
+    - symbol: UAH
+      name: Hryvnia
+    - symbol: UGX
+      name: Uganda Shilling
+    - symbol: USD
+      name: US Dollar
+    - symbol: UYU
+      name: Peso Uruguayo
+    - symbol: UZS
+      name: Uzbekistan Sum
+    - symbol: VEB
+      name: Venezuelan Bolivares
+    - symbol: VND
+      name: Dong
+    - symbol: VUV
+      name: Vatu
+    - symbol: WST
+      name: Tala
+    - symbol: XAF
+      name: CFA Franc
+    - symbol: XCD
+      name: East Caribbean Dollar
+    - symbol: XOF
+      name: CFA Franc
+    - symbol: XPF
+      name: CFP Franc
+    - symbol: YER
+      name: Yemeni Rial
+    - symbol: ZAR
+      name: Rand
+    - symbol: ZMK
+      name: Kwacha
+    - symbol: ZWR
+      name: Zimbabwean Dollar
 
 benefit1:
   title: Provide a better experience
