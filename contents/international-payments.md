@@ -6,7 +6,7 @@ pageTitle: International Payments
 body_class: international-payments
 
 subtitle:
-  heading: Let&#8217s take Balanced worldwide.<br>We&#8217ll start with accepting payments in 150+ local currencies.
+  heading: Balanced goes global starting with payments in 150+ local currencies.
 
 timeline:
   title1: Charge in local currency
@@ -22,7 +22,7 @@ launch:
   day: 22
 
 what:
-  bodyText: The idea of supporting foreign exchange began as a series of discussions on our balanced-api Github page. Based on community and customer responses, we’re excited to begin development on this project. Here’s how we envision the feature would work.
+  bodyText: We&#8217ve begun development on supporting foreign currency. The first step is to accept payments in local currencies. Payouts and escrow are on the roadmap. Here&#8217s how we envision the payment feature to work. We welcome your feedback.
   linkText: Follow the rest of the discussion on Github
   linkUrl: https://github.com/balanced/balanced-api/issues/100
 
