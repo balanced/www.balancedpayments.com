@@ -31,12 +31,12 @@ paymentSchedule:
   body: Balanced will batch ACH debits for submission each weekday. The ACH network operates only on banking days, so submission will not occur on bank holidays.
 
 submissionTimes:
-  title: ACH DEBIT SUBMISSION TIMES
+  title: ACH Debit Submission Times
   time: "3:30"
-  timezone: PM PACIFIC
+  timezone: pm Pacific
 
 bankHolidays:
-  title: BANK HOLIDAYS (2014)
+  title: Bank Holidays (2014)
   list:
     - label: row0
       row:
@@ -99,6 +99,6 @@ achDebitsPricing:
 
 tryTheDashboard:
   body: Get started today.
-  button: TRY THE DASHBOARD
+  button: Try the dashboard
 
 ---

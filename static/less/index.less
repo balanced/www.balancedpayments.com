@@ -1,5 +1,8 @@
-@pageWidth: 1008px;
 @listMargin: 16px;
+
+.homepage-logo {
+  margin-bottom: 40px;
+}
 
 .underline(@weight: 4px, @lineHeight: 1.3em) {
   border-bottom: @weight solid @lineRuleBackground;
@@ -9,98 +12,12 @@
 .letThemKnow() {
   text-align: center;
   padding: 20px 0;
+
   h1 {
-    font-family: @baseFontFamilySemiBold;
-    font-weight: normal;
-    font-size: 20px;
-    color: #000;
+    .sl-md-sb;
     display: inline;
     vertical-align: middle;
     padding-right: 20px;
-  }
-  .btn {
-    border: 3px solid #000;
-    background: white;
-    border-radius: 0;
-    vertical-align: middle;
-    color: @black;
-    text-decoration: none;
-    height: auto;
-    padding: 8px 16px;
-    text-shadow: none;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    font-family: 'NimbusSanNovCon-Bol';
-    font-weight: normal;
-    &:hover {
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
-    }
-  }
-}
-
-body, html {
-    background: @contentBackground;
-    font-family: @baseFontFamily;
-    font-size: 15px;
-    line-height: 20px;
-
-    .container {
-        &.container-chunky {
-            width: 1008px;
-            margin-bottom: 10px;
-        }
-    }
-}
-
-a {
-  color: #0096af;
-  text-decoration: none;
-
-  &:hover {
-    color: #000;
-    text-decoration: none;
-  }
-}
-
-h2 {
-  font-family: @baseFontFamilySemiBold;
-  font-size: 20px;
-  font-weight: normal;
-  color: #000;
-  .underline(4px);
-}
-
-h3 {
-  font-family: @baseFontFamilyReg;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 38/32;
-  color: #4d4d4d;
-  padding-bottom: @mainMargin / 2;
-}
-
-h4 {
-  font-family: @baseFontFamilySemiBold;
-  font-size: 15px;
-  font-weight: normal;
-  color: #000;
-  .underline(1px, 1em);
-  padding-bottom: 0.75em;
-  margin-bottom: 1em;
-}
-
-p {
-  font-family: @baseFontFamily;
-  font-size: 15px;
-  line-height: 22px;
-
-  a {
-    font-size: 13px;
-    line-height: 15px;
-    font-family: @baseFontFamilySemiBold;
-    display: inline-block;
   }
 }
 
@@ -124,43 +41,40 @@ footer {
 }
 
 #try-it {
-  background-color: white;
+  background-color: @gray1;
   margin-bottom: @mainMargin;
   .letThemKnow();
 }
 
 #intro {
-  background-color: white;
   margin-bottom: @mainMargin;
   h1 {
     display: none;
   }
+
   &>div {
     background: url(/images/homepage_whats_up_now-03.png) 51px 50px no-repeat;
     background-color: @curryYellow40;
     width: 100%;
     min-height: 200px;
     margin: auto;
-    padding: 70px 0;
+    padding: 70px 0 30px;
+
     &>div {
       padding: @mainMargin;
       float: left;
       width: 300px;
       text-align: center;
+      margin-left: 30px;
     }
 
   }
   p {
-    color: #000;
-    font-family: 'Droid Serif', serif;
-    font-size: 14px;
-    font-style: italic;
+    .sl;
     margin-top: 190px;
-    text-decoration: underline;
 
     a {
-      color: #000;
-      font-family: 'Droid Serif', serif;
+      .sl;
       text-decoration: underline;
     }
   }
@@ -225,20 +139,6 @@ footer {
       }
     }
   }
-}
-
-#lamestream-media {
-  text-align: right;
-}
-
-#processing {
-  .sub {
-    background: url(/images/homepage_creditcard_logos-01.png) top right no-repeat;
-  }
-}
-
-#payouts {
-
 }
 
 @diagramWidth: 124px;
@@ -381,8 +281,8 @@ footer {
   .tutorials {
     li {
       a {
-        font-family: @baseFontFamily;
-        font-size: 14px;
+        .sl-sb;
+        color: @linkColor;
       }
     }
     &+h4 {
@@ -447,7 +347,7 @@ footer {
 }
 
 #go {
-  background-color: @curryYellow40;
+  background-color: @gray1;
   .letThemKnow();
   margin-bottom: 25px;
 }
@@ -455,20 +355,5 @@ footer {
 #marketplaces, #processing, #payouts {
   h2 {
     color: #C98935;
-  }
-}
-
-body.layout-v4.larger {
-  .container {
-    width: 1008px;
-    padding-left: 0;
-  }
-  .site-header {
-    > .span19 {
-      width: 1008px;
-    }
-  }
-  .site-nav {
-    float: right;
   }
 }

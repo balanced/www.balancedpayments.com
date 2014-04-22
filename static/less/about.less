@@ -5,7 +5,7 @@
 }
 
 .hur {
-  width: @pageWidth;
+  width: @largePageWidth;
   margin: auto;
   position: relative;
 
@@ -30,10 +30,8 @@
         background-color: white;
         height: 60px;
         a {
-          font-family: @baseFontFamilyCondensedBold;
-          font-weight: normal;
+          .sl;
           text-shadow: none;
-          font-size: 14px;
           color: #94969a;
           border: 0;
           text-transform: uppercase;
@@ -75,7 +73,8 @@
   &> section {
     margin: 0 auto 80px;
     float: left;
-    width: @pageWidth;
+    width: @largePageWidth;
+
     .main {
       margin-top: 2em;
       .title {
@@ -113,8 +112,9 @@
       padding: 0;
       margin: 0;
       float: left;
-      width: 125px;
-      margin-right: 16px;
+      width: 132px;
+      margin-right: 6px;
+
       &:last-child {
         margin-right: 0;
       }
@@ -135,17 +135,9 @@
       }
     }
   }
-  .sub {
-    p {
-      font-family: 'Droid Serif', serif;
-      font-size: 14px;
-      font-style: italic;
-      margin: .5em 0 1.5em;
-    }
-  }
 
   .content, .container {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 1151px;
   }
 
@@ -189,14 +181,13 @@
   }
 
   .about-banner {
-    background: #fff;
+    background-color: @gray1;
     border-top: 1px solid #B3B3B3;
     height: 90px;
     width: 100%;
     position: relative;
     text-align: center;
     z-index: 10;
-    .box-shadow(0 3px 3px -2px rgba(0, 0, 0, 0.2));
   }
 
   .about-banner-node {
@@ -212,10 +203,8 @@
   }
 
   .about-banner-desc {
-    font-family: @bitter;
-    font-style: italic;
-    font-size: 12px;
-    color: #737373;
+    .sl;
+    color: @gray5;
     padding-top: 8px;
   }
 
@@ -226,10 +215,7 @@
   }
 
   .about-body-intro {
-    font-family: @baseFontFamilyReg;
-    font-size: 21px;
-    color: #737373;
-    line-height: 1.3em;
+    .sl-20;
   }
 
   .about-founders-middle {
@@ -267,12 +253,11 @@
 
   .about-founders-body {
     display: inline-block;
-    .box-shadow(2px 2px 2px #d0d2d3);
+    background: @gray1;
   }
 
   .about-founders-body-node {
-    background: #fff;
-    width: 283px;
+    width: 272px;
     padding: 40px 18px;
     float: left;
   }
@@ -280,12 +265,11 @@
   .about-founders-body-line {
     float: left;
     border-left: 1px solid @gray3;
-    height: 522px;
+    height: 587px;
   }
 
   .about-founders-name {
-    font-family: @bitter;
-    font-size: 18px;
+    .sl-20;
     color: #c88a12;
     text-align: center;
   }
@@ -311,7 +295,7 @@
     font-family: @baseFontFamily;
     font-size: 14px;
     line-height: 18px;
-    color: #737373;
+    color: @gray7;
     min-height: 325px;
   }
 
@@ -337,17 +321,13 @@
   }
 
   .about-list-name {
-    font-family: @bitter;
-    font-size: 18px;
-    color: #58595B;
+    .sl-20;
     margin-right: 5px;
     float: left;
   }
 
   .about-list-bracket {
-    font-family: @bitter;
-    font-size: 15px;
-    color: #000;
+    .sl-16;
     margin: 1px 2px 0;
     float: left;
   }
@@ -360,15 +340,18 @@
     margin: 2px 2px 0;
     float: left;
     text-transform: uppercase;
+    line-height: 28px;
   }
 
   .about-list-desc {
-    font-family: 'Bitter', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: #737373;
+    .sl;
+    line-height: 28px;
+    color: @gray7;
     margin: 1px 2px 0 5px;
     float: left;
+    &:before {
+      content: '  / ';
+    }
   }
 
   .about-list-social {
