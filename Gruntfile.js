@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			all: {
 				files: {
 					'contents/static/js/mailchimp.min.js': [
-						'static/js/mailchimp.js'
+						'static/lib/mailchimp.js'
 					],
 					'contents/static/js/balanced.min.js': [
 						'static/js/balanced.js'
