@@ -53,10 +53,6 @@ function mce_preload_check() {
 		setTimeout('mce_preload_check();', 250);
 		return;
 	}
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src = '/static/js/jquery.form-n-validate.min.js';
-	head.appendChild(script);
 	try {
 		var validatorLoaded = jQuery("#fake-form").validate({});
 	} catch (err) {

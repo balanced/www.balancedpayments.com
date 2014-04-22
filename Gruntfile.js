@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				separator: ';\n'
 			},
 			bootstrapModal: {
-				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'bower/jquery.inview/jquery.inview.min.js'],
+				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'bower/jquery.inview/jquery.inview.min.js', 'static/lib/jquery.form-n-validate.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			}
 		},
@@ -23,9 +23,6 @@ module.exports = function(grunt) {
 		uglify: {
 			all: {
 				files: {
-					'contents/static/js/jquery.form-n-validate.min.js': [
-						'static/lib/jquery.form-n-validate.js'
-					],
 					'contents/static/js/mailchimp.min.js': [
 						'static/lib/mailchimp.js'
 					],
