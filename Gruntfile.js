@@ -23,6 +23,9 @@ module.exports = function(grunt) {
 		uglify: {
 			all: {
 				files: {
+					'contents/static/js/jquery.form-n-validate.min.js': [
+						'static/lib/jquery.form-n-validate.js'
+					],
 					'contents/static/js/mailchimp.min.js': [
 						'static/lib/mailchimp.js'
 					],
