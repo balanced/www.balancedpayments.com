@@ -55,7 +55,7 @@ function mce_preload_check() {
 	}
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
-	script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+	script.src = '//downloads.mailchimp.com/js/jquery.form-n-validate.js';
 	head.appendChild(script);
 	try {
 		var validatorLoaded = jQuery("#fake-form").validate({});
@@ -81,7 +81,7 @@ function mce_init_form() {
 		var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
 		$("#mc-embedded-subscribe-form").unbind('submit'); //remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
 		options = {
-			url: 'http://balancedpayments.us2.list-manage.com/subscribe/post-json?u=30382d347d3689814ca424c89&id=c8d0241856&c=?',
+			url: '//balancedpayments.us2.list-manage.com/subscribe/post-json?u=30382d347d3689814ca424c89&id=c8d0241856&c=?',
 			type: 'GET',
 			dataType: 'json',
 			contentType: "application/json; charset=utf-8",
