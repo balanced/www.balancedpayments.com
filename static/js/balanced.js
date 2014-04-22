@@ -3,27 +3,13 @@
 (function(ctx) {
 	var balanced = ctx.balanced = {
 		menu: function() {
-			$(".toggle-child-menu").click(function(e) {
+			$(".toggle-child-menu, .sidebar-child-menu-left .icon-x").click(function(e) {
 				e.preventDefault();
 
 				$("body, html").css("overflow-x", "hidden");
-
-				$(".sidebar-menu-left ul li").removeClass("active");
-				$(this).parent("li").addClass("active");
-
-				var target = $(this).parent("li").attr("data-show");
-
-				$(".sidebar-child-menu-left ul").not("#" + target).css("display", "none");
-				$("#" + target).css("display", "block");
-				$(".global-wrapper, .sidebar-child-menu-left").addClass("expanded");
-			});
-
-			$(".close-child-menu-left a").click(function(e) {
-				e.preventDefault();
-
-				$("body, html").css("overflow-x", "visible");
-				$(".sidebar-menu-left ul li").removeClass("active");
-				$(".global-wrapper, .sidebar-child-menu-left").removeClass("expanded");
+				$(".sidebar-child-menu-left ul").not("#sidebar-child-menu-left-product").css("display", "none");
+				$("#sidebar-child-menu-left-product").css("display", "block");
+				$(".global-wrapper, .sidebar-child-menu-left").toggleClass("expanded");
 			});
 
 			var $menu = $('#menu'),
@@ -340,6 +326,54 @@
 			$(".calculator form input").on('input', function() {
 				calculateEstimatedRates();
 			});
+		},
+		international: function() {
+			function animateInView(elem, animation) {
+				$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+					if (isInView) {
+						$(elem).addClass(animation);
+					}
+				});
+			}
+
+			function resizeCover() {
+				var windowWidth = $(window).width();
+				if (windowWidth > 960) {
+					$(".background-image").css("background-size", windowWidth);
+				} else {
+					$(".background-image").css("background-size", "auto 510px");
+				}
+			}
+
+			// animate icons 
+			animateInView(".benefit1", "slide-up");
+			animateInView(".benefit2", "slide-up");
+
+			$('.forex-map').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+				if (isInView) {
+					$('.animate-cad').addClass('bounce-down');
+
+					setTimeout(function() {
+						$('.animate-eur').addClass('bounce-down');
+
+						setTimeout(function() {
+							$('.animate-brl').addClass('bounce-down');
+						}, 200);
+					}, 200);
+				}
+			});
+
+
+			// toggle currency list
+			$(".forex .view-all, .forex .close").click(function(e) {
+				e.preventDefault();
+				$(".currency-list").slideToggle(200);
+				$(".view-all").toggleClass("open");
+			});
+
+			// resize cover image. TODO: make it generally avaible to other pages.
+			resizeCover();
+			$(window).resize(resizeCover);
 		}
 	};
 }(window));

@@ -1,21 +1,11 @@
 body.layout-v4 {
+    .sl;
     position: relative;
     background: none;
-    font-family: NimbusSanNov-Med, arial, sans-serif;
-    font-size: 15px;
 
     a:visited, a:focus {
         text-decoration: none;
         outline: none;
-    }
-
-    .page-wrapper {
-        padding-left: 90px;
-    }
-
-    .container {
-        width: 930px;
-        padding-left: 90px;
     }
 
     .global-wrapper {
@@ -79,13 +69,11 @@ body.layout-v4 {
             margin: 0px;
 
             li {
+                .sl-sb;
                 border-bottom: 1px solid @gray8;
                 text-align: right;
                 text-transform: uppercase;
-                font-family: NimbusSanNovCon-Med, arial, sans-serif;
                 letter-spacing: 0.1em;
-                font-size: 14px;
-                line-height: 20px;
 
                 &:first-of-type {
                     border-top: 1px solid @gray7;
@@ -169,59 +157,7 @@ body.layout-v4 {
         }
     }
 
-    .sidebar-child-menu-left {
-        position: fixed;
-        left: -200px;
-        top: 0;
-        height: 100%;
-        width: 200px;
-        padding: 0px;
-        z-index: 9999;
-        background-color: @gray6;
-        .transition(left .3s ease-in-out);
-
-        &.expanded {
-            left: 0;
-        }
-
-        ul {
-            margin-top: 70px;
-            padding: 0px;
-            margin-left: 25px;
-            list-style-type: none;
-
-            li {
-                font-family: NimbusSanNov-reg, arial, sans-serif;
-                font-size: 15px;
-                padding: 0px;
-
-                a {
-                    color: @gray3;
-                    cursor: pointer;
-                    padding: 10px 0px 10px 0px;
-                    display: block;
-
-                    &:hover {
-                        color: @white;
-                    }
-                }
-            }
-        }
-    }
-
-    header {
-        .logo {
-            img {
-                margin: 17px 0px 15px 0px;
-            }
-        }
-
-        #site-nav {
-            float: right;
-        }
-    }
-
-    section {
+   section {
         margin: 0px;
 
         .box-pad-top {
@@ -250,10 +186,8 @@ body.layout-v4 {
         }
 
         .section-side-link {
+            .sl-sb;
             margin-top: 15px;
-            font-size: 13px;
-            line-height: 16px;
-            font-family: NimbusSanNov-SemBol, arial, sans-serif;
         }
 
         .spacer {
@@ -265,7 +199,6 @@ body.layout-v4 {
         .content {
             margin-left: 0px;
             margin-bottom: 100px;
-            padding-top: 50px;
         }
 
         .content-gold {
@@ -318,13 +251,12 @@ body.layout-v4 {
                 }
 
                 .box {
-                    width: 129px;
-                    padding: 10px 0px 10px 10px;
+                    width: 140px;
+                    height: 125px;
+                    padding: 10px;
                     background-color: @gray1;
                     float: left;
                     border-right: 1px solid @gray3;
-                    padding-top: 5px;
-                    height: 110px;
 
                     &.box-active {
                         h1 {
@@ -341,22 +273,17 @@ body.layout-v4 {
 
                     &.box-last {
                         border-right: 0px;
-                        width: 130px;
+                        width: 140px;
                     }
 
                     p {
                         color: @gray5;
-                        font-family: 'Droid Serif', serif;
-                        line-height: 18px;
-                        font-style: italic;
-                        font-size: 14px;
                     }
 
                     h1 {
-                        font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-                        margin: 0px;
+                        .sl-lg-sb;
                         color: @gray5;
-                        font-size: 28px;
+                        margin: 0px;
                     }
                 }
             }
@@ -365,17 +292,14 @@ body.layout-v4 {
         &.payment-schedule {
             .schedule-times {
                 .title {
+                    .sl-20-b;
                     border-top: 1px solid @gray3;
                     background-color: @curryYellow60;
                     padding: 15px;
                     color: @gray7;
-                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-                    font-size: 18px;
-                    letter-spacing: 0.1em;
                 }
 
                 h1, h2, h3 {
-                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
                     text-align: center;
                 }
 
@@ -393,8 +317,7 @@ body.layout-v4 {
                 }
 
                 h3 {
-                    font-size: 12px;
-                    font-family: NimbusSanNovCon-Med, arial, sans-serif;
+                    .sl-sm;
                     line-height: 0px;
                     margin-top: 10px;
                     color: @gray3;
@@ -425,11 +348,9 @@ body.layout-v4 {
                     thead {
                         tr {
                             th {
-                                color: @black;
+                                .sl-sm;
                                 border: 0px;
                                 padding: 10px;
-                                font-size: 12px;
-                                font-family: NimbusSanNovCon-Med, arial, sans-serif;
                                 letter-spacing: 0.1em;
                                 padding-left: 0px;
                             }
@@ -493,10 +414,8 @@ body.layout-v4 {
             }
 
             .footnote {
+                .sl;
                 margin-top: 5px;
-                color: @black;
-                font-size: 13px;
-                font-family: NimbusSanNov-Med, arial, sans-serif;
             }
         }
 
@@ -517,17 +436,12 @@ body.layout-v4 {
         }
 
         &.try-the-dashboard {
-            margin: 50px 0px 50px 0px;
+            margin: 0 0 100px 0px;
 
             p {
-                color: @black;
-                font-family: 'Droid Serif', serif;
-                font-style: italic;
-                font-size: 17px;
-            }
-
-            .btn {
-                margin-top: 15px;
+                .sl-lg-i;
+                color: @gray6;
+                padding-bottom: 30px;
             }
         }
     }
@@ -537,13 +451,8 @@ body.layout-v4 {
     .carousel-control {
         top: 55%;
         margin-top: 0px;
-        .border-radius(0);
         background: @white;
-        border: 1px solid @persianBlue100;
-        color: @persianBlue100;
         .opacity(100);
-        width: 48px;
-        height: 48px;
 
         &.right {
             right: 0px;
@@ -554,15 +463,15 @@ body.layout-v4 {
         }
 
         &:hover {
-            background-color: @black;
-            color: @white;
-            border: 2px solid @black;
+            i {
+                color: @gray5;    
+            }
         }
 
         i {
-            font-size: 46px;
+            font-size: 32px;
             width: inherit;
-            font-weight: bold;
+            color: @gray3;
         }
     }
 

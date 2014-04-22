@@ -20,23 +20,14 @@ body.payouts {
                 margin-bottom: 50px;
 
                 h3 {
-                    font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-                    font-weight: normal;
-                    font-style: normal;
-                    font-size: 22px;
-                    line-height: 24px;
-                    color: @black;
+                    .sl-20-sb;
                     display: block;
                     padding-top: 50px;
                     margin-bottom: 20px;
                 }
 
                 p {
-                    font-family: NimbusSanNov-Med, arial, sans-serif;
-                    font-weight: normal;
-                    font-style: normal;
-                    font-size: 15px;
-                    line-height: 22px;
+                    .sl;
                     color: @gray6;
                     text-align: right;
                 }
@@ -45,10 +36,7 @@ body.payouts {
                 .left, .right {
                     .process {
                         p {
-                            font-family: NimbusSanNov-SemBol, arial, sans-serif;
-                            font-size: 13px;
-                            line-height: 18px;
-                            color: @black;
+                            .sl-sb;
                         }
                     }
                 }
@@ -56,6 +44,10 @@ body.payouts {
                 .left {
                     padding-right: 29px;
                     border-right: 1px solid @gray3;
+
+                    > p {
+                        margin-left: 20px;
+                    }
 
                     h3, p {
                         text-align: right;
@@ -71,20 +63,20 @@ body.payouts {
                             background-position: 0px 0px;
                             background-size: 240px;
                             float: right;
-                            margin-left: 19px;
+                            margin-left: 18px;
                             margin-bottom: 30px;
                         }
 
                         p:nth-of-type(1) {
-                            padding-top: 55px;
+                            padding-top: 45px;
                         }
 
                         p:nth-of-type(2) {
-                            padding-top: 112px;
+                            padding-top: 80px;
                         }
 
                         p:nth-of-type(3) {
-                            padding-top: 85px;
+                            padding-top: 55px;
                         }
                     }
                 }
@@ -112,25 +104,22 @@ body.payouts {
                         }
 
                         p:nth-of-type(1) {
-                            padding-top: 47px;
+                            padding-top: 40px;
                         }
 
                         p:nth-of-type(2) {
-                            padding-top: 105px;
+                            padding-top: 70px;
                         }
 
                         p:nth-of-type(3) {
-                            padding-top: 80px;
+                            padding-top: 60px;
                         }
                     }
                 }
             }
 
             .btn {
-                font-size: 18px;
-                line-height: 20px;
-                padding: 6px 9px;
-                border: 3px solid @black;
+                margin-left: -60px;
             }
         }
 
@@ -148,7 +137,7 @@ body.payouts {
             .bank-account-info {
                 .teeth {
                     > div {
-                        background: @white;
+                        background: @gray1;
                     }
                 }
             }
@@ -162,30 +151,20 @@ body.payouts {
             }
 
             .title {
-                font-family: NimbusSanNovConD-Bol,arial,sans-serif;
-                font-size: 18px;
-                letter-spacing: .1em;
+                .sl-20-b;
                 padding: 25px 25px 5px 25px;
                 color: @gray5;
-                text-transform: uppercase;
             }
 
             .subtitle {
-                font-family: NimbusSanNov-SemBol,arial,sans-serif;
-                font-size: 13px;
-                color: @black;
+                .sl-sb;
                 padding: 5px 25px 35px 25px;
-                line-height: 16px;
             }
 
             .bank-info-section {
                 padding: 25px 0 25px 0;
                 margin: 0 25px;
                 border-top: 1px solid @gray3;
-
-/*                &:last-child, &:last-of-type, &.last {
-                    border-bottom: 0;
-                }*/
 
                 &.success {
                     .success-icon {
@@ -197,7 +176,7 @@ body.payouts {
                     }
 
                     .bank-name {
-                         font-family: NimbusSanNov-SemBol, arial, sans-serif;
+                        .sl-sb;
                          float: right;
                          position: relative;
                     }
@@ -211,11 +190,13 @@ body.payouts {
                     .description {
                         > span {
                           color: @imperialRed100;
-
-                          span {
-                            font-family: NimbusSanNov-Bol, arial, sans-serif;
-                          }
                         }
+                    }
+
+                    .bank-name {
+                        .sl-sb;
+                         float: right;
+                         position: relative;
                     }
                 }
 
@@ -228,26 +209,19 @@ body.payouts {
                 }
 
                 h6 {
-                    color: @black;
+                    .sl-sb;
                     margin: 0 15px;
-                    font-family: NimbusSanNov-SemBol, arial, sans-serif;
-                    font-size: 13px;
-                    line-height: 18px;
-                    font-weight: normal;
                 }
 
                 input {
+                    .sl-20-sb;
                     background: @gray2;
-                    color: @black;
                     margin: 0;
                     border: none;
                     outline: none;
                     .border-radius(0);
-                    line-height: 30px;
-                    font-size: 18px;
                     height: 30px;
-                    font-family: NimbusSanNov-Med,arial,sans-serif;
-                    width: 50%;
+                    width: 95%;
                     padding: 4px 10px;
                 }
 
@@ -258,9 +232,7 @@ body.payouts {
                 }
 
                 .description,.bank-name {
-                    font-family: NimbusSanNov-Med, arial, sans-serif;
-                    font-size: 13px;
-                    color: #000;
+                    .sl;
                 }
 
                 .bank-name {
@@ -343,10 +315,8 @@ body.payouts {
             }
 
             .footnote {
+                .sl;
                 margin-top: 5px;
-                color: @black;
-                font-size: 13px;
-                font-family: NimbusSanNov-Med, arial, sans-serif;
             }
         }
     }

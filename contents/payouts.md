@@ -13,33 +13,33 @@ howItWorks:
   body: Integrate Balanced's full marketplace solution to manage your processing and payout needs. You may also use payouts<br />as a stand-alone product.
 
 withProcessing:
-  title: THE FULL MARKETPLACE SOLUTION
-  body: With Balanced's card processing and ACH debits,<br />money from your buyers is placed into an order-specific <br />escrow on behalf of the seller until you're ready to pay out.
-  process1: Debit the <br />buyer's credit card<br />or bank account
+  title: The full marketplace solution
+  body: With Balanced's card processing and ACH debits, money from your buyers is placed into an order-specific escrow on behalf of the seller until you're ready to pay out.
+  process1: Debit the buyer's credit card or bank account
   process2: Funds are grouped into order-specific escrows, linking the buyer and seller together
-  process3: Pay out your<br />seller(s) and collect<br />your marketplace fee
+  process3: Pay out your seller(s) and collect your marketplace fee
 
 payoutsOnly:
-  title: PAYOUTS ONLY
-  body: Simply fund your escrow (held by Balanced)<br />with your marketplace's bank account to pay<br />your sellers.
+  title: Payouts only
+  body: Simply fund your escrow (held by Balanced) with your marketplace's bank account to pay your sellers.
   process1: Preload your escrow balance by debiting the marketplace's bank account
-  process2: Funds are deposited<br />in the general<br />escrow balance in <br />4 business days
+  process2: Funds are deposited in the general escrow balance in 4 business days
   process3: Pay out your sellers from your general escrow balance
 
 viewAPaymentsScenario:
-  button: VIEW A PAYMENTS SCENARIO
+  button: View a payments scenario
 
 paymentSchedule:
   title: Payment schedule
   body: Balanced will batch payouts for submission each weekday. The ACH network operates only on banking days, so submission will not occur on bank holidays.
 
 submissionTimes:
-  title: ACH PAYOUTS SUBMISSION TIMES
+  title: ACH Payouts submission times
   time: "3:00"
   timezone: PM PACIFIC
 
 bankHolidays:
-  title: BANK HOLIDAYS (2014)
+  title: Bank holidays (2014)
   list:
     - label: row0
       row:
@@ -101,7 +101,7 @@ payoutsPricing:
 
 tryTheDashboard:
   body: Get started today.
-  button: TRY THE DASHBOARD
+  button: Try the dashboard
 
 bankAcctInfo:
   title: Test Bank Account Form

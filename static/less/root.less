@@ -1,162 +1,209 @@
 @import "bootstrap-2.3/bootstrap.less";
 @import "bower/strapped/static/less/strapped.less";
 
-@footerLinkColor: @gray3;
+@pageWidth: 840px;
+@largePageWidth: 1008px;
 
-body {
-  width: 100%;
+.layout-v4 {
+
+  &.larger {
+    .logo {
+      display: none !important;
+    }
+  }
+
+  .container {
+    width: @pageWidth;
+    padding-left: 0;
+
+    &.container-chunky {
+        width: @pageWidth;
+        margin-bottom: 10px;
+    }
+  }
+
+  .site-header {
+    z-index: 1000;
+    height: 50px;
+
+    .header-menu {
+      z-index: 2;
+      position: absolute;
+      left: 40px;
+      top: 25px;
+
+      a {
+        color: @black;
+        padding-bottom: 3px;
+
+        &:not(.hamburger) {
+          margin-right: 20px;  
+        }
+
+        &.toggle-child-menu {
+          cursor: pointer;
+        }
+
+        .icon-menu {
+          margin-right: 5px;
+          margin-top: -1px;
+        }
+
+        &:not(.hamburger):hover {
+          border-bottom: 1px solid @black;
+        }
+      }
+    }
+
+    .logo {
+      position: absolute;
+      left: 49%;
+      top: 18px;
+      width: 30px;
+      z-index: 2;
+    }    
+  }
+
+  #site-nav {
+      float: right;
+  }
 }
 
-// our grid is 24 columns - total 1065px
-.standard-font-props {
+h2 {
+  font-family: @baseFontFamilySemiBold;
+  font-size: 20px;
   font-weight: normal;
-  text-transform: inherit;
-  letter-spacing: normal;
+  color: #000;
+  .underline(4px);
 }
 
-.header1 {
-  .standard-font-props;
-
-  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
-  font-size: 30px;
-  color: @gray4;
+h3 {
+  font-family: @baseFontFamilyReg;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38/32;
+  color: #4d4d4d;
+  padding-bottom: @mainMargin / 2;
 }
 
-.header2 {
-  .standard-font-props;
-
-  font-family: 'Droid Serif', serif;
-  font-style: italic;
-  font-size: 14px;
-  color: @black;
-}
-
-.header3 {
-  .standard-font-props;
-
-  font-family: nimbussannov-sembol, arial, sans-serif;
+h4 {
+  font-family: @baseFontFamilySemiBold;
   font-size: 15px;
-  color: @black;
-}
-
-.header4 {
-  .standard-font-props;
-
-  font-family: nimbussannov-med, arial, sans-serif;
-  font-size: 13px;
-  color: @gray5;
-}
-
-.header5 {
-  .standard-font-props;
-
-  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
-  font-size: 28px;
-  color: @gray4;
-}
-
-.header5d {
-  .standard-font-props;
-
-  font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-  font-size: 28px;
-  color: @gray4;
-}
-
-.header6 {
-  .standard-font-props;
-
-  font-family: 'Droid Serif', serif;
-  font-size: 16px;
-  color: @black;
-}
-
-.header7 {
-  .standard-font-props;
-
-  font-family: NimbusSanNovCon-Med, arial, sans-serif;
-  font-size: 12px;
-  color: @black;
-  letter-spacing: 0.1em;
-}
-
-.body1 {
-  .standard-font-props;
-
-  font-family: nimbussannov-reg, arial, sans-serif;
-  font-size: 44px;
-  color: @gray6;
-  line-height: 52px;
-}
-
-.body2 {
-  .standard-font-props;
-
-  font-family: nimbussannov-med, arial, sans-serif;
-  font-size: 15px;
-  color: @gray5;
+  font-weight: normal;
+  color: #000;
+  .underline(1px, 1em);
+  padding-bottom: 0.75em;
+  margin-bottom: 1em;
 }
 
 .body3 {
-  .standard-font-props;
-
-  font-family: 'Droid Serif', serif;
-  font-style: italic;
-  font-size: 24px;
-  line-height: 36px;
+  .sl-lg-i;
   color: @white;
 }
 
 .button-text1 {
-  font-family: NimbusSanNovCon-Bol, arial, sans-serif;
-  font-size: 18px;
-  color: @black;
-  letter-spacing: 0.1em;
+  .sl-md-sb;
 }
 
 .button-text2 {
-  font-family: NimbusSanNovConD-Bol, arial, sans-serif;
-  font-size: 18px;
+  .sl-md-sb;
   color: @white;
-  letter-spacing: 0.1em;
 }
 
-.nav1 {
-  .standard-font-props;
-
-  font-family: NimbusSanNovCon-Med, arial, sans-serif;
-  font-size: 12px;
-  color: @white;
-  letter-spacing: 0.1em;
+.sub {
+  p {
+    margin: .5em 0 1.5em;
+  }
 }
 
-.nav2 {
-  .standard-font-props;
+section {
+  @sectionTitleLineWidth: 5px;
+  @sectionTitlePadding: 8px;
 
-  font-family: nimbussannov-med, arial, sans-serif;
-  font-size: 13px;
-  color: @gray5;
-}
+  .section-title {
+    width: 270px;
 
-.nav3 {
-  .standard-font-props;
+    .title-wrapper {
+      margin-top: @sectionTitleLineWidth + 5;
+      margin-left: 0;
 
-  font-family: nimbussannov-sembol, arial, sans-serif;
-  font-size: 13px;
-  color: @black;
-}
+      span {
+        .sl-16-sb;
+        line-height: 23px;
+        border-top: @sectionTitleLineWidth solid @gray7;
+        padding-top: @sectionTitlePadding;
+      }
 
-body, html {
-  background: @contentBackground;
-}
+      p {
+        .sl;
+        color: @gray7;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+    }
 
-header {
-  .logo {
-    img {
-      margin: 50px 0 0 16px;
-      width: 130px;
+    .section-side-body {
+      color: @gray7;
     }
   }
+}
+
+.sidebar-child-menu-left {
+    position: absolute;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    padding: 0px;
+    z-index: 9999;
+    background-color: @gray7;
+    .transition(left .3s ease-in-out);
+
+    .icon-x {
+      color: @gray3;
+      position: absolute;
+      right: 15px;
+      top: 25px;
+
+      &:hover {
+        color: @white;
+        cursor: pointer;
+      }
+    }
+
+    .divider {
+      padding: 14px 0;
+    }
+
+    a.sm {
+      padding: 5px 0;
+    }
+
+    &.expanded {
+        left: 0;
+    }
+
+    ul {
+        padding: 0px;
+        margin: 40px 25px;
+        list-style-type: none;
+
+        li {
+            .sl;
+            padding: 0px;
+
+            a {
+                color: @gray3;
+                cursor: pointer;
+                padding: 8px 0;
+                display: block;
+
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
+    }
 }
 
 @media screen {
@@ -214,19 +261,17 @@ header {
 
   [id$="menu"] {
     float: left;
-
-    .nav1;
-    text-transform: uppercase;
+    .sl-sb;
     text-align: center;
-
     background-color: @black;
     border-right: 1px solid @gray3;
+
     &:last-child {
       border-right: 0;
     }
 
     a {
-      color: white;
+      color: @white;
       padding: 20px 25px;
       display: block;
       border: none;
@@ -241,47 +286,34 @@ header {
 }
 
 .site-footer {
-  background-color: @gray6;
-
-  .flogo {
-    float: left;
-    padding: 20px;
-    .img {
-      .cssicon(
-        @url: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAMAAAC+oj0CAAAAV1BMVEVymix4oi/vQDXjPDJ4oi94oi/vQDXvQDXvQDXvQDV4oi91ni7vQDXqPjN4oi/foRLanRHopxNznC3mPTPopxPopxMAAABwmCzgPDHanRHopxN4oi/vQDXwPhJhAAAAF3RSTlPbICDbYBBQYEAQgLOAs1DH7hDHx6CAAHwvTFAAAABmSURBVHja1cjXDYAwDABR01sCpAEh2X9ObCFkJLMA93cPSpcPtb0a92QLqDLWsdYJA8iUY7aJulkzTzdr4p55Jp1gUM61uOzWjg1sn/2Iw7IEyeHEguCVeBUciaNgT+wFG49qnrsAe+cllBc1FLYAAAAASUVORK5CYII='),
-        @width: 22px,
-        @height: 20px,
-        @display: block
-      );
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
+  background-color: @white;
+  
   .section-title {
-    .nav1;
-    text-transform: uppercase;
+    .sl-sm;
+    color: @gray5;
     display: inline-block;
     padding: 20px 0 10px 0;
   }
+
   .footer-link {
-    .nav2;
     display: inline-block;
-    padding: 20px 0px 0px 20px;
+    padding: 18px 8px;
 
     &:first-of-type {
         padding-left: 0px;
     }
 
     a {
-        color: @gray3;
+        .sl-sm;
+        color: @gray5;
 
         &:hover {
-            color: @white;
+            color: @black;
         }
     }
   }
   .copyright-notice {
+    .sl-sm;
     padding: 20px 5px 20px 5px;
   }
 
@@ -299,10 +331,10 @@ header {
       }
 
       a {
-        .nav2;
+        color: @gray5;
+
         &:hover {
           color: @white;
-          text-decoration: none;
         }
       }
     }
@@ -322,43 +354,12 @@ header {
 
   a.icon {
     float: right;
-    margin: 17px 13px;
-    font-size: 23px;
-    color: @gray4;
+    margin: 17px 10px;
+    font-size: 20px;
+    color: @gray3;
 
     &:hover {
-        color: @white;
-    }
-  }
-}
-
-.try-it {
-  .btn {
-    width: 127px;
-
-    .button-text2;
-
-    border: none;
-    background: black;
-    border-color: @black;
-    border-radius: 0;
-    vertical-align: middle;
-    color: @white;
-    text-decoration: none;
-    padding: 11px 19px;
-    text-shadow: none;
-    font-weight: normal;
-    &:hover {
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-image: none;
-      background-repeat: no-repeat;
-      filter: none;
-      background-color: @egyptianBlue100;
-      border-color: @black;
+        color: @black;
     }
   }
 }
@@ -382,61 +383,52 @@ header {
   }
 }
 
+.page-header {
+  width: 100%;
+  min-width: 660px;
+  margin-top: -90px;
+  padding: 8% 0;
+  height: 335px;
+  position: relative;
+  
+  .title-image {
+    background-size: contain;
+    width: 330px;
+    height: 330px;
+    margin: 0 auto;
+  }
+
+  .background-image {
+    min-width: 100%;
+    min-height: 100%;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
 .page-title {
   h1 {
-    .header2;
+    .sl;
+    color: @gray6;
     margin: 0;
-    border-top: 1px solid @gray3;
     padding-top: 50px;
   }
 }
 
 .page-subtitle {
+  .sl-44-lt;
   margin-top: 15px;
   margin-bottom: 40px;
-  .body1;
-  color: @gray6;
 }
 
-.legal {
-    font-size: @baseFontSize;
-    font-family: 'nimbussannov-med', arial, sans-serif;
-    font-size: 15px;
-    line-height: 22px;
-
-    .page-title {
-        h1 {
-            font-weight: normal;
-            letter-spacing: normal;
-            font-family: nimbussannov-reg,arial,sans-serif;
-            font-size: 44px;
-            font-style: normal;
-            color: @gray7;
-        }
-    }
-
-    strong, b {
-        color: @black;
-        font-family: NimbusSanNov-SemBol, arial, sans-serif;
-        font-weight: normal;
-    }
-
-    p {
-        margin-bottom: 20px;
-    }
-
-    li {
-        line-height: 22px;
-    }
-
-    h3 {
-        font-family: NimbusSanNov-SemBol, arial, sans-serif;
-        font-weight: normal;
-        font-size: 24px;
-        color: @black;
-        line-height: 28px;
-        margin-top: 50px;
-    }
+.page-summary {
+  .sl-20-i;
+  color: @gray6;  
 }
 
 .pace .pace-progress {
@@ -455,9 +447,11 @@ header {
 
 @import "index.less";
 @import "about.less";
+@import "legal.less";
 @import "ach-debits.less";
 @import "pricing.less";
 @import "customers.less";
+@import "international-payments.less";
 @import "open.less";
 @import "payouts.less";
 @import "card-processing.less";

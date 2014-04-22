@@ -62,6 +62,6 @@ cardProcessingPricing:
 
 tryTheDashboard:
   body: Ready to get started?
-  button: TRY THE DASHBOARD
+  button: Try the dashboard
 
 ---

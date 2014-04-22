@@ -4,8 +4,8 @@ template: index.html
 body_class: larger
 
 try_out:
-  heading: Payments for Marketplaces
-  link: TRY THE DASHBOARD
+  heading: Payments for marketplaces
+  link: Try the dashboard
 
 intro:
   - heading: Charge cards
@@ -158,6 +158,6 @@ pricing:
 
 bottom:
   heading: Solve your payments problem today.
-  link: TRY THE DASHBOARD
+  link: Try the dashboard
 
 ---
