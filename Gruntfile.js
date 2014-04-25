@@ -396,7 +396,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('verify', ['jshint', 'jsbeautifier:verify']);
 
 	// Register the main build/dev tasks
-	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'img', 'hashres', 'htmlmin:dist']);
 
 	grunt.registerTask('dev', ['_builddev', 'wintersmithDevConfig', 'wintersmith:dev', 'connect:server', 'open', 'watch']);
 
