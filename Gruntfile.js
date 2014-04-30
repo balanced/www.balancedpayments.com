@@ -132,6 +132,14 @@ module.exports = function(grunt) {
 					src: ['**'],
 					dest: 'contents/images'
 				}]
+			},
+			notfound: {
+				files: [{
+					cwd: 'bower/strapped/notfound',
+					expand: true,
+					src: ['**'],
+					dest: 'build/notfound'
+				}]
 			}
 		},
 
