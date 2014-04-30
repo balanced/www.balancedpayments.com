@@ -386,10 +386,9 @@ section {
 .page-header {
   width: 100%;
   min-width: 660px;
-  margin-top: -90px;
   padding: 8% 0;
-  height: 335px;
   position: relative;
+  margin-top: -55px !important;
   
   .title-image {
     background-size: contain;
@@ -402,6 +401,9 @@ section {
     min-width: 100%;
     min-height: 100%;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -428,7 +430,8 @@ section {
 
 .page-summary {
   .sl-20-i;
-  color: @gray6;  
+  color: @gray6;
+  margin-left: 20px;
 }
 
 .pace .pace-progress {
@@ -445,6 +448,192 @@ section {
   display: none;
 }
 
+.tag {
+  .sl-sm-sb;
+  float: left;
+  color: @white;
+  background-image: url(/images/launch_tag.png);
+  background-size: contain;
+  width: 75px;
+  height: 143px;
+  text-align: center;
+
+  div {
+    padding: 10px;
+
+    &:first-of-type {
+      padding: 5px 10px;
+      border-bottom: 1px solid @white;  
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    line-height: 14px;
+  }
+
+  .month {
+    .sl-sb;
+    color: @white;
+    line-height: 18px;
+  }
+
+  .day {
+    .sl-44-sb;
+    line-height: initial;
+    color: @white;
+  }
+}
+
+.intro-image {
+  background-size: contain;
+  width: 840px;
+  position: relative;
+}
+
+.folded-box {
+  position: relative;
+  padding: 30px 50px 30px 30px;
+  margin-top: 54px;
+  background: @gray1;
+  border-bottom: 2px solid @gray2;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 50px 50px 0;
+    border-style: solid;
+    border-color: @gray2 @white;
+  }
+
+  .title {
+    .sl-sb;
+  }
+}
+
+.code-sample {
+  padding-top: 56px;
+
+  .title {
+    background-color: @gray7;
+    .sl-sm-sb;
+    color: @white;
+    padding: 4px 15px;
+  }
+
+  pre {
+    padding: 10px 15px;
+    border-radius: 0;
+    border: 0;
+    background-color: @gray1;
+  }
+  
+  .note {
+    .sl-sm;
+  }
+}
+
+.feedback {
+  .sl-sb;
+  background-color: @gray8;
+  padding: 30px;
+  color: @white;
+
+  .title {
+    .sl-16-sb;
+    line-height: 20px;
+    color: @white;
+  }
+
+  .send-email {
+    margin: 0;
+  }
+
+  #mce-success-response {
+    .sl-16-sb;
+    color: @white;
+  }
+
+  #mce-error-response {
+    padding-top: 10px;
+  }
+
+  #mc_embed_signup {
+    input {
+      &[type="email"] {
+        width: 206px;
+        padding-left: 10px;
+      }
+
+      &, &:focus {
+        border-color: transparent;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;        
+      }
+
+      &:focus:invalid {
+        color: @black;
+      }
+      &.mce_inline_error {
+        color: @imperialRed100;
+      }
+    }
+
+    div.mce_inline_error {
+      display: none !important;
+    }
+  }
+}
+
+.faqs {
+  background-color: @gray1;
+  padding: 30px;
+
+  > div {
+    margin: 0;
+  }
+
+  .faq:nth-of-type(odd) {
+    .pull-right;
+  }
+
+  .title {
+    .sl-16-sb;
+    padding-bottom: 20px;
+  }
+
+  .a {
+    padding-bottom: 20px;
+    color: @gray6;
+  }
+}
+
+.table-condensed {
+  margin-bottom: 0;
+
+  thead {
+    tr > th {
+      background-color: @gray7;
+      .sl-sm-sb;
+      color: @white;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  tbody {
+    .sl-sm;
+
+    tr > td {
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: @white;
+      border-top: 1px solid @gray1;
+    }
+  }
+}
 @import "index.less";
 @import "about.less";
 @import "legal.less";
@@ -452,6 +641,7 @@ section {
 @import "pricing.less";
 @import "customers.less";
 @import "international-payments.less";
+@import "push-to-card.less";
 @import "open.less";
 @import "payouts.less";
 @import "card-processing.less";

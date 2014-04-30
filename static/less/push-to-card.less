@@ -1,0 +1,100 @@
+.push-to-card {
+	.header-menu {
+		a {
+			color: @white !important;
+
+	        &:not(.hamburger):hover {
+	          border-bottom: 1px solid @white !important;
+	        }
+		}
+	}
+
+	.page-header {
+		.title-image {
+			background-image: url(/images/push-to-card/headline_push_to_card.png);
+		}
+
+		.background-image {
+			background-image: url(/images/push-to-card/push_to_card_bg.jpg);
+		}
+	}
+
+	.intro-image {
+		height: 716px;
+		background-image: url(/images/push-to-card/push_to_card_animation_bg.png);
+
+		.sidebox {
+			padding: 40px;
+			background-color: rgba(255, 255, 255, 0.6);
+			position: absolute;
+
+			&.pull-left {
+				bottom: 0;	
+			}
+
+			&.pull-right {
+				right: 0;
+			}
+
+			.section-title {
+				border-top: none;
+			}
+		}
+	}
+
+	.benefit {
+		// opacity: 0;
+		.icon-card {
+			font-size: 44px;
+			margin-left: 5px;
+			margin-top: -12px;
+		}
+
+		.card-number {
+			.sl-44-lt;
+			color: @gray3;
+			padding: 9px;
+			margin-top: 30px;
+			background-color: @white;
+			border: 1px solid @gray1;
+			position: relative;
+
+			.icon-checkmark {
+				font-size: 44px;
+				color: @pineGreen60;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+		}
+
+		.card-meta {
+			> div {
+				display: inline-block;
+				margin: 10px 10px 0 0;
+
+				span:first-of-type {
+					color: @gray5;
+				}
+			}
+		}
+	}
+
+	.pricing {
+		padding-top: 56px;
+		text-align: center;
+
+		.title {
+			.sl-sb;
+			padding-bottom: 20px;	
+		}
+
+		.pricing-image {
+			background-image: url(/images/push-to-card/push_to_card_pricing.png);
+			background-size: contain;
+			width: 203px;
+			height: 84px;
+			margin: 0 auto;
+		}
+	}
+}

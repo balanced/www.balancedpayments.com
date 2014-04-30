@@ -1,6 +1,23 @@
 /*global testimonials:true */
 
 (function(ctx) {
+	function animateInView(elem, animation) {
+		$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			if (isInView) {
+				$(elem).addClass(animation);
+			}
+		});
+	}
+
+	function resizeCover() {
+		var windowWidth = $(window).width();
+		if (windowWidth > 960) {
+			$(".background-image").css("background-size", windowWidth);
+		} else {
+			$(".background-image").css("background-size", "auto 510px");
+		}
+	}
+
 	var balanced = ctx.balanced = {
 		menu: function() {
 			$(".toggle-child-menu, .sidebar-child-menu-left .icon-x").click(function(e) {
@@ -328,28 +345,11 @@
 			});
 		},
 		international: function() {
-			function animateInView(elem, animation) {
-				$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
-					if (isInView) {
-						$(elem).addClass(animation);
-					}
-				});
-			}
-
-			function resizeCover() {
-				var windowWidth = $(window).width();
-				if (windowWidth > 960) {
-					$(".background-image").css("background-size", windowWidth);
-				} else {
-					$(".background-image").css("background-size", "auto 510px");
-				}
-			}
-
 			// animate icons 
 			animateInView(".benefit1", "slide-up");
 			animateInView(".benefit2", "slide-up");
 
-			$('.forex-map').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView) {
 					$('.animate-cad').addClass('bounce-down');
 
@@ -374,6 +374,9 @@
 			// resize cover image. TODO: make it generally avaible to other pages.
 			resizeCover();
 			$(window).resize(resizeCover);
+		},
+		pushToCard: function() {
+			animateInView(".benefit", "slide-up");
 		}
 	};
 }(window));
