@@ -20,8 +20,17 @@
 	}
 
 	.intro-image {
+		width: 100%;
 		height: 716px;
-		background-image: url(/images/push-to-card/push_to_card_animation_bg.png);
+		background-color: @persianBlue20;
+		position: relative;
+
+		.clip {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			clip: rect(0px, 840px, 716px, 0px);
+		}
 
 		.sidebox {
 			padding: 40px;
@@ -29,32 +38,81 @@
 			position: absolute;
 
 			&.pull-left {
-				bottom: 0;	
+				bottom: 0;
+				height: 283px;
 			}
 
 			&.pull-right {
 				right: 0;
+				height: 263px;
 			}
 
 			.section-title {
 				border-top: none;
+				.title-wrapper {
+					opacity: 0;	
+				}
 			}
+		}
+
+		.money {
+			background-image: url(/images/push-to-card/money.png);
+			background-size: contain;
+			width: 77px;
+			height: 77px;
+			position: absolute;
+			top: 130px;
+			left: 230px;
+			z-index: 2;
+			opacity: 0;
+		}
+
+		.mp-icon {
+			background-image: url(/images/push-to-card/push_to_card_mp_icon.png);
+			background-size: contain;
+			width: 340px;
+			height: 165px;
+			position: absolute;
+			top: 84px;
+			left: 100px;
+			z-index: 1;
+		}
+
+		.card-in-hand-container {
+			position: absolute;
+			width: 332px;
+			height: 254px;
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+		}
+
+		.card-in-hand-icon {
+			background-image: url(/images/push-to-card/push_to_card_card_in_hand_icon.png);
+			background-size: contain;
+			width: 332px;
+			height: 254px;
 		}
 	}
 
 	.benefit {
-		// opacity: 0;
+		opacity: 0;
+
 		.icon-card {
 			font-size: 44px;
-			margin-left: 5px;
-			margin-top: -12px;
+			margin-left: 0px;
+			margin-top: -7px;
+		}
+
+		.title {
+			line-height: 30px;
 		}
 
 		.card-number {
 			.sl-44-lt;
 			color: @gray3;
 			padding: 9px;
-			margin-top: 30px;
+			margin-top: 25px;
 			background-color: @white;
 			border: 1px solid @gray1;
 			position: relative;
@@ -97,4 +155,130 @@
 			margin: 0 auto;
 		}
 	}
+}
+
+// animation classes
+
+.slide-down-right {
+	-webkit-animation-fill-mode: forwards;
+
+	&.money.first {
+	  .animation(slideDownRight, 2500ms, linear);
+	}
+
+	&.money.second {
+	  .animation(slideDownRight, 2500ms, linear, 300ms);
+	}
+
+	&.money.third {
+	  .animation(slideDownRight, 2500ms, linear, 600ms);
+	}
+}
+
+.slide-in {
+	&.mp-icon {
+		.animation(slideInRight, 300ms, ease-in, 200ms);
+	}
+	&.card-in-hand-icon {
+		.animation(slideInLeft, 300ms, ease-in, 400ms);
+	}
+}
+
+.shake {
+  .animation(shake, 250ms, ease-in, 1000ms, 2);
+}
+
+// animations
+@-webkit-keyframes slideDownRight { .slideDownRight }
+@-moz-keyframes slideDownRight { .slideDownRight }
+@-ms-keyframes slideDownRight { .slideDownRight }
+@-o-keyframes slideDownRight { .slideDownRight }
+@keyframes slideDownRight { .slideDownRight }
+
+.slideDownRight() {
+  0% {
+  	opacity: 0;
+    .transform(scale(0.3));
+  }
+
+  5% {
+  	opacity: 1;
+  	.transform(scale(1.05));
+  }
+
+  7% {
+  	opacity: 1;
+	.transform(scale(0.9));
+  }
+
+  18% {
+  	opacity: 1;
+  }
+
+  36% {
+  	opacity: 0;
+    .transform(translate(350px, 350px));
+  }
+  100% {
+  	opacity: 0;
+    .transform(translate(350px, 350px));
+    .transform(scale(1));
+  }
+}
+
+@-webkit-keyframes slideInLeft { .slideInLeft }
+@-moz-keyframes slideInLeft { .slideInLeft }
+@-ms-keyframes slideInLeft { .slideInLeft }
+@-o-keyframes slideInLeft { .slideInLeft }
+@keyframes slideInLeft { .slideInLeft }
+
+.slideInLeft() {
+  0% {
+  	opacity: 0;
+    .transform(translate(100%));
+  }
+
+  50% {
+  	opacity: 0;
+  }
+
+  100% {
+  	opacity: 1;
+    .transform(translateX(0));
+  }
+}
+
+@-webkit-keyframes slideInRight { .slideInRight }
+@-moz-keyframes slideInRight { .slideInRight }
+@-ms-keyframes slideInRight { .slideInRight }
+@-o-keyframes slideInRight { .slideInRight }
+@keyframes slideInRight { .slideInRight }
+
+.slideInRight() {
+  0% {
+  	opacity: 0;
+    .transform(translate(-100%));
+  }
+
+  100% {
+  	opacity: 1;
+    .transform(translateX(0));
+  }
+}
+
+@-webkit-keyframes shake { .shake }
+@-moz-keyframes shake { .shake }
+@-ms-keyframes shake { .shake }
+@-o-keyframes shake { .shake }
+@keyframes shake { .shake }
+
+.shake() {
+  0%, 50%, 100% {
+    .transform(rotate(0deg));
+  }
+
+  25%, 75% {
+    .transform(rotate(3deg));
+	.transform-origin(50%, 50%);
+  }
 }

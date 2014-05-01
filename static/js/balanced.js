@@ -9,6 +9,15 @@
 		});
 	}
 
+	function fadeInInView(elem) {
+		$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			if (isInView) {
+				console.log('in view');
+				$(elem).fadeIn(1000);
+			}
+		});
+	}
+
 	function resizeCover() {
 		var windowWidth = $(window).width();
 		if (windowWidth > 960) {
@@ -57,6 +66,8 @@
 				$this.toggleClass('active').next('ul').toggleClass('active');
 			});
 
+			resizeCover();
+			$(window).resize(resizeCover);
 			// $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 		},
 		achDebits: function() {
@@ -371,12 +382,31 @@
 				$(".view-all").toggleClass("open");
 			});
 
-			// resize cover image. TODO: make it generally avaible to other pages.
-			resizeCover();
-			$(window).resize(resizeCover);
 		},
 		pushToCard: function() {
 			animateInView(".benefit", "slide-up");
+
+			function loop() {
+				$('.money.first, .money.second, .money.third').addClass("slide-down-right");
+				$('.card-in-hand-container').addClass("shake");
+
+				setTimeout(function(){
+					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
+					$('.card-in-hand-container').removeClass("shake");
+					requestAnimationFrame(loop);
+				}, 2000);
+			}
+
+			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+				$('.title-wrapper').animate({opacity: 1}, 1000);
+				$('.mp-icon, .card-in-hand-icon').addClass("slide-in");
+
+				setTimeout(function() {
+					$('.mp-icon, .card-in-hand-icon').removeClass("slide-in");
+					loop();	
+				}, 500)				
+			});
+
 		}
 	};
 }(window));
