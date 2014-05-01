@@ -36,23 +36,29 @@
 				</div>
 
 				<div class="intro-image large-bottom-margin">
-					<div class="money"></div>
-					<section class="sidebox pull-left">
-						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span5">
-								<span>{{page.metadata.introTextLeft.title}}</span>
-								<p>{{page.metadata.introTextLeft.body}}</p>
+					<div class="clip">
+						<div class="money first"></div>
+						<div class="money second"></div>
+						<div class="money third"></div>
+						<div class="mp-icon"></div>
+						<div class="card-in-hand-container"><div class="card-in-hand-icon"></div></div>
+						<section class="sidebox pull-left">
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper span5">
+									<span>{{page.metadata.introTextLeft.title}}</span>
+									<p>{{page.metadata.introTextLeft.body}}</p>
+								</div>
 							</div>
-						</div>
-					</section>
-					<section class="sidebox pull-right">
-						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span5">
-								<span>{{page.metadata.introTextRight.title}}</span>
-								<p>{{page.metadata.introTextRight.body}}</p>
+						</section>
+						<section class="sidebox pull-right">
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper span5">
+									<span>{{page.metadata.introTextRight.title}}</span>
+									<p>{{page.metadata.introTextRight.body}}</p>
+								</div>
 							</div>
-						</div>
-					</section>
+						</section>
+					</div>
 				</div>
 
 				<section>
@@ -138,7 +144,7 @@ curl https://api.balancedpayments.com/cards <span class="se">\</span>
 							<p class="title">{{page.metadata.feedback.subscribe}}</p>
 
 							<div id="mc_embed_signup">
-								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=c8d0241856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=26ef23e4ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="26ef23e4ef" novalidate>
 									<div class="mc-field-group">
 										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
 										<input class="btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
@@ -171,5 +177,7 @@ curl https://api.balancedpayments.com/cards <span class="se">\</span>
 	</div>
 </div>
 
+<script src="/static/js/customer-lib.min.js"></script>
+<script src="/static/js/mailchimp.min.js"></script>
 <script type="text/javascript">$(balanced.pushToCard)</script>
 {% endblock %}
