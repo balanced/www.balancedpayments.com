@@ -384,14 +384,14 @@
 		},
 		pushToCard: function() {
 			// display github issues
-            var repos = {};
-            var repos_length = 0;
-            var count = 0;
+			var repos = {};
+			var repos_length = 0;
+			var count = 0;
 
-			var populateIssues = function (issues) {
-                count ++;
-                var open_count = 0;
-                var closed_count = 0;
+			var populateIssues = function(issues) {
+				count++;
+				var open_count = 0;
+				var closed_count = 0;
 
 				_.each(issues, function(issue) {
 					_.each(issue.labels, function(label) {
@@ -402,69 +402,73 @@
 								repos[repo_name] = {};
 							}
 
-                            if (!_.has(repos[repo_name], 'issues')) {
-                                repos[repo_name]['issues'] = {};
-                            }
+							if (!_.has(repos[repo_name], 'issues')) {
+								repos[repo_name]['issues'] = {};
+							}
 
 							if (!_.has(repos[repo_name]['issues'], issue.title)) {
 								repos[repo_name]['issues'][issue.title] = {};
 							}
 
-                            if (issue.state === 'open') {
-                                open_count ++;
-                            } else {
-                                closed_count ++;
-                            }
-
-                            var days_ago = moment(new Date(issue.created_at)).fromNow();
+							if (issue.state === 'open') {
+								open_count++;
+							} else {
+								closed_count++;
+							}
+							var days_ago = moment(new Date(issue.created_at)).fromNow();
 
 							repos[repo_name]['issues'][issue.title] = {
-                                title: issue.title,
+								title: issue.title,
 								html_url: issue.html_url,
 								author: issue.user.login,
 								created_at: days_ago,
 								status: issue.state
 							};
-                            repos[repo_name]['open_count'] = open_count;
-                            repos[repo_name]['closed_count'] = closed_count;
+							repos[repo_name]['open_count'] = open_count;
+							repos[repo_name]['closed_count'] = closed_count;
 
 						}
 
 					});
 				});
 
-                if (count == repos_length) {                    
-    				_.each(repos, function (repo, repo_name) {
-    					var $repoTemplate = $(".github table.items .repo-template").clone().removeClass('repo-template');
-    					$repoTemplate.find(".repo-name").text(repo_name);
-                        $repoTemplate.find(".completed").text(repo.closed_count);
-                        $repoTemplate.find(".remaining").text(repo.open_count);
-                        $repoTemplate.attr('data-repo', repo_name);
-    					$("tbody").append($repoTemplate);
-                        $("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
+				if (count === repos_length) {
+					_.each(repos, function(repo, repo_name) {
+						var $repoTemplate = $(".github table.items .repo-template").clone().removeClass('repo-template');
+						$repoTemplate.find(".repo-name").text(repo_name);
+						$repoTemplate.find(".completed").text(repo.closed_count);
+						$repoTemplate.find(".remaining").text(repo.open_count);
+						$repoTemplate.attr('data-repo', repo_name);
+						$("tbody").append($repoTemplate);
+						$("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
 
-    					_.each(repo.issues, function (issue) {
-                            
-    						var $issueTemplate = $(".github table.items .issue-template").clone().removeClass('issue-template');
-    						$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
-    						$issueTemplate.find("a.issue-name").text(issue.title);
-    						$issueTemplate.find(".author").text(issue.author);
-    						$issueTemplate.find(".created-at").text(issue.created_at);
-    						$issueTemplate.find(".status").text(issue.status);
-                            $issueTemplate.find(".status").addClass(issue.status);
-    						$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
+						_.each(repo.issues, function(issue) {
 
-    						// repos[repo_name].push($issueTemplate));
-    					});
-    				});
+							var $issueTemplate = $(".github table.items .issue-template").clone().removeClass('issue-template');
+							$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
+							$issueTemplate.find("a.issue-name").text(issue.title);
+							$issueTemplate.find(".author").text(issue.author);
+							$issueTemplate.find(".created-at").text(issue.created_at);
+							$issueTemplate.find(".status").text(issue.status);
+							$issueTemplate.find(".status").addClass(issue.status);
+							$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
 
-                    $(".issue-name").each(function() {
-                        if ($(this).width() > 400) {
-                            $(this).css({width: "60%", display: "inline-block", float: "left", marginRight: 0});
-                        }
-                    });
-                }
-			}
+							// repos[repo_name].push($issueTemplate));
+						});
+					});
+
+					$(".issue-name").each(function() {
+						if ($(this).width() > 400) {
+							$(this).css({
+								width: "60%",
+								display: "inline-block",
+								float: "left",
+								marginRight: 0
+							});
+						}
+					});
+				}
+			};
 
 			// pull github issues
 			$.ajax({
@@ -478,7 +482,7 @@
 						if (repos[i].fork) {
 							continue;
 						}
-                        repos_length += 1;
+						repos_length += 1;
 
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
@@ -501,7 +505,7 @@
 			// animation
 			animateInView(".benefit", "slide-up");
 			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-			
+
 			function loop() {
 				$('.money.first, .money.second, .money.third').addClass("slide-down-right");
 
@@ -522,17 +526,17 @@
 					loop();
 				}, 500);
 			});
-            // expand/collapse github repo
-            $('.github').click(".repo", function(e) {
-                $repo = $(e.target).parent();
-                $repo.toggleClass('expanded');
-                $('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
-            });
+			// expand/collapse github repo
+			$('.github').click(".repo", function(e) {
+				var $repo = $(e.target).parent();
+				$repo.toggleClass('expanded');
+				$('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
+			});
 
-            $('.show-all').click(function(e) {
-                e.preventDefault();
-                $('.issues').toggle();
-            });
+			$('.show-all').click(function(e) {
+				e.preventDefault();
+				$('.issues').toggle();
+			});
 		}
 	};
 }(window));
