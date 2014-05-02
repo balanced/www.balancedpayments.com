@@ -209,18 +209,98 @@
 			}
 		}
 
-		table.items {			
+		table.items {
 			tbody {
 				.sl-sb;
 
 				tr {
+
 					&:hover {
 						background-color: @gray2;
 					}
+
+					&.repo-template, &.issues-template {
+						display: none;
+					}
+
+					&.repo {
+						.repo-name {
+							color: @gray5;
+						}
+
+						&.expanded {
+							td {
+								color: @black;	
+							}
+						}
+					}
+
+					&.issues {
+						.sl-sm;
+						border-top: 2px solid @gray2;
+						border-bottom: 2px solid @gray2;
+						display: none;
+
+						&:hover {
+							cursor: auto;
+							background-color: @white;
+						}
+
+						td {
+							line-height: 30px;
+							position: relative;
+						}
+
+						.issue {
+							border-bottom: 1px solid @gray1;
+
+							&:last-of-type {
+								border-bottom: none;								
+							}
+						}
+
+						.issue-name {
+							.sl-sm-sb;
+							color: @persianBlue60;
+							line-height: 30px;
+							display: inline;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin-right: 10px;
+
+							&:hover {
+								color: @persianBlue100;
+							}
+						}
+
+						.issue-meta {
+							color: @gray6;
+						}
+
+						.status {
+							color: @white;
+							text-transform: uppercase;
+							width: 60px;
+							padding-top: 5px;
+							padding-bottom: 4px;
+							margin-top: 5px;
+							display: inline-block;
+							line-height: initial;
+							text-align: center;
+							float: right;
+
+							&.open {
+								background-color: @pineGreen60;	
+							}
+							
+							&.closed {
+								background-color: @gray3;
+							}
+						}
+					}
 				}
-				.repo-name {
-					color: @gray6;
-				}
+
 			}
 		}
 	}

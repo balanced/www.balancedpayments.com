@@ -359,7 +359,7 @@
 			animateInView(".benefit1", "slide-up");
 			animateInView(".benefit2", "slide-up");
 
-			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			$('.intro-image').one('invieçw', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView) {
 					$('.animate-cad').addClass('bounce-down');
 
@@ -384,27 +384,66 @@
 		},
 		pushToCard: function() {
 			// display github issues
-			var populateIssues = function (response) {
-				var issues = response;
+            var repos = {};
+            var repos_length = 0;
+            var count = 0;
+
+			var populateIssues = function (issues) {
+                count ++;
 				_.each(issues, function(issue) {
 					_.each(issue.labels, function(label) {
 						if (label.name === 'push to card') {
 							var repo_name = issue.html_url.split('/')[4];
-							var $repoTemplate = $(".github table.items tr.repo").clone().remove(".repo-template");
-							$repoTemplate.find(".repo-name").text(repo_name);
-							$("tbody").append($repoTemplate);
 
-							var $issueTemplate = $(".github table.items tr.issue").clone().remove(".issue-template");
-							$issueTemplate.attr("data-repo", repo_name);
-							$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
-							$issueTemplate.find("a.issue-name").text(issue.title);
-							$issueTemplate.find(".author").text(issue.created_at);
-							$issueTemplate.find(".created-at").text(issue.created_at);
-							$issueTemplate.find(".status span").text(issue.state);
-							$("tbody").append($issueTemplate);
+							if (!_.has(repos, repo_name)) {
+								repos[repo_name] = {};
+							}
+
+							if (!_.has(repos[repo_name], issue.title)) {
+								repos[repo_name][issue.title] = {};
+							}
+
+                            var days_ago = moment(new Date(issue.created_at)).fromNow();
+
+							repos[repo_name][issue.title] = {
+                                title: issue.title,
+								html_url: issue.html_url,
+								author: issue.user.login,
+								created_at: days_ago,
+								status: issue.state
+							};
 						}
 					});
 				});
+
+                if (count == repos_length) {
+    				_.each(repos, function (issues, repo_name) {
+    					var $repoTemplate = $(".github table.items .repo-template").clone().removeClass('repo-template');
+    					$repoTemplate.find(".repo-name").text(repo_name);
+                        $repoTemplate.attr('data-repo', repo_name);
+    					$("tbody").append($repoTemplate);
+                        $("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
+
+    					_.each(issues, function (issue) {
+    						var $issueTemplate = $(".github table.items .issue-template").clone().removeClass('issue-template');
+    						$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
+    						$issueTemplate.find("a.issue-name").text(issue.title);
+    						$issueTemplate.find(".author").text(issue.author);
+    						$issueTemplate.find(".created-at").text(issue.created_at);
+    						$issueTemplate.find(".status").text(issue.status);
+                            $issueTemplate.find(".status").addClass(issue.status);
+    						$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
+
+    						// repos[repo_name].push($issueTemplate));
+    					});
+    				});
+
+                    $(".issue-name").each(function() {
+                        if ($(this).width() > 400) {
+                            $(this).css({width: "60%", display: "inline-block", float: "left", marginRight: 0});
+                        }
+                    });
+                }
 			}
 
 			// pull github issues
@@ -412,16 +451,14 @@
 				url: 'https://api.github.com/orgs/balanced/repos',
 				dataType: 'json',
 				success: function(response) {
-					var repos = response;
-					repos = repos.sort(function(a, b) {
+					var repos = response.sort(function(a, b) {
 						return b.watchers_count - a.watchers_count;
 					});
-
 					for (var i = 0, l = repos.length; i < l; i++) {
-						// Don't include forks
 						if (repos[i].fork) {
 							continue;
 						}
+                        repos_length += 1;
 
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
@@ -466,6 +503,13 @@
 				}, 500);
 			});
 
+            // expand/collapse github repo
+            $('.github').click(".repo", function(e) {
+                e.preventDefault();
+                $repo = $(e.target).parent();
+                $repo.toggleClass('expanded');
+                $('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
+            });
 		}
 	};
 }(window));
