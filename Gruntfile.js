@@ -14,8 +14,12 @@ module.exports = function(grunt) {
 			options: {
 				separator: ';\n'
 			},
+			balancedLib: {
+				src: ['bower/jquery.inview/jquery.inview.min.js', 'bower/underscore/underscore.js'],
+				dest: 'contents/static/js/balanced-lib.min.js'
+			},
 			bootstrapModal: {
-				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'bower/jquery.inview/jquery.inview.min.js', 'static/lib/jquery.form-n-validate.js'],
+				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'static/lib/jquery.form-n-validate.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			}
 		},

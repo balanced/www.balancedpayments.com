@@ -111,33 +111,46 @@
 						</div>
 					</div>
 					
-					<div class="section-bg content clearfix">
+					<div class="api section-bg content clearfix">
 						<div class="section-title section-title-no-width">
 							<div class="title-wrapper span6">
 								<span>{{page.metadata.api.title}}</span>
 								<p>{{page.metadata.api.body}}</p>
 							</div>
-							<div class="code-sample span13 pull-right">
-								<div class="title">Request</div>
-<pre>
-curl https://api.balancedpayments.com/cards <span class="se">\</span>
- -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
- -d <span class="s2">number=6543210987654321</span> <span class="se">\</span>
- -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
- -d <span class="s2">expiration_year=2017</span> <span class="se">\</span>
- </pre>
-							</div>
-							<div class="code-sample span13 pull-right">
-								<div class="title">Response</div>
-								<pre>
-<span class="p">{</span>
-  <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"cards/:card_id"</span>,
-  <span class="s2">"can_credit"</span><span class="o">:</span> <span class="s2">true</span>,
-  <span class="s2">"bank_name"</span><span class="o">:</span> <span class="s2">"Wells Fargo"</span>,
-  <span class="s2">"card_type"</span><span class="o">:</span> <span class="s2">"debit"</span>,
-  <span class="s2">...</span>
-<span class="p">}</span></pre>
-<div class="note">* Some parts of the response have been ommitted for brevity.</div>
+							<div class="span13 pull-right">
+								<div class="api-title">Create card</div>
+								<div class="code-sample">
+									<div class="title">Request</div>
+	<pre>
+	curl https://api.balancedpayments.com/cards <span class="se">\</span>
+	 -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+	 -d <span class="s2">number=6543210987654321</span> <span class="se">\</span>
+	 -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
+	 -d <span class="s2">expiration_year=2017</span> <span class="se">\</span>
+	 </pre>
+								</div>
+								<div class="code-sample">
+									<div class="title">Response *</div>
+									<pre>
+	<span class="p">{</span>
+	  <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"cards/:card_id"</span>,
+	  <span class="s2">"can_credit"</span><span class="o">:</span> <span class="s2">true</span>,
+	  <span class="s2">"bank_name"</span><span class="o">:</span> <span class="s2">"Wells Fargo"</span>,
+	  <span class="s2">"card_type"</span><span class="o">:</span> <span class="s2">"debit"</span>,
+	  <span class="s2">...</span>
+	<span class="p">}</span></pre>
+	<div class="note">* Some parts of the response have been ommitted for brevity.</div>
+								</div>
+
+								<div class="api-title">Pay out to card</div>
+								<div class="code-sample">
+									<div class="title">Request</div>
+	<pre>
+	curl https://api.balancedpayments.com/cards/:card_id/credits <span class="se">\</span>
+	 -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+	 -d <span class="s2">amount=10000</span> <span class="se">\</span>
+	 </pre>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -173,12 +186,12 @@ curl https://api.balancedpayments.com/cards <span class="se">\</span>
 							</thead>
 							<tbody>
 								<tr class="repo">
-									<td class="repo-name"><span>hi</td>
+									<td class="repo-name"><span></td>
 									<td class="num">0</td>
 									<td class="num">0</td>
 								</tr>
 								<tr class="issue">
-									<td><span>hi</td>
+									<td>hi</td>
 									<td class="num">3</td>
 									<td class="num">3</td>
 								</tr>

@@ -383,17 +383,90 @@
 
 		},
 		pushToCard: function() {
+			// display Github issues
+
+			$.ajax({
+				url: 'https://api.github.com/orgs/balanced/repos',
+				dataType: 'json',
+				timeout: 5000,
+				cache: false,
+				data: {
+					per_page: 100
+				},
+				headers: {
+					'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
+				},
+				success: function(response) {
+					var repos = response;
+					repos = repos.sort(function(a, b) {
+						return b.watchers_count - a.watchers_count;
+					});
+
+					for (var i = 0, l = repos.length; i < l; i++) {
+						// Don't include forks
+						if (repos[i].fork) {
+							continue;
+						}
+						// console.log(repos[i].name);
+						var issues_url = repos[i].issues_url.split('{')[0];
+
+						$.ajax({
+							url: issues_url,
+							dataType: 'json',
+							timeout: 5000,
+							cache: false,
+							headers: {
+								'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
+							},
+							success: function(response) {
+								var issues = response;
+								_.each(issues, function(issue) {
+									_.each(issue.labels, function(label) {
+										if (label.name === 'push to card') {
+											console.log(issue.html_url.split('/')[4]); // repo
+											console.log(issue.title);
+											console.log(issue.html_url);
+											console.log(issue.created_at);
+											console.log(issue.state);
+										}
+									});
+								});
+							}
+						});
+
+						// Fire off ajax request to get contributors
+						// ajaxOptions.complete = onCompleteContributors;
+						// jQuery.ajax(repos[i].contributors_url, ajaxOptions);
+
+						// var $template = $(".github table.items tr.repo").clone().removeClass("repo-template");
+
+						// if (i === 0) {
+						// 	$template.addClass("first");
+						// }
+
+						// $template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
+						// // $template.find("p.description").html(repos[i].description);
+
+						// $("section.github .repos .repos-container").append($template);
+					}
+
+					// $("section.github .repos .loading").css("display", "none");
+				},
+				error: function() {
+				}
+			});
+
+
+			// animation
+
 			animateInView(".benefit", "slide-up");
-
 			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
+			
 			function loop() {
 				$('.money.first, .money.second, .money.third').addClass("slide-down-right");
-				// $('.card-in-hand-container').addClass("shake");
 
 				setTimeout(function() {
 					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
-					// $('.card-in-hand-container').removeClass("shake");
 					requestAnimationFrame(loop);
 				}, 1200);
 			}
