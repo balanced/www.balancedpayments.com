@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="span19">
-				<div class="row large-bottom-margin">
+				<div class="summary row large-bottom-margin">
 					<div class="page-subtitle clearfix">
 						<div class="span16">
 							<span>{{ page.metadata.subtitle.heading }}</span>
@@ -27,11 +27,33 @@
 								<span class="day">{{page.metadata.launch.day}}</span>
 							</div>
 						</div>
-						<div class="span17 pull-right">
+						<div class="summary-text span17 pull-right">
 							<p class="page-summary">
 								{{ page.metadata.what.bodyText }}
 							</p>
 						</div>
+
+						<div class="notify-me span17 pull-right">
+							<div class="send-email span5">
+								<p class="title">{{page.metadata.feedback.subscribe}}</p>
+							</div>
+							<div id="mc_embed_signup" class="span10 pull-right">
+								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=26ef23e4ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="26ef23e4ef" novalidate>
+									<div class="mc-field-group">
+										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+										<input class="btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>
+								    <div style="position: absolute; left: -5000px;">
+								    	<input type="text" name="b_30382d347d3689814ca424c89_26ef23e4ef" value="">
+							    	</div>
+								</form>
+							</div>
+						</div>
+
 					</div>
 				</div>
 
@@ -41,7 +63,7 @@
 						<div class="money second"></div>
 						<div class="money third"></div>
 						<div class="mp-icon"></div>
-						<div class="card-in-hand-container"><div class="card-in-hand-icon"></div></div>
+						<div class="card-in-hand-icon"></div>
 						<section class="sidebox pull-left">
 							<div class="section-title section-title-no-width">
 								<div class="title-wrapper span5">
@@ -134,6 +156,36 @@ curl https://api.balancedpayments.com/cards <span class="se">\</span>
 						</div>
 					</div>
 
+					<div class="section-bg github clearfix large-bottom-margin">
+						<section>
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper">
+									<span>{{page.metadata.github.title}}</span>
+									<p>{{page.metadata.github.body}}</p>
+								</div>
+							</div>
+						</section>
+						<table class="items">
+							<thead>
+								<th class="span6"><span>Repo</span></th>
+								<th class="span3 num"><span>Completed tasks</span></th>
+								<th class="span3 num"><span>Remaining tasks</span></th>
+							</thead>
+							<tbody>
+								<tr class="repo">
+									<td class="repo-name"><span>hi</td>
+									<td class="num">0</td>
+									<td class="num">0</td>
+								</tr>
+								<tr class="issue">
+									<td><span>hi</td>
+									<td class="num">3</td>
+									<td class="num">3</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
 					<div class="section-bg feedback clearfix">
 						<div class="send-email span8">
 							<span class="title">{{page.metadata.feedback.title}}</span>
@@ -154,7 +206,7 @@ curl https://api.balancedpayments.com/cards <span class="se">\</span>
 										<div class="response" id="mce-success-response" style="display:none"></div>
 									</div>
 								    <div style="position: absolute; left: -5000px;">
-								    	<input type="text" name="b_30382d347d3689814ca424c89_c8d0241856" value="">
+								    	<input type="text" name="b_30382d347d3689814ca424c89_26ef23e4ef" value="">
 							    	</div>
 								</form>
 							</div>

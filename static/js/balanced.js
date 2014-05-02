@@ -389,13 +389,13 @@
 
 			function loop() {
 				$('.money.first, .money.second, .money.third').addClass("slide-down-right");
-				$('.card-in-hand-container').addClass("shake");
+				// $('.card-in-hand-container').addClass("shake");
 
 				setTimeout(function() {
 					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
-					$('.card-in-hand-container').removeClass("shake");
+					// $('.card-in-hand-container').removeClass("shake");
 					requestAnimationFrame(loop);
-				}, 2000);
+				}, 1200);
 			}
 
 			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {

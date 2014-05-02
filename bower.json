@@ -6,6 +6,6 @@
 		"bootstrap": "2.3.2",
 		"isotope": "1.5.25",
 		"jquery.inview": "protonet/jquery.inview",
-		"strapped": "0.1.25"
+		"strapped": "kyungmin/strapped#www"
 	}
 }

@@ -19,6 +19,38 @@
 		}
 	}
 
+	.summary {
+		border-bottom: 2px solid @gray2;
+
+		.notify-me {
+			margin-top: 20px;
+			padding: 20px 0;
+			border-top: 2px solid @gray2;
+
+			form {
+				float: right;
+			}
+			
+			.send-email {
+				margin-left: 0;
+			}
+
+			.title {
+				.sl-sb;
+				line-height: 34px;
+				margin-left: 10px;
+				margin-bottom: 0;
+			}
+
+			input[type=email] {
+				width: 285px;
+				.box-shadow(none);
+				border: 1px solid @gray1;
+				background-color: @gray1;
+			}
+		}
+	}
+
 	.intro-image {
 		width: 100%;
 		height: 716px;
@@ -49,6 +81,7 @@
 
 			.section-title {
 				border-top: none;
+
 				.title-wrapper {
 					opacity: 0;	
 				}
@@ -63,7 +96,7 @@
 			position: absolute;
 			top: 130px;
 			left: 230px;
-			z-index: 2;
+			z-index: 1;
 			opacity: 0;
 		}
 
@@ -75,23 +108,18 @@
 			position: absolute;
 			top: 84px;
 			left: 100px;
-			z-index: 1;
-		}
-
-		.card-in-hand-container {
-			position: absolute;
-			width: 332px;
-			height: 254px;
-			position: absolute;
-			bottom: -10px;
-			right: -10px;
+			z-index: 2;
 		}
 
 		.card-in-hand-icon {
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
 			background-image: url(/images/push-to-card/push_to_card_card_in_hand_icon.png);
 			background-size: contain;
 			width: 332px;
 			height: 254px;
+			z-index: 3;
 		}
 	}
 
@@ -153,6 +181,39 @@
 			width: 203px;
 			height: 84px;
 			margin: 0 auto;
+		}
+	}
+
+	.github {
+		padding: 40px;
+		background-color: @gray1;
+
+		.section-title {
+			border-top: none;
+
+			.title-wrapper {
+				margin-top: 0;
+				margin-bottom: 20px;
+
+				span {
+					border-top: none;
+				}
+			}
+		}
+
+		table.items {			
+			tbody {
+				.sl-sb;
+
+				tr {
+					&:hover {
+						background-color: @gray2;
+					}
+				}
+				.repo-name {
+					color: @gray6;
+				}
+			}
 		}
 	}
 }
@@ -278,7 +339,7 @@
   }
 
   25%, 75% {
-    .transform(rotate(3deg));
+    .transform(rotate(-3deg));
 	.transform-origin(50%, 50%);
   }
 }
