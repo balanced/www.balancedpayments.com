@@ -14,7 +14,7 @@ launch:
   day: 22
 
 what:
-  bodyText: We&#8217ve begun development on supporting foreign currency. The first step is to accept payments in local currencies. Payouts and escrow are on the roadmap. Here&#8217s how we envision the payment feature to work. We welcome your feedback.
+  bodyText: After receiving overwhelming support for this feature on our Crowdhoster campaign, we are excited to begin development. Backers who contributed to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
 
 introTextLeft:
   title: Put sellers at ease
