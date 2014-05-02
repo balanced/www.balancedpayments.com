@@ -383,19 +383,34 @@
 
 		},
 		pushToCard: function() {
-			// display Github issues
+			// display github issues
+			var populateIssues = function (response) {
+				var issues = response;
+				_.each(issues, function(issue) {
+					_.each(issue.labels, function(label) {
+						if (label.name === 'push to card') {
+							var repo_name = issue.html_url.split('/')[4];
+							var $repoTemplate = $(".github table.items tr.repo").clone().remove(".repo-template");
+							$repoTemplate.find(".repo-name").text(repo_name);
+							$("tbody").append($repoTemplate);
 
+							var $issueTemplate = $(".github table.items tr.issue").clone().remove(".issue-template");
+							$issueTemplate.attr("data-repo", repo_name);
+							$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
+							$issueTemplate.find("a.issue-name").text(issue.title);
+							$issueTemplate.find(".author").text(issue.created_at);
+							$issueTemplate.find(".created-at").text(issue.created_at);
+							$issueTemplate.find(".status span").text(issue.state);
+							$("tbody").append($issueTemplate);
+						}
+					});
+				});
+			}
+
+			// pull github issues
 			$.ajax({
 				url: 'https://api.github.com/orgs/balanced/repos',
 				dataType: 'json',
-				timeout: 5000,
-				cache: false,
-				data: {
-					per_page: 100
-				},
-				headers: {
-					'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
-				},
 				success: function(response) {
 					var repos = response;
 					repos = repos.sort(function(a, b) {
@@ -407,8 +422,8 @@
 						if (repos[i].fork) {
 							continue;
 						}
-						// console.log(repos[i].name);
-						var issues_url = repos[i].issues_url.split('{')[0];
+
+						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
 						$.ajax({
 							url: issues_url,
@@ -418,47 +433,15 @@
 							headers: {
 								'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
 							},
-							success: function(response) {
-								var issues = response;
-								_.each(issues, function(issue) {
-									_.each(issue.labels, function(label) {
-										if (label.name === 'push to card') {
-											console.log(issue.html_url.split('/')[4]); // repo
-											console.log(issue.title);
-											console.log(issue.html_url);
-											console.log(issue.created_at);
-											console.log(issue.state);
-										}
-									});
-								});
-							}
+							success: populateIssues
 						});
-
-						// Fire off ajax request to get contributors
-						// ajaxOptions.complete = onCompleteContributors;
-						// jQuery.ajax(repos[i].contributors_url, ajaxOptions);
-
-						// var $template = $(".github table.items tr.repo").clone().removeClass("repo-template");
-
-						// if (i === 0) {
-						// 	$template.addClass("first");
-						// }
-
-						// $template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
-						// // $template.find("p.description").html(repos[i].description);
-
-						// $("section.github .repos .repos-container").append($template);
 					}
 
 					// $("section.github .repos .loading").css("display", "none");
-				},
-				error: function() {
 				}
 			});
 
-
 			// animation
-
 			animateInView(".benefit", "slide-up");
 			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 			
