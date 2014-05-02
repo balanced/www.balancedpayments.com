@@ -209,6 +209,10 @@
 			}
 		}
 
+		.show-all {
+			margin-bottom: 5px;
+		}
+
 		table.items {
 			tbody {
 				.sl-sb;
@@ -291,11 +295,11 @@
 							float: right;
 
 							&.open {
-								background-color: @pineGreen60;	
+								background-color: @gray3;
 							}
 							
 							&.closed {
-								background-color: @gray3;
+								background-color: @pineGreen60;
 							}
 						}
 					}
@@ -312,15 +316,15 @@
 	-webkit-animation-fill-mode: forwards;
 
 	&.money.first {
-	  .animation(slideDownRight, 2500ms, linear);
+	  .animation(slideDownRight, 3000ms, linear);
 	}
 
 	&.money.second {
-	  .animation(slideDownRight, 2500ms, linear, 300ms);
+	  .animation(slideDownRight, 3000ms, linear, 300ms);
 	}
 
 	&.money.third {
-	  .animation(slideDownRight, 2500ms, linear, 600ms);
+	  .animation(slideDownRight, 3000ms, linear, 600ms);
 	}
 }
 
