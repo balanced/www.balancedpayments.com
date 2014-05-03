@@ -54,4 +54,10 @@ faqs:
   list:
     - q: Will you support international debit cards?
       a: Unfortunately not. This feature is only available for U.S. debit cards.
+    - q: Can I use previously tokenized debit cards?
+      a: Yes, you can issue payouts to debit cards that were previously tokenized on your platform.
+    - q: Is there soft descriptor control?
+      a: Yes, just like with ACH credits, you will be able to set a soft descriptor by passing it in the appears_on_statement_as field when creating a credit.
+    - q: Is there a volume discount?
+      a: Since this product is still in private beta, we&#8217re trying to figure out the final cost. As such, there are, currently, no plans to offer volume discounts.
 ---
