@@ -14,7 +14,7 @@ launch:
   day: 22
 
 what:
-  bodyText: After receiving overwhelming support for this feature on our Crowdhoster campaign, we are excited to begin development. Backers who contributed to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
+  bodyText: After receiving overwhelming support for this feature on our <a href="http://balanced.crowdhoster.com/">Crowdhoster campaign</a>, we are excited to begin development. Backers who contributed to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
 
 introTextLeft:
   title: Put sellers at ease
