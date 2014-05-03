@@ -546,7 +546,6 @@
             var expandedAll = false;
 			$('.show-all').click(function(e) {
 				e.preventDefault();
-                expandedAll = !expandedAll;
                 if (expandedAll) {
                     $('.issues td div').slideUp(200, function() {
                         $('.repo, .issues').removeClass('expanded');
@@ -557,6 +556,7 @@
                     $('.issues td div').slideDown(200);
                     $(e.currentTarget).text("Hide all issues");
                 }
+                expandedAll = !expandedAll;
 			});
 		}
 	};
