@@ -512,7 +512,7 @@
 				setTimeout(function() {
 					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
 					requestAnimationFrame(loop);
-				}, 1500);
+				}, 2000);
 			}
 
 			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
@@ -528,6 +528,7 @@
 			});
 			// expand/collapse github repo
 			$('.github').click(".repo", function(e) {
+                e.preventDefault();
 				var $repo = $(e.target).parent();
 				$repo.toggleClass('expanded');
 				$('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
@@ -535,7 +536,7 @@
 
 			$('.show-all').click(function(e) {
 				e.preventDefault();
-				$('.issues').toggle();
+				$('.issues').slideToggle(200);
 			});
 		}
 	};
