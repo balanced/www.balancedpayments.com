@@ -359,7 +359,7 @@
 			animateInView(".benefit1", "slide-up");
 			animateInView(".benefit2", "slide-up");
 
-			$('.intro-image').one('invieçw', function(event, isInView, visiblePartX, visiblePartY) {
+			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView) {
 					$('.animate-cad').addClass('bounce-down');
 
