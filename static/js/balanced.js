@@ -415,8 +415,7 @@
 							} else {
 								closed_count++;
 							}
-                            var m = moment;
-							var days_ago = m(new Date(issue.created_at)).fromNow();
+							var days_ago = moment(new Date(issue.created_at)).fromNow();
 
 							repos[repo_name]['issues'][issue.title] = {
 								title: issue.title,
@@ -513,7 +512,7 @@
 				setTimeout(function() {
 					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
 					requestAnimationFrame(loop);
-				}, 2000);
+				}, 1600);
 			}
 
 			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
@@ -525,19 +524,28 @@
 				setTimeout(function() {
 					$('.mp-icon, .card-in-hand-icon').removeClass("slide-in");
 					loop();
-				}, 500);
+				}, 600);
 			});
 			// expand/collapse github repo
 			$('.github').click(".repo", function(e) {
 				e.preventDefault();
 				var $repo = $(e.target).parent();
 				$repo.toggleClass('expanded');
-				$('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
+                var $issues = $('.issues[data-repo="' + $repo.attr('data-repo') + '"]');
+                if ($issues.hasClass('expanded')) {
+                    $issues.find('div').slideUp(200, function() {
+                        $issues.removeClass('expanded');
+                    });
+                } else {
+                    $issues.addClass('expanded');
+                    $issues.find('div').slideDown(200);
+                }
 			});
 
 			$('.show-all').click(function(e) {
 				e.preventDefault();
-				$('.issues').slideToggle(200);
+                $('.repo, .issues').addClass('expanded');
+				$('.issues td div').slideDown(200);
 			});
 		}
 	};

@@ -22,6 +22,17 @@
 	.summary {
 		border-bottom: 2px solid @gray2;
 
+		.page-summary {
+			a {
+				.sl-20-i;
+				color: @persianBlue60;
+
+				&:hover {
+					color: @persianBlue100;					
+				}
+			}
+		}
+
 		.summary-signup {
 			margin-top: 20px;
 			padding: 20px 0;
@@ -117,13 +128,13 @@
 		}
 
 		.card-in-hand-icon {
-			position: absolute;
-			bottom: -10px;
-			right: -10px;
 			background-image: url(/images/push-to-card/push_to_card_card_in_hand_icon.png);
 			background-size: contain;
 			width: 332px;
 			height: 254px;
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
 			z-index: 3;
 		}
 	}
@@ -226,6 +237,10 @@
 
 					&:hover {
 						background-color: @gray2;
+
+						td:hover {
+							color: @black;
+						}
 					}
 
 					&.repo-template, &.issues-template {
@@ -239,15 +254,13 @@
 
 						&.expanded {
 							td {
-								color: @black;	
+								color: @black;
 							}
 						}
 					}
 
 					&.issues {
 						.sl-sm;
-						border-top: 2px solid @gray2;
-						border-bottom: 2px solid @gray2;
 						display: none;
 
 						&:hover {
@@ -255,16 +268,23 @@
 							background-color: @white;
 						}
 
+						&.expanded {
+							display: table-row;
+						}
+
 						td {
 							line-height: 30px;
-							position: relative;
 						}
 
 						.issue {
-							border-bottom: 1px solid @gray1;
+							display: none;
+
+							&:first-of-type {
+								padding-top: 3px;
+							}
 
 							&:last-of-type {
-								border-bottom: none;								
+								padding-bottom: 3px;
 							}
 						}
 
@@ -291,7 +311,7 @@
 							color: @white;
 							text-transform: uppercase;
 							width: 60px;
-							padding-top: 5px;
+							padding-top: 4px;
 							padding-bottom: 4px;
 							margin-top: 5px;
 							display: inline-block;
@@ -393,10 +413,6 @@
   0% {
   	opacity: 0;
     .transform(translate(100%));
-  }
-
-  50% {
-  	opacity: 0;
   }
 
   100% {
