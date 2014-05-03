@@ -15,11 +15,11 @@ module.exports = function(grunt) {
 				separator: ';\n'
 			},
 			balancedLib: {
-				src: ['bower/jquery.inview/jquery.inview.min.js', 'bower/underscore/underscore.js', 'bower/momentjs/moment.js'],
-				dest: 'contents/static/js/balanced-lib.min.js'
+				src: ['bower/jquery.inview/jquery.inview.min.js', 'bower/underscore/underscore.js', 'bower/momentjs/moment.js', 'static/lib/jquery.form-n-validate.js'],
+				dest: 'contents/static/js/balanced-lib.js'
 			},
 			bootstrapModal: {
-				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'static/lib/jquery.form-n-validate.js'],
+				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			}
 		},
@@ -35,6 +35,9 @@ module.exports = function(grunt) {
 					],
 					'contents/static/js/customer-lib.min.js': [
 						'contents/static/js/customer-lib.js'
+					],
+					'contents/static/js/balanced-lib.min.js': [
+						'contents/static/js/balanced-lib.js'
 					],
 					'contents/static/js/carousel.min.js': [
 						'bower/bootstrap/js/bootstrap-carousel.js'
