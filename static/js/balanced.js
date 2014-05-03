@@ -528,7 +528,7 @@
 			});
 			// expand/collapse github repo
 			$('.github').click(".repo", function(e) {
-                e.preventDefault();
+				e.preventDefault();
 				var $repo = $(e.target).parent();
 				$repo.toggleClass('expanded');
 				$('.issues[data-repo="' + $repo.attr('data-repo') + '"]').slideToggle(200);
