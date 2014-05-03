@@ -526,12 +526,13 @@
 					loop();
 				}, 600);
 			});
-			// expand/collapse github repo
+
+			// expand/collapse github repos
 			$('.github').click(".repo", function(e) {
-				e.preventDefault();
 				var $repo = $(e.target).parent();
 				$repo.toggleClass('expanded');
                 var $issues = $('.issues[data-repo="' + $repo.attr('data-repo') + '"]');
+
                 if ($issues.hasClass('expanded')) {
                     $issues.find('div').slideUp(200, function() {
                         $issues.removeClass('expanded');
@@ -542,10 +543,20 @@
                 }
 			});
 
+            var expandedAll = false;
 			$('.show-all').click(function(e) {
 				e.preventDefault();
-                $('.repo, .issues').addClass('expanded');
-				$('.issues td div').slideDown(200);
+                expandedAll = !expandedAll;
+                if (expandedAll) {
+                    $('.issues td div').slideUp(200, function() {
+                        $('.repo, .issues').removeClass('expanded');
+                    });
+                    $(e.currentTarget).text("Show all issues");
+                } else {
+                    $('.repo, .issues').addClass('expanded');
+                    $('.issues td div').slideDown(200);
+                    $(e.currentTarget).text("Hide all issues");
+                }
 			});
 		}
 	};
