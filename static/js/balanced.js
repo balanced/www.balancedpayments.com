@@ -415,7 +415,8 @@
 							} else {
 								closed_count++;
 							}
-							var days_ago = moment(new Date(issue.created_at)).fromNow();
+                            var m = moment;
+							var days_ago = m(new Date(issue.created_at)).fromNow();
 
 							repos[repo_name]['issues'][issue.title] = {
 								title: issue.title,
