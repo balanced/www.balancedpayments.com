@@ -433,20 +433,20 @@
 				});
 
 				if (count === repos_length) {
-                    $(".loading").css("display", "none");
+                    $(".loading").fadeOut(200);
 
 					_.each(repos, function(repo, repo_name) {
-						var $repoTemplate = $(".github table.items .repo-template").clone().removeClass('repo-template');
+						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
 						$repoTemplate.find(".repo-name").text(repo_name);
 						$repoTemplate.find(".completed").text(repo.closed_count);
 						$repoTemplate.find(".remaining").text(repo.open_count);
 						$repoTemplate.attr('data-repo', repo_name);
-						$("tbody").append($repoTemplate);
+						$repoTemplate.appendTo('tbody').fadeIn(300);
 						$("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
 
 						_.each(repo.issues, function(issue) {
 
-							var $issueTemplate = $(".github table.items .issue-template").clone().removeClass('issue-template');
+							var $issueTemplate = $(".github table.items div.issue-template").clone().removeClass('issue-template');
 							$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
 							$issueTemplate.find("a.issue-name").text(issue.title);
 							$issueTemplate.find(".author").text(issue.author);
