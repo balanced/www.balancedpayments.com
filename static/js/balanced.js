@@ -433,6 +433,8 @@
 				});
 
 				if (count === repos_length) {
+                    $(".loading").css("display", "none");
+
 					_.each(repos, function(repo, repo_name) {
 						var $repoTemplate = $(".github table.items .repo-template").clone().removeClass('repo-template');
 						$repoTemplate.find(".repo-name").text(repo_name);
@@ -452,8 +454,6 @@
 							$issueTemplate.find(".status").text(issue.status);
 							$issueTemplate.find(".status").addClass(issue.status);
 							$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
-
-							// repos[repo_name].push($issueTemplate));
 						});
 					});
 
@@ -497,8 +497,6 @@
 							success: populateIssues
 						});
 					}
-
-					// $("section.github .repos .loading").css("display", "none");
 				}
 			});
 

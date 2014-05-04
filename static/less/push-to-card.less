@@ -28,7 +28,7 @@
 				color: @persianBlue60;
 
 				&:hover {
-					color: @persianBlue100;					
+					color: @persianBlue100;
 				}
 			}
 		}
@@ -229,6 +229,11 @@
 			margin-bottom: 5px;
 		}
 
+		.loading {
+			padding-top: 20px;
+			text-align: center;
+		}
+
 		table.items {
 			tbody {
 				.sl-sb;
@@ -361,10 +366,6 @@
 	}
 }
 
-.shake {
-  .animation(shake, 250ms, ease-in, 1000ms, 2);
-}
-
 // animations
 @-webkit-keyframes slideDownRight { .slideDownRight }
 @-moz-keyframes slideDownRight { .slideDownRight }
@@ -436,22 +437,5 @@
   100% {
   	opacity: 1;
     .transform(translateX(0));
-  }
-}
-
-@-webkit-keyframes shake { .shake }
-@-moz-keyframes shake { .shake }
-@-ms-keyframes shake { .shake }
-@-o-keyframes shake { .shake }
-@keyframes shake { .shake }
-
-.shake() {
-  0%, 50%, 100% {
-    .transform(rotate(0deg));
-  }
-
-  25%, 75% {
-    .transform(rotate(-3deg));
-	.transform-origin(50%, 50%);
   }
 }
