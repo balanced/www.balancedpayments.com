@@ -1,7 +1,22 @@
 @listMargin: 16px;
 
-.homepage-logo {
-  margin-bottom: 40px;
+.page-header {
+  margin: 0;
+  border-bottom: none;
+  height: initial;
+  padding: 0 0 30px;
+
+  .subtitle {
+    .sl-sm;
+    text-transform: lowercase;
+    margin-top: 20px;
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: -30px;
+  }
 }
 
 .underline(@weight: 4px, @lineHeight: 1.3em) {
@@ -47,37 +62,57 @@ footer {
 }
 
 #intro {
+  background-color: @pineGreen60;
+  margin: auto;
+  padding: 0;
+  position: relative;
+
+  .sidebar {
+    width: 300px;
+    background-color: fade(@gray9, 60%);
+    padding: 30px 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  
+    .divider {
+      width: 30px;
+      height: 2px;
+      border-top: 2px solid @white;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      .sl-44-sb;
+      color: @white;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: @white;
+      padding-bottom: 20px;
+    }
+  }
+
+  .hero-image {
+    background: url(/images/hero_image.png);
+    width: 582px;
+    height: 422px;
+    background-size: contain;
+    margin: 30px 65px;
+    float: right;
+  }
+}
+
+#intro-sub {
+  background-color: @gray1;
   margin-bottom: @mainMargin;
-  h1 {
-    display: none;
-  }
 
-  &>div {
-    background: url(/images/homepage_whats_up_now-03.png) 51px 50px no-repeat;
-    background-color: @curryYellow40;
-    width: 100%;
-    min-height: 200px;
-    margin: auto;
-    padding: 70px 0 30px;
-
-    &>div {
-      padding: @mainMargin;
-      float: left;
-      width: 300px;
-      text-align: center;
-      margin-left: 30px;
-    }
-
-  }
-  p {
-    .sl;
-    margin-top: 190px;
-
-    a {
-      .sl;
-      text-decoration: underline;
-    }
-  }
+  & > div {
+    padding-left: 40px;
+    padding-bottom: 30px;
+    border-top: none;
+  }  
 }
 
 @customerWidth: 150px;
@@ -350,10 +385,4 @@ footer {
   background-color: @gray1;
   .letThemKnow();
   margin-bottom: 25px;
-}
-
-#marketplaces, #processing, #payouts {
-  h2 {
-    color: #C98935;
-  }
 }
