@@ -110,9 +110,9 @@
 			width: 77px;
 			height: 77px;
 			position: absolute;
-			top: 130px;
-			left: 230px;
-			z-index: 1;
+			top: 145px;
+			left: 245px;
+			z-index: 2;
 			opacity: 0;
 		}
 
@@ -124,7 +124,7 @@
 			position: absolute;
 			top: 84px;
 			left: 100px;
-			z-index: 2;
+			z-index: 1;
 		}
 
 		.card-in-hand-icon {
@@ -284,6 +284,7 @@
 
 						.issue {
 							display: none;
+							padding-left: 30px;
 
 							&:first-of-type {
 								padding-top: 3px;
@@ -380,24 +381,25 @@
     .transform(scale(0.3));
   }
 
-  5% {
+  1% {
   	opacity: 1;
-  	.transform(scale(1.05));
-  }
-
-  7% {
-  	opacity: 1;
-	.transform(scale(0.9));
   }
 
   18% {
   	opacity: 1;
+	.transform(translate(140px, 140px) scale(1.05));
   }
 
   36% {
   	opacity: 0;
-    .transform(translate(350px, 350px));
+    .transform(translate(350px, 350px) scale(0.95));
   }
+
+  40% {
+  	opacity: 0;
+	.transform(scale(1));
+  }
+
   100% {
   	opacity: 0;
     .transform(translate(350px, 350px));

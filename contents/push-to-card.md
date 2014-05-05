@@ -6,7 +6,7 @@ pageTitle: Push to Card
 body_class: push-to-card
 
 subtitle:
-  heading: Let&#8217s push money to debit cards. Send money to your customers without collecting bank account information.
+  heading: Let&#8217s push money to debit cards.<br>Send money to your customers without collecting bank account information.
 
 launch:
   title: Expected launch
@@ -27,7 +27,8 @@ introTextRight:
 benefit:
   title: Validate in real time
   body: Forget about delayed payouts due to incorrect bank account and routing numbers. Debit card information is validated in real time, ensuring timely delivery of funds.
-
+  cardNumber: 4342 5611 1111 1118
+  
 api:
   title: Sample API call
   body: Paying out to a debit card is super simple.

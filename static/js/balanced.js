@@ -487,7 +487,7 @@
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
 						$.ajax({
-							url: issues_url,
+							url: issues_url + '?state=all',
 							dataType: 'json',
 							timeout: 5000,
 							cache: false,
