@@ -8,15 +8,15 @@ try_out:
   link: Try the dashboard
 
 intro:
-  heading: Fast, Simple, Online payouts
+  heading: Fast, Simple, marketplace payouts
   sub: Pay sellers, campaign organizers and service providers with one simple integration.
   introText:
-    - title: Speed
-      body: Sellers get paid via ACH the same business day (for Wells Fargo accounts) and next business day for all other U.S. bank accounts.
-    - title: Control
-      body: Retain your brand and keep customers on your site with our white-label API. No separate signups. Full card and bank statement descriptor control.
-    - title: Flexibility
-      body: Charge customers with Balanced’s card processing and get immediate access to those funds. You decide when to release the money to the seller.
+    - title: Fast payouts
+      body: Pay sellers within one business day via ACH or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
+    - title: Controlled experience
+      body: Retain your brand with our white-label API. Get full card and bank statement descriptor control.
+    - title: Flexible funds flow
+      body: Get immediate access to funds after charging customers with Balanced’s [card processing](/card-processing).  Release funds on your time frame.
 
 customers:
   - name: RedditGifts
@@ -35,24 +35,24 @@ customers:
 # These are the 3 column section that are reasonable generic with their format
 Sections:
   - id: payouts
-    title: Easy Payouts
+    title: Payout options
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
-      ### Whether you’re a crowdfunding platform or an online business connecting buyers and sellers, Balanced is the easiest way to issue payouts.
+      ### for stand-alone payouts, crowdfunding platforms, or online businesses connecting buyers and sellers
     subs:
-      - title: ACH bank payouts
+      - title: ACH payouts
         text: |
-          Sellers get paid via ACH the same business day (for Wells Fargo accounts) and next business day for all other U.S. bank accounts.
+          Pay out with same-day ACH for Wells Fargo accounts and next business day for other U.S. bank accounts.
 
           [Learn more](/payouts)
       - title: Push to card
         text: |
-          Issue payouts using only debit card numbers. Send money to your customers without collecting bank account information.
+          Issue payouts using only debit card numbers.
 
           [Learn more](/push-to-card)
       - title: International payments
         text: |
-          The first step is to accept payments in local currencies. Payouts and escrow are on the roadmap.
+          International payouts are on the roadmap. We’ll start with foreign currency exchange.
 
           [Learn more](/international-payments)
 
@@ -89,7 +89,7 @@ marketplaces:
 integrate:
   title: Integrate in minutes
   desc: |
-    ### Balanced provides client libraries and a RESTful API for you to easily integrate.
+    ### client libraries and a RESTful API for you to easily integrate
     [View our docs](https://docs.balancedpayments.com)
   tutorials_title: Tutorials
   tutorials:
