@@ -8,13 +8,13 @@ try_out:
   link: Try the dashboard
 
 intro:
-  heading: Fast, Simple, marketplace payouts
+  heading: Fast, easy marketplace payouts
   sub: Pay sellers, campaign organizers and service providers with one simple integration.
   introText:
     - title: Fast payouts
-      body: Pay sellers within one business day via ACH or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
+      body: Pay sellers within one business day via [ACH](/payouts) or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
     - title: Controlled experience
-      body: Retain your brand with our white-label API. Get full card and bank statement descriptor control.
+      body: Retain your brand with our white-label API. Get full card and bank statement descriptor control per transaction.
     - title: Flexible funds flow
       body: Get immediate access to funds after charging customers with Balanced’s [card processing](/card-processing).  Release funds on your time frame.
 
@@ -38,28 +38,25 @@ Sections:
     title: Payout options
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
-      ### for stand-alone payouts, crowdfunding platforms, or online businesses connecting buyers and sellers
+      ### For stand-alone payouts, crowdfunding platforms, or online businesses connecting buyers and sellers
     subs:
       - title: ACH payouts
-        text: |
-          Pay out with same-day ACH for Wells Fargo accounts and next business day for other U.S. bank accounts.
-
-          [Learn more](/payouts)
+        text: Pay out with same-day ACH for Wells Fargo accounts and next business day for other U.S. bank accounts.
+        link: payouts
+        inDevelopment: false
       - title: Push to card
-        text: |
-          Issue payouts using only debit card numbers.
-
-          [Learn more](/push-to-card)
+        text: Issue payouts using only debit card numbers.
+        link: push-to-card
+        inDevelopment: true
       - title: International payments
-        text: |
-          International payouts are on the roadmap. We’ll start with foreign currency exchange.
-
-          [Learn more](/international-payments)
+        text: International payouts are on the roadmap. We’ll start with foreign currency exchange.
+        link: international-payments
+        inDevelopment: true
 
 marketplaces:
   title: End-to-end payments
   desc: |
-    ### Combine payouts with processing and escrow for end-to-end payments.
+    ### Combine payouts with processing and escrow for a complete payment solution
   tops:
     - id: charge
       text: |
@@ -89,7 +86,7 @@ marketplaces:
 integrate:
   title: Integrate in minutes
   desc: |
-    ### client libraries and a RESTful API for you to easily integrate
+    ### Client libraries and a RESTful API for you to easily integrate
     [View our docs](https://docs.balancedpayments.com)
   tutorials_title: Tutorials
   tutorials:

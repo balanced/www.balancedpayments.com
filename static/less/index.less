@@ -7,7 +7,8 @@
   padding: 0 0 30px;
 
   .subtitle {
-    .sl-sm;
+    .sl-md;
+    color: @gray6;
     text-transform: lowercase;
     margin-top: 20px;
   }
@@ -15,7 +16,7 @@
   .btn {
     position: absolute;
     right: 0;
-    top: -30px;
+    top: 86px;
   }
 }
 
@@ -68,29 +69,25 @@ footer {
   position: relative;
 
   .sidebar {
-    width: 300px;
-    background-color: fade(@gray9, 60%);
-    padding: 30px 40px;
+    width: 420px;
+    background-color: fade(@gray9, 50%);
+    padding: 90px 40px;
     position: absolute;
     top: 0;
     bottom: 0;
-  
-    .divider {
-      width: 30px;
-      height: 2px;
-      border-top: 2px solid @white;
-      margin-bottom: 20px;
-    }
 
     h1 {
       .sl-44-sb;
       color: @white;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     p {
+      .sl-md-sb;
       color: @white;
-      padding-bottom: 20px;
+      padding: 20px 0;
+      width: 235px;
     }
   }
 
@@ -112,7 +109,17 @@ footer {
     padding-left: 40px;
     padding-bottom: 30px;
     border-top: none;
-  }  
+  }
+
+  .title-wrapper {
+    margin-top: 28px;
+    width: 307px;
+    display: inline-block;
+
+    span {
+      border-top: none;
+    }
+  }
 }
 
 @customerWidth: 150px;

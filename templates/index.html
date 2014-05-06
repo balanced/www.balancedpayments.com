@@ -13,7 +13,6 @@
         <section id="intro" class="clearfix">
             <div class="sidebar">
                 <h1>{{ page.metadata.intro.heading }}</h1>
-                <div class="divider"></div>
                 <p>{{ page.metadata.intro.sub }}</p>
                 <a class="btn" href="{{env.helpers.link('/payouts')}}">Learn more</a>
             </div>
@@ -22,9 +21,9 @@
         <section id="intro-sub">
             <div class="section-title section-title-no-width clearfix">
                 {% for introText in page.metadata.intro.introText %}
-                <div class="title-wrapper span7">
+                <div class="title-wrapper">
                     <span>{{introText.title}}</span>
-                    <p>{{introText.body}}</p>
+                    <p>{{introText.body.markdown()}}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -52,7 +51,9 @@
                         {% for sub in section.subs %}
                         <li>
                             <h4>{{ sub.title }}</h4>
-                            {{ sub.text.markdown() }}
+                            {{ sub.text }}
+                            {% if sub.inDevelopment %}<div class="stage">In development</div> {% endif %}
+                            <p><a href="{{env.helpers.link(sub.link)}}">Learn more</a></p>
                         </li>
                         {% endfor %}
                     </ul>
