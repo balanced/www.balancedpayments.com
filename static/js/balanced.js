@@ -428,7 +428,9 @@
 							repos[repo_name]['open_count'] = open_count;
 							repos[repo_name]['closed_count'] = closed_count;
 
-							repos.sort(function(left, right){return right['open_count'] - left['open_count']});
+							repos.sort(function(left, right) {
+								return right['open_count'] - left['open_count'];
+							});
 
 						}
 
