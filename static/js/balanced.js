@@ -355,7 +355,7 @@
 			});
 		},
 		international: function() {
-			// animate icons 
+			// animate icons
 			animateInView(".benefit1", "slide-up");
 			animateInView(".benefit2", "slide-up");
 
@@ -427,6 +427,10 @@
 							};
 							repos[repo_name]['open_count'] = open_count;
 							repos[repo_name]['closed_count'] = closed_count;
+
+							repos.sort(function(left, right) {
+								return right['open_count'] - left['open_count'];
+							});
 
 						}
 

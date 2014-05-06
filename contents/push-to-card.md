@@ -1,5 +1,5 @@
 ---
-title: Balanced - Payments processing, escrow, and payouts in one simple API | Push to Card
+title: Push to Card | Balanced
 template: push-to-card.html
 
 pageTitle: Push to Card
@@ -9,12 +9,12 @@ subtitle:
   heading: Let&#8217s push money to debit cards.<br>Send money to your customers without collecting bank account information.
 
 launch:
-  title: Expected launch
+  title: Private beta
   month: May
   day: 22
 
 what:
-  bodyText: After receiving overwhelming support for this feature on our <a href="http://balanced.crowdhoster.com/">Crowdhoster campaign</a>, we are excited to begin development. Backers who contributed to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
+  bodyText: After receiving overwhelming support for this feature on our <a href="https://balanced.crowdhoster.com/let-s-push-to-debit-cards">CrowdtiltOpen campaign</a>, we are excited to begin development. Backers who contributed to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
 
 introTextLeft:
   title: Put sellers at ease
@@ -28,7 +28,7 @@ benefit:
   title: Validate in real time
   body: Forget about delayed payouts due to incorrect bank account and routing numbers. Debit card information is validated in real time, ensuring timely delivery of funds.
   cardNumber: 4342 5611 1111 1118
-  
+
 api:
   title: Sample API call
   body: Paying out to a debit card is super simple.
