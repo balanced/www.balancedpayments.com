@@ -436,9 +436,9 @@
 				if (count === repos_length) {
 					$(".loading").fadeOut(200);
 
-					// sort repos by number of open issues
+					// sort repos by number of open & closed issues
 					repos = _.sortBy(repos, function(repo) {
-						return -(repo.open_count + repo.closed_count); // sort decending
+						return -(repo.open_count + repo.closed_count); // sort descending
 					});
 
 					_.each(repos, function(repo, repo_name) {
