@@ -415,7 +415,8 @@
 							} else {
 								closed_count++;
 							}
-							var days_ago = moment(new Date(issue.created_at)).fromNow();
+							
+							var days_ago = window.moment(new Date(issue.created_at)).fromNow();
 
 							repos[repo_name]['issues'][issue.title] = {
 								title: issue.title,
@@ -502,16 +503,6 @@
 
 			// animation
 			animateInView(".benefit", "slide-up");
-			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-			function loop() {
-				$('.money.first, .money.second, .money.third').addClass("slide-down-right");
-
-				setTimeout(function() {
-					$('.money.first, .money.second, .money.third').removeClass("slide-down-right");
-					requestAnimationFrame(loop);
-				}, 1600);
-			}
 
 			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				$('.title-wrapper').animate({
@@ -521,7 +512,7 @@
 
 				setTimeout(function() {
 					$('.mp-icon, .card-in-hand-icon').removeClass("slide-in");
-					loop();
+					$('.money.first, .money.second, .money.third').addClass("slide-down-right");
 				}, 600);
 			});
 

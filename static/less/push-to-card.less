@@ -284,7 +284,6 @@
 
 						.issue {
 							display: none;
-							padding-left: 30px;
 
 							&:first-of-type {
 								padding-top: 3px;
@@ -321,10 +320,10 @@
 							padding-top: 4px;
 							padding-bottom: 4px;
 							margin-top: 5px;
+							margin-right: 10px;
 							display: inline-block;
 							line-height: initial;
 							text-align: center;
-							float: right;
 
 							&.open {
 								background-color: @gray3;
@@ -344,18 +343,17 @@
 // animation classes
 
 .slide-down-right {
-	-webkit-animation-fill-mode: forwards;
 
 	&.money.first {
-	  .animation(slideDownRight, 4000ms, linear);
+	  .animation(slideDownRight, 3000ms, linear, infinite);
 	}
 
 	&.money.second {
-	  .animation(slideDownRight, 4000ms, linear, 300ms);
+	  .animation(slideDownRight, 3000ms, linear, 300ms infinite);
 	}
 
 	&.money.third {
-	  .animation(slideDownRight, 4000ms, linear, 600ms);
+	  .animation(slideDownRight, 3000ms, linear, 600ms infinite);
 	}
 }
 
@@ -385,19 +383,14 @@
   	opacity: 1;
   }
 
-  18% {
+  35% {
   	opacity: 1;
-	.transform(translate(140px, 140px) scale(1.05));
+	.transform(translate(175px, 175px) scale(1.05));
   }
 
-  36% {
+  70% {
   	opacity: 0;
-    .transform(translate(350px, 350px) scale(0.95));
-  }
-
-  40% {
-  	opacity: 0;
-	.transform(scale(1));
+    .transform(translate(350px, 350px) scale(1));
   }
 
   100% {
