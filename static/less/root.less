@@ -578,13 +578,13 @@ section {
     &:focus:invalid {
       color: @black;
     }
-    &.mce_inline_error {
+    &.mce_inline_error, &.error, {
       color: @imperialRed100;
       border-color: transparent !important;
     }
   }
 
-  div.mce_inline_error {
+  div.mce_inline_error, label.error {
     display: none !important;
   }
 }
