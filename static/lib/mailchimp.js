@@ -43,6 +43,7 @@ head.appendChild(style);
 setTimeout('mce_preload_check();', 250);
 
 var mce_preload_checks = 0;
+var $currentForm;
 
 function mce_preload_check() {
 	if (mce_preload_checks > 40) return;
@@ -64,8 +65,8 @@ function mce_preload_check() {
 
 function mce_init_form() {
 	jQuery(document).ready(function($) {
-		$('#mce-EMAIL').focus(function() {
-			$(this).removeClass('mce_inline_error');
+		$('input[type=email]').focus(function() {
+			$(this).removeClass('mce_inline_error, error');
 		});
 		var options = {
 			errorClass: 'mce_inline_error',
@@ -74,48 +75,18 @@ function mce_init_form() {
 			onfocusout: function() {},
 			onblur: function() {}
 		};
-		var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
-		$("#mc-embedded-subscribe-form").unbind('submit'); //remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+		$("form.validate").unbind('submit'); //remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
 		options = {
 			url: '//balancedpayments.us2.list-manage.com/subscribe/post-json?u=30382d347d3689814ca424c89&id=' + $("#mc-embedded-subscribe-form").attr('data-id') + '&c=?',
 			type: 'GET',
 			dataType: 'json',
 			contentType: "application/json; charset=utf-8",
-			beforeSubmit: function() {
-				$('#mce_tmp_error_msg').remove();
-				$('.datefield', '#mc_embed_signup').each(
-					function() {
-						var txt = 'filled';
-						var fields = new Array();
-						var i = 0;
-						$(':text', this).each(
-							function() {
-								fields[i] = this;
-								i++;
-							});
-						$(':hidden', this).each(
-							function() {
-								var bday = false;
-								if (fields.length == 2) {
-									bday = true;
-									fields[2] = {
-										'value': 1970
-									}; //trick birthdays into having years
-								}
-								if (fields[0].value == 'MM' && fields[1].value == 'DD' && (fields[2].value == 'YYYY' || (bday && fields[2].value == 1970))) {
-									this.value = '';
-								} else if (fields[0].value == '' && fields[1].value == '' && (fields[2].value == '' || (bday && fields[2].value == 1970))) {
-									this.value = '';
-								} else {
-									if (/\[day\]/.test(fields[0].name)) {
-										this.value = fields[1].value + '/' + fields[0].value + '/' + fields[2].value;
-									} else {
-										this.value = fields[0].value + '/' + fields[1].value + '/' + fields[2].value;
-									}
-								}
-							});
-					});
-				$('.phonefield-us', '#mc_embed_signup').each(
+			beforeSubmit: function(arr, $form, options) {
+				// save the target form
+				$currentForm = $form;
+				$currentForm.find('#mce_tmp_error_msg').remove();
+
+				$currentForm.parent().each(
 					function() {
 						var fields = new Array();
 						var i = 0;
@@ -133,23 +104,27 @@ function mce_init_form() {
 								}
 							});
 					});
-				return mce_validator.form();
+				return $currentForm.validate(options).form();
 			},
 			success: mce_success_cb
 		};
-		$('#mc-embedded-subscribe-form').ajaxForm(options);
+
+		// submit multiple mailchimp forms on a page
+		$("form.validate").each(function() {
+		  $(this).ajaxForm(options);
+		});
 	});
 }
 
 function mce_success_cb(resp) {
-	$('#mce-success-response').hide();
-	$('#mce-error-response').hide();
+	$currentForm.find('#mce-success-response').hide();
+	$currentForm.find('#mce-error-response').hide();
 	if (resp.result == "success") {
-		$('.notify-me .title').hide();
-		$('.notify-me .mc-field-group').hide();
-		$('#mce-' + resp.result + '-response').fadeIn(200);
-		$('#mce-' + resp.result + '-response').html("To complete the process, please click the link in the email we just sent you.");
-		$('#mc-embedded-subscribe-form').each(function() {
+		$currentForm.parents('.notify-me').find('.title').hide();
+		$currentForm.parents('.notify-me').find('.mc-field-group').hide();
+		$currentForm.find('#mce-' + resp.result + '-response').fadeIn(200);
+		$currentForm.find('#mce-' + resp.result + '-response').html("To complete the process, please click the link in the email we just sent you.");
+		$currentForm.find('#mc-embedded-subscribe-form').each(function() {
 			this.reset();
 		});
 	} else {
@@ -175,37 +150,37 @@ function mce_success_cb(resp) {
 		}
 		try {
 			if (index == -1) {
-				$('#mce-' + resp.result + '-response').show();
-				$('#mce-' + resp.result + '-response').html(msg);
+				$currentForm.find('#mce-' + resp.result + '-response').show();
+				$currentForm.find('#mce-' + resp.result + '-response').html(msg);
 			} else {
 				err_id = 'mce_tmp_error_msg';
 				html = '<div id="' + err_id + '" style="' + err_style + '"> ' + msg + '</div>';
 
 				var input_id = '#mc_embed_signup';
-				var f = $(input_id);
+				var f = $currentForm.parent();
 				if (ftypes[index] == 'address') {
 					input_id = '#mce-' + fnames[index] + '-addr1';
-					f = $(input_id).parent().parent().get(0);
+					f = f.parent().parent().get(0);
 				} else if (ftypes[index] == 'date') {
 					input_id = '#mce-' + fnames[index] + '-month';
-					f = $(input_id).parent().parent().get(0);
+					f = f.parent().parent().get(0);
 				} else {
 					input_id = '#mce-' + fnames[index];
-					f = $().parent(input_id).get(0);
+					f = f.parent().parent().get(0);
 				}
 				if (f) {
 					$(f).append(html);
-					$(input_id).focus();
+					$currentForm.find(input_id).focus();
 				} else {
-					$('#mce-' + resp.result + '-response').show();
-					$('#mce-' + resp.result + '-response').html(msg);
+					$currentForm.find('#mce-' + resp.result + '-response').show();
+					$currentForm.find('#mce-' + resp.result + '-response').html(msg);
 				}
 			}
 		} catch (e) {
-			$('#mce-' + resp.result + '-response').show();
-			$('#mce-' + resp.result + '-response').html(msg);
+			$currentForm.find('#mce-' + resp.result + '-response').show();
+			$currentForm.find('#mce-' + resp.result + '-response').html(msg);
 		}
-		$('#mc-embedded-subscribe-form').each(function() {
+		$('form.validate').each(function() {
 			this.reset();
 		});
 	}
