@@ -434,7 +434,7 @@
 				});
 
 				if (count === repos_length) {
-                    $(".loading").fadeOut(200);
+					$(".loading").fadeOut(200);
 
 					_.each(repos, function(repo, repo_name) {
 						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
@@ -520,32 +520,32 @@
 			$('.github').click(".repo", function(e) {
 				var $repo = $(e.target).parent();
 				$repo.toggleClass('expanded');
-                var $issues = $('.issues[data-repo="' + $repo.attr('data-repo') + '"]');
+				var $issues = $('.issues[data-repo="' + $repo.attr('data-repo') + '"]');
 
-                if ($issues.hasClass('expanded')) {
-                    $issues.find('div').slideUp(200, function() {
-                        $issues.removeClass('expanded');
-                    });
-                } else {
-                    $issues.addClass('expanded');
-                    $issues.find('div').slideDown(200);
-                }
+				if ($issues.hasClass('expanded')) {
+					$issues.find('div').slideUp(200, function() {
+						$issues.removeClass('expanded');
+					});
+				} else {
+					$issues.addClass('expanded');
+					$issues.find('div').slideDown(200);
+				}
 			});
 
-            var expandedAll = false;
+			var expandedAll = false;
 			$('.show-all').click(function(e) {
 				e.preventDefault();
-                if (expandedAll) {
-                    $('.issues td div').slideUp(200, function() {
-                        $('.repo, .issues').removeClass('expanded');
-                    });
-                    $(e.currentTarget).text("Show all issues");
-                } else {
-                    $('.repo, .issues').addClass('expanded');
-                    $('.issues td div').slideDown(200);
-                    $(e.currentTarget).text("Hide all issues");
-                }
-                expandedAll = !expandedAll;
+				if (expandedAll) {
+					$('.issues td div').slideUp(200, function() {
+						$('.repo, .issues').removeClass('expanded');
+					});
+					$(e.currentTarget).text("Show all issues");
+				} else {
+					$('.repo, .issues').addClass('expanded');
+					$('.issues td div').slideDown(200);
+					$(e.currentTarget).text("Hide all issues");
+				}
+				expandedAll = !expandedAll;
 			});
 		}
 	};
