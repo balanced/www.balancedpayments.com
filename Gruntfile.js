@@ -291,6 +291,10 @@ module.exports = function(grunt) {
 					src: 'build/terms/*',
 					dest: 'terms/',
 					rel: 'build/terms'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionCached: {
@@ -312,6 +316,10 @@ module.exports = function(grunt) {
 					src: 'build/*.{xml,txt,ico}',
 					dest: '',
 					rel: 'build'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionUncached: {
