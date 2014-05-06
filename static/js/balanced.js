@@ -425,13 +425,9 @@
 								created_at: days_ago,
 								status: issue.state
 							};
+							repos[repo_name]['repo_name'] = repo_name;
 							repos[repo_name]['open_count'] = open_count;
 							repos[repo_name]['closed_count'] = closed_count;
-
-							repos.sort(function(left, right) {
-								return right['open_count'] - left['open_count'];
-							});
-
 						}
 
 					});
@@ -440,14 +436,19 @@
 				if (count === repos_length) {
 					$(".loading").fadeOut(200);
 
+					// sort repos by number of open & closed issues
+					repos = _.sortBy(repos, function(repo) {
+						return -(repo.open_count + repo.closed_count); // sort descending
+					});
+
 					_.each(repos, function(repo, repo_name) {
 						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
-						$repoTemplate.find(".repo-name").text(repo_name);
+						$repoTemplate.find(".repo-name").text(repo.repo_name);
 						$repoTemplate.find(".completed").text(repo.closed_count);
 						$repoTemplate.find(".remaining").text(repo.open_count);
-						$repoTemplate.attr('data-repo', repo_name);
+						$repoTemplate.attr('data-repo', repo.repo_name);
 						$repoTemplate.appendTo('tbody').fadeIn(300);
-						$("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
+						$("tbody").append('<tr class="issues" data-repo="' + repo.repo_name + '"><td colspan="3"></td></tr>');
 
 						_.each(repo.issues, function(issue) {
 
@@ -458,7 +459,7 @@
 							$issueTemplate.find(".created-at").text(issue.created_at);
 							$issueTemplate.find(".status").text(issue.status);
 							$issueTemplate.find(".status").addClass(issue.status);
-							$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
+							$('tbody tr.issues[data-repo="' + repo.repo_name + '"] td').append($issueTemplate);
 						});
 					});
 
