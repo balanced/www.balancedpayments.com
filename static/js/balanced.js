@@ -1,6 +1,31 @@
 /*global testimonials:true */
 
 (function(ctx) {
+	function animateInView(elem, animation) {
+		$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			if (isInView) {
+				$(elem).addClass(animation);
+			}
+		});
+	}
+
+	function fadeInInView(elem) {
+		$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			if (isInView) {
+				$(elem).fadeIn(1000);
+			}
+		});
+	}
+
+	function resizeCover() {
+		var windowWidth = $(window).width();
+		if (windowWidth > 960) {
+			$(".background-image").css("background-size", windowWidth);
+		} else {
+			$(".background-image").css("background-size", "auto 510px");
+		}
+	}
+
 	var balanced = ctx.balanced = {
 		menu: function() {
 			$(".toggle-child-menu, .sidebar-child-menu-left .icon-x").click(function(e) {
@@ -40,6 +65,8 @@
 				$this.toggleClass('active').next('ul').toggleClass('active');
 			});
 
+			resizeCover();
+			$(window).resize(resizeCover);
 			// $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 		},
 		achDebits: function() {
@@ -328,28 +355,11 @@
 			});
 		},
 		international: function() {
-			function animateInView(elem, animation) {
-				$(elem).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
-					if (isInView) {
-						$(elem).addClass(animation);
-					}
-				});
-			}
-
-			function resizeCover() {
-				var windowWidth = $(window).width();
-				if (windowWidth > 960) {
-					$(".background-image").css("background-size", windowWidth);
-				} else {
-					$(".background-image").css("background-size", "auto 510px");
-				}
-			}
-
 			// animate icons 
 			animateInView(".benefit1", "slide-up");
 			animateInView(".benefit2", "slide-up");
 
-			$('.forex-map').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView) {
 					$('.animate-cad').addClass('bounce-down');
 
@@ -371,9 +381,172 @@
 				$(".view-all").toggleClass("open");
 			});
 
-			// resize cover image. TODO: make it generally avaible to other pages.
-			resizeCover();
-			$(window).resize(resizeCover);
+		},
+		pushToCard: function() {
+			// display github issues
+			var repos = {};
+			var repos_length = 0;
+			var count = 0;
+
+			var populateIssues = function(issues) {
+				count++;
+				var open_count = 0;
+				var closed_count = 0;
+
+				_.each(issues, function(issue) {
+					_.each(issue.labels, function(label) {
+						if (label.name === 'push to card') {
+							var repo_name = issue.html_url.split('/')[4];
+
+							if (!_.has(repos, repo_name)) {
+								repos[repo_name] = {};
+							}
+
+							if (!_.has(repos[repo_name], 'issues')) {
+								repos[repo_name]['issues'] = {};
+							}
+
+							if (!_.has(repos[repo_name]['issues'], issue.title)) {
+								repos[repo_name]['issues'][issue.title] = {};
+							}
+
+							if (issue.state === 'open') {
+								open_count++;
+							} else {
+								closed_count++;
+							}
+
+							var days_ago = moment(new Date(issue.created_at)).fromNow();
+
+							repos[repo_name]['issues'][issue.title] = {
+								title: issue.title,
+								html_url: issue.html_url,
+								author: issue.user.login,
+								created_at: days_ago,
+								status: issue.state
+							};
+							repos[repo_name]['open_count'] = open_count;
+							repos[repo_name]['closed_count'] = closed_count;
+
+						}
+
+					});
+				});
+
+				if (count === repos_length) {
+					$(".loading").fadeOut(200);
+
+					_.each(repos, function(repo, repo_name) {
+						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
+						$repoTemplate.find(".repo-name").text(repo_name);
+						$repoTemplate.find(".completed").text(repo.closed_count);
+						$repoTemplate.find(".remaining").text(repo.open_count);
+						$repoTemplate.attr('data-repo', repo_name);
+						$repoTemplate.appendTo('tbody').fadeIn(300);
+						$("tbody").append('<tr class="issues" data-repo="' + repo_name + '"><td colspan="3"></td></tr>');
+
+						_.each(repo.issues, function(issue) {
+
+							var $issueTemplate = $(".github table.items div.issue-template").clone().removeClass('issue-template');
+							$issueTemplate.find("a.issue-name").attr("href", issue.html_url);
+							$issueTemplate.find("a.issue-name").text(issue.title);
+							$issueTemplate.find(".author").text(issue.author);
+							$issueTemplate.find(".created-at").text(issue.created_at);
+							$issueTemplate.find(".status").text(issue.status);
+							$issueTemplate.find(".status").addClass(issue.status);
+							$('tbody tr.issues[data-repo="' + repo_name + '"] td').append($issueTemplate);
+						});
+					});
+
+					$(".issue-name").each(function() {
+						if ($(this).width() > 400) {
+							$(this).css({
+								width: "60%",
+								display: "inline-block",
+								float: "left",
+								marginRight: 0
+							});
+						}
+					});
+				}
+			};
+
+			// pull github issues
+			$.ajax({
+				url: 'https://api.github.com/orgs/balanced/repos',
+				dataType: 'json',
+				success: function(response) {
+					var repos = response.sort(function(a, b) {
+						return b.watchers_count - a.watchers_count;
+					});
+					for (var i = 0, l = repos.length; i < l; i++) {
+						if (repos[i].fork) {
+							continue;
+						}
+						repos_length += 1;
+
+						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
+
+						$.ajax({
+							url: issues_url + '?state=all',
+							dataType: 'json',
+							timeout: 5000,
+							cache: false,
+							headers: {
+								'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
+							},
+							success: populateIssues
+						});
+					}
+				}
+			});
+
+			// animation
+			animateInView(".benefit", "slide-up");
+
+			$('.intro-image').one('inview', function(event, isInView, visiblePartX, visiblePartY) {
+				$('.title-wrapper').animate({
+					opacity: 1
+				}, 1000);
+				$('.mp-icon, .card-in-hand-icon').addClass("slide-in");
+
+				setTimeout(function() {
+					$('.mp-icon, .card-in-hand-icon').removeClass("slide-in");
+					$('.money.first, .money.second, .money.third').addClass("slide-down-right");
+				}, 600);
+			});
+
+			// expand/collapse github repos
+			$('.github').click(".repo", function(e) {
+				var $repo = $(e.target).parent();
+				$repo.toggleClass('expanded');
+				var $issues = $('.issues[data-repo="' + $repo.attr('data-repo') + '"]');
+
+				if ($issues.hasClass('expanded')) {
+					$issues.find('div').slideUp(200, function() {
+						$issues.removeClass('expanded');
+					});
+				} else {
+					$issues.addClass('expanded');
+					$issues.find('div').slideDown(200);
+				}
+			});
+
+			var expandedAll = false;
+			$('.show-all').click(function(e) {
+				e.preventDefault();
+				if (expandedAll) {
+					$('.issues td div').slideUp(200, function() {
+						$('.repo, .issues').removeClass('expanded');
+					});
+					$(e.currentTarget).text("Show all issues");
+				} else {
+					$('.repo, .issues').addClass('expanded');
+					$('.issues td div').slideDown(200);
+					$(e.currentTarget).text("Hide all issues");
+				}
+				expandedAll = !expandedAll;
+			});
 		}
 	};
 }(window));

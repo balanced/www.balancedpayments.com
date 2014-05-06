@@ -1,0 +1,268 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="bg-default">
+	<section class="page-header large-bottom-margin">
+		<div class="background-image"></div>
+		<div class="title-image"></div>
+	</section>
+
+	<div class="container">
+		<div class="row">
+			<div class="span19">
+				<div class="summary row large-bottom-margin">
+					<div class="page-subtitle clearfix">
+						<div class="span17">
+							<span>{{ page.metadata.subtitle.heading }}</span>
+						</div>
+					</div>
+
+					<div class="span19">
+						<div class="tag">
+							<div>
+								<span class="title">{{page.metadata.launch.title}}</span>
+							</div>
+							<div>
+								<span class="month">{{page.metadata.launch.month}}</span>
+								<span class="day">{{page.metadata.launch.day}}</span>
+							</div>
+						</div>
+						<div class="summary-text span17 pull-right">
+							<p class="page-summary">
+								{{ page.metadata.what.bodyText }}
+							</p>
+						</div>
+
+						<div class="summary-signup span17 pull-right">
+							<div class="send-email span5">
+								<p class="title">{{page.metadata.feedback.subscribe}}</p>
+							</div>
+							<div id="mc_embed_signup" class="notify-me span10 pull-right">
+								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=26ef23e4ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="26ef23e4ef" novalidate>
+									<div class="mc-field-group">
+										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+										<input class="btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>
+								    <div style="position: absolute; left: -5000px;">
+								    	<input type="text" name="b_30382d347d3689814ca424c89_26ef23e4ef" value="">
+							    	</div>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="intro-image large-bottom-margin">
+					<div class="clip">
+						<div class="money first"></div>
+						<div class="money second"></div>
+						<div class="money third"></div>
+						<div class="mp-icon"></div>
+						<div class="card-in-hand-icon"></div>
+						<section class="sidebox pull-left">
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper span5">
+									<span>{{page.metadata.introTextLeft.title}}</span>
+									<p>{{page.metadata.introTextLeft.body}}</p>
+								</div>
+							</div>
+						</section>
+						<section class="sidebox pull-right">
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper span5">
+									<span>{{page.metadata.introTextRight.title}}</span>
+									<p>{{page.metadata.introTextRight.body}}</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<section>
+					<div class="section-bg content clearfix">
+						<div class="section-title section-title-no-width">
+							<div class="title-wrapper span6">
+								<span>{{page.metadata.benefit.title}}</span>
+								<p>{{page.metadata.benefit.body}}</p>
+							</div>
+							<div class="benefit folded-box span13 pull-right">
+								<div class="icon-card span1"></div>
+								<div class="title top-padding offset1">Debit card</div>
+								<div class="card-number offset1">
+									{{page.metadata.benefit.cardNumber}}
+									<div class="icon-checkmark"></div>
+								</div>
+								<div class="card-meta offset1">
+									<div>
+										<span>Exp:</span>
+										<span>05/17</span>
+									</div>
+									<div>
+										<span>Card holder:</span>
+										<span>Damon Chin</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="api section-bg content clearfix">
+						<div class="section-title section-title-no-width">
+							<div class="title-wrapper span6">
+								<span>{{page.metadata.api.title}}</span>
+								<p>{{page.metadata.api.body}}</p>
+							</div>
+							<div class="span13 pull-right">
+								<div class="api-title">Create card</div>
+								<div class="code-sample">
+									<div class="title">Request</div>
+	<pre>
+	curl https://api.balancedpayments.com/cards <span class="se">\</span>
+	 -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+	 -d <span class="s2">number=4342561111111118</span> <span class="se">\</span>
+	 -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
+	 -d <span class="s2">expiration_year=2017</span> <span class="se">\</span>
+	 </pre>
+								</div>
+								<div class="code-sample">
+									<div class="title">Response *</div>
+									<pre>
+	<span class="p">{</span>
+	  <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/cards/:card_id"</span>,
+	  <span class="s2">"can_credit"</span><span class="o">:</span> <span class="s2">true</span>,
+	  <span class="s2">"bank_name"</span><span class="o">:</span> <span class="s2">"Wells Fargo"</span>,
+	  <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"debit"</span>,
+	  <span class="s2">...</span>
+	<span class="p">}</span></pre>
+	<div class="note">* Some parts of the response have been ommitted for brevity.</div>
+								</div>
+
+								<div class="api-title">Pay out to card</div>
+								<div class="code-sample">
+									<div class="title">Request</div>
+	<pre>
+	curl https://api.balancedpayments.com/cards/:card_id/credits <span class="se">\</span>
+	 -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+	 -d <span class="s2">amount=10000</span> <span class="se">\</span>
+	 </pre>
+								</div>
+								<div class="code-sample">
+									<div class="title">Response *</div>
+									<pre>
+	<span class="p">{</span>
+	  <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/credits/:credit_id"</span>,
+	  <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">"1234"</span>,
+	  <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"USD"</span>,
+	  <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"pending"</span>,
+	  <span class="s2">...</span>
+	<span class="p">}</span></pre>
+	<div class="note">* Some parts of the response have been ommitted for brevity.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-bg content clearfix">
+						<div class="section-title section-title-no-width">
+							<div class="title-wrapper span6">
+								<span>{{page.metadata.pricing.title}}</span>
+								<p>{{page.metadata.pricing.body}}</p>
+								<p><a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a></p>
+							</div>
+							<div class="pricing span13 pull-right">
+								<div class="title">{{page.metadata.pricing.imageTitle}}</div>
+								<div class="pricing-image"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-bg github clearfix large-bottom-margin">
+						<section>
+							<div class="section-title section-title-no-width">
+								<div class="title-wrapper">
+									<span>{{page.metadata.github.title}}</span>
+									<p>{{page.metadata.github.body}}</p>
+								</div>
+							</div>
+						</section>
+
+						<a class="show-all pull-right" href="#">Show all issues</a>
+
+						<table class="items">
+							<thead>
+								<th class="span6"><span>Repo</span></th>
+								<th class="span3 num"><span>Completed tasks</span></th>
+								<th class="span3 num"><span>Remaining tasks</span></th>
+							</thead>
+							<tbody>
+								<tr class="repo repo-template">
+									<td class="repo-name"></td>
+									<td class="completed num"></td>
+									<td class="remaining num"></td>
+								</tr>
+								<tr class="issues-template">
+									<td colspan="3">
+										<div class="issue issue-template">
+											<span class="status"></span>
+											<a target="_blank" class="issue-name"></a> <span class="issue-meta">(Opened by <span class="author"></span> <span class="created-at"></span>)</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="loading">
+							<div id="loadingSpinner" class="inline"></div>
+						</div>
+					</div>
+
+					<div class="section-bg feedback clearfix">
+						<div class="send-email span8">
+							<span class="title">{{page.metadata.feedback.title}}</span>
+							<p class="title">{{page.metadata.feedback.body}}</p>
+							<a class="light" href='mailto:{{page.metadata.feedback.email}}'>{{page.metadata.feedback.email}}</a>
+						</div>
+						<div class="notify-me span9 pull-right">
+							<p class="title">{{page.metadata.feedback.subscribe}}</p>
+
+							<div id="mc_embed_signup">
+								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=26ef23e4ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="26ef23e4ef" novalidate>
+									<div class="mc-field-group">
+										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+										<input class="btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>
+								    <div style="position: absolute; left: -5000px;">
+								    	<input type="text" name="b_30382d347d3689814ca424c89_26ef23e4ef" value="">
+							    	</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-bg content faqs clearfix">
+						<div class="title">{{page.metadata.faqs.title}}</div>
+						
+							{% for faq in page.metadata.faqs.list %}
+								<div class="faq span8">
+									<p class="q">{{faq.q}}</p>
+									<p class="a">{{faq.a}}</p>
+								</div>
+							{% endfor %}
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/static/js/mailchimp.min.js"></script>
+<script type="text/javascript">$(balanced.pushToCard)</script>
+{% endblock %}
