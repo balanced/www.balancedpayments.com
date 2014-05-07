@@ -73,7 +73,7 @@ marketplaces:
   bottoms:
     - text: |
         #### Charge customers
-        With Balanced’s card processing, funds are avaialble immediately for access. You can also debit your customers’ bank accounts with ACH debits.
+        With Balanced’s card processing, funds are available immediately for access. You can also debit your customers’ bank accounts with ACH debits.
 
         [Learn more about card processing](/card-processing)
         [Learn more about ACH debits](/ach-debits)
