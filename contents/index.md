@@ -8,8 +8,8 @@ try_out:
   link: Try the dashboard
 
 intro:
-  heading: Fast, easy marketplace payouts
-  sub: Pay sellers, campaign organizers and service providers with one simple integration.
+  heading: Marketplace payments
+  sub: Pay sellers, campaign organizers and service providers.
   introText:
     - title: Fast payouts
       body: Pay sellers within one business day via [ACH](/payouts) or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
