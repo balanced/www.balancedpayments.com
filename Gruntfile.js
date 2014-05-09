@@ -234,6 +234,10 @@ module.exports = function(grunt) {
 			fonts: {
 				src: ['build/static/css/fonts/**/*'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			},
+			notfound: {
+				src: ['build/notfound/images/*.png', 'build/notfound/fonts/**/*', 'build/notfound/css/*.css'],
+				dest: ['build/notfound/*.html', 'build/notfound/css/*.css']
 			}
 		},
 
@@ -280,8 +284,7 @@ module.exports = function(grunt) {
 					bucket: 'balanced-www-preview',
 				},
 				headers: {
-					'Cache-Control': 'max-age=60',
-					'Content-Type': 'text/html'
+					'Cache-Control': 'max-age=60'
 				},
 				upload: [{
 					src: 'build/*',
