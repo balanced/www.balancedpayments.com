@@ -65,9 +65,9 @@ faqs:
     - q: Is there a volume discount?
       a: Not right now, but the goal is to reduce the transaction fee for
           for everyone.
-      q: What are the transaction limits?
+    - q: What are the transaction limits?
       a: The current limit is $2,500 per transaction.
-      q: How long do payouts take?
+    - q: How long do payouts take?
       a: For approximately 55% of cards, the transaction will clear within 10
           minutes (including nights, weekends, and holidays). All other cards
           will take 1 – 2 business days. We're working on improving the speed by
