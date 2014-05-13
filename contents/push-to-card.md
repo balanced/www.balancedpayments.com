@@ -56,9 +56,20 @@ faqs:
     - q: Will you support international debit cards?
       a: Unfortunately not. This feature is only available for U.S. debit cards.
     - q: Can I use previously tokenized debit cards?
-      a: Yes, you can issue payouts to debit cards that were previously tokenized on your platform.
+      a: Yes, you can issue payouts to debit cards that were previously
+          tokenized on your platform. Note that the cardholder's name is
+          required for push to card.
     - q: Is there soft descriptor control?
-      a: Yes, just like with ACH credits, you will be able to set a soft descriptor by passing it in the appears_on_statement_as field when creating a credit.
+      a: Yes. Just like ACH payouts and charging a card, you can control the
+          soft descriptor per transaction.
     - q: Is there a volume discount?
-      a: Since this product is still in private beta, we&#8217re trying to figure out the final cost. As such, there are, currently, no plans to offer volume discounts.
+      a: Not right now, but the goal is to reduce the transaction fee for
+          for everyone.
+      q: What are the transaction limits?
+      a: The current limit is $2,500 per transaction.
+      q: How long do payouts take?
+      a: For approximately 55% of cards, the transaction will clear within 10
+          minutes (including nights, weekends, and holidays). All other cards
+          will take 1 – 2 business days. We're working on improving the speed by
+          partnering with more banks and networks.
 ---
