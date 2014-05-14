@@ -122,24 +122,24 @@
                 <div class="code-sample">
                   <div class="title">Request</div>
   <pre>
-  curl https://api.balancedpayments.com/cards <span class="se">\</span>
-   -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
-   -d <span class="s2">name="Johannes Bach"</span> <span class="se">\</span>
-   -d <span class="s2">number=4342561111111118</span> <span class="se">\</span>
-   -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
-   -d <span class="s2">expiration_year=2017</span>
+curl https://api.balancedpayments.com/cards <span class="se">\</span>
+    -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+    -d <span class="s2">name="Johannes Bach"</span> <span class="se">\</span>
+    -d <span class="s2">number=4342561111111118</span> <span class="se">\</span>
+    -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
+    -d <span class="s2">expiration_year=2017</span>
    </pre>
                 </div>
                 <div class="code-sample">
                   <div class="title">Response *</div>
                   <pre>
-  <span class="p">{</span>
+<span class="p">{</span>
     <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/cards/CC4WPZcJIMRDncSIvm9Sh5u9"</span>,
     <span class="s2">"can_credit"</span><span class="o">:</span> <span class="s2">true</span>,
     <span class="s2">"bank_name"</span><span class="o">:</span> <span class="s2">"WELLS FARGO BANK, N.A."</span>,
     <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"debit"</span>,
     <span class="s2">...</span>
-  <span class="p">}</span></pre>
+<span class="p">}</span></pre>
   <div class="note">* Some parts of the response have been ommitted for brevity.</div>
                 </div>
 
@@ -147,21 +147,21 @@
                 <div class="code-sample">
                   <div class="title">Request</div>
   <pre>
-  curl https://api.balancedpayments.com/cards/CC4WPZcJIMRDncSIvm9Sh5u9/credits <span class="se">\</span>
-   -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
-   -d <span class="s2">amount=10000</span>
+curl https://api.balancedpayments.com/cards/CC4WPZcJIMRDncSIvm9Sh5u9/credits <span class="se">\</span>
+    -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+    -d <span class="s2">amount=10000</span>
    </pre>
                 </div>
                 <div class="code-sample">
                   <div class="title">Response *</div>
                   <pre>
-  <span class="p">{</span>
+<span class="p">{</span>
     <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/credits/CR67ZUFRB0N34yVFJt7Ye6VL"</span>,
     <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">"1234"</span>,
     <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"USD"</span>,
     <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"pending"</span>,
     <span class="s2">...</span>
-  <span class="p">}</span></pre>
+<span class="p">}</span></pre>
   <div class="note">* Some parts of the response have been ommitted for brevity.</div>
                 </div>
               </div>
