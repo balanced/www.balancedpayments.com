@@ -76,9 +76,10 @@
 						{% for currency in page.metadata.currencies.list %}
 							<div class="span4">
 								<div class="symbol">{{currency.symbol}}</div>
-								<div class="name">{{currency.name}}</div>
+								<div class="name">{{currency.name}} {% if currency.amex %}{% else %}*{% endif %}</div>
 							</div>
 						{% endfor %}
+            <div class="note">* Currencies not supported by Amex</div>
 						<div class="close">Close</div>
 					</div>
 				</div>
@@ -157,7 +158,7 @@
 								<div class="title">Example</div>
 								<pre>
 > balanced.exchangeRate(10000, <span class="s2">"USD"</span>, <span class="s2">"EUR"</span>)
-72.35</pre>	
+72.35</pre>
 							</div>
 						</div>
 					</div>
@@ -240,7 +241,7 @@ curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <spa
 
 					<div class="section-bg content faqs clearfix">
 						<div class="title">{{page.metadata.faqs.title}}</div>
-						
+
 							{% for faq in page.metadata.faqs.list %}
 								<div class="faq span8">
 									<p class="q">{{faq.q}}</p>
