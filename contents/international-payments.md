@@ -525,13 +525,14 @@ pricing:
   title: Pricing
   body: Accept payments in 150+ currencies. Each foreign currency transaction will incur a 2% fee of the transaction amount, on top of Balanced&#8217s card processing rate.
   linkText: View complete pricing
-  linkUrl: https://www.balancedpayments.com/pricing
+  linkUrl: "https://www.balancedpayments.com/pricing"
+  imageTitle: Foreign currency conversion fee
 
 feedback:
   title: We&#8217d love to hear your feedback.
   body: "Send your comments to:"
   email: forex@balancedpayments.com
-  notifyMe: "Notify me when this feature is released:"
+  subscribe: "Notify me when this feature is released:"
 
 faqs:
   title: Frequently asked questions

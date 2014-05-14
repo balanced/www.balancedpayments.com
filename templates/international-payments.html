@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="span19">
-				<div class="row large-bottom-margin">
+				<div class="summary row large-bottom-margin">
 					<div class="page-subtitle clearfix">
 						<div class="span16">
 							<span>{{ page.metadata.subtitle.heading }}</span>
@@ -46,7 +46,7 @@
 								<span class="day">{{page.metadata.launch.day}}</span>
 							</div>
 						</div>
-						<div class="span17 pull-right">
+						<div class="summary-text span17 pull-right">
 							<p class="page-summary">
 								{{ page.metadata.what.bodyText }}
 							</p>
@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="forex large-bottom-margin">
-					<div class="forex-map">
+					<div class="intro-image">
 						<div class="pin animate-brl"></div>
 						<div class="pin animate-cad"></div>
 						<div class="pin animate-eur"></div>
@@ -203,11 +203,11 @@ curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <spa
 							<div class="title-wrapper span6">
 								<span>{{page.metadata.pricing.title}}</span>
 								<p>{{page.metadata.pricing.body}}</p>
-								<p><a href="{{ page.metadata.pricing.linkUrl }}">{{ page.metadata.pricing.linkText }}</a></p>
+								<p><a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a></p>
 							</div>
-							<div class="fee span13 pull-right">
-								<div class="title">Foreign currency conversion fee</div>
-								<div class="forex-image"></div>
+							<div class="pricing span13 pull-right">
+								<div class="title">{{page.metadata.pricing.imageTitle}}</div>
+								<div class="pricing-image"></div>
 							</div>
 						</div>
 					</div>
@@ -219,10 +219,10 @@ curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <spa
 							<a class="light" href='mailto:{{page.metadata.feedback.email}}'>{{page.metadata.feedback.email}}</a>
 						</div>
 						<div class="notify-me span8 pull-right">
-							<p class="title">{{page.metadata.feedback.notifyMe}}</p>
+							<p class="title">{{page.metadata.feedback.subscribe}}</p>
 
 							<div id="mc_embed_signup">
-								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=c8d0241856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=c8d0241856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="c8d0241856" novalidate>
 									<div class="mc-field-group">
 										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
 										<input class="btn" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
@@ -255,7 +255,6 @@ curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <spa
 	</div>
 </div>
 
-<script src="/static/js/customer-lib.min.js"></script>
 <script src="/static/js/mailchimp.min.js"></script>
 <script type="text/javascript">$(balanced.international)</script>
 {% endblock %}

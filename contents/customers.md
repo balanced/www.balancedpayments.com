@@ -399,7 +399,7 @@ customer_wall:
     link: http://www.vungle.com/
   - id: bottlestonight
     classes: marketplace
-    description: A nightclub reservation service for booking private spaces with bottle service
+    description: Same-day bottle service booking at the hottest nightclubs in town
     link: http://www.bottlestonightapp.com/
 
 tryTheDashboard:

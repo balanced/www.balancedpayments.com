@@ -10,7 +10,7 @@ subtitle:
 
 howItWorks:
   title: How it works
-  body: Integrate Balanced's full marketplace solution to manage your processing and payout needs. You may also use payouts<br />as a stand-alone product.
+  body: Integrate Balanced's full marketplace solution to manage your processing and payout needs. You may also use payouts as a stand-alone product.
 
 withProcessing:
   title: The full marketplace solution

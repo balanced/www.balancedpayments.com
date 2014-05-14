@@ -14,8 +14,12 @@ module.exports = function(grunt) {
 			options: {
 				separator: ';\n'
 			},
+			balancedLib: {
+				src: ['bower/jquery.inview/jquery.inview.min.js', 'bower/underscore/underscore.js', 'bower/momentjs/moment.js', 'static/lib/jquery.form-n-validate.js'],
+				dest: 'contents/static/js/balanced-lib.js'
+			},
 			bootstrapModal: {
-				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js', 'bower/jquery.inview/jquery.inview.min.js', 'static/lib/jquery.form-n-validate.js'],
+				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			}
 		},
@@ -31,6 +35,9 @@ module.exports = function(grunt) {
 					],
 					'contents/static/js/customer-lib.min.js': [
 						'contents/static/js/customer-lib.js'
+					],
+					'contents/static/js/balanced-lib.min.js': [
+						'contents/static/js/balanced-lib.js'
 					],
 					'contents/static/js/carousel.min.js': [
 						'bower/bootstrap/js/bootstrap-carousel.js'
@@ -132,6 +139,14 @@ module.exports = function(grunt) {
 					src: ['**'],
 					dest: 'contents/images'
 				}]
+			},
+			notfound: {
+				files: [{
+					cwd: 'bower/strapped/notfound',
+					expand: true,
+					src: ['**'],
+					dest: 'build/notfound'
+				}]
 			}
 		},
 
@@ -226,6 +241,10 @@ module.exports = function(grunt) {
 			fonts: {
 				src: ['build/static/css/fonts/**/*'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			},
+			notfound: {
+				src: ['build/notfound/images/*.png', 'build/notfound/fonts/**/*', 'build/notfound/css/*.css'],
+				dest: ['build/notfound/*.html', 'build/notfound/css/*.css']
 			}
 		},
 
@@ -272,8 +291,7 @@ module.exports = function(grunt) {
 					bucket: 'balanced-www-preview',
 				},
 				headers: {
-					'Cache-Control': 'max-age=60',
-					'Content-Type': 'text/html'
+					'Cache-Control': 'max-age=60'
 				},
 				upload: [{
 					src: 'build/*',
@@ -283,6 +301,10 @@ module.exports = function(grunt) {
 					src: 'build/terms/*',
 					dest: 'terms/',
 					rel: 'build/terms'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionCached: {
@@ -304,6 +326,10 @@ module.exports = function(grunt) {
 					src: 'build/*.{xml,txt,ico}',
 					dest: '',
 					rel: 'build'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionUncached: {
@@ -396,7 +422,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('verify', ['jshint', 'jsbeautifier:verify']);
 
 	// Register the main build/dev tasks
-	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'hashres', 'htmlmin:dist']);
+	grunt.registerTask('build', ['_buildprod', 'wintersmith:build', 'img', 'hashres', 'htmlmin:dist']);
 
 	grunt.registerTask('dev', ['_builddev', 'wintersmithDevConfig', 'wintersmith:dev', 'connect:server', 'open', 'watch']);
 
