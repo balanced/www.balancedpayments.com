@@ -68,8 +68,6 @@ faqs:
     - q: What are the transaction limits?
       a: The current limit is $2,500 per transaction.
     - q: How long do payouts take?
-      a: For approximately 55% of cards, the transaction will clear within 10
-          minutes (including nights, weekends, and holidays). All other cards
-          will take 1 – 2 business days. We're working on improving the speed by
-          partnering with more banks and networks.
+      a: It currently takes 1 &ndash; 2 business days for a customer to receive their
+          money. We're actively working on improving the payout speed.
 ---
