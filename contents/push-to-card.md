@@ -12,7 +12,7 @@ subtitle:
 launch:
   title: Private beta
   month: May
-  day: 22
+  day: 29
 
 what:
   bodyText: We&#8217re launching in private beta after receiving overwhelming
