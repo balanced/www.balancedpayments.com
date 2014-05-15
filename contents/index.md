@@ -8,12 +8,15 @@ try_out:
   link: Try the dashboard
 
 intro:
-  - heading: Charge cards
-    sub: with [Balanced Processing](#processing)
-  - heading: Pay out to bank accounts
-    sub: with [Balanced Payouts](#payouts)
-  - heading: Escrow Funds
-    sub: use all 3 with [Balanced for Marketplaces](#marketplaces)
+  heading: Marketplace payments
+  sub: Pay sellers, campaign organizers and service providers
+  introText:
+    - title: Fast payouts
+      body: Pay sellers within one business day via [ACH](/payouts) or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
+    - title: Controlled experience
+      body: Retain your brand with our white-label API. Get full card and bank statement descriptor control per transaction.
+    - title: Flexible funds flow
+      body: Get immediate access to funds after charging customers with Balanced’s [card processing](/card-processing).  Release funds on your time frame.
 
 customers:
   - name: RedditGifts
@@ -31,81 +34,59 @@ customers:
 
 # These are the 3 column section that are reasonable generic with their format
 Sections:
-  - id: processing
-    title: Processing
-    subTitle: Credit cards (U.S. and int'l) | Bank accounts via ACH (U.S. only)
-    desc: |
-      ### Accept credit cards and ACH debit payments from your customers.
-      [Learn more about ACH Debits](/ach-debits)
-    subs:
-      - title: No PCI requirements
-        text: |
-          Balanced is Level 1 PCI certified, so you can pass card data directly to us without worrying about compliance.
-
-          [Learn more about security](https://support.balancedpayments.com/hc/en-us/categories/200005004-Security)
-      - title: Soft descriptor control
-        text: |
-          Specify the credit card or bank statement descriptor on a per-transaction basis.
-      - title: Completely white-labeled
-        text: |
-          Retain your brand and keep customers on your site; buyers do not need to sign up for a Balanced account.
-
   - id: payouts
-    title: Payouts
+    title: Payout options
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
-      ### Use with any card processor or as a stand-alone service for same-day bank deposits.
-      [Learn more about payouts](/payouts)
+      ### For stand-alone payouts, crowdfunding platforms, or online businesses connecting buyers and sellers
     subs:
-      - title: Pay out same day
-        text: |
-          Balanced now offers same-day ACH payouts to Wells
-          Fargo bank account holders. Pay all other merchants
-          via next-day ACH.
-      - title: No fees to add funds
-        text: |
-          To pay out, simply fund your balance with your bank account.
-      - title: Completely white-labeled
-        text: |
-          Retain your brand and keep customers on your site; merchants do not need to sign up for a Balanced account.
+      - title: ACH payouts
+        text: Pay out with same-day ACH for Wells Fargo accounts and next business day for other U.S. bank accounts.
+        link: payouts
+        inDevelopment: false
+      - title: Push to card
+        text: Issue payouts using only debit card numbers.
+        link: push-to-card
+        inDevelopment: true
+      - title: International payments
+        text: International payouts are on the roadmap. We’ll start with foreign currency exchange.
+        link: international-payments
+        inDevelopment: true
 
 marketplaces:
-  title: Balanced for Marketplaces
+  title: End-to-end payments
   desc: |
-    ### Combine card processing and bank payouts with escrow.
+    ### Combine payouts with processing and escrow for a complete payment solution
   tops:
     - id: charge
       text: |
-        Charge cards and bank accounts with [Balanced Processing](#processing)
+        Charge cards and bank accounts
     - id: escrow
       text: |
         Escrow funds
     - id: payouts
       text: |
-        Pay out to bank accounts with [Balanced Payouts](/payouts)
+        Pay out to bank accounts
     - id: fees
       text: |
         Collect your fees
   bottoms:
     - text: |
-        #### Decide when to disburse funds
-        Once a card is charged, funds are implicitly placed in
-        escrow for as long as you need. You decide when to
-        pay your merchants upon fulfillment of an order or
-        a service.
+        #### Charge customers
+        With Balanced’s card processing, funds are available immediately for access. You can also debit your customers’ bank accounts with ACH debits.
+
+        [Learn more about card processing](/card-processing)
+        [Learn more about ACH debits](/ach-debits)
+    - text: |
+        #### Escrow funds
+        Once a card is charged, funds are implicitly placed in escrow for as long as you like. You decide when to pay your merchants upon fulfillment of an order or a service.
 
         [Learn more about escrow](https://docs.balancedpayments.com/1.1/guides/escrow/)
-    - text: |
-        #### Define your own fee structure
-        Set your own fees by determining how much to collect
-        from buyers, merchants, or both.
-
-        [View fee scenarios](https://docs.balancedpayments.com/1.1/guides/collecting-fees/)
 
 integrate:
   title: Integrate in minutes
   desc: |
-    ### Balanced provides client libraries and a RESTful API for you to easily integrate.
+    ### Client libraries and a RESTful API for you to easily integrate
     [View our docs](https://docs.balancedpayments.com)
   tutorials_title: Tutorials
   tutorials:
