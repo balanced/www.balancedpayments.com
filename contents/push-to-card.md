@@ -6,8 +6,7 @@ pageTitle: Push to Card
 body_class: push-to-card
 
 subtitle:
-  heading: Let&#8217s push money to debit cards.<br>Send money to your customers
-    without collecting bank account information.
+  heading: Issue payouts to debit cards.<br>Send money to your customers using only their debit card numbers and without requiring bank account or routing numbers.
 
 launch:
   title: Private beta
@@ -15,28 +14,20 @@ launch:
   day: 22
 
 what:
-  bodyText: After receiving overwhelming support for this feature on our
-    <a href="https://balanced.crowdhoster.com/let-s-push-to-debit-cards">CrowdtiltOpen campaign</a>,
-    we are excited to begin development. Backers who contributed to the campaign
-    will receive priority beta access. If you are interested in this feature,
-    please submit your email to request an invite.
-
+  bodyText: We're launching in private beta after receiving overwhelming support for this feature on our  <a href="https://balanced.crowdhoster.com/let-s-push-to-debit-cards">CrowdtiltOpen Campaign</a>. Backers who contributed over $1,000 to the campaign will receive priority beta access. If you are interested in this feature, please submit your email to request an invite.
+  
+ 
 introTextLeft:
   title: Put sellers at ease
-  body: Providing sensitive bank account information on a website can be an
-    issue for sellers. Push to card is the perfect alternative as a convenient
-    and readily accessible payout option.
+  body: Pushing money to debit cards is a fast and convenient way to pay sellers who may be concerned with providing sensitive bank account information on a website.
 
 introTextRight:
   title: Pay anyone easily
-  body: Your sellers no longer need to hunt for their checkbooks or bank account
-    information. You can now push money directly to their bank account using
-    just their U.S. debit card.
+  body: You can now push money directly to customer bank accounts using their U.S. debit card; no need to collect their bank account details.
 
 benefit:
   title: Validate in real time
-  body: Forget about delayed payouts due to incorrect bank account and routing
-    numbers. Debit card information is validated in real time, ensuring timely delivery of funds.
+  body: Real time debit card validation ensures timely delivery of money. Forget about delayed payouts due to incorrect bank account and routing numbers.
   cardNumber: 4342 5611 1111 1118
 
 api:
