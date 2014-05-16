@@ -262,7 +262,7 @@
 					per_page: 100
 				},
 				headers: {
-					'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
+					'Authorization': 'token 284acf137657971d36d0911c9d36b0aae83c1f2b'
 				}
 			};
 
