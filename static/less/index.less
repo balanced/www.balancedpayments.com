@@ -1,7 +1,10 @@
 @listMargin: 16px;
 
-.homepage-logo {
-  margin-bottom: 40px;
+.larger {
+  .page-header {
+    margin: 0;
+    padding: 50px 0 30px;
+  }  
 }
 
 .underline(@weight: 4px, @lineHeight: 1.3em) {
@@ -47,35 +50,61 @@ footer {
 }
 
 #intro {
-  margin-bottom: @mainMargin;
-  h1 {
-    display: none;
-  }
+  background-color: @pineGreen60;
+  margin: auto;
+  padding: 0;
+  position: relative;
 
-  &>div {
-    background: url(/images/homepage_whats_up_now-03.png) 51px 50px no-repeat;
-    background-color: @curryYellow40;
-    width: 100%;
-    min-height: 200px;
-    margin: auto;
-    padding: 70px 0 30px;
+  .sidebar {
+    width: 420px;
+    background-color: fade(@gray9, 50%);
+    padding: 90px 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 
-    &>div {
-      padding: @mainMargin;
-      float: left;
-      width: 300px;
-      text-align: center;
-      margin-left: 30px;
+    h1 {
+      .sl-44-sb;
+      color: @white;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
+    p {
+      .sl-md-sb;
+      color: @white;
+      padding: 20px 0;
+      width: 235px;
+    }
   }
-  p {
-    .sl;
-    margin-top: 190px;
 
-    a {
-      .sl;
-      text-decoration: underline;
+  .hero-image {
+    background: url(/images/hero_image.png);
+    width: 528px;
+    height: 422px;
+    background-size: contain;
+    margin: 30px;
+    float: right;
+  }
+}
+
+#intro-sub {
+  background-color: @gray1;
+  margin-bottom: @mainMargin;
+
+  & > div {
+    padding-left: 40px;
+    padding-bottom: 30px;
+    border-top: none;
+  }
+
+  .title-wrapper {
+    margin-top: 28px;
+    width: 307px;
+    display: inline-block;
+
+    span {
+      border-top: none;
     }
   }
 }
@@ -350,10 +379,4 @@ footer {
   background-color: @gray1;
   .letThemKnow();
   margin-bottom: 25px;
-}
-
-#marketplaces, #processing, #payouts {
-  h2 {
-    color: #C98935;
-  }
 }

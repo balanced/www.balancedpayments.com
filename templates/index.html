@@ -1,22 +1,28 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
 <div class="bg-default">
     <div class="hur">
-        <div class="center">
+        <div class="page-header center">
             <a href="/"><img class="homepage-logo" src="images/homepage_logo-01-2x.png" width="145" alt="Balanced Logo" title="Balanced - Card processing, escrow, and payouts in one simple API"></a>
-        </div>
-        <div id="try-it" class="box">
-            <h1>{{ page.metadata.try_out.heading }}</h1>
-            <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{ page.metadata.try_out.link }}</a>
+            <div class="subtitle">{{ page.metadata.try_out.heading }}</div>
         </div>
 
-        <section id="intro">
-            <div class="clearfix">
-                {% for intro in page.metadata.intro %}
-                <div>
-                    <h1>{{ intro.heading }}</h1>
-                    {{ intro.sub.markdown() }}
+        <section id="intro" class="clearfix">
+            <div class="sidebar">
+                <h1>{{ page.metadata.intro.heading }}</h1>
+                <p>{{ page.metadata.intro.sub }}</p>
+                <a class="btn" href="https://dashboard.balancedpayments.com/#/start">Get started</a>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+        <section id="intro-sub">
+            <div class="section-title section-title-no-width clearfix">
+                {% for introText in page.metadata.intro.introText %}
+                <div class="title-wrapper">
+                    <span>{{introText.title}}</span>
+                    <p>{{introText.body.markdown()}}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -35,10 +41,7 @@
         {% for section in page.metadata.Sections %}
         <section id="{{ section.id }}">
             <h2>{{ section.title }}</h2>
-            <div class="sub">
-                <p>{{ section.subTitle }}</p>
-            </div>
-            <div class="main">
+            <div class="main clearfix">
                 <div class="title">
                     {{ section.desc.markdown() }}
                 </div>
@@ -47,7 +50,9 @@
                         {% for sub in section.subs %}
                         <li>
                             <h4>{{ sub.title }}</h4>
-                            {{ sub.text.markdown() }}
+                            {{ sub.text }}
+                            {% if sub.inDevelopment %}<div class="stage">In development</div> {% endif %}
+                            <p><a href="{{env.helpers.link(sub.link)}}">Learn more</a></p>
                         </li>
                         {% endfor %}
                     </ul>
@@ -58,7 +63,7 @@
 
         <section id="marketplaces">
             <h2>{{ page.metadata.marketplaces.title }}</h2>
-            <div class="main">
+            <div class="main clearfix">
                 <div class="title">
                     {{ page.metadata.marketplaces.desc.markdown() }}
                 </div>

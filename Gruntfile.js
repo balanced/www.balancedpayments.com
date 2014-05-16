@@ -139,6 +139,14 @@ module.exports = function(grunt) {
 					src: ['**'],
 					dest: 'contents/images'
 				}]
+			},
+			notfound: {
+				files: [{
+					cwd: 'bower/strapped/notfound',
+					expand: true,
+					src: ['**'],
+					dest: 'build/notfound'
+				}]
 			}
 		},
 
@@ -233,6 +241,10 @@ module.exports = function(grunt) {
 			fonts: {
 				src: ['build/static/css/fonts/**/*'],
 				dest: ['build/**/*.html', 'build/static/css/*.css', 'build/static/js/*.js']
+			},
+			notfound: {
+				src: ['build/notfound/images/*.png', 'build/notfound/fonts/**/*', 'build/notfound/css/*.css'],
+				dest: ['build/notfound/*.html', 'build/notfound/css/*.css']
 			}
 		},
 
@@ -279,8 +291,7 @@ module.exports = function(grunt) {
 					bucket: 'balanced-www-preview',
 				},
 				headers: {
-					'Cache-Control': 'max-age=60',
-					'Content-Type': 'text/html'
+					'Cache-Control': 'max-age=60'
 				},
 				upload: [{
 					src: 'build/*',
@@ -290,6 +301,10 @@ module.exports = function(grunt) {
 					src: 'build/terms/*',
 					dest: 'terms/',
 					rel: 'build/terms'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionCached: {
@@ -311,6 +326,10 @@ module.exports = function(grunt) {
 					src: 'build/*.{xml,txt,ico}',
 					dest: '',
 					rel: 'build'
+				}, {
+					src: 'build/notfound/**/*',
+					rel: 'build/notfound',
+					dest: 'notfound/'
 				}]
 			},
 			productionUncached: {
