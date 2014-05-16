@@ -260,14 +260,11 @@
 				cache: false,
 				data: {
 					per_page: 100
-				},
-				headers: {
-					'Authorization': 'token 5db390dd3591d5f7d3646ce5cf62245328fe4ee3'
 				}
 			};
 
 			ajaxOptions.complete = onCompleteRepos;
-			jQuery.ajax("https://api.github.com/orgs/balanced/repos", ajaxOptions);
+			jQuery.ajax("https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0", ajaxOptions);
 		},
 		payouts: function() {
 			var $routingNumber = $('.routing-number'),
@@ -478,7 +475,7 @@
 
 			// pull github issues
 			$.ajax({
-				url: 'https://api.github.com/orgs/balanced/repos',
+				url: 'https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
 				dataType: 'json',
 				success: function(response) {
 					var repos = response.sort(function(a, b) {
@@ -493,13 +490,10 @@
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
 						$.ajax({
-							url: issues_url + '?state=all',
+							url: issues_url + '?state=all&client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
 							dataType: 'json',
 							timeout: 5000,
 							cache: false,
-							headers: {
-								'Authorization': 'token 284acf137657971d36d0911c9d36b0aae83c1f2b'
-							},
 							success: populateIssues
 						});
 					}
