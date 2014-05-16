@@ -51,7 +51,7 @@ pricing:
 
 github:
   title: Monitor our progress on Github
-  body: We&#8217ll outline each task in our public repos and indicate the status
+  body: We&#8217ll outline each task in our <a href="https://github.com/balanced" target="_blank">public repos</a> and indicate the status
     of each issue. Once a task is complete, the corresponding issue will be
     closed.
 
