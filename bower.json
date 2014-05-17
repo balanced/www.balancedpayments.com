@@ -6,7 +6,7 @@
 		"bootstrap": "2.3.2",
 		"isotope": "1.5.25",
 		"jquery.inview": "protonet/jquery.inview",
-		"strapped": "0.1.27",
+		"strapped": "0.1.34",
 		"underscore": "1.4.4",
 		"momentjs": ""
 	}
