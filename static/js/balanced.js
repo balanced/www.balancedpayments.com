@@ -487,7 +487,7 @@
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
 						$.ajax({
-							url: issues_url + '?labels=push to card&state=all&client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
+							url: issues_url + '?labels=push+to+card&state=all&client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
 							dataType: 'json',
 							timeout: 5000,
 							cache: false,
