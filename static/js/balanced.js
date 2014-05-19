@@ -392,41 +392,38 @@
 
 				_.each(issues, function(issue) {
 					_.each(issue.labels, function(label) {
-						if (label.name === 'push to card') {
-							var repo_name = issue.html_url.split('/')[4];
+						var repo_name = issue.html_url.split('/')[4];
 
-							if (!_.has(repos, repo_name)) {
-								repos[repo_name] = {};
-							}
-
-							if (!_.has(repos[repo_name], 'issues')) {
-								repos[repo_name]['issues'] = {};
-							}
-
-							if (!_.has(repos[repo_name]['issues'], issue.title)) {
-								repos[repo_name]['issues'][issue.title] = {};
-							}
-
-							if (issue.state === 'open') {
-								open_count++;
-							} else {
-								closed_count++;
-							}
-
-							var days_ago = moment(new Date(issue.created_at)).fromNow();
-
-							repos[repo_name]['issues'][issue.title] = {
-								title: issue.title,
-								html_url: issue.html_url,
-								author: issue.user.login,
-								created_at: days_ago,
-								status: issue.state
-							};
-							repos[repo_name]['repo_name'] = repo_name;
-							repos[repo_name]['open_count'] = open_count;
-							repos[repo_name]['closed_count'] = closed_count;
+						if (!_.has(repos, repo_name)) {
+							repos[repo_name] = {};
 						}
 
+						if (!_.has(repos[repo_name], 'issues')) {
+							repos[repo_name]['issues'] = {};
+						}
+
+						if (!_.has(repos[repo_name]['issues'], issue.title)) {
+							repos[repo_name]['issues'][issue.title] = {};
+						}
+
+						if (issue.state === 'open') {
+							open_count++;
+						} else {
+							closed_count++;
+						}
+
+						var days_ago = moment(new Date(issue.created_at)).fromNow();
+
+						repos[repo_name]['issues'][issue.title] = {
+							title: issue.title,
+							html_url: issue.html_url,
+							author: issue.user.login,
+							created_at: days_ago,
+							status: issue.state
+						};
+						repos[repo_name]['repo_name'] = repo_name;
+						repos[repo_name]['open_count'] = open_count;
+						repos[repo_name]['closed_count'] = closed_count;
 					});
 				});
 
@@ -490,7 +487,7 @@
 						var issues_url = repos[i].issues_url.split('{')[0]; // remove name from issues/{name}
 
 						$.ajax({
-							url: issues_url + '?state=all&client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
+							url: issues_url + '?labels=push to card&state=all&client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0',
 							dataType: 'json',
 							timeout: 5000,
 							cache: false,
