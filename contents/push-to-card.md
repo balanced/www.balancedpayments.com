@@ -41,6 +41,8 @@ benefit:
 api:
   title: Sample API call
   body: Paying out to a debit card is super simple.
+  linkText: View documentation
+  linkUrl: "https://docs.balancedpayments.com/1.1/api/cards/#credit-a-card"
 
 pricing:
   title: Pricing
