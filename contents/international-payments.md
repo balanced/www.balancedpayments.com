@@ -1,5 +1,5 @@
 ---
-title: Balanced - Payments processing, escrow, and payouts in one simple API | International Payments
+title: International Payments | Balanced
 template: international-payments.html
 
 pageTitle: International Payments
@@ -18,8 +18,8 @@ timeline:
 
 launch:
   title: Expected launch
-  month: May
-  day: 22
+  month: July
+  day: 10
 
 what:
   bodyText: We&#8217ve begun development on supporting foreign currency. The first step is to accept payments in local currencies. Payouts and escrow are on the roadmap. Here&#8217s how we envision the payment feature to work. We welcome your feedback.
