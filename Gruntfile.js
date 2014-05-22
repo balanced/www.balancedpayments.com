@@ -89,11 +89,7 @@ module.exports = function(grunt) {
 		},
 
 		wintersmith: {
-			build: {
-				options: {
-					config: './config-dev.json'
-				}
-			},
+			build: {},
 			preview: {
 				options: {
 					action: 'preview'
