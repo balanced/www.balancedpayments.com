@@ -114,16 +114,6 @@ team:
       desc: the only intern that survived Summer 2013
       link: https://github.com/matthewfl
       site: github
-    - name: noah kantrowitz
-      job: devops
-      desc: master chef
-      link: https://github.com/coderanger
-      site: github
-    - name: steve klabnik
-      job: philosopher in residence
-      desc: ideas, standards, collaboration, and advocacy
-      link: https://github.com/steveklabnik
-      site: github
     - name: victor lin
       job: engineer
       desc: recurring billing connoisseur
@@ -151,7 +141,7 @@ team:
       site: github
     - name: richie serna
       job: engineer
-      desc: former biz dev who went full dev 
+      desc: former biz dev who went full dev
       link: https://github.com/rserna2010
       site: github
 
