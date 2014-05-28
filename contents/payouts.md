@@ -93,11 +93,17 @@ bankStatementDescriptor:
 
 payoutsPricing:
   title: Pricing
-  payingYourSellers: Paying your sellers (Same-day / Next-day ACH deposit)
-  payingToYourBank: Paying to your bank account
-  reversal: Reversal
-  failure: Failure
-  preloading: Preloading your escrow
+  cent: 25
+  list:
+    - name: Paying to your bank account
+      price: 0%
+    - name: Reversal
+      price: $0
+    - name: Failure
+      price: $1
+    - name: Preloading your escrow
+      note: via ACH debit
+      price: $0
 
 tryTheDashboard:
   body: Get started today.

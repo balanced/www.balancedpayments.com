@@ -284,51 +284,49 @@
 
         <div class="row" id="payouts-pricing">
             <div class="span19">
-                <section class="row payouts">
+                <section class="payouts">
                     <div class="box-pad-top">
-                      <div class="content">
-                        <div class="row">
-                          <div class="span5 offset1 section-title section-title-no-width">
-                            <div class="title-wrapper">
-                              <span>{{page.metadata.payoutsPricing.title}}</span>
-                              <div class="title-icon"></div>
-                            </div>
-                          </div>
-
-                          <div class="span13 rate-panels">
-                            <div class="rate-panel main-rate-panel">
-                              <div class="panel-content">
-                                <span>{{page.metadata.payoutsPricing.payingYourSellers}}</span>
-                                <div class="rate-image paying-sellers"></div>
-                              </div>
-                            </div>
-                            <div class="rate-panel secondary-rate-panel tr-rate-panel">
-                              <div class="panel-content">
-                                <span>{{page.metadata.payoutsPricing.payingToYourBank}}</span>
-                                <div class="rate-image paying-your-account"></div>
-                              </div>
-                            </div>
-
-                            <div class="rate-panel secondary-rate-panel">
-                              <div class="panel-content">
-                                <span>{{page.metadata.payoutsPricing.reversal}}</span>
-                                <div class="rate-image reversal"></div>
-                              </div>
-                            </div>
-                            <div class="rate-panel secondary-rate-panel bot-mid-rate-panel">
-                              <div class="panel-content">
-                                <span>{{page.metadata.payoutsPricing.failure}}</span>
-                                <div class="rate-image failure"></div>
-                              </div>
-                            </div>
-                            <div class="rate-panel secondary-rate-panel">
-                              <div class="panel-content">
-                                <span>{{page.metadata.payoutsPricing.preloading}}</span>
-                                <div class="rate-image preloading-escrow"></div>
-                              </div>
-                            </div>
+                      <div class="content clearfix">
+                        <div class="section-title section-title-no-width">
+                          <div class="title-wrapper pull-left">
+                            <span>{{page.metadata.payoutsPricing.title}}</span>
+                            <div class="title-icon"></div>
                           </div>
                         </div>
+
+                          <div class="pricing span13 pull-right">
+                            <div class="panel">
+                              <div class="panel-heading main-price">
+
+                                {% if page.metadata.payoutsPricing.percent %}
+                                <span class="percent">{{page.metadata.payoutsPricing.percent}}</span>
+                                <span class="plus">+</span>
+                                {% endif %}
+
+                                {% if page.metadata.payoutsPricing.cent %}
+                                <span class="cent">{{page.metadata.payoutsPricing.cent}}</span>
+                                {% endif %}
+
+                                {% if page.metadata.payoutsPricing.dollar %}
+                                <span class="dollar">{{page.metadata.payoutsPricing.dollar}}</span>
+                                {% endif %}
+
+                                <span class="per">per transaction</span>
+                              </div>
+
+                              <ul class="list-group">
+                                {% for item in page.metadata.payoutsPricing.list %}
+                                <li class="list-group-item">
+                                  <span>{{item.name}}</span>
+                                  {% if item.note %}
+                                    <span class="note">({{item.note}})</span>
+                                  {% endif %}
+                                  <span class="pull-right">{{item.price}}</span>
+                                </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          </div>
                     </div>
                   </div>
                 </section>

@@ -54,11 +54,21 @@ chargebacksDisputes:
 
 cardProcessingPricing:
   title: Pricing
-  debit: Charging your buyers (successful credit card charge)
-  authorizationHold: Authorization Hold
-  chargeback: Chargeback
-  refund: Refund
-  failure: Failure
+  percent: 2.9
+  cent: 30
+  list:
+    - name: Foreign currency conversion
+      note: 2% fee on top of card processing rate
+      price: 2%
+    - name: Authorization hold
+      price: $0
+    - name: Refund
+      note: processing fee of 2.9% is returned, but the 30&cent; is non-refundable
+      price: $0
+    - name: Failure
+      price: $0
+    - name: Chargeback
+      price: $15
 
 tryTheDashboard:
   body: Ready to get started?
