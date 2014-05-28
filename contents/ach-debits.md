@@ -90,12 +90,19 @@ chargebacksDisputes:
   learnLink: "Learn more about the<br />chargeback process"
 
 achDebitsPricing:
-  title: ACH Debits Pricing
-  debit: Charging your buyers (ACH debit / Debiting a bank account)
-  microDepositVerification: Micro-deposit verification
-  chargeback: Chargeback
-  refund: Refund
-  failure: Failure
+  title: Pricing
+  percent: 1
+  cent: 30
+  list:
+    - name: Micro-deposit verification
+      price: $0
+    - name: Refund
+      note: processing fee of 1% is returned, but the 30&cent; is non-refundable
+      price: $0
+    - name: Failure
+      price: $0
+    - name: Chargeback
+      price: $15
 
 tryTheDashboard:
   body: Get started today.
