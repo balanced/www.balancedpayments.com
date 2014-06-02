@@ -93,6 +93,7 @@ bankStatementDescriptor:
 
 payoutsPricing:
   title: Pricing
+  image: ach-credit
   cent: 25
   list:
     - name: Paying to your bank account

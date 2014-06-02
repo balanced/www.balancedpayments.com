@@ -286,47 +286,46 @@
             <div class="span19">
                 <section class="payouts">
                     <div class="box-pad-top">
-                      <div class="content clearfix">
+                      <div class="pricing content clearfix">
                         <div class="section-title section-title-no-width">
                           <div class="title-wrapper pull-left">
                             <span>{{page.metadata.payoutsPricing.title}}</span>
-                            <div class="title-icon"></div>
+                            <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}}"></i></div>
                           </div>
                         </div>
+                        <div class="span13 pull-right">
+                          <div class="panel">
+                            <div class="panel-heading main-price">
 
-                          <div class="pricing span13 pull-right">
-                            <div class="panel">
-                              <div class="panel-heading main-price">
+                              {% if page.metadata.payoutsPricing.percent %}
+                              <span class="percent">{{page.metadata.payoutsPricing.percent}}</span>
+                              <span class="plus">+</span>
+                              {% endif %}
 
-                                {% if page.metadata.payoutsPricing.percent %}
-                                <span class="percent">{{page.metadata.payoutsPricing.percent}}</span>
-                                <span class="plus">+</span>
-                                {% endif %}
+                              {% if page.metadata.payoutsPricing.cent %}
+                              <span class="cent">{{page.metadata.payoutsPricing.cent}}</span>
+                              {% endif %}
 
-                                {% if page.metadata.payoutsPricing.cent %}
-                                <span class="cent">{{page.metadata.payoutsPricing.cent}}</span>
-                                {% endif %}
+                              {% if page.metadata.payoutsPricing.dollar %}
+                              <span class="dollar">{{page.metadata.payoutsPricing.dollar}}</span>
+                              {% endif %}
 
-                                {% if page.metadata.payoutsPricing.dollar %}
-                                <span class="dollar">{{page.metadata.payoutsPricing.dollar}}</span>
-                                {% endif %}
-
-                                <span class="per">per transaction</span>
-                              </div>
-
-                              <ul class="list-group">
-                                {% for item in page.metadata.payoutsPricing.list %}
-                                <li class="list-group-item">
-                                  <span>{{item.name}}</span>
-                                  {% if item.note %}
-                                    <span class="note">({{item.note}})</span>
-                                  {% endif %}
-                                  <span class="pull-right">{{item.price}}</span>
-                                </li>
-                                {% endfor %}
-                              </ul>
+                              <span class="per">per transaction</span>
                             </div>
+
+                            <ul class="list-group">
+                              {% for item in page.metadata.payoutsPricing.list %}
+                              <li class="list-group-item">
+                                <span>{{item.name}}</span>
+                                {% if item.note %}
+                                  <span class="note">({{item.note}})</span>
+                                {% endif %}
+                                <span class="pull-right">{{item.price}}</span>
+                              </li>
+                              {% endfor %}
+                            </ul>
                           </div>
+                        </div>
                     </div>
                   </div>
                 </section>

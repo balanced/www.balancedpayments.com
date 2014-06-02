@@ -49,7 +49,8 @@ pricing:
   body: Each push to card transaction will incur a $1 fee.
   linkText: View complete pricing
   linkUrl: "https://www.balancedpayments.com/pricing"
-  imageTitle: Push to card fee
+  image: pushtocard
+  cent: 25
 
 github:
   title: Monitor our progress on Github

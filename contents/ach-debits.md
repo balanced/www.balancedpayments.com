@@ -91,6 +91,7 @@ chargebacksDisputes:
 
 achDebitsPricing:
   title: Pricing
+  image: ach-debit
   percent: 1
   cent: 30
   list:
