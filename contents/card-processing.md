@@ -50,10 +50,9 @@ chargebacksDisputes:
   learnLink: Learn more about the chargeback process
   learnLinkHref: https://support.balancedpayments.com/hc/en-us/articles/200135910-How-are-credit-card-chargebacks-and-disputes-handled-
 
-
-
 cardProcessingPricing:
   title: Pricing
+  image: card-processing
   percent: 2.9
   cent: 30
   list:

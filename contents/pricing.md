@@ -55,7 +55,7 @@ features:
         price: $0
   - title: "Payout: push to card"
     image: pushtocard
-    dollar: 1
+    cent: 25
 
 noAdditionalFees:
   title: No additional fees

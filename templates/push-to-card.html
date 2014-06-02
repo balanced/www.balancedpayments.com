@@ -170,15 +170,32 @@ curl https://api.balancedpayments.com/cards/CC4WPZcJIMRDncSIvm9Sh5u9/credits <sp
           </div>
 
           <div class="content clearfix">
-            <div class="section-title section-title-no-width">
+            <div class="pricing section-title section-title-no-width">
               <div class="title-wrapper span6">
                 <span>{{page.metadata.pricing.title}}</span>
-                <p>{{page.metadata.pricing.body}}</p>
-                <p><a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a></p>
+                <div class="section-icon"><i class="icon-{{page.metadata.pricing.image}}"></i></div>
               </div>
-              <div class="pricing span13 pull-right">
-                <div class="title">{{page.metadata.pricing.imageTitle}}</div>
-                <div class="pricing-image"></div>
+              <div class="span13 pull-right">
+                <div class="panel">
+                  <div class="panel-heading main-price">
+
+                    {% if page.metadata.pricing.percent %}
+                    <span class="percent">{{page.metadata.pricing.percent}}</span>
+                    <span class="plus">+</span>
+                    {% endif %}
+
+                    {% if page.metadata.pricing.cent %}
+                    <span class="cent">{{page.metadata.pricing.cent}}</span>
+                    {% endif %}
+
+                    {% if page.metadata.pricing.dollar %}
+                    <span class="dollar">{{page.metadata.pricing.dollar}}</span>
+                    {% endif %}
+
+                    <span class="per">per transaction</span>
+                  </div>
+                </div>
+                <a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a>
               </div>
             </div>
           </div>
