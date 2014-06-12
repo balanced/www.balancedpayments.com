@@ -2,8 +2,8 @@
 	"locals": {
 		"name": "Balanced - Payments for Marketplaces",
 		"url": "https://www.balancedpayments.com",
-		"description": "Balanced - Payments processing, escrow, and payouts in one simple API",
-		"keywords": "Balanced, Payments, processing, escrow, payouts, api, simple",
+		"description": "Balanced - Payments for Marketplaces",
+		"keywords": "Balanced, Payments, processing, payouts, api, simple",
 		"ga_token": "UA-30733850-6"
 	},
 	"templates": "./templates",
