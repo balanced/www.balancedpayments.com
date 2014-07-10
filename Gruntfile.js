@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 				files: [
 					'static/js/*'
 				],
-				tasks: ['concat', 'uglify', 'wintersmith:build'],
+				tasks: ['format', 'concat', 'uglify', 'wintersmith:build'],
 				options: {
 					livereload: 35730
 				}
