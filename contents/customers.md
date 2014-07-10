@@ -133,7 +133,7 @@ customer_wall:
   - id: brandid
     pinned: false
     classes: marketplace
-    description: Connecting men who hate shopping with people who love to shop
+    description: BRANDiD is the most personal shopping experience you've ever had. Shop like a man.
     link: https://www.getbrandid.com/#/
   - id: topcoat
     pinned: false

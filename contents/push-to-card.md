@@ -67,12 +67,16 @@ feedback:
 faqs:
   title: Frequently asked questions
   list:
-    - q: Will you support international debit cards?
-      a: Unfortunately not. This feature is only available for U.S. debit cards.
+    - q: How long do payouts take?
+      a: Payouts are instant for 50% of bank accounts and take 1 &ndash; 2
+          business for others. We're actively working on increasing the coverage
+          for instant transfers.
     - q: Can I use previously tokenized debit cards?
       a: Yes, you can issue payouts to debit cards that were previously
           tokenized on your platform. Note that the cardholder's name is
           required for push to card.
+    - q: Will you support international debit cards?
+      a: Unfortunately not. This feature is only available for U.S. debit cards.
     - q: Is there soft descriptor control?
       a: Yes. Just like ACH payouts and charging a card, you can control the
           soft descriptor per transaction.
@@ -81,7 +85,4 @@ faqs:
           for everyone.
     - q: What are the transaction limits?
       a: The current limit is $2,500 per transaction.
-    - q: How long do payouts take?
-      a: It currently takes 1 &ndash; 2 business days for a customer to receive
-        their money. We're actively working on improving the payout speed.
 ---
