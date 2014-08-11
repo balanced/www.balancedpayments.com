@@ -97,7 +97,7 @@ payoutsPricing:
   cent: 25
   list:
     - name: Paying to your bank account
-      price: 0%
+      price: $0
     - name: Reversal
       price: $0
     - name: Failure
