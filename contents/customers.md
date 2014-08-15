@@ -15,9 +15,9 @@ video_testimonials:
       description: 750 Commerce leverages Balanced’s payments API to deliver a great processing experience for wineries.
       classes: selected
       ytVideoId: ZMg-gQrh6X0
-    - label: Crowdtilt
-      id: crowdtilt
-      description: Crowdtilt relies on<br/>Balanced’s payments<br/>framework to scale their<br/>crowdfunding platform.
+    - label: Tilt
+      id: tilt
+      description: Tilt relies on<br/>Balanced’s payments<br/>framework to scale their<br/>crowdfunding platform.
       ytVideoId: TdVSGj_NX2c
     - label: Kitchit
       id: kitchit
@@ -55,11 +55,11 @@ customer_wall:
     classes: ecommerce
     description: Cover's dining out app aims to eliminate time spent waiting for your check
     link: http://www.paywithcover.com
-  - id: crowdtilt
+  - id: tilt
     pinned: true
     classes: crowdfunding
     description: The fastest and easiest way to pool funds with family and friends
-    link: https://www.crowdtilt.com
+    link: https://www.tilt.com
   - id: groupme
     pinned: true
     classes: crowdfunding
