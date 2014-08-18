@@ -163,7 +163,7 @@
 				var $hidden = $videoTestimonial.find('.background-image:hidden');
 
 				if ($hidden.length === 0) {
-					$hidden = $('.video-testimonial-image .second');
+					$hidden = $('.video-testimonial-image .hidden');
 				}
 
 				$hidden
