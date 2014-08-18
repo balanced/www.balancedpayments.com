@@ -12,7 +12,7 @@ intro:
   sub: Pay sellers, campaign organizers and service providers
   introText:
     - title: Fast payouts
-      body: Pay sellers within one business day via [ACH](/payouts) or pay out to their debit cards via [push to card](/push-to-card) (coming soon).
+      body: Pay sellers within one business day via [ACH](/payouts) or pay out to their debit cards via [push to card](/push-to-card).
     - title: Controlled experience
       body: Retain your brand with our white-label API. Get full card and bank statement descriptor control per transaction.
     - title: Flexible funds flow
@@ -47,7 +47,7 @@ Sections:
       - title: Push to card
         text: Issue payouts using only debit card numbers.
         link: push-to-card
-        inDevelopment: true
+        inDevelopment: false
       - title: International payments
         text: International payouts are on the roadmap. We’ll start with foreign currency exchange.
         link: international-payments
