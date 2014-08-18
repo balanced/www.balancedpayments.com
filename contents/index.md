@@ -23,8 +23,8 @@ customers:
     url: http://redditgifts.com
   - name: Tradesy
     url: http://tradesy.com
-  - name: Crowdtilt
-    url: https://www.crowdtilt.com
+  - name: Tilt
+    url: https://www.tilt.com
   - name: Kindrid
     url: https://kindrid.com
   - name: Relayrides
