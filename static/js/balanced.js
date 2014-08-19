@@ -160,7 +160,13 @@
 				var testimonial = testimonials[id];
 
 				var $videoTestimonial = $('.video-testimonial-image');
-				$videoTestimonial.find('.background-image:hidden')
+				var $hidden = $videoTestimonial.find('.background-image:hidden');
+
+				if ($hidden.length === 0) {
+					$hidden = $('.video-testimonial-image .hidden');
+				}
+
+				$hidden
 					.css({
 						'background-image': 'url(' + testimonial.background + ')',
 						'z-index': '-1'
