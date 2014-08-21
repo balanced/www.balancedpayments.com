@@ -43,7 +43,6 @@
 							</div>
 							<div>
 								<span class="month">{{page.metadata.launch.month}}</span>
-								<span class="day">{{page.metadata.launch.day}}</span>
 							</div>
 						</div>
 						<div class="summary-text span17 pull-right">
@@ -171,11 +170,12 @@
 							<div class="code-sample span13 pull-right">
 								<div class="title">Request</div>
 <pre>
-curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <span class="se">\</span>
+curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <span class="se">\</span>
  -H <span class="s2">"Accept: application/vnd.api+json;revision=1.1"</span> <span class="se">\</span>
  -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
  -d <span class="s2">"amount=100"</span> <span class="se">\</span>
- -d <span class="s2">"currency=EUR"</span>
+ -d <span class="s2">"currency=EUR"</span> <span class="se">\</span>
+ -d <span class="s2">"order=/orders/OR6YQQbS9HquGwQaxvLy2a7S"</span>
  </pre>
 							</div>
 							<div class="code-sample span13 pull-right">
@@ -189,6 +189,10 @@ curl https://api.balancedpayments.com/cards/CC5cX8TtoEgQ7nY3a8pj5D7f/debits <spa
       <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">100</span>,
       <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/debits/WD72u8rXuaBjt3qdNjxNRG3L"</span>,
       <span class="s2">"appears_on_statement_as"</span><span class="o">:</span> <span class="s2">"BAL*example.com"</span>,
+      <span class="s2">"links"</span><span class="o">:</span> <span class="se">{</span>
+      <span class="s2">    "order"</span><span class="o">:</span> <span class="s2">"OR6YQQbS9HquGwQaxvLy2a7S"</span>,
+      <span class="s2">},</span>
+      <span class="s2">...</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></pre>
