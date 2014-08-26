@@ -8,13 +8,13 @@
             <div class="span19">
                 <header class="row">
                     <div class="span19 page-title">
-                        <h1>{{page.metadata.pageTitle}}</h1>
+                      <h1>{{page.metadata.pageTitle}}</h1>
                     </div>
                     <div class="large-bottom-margin">
-                        <div class="summary-text">
-                            <p class="page-summary">{{page.metadata.subtitle.heading}}</p>
-                            <a href="{{page.metadata.subtitle.linkUrl}}" target="_blank">{{page.metadata.subtitle.linkText}}</a>
-                        </div>
+                      <div class="summary-text clearfix">
+                        <p class="page-summary span13">{{page.metadata.subtitle.heading}}</p>
+                        <a class="span19" href="{{page.metadata.subtitle.linkUrl}}" target="_blank">{{page.metadata.subtitle.linkText}}</a>
+                      </div>
                     </div>
                 </header>
 
@@ -25,10 +25,9 @@
                         <span>{{page.metadata.basicRequirements.title}}</span>
                       </div>
                     </div>
-                    <ul class="list-group">
+                    <ul class="requirements clearfix">
                       {% for item in page.metadata.basicRequirements.list %}
-                      <li class="list-group-item">
-                        <div class="icon"></div>
+                      <li class="span4">
                         <p>{{item}}</p>
                       </li>
                       {% endfor %}
@@ -41,21 +40,21 @@
                         <span>{{page.metadata.stepsToGoLive.title}}</span>
                       </div>
                     </div>
-                    <ul class="list-group">
+                    <ul class="steps">
                       {% for item in page.metadata.stepsToGoLive.list %}
-                      <li class="list-group-item">
-                        <div class="graphic {{item.image}}"></div>
-                        <h3>{{item.title}}</h3>
-                        <p>{{item.description}}</p>
-                      </li>
+                        <li class="list-group-item">
+                          <div class="step">{{item.step}}</div>
+                          <div class="graphic {{item.image}}"></div>
+                          <h3>{{item.title}}</h3>
+                          <p>{{item.description}}</p>
+                        </li>
                       {% endfor %}
                     </ul>
                   </div>
                 </section>
                 <section class="try-the-dashboard">
-                    <div class="center">
-                        <a href="{{page.metadata.tryTheDashboard.linkUrl}}" class="btn special">{{page.metadata.tryTheDashboard.buttonText}}</a>
-                    </div>
+                  <a href="{{page.metadata.tryTheDashboard.linkUrl}}" class="btn special">{{page.metadata.tryTheDashboard.buttonText}}</a>
+                  <a href="{{page.metadata.helpCenter.linkUrl}}" target="_blank">{{page.metadata.helpCenter.linkText}}</a>
                 </section>
             </div>
         </div>

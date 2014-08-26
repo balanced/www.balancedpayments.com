@@ -21,17 +21,25 @@ basicRequirements:
 stepsToGoLive:
   title: Steps to go live
   list:
-    - title: Test the API
+    - step: 1
+      title: Test the API
       image: test
       description: Create an account from the dashboard to obtain a test marketplace and interact with the Balanced API.
-    - title: Integrate Balanced
+    - step: 2
+      title: Integrate Balanced
       image: integrate
-      description: Checkout our developer documentation and quick start guides.
-    - title: Go live
+      description: Checkout our developer <a href="https://docs.balancedpayments.com/" target="_blank">documentation</a> and <a href="https://docs.balancedpayments.com/1.1/guides/quickstart/" target="_blank">quick start guides</a>.
+    - step: 3
+      title: Go live
       image: live
       description: Register for production access via the dashboard to transact live.
     
 tryTheDashboard:
   buttonText: Create an account to get started
   linkUrl: "https://dashboard.balancedpayments.com/#/start"
+
+helpCenter:
+  linkText: Got a question? Visit the Help Center
+  linkUrl: "https://support.balancedpayments.com/"
+
 ---
