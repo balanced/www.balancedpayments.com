@@ -1,0 +1,98 @@
+.get-started {
+  .requirements {
+    background-color: @gray1;
+    margin: 10px 0 0 0;
+
+    li {
+      width: 25%;
+      list-style: none;
+      padding: 20px 15px;
+      margin: 0;
+      display: inline-block;
+      color: @gray8;
+      border-left: 1px solid @gray2;
+
+      &:first-of-type {
+        border-left: none;
+        padding-left: 30px;
+      }
+
+      &:last-of-type {
+        padding-right: 30px;
+      }
+
+      &:before {
+        float: left;
+        margin-left: -5px;
+        font-family: 'Balanced-Icon';
+        &:extend(.icon-checkmark2:before);
+      }
+
+      p {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .steps {
+    margin: 10px 0 0 0;
+
+    li {
+      width: 32%;
+      height: 410px;
+      background-color: @gray1;
+      display: inline-table;
+      list-style: none;
+      margin-left: 14px;
+      padding: 20px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      .step {
+        float: left;
+        .sl-lg-lt;
+      }
+
+      h3 {
+        .sl-sb;
+        padding: 0;
+      }
+      p {
+        color: @gray8;
+      }
+    }
+  }
+
+  .graphic {
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    margin: 15px auto 30px;
+
+    &.test {
+      background-image: url(/images/get-started/test_graphic.png);
+    }
+
+    &.integrate {
+      background-image: url(/images/get-started/integrate_graphic.png);
+    }
+
+    &.live {
+      background-image: url(/images/get-started/live_graphic.png);
+    }
+  }
+
+  .try-the-dashboard {
+    text-align: center;
+
+     a {
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        display: block;
+      }
+     }
+  }
+}
