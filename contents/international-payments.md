@@ -18,8 +18,8 @@ timeline:
 
 launch:
   title: Expected launch
-  month: July
-  day: 10
+  month: Coming Soon
+  day: 
 
 what:
   bodyText: We&#8217ve begun development on supporting foreign currency. The first step is to accept payments in local currencies. Payouts and escrow are on the roadmap. Here&#8217s how we envision the payment feature to work. We welcome your feedback.
