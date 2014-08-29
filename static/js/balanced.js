@@ -445,9 +445,9 @@
 
 					_.each(repos, function(repo, repo_name) {
 						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
-						$repoTemplate.find(".repo-name").text(repo.repo_name);
-						$repoTemplate.find(".completed").text(repo.closed_count);
-						$repoTemplate.find(".remaining").text(repo.open_count);
+						$repoTemplate.find(".repo-name span").text(repo.repo_name);
+						$repoTemplate.find(".completed span").text(repo.closed_count);
+						$repoTemplate.find(".remaining span").text(repo.open_count);
 						$repoTemplate.attr('data-repo', repo.repo_name);
 						$repoTemplate.appendTo('tbody').fadeIn(300);
 						$("tbody").append('<tr class="issues" data-repo="' + repo.repo_name + '"><td colspan="3"></td></tr>');

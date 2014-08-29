@@ -403,6 +403,7 @@ customer_wall:
     link: http://www.bottlestonightapp.com/
 
 tryTheDashboard:
-  body: Ready to get started?
+  body: Solve your payments problem today.
+  button: Get started
 
 ---

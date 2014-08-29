@@ -328,7 +328,7 @@
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper pull-left">
                                     <span>{{page.metadata.achDebitsPricing.title}}</span>
-                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}}"></i>
+                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
                                 </div>
                             </div>
 
@@ -380,7 +380,7 @@
                 <section class="try-the-dashboard">
                     <div class="center">
                         <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
+                        <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
                     </div>
                 </section>
             </div>

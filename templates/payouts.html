@@ -290,7 +290,7 @@
                         <div class="section-title section-title-no-width">
                           <div class="title-wrapper pull-left">
                             <span>{{page.metadata.payoutsPricing.title}}</span>
-                            <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}}"></i></div>
+                            <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}} non-interactive"></i></div>
                           </div>
                         </div>
                         <div class="span13 pull-right">
@@ -341,7 +341,7 @@
                 <section class="try-the-dashboard">
                     <div class="center">
                         <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
+                        <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
                     </div>
                 </section>
             </div>

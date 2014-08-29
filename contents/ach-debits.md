@@ -106,7 +106,6 @@ achDebitsPricing:
       price: $15
 
 tryTheDashboard:
-  body: Get started today.
-  button: Try the dashboard
-
+  body: Solve your payments problem today.
+  button: Get started
 ---

@@ -107,8 +107,8 @@ payoutsPricing:
       price: $0
 
 tryTheDashboard:
-  body: Get started today.
-  button: Try the dashboard
+  body: Solve your payments problem today.
+  button: Get started
 
 bankAcctInfo:
   title: Test Bank Account Form
