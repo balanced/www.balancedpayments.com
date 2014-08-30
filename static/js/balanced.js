@@ -273,6 +273,8 @@
 			jQuery.ajax("https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0", ajaxOptions);
 		},
 		payouts: function() {
+			animateInView(".folded-box", "slide-up");
+
 			var $routingNumber = $('.routing-number'),
 				$routingNumberInput = $routingNumber.find('input');
 

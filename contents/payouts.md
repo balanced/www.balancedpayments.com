@@ -28,6 +28,7 @@ payoutsOnly:
 
 viewAPaymentsScenario:
   button: View a payments scenario
+  linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 paymentSchedule:
   title: Payment schedule
@@ -35,7 +36,7 @@ paymentSchedule:
 
 submissionTimes:
   title: ACH Payouts submission times
-  time: "3:00"
+  time: "3:30"
   timezone: PM PACIFIC
 
 bankHolidays:
@@ -76,20 +77,22 @@ collectingBankInfo:
   title: Collecting bank account info
   body: To issue a payout, collect the bank account holder's name, routing number, account number, and account type.
   learnLink: View payouts best practices
+  learnLinkUrl: http://jsfiddle.net/balanced/ZwhrA/
 
 payoutStatus:
   title: Payout status
-  body: The status of a payout is updated<br />throughout its lifecycle. Follow our best<br />practices guide minimize payout failures.
+  body: The status of a payout is updated throughout its lifecycle. Follow our best practices guide to minimize payout failures.
 
 reversingAPayout:
   title: Reversing a payout
-  body: You may reverse a payout in<br />order to retrieve funds back<br />from the seller.
+  body: You may reverse a payout in order to retrieve funds back from the seller.
 
 bankStatementDescriptor:
   title: Bank statement descriptor
-  body: Modify the bank statement<br />soft descriptor on a<br />per-transaction basis.
-  learnLink: "Learn more about setting<br />the soft descriptor"
-  limit: "Bank statement soft descriptor max. character length: 14"
+  body: Modify the bank statement soft descriptor on a per-transaction basis.
+  learnLink: "Learn more about setting the soft descriptor"
+  learnLinkUrl: https://docs.balancedpayments.com/current/overview#soft-descriptors
+  limit: "Max character length of bank statement soft descriptor: 14"
 
 payoutsPricing:
   title: Pricing
@@ -112,7 +115,7 @@ tryTheDashboard:
 
 bankAcctInfo:
   title: Test Bank Account Form
-  subtitle: Balanced validates routing numbers in real time.<br/>Enter in a routing number below to test this out.
+  subtitle: Balanced validates routing numbers in real time. Enter in a routing number below to test this out.
   bottom: Funds will appear in the bank account in 1 business day.
   list:
     - title: Account Holder's Name

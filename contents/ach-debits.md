@@ -71,7 +71,7 @@ bankHolidays:
 
 bankAccountVerification:
   title: Bank account verification
-  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website. To minimize ACH debit failures, follow our best practices guide and  example forms for collecting payment information.
+  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website. To minimize ACH debit failures, follow our best practices guide and example forms for collecting payment information.
   learnLink: View best practices for ACH Debits
 
 paymentStatus:

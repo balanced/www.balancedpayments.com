@@ -377,6 +377,7 @@ section {
 }
 
 .folded-box {
+  opacity: 0;
   position: relative;
   padding: 30px 50px 30px 30px;
   margin-top: 54px;
@@ -494,6 +495,24 @@ section {
   .a {
     padding-bottom: 20px;
     color: @gray6;
+  }
+}
+
+.graphic {
+  width: 570px;
+  height: 400px;
+  background-size: contain;
+
+  &.payout-status {
+    background-image: url(/images/payouts/payouts_status-2x.png);
+  }
+
+  &.reversing-a-payout {
+    background-image: url(/images/payouts/payouts_reversal_status-2x.png);
+  }
+
+  &.bank-statement-descriptor {
+    background-image: url(/images/payouts/payouts_bank_statement_descriptor-2x.png);
   }
 }
 
