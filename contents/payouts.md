@@ -6,11 +6,8 @@ pageTitle: Payouts
 body_class: payouts
 
 subtitle:
-  heading: Pay your sellers with ACH direct deposit. Funds are deposited the next business day for U.S. bank accounts and the same business day for Wells Fargo accounts.
-
-howItWorks:
-  title: How it works
-  body: Integrate Balanced's full marketplace solution to manage your processing and payout needs. You may also use payouts as a stand-alone product.
+  heading: Pay your sellers with next business day ACH direct deposit.
+  description: Funds are deposited the next business day for U.S. bank accounts and same business day for Wells Fargo accounts.
 
 withProcessing:
   title: The full marketplace solution
