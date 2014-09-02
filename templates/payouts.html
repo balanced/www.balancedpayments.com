@@ -21,30 +21,28 @@
 
         <section>
           <div class="integration-flow clearfix">
-              <div class="span9 left">
+              <div class="left">
+                <div class="header">
                   <h3>{{page.metadata.withProcessing.title}}</h3>
                   <p>{{page.metadata.withProcessing.body}}</p>
+                  <p><a href="{{page.metadata.withProcessing.linkUrl}}">{{page.metadata.withProcessing.linkText}}</a></p>
+                </div>
                   <div class="process">
                       <div class="graphic"></div>
-                      <p>{{page.metadata.withProcessing.process1}}</p>
-                      <p>{{page.metadata.withProcessing.process2}}</p>
-                      <p>{{page.metadata.withProcessing.process3}}</p>
                   </div>
               </div>
-              <div class="span9 right" id="payouts-only">
+              <div class="right">
+                <div class="header">
                   <h3>{{page.metadata.payoutsOnly.title}}</h3>
                   <p>{{page.metadata.payoutsOnly.body}}</p>
+                  <a href="{{page.metadata.payoutsOnly.linkUrl}}">{{page.metadata.payoutsOnly.linkText}}</a>
+                </div>
                   <div class="process">
                       <div class="graphic"></div>
-                      <p>{{page.metadata.payoutsOnly.process1}}</p>
-                      <p>{{page.metadata.payoutsOnly.process2}}</p>
-                      <p>{{page.metadata.payoutsOnly.process3}}</p>
                   </div>
               </div>
-              <div class="span19 center">
-                  <a href="{{page.metadata.viewAPaymentsScenario.linkUrl}}" class="btn special">{{page.metadata.viewAPaymentsScenario.button}}</a>
-              </div>
           </div>
+
           <div class="payment-schedule content clearfix">
             <div class="section-title section-title-no-width">
               <div class="title-wrapper span6">
@@ -52,35 +50,6 @@
                 <p>{{page.metadata.paymentSchedule.body}}</p>
               </div>
               <div class="span13 pull-right">
-                <div class="schedule-times">
-                    <div class="title">{{page.metadata.submissionTimes.title}}</div>
-                    <div class="span3 box">
-                        <h2>MON</h2>
-                        <h1>{{page.metadata.submissionTimes.time}}</h1>
-                        <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                    </div>
-                    <div class="span3 box">
-                        <h2>TUE</h2>
-                        <h1>{{page.metadata.submissionTimes.time}}</h1>
-                        <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                    </div>
-                    <div class="span3 box">
-                        <h2>WED</h2>
-                        <h1>{{page.metadata.submissionTimes.time}}</h1>
-                        <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                    </div>
-                    <div class="span3 box">
-                        <h2>THU</h2>
-                        <h1>{{page.metadata.submissionTimes.time}}</h1>
-                        <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                    </div>
-                    <div class="span3 box box-last">
-                        <h2>FRI</h2>
-                        <h1>{{page.metadata.submissionTimes.time}}</h1>
-                        <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                    </div>
-                    <div class="clear"></div>
-                </div>
               </div>
             </div>
           </div>

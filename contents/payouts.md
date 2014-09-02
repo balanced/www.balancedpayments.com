@@ -12,19 +12,13 @@ subtitle:
 withProcessing:
   title: The full marketplace solution
   body: With Balanced's card processing and ACH debits, money from your buyers is placed into an order-specific escrow on behalf of the seller until you're ready to pay out.
-  process1: Debit the buyer's credit card or bank account
-  process2: Funds are grouped into order-specific escrows, linking the buyer and seller together
-  process3: Pay out your seller(s) and collect your marketplace fee
+  linkText: View a payments scenario
+  linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 payoutsOnly:
   title: Payouts only
   body: Simply fund your escrow (held by Balanced) with your marketplace's bank account to pay your sellers.
-  process1: Preload your escrow balance by debiting the marketplace's bank account
-  process2: Funds are deposited in the general escrow balance in 4 business days
-  process3: Pay out your sellers from your general escrow balance
-
-viewAPaymentsScenario:
-  button: View a payments scenario
+  linkText: View a payments scenario
   linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 paymentSchedule:
@@ -34,41 +28,7 @@ paymentSchedule:
 submissionTimes:
   title: ACH Payouts submission times
   time: "3:30"
-  timezone: PM PACIFIC
-
-bankHolidays:
-  title: Bank holidays (2014)
-  list:
-    - label: row0
-      row:
-        - label: New Year's Day
-          date: Jan 1
-        - label: Labor Day
-          date: Sep 1
-    - label: row1
-      row:
-        - label: Martin Luther King, Jr's Birthday
-          date: Jan 20
-        - label: Columbus Day
-          date: Oct 13
-    - label: row2
-      row:
-        - label: Washington's Birthday
-          date: Feb 17
-        - label: Veterans Day
-          date: Nov 11
-    - label: row3
-      row:
-        - label: Memorial Day
-          date: May 26
-        - label: Thanksgiving Day
-          date: Nov 27
-    - label: row4
-      row:
-        - label: Independence Day
-          date: Jul 4
-        - label: Christmas Day
-          date: Dec 25
+  timezone: PM Pacific
 
 collectingBankInfo:
   title: Collecting bank account info

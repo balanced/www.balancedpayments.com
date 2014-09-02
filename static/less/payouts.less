@@ -1,104 +1,71 @@
 body.payouts {
+
+  .page-header {
+    .title-image {
+      background-image: url(/images/payouts/header_ach_payouts.png);
+    }
+
+    .background-image {
+      background-image: url(/images/push-to-card/push_to_card_bg.jpg);
+    }
+  }
+
   .integration-flow {
-      margin-bottom: 50px;
+    position: relative;
+    margin-bottom: 50px;
+
+    .left, .right {
+      width: 50%;
+      float: left;
+      position: relative;
+    }
+
+    .left {
+      .graphic {
+        background-image: url(/images/payouts/payouts_mp_solution.png);
+      }
+    }
+    .right {
+      border-left: 1px solid @gray3;
+
+      .graphic {
+        background-image: url(/images/payouts/payouts_standalone.png);
+      }
+    }
+
+    .header {
+      position: absolute;
+      height: 220px;
+      padding: 45px;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 1;
 
       h3 {
-          .sl-20-sb;
-          display: block;
-          padding-top: 50px;
-          margin-bottom: 20px;
+        &:extend(section .section-title .title-wrapper span);
+        display: inline-block;
+        border-top: 0;
+        padding-top: 0;
+        margin-top: 0;
       }
 
       p {
-          .sl;
-          color: @gray6;
-          text-align: right;
+        &:extend(section .section-title .title-wrapper p);
+        margin-top: 0;
       }
+    }
 
-      /* Shared */
-      .left, .right {
-          .process {
-              p {
-                  .sl-sb;
-              }
-          }
+    .process {
+      background-color: @turquoise20;
+      padding-top: 220px;
+      padding-bottom: 10px;
+
+      .graphic {
+        width: 320px;
+        height: 630px;
+        background-size: contain;
+        margin: 45px;
       }
-
-      .left {
-          padding-right: 29px;
-          border-right: 1px solid @gray3;
-
-          > p {
-              margin-left: 20px;
-          }
-
-          h3, p {
-              text-align: right;
-          }
-
-          .process {
-              margin-top: 25px;
-
-              .graphic {
-                  background: url(/images/payouts/payouts_full_marketplace_solution-2x.png) no-repeat;
-                  width: 240px;
-                  height: 500px;
-                  background-position: 0px 0px;
-                  background-size: 240px;
-                  float: right;
-                  margin-left: 18px;
-                  margin-bottom: 30px;
-              }
-
-              p:nth-of-type(1) {
-                  padding-top: 45px;
-              }
-
-              p:nth-of-type(2) {
-                  padding-top: 80px;
-              }
-
-              p:nth-of-type(3) {
-                  padding-top: 55px;
-              }
-          }
-      }
-
-      .right {
-          padding-left: 30px;
-          margin-left: 0px;
-
-          h3, p {
-              text-align: left;
-          }
-
-          .process {
-              margin-top: 25px;
-
-              .graphic {
-                  background: url(/images/payouts/payouts_only-2x.png) no-repeat;
-                  width: 240px;
-                  height: 500px;
-                  background-position: 0px 0px;
-                  background-size: 240px;
-                  float: left;
-                  margin-right: 19px;
-                  margin-bottom: 30px;
-              }
-
-              p:nth-of-type(1) {
-                  padding-top: 40px;
-              }
-
-              p:nth-of-type(2) {
-                  padding-top: 70px;
-              }
-
-              p:nth-of-type(3) {
-                  padding-top: 60px;
-              }
-          }
-      }
+    }
   }
 
   .payment-schedule {
