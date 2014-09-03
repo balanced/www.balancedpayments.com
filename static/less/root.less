@@ -502,17 +502,20 @@ section {
   width: 570px;
   height: 400px;
   background-size: contain;
+}
 
-  &.payout-status {
-    background-image: url(/images/payouts/payouts_status-2x.png);
+.legend {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: @gray1;
+
+  p {
+    .sl-sm;
   }
 
-  &.reversing-a-payout {
-    background-image: url(/images/payouts/payouts_reversal_status-2x.png);
-  }
-
-  &.bank-statement-descriptor {
-    background-image: url(/images/payouts/payouts_bank_statement_descriptor-2x.png);
+  .key {
+    .sl-sm-sb;
+    margin-right: 5px;
   }
 }
 

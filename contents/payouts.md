@@ -12,21 +12,23 @@ subtitle:
 withProcessing:
   title: The full marketplace solution
   body: With Balanced's card processing and ACH debits, money from your buyers is placed into an order-specific escrow on behalf of the seller until you're ready to pay out.
-  linkText: View a payments scenario
+  linkText: View payments scenario
   linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 payoutsOnly:
   title: Payouts only
   body: Simply fund your escrow (held by Balanced) with your marketplace's bank account to pay your sellers.
-  linkText: View a payments scenario
+  linkText: View payments scenario
   linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 paymentSchedule:
   title: Payment schedule
-  body: Balanced will batch payouts for submission each weekday. The ACH network operates only on banking days, so submission will not occur on bank holidays.
+  body: Balanced will batch payouts for submission each weekday, except for bank holidays.
+  linkText: View bank holidays
+  linkUrl: https://support.balancedpayments.com/hc/en-us/articles/200135930
 
 submissionTimes:
-  title: ACH Payouts submission times
+  days: Monday to Friday
   time: "3:30"
   timezone: PM Pacific
 
@@ -39,10 +41,24 @@ collectingBankInfo:
 payoutStatus:
   title: Payout status
   body: The status of a payout is updated throughout its lifecycle. Follow our best practices guide to minimize payout failures.
+  legend:
+    - key: Pending
+      value: Payout is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the deposit one day after payout submission; however, there is no immediate confirmation regarding the success of the payout.
+    - key: Failed
+      value: If a payout fails due to incorrect account information, Balanced will be notified in 1–4 business days. The status will update from “pending” to “failed” or “succeeded” to “failed” depending on when the failed notice is received.
 
 reversingAPayout:
   title: Reversing a payout
   body: You may reverse a payout in order to retrieve funds back from the seller.
+  legend:
+    - key: Pending
+      value: Payout reversal is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the reversal 3–4 business days after reversal submission; however, there is no immediate confirmation regarding the success of the reversal.
+    - key: Failed
+      value: If the reversal fails, Balanced will be notified in 3–7 business days. The status will update from “Pending” to “Failed” or “Succeeded” to “Failed” depending on when the failed notice is received.
 
 bankStatementDescriptor:
   title: Bank statement descriptor

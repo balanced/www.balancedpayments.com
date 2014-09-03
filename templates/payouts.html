@@ -52,8 +52,15 @@
               <div class="title-wrapper span6">
                 <span>{{page.metadata.paymentSchedule.title}}</span>
                 <p>{{page.metadata.paymentSchedule.body}}</p>
+                <p><a href="{{page.metadata.paymentSchedule.linkUrl}}">{{page.metadata.paymentSchedule.linkText}}</a></p>
               </div>
-              <div class="span13 pull-right">
+              <div class="folded-box span13 pull-right">
+                <div class="payouts-calendar"></div>
+                <div class="payouts-time span6">
+                  <div class="sl-sb">{{page.metadata.submissionTimes.days}}</div>
+                  <div class="time">{{page.metadata.submissionTimes.time}}</div>
+                  <div class="sl-sb">{{page.metadata.submissionTimes.timezone}}</div>
+                </div>
               </div>
             </div>
           </div>
@@ -97,6 +104,11 @@
               </div>
               <div class="span13 pull-right">
                 <div class="graphic payout-status"></div>
+                <div class="legend">
+                  {% for item in page.metadata.payoutStatus.legend %}
+                    <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </div>
@@ -109,6 +121,11 @@
               </div>
               <div class="span13 pull-right">
                 <div class="graphic reversing-a-payout"></div>
+                <div class="legend">
+                  {% for item in page.metadata.reversingAPayout.legend %}
+                    <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </div>

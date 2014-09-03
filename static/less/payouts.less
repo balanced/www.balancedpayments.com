@@ -1,4 +1,13 @@
 body.payouts {
+  .header-menu {
+    a {
+      color: @white !important;
+
+          &:not(.hamburger):hover {
+            border-bottom: 1px solid @white !important;
+          }
+    }
+  }
 
   .page-header {
     .title-image {
@@ -6,7 +15,7 @@ body.payouts {
     }
 
     .background-image {
-      background-image: url(/images/push-to-card/push_to_card_bg.jpg);
+      background-image: url(/images/payouts/ach_payouts_bg.jpg);
     }
   }
 
@@ -69,13 +78,30 @@ body.payouts {
   }
 
   .payment-schedule {
-      .schedule-times {
-          .title {
-              color: @black;
-              background-color: @pineGreen60;
-              letter-spacing: 0.1em;
-          }
+    .folded-box {
+      padding: 0;
+    }
+
+    .payouts-calendar {
+      width: 315px;
+      height: 200px;
+      background-size: contain;
+      background-image: url(/images/payouts/payouts_calendar.png);
+      float: left;
+    }
+
+    .payouts-time {
+      padding: 40px;
+      margin-top: 3px;
+      margin-left: -15px;
+      text-align: center;
+
+      .time {
+        font-size: 60px;
+        line-height: 77px;
+        color: @pineGreen80;
       }
+    }
   }
 
   .collecting-bank-account-info {
@@ -178,4 +204,13 @@ body.payouts {
     }
   }
 
+  .graphic {
+    &.payout-status {
+      background-image: url(/images/payouts/payouts_status-2x.png);
+    }
+
+    &.reversing-a-payout {
+      background-image: url(/images/payouts/payouts_reversal_status-2x.png);
+    }
+  }
 }

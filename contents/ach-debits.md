@@ -76,7 +76,25 @@ bankAccountVerification:
 
 paymentStatus:
   title: Payment status
-  body: Track the status of the ACH debit throughout its life cycle.
+  body: Track the status of the ACH debit throughout its lifecycle.
+  legend:
+    - key: Pending
+      value: ACH debit is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the debit 3–4 business days after debit submission; however, there is no immediate confirmation regarding the success of the debit.
+    - key: Failed
+      value: If the debit fails, Balanced will be notified in 3–7 business days. The status will update from “Pending” to “Failed” or “Succeeded” to “Failed” depending on when the failed notice is received.
+
+refundingAPayment:
+  title: ACH debit refund status
+  body: The status of an ACH debit refund is updated throughout its lifecycle.
+  legend:
+    - key: Pending
+      value: ACH debit refund is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the refund one day after refund submission; however, there is no immediate confirmation regarding the success of the refund.
+    - key: Failed
+      value: If the refund fails, Balanced will be notified in 1–4 business days. The status will update from “pending” to “failed” or “succeeded” to “failed” depending on when the failed notice is received.
 
 bankStatementDescriptor:
   title: Bank statement descriptor

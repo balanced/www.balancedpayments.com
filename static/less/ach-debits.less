@@ -394,16 +394,6 @@ body.layout-v4 {
             }
         }
 
-        &.payment-status {
-            .graphic {
-                background: url(/images/ach-debits/ach_debits_payment_status-01-2x.png) no-repeat;
-                width: 840px;
-                height: 400px;
-                background-position: 0px 40px;
-                background-size: 840px;
-            }
-        }
-
         &.bank-statement-description {
             .graphic {
                 background: url(/images/ach-debits/ach_debits_statement_descriptor-01-2x.png) no-repeat;
@@ -569,4 +559,16 @@ body.layout-v4 {
 
 .border-top {
     border-top: 1px solid @gray3;
+}
+
+body.ach-debits {
+  .graphic {
+    &.payment-status {
+      background-image: url(/images/ach-debits/ach_debits_payment_status-01-2x.png);
+    }
+
+    &.refunding-a-payment {
+      background-image: url(/images/ach-debits/ach_debits_refund_status-01-2x.png);
+    }
+  }
 }
