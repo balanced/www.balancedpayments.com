@@ -35,8 +35,6 @@ submissionTimes:
 collectingBankInfo:
   title: Collecting bank account info
   body: To issue a payout, collect the bank account holder's name, routing number, account number, and account type.
-  learnLink: View payouts best practices
-  learnLinkUrl: http://jsfiddle.net/balanced/ZwhrA/
 
 payoutStatus:
   title: Payout status
