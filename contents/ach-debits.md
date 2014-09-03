@@ -71,12 +71,30 @@ bankHolidays:
 
 bankAccountVerification:
   title: Bank account verification
-  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website. To minimize ACH debit failures, follow our best practices guide and  example forms for collecting payment information.
+  body: To debit a bank account, Balanced needs to verify it through a micro-verification process. You can manage the procedure though the Balanced API without directing customers off your website. To minimize ACH debit failures, follow our best practices guide and example forms for collecting payment information.
   learnLink: View best practices for ACH Debits
 
 paymentStatus:
   title: Payment status
-  body: Track the status of the ACH debit throughout its life cycle.
+  body: Track the status of the ACH debit throughout its lifecycle.
+  legend:
+    - key: Pending
+      value: ACH debit is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the debit 3–4 business days after debit submission; however, there is no immediate confirmation regarding the success of the debit.
+    - key: Failed
+      value: If the debit fails, Balanced will be notified in 3–7 business days. The status will update from “Pending” to “Failed” or “Succeeded” to “Failed” depending on when the failed notice is received.
+
+refundingAPayment:
+  title: ACH debit refund status
+  body: The status of an ACH debit refund is updated throughout its lifecycle.
+  legend:
+    - key: Pending
+      value: ACH debit refund is submitted to Balanced.
+    - key: Succeeded
+      value: A “succeeded” status is displayed as the expected state of the refund one day after refund submission; however, there is no immediate confirmation regarding the success of the refund.
+    - key: Failed
+      value: If the refund fails, Balanced will be notified in 1–4 business days. The status will update from “pending” to “failed” or “succeeded” to “failed” depending on when the failed notice is received.
 
 bankStatementDescriptor:
   title: Bank statement descriptor
@@ -106,7 +124,6 @@ achDebitsPricing:
       price: $15
 
 tryTheDashboard:
-  body: Get started today.
-  button: Try the dashboard
-
+  body: Solve your payments problem today.
+  button: Get started
 ---

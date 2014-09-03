@@ -257,7 +257,37 @@
                                 {{page.metadata.paymentStatus.body}}
                             </div>
                         </div>
-                        <div class="graphic"></div>
+                        <div class="graphic payment-status pull-right"></div>
+                        <div class="legend span13 pull-right">
+                          {% for item in page.metadata.paymentStatus.legend %}
+                            <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row" id="payment-status">
+            <div class="span19">
+                <section class="payment-status">
+                    <div class="box-pad-top">
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.refundingAPayment.title}}</span>
+                            </div>
+                        </div>
+                        <div class="span5 no-margin-left">
+                            <div class="section-side-body">
+                                {{page.metadata.refundingAPayment.body}}
+                            </div>
+                        </div>
+                        <div class="graphic refunding-a-payment pull-right"></div>
+                        <div class="legend span13 pull-right">
+                          {% for item in page.metadata.refundingAPayment.legend %}
+                            <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                          {% endfor %}
+                        </div>
                     </div>
                 </section>
             </div>
@@ -328,7 +358,7 @@
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper pull-left">
                                     <span>{{page.metadata.achDebitsPricing.title}}</span>
-                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}}"></i>
+                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
                                 </div>
                             </div>
 
@@ -380,7 +410,7 @@
                 <section class="try-the-dashboard">
                     <div class="center">
                         <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
+                        <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
                     </div>
                 </section>
             </div>

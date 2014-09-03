@@ -3,350 +3,241 @@
 {% block body %}
 
 <div class="bg-default">
-    <div class="container">
-        <div class="row">
-            <div class="span19">
-                <div class="row">
-                    <header>
-                      <div class="span19 page-title">
-                        <h1>{{page.metadata.pageTitle}}</h1>
+  <section class="page-header large-bottom-margin">
+    <div class="background-image"></div>
+    <div class="title-image"></div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="span19">
+        <div class="summary row large-bottom-margin">
+          <div class="page-subtitle clearfix">
+            <div class="span16">
+              <span>{{page.metadata.subtitle.heading}}</span>
+            </div>
+          </div>
+
+          <div class="summary-text">
+              <p class="page-summary span13">{{page.metadata.subtitle.description}}</p>
+          </div>
+        </div>
+
+        <section>
+          <div class="integration-flow content clearfix">
+              <div class="left">
+                <div class="header">
+                  <h3>{{page.metadata.withProcessing.title}}</h3>
+                  <p>{{page.metadata.withProcessing.body}}</p>
+                  <p><a href="{{page.metadata.withProcessing.linkUrl}}">{{page.metadata.withProcessing.linkText}}</a></p>
+                </div>
+                  <div class="process">
+                      <div class="graphic"></div>
+                  </div>
+              </div>
+              <div class="right">
+                <div class="header">
+                  <h3>{{page.metadata.payoutsOnly.title}}</h3>
+                  <p>{{page.metadata.payoutsOnly.body}}</p>
+                </div>
+                  <div class="process">
+                      <div class="graphic"></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="payment-schedule content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper span6">
+                <span>{{page.metadata.paymentSchedule.title}}</span>
+                <p>{{page.metadata.paymentSchedule.body}}</p>
+                <p><a href="{{page.metadata.paymentSchedule.linkUrl}}">{{page.metadata.paymentSchedule.linkText}}</a></p>
+              </div>
+              <div class="folded-box span13 pull-right">
+                <div class="payouts-calendar"></div>
+                <div class="payouts-time span6">
+                  <div class="sl-sb">{{page.metadata.submissionTimes.days}}</div>
+                  <div class="time">{{page.metadata.submissionTimes.time}}</div>
+                  <div class="sl-sb">{{page.metadata.submissionTimes.timezone}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content clearfix collecting-bank-account-info">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper span6">
+                <span class="sl-sb">{{page.metadata.collectingBankInfo.title}}</span>
+                <p>{{page.metadata.collectingBankInfo.body}}</p>
+              </div>
+
+              <div class="folded-box span13 pull-right">
+                <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
+                <form class="clearfix">
+                  <p class="subtitle span4">{{page.metadata.bankAcctInfo.subtitle}}</p>
+                  <div class="span6 offset4">
+                    {% for item in page.metadata.bankAcctInfo.list %}
+                      <div class="control-group {{item.classes}}">
+                        <label>{{item.title}}</label>
+
+                        {% if item.select %}
+                          <select {{item.attr}}>
+                            <option value="{{item.placeholder}}">{{item.placeholder}}</option>
+                          </select>
+                        {% else %}
+                          <input type="text" value="{{item.placeholder}}" {{item.attr}} />
+                        {% endif %}
+
+                        <i class="icon-checkmark non-interactive"></i>
+
+                        {% if item.bank %}
+                          <div class="bank-name"><span>{{item.bank}}</span></div>
+                        {% endif %}
                       </div>
-                    </header>
+                    {% endfor %}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper span6">
+                <span>{{page.metadata.payoutStatus.title}}</span>
+                <p>{{page.metadata.payoutStatus.body}}</p>
+              </div>
+              <div class="span13 pull-right">
+                <div class="graphic payout-status"></div>
+                <div class="legend">
+                  {% for item in page.metadata.payoutStatus.legend %}
+                    <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper span6">
+                <span>{{page.metadata.reversingAPayout.title}}</span>
+                <p>{{page.metadata.reversingAPayout.body}}</p>
+              </div>
+              <div class="span13 pull-right">
+                <div class="graphic reversing-a-payout"></div>
+                <div class="legend">
+                  {% for item in page.metadata.reversingAPayout.legend %}
+                    <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper span6">
+                <span>{{page.metadata.bankStatementDescriptor.title}}</span>
+                <p>{{page.metadata.bankStatementDescriptor.body}}</p>
+                <p><a href="{{page.metadata.bankStatementDescriptor.learnLinkUrl}}">{{page.metadata.bankStatementDescriptor.learnLink}}</a></p>
+              </div>
+              <div class="bank-statement-descriptor folded-box span13 pull-right">
+                <div class="title">Bank account statement</div>
+                <div class="card-info">
+                  <div>Jessica Lauren</div>
+                  <div>xxxxxxx4685</div>
+                </div>
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Description</th>
+                      <th class="amount-header">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Oct 22</td>
+                    <td>ZUPPA 741486 ABaker</td>
+                    <td class="amount">$ 150.00</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 17</td>
+                    <td>ZUPPA 741308 TWard</td>
+                    <td class="amount">$ 173.00</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 10</td>
+                    <td>ZUPPA 741239 LMoore</td>
+                    <td class="amount">$ 128.00</td>
+                  </tr>
+                  </tbody>
+                </table>
+                <p class="sl-note">{{page.metadata.bankStatementDescriptor.limit}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper pull-left">
+                <span>{{page.metadata.payoutsPricing.title}}</span>
+                <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}} non-interactive"></i></div>
+              </div>
+            </div>
+            <div class="span13 pull-right">
+              <div class="panel">
+                <div class="panel-heading main-price">
+
+                  {% if page.metadata.payoutsPricing.percent %}
+                  <span class="percent">{{page.metadata.payoutsPricing.percent}}</span>
+                  <span class="plus">+</span>
+                  {% endif %}
+
+                  {% if page.metadata.payoutsPricing.cent %}
+                  <span class="cent">{{page.metadata.payoutsPricing.cent}}</span>
+                  {% endif %}
+
+                  {% if page.metadata.payoutsPricing.dollar %}
+                  <span class="dollar">{{page.metadata.payoutsPricing.dollar}}</span>
+                  {% endif %}
+
+                  <span class="per">per transaction</span>
                 </div>
 
-                <div class="row large-bottom-margin">
-                    <div class="page-subtitle">
-                      <div class="span19">
-                        {{ page.metadata.subtitle.heading }}
-                      </div>
-                    </div>
-                </div>
-
-                <section class="how-it-works" id="how-it-works">
-                    <div class="row">
-                        <div class="span19 content-green med-top-padding med-bottom-padding">
-                            <div class="offset1 section-title section-title-full">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.howItWorks.title}}</span>
-                                </div>
-                            </div>
-                            <div class="span6 offset1">
-                                <div class="title-icon"></div>
-                            </div>
-                            <div class="body-copy body3 span11">
-                                {{page.metadata.howItWorks.body}}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <ul class="list-group">
+                  {% for item in page.metadata.payoutsPricing.list %}
+                  <li class="list-group-item">
+                    <span>{{item.name}}</span>
+                    {% if item.note %}
+                      <span class="note">({{item.note}})</span>
+                    {% endif %}
+                    <span class="pull-right">{{item.price}}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="bg-white" id="process">
-    <div class="container">
-        <div class="row">
-            <section class="integration-flow">
-                <div class="span19 split-container">
-                    <div class="row">
-                        <div class="span9 left">
-                            <h3>{{page.metadata.withProcessing.title}}</h3>
-                            <p>{{page.metadata.withProcessing.body}}</p>
-                            <div class="process">
-                                <div class="graphic"></div>
-                                <p>{{page.metadata.withProcessing.process1}}</p>
-                                <p>{{page.metadata.withProcessing.process2}}</p>
-                                <p>{{page.metadata.withProcessing.process3}}</p>
-                            </div>
-                        </div>
-                        <div class="span9 right" id="payouts-only">
-                            <h3>{{page.metadata.payoutsOnly.title}}</h3>
-                            <p>{{page.metadata.payoutsOnly.body}}</p>
-                            <div class="process">
-                                <div class="graphic"></div>
-                                <p>{{page.metadata.payoutsOnly.process1}}</p>
-                                <p>{{page.metadata.payoutsOnly.process2}}</p>
-                                <p>{{page.metadata.payoutsOnly.process3}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span19 center">
-                            <a href="https://docs.balancedpayments.com/current/#funds-flow" class="btn special">{{page.metadata.viewAPaymentsScenario.button}}</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
-
-<div class="bg-default" id="payment-schedule">
-    <div class="container">
-        <div class="row">
-            <div class="span19">
-                <section class="payment-schedule">
-                    <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.paymentSchedule.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.paymentSchedule.body}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="schedule-times teeth">
-                                <div class="title">{{page.metadata.submissionTimes.title}}</div>
-                                <div class="span3 box">
-                                    <h2>MON</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>TUE</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>WED</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box">
-                                    <h2>THU</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="span3 box box-last">
-                                    <h2>FRI</h2>
-                                    <h1>{{page.metadata.submissionTimes.time}}</h1>
-                                    <h3>{{page.metadata.submissionTimes.timezone}}</h3>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="holidays">
-                                <table border="1" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="4">{{page.metadata.bankHolidays.title}}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for list in page.metadata.bankHolidays.list %}
-                                            <tr>
-                                            {% for row in list.row %}
-                                                <td class="first">{{row.label}}</td>
-                                                <td>{{row.date}}</td>
-                                            {% endfor %}
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="collecting-bank-account-info">
-            <div class="span19">
-                <section class="collecting-bank-account-info">
-                    <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.collectingBankInfo.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.collectingBankInfo.body}}
-                                </div>
-                                <div class="section-side-link">
-                                    <a href="http://jsfiddle.net/balanced/ZwhrA/">{{page.metadata.collectingBankInfo.learnLink}}</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left bank-account-info">
-                            <div class="teeth border-top">
-                                <div>
-                                  <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
-                                  <div class="subtitle">{{page.metadata.bankAcctInfo.subtitle}}</div>
-                                  {% for item in page.metadata.bankAcctInfo.list %}
-                                  <div class="bank-info-section {{item.classes}}">
-                                    <div class="row">
-                                      <h6>{{item.title}}</h6>
-                                    </div>
-                                    <div class="row">
-                                      <div class="input-field span6">
-                                        <input type="text" value="{{item.placeholder}}" {{item.attr}}/>
-                                        <span class="success-icon"><i class="icon-checkmark"></i></span>
-                                      </div>
-                                      <div class="description span6">
-                                        <span>{{item.description}}</span>
-                                      </div>
-                                      {% if item.bank %}
-                                      <div class="bank-name span6"><span>{{item.bank}}</span></div>
-                                      {% endif %}
-                                    </div>
-                                  </div>
-                                  {% endfor %}
-                                  <div class="bank-info-bottom row">
-                                    <div class="bottom span4">
-                                      <span>{{page.metadata.bankAcctInfo.bottom}}</span>
-                                    </div>
-                                    <div class="span7">
-                                      <div class="check-graphic"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="payout-status">
-            <div class="span19">
-                <section class="payout-status">
-                    <div class="box-pad-top">
-                        <div class="section-title section-title-full">
-                            <div class="title-wrapper">
-                                <span>{{page.metadata.payoutStatus.title}}</span>
-                            </div>
-                        </div>
-                        <div class="span19 no-margin-left">
-                            <div class="section-side-body">
-                                {{page.metadata.payoutStatus.body}}
-                            </div>
-                        </div>
-                        <div class="graphic"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="reversing-a-payout">
-            <div class="span19">
-                <section class="reversing-a-payout">
-                    <div class="box-pad-top">
-                        <div class="section-title section-title-full">
-                            <div class="title-wrapper">
-                                <span>{{page.metadata.reversingAPayout.title}}</span>
-                            </div>
-                        </div>
-                        <div class="span5 no-margin-left">
-                            <div class="section-side-body">
-                                {{page.metadata.reversingAPayout.body}}
-                            </div>
-                        </div>
-                        <div class="graphic"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div class="row" id="bank-statement-descriptor">
-            <div class="span19">
-                <section class="bank-statement-descriptor">
-                    <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.bankStatementDescriptor.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.bankStatementDescriptor.body}}
-                                </div>
-                                <div class="section-side-link">
-                                    <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="teeth border-top">
-                                <div class="graphic"></div>
-                            </div>
-                            <p class="footnote">{{page.metadata.bankStatementDescriptor.limit}}</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-
-        <div class="row" id="payouts-pricing">
-            <div class="span19">
-                <section class="payouts">
-                    <div class="box-pad-top">
-                      <div class="pricing content clearfix">
-                        <div class="section-title section-title-no-width">
-                          <div class="title-wrapper pull-left">
-                            <span>{{page.metadata.payoutsPricing.title}}</span>
-                            <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}}"></i></div>
-                          </div>
-                        </div>
-                        <div class="span13 pull-right">
-                          <div class="panel">
-                            <div class="panel-heading main-price">
-
-                              {% if page.metadata.payoutsPricing.percent %}
-                              <span class="percent">{{page.metadata.payoutsPricing.percent}}</span>
-                              <span class="plus">+</span>
-                              {% endif %}
-
-                              {% if page.metadata.payoutsPricing.cent %}
-                              <span class="cent">{{page.metadata.payoutsPricing.cent}}</span>
-                              {% endif %}
-
-                              {% if page.metadata.payoutsPricing.dollar %}
-                              <span class="dollar">{{page.metadata.payoutsPricing.dollar}}</span>
-                              {% endif %}
-
-                              <span class="per">per transaction</span>
-                            </div>
-
-                            <ul class="list-group">
-                              {% for item in page.metadata.payoutsPricing.list %}
-                              <li class="list-group-item">
-                                <span>{{item.name}}</span>
-                                {% if item.note %}
-                                  <span class="note">({{item.note}})</span>
-                                {% endif %}
-                                <span class="pull-right">{{item.price}}</span>
-                              </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                    </div>
+          </div>
+        </section>
+        <div class="bg-white">
+          <div class="container">
+            <div class="row">
+              <div class="span19">
+                <section class="try-the-dashboard">
+                  <div class="center">
+                    <p>{{page.metadata.tryTheDashboard.body}}</p>
+                    <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
                   </div>
                 </section>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-<div class="bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="span19">
-                <section class="try-the-dashboard">
-                    <div class="center">
-                        <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="https://dashboard.balancedpayments.com/#/start" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 <script type="text/javascript">$(balanced.payouts)</script>
 {% endblock %}

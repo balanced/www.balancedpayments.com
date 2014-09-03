@@ -1,7 +1,10 @@
 .pricing {
   .section-icon {
     font-size: 160px;
-    color: @pineGreen80;
+
+    .non-interactive {
+      color: @pineGreen80;
+    }
   }
 
   .note {
@@ -42,11 +45,11 @@
     }
 
     .percent:after {
-      content: '$'; // percent icon
+      &:extend(.icon-percent:before);
     }
 
     .cent:after {
-      content: '#'; // cent icon
+      &:extend(.icon-cent:before);
     }
 
     .dollar {
@@ -63,7 +66,7 @@
         color: @pineGreen80;
         position: absolute;
         top: -20px;
-        content: '%'; // dollar icon
+        &:extend(.icon-dollar:before);
         left: -22px;
       }
     }

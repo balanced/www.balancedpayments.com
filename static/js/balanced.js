@@ -273,6 +273,8 @@
 			jQuery.ajax("https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0", ajaxOptions);
 		},
 		payouts: function() {
+			animateInView(".folded-box", "slide-up");
+
 			var $routingNumber = $('.routing-number'),
 				$routingNumberInput = $routingNumber.find('input');
 
@@ -294,11 +296,11 @@
 			}
 
 			function routingNumberValidationSuccess(bankInfo) {
-				$routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
+				$routingNumber.addClass('success').removeClass('error').find('.bank-name span').html(bankInfo.customer_name);
 			}
 
 			function routingNumberValidationError() {
-				$routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
+				$routingNumber.addClass('error').removeClass('success').find('.bank-name span').html('Invalid routing number. Please enter a valid 9-digit routing number.');
 			}
 
 			$routingNumberInput.on('blur', function(event) {
@@ -320,7 +322,7 @@
 					if (bankInfo) {
 						routingNumberValidationSuccess(bankInfo);
 					} else {
-						$routingNumber.removeClass('success').find('.description span').html('Enter your 9-digit routing number.');
+						$routingNumber.removeClass('success');
 					}
 				});
 			});
@@ -445,9 +447,9 @@
 
 					_.each(repos, function(repo, repo_name) {
 						var $repoTemplate = $(".github table.items tr.repo-template").clone().removeClass('repo-template');
-						$repoTemplate.find(".repo-name").text(repo.repo_name);
-						$repoTemplate.find(".completed").text(repo.closed_count);
-						$repoTemplate.find(".remaining").text(repo.open_count);
+						$repoTemplate.find(".repo-name span").text(repo.repo_name);
+						$repoTemplate.find(".completed span").text(repo.closed_count);
+						$repoTemplate.find(".remaining span").text(repo.open_count);
 						$repoTemplate.attr('data-repo', repo.repo_name);
 						$repoTemplate.appendTo('tbody').fadeIn(300);
 						$("tbody").append('<tr class="issues" data-repo="' + repo.repo_name + '"><td colspan="3"></td></tr>');

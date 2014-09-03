@@ -70,7 +70,7 @@ cardProcessingPricing:
       price: $15
 
 tryTheDashboard:
-  body: Ready to get started?
-  button: Try the dashboard
+  body: Solve your payments problem today.
+  button: Get started
 
 ---

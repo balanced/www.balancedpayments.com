@@ -1,323 +1,221 @@
 body.payouts {
-    section {
-        &.how-it-works {
-            .content-green {
-                background-color: @pineGreen60;
+  .header-menu {
+    a {
+      color: @white !important;
 
-                .section-title {
-                    border-top: 1px solid @pineGreen100;
-                }
-            }
-
-            .title-icon {
-                background-position: -25px -453px;
-            }
-        }
-
-        &.integration-flow {
-            .split-container {
-                border-top: 5px solid @black;
-                margin-bottom: 50px;
-
-                h3 {
-                    .sl-20-sb;
-                    display: block;
-                    padding-top: 50px;
-                    margin-bottom: 20px;
-                }
-
-                p {
-                    .sl;
-                    color: @gray6;
-                    text-align: right;
-                }
-
-                /* Shared */
-                .left, .right {
-                    .process {
-                        p {
-                            .sl-sb;
-                        }
-                    }
-                }
-
-                .left {
-                    padding-right: 29px;
-                    border-right: 1px solid @gray3;
-
-                    > p {
-                        margin-left: 20px;
-                    }
-
-                    h3, p {
-                        text-align: right;
-                    }
-
-                    .process {
-                        margin-top: 25px;
-
-                        .graphic {
-                            background: url(/images/payouts/payouts_full_marketplace_solution-2x.png) no-repeat;
-                            width: 240px;
-                            height: 500px;
-                            background-position: 0px 0px;
-                            background-size: 240px;
-                            float: right;
-                            margin-left: 18px;
-                            margin-bottom: 30px;
-                        }
-
-                        p:nth-of-type(1) {
-                            padding-top: 45px;
-                        }
-
-                        p:nth-of-type(2) {
-                            padding-top: 80px;
-                        }
-
-                        p:nth-of-type(3) {
-                            padding-top: 55px;
-                        }
-                    }
-                }
-
-                .right {
-                    padding-left: 30px;
-                    margin-left: 0px;
-
-                    h3, p {
-                        text-align: left;
-                    }
-
-                    .process {
-                        margin-top: 25px;
-
-                        .graphic {
-                            background: url(/images/payouts/payouts_only-2x.png) no-repeat;
-                            width: 240px;
-                            height: 500px;
-                            background-position: 0px 0px;
-                            background-size: 240px;
-                            float: left;
-                            margin-right: 19px;
-                            margin-bottom: 30px;
-                        }
-
-                        p:nth-of-type(1) {
-                            padding-top: 40px;
-                        }
-
-                        p:nth-of-type(2) {
-                            padding-top: 70px;
-                        }
-
-                        p:nth-of-type(3) {
-                            padding-top: 60px;
-                        }
-                    }
-                }
-            }
-
-            .btn {
-                margin-left: -60px;
-            }
-        }
-
-        &.payment-schedule {
-            .schedule-times {
-                .title {
-                    color: @black;
-                    background-color: @pineGreen60;
-                    letter-spacing: 0.1em;
-                }
-            }
-        }
-
-        &.collecting-bank-account-info {
-            .bank-account-info {
-                .teeth {
-                    > div {
-                        background: @gray1;
-                    }
-                }
-            }
-
-            .graphic {
-                background: url(/images/payouts/collecting_bank_account_info-2x.png) no-repeat;
-                width: 570px;
-                height: 600px;
-                background-position: 0px 0px;
-                background-size: 570px;
-            }
-
-            .title {
-                .sl-20-b;
-                padding: 25px 25px 5px 25px;
-                color: @gray5;
-            }
-
-            .subtitle {
-                .sl-sb;
-                padding: 5px 25px 35px 25px;
-            }
-
-            .bank-info-section {
-                padding: 25px 0 25px 0;
-                margin: 0 25px;
-                border-top: 1px solid @gray3;
-
-                &.success {
-                    .success-icon {
-                        display: inline-block;
-                    }
-
-                    input {
-                        background-color: @pineGreen60;
-                    }
-
-                    .bank-name {
-                        .sl-sb;
-                         float: right;
-                         position: relative;
-                    }
-                }
-
-                &.error {
-                    input {
-                        background: @imperialRed60;
-                    }
-
-                    .description {
-                        > span {
-                          color: @imperialRed100;
-                        }
-                    }
-
-                    .bank-name {
-                        .sl-sb;
-                         float: right;
-                         position: relative;
-                    }
-                }
-
-                .success-icon {
-                    display: none;
-                    position: relative;
-                    font-size: 20px;
-                    left: -30px;
-                    color: @white;
-                }
-
-                h6 {
-                    .sl-sb;
-                    margin: 0 15px;
-                }
-
-                input {
-                    .sl-20-sb;
-                    background: @gray2;
-                    margin: 0;
-                    border: none;
-                    outline: none;
-                    .border-radius(0);
-                    height: 30px;
-                    width: 95%;
-                    padding: 4px 10px;
-                }
-
-                &.large {
-                    input {
-                        width: auto;
-                    }
-                }
-
-                .description,.bank-name {
-                    .sl;
-                }
-
-                .bank-name {
-                    line-height: 0;
-                }
-
-                .description {
-                    line-height: 16px;
-                    display: table;
-                    overflow: hidden;
-                    float: right;
-                    height: 100%;
-                    min-height: 36px;
-                    margin-left: 0;
-
-                    > span {
-                        display: table-cell;
-                        vertical-align: middle;
-                    }
-                }
-            }
-
-            .bank-info-bottom {
-                background: @pineGreen20;
-                height: 150px;
-                margin: 0;
-
-                .bottom {
-                    margin: 15px 0;
-                    padding: 30px 25px;
-                    border-right: 1px solid @gray3;
-                    height: 55px;
-                    color: @black;
-                }
-
-                span {
-                    font-family: 'Droid Serif', serif;
-                    line-height: 18px;
-                    font-style: italic;
-                    font-size: 14px;
-                }
-
-                .check-graphic {
-                    background: url(/images/check_image.png) no-repeat center center;
-                    height: 110px;
-                    width: 280px;
-                    background-size: 280px;
-                    margin-top: 25px;
-                }
-            }
-        }
-
-        &.payout-status {
-            .graphic {
-                background: url(/images/payouts/payouts_status-2x.png) no-repeat;
-                width: 840px;
-                height: 515px;
-                background-position: 0px 113px;
-                background-size: 840px;
-            }
-        }
-
-        &.reversing-a-payout {
-            .graphic {
-                background: url(/images/payouts/payouts_reversal_status-2x.png) no-repeat;
-                width: 840px;
-                height: 400px;
-                background-position: 0px 40px;
-                background-size: 840px;
-            }
-        }
-
-        &.bank-statement-descriptor {
-            .graphic {
-                background: url(/images/payouts/payouts_bank_statement_descriptor-2x.png) no-repeat;
-                width: 570px;
-                height: 250px;
-                background-position: 0px 0px;
-                background-size: 570px;
-            }
-
-            .footnote {
-                .sl;
-                margin-top: 5px;
-            }
-        }
+          &:not(.hamburger):hover {
+            border-bottom: 1px solid @white !important;
+          }
     }
+  }
+
+  .page-header {
+    .title-image {
+      background-image: url(/images/payouts/header_ach_payouts.png);
+    }
+
+    .background-image {
+      background-image: url(/images/payouts/ach_payouts_bg.jpg);
+    }
+  }
+
+  .integration-flow {
+    position: relative;
+
+    .left, .right {
+      width: 50%;
+      float: left;
+      position: relative;
+    }
+
+    .left {
+      .graphic {
+        background-image: url(/images/payouts/payouts_mp_solution.png);
+      }
+    }
+    .right {
+      border-left: 1px solid @gray3;
+
+      .graphic {
+        background-image: url(/images/payouts/payouts_standalone.png);
+      }
+    }
+
+    .header {
+      position: absolute;
+      height: 240px;
+      padding: 45px;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 1;
+
+      h3 {
+        &:extend(section .section-title .title-wrapper span);
+        display: inline-block;
+        border-top: 0;
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      p {
+        &:extend(section .section-title .title-wrapper p);
+        margin-top: 0;
+      }
+    }
+
+    .process {
+      background-color: @turquoise20;
+      padding-top: 240px;
+      padding-bottom: 10px;
+
+      .graphic {
+        width: 320px;
+        height: 630px;
+        background-size: contain;
+        margin: 45px;
+      }
+    }
+  }
+
+  .payment-schedule {
+    .folded-box {
+      padding: 0;
+    }
+
+    .payouts-calendar {
+      width: 315px;
+      height: 200px;
+      background-size: contain;
+      background-image: url(/images/payouts/payouts_calendar.png);
+      float: left;
+    }
+
+    .payouts-time {
+      padding: 40px;
+      margin-top: 3px;
+      margin-left: -15px;
+      text-align: center;
+
+      .time {
+        font-size: 60px;
+        line-height: 77px;
+        color: @pineGreen80;
+      }
+    }
+  }
+
+  .collecting-bank-account-info {
+    .subtitle {
+      color: @gray6;
+    }
+
+    form {
+      border-top: 1px solid @gray2;
+      margin-top: 30px;
+      padding-top: 30px;
+
+      input {
+        width: 300px;
+        position: relative;
+      }
+
+      label {
+        margin: 0 0 5px;
+
+        &:after {
+          content: '';
+        }
+      }
+
+      .bank-name {
+        display: none;
+        .sl-sb;
+        padding: 5px 0;
+        .transition(all);
+        .transition-duration(200ms);
+      }
+
+      .icon-checkmark {
+        display: none;
+        position: absolute;
+        right: 55px;
+        margin-top: -25px;
+        color: @pineGreen80;
+      }
+
+      p {
+        position: absolute;
+        margin: 0;
+        top: 205px;
+      }
+
+      .control-group {
+        margin-bottom: 20px;
+
+        &.success {
+          input {
+            color: @black;
+            border-color: @gray2;
+          }
+
+          .icon-checkmark {
+            display: block;
+          }
+
+          .bank-name {
+            display: block;
+            color: @pineGreen100;
+          }
+        }
+
+        &.error {
+          input {
+            border-color: @imperialRed80;
+            color: @imperialRed100;
+          }
+
+          .icon-checkmark {
+            display: none;
+          }
+
+          .bank-name {
+            display: block;
+            color: @imperialRed100;
+          }
+        }
+      }
+    }
+  }
+
+  .bank-statement-descriptor {
+    .card-info {
+      .sl;
+      padding: 10px 0 20px;
+    }
+
+    .amount {
+      .sl-sb;
+      line-height: 20px;
+      color: @pineGreen80;
+      text-align: right;
+    }
+
+    .amount-header {
+      color: @white;
+      text-align: right;
+    }
+
+    .sl-note {
+      padding-top: 10px;
+    }
+  }
+
+  .graphic {
+    &.payout-status {
+      background-image: url(/images/payouts/payouts_status-2x.png);
+    }
+
+    &.reversing-a-payout {
+      background-image: url(/images/payouts/payouts_reversal_status-2x.png);
+    }
+  }
 }
