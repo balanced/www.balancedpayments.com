@@ -71,30 +71,26 @@ tryTheDashboard:
   button: Get started
 
 bankAcctInfo:
-  title: Test Bank Account Form
-  subtitle: Balanced validates routing numbers in real time. Enter in a routing number below to test this out.
-  bottom: Funds will appear in the bank account in 1 business day.
+  title: Test bank account form
+  subtitle: Balanced validates routing numbers in real time
+  note: Please make sure this matches exactly to the name on your bank account. Otherwise, payouts may experience delays.
   list:
-    - title: Account Holder's Name
-      description: Please make sure this matches exactly to the name on your bank account. Otherwise, payouts may experience delays.
+    - title: Name on account
       classes: large name
       placeholder: Henry Cavendish
-      attr: readonly="readonly"
-    - title: Routing Number
-      description: Enter your 9-digit routing number.
+      attr: disabled="disabled"
+    - title: Routing number
       classes: routing-number success
       placeholder: 121042882
       attr: maxlength="9"
       bank: "Bank: WELLS FARGO BANK NA"
-    - title: Account Number
-      description: Enter your account number.
+    - title: Account number
       classes: account-number
       placeholder: 5124780660
-      attr: readonly="readonly"
-    - title: Confirm Account Number
-      description: Re-enter your account number.
+      attr: disabled="disabled"
+    - title: Confirm account number
       classes: confirm-account-number last
       placeholder: 5124780660
-      attr: readonly="readonly"
+      attr: disabled="disabled"
 
 ---

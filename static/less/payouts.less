@@ -79,137 +79,80 @@ body.payouts {
   }
 
   .collecting-bank-account-info {
-      .title {
-          .sl-20-b;
-          padding: 25px 25px 5px 25px;
-          color: @gray5;
+    form {
+      border-top: 1px solid @gray2;
+      margin-top: 45px;
+      padding-top: 30px;
+
+      input {
+        width: 300px;
+        position: relative;
       }
 
-      .subtitle {
-          .sl-sb;
-          padding: 5px 25px 35px 25px;
+      label {
+        margin: 0 0 5px;
+
+        &:after {
+          content: '';
+        }
       }
 
-      .bank-info-section {
-          padding: 25px 0 25px 0;
-          margin: 0 25px;
-          border-top: 1px solid @gray2;
+      .bank-name {
+        display: none;
+        .sl-sb;
+        padding: 5px 0;
+        .transition(all);
+        .transition-duration(200ms);
+      }
 
-          .input-field {
-            position: relative;
+      .icon-checkmark {
+        display: none;
+        position: absolute;
+        right: 55px;
+        margin-top: -25px;
+        color: @pineGreen80;
+      }
+
+      p {
+        position: absolute;
+      }
+
+      .control-group {
+        margin-bottom: 20px;
+
+        &.success {
+          input {
+            color: @black;
+            border-color: @gray2;
+          }
+
+          .icon-checkmark {
+            display: block;
+          }
+
+          .bank-name {
+            display: block;
+            color: @pineGreen100;
+          }
+        }
+
+        &.error {
+          input {
+            border-color: @imperialRed80;
+            color: @imperialRed100;
           }
 
           .icon-checkmark {
             display: none;
           }
 
-          &.success {
-              .icon-checkmark {
-                color: @white;
-                display: inline-block;
-                position: absolute;
-                right: 20px;
-                top: 8px;
-              }
-
-              input {
-                  background-color: @pineGreen60;
-              }
-
-              .bank-name {
-                  .sl-sb;
-                   float: right;
-                   position: relative;
-              }
-          }
-
-          &.error {
-              input {
-                  background: @imperialRed60;
-              }
-
-              .description {
-                  > span {
-                    color: @imperialRed100;
-                  }
-              }
-
-              .bank-name {
-                  .sl-sb;
-                   float: right;
-                   position: relative;
-              }
-          }
-
-          h6 {
-              .sl-sb;
-              margin: 0 15px;
-          }
-
-          input {
-              .sl-20-sb;
-              background: @gray2;
-              margin: 0;
-              border: none;
-              outline: none;
-              .border-radius(0);
-              height: 30px;
-              width: 100%;
-              padding: 4px 10px;
-          }
-
-          .description,.bank-name {
-              .sl;
-          }
-
           .bank-name {
-              line-height: 0;
+            display: block;
+            color: @imperialRed100;
           }
-
-          .description {
-              line-height: 16px;
-              display: table;
-              overflow: hidden;
-              float: right;
-              height: 100%;
-              min-height: 36px;
-              margin-left: 0;
-
-              > span {
-                  display: table-cell;
-                  vertical-align: middle;
-              }
-          }
+        }
       }
-
-      .bank-info-bottom {
-          background: @pineGreen20;
-          height: 150px;
-          margin: 0;
-
-          .bottom {
-              margin: 15px 0;
-              padding: 30px 25px;
-              border-right: 1px solid @gray3;
-              height: 55px;
-              color: @black;
-          }
-
-          span {
-              font-family: 'Droid Serif', serif;
-              line-height: 18px;
-              font-style: italic;
-              font-size: 14px;
-          }
-
-          .check-graphic {
-              background: url(/images/check_image.png) no-repeat center center;
-              height: 110px;
-              width: 280px;
-              background-size: 280px;
-              margin-top: 25px;
-          }
-      }
+    }
   }
 
   .bank-statement-descriptor {

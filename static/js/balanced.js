@@ -296,11 +296,11 @@
 			}
 
 			function routingNumberValidationSuccess(bankInfo) {
-				$routingNumber.addClass('success').removeClass('error').find('.description span').html('Bank: ' + bankInfo.customer_name);
+				$routingNumber.addClass('success').removeClass('error').find('.bank-name span').html(bankInfo.customer_name);
 			}
 
 			function routingNumberValidationError() {
-				$routingNumber.addClass('error').removeClass('success').find('.description span').html('<strong>Invalid Routing Number:</strong> Please enter a valid 9-digit routing number.');
+				$routingNumber.addClass('error').removeClass('success').find('.bank-name span').html('Invalid routing number. Please enter a valid 9-digit routing number.');
 			}
 
 			$routingNumberInput.on('blur', function(event) {
@@ -322,7 +322,7 @@
 					if (bankInfo) {
 						routingNumberValidationSuccess(bankInfo);
 					} else {
-						$routingNumber.removeClass('success').find('.description span').html('Enter your 9-digit routing number.');
+						$routingNumber.removeClass('success');
 					}
 				});
 			});

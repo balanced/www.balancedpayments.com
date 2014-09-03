@@ -14,8 +14,12 @@
         <div class="summary row large-bottom-margin">
           <div class="page-subtitle clearfix">
             <div class="span16">
-              <span>{{ page.metadata.subtitle.heading }}</span>
+              <span>{{page.metadata.subtitle.heading}}</span>
             </div>
+          </div>
+
+          <div class="summary-text">
+              <p class="page-summary span13">{{page.metadata.subtitle.description}}</p>
           </div>
         </div>
 
@@ -57,40 +61,30 @@
           <div class="content clearfix collecting-bank-account-info">
             <div class="section-title section-title-no-width">
               <div class="title-wrapper span6">
-                <span>{{page.metadata.collectingBankInfo.title}}</span>
+                <span class="sl-sb">{{page.metadata.collectingBankInfo.title}}</span>
                 <p>{{page.metadata.collectingBankInfo.body}}</p>
                 <p><a href="{{page.metadata.collectingBankInfo.learnLinkUrl}}">{{page.metadata.collectingBankInfo.learnLink}}</a></p>
               </div>
-              <div class="span13 pull-right bank-account-info">
-                <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
-                <div class="subtitle">{{page.metadata.bankAcctInfo.subtitle}}</div>
-                {% for item in page.metadata.bankAcctInfo.list %}
-                  <div class="bank-info-section {{item.classes}}">
-                    <div class="row">
-                      <h6>{{item.title}}</h6>
-                    </div>
-                    <div class="row">
-                      <div class="routing-number input-field span6">
-                        <input type="text" value="{{item.placeholder}}" {{item.attr}}/>
+
+              <div class="folded-box span13 pull-right">
+                <h3 class="title">{{page.metadata.bankAcctInfo.title}}</h3>
+                <p class="subtitle">{{page.metadata.bankAcctInfo.subtitle}}</p>
+
+                <form class="clearfix">
+                  <p class="sl-note span4">{{page.metadata.bankAcctInfo.note}}</p>
+                  <div class="span6 offset4">
+                    {% for item in page.metadata.bankAcctInfo.list %}
+                      <div class="control-group {{item.classes}}">
+                        <label>{{item.title}}</label>
+                        <input type="text" value="{{item.placeholder}}" {{item.attr}} />
                         <i class="icon-checkmark non-interactive"></i>
+                        {% if item.bank %}
+                          <div class="bank-name"><span>{{item.bank}}</span></div>
+                        {% endif %}
                       </div>
-                      <div class="description span6">
-                        <span>{{item.description}}</span>
-                      </div>
-                      {% if item.bank %}
-                      <div class="bank-name span6"><span>{{item.bank}}</span></div>
-                      {% endif %}
-                    </div>
+                    {% endfor %}
                   </div>
-                {% endfor %}
-                <div class="bank-info-bottom row">
-                  <div class="bottom span4">
-                    <span>{{page.metadata.bankAcctInfo.bottom}}</span>
-                  </div>
-                  <div class="span7">
-                    <div class="check-graphic"></div>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
