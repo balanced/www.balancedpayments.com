@@ -6,20 +6,20 @@ pageTitle: Payouts
 body_class: payouts
 
 subtitle:
-  heading: Pay your sellers with next business day ACH direct deposit.
+  heading: Pay your sellers next business day with ACH direct deposit.
   description: Funds are deposited the next business day for U.S. bank accounts and same business day for Wells Fargo accounts.
 
 withProcessing:
   title: The full marketplace solution
-  body: With Balanced's card processing and ACH debits, money from your buyers is placed into an order-specific escrow on behalf of the seller until you're ready to pay out.
+  body: With Balanced's card processing and ACH debits, money from your buyers is placed into an order balance on behalf of the seller until you're ready to pay out.
   linkText: View payments scenario
   linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
 payoutsOnly:
   title: Payouts only
-  body: Simply fund your escrow (held by Balanced) with your marketplace's bank account to pay your sellers.
+  body: Simply fund your balance (held by Balanced) with your marketplace's bank account to pay your sellers.
   linkText: View payments scenario
-  linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
+  linkUrl: https://docs.balancedpayments.com/1.1/guides/escrow/
 
 paymentSchedule:
   title: Payment schedule
@@ -104,9 +104,10 @@ bankAcctInfo:
       classes: account-number
       placeholder: 5124780660
       attr: disabled="disabled"
-    - title: Confirm account number
-      classes: confirm-account-number last
-      placeholder: 5124780660
+    - title: Account type
+      classes: account-type last
+      select: true
+      placeholder: Checking
       attr: disabled="disabled"
 
 ---

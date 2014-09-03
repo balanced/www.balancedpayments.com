@@ -24,7 +24,7 @@
         </div>
 
         <section>
-          <div class="integration-flow clearfix">
+          <div class="integration-flow clearfix large-bottom-margin">
               <div class="left">
                 <div class="header">
                   <h3>{{page.metadata.withProcessing.title}}</h3>
@@ -83,8 +83,17 @@
                     {% for item in page.metadata.bankAcctInfo.list %}
                       <div class="control-group {{item.classes}}">
                         <label>{{item.title}}</label>
-                        <input type="text" value="{{item.placeholder}}" {{item.attr}} />
+
+                        {% if item.select %}
+                          <select {{item.attr}}>
+                            <option value="{{item.placeholder}}">{{item.placeholder}}</option>
+                          </select>
+                        {% else %}
+                          <input type="text" value="{{item.placeholder}}" {{item.attr}} />
+                        {% endif %}
+
                         <i class="icon-checkmark non-interactive"></i>
+
                         {% if item.bank %}
                           <div class="bank-name"><span>{{item.bank}}</span></div>
                         {% endif %}
@@ -141,7 +150,7 @@
                 <div class="title">Bank account statement</div>
                 <div class="card-info">
                   <div>Jessica Lauren</div>
-                  <div>xxxx xxxx xxxx 4896</div>
+                  <div>xxxxxxx4685</div>
                 </div>
                 <table class="table table-condensed">
                   <thead>
@@ -154,18 +163,18 @@
                   <tbody>
                   <tr>
                     <td>Oct 22</td>
-                    <td>BAL*ZUPPA 74120 JHall</td>
-                    <td class="amount">$ 120.00</td>
+                    <td>ZUPPA 741486 ABaker</td>
+                    <td class="amount">$ 150.00</td>
                   </tr>
                   <tr>
                     <td>Oct 17</td>
-                    <td>BAL*ZUPPA 74103 JHall</td>
-                    <td class="amount">$ 78.00</td>
+                    <td>ZUPPA 741308 TWard</td>
+                    <td class="amount">$ 173.00</td>
                   </tr>
                   <tr>
                     <td>Oct 10</td>
-                    <td>BAL*ZUPPA 74726 JHall</td>
-                    <td class="amount">$ 32.50</td>
+                    <td>ZUPPA 741239 LMoore</td>
+                    <td class="amount">$ 128.00</td>
                   </tr>
                   </tbody>
                 </table>
