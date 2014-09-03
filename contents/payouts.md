@@ -18,8 +18,6 @@ withProcessing:
 payoutsOnly:
   title: Payouts only
   body: Simply fund your balance (held by Balanced) with your marketplace's bank account to pay your sellers.
-  linkText: View payments scenario
-  linkUrl: https://docs.balancedpayments.com/1.1/guides/escrow/
 
 paymentSchedule:
   title: Payment schedule
