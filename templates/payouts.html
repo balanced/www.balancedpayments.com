@@ -73,10 +73,8 @@
 
               <div class="folded-box span13 pull-right">
                 <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
-                <p class="subtitle">{{page.metadata.bankAcctInfo.subtitle}}</p>
-
                 <form class="clearfix">
-                  <p class="sl-note span4">{{page.metadata.bankAcctInfo.note}}</p>
+                  <p class="subtitle span4">{{page.metadata.bankAcctInfo.subtitle}}</p>
                   <div class="span6 offset4">
                     {% for item in page.metadata.bankAcctInfo.list %}
                       <div class="control-group {{item.classes}}">

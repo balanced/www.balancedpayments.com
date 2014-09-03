@@ -85,7 +85,6 @@ tryTheDashboard:
 bankAcctInfo:
   title: Test bank account form
   subtitle: Balanced validates routing numbers in real time
-  note: Please make sure this matches exactly to the name on your bank account. Otherwise, payouts may experience delays.
   list:
     - title: Name on account
       classes: large name
