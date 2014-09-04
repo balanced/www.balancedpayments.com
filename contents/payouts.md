@@ -89,20 +89,20 @@ bankAcctInfo:
     - title: Name on account
       classes: large name
       placeholder: Henry Cavendish
-      attr: disabled="disabled"
+      attr: disabled="disabled" type="text"
     - title: Routing number
       classes: routing-number success
       placeholder: 121042882
-      attr: maxlength="9"
+      attr: maxlength="9" type="text"
       bank: "Bank: WELLS FARGO BANK NA"
     - title: Account number
       classes: account-number
       placeholder: 5124780660
-      attr: disabled="disabled"
+      attr: disabled="disabled" type="text"
     - title: Account type
       classes: account-type last
       select: true
       placeholder: Checking
-      attr: disabled="disabled"
+      attr: disabled="disabled" type="text"
 
 ---
