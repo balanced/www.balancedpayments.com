@@ -360,7 +360,6 @@ module.exports = function(grunt) {
 					removeCommentsFromCDATA: true,
 					removeCDATASectionsFromCDATA: true,
 					collapseBooleanAttributes: true,
-					removeRedundantAttributes: true,
 					removeEmptyAttributes: true
 				},
 				files: {
