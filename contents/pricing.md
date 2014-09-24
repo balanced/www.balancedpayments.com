@@ -50,9 +50,6 @@ features:
         price: $0
       - name: Failure
         price: $1
-      - name: Preloading your escrow
-        note: via ACH debit
-        price: $0
   - title: "Payout: push to card"
     image: pushtocard
     cent: 25

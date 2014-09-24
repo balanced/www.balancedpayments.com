@@ -74,9 +74,6 @@ payoutsPricing:
       price: $0
     - name: Failure
       price: $1
-    - name: Preloading your escrow
-      note: via ACH debit
-      price: $0
 
 tryTheDashboard:
   body: Solve your payments problem today.
