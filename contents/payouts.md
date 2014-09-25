@@ -15,10 +15,6 @@ withProcessing:
   linkText: View payments scenario
   linkUrl: https://docs.balancedpayments.com/1.1/guides/collecting-fees/
 
-payoutsOnly:
-  title: Payouts only
-  body: Simply fund your balance (held by Balanced) with your marketplace's bank account to pay your sellers.
-
 paymentSchedule:
   title: Payment schedule
   body: Balanced will batch payouts for submission each weekday, except for bank holidays.
@@ -74,9 +70,6 @@ payoutsPricing:
       price: $0
     - name: Failure
       price: $1
-    - name: Preloading your escrow
-      note: via ACH debit
-      price: $0
 
 tryTheDashboard:
   body: Solve your payments problem today.

@@ -38,7 +38,7 @@ Sections:
     title: Payout options
     subTitle: Bank accounts via same-day ACH (Wells Fargo accounts) &nbsp;|&nbsp; Bank accounts via next-day ACH (U.S. only)
     desc: |
-      ### For stand-alone payouts, crowdfunding platforms, or online businesses connecting buyers and sellers
+      ### Payouts for crowdfunding platforms or online businesses connecting buyers and sellers
     subs:
       - title: ACH payouts
         text: Pay out with same-day ACH for Wells Fargo accounts and next business day for other U.S. bank accounts.

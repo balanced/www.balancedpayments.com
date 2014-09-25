@@ -22,31 +22,24 @@ body.payouts {
   .integration-flow {
     position: relative;
 
-    .left, .right {
-      width: 50%;
-      float: left;
+    .center {
+      width: 100%;
+      margin: 0 auto;
       position: relative;
-    }
 
-    .left {
       .graphic {
         background-image: url(/images/payouts/payouts_mp_solution.png);
       }
     }
-    .right {
-      border-left: 1px solid @gray3;
-
-      .graphic {
-        background-image: url(/images/payouts/payouts_standalone.png);
-      }
-    }
 
     .header {
+      width: 295px;
+      height: 100%;
       position: absolute;
-      height: 240px;
       padding: 45px;
       background-color: rgba(255, 255, 255, 0.6);
       z-index: 1;
+      text-align: left;;
 
       h3 {
         &:extend(section .section-title .title-wrapper span);
@@ -59,19 +52,24 @@ body.payouts {
       p {
         &:extend(section .section-title .title-wrapper p);
         margin-top: 0;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
 
     .process {
       background-color: @turquoise20;
-      padding-top: 240px;
-      padding-bottom: 10px;
+      padding-top: 45px;
+      padding-bottom: 45px;
+      padding-left: 295px;
 
       .graphic {
         width: 320px;
         height: 630px;
         background-size: contain;
-        margin: 45px;
+        margin: 0 auto;
       }
     }
   }
