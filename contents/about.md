@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 21 payment aficionados and growing
+    text: 18 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -99,20 +99,10 @@ team:
       desc: writer that fell in love with payments
       link: http://www.linkedin.com/pub/andrew-nossiter/23/559/11b
       site: linkedin
-    - name: dalyte kodzis
-      job: executive assistant
-      desc: keeps everything in order
-      link: http://www.linkedin.com/pub/dalyte-kodzis/62/193/688
-      site: linkedin
     - name: ben mills
       job: engineer
       desc: contributed to open source Balanced projects for a year prior to working at Balanced
       link: https://github.com/remear
-      site: github
-    - name: matthew francis-landau
-      job: engineer
-      desc: the only intern that survived Summer 2013
-      link: https://github.com/matthewfl
       site: github
     - name: victor lin
       job: engineer
@@ -124,11 +114,6 @@ team:
       desc: designer turned into engineer
       link: https://github.com/kyungmin
       site: github
-    - name: kimling lam
-      job: marketing
-      desc: storyteller and shiba inu owner
-      link: http://www.linkedin.com/in/kimling
-      site: linkedin
     - name: david macquart
       job: account management and partnerships
       desc: whatever it takes
