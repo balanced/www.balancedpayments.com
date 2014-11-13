@@ -9,7 +9,7 @@ banner:
   - heading: located
     text: san francisco, ca
   - heading: team
-    text: 18 payment aficionados and growing
+    text: 17 payment aficionados and growing
   - heading: purpose
     text: enable new forms of commerce
 
@@ -54,11 +54,6 @@ founders:
 team:
   heading: team
   list:
-    - name: andrew imam
-      job: engineer
-      desc: 10<sup>th</sup> engineer at Hulu
-      link: https://github.com/bninja
-      site: github
     - name: timothy nguyen
       job: legal and compliance
       desc: Stanford / UVA law / California bar association
