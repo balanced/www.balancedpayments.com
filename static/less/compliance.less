@@ -2,26 +2,34 @@
   .content {
     p {
       color: @gray8;
-      margin-top: 20px;
     }
+
     table {
-      &:extend(table.items);
+      width: calc(~"50% - 20px");
+      margin: 20px 20px 0 0;
+      float: left;
 
       thead {
-        &:extend(table.items thead);
         th {
+          &:extend(table.items th > span);
           line-height: 30px;
+          padding: 0px 25px;
         }
       }
       tbody {
-        tr {
-          &:extend(table.items tbody tr);
-        }
-        td {
-          &:extend(table.items tbody tr td);
+        td span {
+          color: @gray8;
           line-height: 30px;
         }
       }
+    }
+  }
+  .uncontained-box {
+    margin-bottom: 40px;
+
+    p {
+      .sl-sb;
+      margin-bottom: 0;
     }
   }
 }
