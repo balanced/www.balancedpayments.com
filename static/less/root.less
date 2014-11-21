@@ -1,4 +1,3 @@
-@import "bootstrap-2.3/bootstrap.less";
 @import "bower/strapped/static/less/strapped.less";
 
 @pageWidth: 840px;
@@ -59,8 +58,11 @@
       position: absolute;
       left: 49%;
       top: 18px;
-      width: 30px;
       z-index: 2;
+
+      img {
+        width: 30px;
+      }
     }
   }
 
@@ -117,21 +119,17 @@ h4 {
 }
 
 section {
-  @sectionTitleLineWidth: 5px;
-  @sectionTitlePadding: 8px;
-
   .section-title {
     width: 270px;
 
     .title-wrapper {
-      margin-top: @sectionTitleLineWidth + 5;
       margin-left: 0;
+      width: 230px;
+      border-top: 5px solid @black;
+      padding-top: 5px;
 
       span {
         .sl-16-sb;
-        line-height: 23px;
-        border-top: @sectionTitleLineWidth solid @gray7;
-        padding-top: @sectionTitlePadding;
       }
 
       p {
@@ -145,6 +143,15 @@ section {
     .section-side-body {
       color: @gray7;
     }
+  }
+
+  .section-description {
+    padding: 0;
+  }
+
+  .section-main-body {
+    width: 70%;
+    padding-right: 0;
   }
 }
 
@@ -555,5 +562,6 @@ section {
 @import "open.less";
 @import "payouts.less";
 @import "card-processing.less";
+@import "account-reconciliation.less";
 @import "security.less";
 @import "responsive.less";

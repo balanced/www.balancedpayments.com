@@ -224,6 +224,7 @@ body.layout-v4 {
 
             .step-boxes {
                 border-top: 5px solid @black;
+                padding: 0;
 
                 a {
                     &:hover {
@@ -251,7 +252,7 @@ body.layout-v4 {
                 }
 
                 .box {
-                    width: 140px;
+                    width: 145px;
                     height: 125px;
                     padding: 10px;
                     background-color: @gray1;
@@ -273,7 +274,6 @@ body.layout-v4 {
 
                     &.box-last {
                         border-right: 0px;
-                        width: 140px;
                     }
 
                     p {
@@ -443,6 +443,7 @@ body.layout-v4 {
         margin-top: 0px;
         background: @white;
         .opacity(100);
+        text-shadow: none;
 
         &.right {
             right: 0px;
@@ -479,6 +480,7 @@ body.layout-v4 {
                 margin: 55px auto 0px auto;
                 width: 712px;
                 padding: 0px;
+                text-shadow: none;
 
                 p {
                     color: @black;
@@ -490,16 +492,13 @@ body.layout-v4 {
 
             img {
                 margin: auto;
-                width: 660px;
+                width: 644px;
             }
         }
     }
 
     .carousel-indicators {
-        top: inherit;
-        right: inherit;
-        left: 375px;
-        margin: auto;
+        bottom: -40px;
 
         .active {
             background-color: @black;

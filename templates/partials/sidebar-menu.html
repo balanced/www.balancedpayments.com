@@ -1,31 +1,22 @@
 <i class="icon-x"></i>
 <ul id="sidebar-child-menu-left-product">
     <li>
-        <a href="{{env.helpers.link('/payouts')}}">ACH Payouts</a>
-    </li>
-    <li>
-        <a href="{{env.helpers.link('/international-payments')}}">International Payments</a>
-    </li>
-    <li>
-        <a href="{{env.helpers.link('/push-to-card')}}">Push to Card</a>
-    </li>
-    <li>
         <a href="{{env.helpers.link('/card-processing')}}">Card Processing</a>
+    </li>
+    <li>
+        <a href="{{env.helpers.link('/payouts')}}">ACH Payouts</a>
     </li>
     <li>
         <a href="{{env.helpers.link('/ach-debits')}}">ACH Debits</a>
     </li>
     <li>
-        <a href="https://support.balancedpayments.com/hc/en-us/categories/200147234-Escrow-Holding-Funds">Escrow</a>
+        <a href="{{env.helpers.link('/push-to-card')}}">Push to Card</a>
+    </li>
+    <li>
+        <a href="{{env.helpers.link('/international-payments')}}">International Payments</a>
     </li>
     <li>
         <a href="https://support.balancedpayments.com/hc/en-us/categories/200147204-Charging-buyers">Authorization Holds</a>
-    </li>
-    <li>
-        <a href="https://support.balancedpayments.com/hc/en-us/categories/200147154-Fraud-Chargebacks">Chargebacks</a>
-    </li>
-    <li>
-        <a href="{{env.helpers.link('/get-started')}}" data-pjax>Getting Started</a>
     </li>
     <li>
         <a href="{{env.helpers.link('/customers')}}" data-pjax>Customers</a>
@@ -35,13 +26,17 @@
     </li>
     <li class="divider"></li>
     <li>
+        <a class="btn" href="{{env.helpers.link('/get-started')}}" data-pjax>Get started</a>
+    </li>
+    <li class="divider"></li>
+    <li>
         <a class="sm" href="{{env.helpers.link('/about')}}">About</a>
     </li>
     <li>
         <a class="sm" href="{{env.helpers.link('/security')}}">Security</a>
     </li>
     <li>
-        <a class="sm" href="https://support.balancedpayments.com/hc/en-us/articles/200173030">Compliance</a>
+        <a class="sm" href="{{env.helpers.link('/compliance')}}">Compliance</a>
     </li>
     <li>
         <a class="sm" href="{{env.helpers.link('/open')}}">Open Company</a>

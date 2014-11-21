@@ -35,7 +35,6 @@ This service contract ("Agreement") is between Balanced, Inc. (“Balanced”) a
    * **Settlement/Merchant Settlement:** Seller receives funds for the sale
    * **Marketplace Commission:** Marketplace receives fees for services it provides to buyers and sellers on the Marketplace.
    
-
 1. **Confidential Information:** Information identified at the time of disclosure as confidential or that a reasonable person knows or reasonably should understand to be confidential, which may include information concerning the Marketplace’s business, finances, technology, or customers of Marketplace. All Confidential Information will remain the property of the Marketplace.
 
 1. **Seller Agreement:** Marketplace agrees to be bound by the Balanced Seller Agreement (as attached hereto) in as far as those provisions expressly apply to it, and it is incorporated by reference as if set forth at length herein.
