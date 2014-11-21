@@ -93,7 +93,7 @@
 		},
 		customers: function() {
 			$('.customer-wall .masonry').isotope({
-				itemSelector: '.card',
+				itemSelector: '.customer-card',
 				sortBy: 'random'
 			});
 
@@ -163,7 +163,7 @@
 				var $hidden = $videoTestimonial.find('.background-image:hidden');
 
 				if ($hidden.length === 0) {
-					$hidden = $('.video-testimonial-image .hidden');
+					$hidden = $('.video-testimonial-image .second');
 				}
 
 				$hidden

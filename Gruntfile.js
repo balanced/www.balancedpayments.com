@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				dest: 'contents/static/js/balanced-lib.js'
 			},
 			bootstrapModal: {
-				src: ['bower/bootstrap/js/bootstrap-transition.js', 'bower/bootstrap/js/bootstrap-modal.js', 'bower/isotope/jquery.isotope.min.js'],
+				src: ['bower/strapped/static/js/bootstrap/transition.js', 'bower/strapped/static/js/bootstrap/modal.js', 'bower/isotope/jquery.isotope.min.js'],
 				dest: 'contents/static/js/customer-lib.js'
 			}
 		},
@@ -38,9 +38,6 @@ module.exports = function(grunt) {
 					],
 					'contents/static/js/balanced-lib.min.js': [
 						'contents/static/js/balanced-lib.js'
-					],
-					'contents/static/js/carousel.min.js': [
-						'bower/bootstrap/js/bootstrap-carousel.js'
 					]
 				}
 			}
