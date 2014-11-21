@@ -69,12 +69,12 @@
 			$(window).resize(resizeCover);
 			// $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 		},
-		achDebits: function() {
+		carousel: function() {
 			var carousel = $.fn.carousel && $(".carousel").carousel({
 				interval: false
 			});
 
-			$(".how-it-works .step-boxes a").on('click', function(e) {
+			$(".step-boxes a").on('click', function(e) {
 				var step = parseInt($(e.currentTarget).find(".box").attr("data-step"), 10);
 
 				if (step) {
@@ -83,7 +83,7 @@
 			});
 
 			$(".carousel").on("slid", function(e) {
-				var step = parseInt($("#how-it-works-carousel .carousel-inner .item.active").attr("data-step"), 10);
+				var step = parseInt($(".carousel-inner .item.active").attr("data-step"), 10);
 
 				if (step) {
 					$(".how-it-works .step-boxes .box").removeClass("box-active");

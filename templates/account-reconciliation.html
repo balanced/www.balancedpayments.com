@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 
+{% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
+
 {% block body %}
 <div class="bg-default">
   <section class="page-header large-bottom-margin">
@@ -37,62 +39,68 @@
         </div>
 
         <section>
-            {% for feature in page.metadata.features %}
-              <div class="content clearfix">
-                <div class="section-title section-title-no-width clearfix">
-                  <div class="title-wrapper">
-                    <span>{{feature.title}}</span>
-                  </div>
-                </div>
-                <div class="col-md-3 no-margin-left">
-                    <div class="section-side-body">
-                      {{feature.body}}
-                    </div>
-                </div>
-                <div class="col-md-8 pull-right">
-                  <div class="{{feature.class}}"></div>
+          {% for feature in page.metadata.features %}
+            <div class="content clearfix">
+              <div class="section-title section-title-no-width clearfix">
+                <div class="title-wrapper">
+                  <span>{{feature.title}}</span>
                 </div>
               </div>
-            {% endfor %}
-
-          <div class="api content clearfix">
-            <div class="section-title section-title-no-width">
-              <div class="title-wrapper col-md-4">
-                <span>{{page.metadata.api.title}}</span>
-                <p>{{page.metadata.api.body}}</p>
-                <p><a href="{{ page.metadata.api.linkUrl }}">{{page.metadata.api.linkText}}</a></p>
+              <div class="col-md-3 no-margin-left">
+                  <div class="section-side-body">
+                    {{feature.body}}
+                  </div>
               </div>
               <div class="col-md-8 pull-right">
-                <div class="code-sample">
-                  <div class="title">Request</div>
-  <pre>
+                {% if feature.name == "dashboard" %}
+                  <div id="orders-in-dashboard" class="carousel slide">
+                      <div class="carousel-inner">
+                          <div class="item active" data-step="1">
+                              <div class="carousel-caption">{{feature.classCaption1}}</div>
+                              <img src="/images/account-reconciliation/{{feature.class1}}.png" />
+                          </div>
+                          <div class="item" data-step="2">
+                              <div class="carousel-caption">{{feature.classCaption2}}</div>
+                              <img src="/images/account-reconciliation/{{feature.class2}}.png" />
+                          </div>
+                      </div>
+                      <ol class="carousel-indicators">
+                          <li data-target="#orders-in-dashboard" data-slide-to="0" class="active"></li>
+                          <li data-target="#orders-in-dashboard" data-slide-to="1"></li>
+                      </ol>
+                  </div>
+                {% else %}
+                  {% if feature.name == "api" %}
+                  <div class="code-sample">
+                    <div class="title">Request</div>
+<pre>
 curl https://api.balancedpayments.com/customers/CULfBB2MuTwszKMc1zKUjtK/orders <span class="se">\</span>
     -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
     -d <span class="s2">description="Order #12341234"</span> <span class="se">\</span>
-   </pre>
-                </div>
-                <div class="code-sample">
-                  <div class="title">Response *</div>
-                  <pre>
+</pre>
+                  </div>
+                  <div class="code-sample">
+                    <div class="title">Response *</div>
+<pre>
 <span class="p">{</span>
   <span class="s2">...</span>
-  <span class="p">"orders"</span><span class="o">:</span> <span class="s2">[</span>,
+  <span class="p">"orders"</span><span class="o">:</span> <span class="s2">[</span>
     <span class="p">{</span>
       <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">0</span>,
       <span class="s2">"amount_escrowed"</span><span class="o">:</span> <span class="s2">0</span>,
       <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"USD"</span>,
-      <span class="s2">"delivery_address"</span><span class="o">:</span> <span class="s2">{</span>,
+      <span class="s2">"delivery_address"</span><span class="o">:</span> <span class="s2">{</span>
         <span class="s2">"city"</span><span class="o">:</span> <span class="s2">null</span>,
         <span class="s2">"country_code"</span><span class="o">:</span> <span class="s2">null</span>,
         <span class="s2">"line1"</span><span class="o">:</span> <span class="s2">null</span>,
         <span class="s2">"line2"</span><span class="o">:</span> <span class="s2">null</span>,
         <span class="s2">"postal_code"</span><span class="o">:</span> <span class="s2">null</span>,
         <span class="s2">"state"</span><span class="o">:</span> <span class="s2">null</span>,
-      <span class="p">}</span>
+      <span class="p">}</span>,
       <span class="s2">"description"</span><span class="o">:</span> <span class="s2">"Order #12341234"</span>,
       <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/orders/OR5RmqlMTjHm1fVkdf6l0RNA"</span>,
       <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"OR5RmqlMTjHm1fVkdf6l0RNA"</span>,
-      <span class="s2">"links"</span><span class="o">:</span> <span class="s2">{</span>,
+      <span class="s2">"links"</span><span class="o">:</span> <span class="s2">{</span>
         <span class="s2">"merchant"</span><span class="o">:</span> <span class="s2">"CULfBB2MuTwszKMc1zKUjtK"</span>,
       <span class="p">},</span>
       <span class="s2">"meta"</span><span class="o">:</span> <span class="s2">{}</span>,
@@ -100,16 +108,19 @@ curl https://api.balancedpayments.com/customers/CULfBB2MuTwszKMc1zKUjtK/orders <
     <span class="p">}</span>
   <span class="p">]</span>
 </pre>
-  <div class="note">* Some parts of the response have been omitted for brevity.</div>
-                </div>
-                </div>
+                  </div>
+                  <div class="sl-note">* Some parts of the response have been omitted for brevity.</div>
+                  {% endif %}
+                  <div class="{{feature.class}}"></div>
+                {% endif %}
               </div>
             </div>
-          </div>
+          {% endfor %}
         </section>
       </div>
     </div>
   </div>
 </div>
 
+<script type="text/javascript">$(balanced.carousel)</script>
 {% endblock %}

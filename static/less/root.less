@@ -550,6 +550,85 @@ section {
   }
 }
 
+.carousel {
+    .carousel-control {
+        top: 55%;
+        margin-top: 0px;
+        background: @white;
+        .opacity(100);
+        text-shadow: none;
+
+        &.right {
+            right: 0px;
+        }
+
+        &.left {
+            left: 0px;
+        }
+
+        &:hover {
+            i {
+                color: @gray5;
+            }
+        }
+
+        i {
+            font-size: 32px;
+            width: inherit;
+            color: @gray3;
+        }
+    }
+
+    .carousel-inner {
+        margin-bottom: 25px;
+
+        .item {
+            .carousel-caption {
+                .sl-sb;
+                text-align: left;
+                position: relative;
+                margin: inherit;
+                background: inherit;
+                left: inherit;
+                right: inherit;
+                bottom: inherit;
+                margin: 0px auto 5px auto;
+                width: 712px;
+                padding: 0px;
+                text-shadow: none;
+
+                p {
+                    color: @black;
+                    margin-top: 50px;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+
+            img {
+                margin: auto;
+                width: 644px;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: -40px;
+
+        .active {
+            background-color: @black;
+        }
+
+        li {
+            margin-left: 8px;
+            background-color: @gray2;
+            cursor: pointer;
+        }
+    }
+}
+
+
 @import "index.less";
 @import "about.less";
 @import "get-started.less";

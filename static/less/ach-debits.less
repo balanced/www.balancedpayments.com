@@ -278,6 +278,7 @@ body.layout-v4 {
 
                     p {
                         color: @gray5;
+                        margin: 0
                     }
 
                     h1 {
@@ -433,81 +434,6 @@ body.layout-v4 {
                 color: @gray6;
                 padding-bottom: 30px;
             }
-        }
-    }
-}
-
-.carousel {
-    .carousel-control {
-        top: 55%;
-        margin-top: 0px;
-        background: @white;
-        .opacity(100);
-        text-shadow: none;
-
-        &.right {
-            right: 0px;
-        }
-
-        &.left {
-            left: 0px;
-        }
-
-        &:hover {
-            i {
-                color: @gray5;
-            }
-        }
-
-        i {
-            font-size: 32px;
-            width: inherit;
-            color: @gray3;
-        }
-    }
-
-    .carousel-inner {
-        margin-bottom: 25px;
-
-        .item {
-            .carousel-caption {
-                position: relative;
-                margin: inherit;
-                background: inherit;
-                left: inherit;
-                right: inherit;
-                bottom: inherit;
-                margin: 55px auto 0px auto;
-                width: 712px;
-                padding: 0px;
-                text-shadow: none;
-
-                p {
-                    color: @black;
-                    text-align: center;
-                    font-size: 18px;
-                    line-height: 24px;
-                }
-            }
-
-            img {
-                margin: auto;
-                width: 644px;
-            }
-        }
-    }
-
-    .carousel-indicators {
-        bottom: -40px;
-
-        .active {
-            background-color: @black;
-        }
-
-        li {
-            margin-left: 8px;
-            background-color: @gray2;
-            cursor: pointer;
         }
     }
 }

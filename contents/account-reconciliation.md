@@ -35,8 +35,12 @@ features:
     class: account-reconciliation-bulk-crediting
   - title: Track orders from the Balanced Dashboard
     body: The Balanced Dashboard provides a complete view of each order with detailed customer and transaction information.
-    class: account-reconciliation-dashboard
+    class1: account_reconciliation_dashboard_1
+    classCaption1: "Dashboard > Payments > Orders tab"
+    class2: account_reconciliation_dashboard_2
+    classCaption2: "Dashboard > Payments > Orders > Order page"
+    name: dashboard
   - title: Implementing orders
     body: "Using orders is simple: just specify the merchant and create an order for this merchant."
-
+    name: api
 ---
