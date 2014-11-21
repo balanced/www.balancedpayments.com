@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="bg-default">
+  <section class="page-header large-bottom-margin">
+    <div class="background-image"></div>
+    <div class="title-image"></div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="summary row large-bottom-margin">
+          <div class="page-subtitle clearfix">
+            <div class="col-md-10">
+              <span>{{ page.metadata.subtitle.heading }}</span>
+            </div>
+          </div>
+          <div class="summary-text">
+            <p class="page-summary">
+              {{ page.metadata.subtitle.bodyText }}
+            </p>
+          </div>
+        </div>
+
+        <div class="intro-image large-bottom-margin">
+            <div class="sidebar">
+              {% for item in page.metadata.intro %}
+                <div class="step">
+                  <h1>{{item.step}}</h1>
+                  <h2>{{item.title}}</h2>
+                  <p>{{item.body}}</p>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="account-reconciliation-flow"></div>
+        </div>
+
+        <section>
+          <div class="content clearfix">
+            {% for feature in page.metadata.features %}
+              <div class="section-title section-title-no-width clearfix">
+                <div class="title-wrapper col-md-4">
+                  <span>{{feature.title}}</span>
+                  <p>{{feature.body}}</p>
+                </div>
+                <div class="col-md-8 pull-right">
+                  <div class="{{feature.class}}"></div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="api content clearfix">
+            <div class="section-title section-title-no-width">
+              <div class="title-wrapper col-md-4">
+                <span>{{page.metadata.api.title}}</span>
+                <p>{{page.metadata.api.body}}</p>
+                <p><a href="{{ page.metadata.api.linkUrl }}">{{page.metadata.api.linkText}}</a></p>
+              </div>
+              <div class="col-md-8 pull-right">
+                <div class="api-title">Create card</div>
+                <div class="code-sample">
+                  <div class="title">Request</div>
+  <pre>
+curl https://api.balancedpayments.com/cards <span class="se">\</span>
+    -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+    -d <span class="s2">name="Johannes Bach"</span> <span class="se">\</span>
+    -d <span class="s2">number=4342561111111118</span> <span class="se">\</span>
+    -d <span class="s2">expiration_month=05</span> <span class="se">\</span>
+    -d <span class="s2">expiration_year=2017</span>
+   </pre>
+                </div>
+                <div class="code-sample">
+                  <div class="title">Response *</div>
+                  <pre>
+<span class="p">{</span>
+    <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/cards/CC4WPZcJIMRDncSIvm9Sh5u9"</span>,
+    <span class="s2">"can_credit"</span><span class="o">:</span> <span class="s2">true</span>,
+    <span class="s2">"bank_name"</span><span class="o">:</span> <span class="s2">"WELLS FARGO BANK, N.A."</span>,
+    <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"debit"</span>,
+    <span class="s2">...</span>
+<span class="p">}</span></pre>
+  <div class="note">* Some parts of the response have been omitted for brevity.</div>
+                </div>
+
+                <div class="api-title">Pay out to card</div>
+                <div class="code-sample">
+                  <div class="title">Request</div>
+  <pre>
+curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <span class="se">\</span>
+    -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+    -d <span class="s2">amount=10000</span><span class="se"> \</span>
+    -d <span class="s2">order="/orders/OR6YQQbS9HquGwQaxvLy2a7S"</span>
+   </pre>
+                </div>
+                <div class="code-sample">
+                  <div class="title">Response *</div>
+                  <pre>
+<span class="p">{</span>
+    <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/credits/CR67ZUFRB0N34yVFJt7Ye6VL"</span>,
+    <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">"10000"</span>,
+    <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"USD"</span>,
+    <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"pending"</span>,
+    <span class="s2">"links"</span><span class="o">:</span> <span class="se">{</span>
+    <span class="s2">    "order"</span><span class="o">:</span> <span class="s2">"OR6YQQbS9HquGwQaxvLy2a7S"</span>,
+    <span class="s2">},</span>
+    <span class="s2">...</span>
+<span class="p">}</span></pre>
+  <div class="note">* Some parts of the response have been omitted for brevity.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
