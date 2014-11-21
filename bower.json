@@ -3,10 +3,9 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"handlebars": "1.3.0",
-		"bootstrap": "2.3.2",
 		"isotope": "1.5.25",
 		"jquery.inview": "protonet/jquery.inview",
-		"strapped": "0.1.79",
+		"strapped": "0.3.8",
 		"underscore": "1.4.4",
 		"momentjs": ""
 	}
