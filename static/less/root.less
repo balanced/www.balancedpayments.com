@@ -126,6 +126,7 @@ section {
     .title-wrapper {
       margin-top: @sectionTitleLineWidth + 5;
       margin-left: 0;
+      margin-bottom: 20px;
 
       span {
         .sl-16-sb;
@@ -137,7 +138,7 @@ section {
       p {
         .sl;
         color: @gray7;
-        margin-top: 20px;
+        margin-top: 15px;
         margin-right: 20px;
       }
     }
@@ -146,6 +147,12 @@ section {
       color: @gray7;
     }
   }
+}
+
+.uncontained-box {
+  border-top: 1px solid @gray2;
+  border-bottom: 1px solid @gray2;
+  padding: 15px 0;
 }
 
 .sidebar-child-menu-left {
@@ -556,4 +563,5 @@ section {
 @import "payouts.less";
 @import "card-processing.less";
 @import "security.less";
+@import "compliance.less";
 @import "responsive.less";

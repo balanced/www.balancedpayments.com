@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="span19">
+                <header class="row">
+                    <div class="span19 page-title">
+                        <h1>{{page.metadata.pageTitle}}</h1>
+                    </div>
+                    <div class="large-bottom-margin">
+                        <div class="summary-text">
+                            <p class="page-summary">{{page.metadata.subtitle.heading}}</p>
+                        </div>
+                    </div>
+                </header>
+
+                <section>
+                  {% for feature in page.metadata.features %}
+                  <div class="content clearfix">
+                    <div class="section-title section-title-no-width">
+                      <div class="title-wrapper">
+                        <span>{{feature.title}}</span>
+                        <div class="section-icon"><i class="icon-{{feature.image}} non-interactive"></i></div>
+                      </div>
+                    </div>
+                    <div>
+                      {{feature.text.markdown()}}
+                    </div>
+                  </div>
+                  {% endfor %}
+                </section>
+                <div class="uncontained-box">
+                  {{page.metadata.visitHelpCenter.markdown()}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
