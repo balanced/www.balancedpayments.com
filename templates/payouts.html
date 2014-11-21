@@ -10,16 +10,16 @@
 
   <div class="container">
     <div class="row">
-      <div class="span19">
+      <div class="col-md-12">
         <div class="summary row large-bottom-margin">
           <div class="page-subtitle clearfix">
-            <div class="span16">
+            <div class="col-md-10">
               <span>{{page.metadata.subtitle.heading}}</span>
             </div>
           </div>
 
           <div class="summary-text">
-              <p class="page-summary span13">{{page.metadata.subtitle.description}}</p>
+              <p class="page-summary col-md-8">{{page.metadata.subtitle.description}}</p>
           </div>
         </div>
 
@@ -39,14 +39,14 @@
 
           <div class="payment-schedule content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper">
                 <span>{{page.metadata.paymentSchedule.title}}</span>
                 <p>{{page.metadata.paymentSchedule.body}}</p>
                 <p><a href="{{page.metadata.paymentSchedule.linkUrl}}">{{page.metadata.paymentSchedule.linkText}}</a></p>
               </div>
-              <div class="folded-box span13 pull-right">
+              <div class="folded-box col-md-8 pull-right">
                 <div class="payouts-calendar"></div>
-                <div class="payouts-time span6">
+                <div class="payouts-time">
                   <div class="sl-sb">{{page.metadata.submissionTimes.days}}</div>
                   <div class="time">{{page.metadata.submissionTimes.time}}</div>
                   <div class="sl-sb">{{page.metadata.submissionTimes.timezone}}</div>
@@ -57,16 +57,16 @@
 
           <div class="content clearfix collecting-bank-account-info">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper">
                 <span class="sl-sb">{{page.metadata.collectingBankInfo.title}}</span>
                 <p>{{page.metadata.collectingBankInfo.body}}</p>
               </div>
 
-              <div class="folded-box span13 pull-right">
+              <div class="folded-box col-md-8 pull-right">
                 <div class="title">{{page.metadata.bankAcctInfo.title}}</div>
                 <form class="clearfix">
-                  <p class="subtitle span4">{{page.metadata.bankAcctInfo.subtitle}}</p>
-                  <div class="span6 offset4">
+                  <p class="subtitle col-md-3">{{page.metadata.bankAcctInfo.subtitle}}</p>
+                  <div class="col-md-offset-4">
                     {% for item in page.metadata.bankAcctInfo.list %}
                       <div class="control-group {{item.classes}}">
                         <label>{{item.title}}</label>
@@ -94,11 +94,11 @@
 
           <div class="content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper">
                 <span>{{page.metadata.payoutStatus.title}}</span>
                 <p>{{page.metadata.payoutStatus.body}}</p>
               </div>
-              <div class="span13 pull-right">
+              <div class="col-md-8 pull-right">
                 <div class="graphic payout-status"></div>
                 <div class="legend">
                   {% for item in page.metadata.payoutStatus.legend %}
@@ -111,11 +111,11 @@
 
           <div class="content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper">
                 <span>{{page.metadata.reversingAPayout.title}}</span>
                 <p>{{page.metadata.reversingAPayout.body}}</p>
               </div>
-              <div class="span13 pull-right">
+              <div class="col-md-8 pull-right">
                 <div class="graphic reversing-a-payout"></div>
                 <div class="legend">
                   {% for item in page.metadata.reversingAPayout.legend %}
@@ -128,12 +128,12 @@
 
           <div class="content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper">
                 <span>{{page.metadata.bankStatementDescriptor.title}}</span>
                 <p>{{page.metadata.bankStatementDescriptor.body}}</p>
                 <p><a href="{{page.metadata.bankStatementDescriptor.learnLinkUrl}}">{{page.metadata.bankStatementDescriptor.learnLink}}</a></p>
               </div>
-              <div class="bank-statement-descriptor folded-box span13 pull-right">
+              <div class="bank-statement-descriptor folded-box col-md-8 pull-right">
                 <div class="title">Bank account statement</div>
                 <div class="card-info">
                   <div>Jessica Lauren</div>
@@ -174,10 +174,12 @@
             <div class="section-title section-title-no-width">
               <div class="title-wrapper pull-left">
                 <span>{{page.metadata.payoutsPricing.title}}</span>
-                <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}} non-interactive"></i></div>
               </div>
             </div>
-            <div class="span13 pull-right">
+            <div class="col-md-3">
+              <div class="section-icon"><i class="icon-{{page.metadata.payoutsPricing.image}} non-interactive"></i></div>
+            </div>
+            <div class="col-md-8 pull-right">
               <div class="panel">
                 <div class="panel-heading main-price">
 
@@ -215,7 +217,7 @@
         <div class="bg-white">
           <div class="container">
             <div class="row">
-              <div class="span19">
+              <div class="col-md-12">
                 <section class="try-the-dashboard">
                   <div class="center">
                     <p>{{page.metadata.tryTheDashboard.body}}</p>

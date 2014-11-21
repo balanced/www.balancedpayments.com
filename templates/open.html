@@ -4,10 +4,10 @@
 <div class="bg-default">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <div class="row">
                     <header>
-                        <div class="span19 page-title">
+                        <div class="col-md-12 page-title">
                             <h1></h1>
                         </div>
                     </header>
@@ -20,7 +20,7 @@
 <section class="open feature-image" id="open-company">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <p>
                     <span class="diamond"></span>
                     {{ page.metadata.openCompany.topText }}
@@ -37,7 +37,7 @@
 <section class="innovation feature-image" id="innovation">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <p>
                     <span class="diamond"></span>
                     {{ page.metadata.innovation.topText }}
@@ -54,7 +54,7 @@
 <section class="passion feature-image" id="passion">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <p>
                     <span class="diamond"></span>
                     {{ page.metadata.passion.topText }}
@@ -71,7 +71,7 @@
 <section class="commitment feature-image" id="commitment">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <p>
                     <span class="diamond"></span>
                     {{ page.metadata.commitment.topText }}
@@ -89,18 +89,17 @@
 <div class="bg-default" id="why-open">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="why-be-an-open-company">
                     <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
+                        <div class="col-md-3 no-margin-left">
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper">
                                     <span>{{page.metadata.whyBeAnOpenCompany.title}}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left bg-white">
+                        <div class="col-md-8 no-margin-left bg-white">
                             <div class="border-top text-box">
                                 <div class="body3">{{page.metadata.whyBeAnOpenCompany.bodyHeader}}</div>
                                 <p>{{page.metadata.whyBeAnOpenCompany.body.markdown()}}</p>
@@ -112,17 +111,17 @@
         </div>
 
         <div class="row" id="challenges">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="the-challenges">
-                    <div class="span5 no-margin-left">
+                    <div class="col-md-3 no-margin-left">
                         <div class="section-title section-title-no-width">
                             <div class="title-wrapper">
                                 <span>{{page.metadata.theChallenges.title}}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="span1 spacer"></div>
-                    <div class="span13 no-margin-left bg-white">
+                    <div class="spacer"></div>
+                    <div class="col-md-8 no-margin-left bg-white">
                         <div class="border-top text-box">
                             <div class="body3">{{page.metadata.theChallenges.bodyHeader}}</div>
                             <p>{{page.metadata.theChallenges.body.markdown()}}</p>
@@ -133,36 +132,34 @@
         </div>
 
         <div class="row" id="rewards">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="the-rewards">
-                    <div class="span5 no-margin-left">
+                    <div class="no-margin-left">
                         <div class="section-title section-title-no-width">
                             <div class="title-wrapper">
                                 <span>{{page.metadata.theRewards.title}}</span>
                             </div>
-
-                            <div class="callout">
-                                    <img src="https://0.gravatar.com/avatar/31794e668233b230d25e13687925045c?d=https%3A%2F%2Fidenticons.github.com%2Fed1d2637b0856e369c5712ae7f6e5bb5.png" class="img-circle" alt="mjallday" />
-
-                                    <a href="https://github.com/balanced/balanced-dashboard/issues">
-                                        <div class="gray-box">
-                                            <div class="top-copy">
-                                                <i class="icon-github"></i>
-                                                <p>{{page.metadata.theRewards.calloutUser}}</p>
-                                                <p>{{page.metadata.theRewards.calloutSubtitle}}</p>
-                                            </div>
-                                            <div class="bottom-copy">
-                                                <p>{{page.metadata.theRewards.calloutTitle}}</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </a>
-                            </div>
                         </div>
                     </div>
-                    <div class="span1 spacer"></div>
-                    <div class="span13 no-margin-left bg-white">
-                        <div class="border-top text-box">
+                    <div class="callout col-md-3">
+                            <img src="https://0.gravatar.com/avatar/31794e668233b230d25e13687925045c?d=https%3A%2F%2Fidenticons.github.com%2Fed1d2637b0856e369c5712ae7f6e5bb5.png" class="img-circle" alt="mjallday" />
+
+                            <a href="https://github.com/balanced/balanced-dashboard/issues">
+                                <div class="gray-box">
+                                    <div class="top-copy">
+                                        <i class="icon-github"></i>
+                                        <p>{{page.metadata.theRewards.calloutUser}}</p>
+                                        <p>{{page.metadata.theRewards.calloutSubtitle}}</p>
+                                    </div>
+                                    <div class="bottom-copy">
+                                        <p>{{page.metadata.theRewards.calloutTitle}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="col-md-8 no-margin-left bg-white">
+                        <div class="text-box">
                             <div class="body3">{{page.metadata.theRewards.bodyHeader}}</div>
                             <p>{{page.metadata.theRewards.body.markdown()}}</p>
                         </div>
@@ -172,29 +169,26 @@
         </div>
 
         <div class="row" id="community">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="community">
-                    <div class="span5 no-margin-left">
-                        <div class="callout">
-                                <img src="https://0.gravatar.com/avatar/f914ba0563584642b9dfaaf56c628688?d=https%3A%2F%2Fidenticons.github.com%2F0507cd147bbb0783419092b35214be0a.png" class="img-circle" alt="dmdj03" />
+                    <div class="callout col-md-3">
+                      <img src="https://0.gravatar.com/avatar/f914ba0563584642b9dfaaf56c628688?d=https%3A%2F%2Fidenticons.github.com%2F0507cd147bbb0783419092b35214be0a.png" class="img-circle" alt="dmdj03" />
 
-                                <a href="https://github.com/balanced/balanced-dashboard/issues">
-                                    <div class="gray-box">
-                                        <div class="top-copy">
-                                            <i class="icon-github"></i>
-                                            <p>{{page.metadata.community.calloutUser}}</p>
-                                            <p>{{page.metadata.community.calloutSubtitle}}</p>
-                                        </div>
-                                        <div class="bottom-copy">
-                                            <p>{{page.metadata.community.calloutTitle}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </a>
-                        </div>
+                      <a href="https://github.com/balanced/balanced-dashboard/issues">
+                          <div class="gray-box">
+                              <div class="top-copy">
+                                  <i class="icon-github"></i>
+                                  <p>{{page.metadata.community.calloutUser}}</p>
+                                  <p>{{page.metadata.community.calloutSubtitle}}</p>
+                              </div>
+                              <div class="bottom-copy">
+                                  <p>{{page.metadata.community.calloutTitle}}</p>
+                              </div>
+                          </div>
+                      </a>
                     </div>
                     <div class="span1 spacer"></div>
-                    <div class="span13 no-margin-left bg-white">
+                    <div class="col-md-8 no-margin-left bg-white">
                         <div class="border-top text-box">
                             <div class="body3">{{page.metadata.community.bodyHeader}}</div>
                             <p>{{page.metadata.community.body.markdown()}}</p>
@@ -205,29 +199,26 @@
         </div>
 
         <div class="row" id="support">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="support">
-                    <div class="span5 no-margin-left">
-                        <div class="callout">
-                                <img src="https://2.gravatar.com/avatar/d949c1200c1b511e09d622a142070027?d=https%3A%2F%2Fidenticons.github.com%2F9951eeb199b196abb1e7f91ba1a690bc.png" class="img-circle" alt="joeyAghion" />
+                    <div class="callout col-md-3">
+                        <img src="https://2.gravatar.com/avatar/d949c1200c1b511e09d622a142070027?d=https%3A%2F%2Fidenticons.github.com%2F9951eeb199b196abb1e7f91ba1a690bc.png" class="img-circle" alt="joeyAghion" />
 
-                                <a href="http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments">
-                                    <div class="gray-box">
-                                        <div class="top-copy">
-                                            <i class="icon-quora"></i>
-                                            <p>{{page.metadata.support.calloutUser}}</p>
-                                            <p>{{page.metadata.support.calloutSubtitle}}</p>
-                                        </div>
-                                        <div class="bottom-copy">
-                                            <p>{{page.metadata.support.calloutTitle}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </a>
-                        </div>
+                        <a href="http://www.quora.com/Balanced/Why-do-you-use-Balanced-for-payments">
+                            <div class="gray-box">
+                                <div class="top-copy">
+                                    <i class="icon-quora"></i>
+                                    <p>{{page.metadata.support.calloutUser}}</p>
+                                    <p>{{page.metadata.support.calloutSubtitle}}</p>
+                                </div>
+                                <div class="bottom-copy">
+                                    <p>{{page.metadata.support.calloutTitle}}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="span1 spacer"></div>
-                    <div class="span13 no-margin-left bg-white">
+                    <div class="col-md-8 no-margin-left bg-white">
                         <div class="border-top text-box">
                             <div class="body3">{{page.metadata.support.bodyHeader}}</div>
                             <p>{{page.metadata.support.body.markdown()}}</p>
@@ -238,18 +229,18 @@
         </div>
 
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="octotales-video">
-                    <div class="span5 no-margin-left">
+                    <div class="col-md-4 no-margin-left">
                         <div class="icons-callout">
                             <div class="icons">
-                                <i class="icon-github"></i> <i class="icon-pl-sign"></i> <img src="/images/balanced_logo_3dots.png" alt="Balanced" /><i class="icon-arrow-triangle-forward"></i>
+                                <i class="icon-github"></i> <i class="icon-x"></i> <img src="/images/balanced_logo_3dots.png" alt="Balanced" /><i class="icon-arrow-triangle-forward"></i>
                             </div>
                             <div class="body3">{{page.metadata.balancedUsesGithub.body}}</div>
                         </div>
                     </div>
-                    <div class="span1 spacer"></div>
-                    <div class="span13 no-margin-left box-pad-bottom">
+                    <div class="spacer"></div>
+                    <div class="col-md-8 no-margin-left box-pad-bottom">
                         <div class="gray-bar">
                             <p>COMMUNITY CHANNELS</p>
                             <a href="http://webchat.freenode.net/?channels=balanced" class="icon"><i class="icon-irc-chat"></i> <span>IRC</span></a>
@@ -267,18 +258,17 @@
 <div class="bg-curry-yellow" id="open-source">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="open-source-contributions">
                     <div class="med-top-padding med-bottom-padding">
-                        <div class="span5 no-margin-left">
+                        <div class="col-md-3 no-margin-left">
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper">
                                     <span>{{page.metadata.openSourceContributions.title}}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
+                        <div class="col-md-8 no-margin-left">
                             <div class="border-top text-box">
                                 <div class="body3">{{page.metadata.openSourceContributions.bodyHeader}}</div>
                             </div>
@@ -294,16 +284,16 @@
     <div class="container">
         <div class="row">
             <section class="github">
-                <div class="span19 xlarge-bottom-margin">
+                <div class="col-md-12 xlarge-bottom-margin">
                     <div class="row">
-                        <div class="span6 contributors">
+                        <div class="col-md-4 contributors">
                             <div class="counts">
                                 <h1><img class="loading" src="/images/loading.gif" alt="loading" /></h1>
                                 <h3>{{page.metadata.github.contributors}}</h3>
                             </div>
                             <div class="contributors-container">
                                 <div class="row">
-                                    <div class="span4">
+                                    <div class="col-md-4">
                                         <div class="contributor contributor-template">
                                             <a href="#">
                                                 <img src="/images/balanced_logo_3dots.png" class="avatar img-circle" alt="avatar" />
@@ -314,17 +304,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="span13 bg-white repos">
+                        <div class="col-md-8 bg-white repos">
                             <div class="counts">
                                 <h1><img class="loading" src="/images/loading.gif" alt="loading" /></h1>
                                 <h3>{{page.metadata.github.publicRepos}}</h3>
                             </div>
                             <div class="head">
                                 <div class="row">
-                                    <div class="offset1 span4">
+                                    <div class="offset1 col-md-4">
                                         <p class="project">{{page.metadata.github.project}}</p>
                                     </div>
-                                    <div class="span7">
+                                    <div class="col-md-8">
                                         <p class="text-right view-all">
                                             <a href="https://github.com/balanced">{{page.metadata.github.viewAll}}</a>
                                         </p>
@@ -334,7 +324,7 @@
                             <div class="repos-container">
                                 <div class="repo repo-template">
                                     <div class="row">
-                                        <div class="offset1 span8">
+                                        <div class="col-md-offset-1 col-md-8">
                                             <p class="name"><a href="#"></a></p>
                                             <p class="description"></p>
                                         </div>
@@ -347,7 +337,7 @@
                             </div>
                             <div class="foot med-bottom-margin ">
                                 <div class="row">
-                                    <div class="offset5 span7">
+                                    <div class="offset5 col-md-8">
                                         <p class="text-right view-all">
                                             <a href="https://github.com/balanced">{{page.metadata.github.viewAll}}</a>
                                         </p>
@@ -365,7 +355,7 @@
 <div class="bg-white">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="try-the-dashboard">
                     <div class="center">
                         <p>{{page.metadata.tryTheDashboard.body}}</p>

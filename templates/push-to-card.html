@@ -9,7 +9,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="span19">
+      <div class="col-md-12">
         <div class="summary row large-bottom-margin">
           <div class="page-subtitle clearfix">
             <div class="span17">
@@ -17,7 +17,7 @@
             </div>
           </div>
 
-          <div class="signup-group span19">
+          <div class="signup-group col-md-12">
             <div class="summary-text">
               <p class="page-summary">
                 {{ page.metadata.what.bodyText }}
@@ -25,7 +25,7 @@
             </div>
 
             <div class="summary-signup clearfix">
-              <div class="send-email span5">
+              <div class="send-email col-md-6">
                 <p class="title">{{page.metadata.feedback.subscribe}}</p>
               </div>
               <div id="mc_embed_signup" class="notify-me span10 pull-right">
@@ -57,7 +57,7 @@
             <div class="card-in-hand-icon"></div>
             <section class="sidebox pull-left">
               <div class="section-title section-title-no-width">
-                <div class="title-wrapper span5">
+                <div class="title-wrapper col-md-3">
                   <span>{{page.metadata.introTextLeft.title}}</span>
                   <p>{{page.metadata.introTextLeft.body}}</p>
                 </div>
@@ -65,7 +65,7 @@
             </section>
             <section class="sidebox pull-right">
               <div class="section-title section-title-no-width">
-                <div class="title-wrapper span5">
+                <div class="title-wrapper col-md-3">
                   <span>{{page.metadata.introTextRight.title}}</span>
                   <p>{{page.metadata.introTextRight.body}}</p>
                 </div>
@@ -81,7 +81,7 @@
                 <span>{{page.metadata.benefit.title}}</span>
                 <p>{{page.metadata.benefit.body}}</p>
               </div>
-              <div class="benefit folded-box span13 pull-right">
+              <div class="benefit folded-box col-md-8 pull-right">
                 <div class="icon-card span1"></div>
                 <div class="title top-padding offset1">Debit card</div>
                 <div class="card-number offset1">
@@ -109,7 +109,7 @@
                 <p>{{page.metadata.api.body}}</p>
                 <p><a href="{{ page.metadata.api.linkUrl }}">{{page.metadata.api.linkText}}</a></p>
               </div>
-              <div class="span13 pull-right">
+              <div class="col-md-8 pull-right">
                 <div class="api-title">Create card</div>
                 <div class="code-sample">
                   <div class="title">Request</div>
@@ -170,7 +170,7 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
                 <span>{{page.metadata.pricing.title}}</span>
                 <div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
               </div>
-              <div class="span13 pull-right">
+              <div class="col-md-8 pull-right">
                 <div class="panel">
                   <div class="panel-heading main-price">
 
@@ -209,9 +209,9 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
 
             <table class="items">
               <thead>
-                <th class="span6"><span>Repo</span></th>
-                <th class="span3 num"><span>Completed tasks</span></th>
-                <th class="span3 num"><span>Remaining tasks</span></th>
+                <th class="col-md-6"><span>Repo</span></th>
+                <th class="col-md-3 num"><span>Completed tasks</span></th>
+                <th class="col-md-3 num"><span>Remaining tasks</span></th>
               </thead>
               <tbody>
                 <tr class="repo repo-template">
@@ -235,12 +235,12 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
           </div>
 
           <div class="feedback clearfix">
-            <div class="send-email span8">
+            <div class="send-email col-md-6">
               <span class="title">{{page.metadata.feedback.title}}</span>
               <p class="title">{{page.metadata.feedback.body}}</p>
               <a class="light" href='mailto:{{page.metadata.feedback.email}}'>{{page.metadata.feedback.email}}</a>
             </div>
-            <div class="notify-me span9 pull-right">
+            <div class="notify-me col-md-6 pull-right">
               <p class="title">{{page.metadata.feedback.subscribe}}</p>
 
               <div id="mc_embed_signup">
@@ -265,7 +265,7 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
             <div class="title">{{page.metadata.faqs.title}}</div>
 
               {% for faq in page.metadata.faqs.list %}
-                <div class="faq span8">
+                <div class="faq col-md-6">
                   <p class="q">{{faq.q}}</p>
                   <p class="a">{{faq.a}}</p>
                 </div>

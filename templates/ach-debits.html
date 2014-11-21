@@ -164,7 +164,7 @@
                                 {{page.metadata.paymentSchedule.body}}
                             </div>
                         </div>
-                        <div class="col-md-9 section-main-body pull-right">
+                        <div class="col-md-9 pull-right">
                             <div class="schedule-times">
                                 <div class="title">{{page.metadata.submissionTimes.title}}</div>
                                 <div class="col-md-3 box">
@@ -257,7 +257,7 @@
                             </div>
                         </div>
                         <div class="graphic payment-status pull-right"></div>
-                        <div class="legend col-md-9 section-main-body pull-right">
+                        <div class="legend col-md-9 pull-right">
                           {% for item in page.metadata.paymentStatus.legend %}
                             <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
                           {% endfor %}
@@ -282,7 +282,7 @@
                             </div>
                         </div>
                         <div class="graphic refunding-a-payment pull-right"></div>
-                        <div class="legend col-md-9 section-main-body pull-right">
+                        <div class="legend col-md-9 pull-right">
                           {% for item in page.metadata.refundingAPayment.legend %}
                             <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
                           {% endfor %}
@@ -309,7 +309,7 @@
                                 <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
                             </div>
                         </div>
-                        <div class="col-md-9 section-main-body">
+                        <div class="col-md-9">
                             <div class="graphic"></div>
                             <p class="footnote">{{page.metadata.bankStatementDescriptor.limit}}</p>
                         </div>
@@ -335,7 +335,7 @@
                                 <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910-How-are-credit-card-chargebacks-and-disputes-handled-">{{page.metadata.chargebacksDisputes.learnLink}}</a>
                             </div>
                         </div>
-                        <div class="col-md-9 section-main-body">
+                        <div class="col-md-9">
                             <div class="graphic"></div>
                         </div>
                     </div>
@@ -351,11 +351,13 @@
                             <div class="section-title section-title-full">
                                 <div class="title-wrapper pull-left">
                                     <span>{{page.metadata.achDebitsPricing.title}}</span>
-                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
                                 </div>
                             </div>
-
-                            <div class="col-md-9 section-main-body pull-right">
+                            <div class="col-md-3">
+                              <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
+                              </div>
+                            </div>
+                            <div class="col-md-9 pull-right">
                               <div class="panel">
                                 <div class="panel-heading main-price">
 

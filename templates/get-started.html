@@ -5,15 +5,15 @@
 <div class="bg-default">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <header class="row">
-                    <div class="span19 page-title">
+                    <div class="col-md-12 page-title">
                       <h1>{{page.metadata.pageTitle}}</h1>
                     </div>
                     <div class="large-bottom-margin">
                       <div class="summary-text clearfix">
-                        <p class="page-summary span13">{{page.metadata.subtitle.heading}}</p>
-                        <a class="span19" href="{{page.metadata.subtitle.linkUrl}}" target="_blank">{{page.metadata.subtitle.linkText}}</a>
+                        <p class="page-summary col-md-8">{{page.metadata.subtitle.heading}}</p>
+                        <a class="col-md-12" href="{{page.metadata.subtitle.linkUrl}}" target="_blank">{{page.metadata.subtitle.linkText}}</a>
                       </div>
                     </div>
                 </header>
@@ -27,7 +27,7 @@
                     </div>
                     <ul class="requirements clearfix">
                       {% for item in page.metadata.basicRequirements.list %}
-                      <li class="span4">
+                      <li class="col-md-3">
                         <p>{{item}}</p>
                       </li>
                       {% endfor %}

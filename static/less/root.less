@@ -118,25 +118,24 @@ h4 {
   }
 }
 
+.col-md-8 {
+  padding: 0;
+}
+
 section {
   .section-title {
     width: 270px;
+    .clearfix();
 
     .title-wrapper {
       margin-left: 0;
       width: 230px;
       border-top: 5px solid @black;
       padding-top: 5px;
+      float: left;
 
       span {
         .sl-16-sb;
-      }
-
-      p {
-        .sl;
-        color: @gray7;
-        margin-top: 20px;
-        margin-right: 20px;
       }
     }
 
@@ -145,13 +144,15 @@ section {
     }
   }
 
-  .section-description {
-    padding: 0;
+  p {
+    .sl;
+    color: @gray7;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 
-  .section-main-body {
-    width: 70%;
-    padding-right: 0;
+  .section-description {
+    padding: 0;
   }
 }
 
@@ -199,7 +200,7 @@ section {
             .sl;
             padding: 0px;
 
-            a {
+            a:not(.btn) {
                 color: @gray3;
                 cursor: pointer;
                 padding: 8px 0;
@@ -322,7 +323,6 @@ section {
   .page-summary {
     .sl-20-i;
     color: @gray6;
-    margin-left: 15px;
   }
 }
 

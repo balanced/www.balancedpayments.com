@@ -139,6 +139,6 @@ pricing:
 
 bottom:
   heading: Solve your payments problem today.
-  link: Try the dashboard
+  link: Get started
 
 ---

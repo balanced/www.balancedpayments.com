@@ -48,7 +48,7 @@
                 <div class="bod">
                     <ul class="threep">
                         {% for sub in section.subs %}
-                        <li>
+                        <li class="col-md-4">
                             <h4>{{ sub.title }}</h4>
                             {{ sub.text }}
                             {% if sub.inDevelopment %}<div class="stage">In development</div> {% endif %}
@@ -70,14 +70,14 @@
                 <div class="bod">
                     <ul class="fourp steps">
                         {% for item in page.metadata.marketplaces.tops %}
-                        <li class="{{ item.id }}">
+                        <li class="col-md-3 {{ item.id }}">
                             {{ item.text.markdown() }}
                         </li>
                         {% endfor %}
                     </ul>
                     <ul class="twop callouts">
                         {% for item in page.metadata.marketplaces.bottoms %}
-                        <li>
+                        <li class="col-md-6">
                             {{ item.text.markdown() }}
                         </li>
                         {% endfor %}

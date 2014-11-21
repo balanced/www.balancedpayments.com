@@ -9,34 +9,34 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="span19">
+			<div class="col-md-12">
 				<div class="summary row large-bottom-margin">
 					<div class="page-subtitle clearfix">
-						<div class="span16">
+						<div class="col-md-10">
 							<span>{{ page.metadata.subtitle.heading }}</span>
 						</div>
 					</div>
 
-					<div class="timeline span19 large-bottom-margin">
+					<div class="timeline col-md-12 large-bottom-margin">
 						<h3>Implementation roadmap</h3>
-						<div class="span6">
+						<div class="col-md-4">
 							<span class="step">1</span>
 							<span class="title current">{{page.metadata.timeline.title1}}</span>
 							<div class="phase">{{page.metadata.timeline.phase1}}</div>
 						</div>
-						<div class="span7">
+						<div class="col-md-4">
 							<span class="step">2</span>
 							<span class="title">{{page.metadata.timeline.title2}}</span>
 							<div class="phase">{{page.metadata.timeline.phase2}}</div>
 						</div>
-						<div class="span6">
+						<div class="col-md-4">
 							<span class="step">3</span>
 							<span class="title">{{page.metadata.timeline.title3}}</span>
 							<div class="phase">{{page.metadata.timeline.phase3}}</div>
 						</div>
 					</div>
 
-					<div class="span19">
+					<div class="col-md-12">
 						<div class="tag">
 							<div>
 								<span class="title">{{page.metadata.launch.title}}</span>
@@ -45,7 +45,7 @@
 								<span class="month">{{page.metadata.launch.month}}</span>
 							</div>
 						</div>
-						<div class="summary-text span17 pull-right">
+						<div class="summary-text col-md-10 pull-right">
 							<p class="page-summary">
 								{{ page.metadata.what.bodyText }}
 							</p>
@@ -73,7 +73,7 @@
 					</div>
 					<div class="currency-list clearfix">
 						{% for currency in page.metadata.currencies.list %}
-							<div class="span4">
+							<div class="col-md-3">
 								<div class="symbol">{{currency.symbol}}</div>
 								<div class="name">{{currency.name}} {% if currency.amex %}{% else %}*{% endif %}</div>
 							</div>
@@ -86,17 +86,17 @@
 				<section>
 					<div class="content clearfix">
 						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span6">
+							<div class="title-wrapper">
 								<span>{{page.metadata.benefit1.title}}</span>
 								<p>{{page.metadata.benefit1.body}}</p>
 							</div>
-							<div class="benefit1 folded-box span13 pull-right">
+							<div class="benefit1 folded-box col-md-8 pull-right">
 								<div class="row">
-									<div class="handbag span3"></div>
-									<div class="span7 pull-right">
+									<div class="handbag col-md-3"></div>
+									<div class="col-md-8 pull-right">
 										<div class="title top-padding">Checkout</div>
 										<div class="local-currency">£ 120.00</div>
-										<div class="icon-card span2"></div>
+										<div class="icon-card col-md-2"></div>
 										<div class="card-info offset1">
 											<div>Jessica Lauren</div>
 											<div>xxxx xxxx xxxx 4896</div>
@@ -108,11 +108,11 @@
 					</div>
 					<div class="content clearfix">
 						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span6">
+							<div class="title-wrapper">
 								<span>{{page.metadata.benefit2.title}}</span>
 								<p>{{page.metadata.benefit2.body}}</p>
 							</div>
-							<div class="benefit2 folded-box span13 pull-right">
+							<div class="benefit2 folded-box col-md-8 pull-right">
 								<div class="title">Credit card statement</div>
 								<div class="card-info">
 									<div>Jessica Lauren</div>
@@ -149,11 +149,11 @@
 					</div>
 					<div class="content clearfix">
 						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span6">
+							<div class="title-wrapper">
 								<span>{{page.metadata.benefit3.title}}</span>
 								<p>{{page.metadata.benefit3.body}}</p>
 							</div>
-							<div class="code-sample span13 pull-right">
+							<div class="code-sample col-md-8 pull-right">
 								<div class="title">Example</div>
 								<pre>
 > balanced.exchangeRate(10000, <span class="s2">"USD"</span>, <span class="s2">"EUR"</span>)
@@ -163,11 +163,11 @@
 					</div>
 					<div class="content clearfix">
 						<div class="section-title section-title-no-width">
-							<div class="title-wrapper span6">
+							<div class="title-wrapper">
 								<span>{{page.metadata.api.title}}</span>
 								<p>{{page.metadata.api.body}}</p>
 							</div>
-							<div class="code-sample span13 pull-right">
+							<div class="code-sample col-md-8 pull-right">
 								<div class="title">Request</div>
 <pre>
 curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <span class="se">\</span>
@@ -178,7 +178,7 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
  -d <span class="s2">"order=/orders/OR6YQQbS9HquGwQaxvLy2a7S"</span>
  </pre>
 							</div>
-							<div class="code-sample span13 pull-right">
+							<div class="code-sample col-md-8 pull-right">
 								<div class="title">Response *</div>
 								<pre>
 <span class="p">{</span>
@@ -204,11 +204,11 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
 
 					<div class="content clearfix">
 						<div class="pricing section-title section-title-no-width">
-							<div class="title-wrapper span6">
+							<div class="title-wrapper">
 								<span>{{page.metadata.pricing.title}}</span>
 								<div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
 							</div>
-              <div class="span13 pull-right">
+              <div class="col-md-8 pull-right">
                 <div class="panel">
                   <div class="panel-heading main-price">
                     <span class="percent">{{page.metadata.pricing.percent}}</span>
@@ -221,12 +221,12 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
 					</div>
 
 					<div class="feedback clearfix">
-						<div class="send-email span8">
+						<div class="send-email col-md-6">
 							<span class="title">{{page.metadata.feedback.title}}</span>
 							<p class="title">{{page.metadata.feedback.body}}</p>
 							<a class="light" href='mailto:{{page.metadata.feedback.email}}'>{{page.metadata.feedback.email}}</a>
 						</div>
-						<div class="notify-me span8 pull-right">
+						<div class="notify-me col-md-6 pull-right">
 							<p class="title">{{page.metadata.feedback.subscribe}}</p>
 
 							<div id="mc_embed_signup">
@@ -251,7 +251,7 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
 						<div class="title">{{page.metadata.faqs.title}}</div>
 
 							{% for faq in page.metadata.faqs.list %}
-								<div class="faq span8">
+								<div class="faq col-md-6">
 									<p class="q">{{faq.q}}</p>
 									<p class="a">{{faq.a}}</p>
 								</div>
