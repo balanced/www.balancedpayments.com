@@ -189,66 +189,71 @@
 			var completedContributorRequests = 0;
 
 			var onCompleteRepos = function(response) {
-				if (response.status === 200) {
-					var repos = response.responseJSON;
-					repos = repos.sort(function(a, b) {
-						return b.watchers_count - a.watchers_count;
-					});
+				var repos = response;
+				repos = repos.sort(function(a, b) {
+					return b.watchers_count - a.watchers_count;
+				});
 
-					for (var i = 0, l = repos.length; i < l; i++) {
-						// Don't include forks
-						if (repos[i].fork) {
-							continue;
-						}
-
-						totalRepos++;
-
-						// Fire off ajax request to get contributors
-						ajaxOptions.complete = onCompleteContributors;
-						jQuery.ajax(repos[i].contributors_url, ajaxOptions);
-
-						var $template = $("section.github .repos .repos-container .repo-template").clone().removeClass("repo-template");
-
-						if (i === 0) {
-							$template.addClass("first");
-						}
-
-						$template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
-						$template.find("p.description").html(repos[i].description);
-						$template.find("p.lang").html(repos[i].language);
-						$template.find("p.stars span").html(repos[i].watchers_count);
-
-						$("section.github .repos .repos-container").append($template);
+				for (var i = 0, l = repos.length; i < l; i++) {
+					// Don't include forks
+					if (repos[i].fork) {
+						continue;
 					}
 
-					$("section.github .repos .loading").css("display", "none");
-					$("section.github .repos .counts h1").html(totalRepos);
+					totalRepos++;
+
+					// Fire off ajax request to get contributors
+					$.ajax({
+						url: repos[i].contributors_url + "?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0",
+						dataType: 'json',
+						crossDomain: true,
+						timeout: 5000,
+						cache: false,
+						data: {
+							per_page: 100
+						},
+						success: onCompleteContributors
+					});
+
+					var $template = $("section.github .repos .repos-container .repo-template").clone().removeClass("repo-template");
+
+					if (i === 0) {
+						$template.addClass("first");
+					}
+
+					$template.find("p.name a").attr("href", repos[i].html_url).html(repos[i].name);
+					$template.find("p.description").html(repos[i].description);
+					$template.find("p.lang").html(repos[i].language);
+					$template.find("p.stars span").html(repos[i].watchers_count);
+
+					$("section.github .repos .repos-container").append($template);
 				}
+
+				$("section.github .repos .loading").css("display", "none");
+				$("section.github .repos .counts h1").html(totalRepos);
 			};
 
 			var onCompleteContributors = function(response) {
 				completedContributorRequests++;
 
-				if (response.status === 200) {
-					var contributors = response.responseJSON;
+				var contributors = response;
 
-					for (var i = 0; i < contributors.length; i++) {
-						// Don't add the same user more than once
-						if ($("section.github .contributors .contributors-container #" + contributors[i].id).length === 0) {
-							var userId = contributors[i].id;
-							var login = contributors[i].login;
-							var url = contributors[i].html_url;
-							var avatarUrl = contributors[i].avatar_url;
+				for (var i = 0; i < contributors.length; i++) {
+					// Don't add the same user more than once
+					if ($("section.github .contributors .contributors-container #" + contributors[i].id).length === 0) {
+						var userId = contributors[i].id;
+						var login = contributors[i].login;
+						var url = contributors[i].html_url;
+						var avatarUrl = contributors[i].avatar_url;
 
-							var $template = $("section.github .contributors .contributors-container .contributor-template").clone().removeClass("contributor-template");
+						var $template = $("section.github .contributors .contributors-container .contributor-template").clone().removeClass("contributor-template");
 
-							$template.attr("id", userId);
-							$template.find("a").attr("href", url);
-							$template.find("img.avatar").attr("src", avatarUrl).attr("alt", login);
-							$template.find("p.user").html(login);
+						$template.attr("id", userId);
+						$template.find("a").attr("href", url);
+						$template.find("img.avatar").attr("src", avatarUrl).attr("alt", login);
+						$template.find("p.user").html(login);
 
-							$("section.github .contributors .contributors-container").append($template);
-						}
+						$("section.github .contributors .contributors-container").append($template);
 					}
 				}
 
@@ -259,18 +264,17 @@
 				}
 			};
 
-			var ajaxOptions = {
-				crossDomain: true,
+			$.ajax({
+				url: "https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0",
 				dataType: 'json',
+				crossDomain: true,
 				timeout: 5000,
 				cache: false,
 				data: {
 					per_page: 100
-				}
-			};
-
-			ajaxOptions.complete = onCompleteRepos;
-			jQuery.ajax("https://api.github.com/orgs/balanced/repos?client_id=bda58293b5d9ede74ab7&client_secret=62cfb784097a180bcb5169d9528a23538340ecf0", ajaxOptions);
+				},
+				success: onCompleteRepos
+			});
 		},
 		payouts: function() {
 			animateInView(".folded-box", "slide-up");
