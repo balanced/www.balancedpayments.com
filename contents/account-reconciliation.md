@@ -25,8 +25,9 @@ features:
     body: Manually reconciling your accounting is a time-consuming task. Orders allow for a one-to-one mapping of funds so you can easily pinpoint corresponding debits and credits.
     class: account-reconciliation-linking
   - title: Identify outstanding balances
-    body: Keep track of unpaid merchants. Each order maintains a separate balance, helping you identify which orders need to be paid out.
-    class: account-reconciliation-balances    
+    body: Keep track of funds owed to merchants. Orders enable you to monitor a merchant's aging report to see how long orders for each merchant have been outstanding.
+    class: account-reconciliation-balances
+    name: aging-report
   - title: Prevent losses
     body: |
       Since each order maintains a separate balance, you cannot use unreferenced funds to issue credits.

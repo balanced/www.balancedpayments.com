@@ -67,11 +67,6 @@
     width: 570px;
   }
 
-  .account-reconciliation-balances {
-    background-image: url(/images/account-reconciliation/account_reconciliation_balances.png);
-    height: 122px;
-  }
-
   .account-reconciliation-linking {
     background-image: url(/images/account-reconciliation/account_reconciliation_linking.png);
     height: 190px;
@@ -87,6 +82,44 @@
     background-size: contain;
     width: 570px;
     height: 160px;
+  }
+
+  .aging-report {
+    margin-top: 0;
+
+    .card-info {
+      .sl;
+      padding: 10px 0 20px;
+    }
+
+    .amount {
+      .sl-sb;
+      line-height: 20px;
+      color: @pineGreen80;
+      text-align: right;
+    }
+
+    .amount-header {
+      color: @white;
+      text-align: right;
+    }
+
+    .sl-note {
+      padding-top: 10px;
+    }
+
+    table {
+      th {
+        .sl-sm-sb;
+        color: @white;
+        background-color: @burntOrange100;
+      }
+      td, td.amount {
+        .sl-sm-sb;
+        background-color: @burntOrange10;
+      }
+      .amount
+    }
   }
 
   .code-sample {

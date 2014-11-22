@@ -276,6 +276,9 @@
 				success: onCompleteRepos
 			});
 		},
+		accountReconciliation: function() {
+			animateInView(".folded-box", "slide-up");
+		},
 		payouts: function() {
 			animateInView(".folded-box", "slide-up");
 

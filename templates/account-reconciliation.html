@@ -69,8 +69,7 @@
                           <li data-target="#orders-in-dashboard" data-slide-to="1"></li>
                       </ol>
                   </div>
-                {% else %}
-                  {% if feature.name == "api" %}
+                {% else %} {% if feature.name == "api" %}
                   <div class="code-sample">
                     <div class="title">Request</div>
 <pre>
@@ -110,6 +109,56 @@ curl https://api.balancedpayments.com/customers/CULfBB2MuTwszKMc1zKUjtK/orders <
 </pre>
                   </div>
                   <div class="sl-note">* Some parts of the response have been omitted for brevity.</div>
+                  {% else %} {% if feature.name == "aging-report" %}
+                    <div class="aging-report folded-box pull-right">
+                      <div class="title">Merchant aging report</div>
+                      <div class="card-info">
+                        <div>Outstanding order balances</div>
+                      </div>
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-4">Merchant</th>
+                            <th class="col-md-2">1 week</th>
+                            <th class="col-md-2">2 week</th>
+                            <th class="col-md-2">3 week</th>
+                            <th class="amount-header">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>Damon Chin</td>
+                          <td class="amount">$100.00</td>
+                          <td class="amount">$300.00</td>
+                          <td class="amount">$600.00</td>
+                          <td class="amount">$1,000.00</td>
+                        </tr>
+                        <tr>
+                          <td>Kyungmin Kim</td>
+                          <td class="amount">$150.00</td>
+                          <td class="amount">$250.00</td>
+                          <td class="amount">$900.00</td>
+                          <td class="amount">$1,300.00</td>
+                        </tr>
+                        <tr>
+                          <td>Tim Nguyen</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$450.00</td>
+                          <td class="amount">$850.00</td>
+                        </tr>
+                        <tr>
+                          <td>Carlos Rodriguez</td>
+                          <td class="amount">$100.00</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$250.00</td>
+                          <td class="amount">$550.00</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <p class="sl-note">{{page.metadata.bankStatementDescriptor.limit}}</p>
+                    </div>
+                    {% endif %}
                   {% endif %}
                   <div class="img {{feature.class}}"></div>
                 {% endif %}
@@ -140,5 +189,5 @@ curl https://api.balancedpayments.com/customers/CULfBB2MuTwszKMc1zKUjtK/orders <
     </div>
 </div>
 
-<script type="text/javascript">$(balanced.carousel)</script>
+<script type="text/javascript">$(balanced.accountReconciliation)</script>
 {% endblock %}
