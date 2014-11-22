@@ -7,7 +7,7 @@ body_class: account-reconciliation
 
 subtitle:
   heading: Keep track of funds from buyer to merchant with orders.
-  bodyText: Whether you&#8217re a goods/services marketplace or a crodfunding/donation platform, Balanced enables you to link related transactions and maintain a separate order balance to help reconcile your accounting.
+  bodyText: Whether you&#8217re a goods/services marketplace or a crowdfunding/donation platform, Balanced enables you to link related transactions and maintain a separate order balance to help reconcile your accounting.
 
 intro:
   - step: 1
@@ -15,7 +15,7 @@ intro:
     body: Create an order by debiting the buyer and assigning the funds to the appropriate merchant.
   - step: 2
     title: Hold funds
-    body: Funds are held in an order balance, separate from all other orders. Funds must be paid to merchants within 30 days of the change.
+    body: Funds are held in an order balance, separate from all other orders. Funds must be paid to merchants within 30 days of the charge.
   - step: 3
     title: Settle funds to the merchant
     body: Pay the merchant and collect your fee. Only one merchant is allowed per order.
