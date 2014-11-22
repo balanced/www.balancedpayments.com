@@ -6,7 +6,7 @@ pageTitle: Account Reconciliation
 body_class: account-reconciliation
 
 subtitle:
-  heading: Keep track of funds from buyer to merchant with orders.
+  heading: Use orders to reconcile incoming funds from the buyers with outgoing funds to the merchants.
   bodyText: Whether you&#8217re a goods/services marketplace or a crowdfunding/donation platform, Balanced enables you to link related transactions and maintain a separate order balance to help reconcile your accounting.
 
 intro:
@@ -32,7 +32,7 @@ features:
       Since each order maintains a separate balance, you cannot use unreferenced funds to issue credits.
       
       Orders also offer additional safeguards for disputes. Once a dispute is filed, orders prevent you from unknowingly refunding the buyer as the dispute process is pending.
-    
+
     class: account-reconciliation-losses
   - title: Combine payouts from multiple orders
     body: Balanced allows you to issue one payout to a merchant with multiple orders waiting to be settled. Each customer has an associated sweep account which can carry a stored balance. Simply credit the funds from the various orders into your merchant's sweep account. Then issue one payout from the sweep account to your merchant's bank account.
