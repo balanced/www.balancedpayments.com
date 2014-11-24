@@ -12,7 +12,7 @@
       <div class="col-md-12">
         <div class="summary row large-bottom-margin">
           <div class="page-subtitle clearfix">
-            <div class="span17">
+            <div class="col-md-12">
               <span>{{ page.metadata.subtitle.heading }}</span>
             </div>
           </div>
@@ -28,7 +28,7 @@
               <div class="send-email col-md-6">
                 <p class="title">{{page.metadata.feedback.subscribe}}</p>
               </div>
-              <div id="mc_embed_signup" class="notify-me span10 pull-right">
+              <div id="mc_embed_signup" class="notify-me col-md-6 pull-right">
                 <form action="http://balancedpayments.us2.list-manage.com/subscribe/post?u=30382d347d3689814ca424c89&amp;id=26ef23e4ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-id="26ef23e4ef" novalidate>
                   <div class="mc-field-group">
                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
@@ -77,12 +77,12 @@
         <section>
           <div class="content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper col-md-3">
                 <span>{{page.metadata.benefit.title}}</span>
                 <p>{{page.metadata.benefit.body}}</p>
               </div>
               <div class="benefit folded-box col-md-8 pull-right">
-                <div class="icon-card span1"></div>
+                <div class="icon-card non-interactive"></div>
                 <div class="title top-padding offset1">Debit card</div>
                 <div class="card-number offset1">
                   {{page.metadata.benefit.cardNumber}}
@@ -104,7 +104,7 @@
 
           <div class="api content clearfix">
             <div class="section-title section-title-no-width">
-              <div class="title-wrapper span6">
+              <div class="title-wrapper col-md-3">
                 <span>{{page.metadata.api.title}}</span>
                 <p>{{page.metadata.api.body}}</p>
                 <p><a href="{{ page.metadata.api.linkUrl }}">{{page.metadata.api.linkText}}</a></p>
@@ -262,7 +262,7 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
           </div>
 
           <div class="content faqs clearfix">
-            <div class="title">{{page.metadata.faqs.title}}</div>
+            <div class="title col-md-12">{{page.metadata.faqs.title}}</div>
 
               {% for faq in page.metadata.faqs.list %}
                 <div class="faq col-md-6">
@@ -276,6 +276,8 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
     </div>
   </div>
 </div>
+
+{%- include 'partials/get-started-footer.html' -%}
 
 <script src="/static/js/mailchimp.min.js"></script>
 <script type="text/javascript">$(balanced.pushToCard)</script>

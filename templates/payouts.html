@@ -19,7 +19,7 @@
           </div>
 
           <div class="summary-text">
-              <p class="page-summary col-md-8">{{page.metadata.subtitle.description}}</p>
+              <p class="page-summary col-md-10">{{page.metadata.subtitle.description}}</p>
           </div>
         </div>
 
@@ -214,23 +214,12 @@
             </div>
           </div>
         </section>
-        <div class="bg-white">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <section class="try-the-dashboard">
-                  <div class="center">
-                    <p>{{page.metadata.tryTheDashboard.body}}</p>
-                    <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
+
+{%- include 'partials/get-started-footer.html' -%}
+
 <script type="text/javascript">$(balanced.payouts)</script>
 {% endblock %}

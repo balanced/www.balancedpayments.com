@@ -123,7 +123,4 @@ achDebitsPricing:
     - name: Chargeback
       price: $15
 
-tryTheDashboard:
-  body: Solve your payments problem today.
-  button: Get started
 ---

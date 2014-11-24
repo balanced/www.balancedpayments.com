@@ -52,8 +52,4 @@ features:
 contactUs: |
   If you have any questions, send an email to <a mailto="support+orders@balancedpayments.com">support+orders@balancedpayments.com</a>
 
-tryTheDashboard:
-  body: Solve your payments problem today.
-  button: Get started
-  
 ---

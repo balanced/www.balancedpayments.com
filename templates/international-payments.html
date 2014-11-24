@@ -93,11 +93,11 @@
 							<div class="benefit1 folded-box col-md-8 pull-right">
 								<div class="row">
 									<div class="handbag col-md-3"></div>
-									<div class="col-md-8 pull-right">
+									<div class="col-md-offset-1 col-md-7 pull-right">
 										<div class="title top-padding">Checkout</div>
 										<div class="local-currency">£ 120.00</div>
 										<div class="icon-card col-md-2"></div>
-										<div class="card-info offset1">
+										<div class="card-info col-md-offset-3">
 											<div>Jessica Lauren</div>
 											<div>xxxx xxxx xxxx 4896</div>
 										</div>
@@ -262,6 +262,8 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
 		</div>
 	</div>
 </div>
+
+{%- include 'partials/get-started-footer.html' -%}
 
 <script src="/static/js/mailchimp.min.js"></script>
 <script type="text/javascript">$(balanced.international)</script>
