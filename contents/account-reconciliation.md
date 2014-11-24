@@ -33,10 +33,9 @@ features:
       Since each order maintains a separate balance, you cannot use unreferenced funds to issue credits.
       
       Orders also offer additional safeguards for disputes. Once a dispute is filed, the refund function will be disabled to prevent you from unknowingly refunding the buyer as the dispute process is pending.
-
     class: account-reconciliation-losses
   - title: Combine payouts from multiple orders
-    body: Balanced allows you to issue one payout to a merchant with multiple orders waiting to be settled. Each customer has an associated sweep account which can carry a stored balance. Simply credit the funds from the various orders into your merchant's sweep account. Then issue one payout from the sweep account to your merchant's bank account.
+    body: Balanced allows you to issue one payout to a merchant with multiple orders waiting to be settled. Each customer has a payable account which can carry a stored balance. Simply credit the funds from the various orders into your merchant’s balance. Then issue one payout from the balance to your merchant’s bank account.
     class: account-reconciliation-bulk-crediting
   - title: Track orders from the Balanced Dashboard
     body: The Balanced Dashboard provides a complete view of each order with detailed customer and transaction information.
