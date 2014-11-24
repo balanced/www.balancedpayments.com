@@ -50,7 +50,7 @@ features:
     name: api
 
 contactUs: |
-  If you have any questions, send an email to <a mailto="orders+support@balancedpayments.com">orders+support@balancedpayments.com</a>
+  If you have any questions, send an email to <a mailto="support+orders@balancedpayments.com">support+orders@balancedpayments.com</a>
 
 tryTheDashboard:
   body: Solve your payments problem today.
