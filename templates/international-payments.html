@@ -202,22 +202,24 @@ curl https://api.balancedpayments.com/cards/CC20W70VHvk9Q3XA7qe1zYuk/debits <spa
 						</div>
 					</div>
 
-					<div class="content clearfix">
-						<div class="pricing section-title section-title-no-width">
+					<div class="pricing content clearfix">
+						<div class="section-title section-title-no-width">
 							<div class="title-wrapper">
 								<span>{{page.metadata.pricing.title}}</span>
-								<div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
 							</div>
-              <div class="col-md-8 pull-right">
-                <div class="panel">
-                  <div class="panel-heading main-price">
-                    <span class="percent">{{page.metadata.pricing.percent}}</span>
-                    <span class="per">per transaction (on top of card processing rate)</span>
-                  </div>
-                </div>
-                <a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a>
-              </div>
 						</div>
+            <div class="col-md-3">
+              <div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
+            </div>
+            <div class="col-md-8 pull-right">
+              <div class="panel">
+                <div class="panel-heading main-price">
+                  <span class="percent">{{page.metadata.pricing.percent}}</span>
+                  <span class="per">per transaction (on top of card processing rate)</span>
+                </div>
+              </div>
+              <a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a>
+            </div>
 					</div>
 
 					<div class="feedback clearfix">

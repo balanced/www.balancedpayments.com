@@ -164,34 +164,36 @@ curl https://api.balancedpayments.com/cards/CC4KpTthEazr1FUDa9DAj5d3/credits <sp
             </div>
           </div>
 
-          <div class="content clearfix">
-            <div class="pricing section-title section-title-no-width">
+          <div class="pricing content clearfix">
+            <div class="section-title section-title-no-width">
               <div class="title-wrapper">
                 <span>{{page.metadata.pricing.title}}</span>
-                <div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
               </div>
-              <div class="col-md-8 pull-right">
-                <div class="panel">
-                  <div class="panel-heading main-price">
+            </div>
+            <div class="col-md-3">
+              <div class="section-icon"><i class="icon-{{page.metadata.pricing.image}} non-interactive"></i></div>
+            </div>
+            <div class="col-md-8 pull-right">
+              <div class="panel">
+                <div class="panel-heading main-price">
 
-                    {% if page.metadata.pricing.percent %}
-                    <span class="percent">{{page.metadata.pricing.percent}}</span>
-                    <span class="plus">+</span>
-                    {% endif %}
+                  {% if page.metadata.pricing.percent %}
+                  <span class="percent">{{page.metadata.pricing.percent}}</span>
+                  <span class="plus">+</span>
+                  {% endif %}
 
-                    {% if page.metadata.pricing.cent %}
-                    <span class="cent">{{page.metadata.pricing.cent}}</span>
-                    {% endif %}
+                  {% if page.metadata.pricing.cent %}
+                  <span class="cent">{{page.metadata.pricing.cent}}</span>
+                  {% endif %}
 
-                    {% if page.metadata.pricing.dollar %}
-                    <span class="dollar">{{page.metadata.pricing.dollar}}</span>
-                    {% endif %}
+                  {% if page.metadata.pricing.dollar %}
+                  <span class="dollar">{{page.metadata.pricing.dollar}}</span>
+                  {% endif %}
 
-                    <span class="per">per transaction</span>
-                  </div>
+                  <span class="per">per transaction</span>
                 </div>
-                <a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a>
               </div>
+              <a href="{{ page.metadata.pricing.linkUrl }}">{{page.metadata.pricing.linkText}}</a>
             </div>
           </div>
 
