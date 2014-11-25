@@ -5,47 +5,51 @@
 <div class="bg-default">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <header class="row">
-                    <div class="span19 page-title">
+                    <div class="col-md-12 page-title">
                         <h1>{{page.metadata.pageTitle}}</h1>
                     </div>
                 </header>
 
                 <div class="row large-bottom-margin">
                     <div class="page-subtitle">
-                        <div class="span19">
+                        <div class="col-md-12">
                             <span class="">{{page.metadata.subtitle.heading}}</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="row span19" id="security-reporting">
-                    <section class="security">
+                <div class="col-md-12" id="security-reporting">
+                    <section>
                         <div class="content clearfix">
                             <div class="section-title section-title-no-width">
-                                <div class="title-wrapper span12">
+                                <div class="title-wrapper">
                                     <span>{{page.metadata.ReportingSecurityIssues.title}}</span>
-                                    <div>{{page.metadata.ReportingSecurityIssues.body}}</div>
                                 </div>
-                                <div class="span6 pull-right">
-                                    <div class="box red">
-                                        <div class="title">{{page.metadata.ReportingSecurityIssues.boxTitle}}</div>
-                                        <div class="body">{{page.metadata.ReportingSecurityIssues.boxBody}}</div>
-                                    </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div>{{page.metadata.ReportingSecurityIssues.body}}</div>
+                            </div>
+                            <div class="col-md-4 pull-right">
+                                <div class="box red">
+                                    <div class="title">{{page.metadata.ReportingSecurityIssues.boxTitle}}</div>
+                                    <div class="body">{{page.metadata.ReportingSecurityIssues.boxBody}}</div>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
-                <div class="row span19" id="security-disclosure">
-                    <section class="security">
-                        <div class="content">
+                <div class="col-md-12" id="security-disclosure">
+                    <section>
+                        <div class="content med-top-padding">
                             <div class="section-title section-title-no-width">
                                 <div class="title-wrapper">
                                     <span>{{page.metadata.Disclosure.title}}</span>
-                                    {{page.metadata.Disclosure.body}}
                                 </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div>{{page.metadata.Disclosure.body}}</div>
                             </div>
                         </div>
                     </section>

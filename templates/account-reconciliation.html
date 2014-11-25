@@ -1,0 +1,183 @@
+{% extends 'layout.html' %}
+
+{% set scripts = ['//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js'] %}
+
+{% block body %}
+<div class="bg-default">
+  <section class="page-header large-bottom-margin">
+    <div class="background-image"></div>
+    <div class="title-image"></div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="summary row large-bottom-margin">
+          <div class="page-subtitle clearfix">
+            <div class="col-md-12">
+              <span>{{ page.metadata.subtitle.heading }}</span>
+            </div>
+          </div>
+          <div class="summary-text col-md-12">
+            <p class="page-summary">
+              {{ page.metadata.subtitle.bodyText }}
+            </p>
+          </div>
+        </div>
+
+        <div class="intro-image large-bottom-margin">
+            <div class="sidebar">
+              {% for item in page.metadata.intro %}
+                <div class="step">
+                  <h1>{{item.step}}</h1>
+                  <h2>{{item.title}}</h2>
+                  <p>{{item.body}}</p>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="account-reconciliation-flow"></div>
+        </div>
+
+        <section>
+          {% for feature in page.metadata.features %}
+            <div class="content clearfix">
+              <div class="section-title section-title-no-width clearfix">
+                <div class="title-wrapper">
+                  <span>{{feature.title}}</span>
+                </div>
+              </div>
+              <div class="col-md-4 no-margin-left">
+                  <div class="section-side-body">
+                    {{feature.body.markdown()}}
+                    {% if feature.inDevelopment %}
+                      <div class="stage">In development</div>
+                    {% endif %}
+                  </div>
+              </div>
+              <div class="col-md-8 pull-right">
+                {% if feature.name == "dashboard" %}
+                  <div id="orders-in-dashboard" class="carousel slide">
+                      <div class="carousel-inner">
+                          <div class="item active" data-step="1">
+                              <div class="carousel-caption">{{feature.classCaption1}}</div>
+                              <img src="/images/account-reconciliation/{{feature.class1}}.png" />
+                          </div>
+                          <div class="item" data-step="2">
+                              <div class="carousel-caption">{{feature.classCaption2}}</div>
+                              <img src="/images/account-reconciliation/{{feature.class2}}.png" />
+                          </div>
+                      </div>
+                      <ol class="carousel-indicators">
+                          <li data-target="#orders-in-dashboard" data-slide-to="0" class="active"></li>
+                          <li data-target="#orders-in-dashboard" data-slide-to="1"></li>
+                      </ol>
+                  </div>
+                {% else %} {% if feature.name == "api" %}
+                  <div class="code-sample">
+                    <div class="title">Request</div>
+<pre>
+curl https://api.balancedpayments.com/customers/CULfBB2MuTwszKMc1zKUjtK/orders <span class="se">\</span>
+    -u ak-test-2qEM0Znvd8LIVbZ01LbFHvHgab4fkNr3c: <span class="se">\</span>
+    -d <span class="s2">description="Order #12341234"</span> <span class="se">\</span>
+</pre>
+                  </div>
+                  <div class="code-sample">
+                    <div class="title">Response *</div>
+<pre>
+<span class="p">{</span>
+  <span class="s2">...</span>
+  <span class="p">"orders"</span><span class="o">:</span> <span class="s2">[</span>
+    <span class="p">{</span>
+      <span class="s2">"amount"</span><span class="o">:</span> <span class="s2">0</span>,
+      <span class="s2">"amount_escrowed"</span><span class="o">:</span> <span class="s2">0</span>,
+      <span class="s2">"currency"</span><span class="o">:</span> <span class="s2">"USD"</span>,
+      <span class="s2">"delivery_address"</span><span class="o">:</span> <span class="s2">{</span>
+        <span class="s2">"city"</span><span class="o">:</span> <span class="s2">null</span>,
+        <span class="s2">"country_code"</span><span class="o">:</span> <span class="s2">null</span>,
+        <span class="s2">"line1"</span><span class="o">:</span> <span class="s2">null</span>,
+        <span class="s2">"line2"</span><span class="o">:</span> <span class="s2">null</span>,
+        <span class="s2">"postal_code"</span><span class="o">:</span> <span class="s2">null</span>,
+        <span class="s2">"state"</span><span class="o">:</span> <span class="s2">null</span>,
+      <span class="p">}</span>,
+      <span class="s2">"description"</span><span class="o">:</span> <span class="s2">"Order #12341234"</span>,
+      <span class="s2">"href"</span><span class="o">:</span> <span class="s2">"/orders/OR5RmqlMTjHm1fVkdf6l0RNA"</span>,
+      <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"OR5RmqlMTjHm1fVkdf6l0RNA"</span>,
+      <span class="s2">"links"</span><span class="o">:</span> <span class="s2">{</span>
+        <span class="s2">"merchant"</span><span class="o">:</span> <span class="s2">"CULfBB2MuTwszKMc1zKUjtK"</span>,
+      <span class="p">},</span>
+      <span class="s2">"meta"</span><span class="o">:</span> <span class="s2">{}</span>,
+      <span class="p">...</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+</pre>
+                  </div>
+                  <div class="sl-note">* Some parts of the response have been omitted for brevity.</div>
+                  {% else %} {% if feature.name == "aging-report" %}
+                    <div class="aging-report folded-box pull-right">
+                      <div class="title">Merchant aging report</div>
+                      <div class="card-info">
+                        <div>Outstanding order balances</div>
+                      </div>
+                      <table class="table table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-4">Merchant</th>
+                            <th class="amount col-md-2">1 week</th>
+                            <th class="amount col-md-2">2 weeks</th>
+                            <th class="amount col-md-2">3 weeks</th>
+                            <th class="amount col-md-2">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>Damon Chin</td>
+                          <td class="amount">$100.00</td>
+                          <td class="amount">$300.00</td>
+                          <td class="amount">$600.00</td>
+                          <td class="amount">$1,000.00</td>
+                        </tr>
+                        <tr>
+                          <td>Kyungmin Kim</td>
+                          <td class="amount">$150.00</td>
+                          <td class="amount">$250.00</td>
+                          <td class="amount">$900.00</td>
+                          <td class="amount">$1,300.00</td>
+                        </tr>
+                        <tr>
+                          <td>Tim Nguyen</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$450.00</td>
+                          <td class="amount">$850.00</td>
+                        </tr>
+                        <tr>
+                          <td>Carlos Rodriguez</td>
+                          <td class="amount">$100.00</td>
+                          <td class="amount">$200.00</td>
+                          <td class="amount">$250.00</td>
+                          <td class="amount">$550.00</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <p class="sl-note">{{page.metadata.bankStatementDescriptor.limit}}</p>
+                    </div>
+                    {% endif %}
+                  {% endif %}
+                  <div class="img {{feature.class}}"></div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </section>
+        <div class="uncontained-box">
+          {{page.metadata.contactUs.markdown()}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- include 'partials/get-started-footer.html' -%}
+
+<script type="text/javascript">$(balanced.accountReconciliation)</script>
+{% endblock %}

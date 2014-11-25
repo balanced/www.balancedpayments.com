@@ -88,16 +88,6 @@
         width: 172px * 3 + @listMargin * 2; // 548px
         margin-top: 0.75em;
       }
-      .stage {
-        .sl-sm-sb;
-        color: @white;
-        line-height: 12px;
-        text-transform: uppercase;
-        padding: 4px 6px 2px;
-        margin-top: 6px;
-        background-color: @pineGreen60;
-        display: inline-block;
-      }
       p {
         padding-top: 10px;
       }
@@ -107,14 +97,15 @@
     list-style: none;
     margin: 0;
     float: left;
+
     li {
       padding: 0;
       margin: 0;
       float: left;
-      width: 172px;
-      margin-right: @listMargin;
+      padding-right: 10px;
+
       &:last-child {
-        margin-right: 0;
+        padding-right: 0;
       }
     }
   }
@@ -126,11 +117,10 @@
       padding: 0;
       margin: 0;
       float: left;
-      width: 132px;
-      margin-right: 6px;
+      padding-right: 10px;
 
       &:last-child {
-        margin-right: 0;
+        padding-right: 0;
       }
     }
   }

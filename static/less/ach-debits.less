@@ -182,18 +182,11 @@ body.layout-v4 {
 
         .section-side-body {
             margin-left: 0px;
-            margin-top: 25px;
         }
 
         .section-side-link {
             .sl-sb;
             margin-top: 15px;
-        }
-
-        .spacer {
-            margin: 0px;
-            border-top: 1px solid @gray3;
-            padding-right: 30px;
         }
 
         .content {
@@ -224,6 +217,7 @@ body.layout-v4 {
 
             .step-boxes {
                 border-top: 5px solid @black;
+                padding: 0;
 
                 a {
                     &:hover {
@@ -251,7 +245,7 @@ body.layout-v4 {
                 }
 
                 .box {
-                    width: 140px;
+                    width: 145px;
                     height: 125px;
                     padding: 10px;
                     background-color: @gray1;
@@ -273,11 +267,11 @@ body.layout-v4 {
 
                     &.box-last {
                         border-right: 0px;
-                        width: 140px;
                     }
 
                     p {
                         color: @gray5;
+                        margin: 0
                     }
 
                     h1 {
@@ -326,7 +320,7 @@ body.layout-v4 {
                 .box {
                     margin-left: 0px;
                     background-color: @white;
-                    width: 113px;
+                    width: 110px;
                     padding-bottom: 20px;
                     border-right: 1px solid @gray3;
 
@@ -437,84 +431,9 @@ body.layout-v4 {
     }
 }
 
-.carousel {
-    .carousel-control {
-        top: 55%;
-        margin-top: 0px;
-        background: @white;
-        .opacity(100);
-
-        &.right {
-            right: 0px;
-        }
-
-        &.left {
-            left: 0px;
-        }
-
-        &:hover {
-            i {
-                color: @gray5;
-            }
-        }
-
-        i {
-            font-size: 32px;
-            width: inherit;
-            color: @gray3;
-        }
-    }
-
-    .carousel-inner {
-        margin-bottom: 25px;
-
-        .item {
-            .carousel-caption {
-                position: relative;
-                margin: inherit;
-                background: inherit;
-                left: inherit;
-                right: inherit;
-                bottom: inherit;
-                margin: 55px auto 0px auto;
-                width: 712px;
-                padding: 0px;
-
-                p {
-                    color: @black;
-                    text-align: center;
-                    font-size: 18px;
-                    line-height: 24px;
-                }
-            }
-
-            img {
-                margin: auto;
-                width: 660px;
-            }
-        }
-    }
-
-    .carousel-indicators {
-        top: inherit;
-        right: inherit;
-        left: 375px;
-        margin: auto;
-
-        .active {
-            background-color: @black;
-        }
-
-        li {
-            margin-left: 8px;
-            background-color: @gray2;
-            cursor: pointer;
-        }
-    }
-}
-
 .no-margin-left {
     margin-left: 0px !important;
+    padding-left: 0px !important;
 }
 
 .large-bottom-margin {

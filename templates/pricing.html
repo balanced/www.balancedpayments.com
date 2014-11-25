@@ -5,9 +5,9 @@
 <div class="bg-default">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <header class="row">
-                    <div class="span19 page-title">
+                    <div class="col-md-12 page-title">
                         <h1>{{page.metadata.pageTitle}}</h1>
                     </div>
                     <div class="large-bottom-margin">
@@ -21,12 +21,14 @@
                   {% for feature in page.metadata.features %}
                   <div class="content clearfix">
                     <div class="section-title section-title-no-width">
-                      <div class="title-wrapper span6">
+                      <div class="title-wrapper">
                         <span>{{feature.title}}</span>
-                        <div class="section-icon"><i class="icon-{{feature.image}} non-interactive"></i></div>
                       </div>
                     </div>
-                    <div class="pricing span13 pull-right">
+                    <div class="col-md-3">
+                        <div class="section-icon"><i class="icon-{{feature.image}} non-interactive"></i></div>
+                    </div>
+                    <div class="pricing col-md-8 pull-right">
                       <div class="panel">
                         <div class="panel-heading main-price">
 
@@ -76,11 +78,11 @@
 
                   <div class="content clearfix">
                     <div class="section-title section-title-no-width">
-                      <div class="title-wrapper span6">
+                      <div class="title-wrapper">
                         <span>{{page.metadata.noAdditionalFees.title}}</span>
                       </div>
                     </div>
-                    <div class="pricing span13 pull-right">
+                    <div class="pricing col-md-8 pull-right">
                       <div class="panel main-price">
                         <ul class="list-group">
                           {% for item in page.metadata.noAdditionalFees.list %}
@@ -96,12 +98,14 @@
 
                   <div class="content clearfix">
                     <div class="section-title section-title-no-width">
-                      <div class="title-wrapper span6">
+                      <div class="title-wrapper">
                         <span>{{page.metadata.discounts.title}}</span>
-                        <p>{{page.metadata.discounts.subtitle}}</p>
                       </div>
                     </div>
-                    <div class="pricing span13 pull-right">
+                    <div class="col-md-3">
+                      <p>{{page.metadata.discounts.subtitle}}</p>
+                    </div>
+                    <div class="pricing col-md-8 pull-right">
                       <div class="panel">
                         <ul class="list-group">
                           {% for item in page.metadata.discounts.list %}

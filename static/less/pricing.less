@@ -20,6 +20,7 @@
 
   .main-price {
     font-size: 16px;
+    margin-top: -60px;
 
     .plus {
       font-size: 60px;
@@ -69,6 +70,15 @@
         &:extend(.icon-dollar:before);
         left: -22px;
       }
+    }
+  }
+
+  .panel {
+    background: none;
+    .box-shadow(none);
+
+     > .list-group > .horizontal-list-group-item {
+      padding: 10px 98px 10px 10px;
     }
   }
 }

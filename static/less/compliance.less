@@ -1,0 +1,23 @@
+.compliance {
+  .content {
+    table {
+      width: calc(~"50% - 20px");
+      margin: 20px 20px 0 0;
+      float: left;
+
+      thead {
+        th {
+          &:extend(table.items th > span);
+          line-height: 30px;
+          padding: 0px 25px;
+        }
+      }
+      tbody {
+        td span {
+          color: @gray8;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

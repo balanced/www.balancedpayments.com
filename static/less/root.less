@@ -1,4 +1,3 @@
-@import "bootstrap-2.3/bootstrap.less";
 @import "bower/strapped/static/less/strapped.less";
 
 @pageWidth: 840px;
@@ -59,8 +58,11 @@
       position: absolute;
       left: 49%;
       top: 18px;
-      width: 30px;
       z-index: 2;
+
+      img {
+        width: 30px;
+      }
     }
   }
 
@@ -116,35 +118,58 @@ h4 {
   }
 }
 
-section {
-  @sectionTitleLineWidth: 5px;
-  @sectionTitlePadding: 8px;
+.col-md-8 {
+  padding: 0;
+}
 
+section {
   .section-title {
     width: 270px;
+    .clearfix();
 
     .title-wrapper {
-      margin-top: @sectionTitleLineWidth + 5;
       margin-left: 0;
+      width: 230px;
+      border-top: 5px solid @black;
+      padding-top: 5px;
+      margin-bottom: 25px;
+      float: left;
 
       span {
         .sl-16-sb;
-        line-height: 23px;
-        border-top: @sectionTitleLineWidth solid @gray7;
-        padding-top: @sectionTitlePadding;
-      }
-
-      p {
-        .sl;
-        color: @gray7;
-        margin-top: 20px;
-        margin-right: 20px;
       }
     }
 
     .section-side-body {
       color: @gray7;
     }
+  }
+
+  p, ul {
+    .sl;
+    color: @gray7;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .section-description {
+    padding: 0;
+  }
+}
+
+.uncontained-box {
+  border-top: 1px solid @gray2;
+  border-bottom: 1px solid @gray2;
+  padding: 15px 0;
+  margin-bottom: 80px;
+
+  p {
+    .sl-sb;
+    margin-bottom: 0;
   }
 }
 
@@ -192,7 +217,7 @@ section {
             .sl;
             padding: 0px;
 
-            a {
+            a:not(.btn) {
                 color: @gray3;
                 cursor: pointer;
                 padding: 8px 0;
@@ -315,22 +340,18 @@ section {
   .page-summary {
     .sl-20-i;
     color: @gray6;
-    margin-left: 15px;
   }
 }
 
-.pace .pace-progress {
-  background: #29d;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  height: 20px;
-  .transition(width 1s);
-}
-
-.pace-inactive {
-  display: none;
+.stage {
+  .sl-sm-sb;
+  color: @white;
+  line-height: 12px;
+  text-transform: uppercase;
+  padding: 4px 6px 2px;
+  margin-top: 6px;
+  background-color: @pineGreen60;
+  display: inline-block;
 }
 
 .tag {
@@ -543,6 +564,84 @@ section {
   }
 }
 
+.carousel {
+    .carousel-control {
+        top: 55%;
+        margin-top: 0px;
+        background: transparent;
+        .opacity(100);
+        text-shadow: none;
+
+        &.right {
+            right: 0px;
+        }
+
+        &.left {
+            left: 0px;
+        }
+
+        &:hover {
+            i {
+                color: @gray5;
+            }
+        }
+
+        i {
+            font-size: 32px;
+            width: inherit;
+            color: @gray3;
+        }
+    }
+
+    .carousel-inner {
+        margin-bottom: 25px;
+
+        .item {
+            .carousel-caption {
+                .sl-sb;
+                text-align: left;
+                position: relative;
+                margin: inherit;
+                background: inherit;
+                left: inherit;
+                right: inherit;
+                bottom: inherit;
+                margin: 0px auto 5px auto;
+                padding: 0px;
+                text-shadow: none;
+
+                p {
+                    color: @black;
+                    margin-top: 50px;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+
+            img {
+                margin: auto;
+                width: 644px;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: -40px;
+
+        .active {
+            background-color: @black;
+        }
+
+        li {
+            margin-left: 8px;
+            background-color: @gray2;
+            cursor: pointer;
+        }
+    }
+}
+
+
 @import "index.less";
 @import "about.less";
 @import "get-started.less";
@@ -555,5 +654,7 @@ section {
 @import "open.less";
 @import "payouts.less";
 @import "card-processing.less";
+@import "account-reconciliation.less";
 @import "security.less";
+@import "compliance.less";
 @import "responsive.less";

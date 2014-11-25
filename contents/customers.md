@@ -402,8 +402,4 @@ customer_wall:
     description: Same-day bottle service booking at the hottest nightclubs in town
     link: http://www.bottlestonightapp.com/
 
-tryTheDashboard:
-  body: Solve your payments problem today.
-  button: Get started
-
 ---

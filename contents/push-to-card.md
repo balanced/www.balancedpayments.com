@@ -6,8 +6,7 @@ pageTitle: Push to Card
 body_class: push-to-card
 
 subtitle:
-  heading: Send money to a customer&#8217s checking account using their
-    debit card number.
+  heading: Send money to a customer&#8217s checking account using their debit card number.
 
 launch:
   title: Private beta

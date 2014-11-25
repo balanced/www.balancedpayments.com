@@ -8,7 +8,7 @@
 <div class="bg-default" id="testimonial">
     <section class="video-testimonial-image page-header large-bottom-margin">
         <div class="background-image"></div>
-        <div class="background-image hidden"></div>
+        <div class="background-image second"></div>
         <div class="texture"></div>
         <div class="container">
             <div class="row">
@@ -78,7 +78,7 @@
                     <div class="customer-wall">
                         <div class="masonry">
                           {% for customer in page.metadata.customer_wall.list %}
-                            <div class="card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
+                            <div class="customer-card {{customer.id}} {{customer.classes}}{% if customer.caseStudy %} case-study{% endif %}">
                                 <a class="flipper" href="{{customer.link}}" rel="nofollow">
                                     <div class="front">
                                       <div class="card-content"><img src="/images/customers_list/logo_{{customer.id}}.png"/><div class="background">&nbsp;</div></div>
@@ -109,20 +109,7 @@
     </div>
 </div>
 
-<div class="bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="span19">
-                <section class="try-the-dashboard">
-                    <div class="center">
-                        <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
+{%- include 'partials/get-started-footer.html' -%}
 
 <script src="/static/js/customer-lib.min.js"></script>
 <script type="text/javascript">

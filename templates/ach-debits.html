@@ -6,10 +6,10 @@
 <div class="bg-default">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <div class="row">
                     <header>
-                      <div class="span19 page-title">
+                      <div class="col-md-12 page-title">
                         <h1>{{page.metadata.pageTitle}}</h1>
                       </div>
                     </header>
@@ -17,7 +17,7 @@
 
                 <div class="row large-bottom-margin">
                     <div class="page-subtitle">
-                      <div class="span19">
+                      <div class="col-md-12">
                         {{ page.metadata.subtitle.heading }}
                       </div>
                     </div>
@@ -25,16 +25,16 @@
 
                 <section class="how-it-works" id="how-it-works">
                     <div class="row">
-                        <div class="span19 content-gold med-top-padding med-bottom-padding">
-                            <div class="offset1 section-title section-title-full">
+                        <div class="col-md-12 content-gold med-top-padding med-bottom-padding">
+                            <div class="col-offset-1 section-title section-title-full">
                                 <div class="title-wrapper">
                                     <span>{{page.metadata.howItWorks.title}}</span>
                                 </div>
                             </div>
-                            <div class="span6 offset1">
+                            <div class="col-md-4">
                                 <div class="title-icon"></div>
                             </div>
-                            <div class="body-copy body3 span11">
+                            <div class="body-copy body3 col-md-8">
                                 {{page.metadata.howItWorks.body}}
                             </div>
                         </div>
@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             <section class="how-it-works">
-                <div class="span19 step-boxes">
+                <div class="col-md-12 step-boxes">
                     <a>
                         <div class="box box-active" data-step="1">
                             <h1>1.</h1>
@@ -91,7 +91,7 @@
         </div>
         <div class="row">
             <section>
-                <div class="span19 med-bottom-margin">
+                <div class="med-bottom-margin">
                     <div id="how-it-works-carousel" class="carousel slide">
                         <div class="carousel-inner">
                             <div class="item active" data-step="1">
@@ -151,44 +151,43 @@
 <div class="bg-default" id="payment-schedule">
     <div class="container">
         <div class="row">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="payment-schedule">
                     <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.paymentSchedule.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.paymentSchedule.body}}
-                                </div>
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.paymentSchedule.title}}</span>
                             </div>
                         </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="schedule-times teeth">
+                        <div class="col-md-3 section-description">
+                            <div class="section-side-body">
+                                {{page.metadata.paymentSchedule.body}}
+                            </div>
+                        </div>
+                        <div class="col-md-8 pull-right">
+                            <div class="schedule-times">
                                 <div class="title">{{page.metadata.submissionTimes.title}}</div>
-                                <div class="span3 box">
+                                <div class="col-md-3 box">
                                     <h2>Mon</h2>
                                     <h1>{{page.metadata.submissionTimes.time}}</h1>
                                     <h3>{{page.metadata.submissionTimes.timezone}}</h3>
                                 </div>
-                                <div class="span3 box">
+                                <div class="col-md-3 box">
                                     <h2>Tue</h2>
                                     <h1>{{page.metadata.submissionTimes.time}}</h1>
                                     <h3>{{page.metadata.submissionTimes.timezone}}</h3>
                                 </div>
-                                <div class="span3 box">
+                                <div class="col-md-3 box">
                                     <h2>Wed</h2>
                                     <h1>{{page.metadata.submissionTimes.time}}</h1>
                                     <h3>{{page.metadata.submissionTimes.timezone}}</h3>
                                 </div>
-                                <div class="span3 box">
+                                <div class="col-md-3 box">
                                     <h2>Thu</h2>
                                     <h1>{{page.metadata.submissionTimes.time}}</h1>
                                     <h3>{{page.metadata.submissionTimes.timezone}}</h3>
                                 </div>
-                                <div class="span3 box box-last">
+                                <div class="col-md-3 box box-last">
                                     <h2>Fri</h2>
                                     <h1>{{page.metadata.submissionTimes.time}}</h1>
                                     <h3>{{page.metadata.submissionTimes.timezone}}</h3>
@@ -221,7 +220,7 @@
         </div>
 
         <div class="row" id="bank-account-verification">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="bank-account-verification">
                     <div class="box-pad-top">
                         <div class="section-title section-title-full">
@@ -229,7 +228,7 @@
                                 <span>{{page.metadata.bankAccountVerification.title}}</span>
                             </div>
                         </div>
-                        <div class="span5 no-margin-left">
+                        <div class="col-md-3 section-description">
                             <div class="section-side-body">
                                 {{page.metadata.bankAccountVerification.body}}
                             </div>
@@ -244,7 +243,7 @@
         </div>
 
          <div class="row" id="payment-status">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="payment-status">
                     <div class="box-pad-top">
                         <div class="section-title section-title-full">
@@ -252,13 +251,13 @@
                                 <span>{{page.metadata.paymentStatus.title}}</span>
                             </div>
                         </div>
-                        <div class="span5 no-margin-left">
+                        <div class="col-md-3 section-description">
                             <div class="section-side-body">
                                 {{page.metadata.paymentStatus.body}}
                             </div>
                         </div>
                         <div class="graphic payment-status pull-right"></div>
-                        <div class="legend span13 pull-right">
+                        <div class="legend col-md-8 pull-right">
                           {% for item in page.metadata.paymentStatus.legend %}
                             <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
                           {% endfor %}
@@ -269,7 +268,7 @@
         </div>
 
         <div class="row" id="payment-status">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="payment-status">
                     <div class="box-pad-top">
                         <div class="section-title section-title-full">
@@ -277,13 +276,13 @@
                                 <span>{{page.metadata.refundingAPayment.title}}</span>
                             </div>
                         </div>
-                        <div class="span5 no-margin-left">
+                        <div class="col-md-3 section-description">
                             <div class="section-side-body">
                                 {{page.metadata.refundingAPayment.body}}
                             </div>
                         </div>
                         <div class="graphic refunding-a-payment pull-right"></div>
-                        <div class="legend span13 pull-right">
+                        <div class="legend col-md-8 pull-right">
                           {% for item in page.metadata.refundingAPayment.legend %}
                             <p><span class="key">{{item.key}}:</span>{{item.value}}</p>
                           {% endfor %}
@@ -294,27 +293,24 @@
         </div>
 
         <div class="row" id="bank-statement-description">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="bank-statement-description">
                     <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.bankStatementDescriptor.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.bankStatementDescriptor.body}}
-                                </div>
-                                <div class="section-side-link">
-                                    <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
-                                </div>
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.bankStatementDescriptor.title}}</span>
                             </div>
                         </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="teeth border-top">
-                                <div class="graphic"></div>
+                        <div class="col-md-3 section-description">
+                            <div class="section-side-body">
+                                {{page.metadata.bankStatementDescriptor.body}}
                             </div>
+                            <div class="section-side-link">
+                                <a href="https://docs.balancedpayments.com/current/overview#soft-descriptors">{{page.metadata.bankStatementDescriptor.learnLink}}</a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 pull-right">
+                            <div class="graphic"></div>
                             <p class="footnote">{{page.metadata.bankStatementDescriptor.limit}}</p>
                         </div>
                     </div>
@@ -323,27 +319,24 @@
         </div>
 
          <div class="row" id="chargebacks-disputes">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="chargebacks-disputes">
                     <div class="box-pad-top">
-                        <div class="span5 no-margin-left">
-                            <div class="section-title section-title-no-width">
-                                <div class="title-wrapper">
-                                    <span>{{page.metadata.chargebacksDisputes.title}}</span>
-                                </div>
-                                <div class="section-side-body">
-                                    {{page.metadata.chargebacksDisputes.body}}
-                                </div>
-                                <div class="section-side-link">
-                                    <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910-How-are-credit-card-chargebacks-and-disputes-handled-">{{page.metadata.chargebacksDisputes.learnLink}}</a>
-                                </div>
+                        <div class="section-title section-title-full">
+                            <div class="title-wrapper">
+                                <span>{{page.metadata.chargebacksDisputes.title}}</span>
                             </div>
                         </div>
-                        <div class="span1 spacer"></div>
-                        <div class="span13 no-margin-left">
-                            <div class="border-top">
-                                <div class="graphic"></div>
+                        <div class="col-md-3 section-description">
+                            <div class="section-side-body">
+                                {{page.metadata.chargebacksDisputes.body}}
                             </div>
+                            <div class="section-side-link">
+                                <a href="https://support.balancedpayments.com/hc/en-us/articles/200135910-How-are-credit-card-chargebacks-and-disputes-handled-">{{page.metadata.chargebacksDisputes.learnLink}}</a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 pull-right">
+                            <div class="graphic"></div>
                         </div>
                     </div>
                 </section>
@@ -351,18 +344,20 @@
         </div>
 
         <div class="row" id="ach-debits">
-            <div class="span19">
+            <div class="col-md-12">
                 <section class="ach-debits">
                     <div class="box-pad-top">
-                        <div class="pricing span19 content med-top-padding">
-                            <div class="section-title section-title-no-width">
+                        <div class="pricing col-md-12 content">
+                            <div class="section-title section-title-full">
                                 <div class="title-wrapper pull-left">
                                     <span>{{page.metadata.achDebitsPricing.title}}</span>
-                                    <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
                                 </div>
                             </div>
-
-                            <div class="span13 pull-right">
+                            <div class="col-md-3">
+                              <div class="section-icon"><i class="icon-{{page.metadata.achDebitsPricing.image}} non-interactive"></i>
+                              </div>
+                            </div>
+                            <div class="col-md-8 pull-right">
                               <div class="panel">
                                 <div class="panel-heading main-price">
 
@@ -403,20 +398,7 @@
     </div>
 </div>
 
-<div class="bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="span19">
-                <section class="try-the-dashboard">
-                    <div class="center">
-                        <p>{{page.metadata.tryTheDashboard.body}}</p>
-                        <a href="{{env.helpers.link('/get-started')}}" class="btn special">{{page.metadata.tryTheDashboard.button}}</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="/static/js/carousel.min.js"></script>
-<script type="text/javascript">$(balanced.achDebits)</script>
+{%- include 'partials/get-started-footer.html' -%}
+
+<script type="text/javascript">$(balanced.carousel)</script>
 {% endblock %}

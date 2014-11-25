@@ -1,0 +1,117 @@
+.account-reconciliation {
+  .header-menu {
+    a {
+      color: @white !important;
+
+          &:not(.hamburger):hover {
+            border-bottom: 1px solid @white !important;
+          }
+    }
+  }
+
+  .page-header {
+    .title-image {
+      background-image: url(/images/account-reconciliation/account_reconciliation_header.png);
+    }
+
+    .background-image {
+      background-image: url(/images/account-reconciliation/account_reconciliation_bg.jpg);
+    }
+  }
+
+  .intro-image {
+    width: 100%;
+    background-color: @burntOrange10;
+    position: relative;
+    .clearfix();
+
+    .sidebar {
+      color: @white;
+      position: absolute;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      background-color: @gray7;
+      padding: 60px 45px;
+    }
+
+    .step {
+      margin-bottom: 100px;
+
+      h1 {
+        .sl-lg;
+        color: @white;
+        margin: 0;
+        margin-bottom: -15px;
+      }
+
+      h2 {
+        .sl-md-sb;
+        color: @white;
+        border-bottom: none;
+      }
+    }
+
+    .account-reconciliation-flow {
+      background-image: url(/images/account-reconciliation/account_reconciliation_flow.png);
+      background-size: contain;
+      width: 340px;
+      height: 660px;
+      float: right;
+      margin: 50px 115px;
+    }
+  }
+
+  .img {
+    background-size: contain;
+    width: 560px;
+  }
+
+  .account-reconciliation-linking {
+    background-image: url(/images/account-reconciliation/account_reconciliation_linking.png);
+    height: 188px;
+  }
+
+  .account-reconciliation-bulk-crediting {
+    background-image: url(/images/account-reconciliation/account_reconciliation_bulk_crediting.png);
+    height: 350px;
+  }
+
+  .account-reconciliation-losses {
+    background-image: url(/images/account-reconciliation/account_reconciliation_losses.png);
+    background-size: contain;
+    height: 158px;
+  }
+
+  .aging-report {
+    margin-top: 0;
+
+    .card-info {
+      .sl;
+      padding: 10px 0 20px;
+    }
+
+    table {
+      th {
+        .sl-sm-sb;
+        color: @white;
+        background-color: @burntOrange100;
+      }
+
+      td {
+        .sl-sm-sb;
+        background-color: @burntOrange10;
+      }
+
+      .amount {
+        text-align: right;
+      }
+    }
+  }
+
+  .code-sample {
+    .title {
+      background-color: @burntOrange100;
+    }
+  }
+}
