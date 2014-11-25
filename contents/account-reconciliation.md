@@ -49,6 +49,6 @@ features:
     name: api
 
 contactUs: |
-  If you have any questions, send an email to <a mailto="support+orders@balancedpayments.com">support+orders@balancedpayments.com</a>
+  If you have any questions, send an email to <a href="mailto:support+orders@balancedpayments.com">support+orders@balancedpayments.com</a>
 
 ---
