@@ -14,9 +14,6 @@ features:
     percent: 2.9
     cent: 30
     list:
-      - name: Foreign currency conversion
-        note: 2% fee on top of card processing rate
-        price: 2%
       - name: Authorization hold
         price: $0
       - name: Refund
