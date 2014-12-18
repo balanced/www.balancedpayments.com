@@ -84,11 +84,6 @@ team:
       desc: understanding all the data
       link: https://github.com/cieplak
       site: github
-    - name: catherine chang
-      job: finance operations
-      desc: Corporate Controller of Evite, Ebates, Facebook, and Twitter
-      link: http://www.linkedin.com/in/catherinechang
-      site: linkedin
     - name: andrew nossiter
       job: operations
       desc: writer that fell in love with payments
