@@ -49,8 +49,8 @@
               <div class="col-md-4 no-margin-left">
                   <div class="section-side-body">
                     {{feature.body.markdown()}}
-                    {% if feature.inDevelopment %}
-                      <div class="stage">In development</div>
+                    {% if feature.linkUrl %}
+                      <p><a href="{{feature.linkUrl}}">{{feature.linkText}}</a></p>
                     {% endif %}
                   </div>
               </div>
