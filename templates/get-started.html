@@ -13,7 +13,6 @@
                     <div class="large-bottom-margin">
                       <div class="summary-text clearfix">
                         <p class="page-summary col-md-10">{{page.metadata.subtitle.heading}}</p>
-                        <a class="col-md-12" href="{{page.metadata.subtitle.linkUrl}}" target="_blank">{{page.metadata.subtitle.linkText}}</a>
                       </div>
                     </div>
                 </header>
@@ -25,13 +24,16 @@
                         <span>{{page.metadata.basicRequirements.title}}</span>
                       </div>
                     </div>
-                    <ul class="requirements clearfix">
-                      {% for item in page.metadata.basicRequirements.list %}
-                      <li class="col-md-3">
-                        <p>{{item}}</p>
-                      </li>
-                      {% endfor %}
-                    </ul>
+                    <div class="col-md-4">
+                      <p>{{page.metadata.basicRequirements.body}}</p>
+                    </div>
+                    <div class="requirements panel col-md-8 pull-right">
+                      <ul class="list-group clearfix">
+                        {% for item in page.metadata.basicRequirements.list %}
+                          <li class="list-group-item">{{item}}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
                   </div>
 
                   <div class="content clearfix">
@@ -53,8 +55,11 @@
                   </div>
                 </section>
                 <section class="try-the-dashboard">
-                  <a href="{{page.metadata.tryTheDashboard.linkUrl}}" class="btn special">{{page.metadata.tryTheDashboard.buttonText}}</a>
-                  <a href="{{page.metadata.helpCenter.linkUrl}}" target="_blank">{{page.metadata.helpCenter.linkText}}</a>
+                  <div class="center">
+                    <p>Create an account from the dashboard to get started.</p>
+                    <a href="{{page.metadata.tryTheDashboard.linkUrl}}" class="btn special">{{page.metadata.tryTheDashboard.buttonText}}</a>
+                    <a href="{{page.metadata.helpCenter.linkUrl}}" target="_blank">{{page.metadata.helpCenter.linkText}}</a>
+                  </div>
                 </section>
             </div>
         </div>
