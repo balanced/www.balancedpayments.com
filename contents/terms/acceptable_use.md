@@ -6,7 +6,7 @@ icon_class: privacy-policy
 ---
 
 
-#### Last Updated: 4/09/2012
+** Last Updated: 4/09/2012 **
 
 This Acceptable Use Policy ("Policy") lists items and activities that we
 prohibit in connection with your use of Balanced's website, products, services
