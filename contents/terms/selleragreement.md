@@ -124,7 +124,7 @@ Upon termination, your account will be flagged as dormant and you will no longer
 
 ### 15. Survival of Termination
 
-Section 13. “Chargebacks and Disputes”, Section 14. “Fraud and Excessive Chargebacks”, and Section 15. “Set Off/Security Interest” of this agreement as well as any other remaining seller obligations and any other terms necessary to enforce or address such obligations shall survive up to 1 year following termination of this agreement.
+Section 11. “Chargebacks and Disputes”, Section 12. “Fraud or Excessive Chargebacks”, and Section 13. “Set Off/Security Interest” of this agreement as well as any other remaining seller obligations and any other terms necessary to enforce or address such obligations shall survive up to 1 year following termination of this agreement.
 
 ### 16. Disputes
 
