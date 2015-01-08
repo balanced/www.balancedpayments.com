@@ -26,6 +26,10 @@ module.exports = function(env, callback) {
 		return years;
 	};
 
+	env.helpers.currentYear = function() {
+		return moment().get('year');
+	};
+
 	env.helpers.link = function(str) {
 		if (env.locals.debug) {
 			return str + '.html';
