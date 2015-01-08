@@ -153,7 +153,7 @@ The timeline for disputes, unless otherwise required by applicable law, must be 
 
 Balanced does not guarantee or assume any responsibility for any goods or services advertised or offered by any third party service relating to either Balanced or Marketplace.
 
-### 19. Representations:
+### 19. Representations
 
 You agree that:
 
