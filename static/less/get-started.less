@@ -1,44 +1,53 @@
 .get-started {
-  .col-md-4 {
-    padding-left: 0;
-  }
-  .requirements {
-    & > .list-group > .list-group-item {
-      color: @black;
 
-      &:first-child {
-        border-top: 1px solid @gray2;
+  .requirements {
+    background-color: @gray1;
+    margin: 10px 0 0 0;
+    padding: 0;
+
+    li {
+      width: 25%;
+      list-style: none;
+      padding: 20px 15px;
+      margin: 0;
+      display: inline-block;
+      color: @gray8;
+      border-left: 1px solid @gray2;
+
+      &:first-of-type {
+        border-left: none;
+        padding-left: 30px;
       }
-      &:last-child {
-        border-bottom: 1px solid @gray2;
+
+      &:last-of-type {
+        padding-right: 30px;
       }
 
       &:before {
         float: left;
         margin-left: -5px;
-        margin-right: 10px;
         font-family: 'Balanced-Icon';
         &:extend(.icon-checkmark2:before);
       }
 
-      li {
-        list-style: disc;
+      p {
+        margin-left: 20px;
       }
     }
   }
+
   .steps {
     margin: 10px 0 0 0;
     padding: 0;
 
     li {
-      width: 33%;
-      height: 430px;
-      background-color: @gray0;
+      width: 32%;
+      height: 410px;
+      background-color: @gray1;
       display: inline-table;
       list-style: none;
-      margin-left: -5px;
+      margin-left: 14px;
       padding: 20px;
-      .border-radius(0);
 
       &:first-of-type {
         margin-left: 0;
