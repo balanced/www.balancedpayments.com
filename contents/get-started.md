@@ -6,33 +6,41 @@ pageTitle: Get started
 body_class: get-started
 
 subtitle:
-  heading: Balanced is specifically designed for two-sided payments, facilitating transactions between multiple parties for marketplaces and crowdfunding platforms.
-  linkUrl: "https://support.balancedpayments.com/hc/en-us/categories/200144810-Is-Balanced-a-good-fit-"
-  linkText: Find out if Balanced is a good fit
+  heading: Balanced is specifically designed for two-sided payments, facilitating transactions between buyers and sellers, niche marketplaces, and crowdfunding platforms.
 
 basicRequirements:
   title: "Basic requirements"
+  body: To use Balanced, you must meet these business requirements.
   list:
-    - A U.S. bank account
-    - A U.S.-registered company with Employee Identification Number
-    - A company representative who is a permanent U.S. resident
-    - Supported use case that is not on our <a href="https://support.balancedpayments.com/hc/en-us/articles/201863174-What-businesses-are-prohibited-from-using-Balanced-" target="_blank">list of prohibited businesses</a>
+    - Have a U.S. bank account
+    - U.S.-registered company with Employee Identification Number
+    - Company representative who is a permanent U.S. resident
+    - Supported business use case
+      <p>
+        <ul>
+          <li>Equity & Real estate crowdfunding</li>
+          <li>Tenant/Landlord payments</li>
+          <li>Money transmission (sending money to your friends)</li>
+          <li>Loan payments</li>
+        </ul>
+      </p>
+        <a href="https://support.balancedpayments.com/hc/en-us/articles/201863174-What-businesses-are-prohibited-from-using-Balanced-" target="_blank">Review the full list</a>
 
 stepsToGoLive:
   title: Steps to go live
   list:
     - step: 1
-      title: Test the API
+      title: Create an account
       image: test
-      description: Create an account from the dashboard to obtain a test marketplace and interact with the Balanced API.
+      description: Create an account from the Balanced dashboard to test our platform.
     - step: 2
       title: Integrate Balanced
       image: integrate
-      description: Checkout our developer <a href="https://docs.balancedpayments.com/" target="_blank">documentation</a> and <a href="https://docs.balancedpayments.com/1.1/guides/quickstart/" target="_blank">quick start guides</a>.
+      description: Checkout our developer <a href="https://docs.balancedpayments.com/" target="_blank">documentation</a> and <a href="https://docs.balancedpayments.com/1.1/guides/quickstart/" target="_blank">quick start guides</a> for integration guides.
     - step: 3
-      title: Go live
+      title: Apply for production access
       image: live
-      description: Register for production access via the dashboard to transact live.
+      description: Apply for production access from the Balanced dashboard. We&#8217ll review your information and inform you of your approval status within 2 business days.
     
 tryTheDashboard:
   buttonText: Create an account to get started
