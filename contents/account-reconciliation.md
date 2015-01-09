@@ -37,7 +37,8 @@ features:
   - title: Combine payouts from multiple orders
     body: Balanced allows you to issue one payout to a merchant with multiple orders waiting to be settled. Each customer has a payable account which can carry a stored balance. Simply credit the funds from the various orders into your merchant’s balance. Then issue a settlement from the balance to your merchant’s bank account.
     class: account-reconciliation-bulk-crediting
-    inDevelopment: true
+    linkUrl: https://docs.balancedpayments.com/1.1/guides/settlements/
+    linkText: View docs for settlements
   - title: Track orders from the Balanced Dashboard
     body: The Balanced Dashboard provides a complete view of each order with detailed customer and transaction information.
     class1: account_reconciliation_dashboard_1
@@ -48,6 +49,8 @@ features:
   - title: Implementing orders
     body: "Using orders is simple: just specify the merchant and create an order for this merchant."
     name: api
+    linkUrl: https://docs.balancedpayments.com/1.1/guides/orders/
+    linkText: View docs for orders
 
 contactUs: |
   If you have any questions, send an email to <a href="mailto:support+orders@balancedpayments.com">support+orders@balancedpayments.com</a>
