@@ -19,6 +19,12 @@ features:
       An [order](/account-reconciliation) is designed to group related transaction operations for a specific merchant, mapping debits to corresponding credits. Balanced must have a clear understanding of who the intended merchant is for all funds held. To facilitate proper reconciliation, each order maintains a separate balance – you can only draw from this balance to settle funds.
 
       [View orders documentation](https://docs.balancedpayments.com/1.1/api/orders/)
+      
+  - title: Holding period for funds
+    text: |
+      Funds from an [order](/account-reconciliation) should be settled within 30 days of the initial debit. Each completed order should contain one credit going to the merchant for his/her sale and one credit going to your marketplace for your commission.
+
+      [View orders documentation](https://docs.balancedpayments.com/1.1/api/orders/)
 
   - title: Know your customer
     text: |    
