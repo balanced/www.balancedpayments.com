@@ -61,19 +61,4 @@ noAdditionalFees:
     - name: Monthly fee
       price: 0
 
-discounts:
-  title: Volume discount
-  subtitle: At the end of each quarter, Balanced will evaluate your card processing volume from the past three months, take the average, and assign a new tier based on that. The review dates are Jan 1, Apr 1, Jul 1, and Oct 1. The new pricing tier will be in place until the next review date.
-  list:
-    - name: $0 – 100,000 / month
-      price: 2.9% + 30&cent;
-    - name: $100,001 – 500,000 / month
-      price: 2.7% + 30&cent;
-    - name: $500,001 – 1,000,000 / month
-      price: 2.4% + 30&cent;
-    - name: $1,000,001 – 5,000,000 / month
-      price: 2.2% + 30&cent;
-    - name: $5,000,001+ / month
-      price: 1.9% + 30&cent;
-
 ---
