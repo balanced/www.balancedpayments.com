@@ -1,0 +1,123 @@
+.migration-homepage.layout-v4 .site-header .logo {
+  display: inline-block;
+  position: static;
+  img {
+    width: auto;
+  }
+}
+
+.migration-homepage.layout-v4 .site-header {
+  height: auto;
+}
+
+.migration-homepage .letterhead-logo {
+  text-align: center;
+  margin: 75px 0;
+}
+
+.migration-page {
+  .text-em {
+    font-family: 'Plantin Italic', serif;
+    font-size: 21px;
+    line-height: 1.33;
+  }
+
+  .text-danger {
+    color: @imperialRed80;
+    font-family: @baseFontFamilySemiBold;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  h2, h3 {
+    font-family: @baseFontFamilyBold;
+  }
+
+  h2 {
+    font-size: 22px;
+    border-bottom: none;
+    margin: 20px 0 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  h4 {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  hr {
+    margin-top: 60px;
+  }
+
+  hr.clean {
+    margin: 20px 0;
+  }
+
+  ol, ul {
+    list-style-position: outside;
+    padding: 0;
+    margin: 0 0 20px 20px;
+  }
+
+  ol > li {
+    font: normal normal normal 14px @baseFontFamily;
+    line-height: 20px;
+    color: #000000;
+    color: #434854;
+    margin: 0;
+  }
+
+  .bottom {
+    font-family: @baseFontFamilyBold;
+    text-align: center;
+  }
+
+  .bottom.bottom-line1 {
+    font-size: 20px;
+    margin: 50px 0 30px;
+  }
+
+  .bottom.bottom-line2 {
+  }
+
+  .bottom.bottom-line3 {
+    margin: 40px 0 30px;
+    font-family: @baseFontFamilySemiBold;
+  }
+
+  .columns {
+    .clearfix();
+    position: relative;
+
+    .number {
+      display: block;
+      line-height: 60px;
+      font-size: 32px;
+    }
+    h4 {
+      border: none;
+    }
+
+    .col-3 {
+      background-color: #F7F9F9;
+      border: 1px solid #CFD3D7;
+      border-right: none;
+      float: left;
+      padding: 0 25px;
+      width: 33.33333%;
+      height: 250px;
+
+      &:last-child {
+        border: 1px solid #CFD3D7;
+      }
+    }
+
+  }
+}
