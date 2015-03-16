@@ -58,10 +58,6 @@ Stripe also has an [FAQ page](https://support.stripe.com/questions/migrating-fro
 
 ## Data & Security
 
-### <a name="can-i-take-my-transaction" href="#can-i-take-my-transaction">Can I take my transaction history with me?</a>
-
-Yes, you can use your existing dashboard to export your transaction history.
-
 ### <a name="can-i-take-my-card" href="#can-i-take-my-card">Can I take my card and bank account tokens with me?</a>
 
 Yes. All existing cards and bank accounts will be migrated to Stripe. All new cards and bank accounts created on Balanced will also be tokenized on Stripe. It's also possible to migrate your data to another processor by contacting us directly at [support@balancedpayments.com](mailto:support@balancedpayments.com).
@@ -70,6 +66,15 @@ Yes. All existing cards and bank accounts will be migrated to Stripe. All new ca
 ### <a name="can-i-take-my-customers" href="#can-i-take-my-customers">Can I take my customer's information with me?</a>
 
 Yes. Information for verified customers will be migrated to Stripe to make sure you don't have to collect their name, address, DOB, and SSN again.
+
+### <a name="continue-during-migration" href="#continue-during-migration">Can I continue to use Balanced during the data migration?</a>
+
+You can start the migration process and continue to use Balanced. Your existing cards, bank accounts, and seller data will be ported to Stripe, and all new cards, bank accounts, and sellers that you create on Balanced will be mirrored on Stripe.
+
+### <a name="can-i-take-my-transaction" href="#can-i-take-my-transaction">Can I take my transaction history with me?</a>
+
+Yes, you can use your existing dashboard to export your transaction history.
+
 
 ### <a name="what-happens-to-all" href="#what-happens-to-all">What happens to all of the sensitive data Balanced has?</a>
 
@@ -99,6 +104,10 @@ Chargebacks can be filed on credit and debit cards up to 6 months after the char
 
 ## Payments
 
+### <a name="funds-availability" href="#funds-availability">After charging a card, how long before I can issue a payout to the seller?</a>
+
+It takes one business day after charging a card for the money to be available for payout.
+
 ### <a name="does-stripe-support-ach-debits" href="#does-stripe-support-ach-debits">Does Stripe support ACH debits?</a>
 
 Yes, they do. The product is available in private beta only at the moment, but Stripe is making it available to all Balanced customers right away.
@@ -120,7 +129,7 @@ Not at the moment, but we'll export your debit card data so that when it is supp
 
 ----------------------
 
-## Fees & Reserves
+## Fees, Reserves and Escrow Balance
 
 ### <a name="how-will-invoicing-change" href="#how-will-invoicing-change">How will Invoicing change?</a>
 
@@ -142,6 +151,14 @@ Since ACH debits are still in beta on Stripe, please head over to [https://suppo
 ### <a href="#what-happens-to-the-money" name="what-happens-to-the-money">What happens to the money Balanced is holding in reserve for me?</a>
 
 Chargebacks can be submitted by consumers 6 months after charge for debit and credit cards and 60 days after a ACH debit. Depending on your volume and chargeback rate, Balanced may continue to hold a reserve to cover future chargebacks and will return the reserve once the chargeback window on all of your transactions has cleared.
+
+### <a name="transfer-escrow" href="#transfer-escrow">How should I transfer my escrow balance to Stripe?</a>
+
+You can avoid needing to transfer the escrow balance by using the remaining amount to pay sellers for transactions that happened on Balanced. If necessary, you can also withdraw your escrow balance to your own bank account account and contact Stripe at support+balanced@stripe.com to load the money into your Stripe balance. If you choose to withdraw the money from your escrow balance, you have to make sure there is enough money in your escrow balance to cover refunds for debits that were created on Balanced.
+
+### <a name="escrow-functionality" href="#escrow-functionality>Does Stripe support escrow functionality?</a>
+
+With the Stripe Transfers API, your sellers are able to receive transfers on a fully flexibly payout schedule. This means that you can specify when to initiate a transfer from a seller's Stripe balance to their bank account. You have the ability to set up automatic transfers (daily, weekly, monthly) or one-off transfers (after the service has been rendered, for example). Stripe recommends that funds are held in a seller's Stripe balance for no longer than 30 days. Escrow has a fairly specific legal meaning, and Stripe doesn't offer that. [http://en.wikipedia.org/wiki/Escrow], but Stripe has found the Transfers API to cover the requirements for most marketplaces.
 
 ---------------------
 
@@ -184,6 +201,16 @@ Stripe follows the same bank and card network compliance rules as Balanced. In r
 ### <a href="#what-additional-benefits" name="what-additional-benefits">What additional benefits does Stripe provide me that Balanced didn't?</a>
 
 Stripe will allow you to simplify your recurring/subscription billing system, accept payments on behalf of international sellers, and accept other popular payment instruments like Bitcoin, Alipay and Apple Pay.
+
+
+-----------------------
+
+## Miscellaneous
+
+### <a name="future-of-software" href="#future-of-software">Will you open source your software or make it available for sale?</a>
+
+It's something that we're not pursuing right now. We want to make sure our focus is on helping customers through their migration.
+
 
 -----------------------
 
