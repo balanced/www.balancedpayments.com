@@ -158,7 +158,7 @@ You can avoid needing to transfer the escrow balance by using the remaining amou
 
 ### <a name="escrow-functionality" href="#escrow-functionality>Does Stripe support escrow functionality?</a>
 
-With the Stripe Transfers API, your sellers are able to receive transfers on a fully flexibly payout schedule. This means that you can specify when to initiate a transfer from a seller's Stripe balance to their bank account. You have the ability to set up automatic transfers (daily, weekly, monthly) or one-off transfers (after the service has been rendered, for example). Stripe recommends that funds are held in a seller's Stripe balance for no longer than 30 days. Escrow has a fairly specific legal meaning, and Stripe doesn't offer that. [http://en.wikipedia.org/wiki/Escrow], but Stripe has found the Transfers API to cover the requirements for most marketplaces.
+With the Stripe Transfers API, your sellers are able to receive transfers on a fully flexible payout schedule. This means that you can specify when to initiate a transfer from a seller's Stripe balance to their bank account. You have the ability to set up automatic transfers (daily, weekly, monthly) or one-off transfers (after the service has been rendered, for example). Stripe recommends that funds are held in a seller's Stripe balance for no longer than 30 days. Escrow has a fairly specific legal meaning, and Stripe doesn't offer that. [http://en.wikipedia.org/wiki/Escrow], but Stripe has found the Transfers API to cover the requirements for most marketplaces.
 
 ---------------------
 
