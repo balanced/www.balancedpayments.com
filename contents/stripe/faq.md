@@ -152,10 +152,6 @@ Since ACH debits are still in beta on Stripe, please head over to [https://suppo
 
 Chargebacks can be submitted by consumers 6 months after charge for debit and credit cards and 60 days after a ACH debit. Depending on your volume and chargeback rate, Balanced may continue to hold a reserve to cover future chargebacks and will return the reserve once the chargeback window on all of your transactions has cleared.
 
-### <a name="transfer-escrow" href="#transfer-escrow">How should I transfer my escrow balance to Stripe?</a>
-
-You can avoid needing to transfer the escrow balance by using the remaining amount to pay sellers for transactions that happened on Balanced. If necessary, you can also withdraw your escrow balance to your own bank account account and contact Stripe at support+balanced@stripe.com to load the money into your Stripe balance. If you choose to withdraw the money from your escrow balance, you have to make sure there is enough money in your escrow balance to cover refunds for debits that were created on Balanced.
-
 ### <a name="escrow-functionality" href="#escrow-functionality">Does Stripe support escrow functionality?</a>
 
 While Stripe doesn't support escrow accounts, Stripe has found the Transfers API to cover the requirements for most marketplaces. With the Stripe Transfers API your sellers are able to receive transfers on a fully flexibly payout schedule. This means that you can specify when to initiate a transfer from a seller's Stripe balance to their bank account. You have the ability to set up automatic transfers (daily, weekly, monthly) or one-off transfers (after the service has been rendered, for example). Funds may not be held for transfer for more than 30 days.
