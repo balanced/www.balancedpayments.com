@@ -25,6 +25,13 @@ Our full API and dashboard will be available until June 11, 2015, and support fo
 Stripe provides the most comparable solution to Balanced. We reached out to Stripe and have been working with them to create a smooth path forward for you. We respect how Stripe has been able to innovate, grow, and become the best solution for marketplaces. Stripe has agreed to honor our existing pricing agreements and work closely with us to seamlessly migrate card, bank account, and seller identity data.
 
 
+### <a name="when-should-i-start" href="#when-should-i-start">When should I start the Stripe integration?</a>
+
+We’re working on documentation that will outline the best way to integrate with Stripe. If you can, we recommend that you start your integration after new guidelines with the most up-to-date information are published on March 24. You can still start the data migration process now. The data will continue to sync and will be ready for you when you go live on Stripe.
+
+If you're on a tight deadline and must integrate within the next few days, please reach out to balanced+support@stripe.com.
+
+
 --------------------
 
 ## Support
