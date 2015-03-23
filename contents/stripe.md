@@ -65,7 +65,7 @@ Balanced will stop processing credit and debit card charges and ACH debits on Ju
   <span class="number">3</span>
   <h4>Integrate Stripe</h4>
 
-  <p>Stripe's marketplace API allows you to go live with comparable functionality to what you have on Balanced. Please contact <a href="mailto:sales@stripe.com">sales@stripe.com</a> to learn more.</p>
+  <p>Stripe's [new Connect API](https://stripe.com/docs/connect) allows you to go live with comparable functionality to what you have on Balanced.</p>
 </div>
 </div>
 

@@ -38,7 +38,7 @@ The full Balanced team will stay on until June 11, 2015, and a portion of the te
 
 1. Go to the [migration page](/stripe) and click "Migrate Now". This will allow you to authorize Balanced to create a Stripe account for you migrate your data. All new cards, bank accounts, and seller information created on Balanced will also be tokenized on Stripe to keep your data synchronized.
 2. Active your Stripe account to start processing transactions.
-3. Integrate Stripe's marketplace API. Contact [sales@stripe.com](mailto:sales@stripe.com) to learn more.
+3. Integrate Stripe's [new Connect API](https://stripe.com/docs/connect).
 4. Go live!
 
 
