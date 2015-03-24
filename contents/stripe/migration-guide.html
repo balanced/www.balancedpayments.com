@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=768, user-scalable=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Balanced - Stripe migration guide</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">var _pageStartTime=(new Date()).getTime()</script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function() {
+          jQuery(window).resize(function() {
+            jQuery(".nav-list").height(jQuery(document).height());
+          }).resize();
+      });
+    </script>
+    <link href="https://docs.balancedpayments.com/static/css/styles.css" rel="stylesheet">
+    <style type="text/css">
+      .container.content {
+        padding-top: 50px;
+      }
+      .alert.alert-white {
+        background-color: #FFF;
+        color: inherit;
+      }
+      .alert-footer {
+        margin-bottom: 10px;
+      }
+
+      .btn.btn-info {
+        border: 1px solid #528dcc;
+        background-color: #528dcc;:
+        border-radius: 0;
+        color: #ffffff;
+        cursor: pointer;
+        font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
+        line-height: 1em;
+        padding: 8px 18px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        vertical-align: middle;
+     }
+
+     .btn.btn-info:hover {
+        background-color: #0063b4;
+        border: 1px solid #0063b4;
+     }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="row">
+        <div class="logo">
+          <a class="brand" href="https://www.balancedpayments.com"></a>
+        </div>
+        <div class="span22">
+          <ul class="nav nav-api-context">
+            <li class="dropdown">
+            <a class="dropdown-toggle context api-context" data-toggle="dropdown" id="context-dropdown-head">
+              <div id="logo"></div>
+              Migrating to Stripe
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </header>
+    <div class="container content">
+      <div class="row clearfix">
+        <div class="span6 context-sidebar">
+          <div class="sidebar-nav" data-spy="affix">
+            <div class="nav nav-list context-navlist">
+              <ul>
+                <li class="toctree-l1">
+                  <a class="reference internal" href="">Migrating to stripe</a>
+                  <ul>
+<li class="toctree-l2"><a class="reference internal" href="#first-steps">First steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stripe-js">Stripe.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customer-resource">Customer resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identity-verifiation">Identity verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debits-charges">Debits => Charges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#credits-transfers">Credits => Transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bank-accounts">Bank Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reversals">Reversals</a></li>
+                  </ul>
+                </li>
+              <ul>
+            </div>
+          </div>
+        </div>
+        <div class="span19 offset1">
+          <div class="section"></div>
+          <div class="alert alert-tab full-width alert-tab-red">
+            <p>Balanced will be shutting down</p>
+          </div>
+          <div class="alert alert-white">
+            <div>
+              <p>We started building a payments service for marketplaces in 2011. We were shocked with the state of payments at the time, and the pains a marketplace had to go through. Unfortunately, we haven't been able to reach the escape velocity necessary to be a large, innovative, independent player in the payments space and have decided not to continue building Balanced. We reached out to Stripe and have been working with them to provide a smooth path forward for our customers. Our full API and dashboard will be available until <strong>June 11, 2015</strong>, and support for issuing refunds, querying transactions, and fighting chargebacks will continue until <strong>October 9, 2015</strong>.</p>
+            </div>
+            <div class="alert-footer">
+              <a href="/stripe" class="btn btn-info">Learn more to begin migration</a>
+              <a href="http://blog.balancedpayments.com/shutting-down/">Read more on the Balanced blog</a>
+            </div>
+          </div>
+
+          <h1>Migrating to Stripe</h1>
+
+
+<h2 id="first-steps">First Steps</h2>
+<p>Before getting started you&#39;ll need to create a Stripe account, and then register for a platform account, which is similar to your Balanced Marketplace account. To do this, visit <a href="https://dashboard.stripe.com/account/applications/settings">https://dashboard.stripe.com/account/applications/settings</a></p>
+<p>Be sure to select &#39;managed account&#39; as this is the most similar user experience to Balanced. Managed accounts provide a white-labeled experience, where you control your seller on-boarding, identity verification, and transfers. </p>
+<p>To find a full listing of Stripe Connect&#39;s docs, please visit:
+<a href="https://stripe.com/docs/connect">https://stripe.com/docs/connect</a></p>
+<hr>
+<h2 id="stripe-js">Stripe.js</h2>
+<p>Similar to Balanced.js, Stripe.js allows you to collect card information without having the sensitive information touch your servers.  Replace the balanced script with: </p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.stripe.com/v2/&quot;&gt;&lt;/script&gt;
+</code></pre><p>You&#39;ll also need set your publishable key to configure the directly to your marketplace with the following code: </p>
+<pre><code>Stripe.setPublishableKey(&#39;YOUR_PUBLISHABLE_KEY&#39;);
+</code></pre><p>Furthermore, cards will be authorized during tokenization, and not when fetched. So be sure to handle the response for any potential errors. </p>
+<p>Note the following field names have changed: </p>
+<p>Changes in field names: </p>
+<p>Required Fields</p>
+<p><code>number</code> =&gt; <code>number</code><br><code>expiration_month</code> =&gt; <code>exp_month</code><br><code>expiration_year</code> =&gt; <code>exp_year</code>   </p>
+<p>Optional Fields: </p>
+<p><code>cvv</code> =&gt; <code>cvc</code><br><code>name</code> =&gt; <code>name</code><br><code>line1</code> =&gt; <code>address_line1</code><br><code>line2</code> =&gt; <code>address_line2</code><br><code>city</code> =&gt; <code>address_city</code><br><code>state</code> =&gt; <code>address_state</code><br><code>postal_code</code> =&gt; <code>address_zip</code><br><code>country_code</code> =&gt; <code>address_country</code></p>
+<p>For more information please visit: <a href="https://stripe.com/docs/stripe.js">https://stripe.com/docs/stripe.js</a></p>
+<hr>
+<h2 id="customer-resource">Customer Resource</h2>
+<p>Instead of a single Customer resource for buyers and sellers, Stripe Connect uses a Customer resource exclusively for buyers (debits only), and an Account resource for sellers. </p>
+<p>Accounts act as a conduit linking debits to the appropriate seller (similar to on_behalf_of in Balanced v1.0 and orders v1.1). Additionally, each Account maintains a balance, which can then be paid out to the attached bank account.  However, before transfers (i.e. credits) can be made the &#39;transfers_enabled&#39; field must be set to true, which is achieved by providing information requested on the Account. Until then, funds will accumulate in the Account’s balance until it&#39;s able to be paid out to the Account’s bank account. </p>
+<p>For more info on Accounts, including client-library code examples, see: <a href="https://stripe.com/docs/connect/managed-accounts">https://stripe.com/docs/connect/managed-accounts</a></p>
+<hr>
+<h2 id="identity-verification">Identity Verification</h2>
+<p>Similar to underwriting sellers before they can be paid out on Balanced, Accounts need to undergo identity verification. </p>
+<p>To complete api-based Identity verification, you&#39;ll need to inspect an Account&#39;s verification property and review it&#39;s &#39;fields_needed&#39; array to determine which documents are required for upload (e.g. scan of an identifying document). Note that this is now an asynchronous process, and you&#39;ll need to setup a webhook for &quot;account.updated&quot; to see it&#39;s status, and any changes in required documentation. </p>
+<p>For more info on Identity verification, including how to upload files visit: <a href="https://stripe.com/docs/connect/identity-verification">https://stripe.com/docs/connect/identity-verification</a></p>
+<hr>
+<h2 id="debits-charges">Debits =&gt; Charges</h2>
+<p>In, Stripe Connect, debits are referred to as Charges. Charges and Debits are very similar in practice except for a few subtle differences. On Balanced you can charge a card resource directly, however, on Stripe you&#39;ll need to associate the card to a customer object first. In addition, there is no concept of orders. Instead to link charges to an Account, you pass the seller&#39;s Account id as the &#39;destination&#39; parameter. In addition, you can indicate the &quot;application_fee&quot; which is the amount of the charge that your marketplace would like to collect as its fee.</p>
+<p>To learn more about how to create charges and refunds visit: <a href="https://stripe.com/docs/connect/payments-fees">https://stripe.com/docs/connect/payments-fees</a></p>
+<hr>
+<h2 id="credits-transfers">Credits =&gt; Transfers</h2>
+<p>Transfers (referred to as credits on Balanced) from Accounts to their attached bank accounts are not necessarily manually created. Each Account, has a &#39;transfer_schedule&#39; property that dictates how often this Stripe account’s balance is paid out to its bank account (the field can be set to manual, daily, weekly, monthly).</p>
+<p>Payouts are also only available through bank transfers. Currently Push-to-Card is not supported at this time.</p>
+<p>To see how to create a transfer visit: <a href="https://stripe.com/docs/connect/bank-transfers">https://stripe.com/docs/connect/bank-transfers</a></p>
+<hr>
+<h2 id="bank-accounts">Bank Accounts</h2>
+<p>Bank Account resources no longer have name or  address fields (other than country code), but do require that you pass a currency parameter. </p>
+<hr>
+<h2 id="reversals">Reversals</h2>
+<p>Creating a transfer reversal is similar to issuing a refund. Accordingly, when issuing a reversal your platform account balance will increase, and the corresponding destination account&#39;s balance will decrease. If the seller&#39;s account&#39;s balance goes negative, Stripe will attempt to debit the account&#39;s associated bank account based on the next automatically scheduled transfer (daily by default). </p>
+<p>To learn more about reversals see: <a href="https://stripe.com/docs/connect/special-case-transfers">https://stripe.com/docs/connect/special-case-transfers</a></p>
+
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
