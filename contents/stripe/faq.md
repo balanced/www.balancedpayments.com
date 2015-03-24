@@ -42,13 +42,6 @@ The full Balanced team will stay on until June 11, 2015, and a portion of the te
 4. Go live!
 
 
-### <a name="when-should-i-start" href="#when-should-i-start">When should I start the Stripe integration?</a>
-
-We’re working on documentation that will outline the best way to integrate with Stripe. If you can, we recommend that you start your integration after new guidelines with the most up-to-date information are published on March 24. You can still start the data migration process now. The data will continue to sync and will be ready for you when you go live on Stripe.
-
-If you're on a tight deadline and must integrate within the next few days, please reach out to [balanced+support@stripe.com](mailto:balanced+support@stripe.com).
-
-
 ### <a name="what-if-i-already-have-a-stripe-account" href="#what-if-i-already-have-a-stripe-account">What if I already have a Stripe account?</a>
 
 You will have the option during the migration process to specify an existing Stripe account.
