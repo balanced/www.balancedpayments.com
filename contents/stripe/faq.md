@@ -42,6 +42,11 @@ The full Balanced team will stay on until June 11, 2015, and a portion of the te
 4. Go live!
 
 
+### <a name="tech-migration-guide" href="#tech-migration-guide">Where can I find more information on how to integrate Stripe?</a>
+
+We've prepared an [integration guide](https://www.balancedpayments.com/stripe/migration-guide) that walks through the differences between the Balanced API and Stripe's [new Connect API](https://stripe.com/docs/connect).
+
+
 ### <a name="what-if-i-already-have-a-stripe-account" href="#what-if-i-already-have-a-stripe-account">What if I already have a Stripe account?</a>
 
 You will have the option during the migration process to specify an existing Stripe account.
