@@ -17,13 +17,29 @@
           jQuery(window).resize(function() {
             jQuery(".nav-list").height(jQuery(document).height());
           }).resize();
+
+          var indexList = jQuery("#index-list");
+          jQuery("h2").each(function() {
+            var self = jQuery(this);
+            var link = jQuery("<a class='reference internal'/>");
+            link.attr("href", "#" + self.attr("name"))
+            link.text(self.text());
+            indexList.append(jQuery("<li class='toctree-l2'/>").html(link));
+          });
       });
     </script>
     <link href="https://docs.balancedpayments.com/static/css/styles.css" rel="stylesheet">
     <style type="text/css">
+
       .container.content {
         padding-top: 50px;
       }
+      .container.content h2 {
+        border-top: 1px solid #d2d6d9;
+        margin-top: 35px;
+        padding-top: 14px;
+      }
+
       .alert.alert-white {
         background-color: #FFF;
         color: inherit;
@@ -34,7 +50,7 @@
 
       .btn.btn-info {
         border: 1px solid #528dcc;
-        background-color: #528dcc;:
+        background-color: #528dcc;
         border-radius: 0;
         color: #ffffff;
         cursor: pointer;
@@ -81,16 +97,7 @@
               <ul>
                 <li class="toctree-l1">
                   <a class="reference internal" href="">Migrating to stripe</a>
-                  <ul>
-<li class="toctree-l2"><a class="reference internal" href="#first-steps">First steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#stripe-js">Stripe.js</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#customer-resource">Customer resource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#identity-verifiation">Identity verification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#debits-charges">Debits => Charges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#credits-transfers">Credits => Transfers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bank-accounts">Bank Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reversals">Reversals</a></li>
-                  </ul>
+                  <ul id="index-list"></ul>
                 </li>
               <ul>
             </div>
@@ -115,52 +122,46 @@
 
 <h2 id="first-steps">First Steps</h2>
 <p>Before getting started you&#39;ll need to create a Stripe account, and then register for a platform account, which is similar to your Balanced Marketplace account. To do this, visit <a href="https://dashboard.stripe.com/account/applications/settings">https://dashboard.stripe.com/account/applications/settings</a></p>
-<p>To find a full listing of Stripe Connect&#39;s docs, please visit:
-<a href="https://stripe.com/docs/connect">https://stripe.com/docs/connect</a></p>
-<hr>
-<h2 id="stripe-js">Stripe.js</h2>
-<p>Similar to Balanced.js, Stripe.js allows you to collect card information without having the sensitive information touch your servers.  Replace the balanced script with: </p>
+<p>To find a full listing of Stripe Connect&#39;s docs, please visit: <a href="https://stripe.com/docs/connect">https://stripe.com/docs/connect</a></p>
+<h2 id="mapping-balanced-resources-to-stripe">Mapping Balanced Resources to Stripe</h2>
+<p>Once your data migration is complete, each of your Balanced resources will have their meta fields updated to contain its corresponding Stripe resource ID. Also, any new resources that are created (e.g. Cards, Bank Accounts, Customers) will be automatically created in Stripe as well.</p>
+<p>For example, each Balanced Card object will now have a &#39;meta&#39; field that identifies it&#39;s new ID on the Stripe platform and vice versa. (in Stripe this field is noted as the &#39;metadata&#39; field). Customer objects will contain a Stripe Customer ID in the meta field for all your buyers, and/or a Stripe Account ID if it&#39;s a merchant.</p>
+<p>If you would like a full mapping of your resources in a CSV file, please email support@balancedpayments.com.</p>
+<h2 id="stripe-js-funding-instrument-tokenization">Stripe.JS / Funding Instrument Tokenization</h2>
+<p>Similar to Balanced.js, Stripe.js allows you to collect card information without having the sensitive information touch your servers.  Replace the balanced script with:</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.stripe.com/v2/&quot;&gt;&lt;/script&gt;
-</code></pre><p>You&#39;ll also need set your publishable key to configure the directly to your marketplace with the following code: </p>
+</code></pre><p>You&#39;ll also need set your publishable key to configure the directly to your marketplace with the following code:</p>
 <pre><code>Stripe.setPublishableKey(&#39;YOUR_PUBLISHABLE_KEY&#39;);
 </code></pre><p>To find your publishable key visit: <a href="https://dashboard.stripe.com/account/apikeys">https://dashboard.stripe.com/account/apikeys</a></p>
-<p>Furthermore, cards will be authorized during tokenization, and not when fetched. So be sure to handle the response for any potential errors. </p>
-<p>Note the following field names have changed: </p>
-<p>Changes in field names: </p>
+<p>Furthermore, cards will be authorized during tokenization, and not when fetched. So be sure to handle the response for any potential errors.</p>
+<p>Note the following field names have changed:</p>
+<p>Changes in field names:</p>
 <p>Required Fields</p>
-<p><code>number</code> =&gt; <code>number</code><br><code>expiration_month</code> =&gt; <code>exp_month</code><br><code>expiration_year</code> =&gt; <code>exp_year</code>   </p>
-<p>Optional Fields: </p>
+<p><code>number</code> =&gt; <code>number</code><br><code>expiration_month</code> =&gt; <code>exp_month</code><br><code>expiration_year</code> =&gt; <code>exp_year</code></p>
+<p>Optional Fields</p>
 <p><code>cvv</code> =&gt; <code>cvc</code><br><code>name</code> =&gt; <code>name</code><br><code>line1</code> =&gt; <code>address_line1</code><br><code>line2</code> =&gt; <code>address_line2</code><br><code>city</code> =&gt; <code>address_city</code><br><code>state</code> =&gt; <code>address_state</code><br><code>postal_code</code> =&gt; <code>address_zip</code><br><code>country_code</code> =&gt; <code>address_country</code></p>
-<p>For more information please visit: <a href="https://stripe.com/docs/stripe.js">https://stripe.com/docs/stripe.js</a>. However, if you don&#39;t want to build your own form you can always use Stripe Checkout: <a href="https://stripe.com/docs/checkout">https://stripe.com/docs/checkout</a></p>
-<hr>
+<p>For more information please visit: <a href="https://stripe.com/docs/stripe.js">https://stripe.com/docs/stripe.js</a>. However, if you don&#39;t want to build your own form you can always use Stripe Checkout: <a href="https://stripe.com/docs/checkout">https://stripe.com/docs/checkout</a>.</p>
+<p>Also, if tokenizing with with a mobile SDK please check out Stripe&#39;s <a href="https://stripe.com/docs/mobile/ios">iOS guide</a> or <a href="https://stripe.com/docs/mobile/android">Android guide</a>.</p>
 <h2 id="customer-resource">Customer Resource</h2>
-<p>Instead of a single Customer resource for buyers and sellers, Stripe Connect uses a Customer resource exclusively for buyers (debits only), and an Account resource for sellers. </p>
-<p>Accounts act as a conduit linking debits to the appropriate seller (similar to on_behalf_of in Balanced v1.0 and orders v1.1). Additionally, each Account maintains a balance, which can then be paid out to the attached bank account.  However, before transfers (i.e. credits) can be made the &#39;transfers_enabled&#39; field must be set to true, which is achieved by providing information requested on the Account. Until then, funds will accumulate in the Account’s balance until it&#39;s able to be paid out to the Account’s bank account. </p>
+<p>Instead of a single Customer resource for buyers and sellers, Stripe Connect uses a Customer resource exclusively for buyers (debits only), and an Account resource for sellers.</p>
+<p>Accounts act as a conduit linking debits to the appropriate seller (similar to on_behalf_of in Balanced v1.0 and orders v1.1). Additionally, each Account maintains a balance, which can then be paid out to the attached bank account.  However, before transfers (i.e. credits) can be made the &#39;transfers_enabled&#39; field must be set to true, which is achieved by providing information requested on the Account. Until then, funds will accumulate in the Accounts balance until it&#39;s able to be paid out to the Accounts bank account.</p>
 <p>For more info on Accounts, including client-library code examples, see: <a href="https://stripe.com/docs/connect/managed-accounts">https://stripe.com/docs/connect/managed-accounts</a></p>
-<hr>
 <h2 id="identity-verification">Identity Verification</h2>
-<p>Similar to underwriting sellers before they can be paid out on Balanced, Accounts need to undergo identity verification. </p>
-<p>To complete api-based Identity verification, you&#39;ll need to inspect an Account&#39;s verification property and review it&#39;s &#39;fields_needed&#39; array to determine which documents are required for upload (e.g. scan of an identifying document). Note that this is now an asynchronous process, and you&#39;ll need to setup a <a href="https://dashboard.stripe.com/account/webhooks">platform webhook</a> for &quot;account.updated&quot; to see it&#39;s status, and any changes in required documentation. </p>
+<p>Similar to underwriting sellers before they can be paid out on Balanced, Accounts need to undergo identity verification.</p>
+<p>To complete api-based Identity verification, you&#39;ll need to inspect an Account&#39;s verification property and review it&#39;s &#39;fields_needed&#39; array to determine which documents are required for upload (e.g. scan of an identifying document). Note that this is now an asynchronous process, and you&#39;ll need to setup a <a href="https://dashboard.stripe.com/account/webhooks">platform webhook</a> for &quot;account.updated&quot; to see it&#39;s status, and any changes in required documentation.</p>
 <p>For more info on Identity verification, including how to upload files visit: <a href="https://stripe.com/docs/connect/identity-verification">https://stripe.com/docs/connect/identity-verification</a></p>
-<hr>
 <h2 id="debits-charges">Debits =&gt; Charges</h2>
 <p>In, Stripe Connect, debits are referred to as Charges. Charges and Debits are very similar in practice except for a few subtle differences. On Balanced you can charge a card resource directly, however, on Stripe you&#39;ll need to associate the card to a customer object first. In addition, there is no concept of orders. Instead to link charges to an Account, you pass the seller&#39;s Account id as the &#39;destination&#39; parameter. In addition, you can indicate the &quot;application_fee&quot; which is the amount of the charge that your marketplace would like to collect as its fee.</p>
 <p>To learn more about how to create charges and refunds visit: <a href="https://stripe.com/docs/connect/payments-fees">https://stripe.com/docs/connect/payments-fees</a></p>
-<hr>
 <h2 id="credits-transfers">Credits =&gt; Transfers</h2>
-<p>Transfers (referred to as credits on Balanced) from Accounts to their attached bank accounts are not necessarily manually created. Each Account, has a &#39;transfer_schedule&#39; property that dictates how often this Stripe account’s balance is paid out to its bank account (the field can be set to manual, daily, weekly, monthly). All of your migrated accounts are, by default, on daily automatic payouts, though you can change this via an API call.</p>
+<p>Transfers (referred to as credits on Balanced) from Accounts to their attached bank accounts are not necessarily manually created. Each Account, has a &#39;transfer_schedule&#39; property that dictates how often this Stripe accounts balance is paid out to its bank account (the field can be set to manual, daily, weekly, monthly). All of your migrated accounts are, by default, on daily automatic payouts, though you can change this via an API call.</p>
 <p>Payouts are also only available through bank transfers. Currently Push-to-Card is not supported at this time. Stripe will support debit card payouts by the end of June.</p>
 <p>To see how to create a transfer visit: <a href="https://stripe.com/docs/connect/bank-transfers">https://stripe.com/docs/connect/bank-transfers</a></p>
-<hr>
 <h2 id="bank-accounts">Bank Accounts</h2>
-<p>Bank Account resources no longer have name or address fields (other than country code), but do require that you pass a currency parameter. </p>
-<hr>
+<p>Bank Account resources no longer have name or address fields (other than country code), but do require that you pass a currency parameter.</p>
 <h2 id="reversals">Reversals</h2>
 <p>When using the &quot;destination&quot; parameter, the easiest way to create a reversal is to send the &quot;reverse_transfer&quot; parameter when refunding a charge. This will cause the charge&#39;s associated transfer to be reversed. You likely also want to send the &quot;refund_application_fee&quot; parameter, which will ensure all of the correct money movements are reversed.</p>
-<p>Creating a transfer reversal is similar to issuing a refund. Accordingly, when issuing a reversal your platform account balance will increase, and the corresponding destination account&#39;s balance will decrease. If the seller&#39;s account&#39;s balance goes negative, Stripe will attempt to debit the account&#39;s associated bank account based on the next automatically scheduled transfer (daily by default). </p>
-
-
-
+<p>Creating a transfer reversal is similar to issuing a refund. Accordingly, when issuing a reversal your platform account balance will increase, and the corresponding destination account&#39;s balance will decrease. If the seller&#39;s account&#39;s balance goes negative, Stripe will attempt to debit the account&#39;s associated bank account based on the next automatically scheduled transfer (daily by default).</p>
 
         </div>
       </div>
