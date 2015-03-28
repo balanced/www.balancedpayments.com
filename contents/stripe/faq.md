@@ -172,7 +172,7 @@ While Stripe doesn't support escrow accounts, Stripe has found the Transfers API
 
 ### <a href="#how-will-merchant-underwriting-change" name="how-will-merchant-underwriting-change">How will merchant underwriting change?</a>
 
-Stripe requires name and DOB for all customers before a payout is issued. Stripe may also ask for a physical address and the last 4 digits of the customer's social security number as the seller's volume increases. The verification works similarly to how it did with Balanced—except Stripe supports uploading a photo ID when the seller's information cannot be automatically verified, which will allow you to onboard more sellers more quickly.
+Stripe requires name and DOB for all customers before a payout is issued. Stripe may also ask for a physical address and the customer's social security number as the seller's volume increases. The verification works similarly to how it did with Balanced—except Stripe supports uploading a photo ID when the seller's information cannot be automatically verified, which will allow you to onboard more sellers more quickly.
 
 ### <a href="#do-currently-underwritten" name="do-currently-underwritten">Do currently underwritten/verified customers need to be verified again?</a>
 
