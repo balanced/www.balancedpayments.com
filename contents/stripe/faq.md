@@ -102,7 +102,7 @@ Yes. We will support refunds until October 9, 2015.
 
 ### <a name="what-do-i-need-to-do" href="#what-do-i-need-to-do">What do I need to do to refund a debit that was created on Balanced?</a>
 
-Refunds will continue to work the same way. You can initiate the refund through the API or dashboard, and the money will be pulled from your escrow balance, which means you have to make sure there is enough money in your escrow balance to cover refunds.
+Refunds will continue to work the same way. You can initiate the refund through the API or dashboard, and the money will be pulled from your escrow balance, which means you have to make sure there is enough money in your escrow balance to cover refunds. We will continue supporting debits from and credits to your own bank account until October 9, 2015 to allow you to manage your escrow balance.
 
 
 ### <a name="what-about-chargebacks" href="#what-about-chargebacks">What about chargebacks for transactions on Balanced?</a>
