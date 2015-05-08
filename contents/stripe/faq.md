@@ -73,6 +73,9 @@ Yes. All existing cards and bank accounts will be migrated to Stripe. All new ca
 
 Yes. Information for verified customers will be migrated to Stripe to make sure you don't have to collect their name, address, DOB, and SSN again.
 
+However, if you have not provided verification information to us, Stripe will need it to help you get started. You can find more information about the Stripe verification process at: https://stripe.com/docs/connect/identity-verification
+
+
 ### <a name="how-long-does-data-migration-take" href="#how-long-does-data-migration-take">How long does the data migration take?</a>
 Though the process is automated, the initial data migration typically takes 2 – 3 days—as a result of the high number of customers and amount of customer data being migrated. All new cards, bank accounts, and seller information created on Balanced will also be tokenized on Stripe to keep your data synchronized.
 
