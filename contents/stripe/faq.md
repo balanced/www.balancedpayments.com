@@ -53,12 +53,12 @@ You will have the option during the migration process to specify an existing Str
 
 ### <a name="how-can-i-get-in-touch" href="#how-can-i-get-in-touch">How can I get in touch with Balanced after June 11, 2015?</a>
 
-A portion of the Balanced team will continue on until October 9, 2015. You can contact us at [support@balancedpayments.com](mailto:support@balancedpayments.com).
+A portion of the Balanced team will continue on until October 9, 2015. You can contact us at [support+balanced@balancedpayments.com](mailto:support+balanced@balancedpayments.com).
 
 
 ### <a name="how-do-i-contact-stripe" href="#how-do-i-contact-stripe">How do I contact Stripe if I have questions?</a>
 
-Stripe also has an [FAQ page](https://support.stripe.com/questions/migrating-from-balance-to-stripe) and can be contacted directly through [their support page](https://support.stripe.com/email).
+Stripe also has an [FAQ page](https://support.stripe.com/questions/migrating-from-balance-to-stripe) and can be contacted directly by emailing [support+balanced@stripe.com](support+balanced@stripe.com).
 
 -----------------------------
 
@@ -66,7 +66,7 @@ Stripe also has an [FAQ page](https://support.stripe.com/questions/migrating-fro
 
 ### <a name="can-i-take-my-card" href="#can-i-take-my-card">Can I take my card and bank account tokens with me?</a>
 
-Yes. All existing cards and bank accounts will be migrated to Stripe. All new cards and bank accounts created on Balanced will also be tokenized on Stripe. It's also possible to migrate your data to another processor by contacting us directly at [support@balancedpayments.com](mailto:support@balancedpayments.com).
+Yes. All existing cards and bank accounts will be migrated to Stripe. All new cards and bank accounts created on Balanced will also be tokenized on Stripe. It's also possible to migrate your data to another processor by contacting us directly at [support+balanced@balancedpayments.com](mailto:support+balanced@balancedpayments.com).
 
 
 ### <a name="can-i-take-my-customers" href="#can-i-take-my-customers">Can I take my customer's information with me?</a>
@@ -158,7 +158,7 @@ Stripe offers volume discounts for businesses processing $80,000 / month or more
 
 ### <a href="#what-about-pricing" name="what-about-pricing">What about pricing for ACH debits</a>
 
-Since ACH debits are still in beta on Stripe, please head over to [https://support.stripe.com/email](https://support.stripe.com/email) for questions on pricing.
+Since ACH debits are still in beta on Stripe, please contact [support+balanced@stripe.com](mailto:support+balanced@stripe.com) for questions on pricing.
 
 
 ### <a href="#what-happens-to-the-money" name="what-happens-to-the-money">What happens to the money Balanced is holding in reserve for me?</a>
@@ -231,5 +231,5 @@ It's something that we're not pursuing right now. We want to make sure our focus
 </div>
 <div class="bottom bottom-line3">
   Want to get in touch?
-  <a href="mailto:support@balancedpayments.com">support@balancedpayments.com</a>
+  <a href="mailto:support+balanced@balancedpayments.com">support+balanced@balancedpayments.com</a>
 </div>
