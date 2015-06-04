@@ -17,7 +17,24 @@ Despite the many challenges in the industry, we're proud of how much we've been 
 
 ### <a name="whats-the-timeline" href="#whats-the-timeline">What's the timeline?</a>
 
-Our full API and dashboard will be available until June 11, 2015, and support for issuing refunds, querying transactions, and fighting chargebacks will continue until October 9, 2015.
+The following shows the timeline of the operations stopping on Balanced:
+
+*June 11, 2015 at 11:59pm PST*
+1. Debiting customers
+2. Reversing credits
+3. Tokenizing cards
+4. Initiating data migration
+
+*June 18, 2015 at 11:59pm PST*
+1. Crediting sellers
+2. Tokenizing bank accounts
+
+*October 9, 2015 at 11:59pm PST*
+1. Refunding debits
+2. Fighting disputes
+3. Debits from and credits to the marketplace's bank account
+4. Querying API
+5. Use of dashboard
 
 
 ### <a name="why-is-balanced-sending-customers-to-stripe" href="#why-is-balanced-sending-customers-to-stripe">Why is Balanced sending customers to Stripe?</a>
