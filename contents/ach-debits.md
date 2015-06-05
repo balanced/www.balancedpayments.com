@@ -36,32 +36,32 @@ submissionTimes:
   timezone: pm Pacific
 
 bankHolidays:
-  title: Bank Holidays (2014)
+  title: Bank Holidays (2015)
   list:
     - label: row0
       row:
         - label: New Year's Day
           date: Jan 1
         - label: Labor Day
-          date: Sep 1
+          date: Sep 7
     - label: row1
       row:
         - label: Martin Luther King, Jr's Birthday
-          date: Jan 20
+          date: Jan 19
         - label: Columbus Day
-          date: Oct 13
+          date: Oct 12
     - label: row2
       row:
         - label: Washington's Birthday
-          date: Feb 17
+          date: Feb 16
         - label: Veterans Day
           date: Nov 11
     - label: row3
       row:
         - label: Memorial Day
-          date: May 26
+          date: May 25
         - label: Thanksgiving Day
-          date: Nov 27
+          date: Nov 26
     - label: row4
       row:
         - label: Independence Day
