@@ -423,7 +423,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev', ['_builddev', 'wintersmithDevConfig', 'wintersmith:dev', 'connect:server', 'open', 'watch']);
 
 	// Register a task in vagrant
-	grunt.registerTask('vagrant', ['_builddev', 'wintersmith:build', 'connect:vagrant', 'watch']);
+	grunt.registerTask('vagrant', ['_builddev', 'wintersmithDevConfig', 'wintersmith:dev', 'connect:vagrant', 'watch']);
 
 	// Register a test task
 	grunt.registerTask('test', ['build']);
